@@ -61,23 +61,17 @@
           <?php print render($action_links); ?>
         <?php endif; ?>
 
-        <?php if (!empty($tabs_secondary)): ?>
-          <!-- Begin - tabs secondary -->
-          <div class="os2-tabs-container os2-tabs-variant-tertiary">
-            <?php print render($tabs_secondary); ?>
-          </div>
-          <!-- End - tabs secondary -->
-        <?php endif; ?>
-
         <a id="main-content"></a>
 
-        <?php if (!panels_get_current_page_display()): ?>
-          <div class="card card-block">
+        <div class="content-inner">
+          <?php if (!panels_get_current_page_display()): ?>
+            <div class="card card-block">
+              <?php print render($page['content']); ?>
+            </div>
+          <?php else: ?>
             <?php print render($page['content']); ?>
-          </div>
-        <?php else: ?>
-          <?php print render($page['content']); ?>
-        <?php endif; ?>
+          <?php endif; ?>
+        </div>
 
       </div>
     </div>
@@ -86,15 +80,19 @@
     <!-- Begin - footer -->
     <footer class="footer">
 
-      <!-- Begin - branding -->
-      <div class="footer-branding-outer">
-        <div class="container">
-          <div class="footer-branding-inner">
-            <p class="footer-branding-brand-text">Cittaslow arbejder for at fremme det gode liv og holdbar udvikling i lokalområder og mindre byer</p>
+      <?php if ($theme_settings['layout']['branding_show'] && !empty($theme_settings['layout']['branding_text'])): ?>
+        <!-- Begin - branding -->
+        <div class="footer-branding-outer">
+          <div class="container">
+            <div class="footer-branding-inner">
+              <p class="footer-branding-brand-text">
+                <?php print $theme_settings['layout']['branding_text']; ?>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- End - branding -->
+        <!-- End - branding -->
+      <?php endif; ?>
 
       <?php if (!empty($page['footer_top_first']) || !empty($page['footer_top_second']) || !empty($page['footer_top_tertiary'])): ?>
         <div class="footer-top-outer">
@@ -133,6 +131,46 @@
 
               <div class="footer-bottom-inner">
 
+                <?php if ($theme_settings['layout']['footer']['show_social_links']) : ?>
+                  <!-- Begin - social icons -->
+                  <ul class="social-icons-list">
+
+                    <?php if ($theme_settings['social_links']['facebook']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['facebook']['url']; ?>" target="_blank" class="social-icon social-icon-facebook" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['facebook']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                    <?php if ($theme_settings['social_links']['twitter']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['twitter']['url']; ?>" target="_blank" class="social-icon social-icon-twitter" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['twitter']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                    <?php if ($theme_settings['social_links']['googleplus']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['googleplus']['url']; ?>" target="_blank" class="social-icon social-icon-google-plus" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['googleplus']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                    <?php if ($theme_settings['social_links']['linkedin']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['linkedin']['url']; ?>" target="_blank" class="social-icon social-icon-linkedin" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['linkedin']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                    <?php if ($theme_settings['social_links']['pinterest']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['pinterest']['url']; ?>" target="_blank" class="social-icon social-icon-pinterest" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['pinterest']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                    <?php if ($theme_settings['social_links']['instagram']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['instagram']['url']; ?>" target="_blank" class="social-icon social-icon-instagram" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['instagram']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                    <?php if ($theme_settings['social_links']['youtube']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['youtube']['url']; ?>" target="_blank" class="social-icon social-icon-youtube" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['youtube']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                    <?php if ($theme_settings['social_links']['vimeo']['active']): ?>
+                      <li><a href="<?php print $theme_settings['social_links']['vimeo']['url']; ?>" target="_blank" class="social-icon social-icon-vimeo" data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['vimeo']['tooltip']; ?>"></a></li>
+                    <?php endif; ?>
+
+                  </ul>
+                  <!-- End - social icons -->
+                <?php endif ?>
+
                 <?php if (!empty($theme_settings['contact_information'])): ?>
                   <!-- Begin - contact information -->
                   <ul class="footer-bottom-inner-contact-information">
@@ -165,7 +203,7 @@
 
                     <?php if (!empty($theme_settings['contact_information']['email']) ) : ?>
                       <li>
-                        <a href="mailto: <?php print $theme_settings['contact_information']['email']; ?> Title="Send email">
+                        <a href='mailto: <?php print $theme_settings['contact_information']['email']; ?>' Title='Send email'>
                           <?php print $theme_settings['contact_information']['email']; ?>
                         </a>
                       </li>
@@ -181,8 +219,14 @@
                   <!-- End - contact information -->
                 <?php endif; ?>
 
-                <p><?php print t('© 2016, ebeltofthavn.dk. All rights reserved. '); ?></p>
-                <p><?php print t('A site from'); ?> <a href="http://fredericia.dk" target="_blank">fredericia.dk</a></p>
+                <?php if (!empty($theme_settings['contact_information']['business_owner_readable_url'])): ?>
+                  <p><?php print t('© @year, @url. All rights reserved.', array('@year' => date('Y'), '@url' => $theme_settings['contact_information']['business_owner_readable_url'])); ?></p>
+                <?php endif; ?>
+                
+                <?php if (!empty($theme_settings['contact_information']['site_owner_raw_url']) && !empty($theme_settings['contact_information']['site_owner_readable_url']) ) : ?>
+                  <p><?php print t('A site from'); ?> <a href="<?php print $theme_settings['contact_information']['site_owner_raw_url']; ?>" target="_blank"><?php print $theme_settings['contact_information']['site_owner_readable_url']; ?></a></p>
+                <?php endif; ?>
+
               </div>
 
             </div>

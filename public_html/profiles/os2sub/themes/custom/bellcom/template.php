@@ -6,7 +6,6 @@ include( dirname(__FILE__) . '/include/helpers.inc');
  * Implements theme_preprocess_html().
  */
 function bellcom_preprocess_html(&$variables) {
-  $view_modes = array('xs', 'sm', 'md', 'lg');
   $current_theme = variable_get('theme_default','none');
 
   // Paths
@@ -14,11 +13,6 @@ function bellcom_preprocess_html(&$variables) {
   $variables['path_img']  = base_path() . drupal_get_path('theme', $current_theme) . '/dist/img';
   $variables['path_css']  = base_path() . drupal_get_path('theme', $current_theme) . '/dist/css';
   $variables['path_font'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/font';
-
-  // Sidebar
-  foreach($view_modes as $view_mode) {
-    $variables['classes_array'] = array_merge($variables['classes_array'], _bellcom_sidebar_classes($view_mode));
-  }
 }
 
 /*

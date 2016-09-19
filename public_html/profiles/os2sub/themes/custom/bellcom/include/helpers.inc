@@ -79,8 +79,16 @@ function _bellcom_collect_theme_settings() {
   $settings = array();
 
   // Contact information
+  $settings['layout']['branding_show'] = theme_get_setting('branding_show');
+  $settings['layout']['branding_text'] = theme_get_setting('branding_text');
+
+  // Contact information
+  $settings['contact_information']['site_owner_name'] = theme_get_setting('site_owner_name');
+  $settings['contact_information']['site_owner_raw_url'] = theme_get_setting('site_owner_raw_url');
+  $settings['contact_information']['site_owner_readable_url'] = theme_get_setting('site_owner_readable_url');
   $settings['contact_information']['business_owner_name'] = theme_get_setting('business_owner_name');
-  $settings['contact_information']['business_startup_year'] = theme_get_setting('business_startup_year');
+  $settings['contact_information']['business_owner_raw_url'] = theme_get_setting('business_owner_raw_url');
+  $settings['contact_information']['business_owner_readable_url'] = theme_get_setting('business_owner_readable_url');
   $settings['contact_information']['address'] = theme_get_setting('address');
   $settings['contact_information']['zipcode'] = theme_get_setting('zipcode');
   $settings['contact_information']['city'] = theme_get_setting('city');
@@ -121,44 +129,4 @@ function _bellcom_collect_theme_settings() {
   $settings['layout']['sidebar']['show_social_links'] = theme_get_setting('sidebar_show_social_links');
 
   return $settings;
-}
-
-/*
- * Sidebar classes
- */
-function _bellcom_sidebar_classes($viewmode) {
-  $classes = array();
-
-  // Settings
-  $enabled = theme_get_setting('sidebar_left_' . $viewmode . '_enabled');
-  $state = theme_get_setting('sidebar_left_' . $viewmode . '_state');
-  $content_effect = theme_get_setting('sidebar_left_' . $viewmode . '_content_effect');
-
-  // Enabled
-  if (!isset($enabled) or !$enabled or $enabled == 0) {
-    return array();
-  }
-
-  $classes[] = 'sidebar-left-enabled-' . $viewmode;
-
-  // State
-  if ($state == 'expanded') {
-    $classes[] = 'sidebar-left-expanded-' . $viewmode;
-  }
-  elseif ($state == 'collapsed') {
-    $classes[] = 'sidebar-left-collapsed-' . $viewmode;
-  }
-  elseif ($state == 'hidden') {
-    $classes[] = 'sidebar-left-hidden-' . $viewmode;
-  }
-
-  // Content effect
-  if ($content_effect == 'shrink' && $state == 'hidden') {
-    $classes[] = 'sidebar-left-content-shrink-' . $viewmode;
-  }
-  elseif ($content_effect == 'push') {
-    $classes[] = 'sidebar-left-content-push-' . $viewmode;
-  }
-
-  return $classes;
 }
