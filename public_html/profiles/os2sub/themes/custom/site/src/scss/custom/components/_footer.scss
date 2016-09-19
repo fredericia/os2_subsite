@@ -1,0 +1,222 @@
+// |--------------------------------------------------------------------------
+// | Footer
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .footer
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Branding
+$footer-branding-background-color: $brand-primary;
+$footer-branding-brand-text-color: #fff;
+
+// Top
+$footer-top-background-color: $body-bg-secondary;
+
+// Bottom
+$footer-bottom-background-color: #fff;
+
+// Responsive
+$xs-footer-branding-padding-top-bottom: 30px;
+$sm-footer-branding-padding-top-bottom: 40px;
+$md-footer-branding-padding-top-bottom: 50px;
+
+$xs-footer-top-padding-top-bottom: 30px;
+$sm-footer-top-padding-top-bottom: 40px;
+$md-footer-top-padding-top-bottom: 50px;
+
+$xs-footer-bottom-padding-top-bottom: 15px;
+$sm-footer-bottom-padding-top-bottom: 25px;
+$md-footer-bottom-padding-top-bottom: 30px;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Footer
+.footer {
+  padding: 0 !important;
+  border-top: 0;
+
+  p {
+    color: $text-muted;
+  }
+}
+
+.footer-branding-outer {
+  background-color: $footer-branding-background-color;
+  text-align: center;
+
+  .footer-branding-brand-text {
+    @extend .heading-h4;
+    font-weight: $headings-font-weight-bold;
+    color: $footer-branding-brand-text-color;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.footer-top-outer {
+  background-color: $footer-top-background-color;
+}
+
+.footer-bottom-outer {
+  background-color: $footer-bottom-background-color;
+  text-align: center;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-bottom-inner-contact-information {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    @extend .list-inline;
+
+    li {
+
+      &,
+      a,
+      p {
+        font-weight: $font-weight-bold;
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          color: $text-color;
+        }
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Footer
+  .footer {}
+
+  .footer-branding-outer {
+    padding: $xs-footer-branding-padding-top-bottom 0;
+  }
+
+  .footer-top-outer {
+    padding: $xs-footer-top-padding-top-bottom 0;
+  }
+
+  .footer-bottom-outer {
+    padding: $xs-footer-bottom-padding-top-bottom 0;
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Footer
+  .footer {}
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Footer
+  .footer {}
+
+  .footer-branding-outer {
+    padding: $sm-footer-branding-padding-top-bottom 0;
+  }
+
+  .footer-top-outer {
+    padding: $sm-footer-top-padding-top-bottom 0;
+  }
+
+  .footer-bottom-outer {
+    padding: $sm-footer-bottom-padding-top-bottom 0;
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Footer
+  .footer {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Footer
+  .footer {}
+
+  .footer-branding-outer {
+    padding: $md-footer-branding-padding-top-bottom 0;
+  }
+
+  .footer-top-outer {
+    padding: $md-footer-top-padding-top-bottom 0;
+  }
+
+  .footer-bottom-outer {
+    padding: $md-footer-bottom-padding-top-bottom 0;
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Footer
+  .footer {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Footer
+  .footer {}
+}
+
+// Print
+@media print {
+
+  // Footer
+  .footer {}
+}
+
+// Touch
+.touchevents {
+
+  // Footer
+  .footer {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Footer
+  .footer {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Footer mixin
+@mixin footer-mixin() {}

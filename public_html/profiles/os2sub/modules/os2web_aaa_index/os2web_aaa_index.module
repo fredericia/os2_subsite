@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the A-AA Indekx feature.
+ */
+
+include_once 'os2web_aaa_index.features.inc';

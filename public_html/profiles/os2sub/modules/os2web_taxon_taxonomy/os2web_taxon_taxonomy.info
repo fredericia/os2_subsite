@@ -1,0 +1,9 @@
+name = OS2web Taxon classification using a taxonomy field
+description = Classify text acording to a taxonomy.
+core = 7.x
+package = OS2Web - Backend
+version = 7.x-1.1
+project = os2web_taxon_taxonomy
+dependencies[] = features
+features[features_api][] = api:2
+files[] = taxon_taxonomy.module

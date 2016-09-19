@@ -1,0 +1,153 @@
+<?php
+/**
+ * @file
+ * This file install the os2web profile.
+ */
+
+/**
+ * Implements hook_install_tasks().
+ */
+function os2sub_install_tasks($install_state) {
+  $task['default_content'] = array(
+    'display_name' => st('Import KLE terms'),
+    'display' => TRUE,
+    'run' => INSTALL_TASK_RUN_IF_NOT_COMPLETED,
+    'function' => 'os2sub_install_create_taxonomy_terms',
+  );
+
+  return $task;
+}
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ */
+function os2sub_install() {
+  include_once DRUPAL_ROOT . '/profiles/minimal/minimal.install';
+  // Add text formats.
+  $full_html_format = array(
+    'format' => 'full_html',
+    'name' => 'HTML',
+    'weight' => 1,
+    'filters' => array(
+      // URL filter.
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+      ),
+      // Line break filter.
+      'filter_autop' => array(
+        'weight' => 1,
+        'status' => 1,
+      ),
+      // HTML corrector filter.
+      'filter_htmlcorrector' => array(
+        'weight' => 10,
+        'status' => 1,
+      ),
+    ),
+  );
+  $full_html_format = (object) $full_html_format;
+  filter_format_save($full_html_format);
+
+  // Allow visitor account creation, but with administrative approval.
+  variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+
+  // Enable default permissions for system roles.
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content'));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content'));
+
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'subsiteadmin';
+  $admin_role->weight = 2;
+  user_role_save($admin_role);
+  user_role_grant_permissions($admin_role->rid, array_keys(module_invoke_all('permission')));
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+
+  theme_enable(array('bootstrap', 'adminimal', 'bellcom', 'os2web_bootstrap_theme', 'subsite_1'));
+  theme_disable(array('bartik', 'rubik', 'seven'));
+  variable_set('theme_default', 'subsite_1');
+  variable_set('admin_theme', 'adminimal');
+
+  // Set admin theme on node/edit and node/add
+  variable_set('node_admin_theme', '1');
+  module_disable(array('update'));
+  // Set default TZ.
+  variable_set('date_default_timezone', "Europe/Copenhagen");
+  variable_set('date_first_day', "1");
+  variable_set('configurable_timezones', "0");
+  variable_set('site_default_country', "DK");
+
+  // jQuery update module.
+  variable_set('jquery_update_compression_type', 'min');
+  variable_set('jquery_update_jquery_admin_version', '1.8');
+  variable_set('jquery_update_jquery_cdn', 'none');
+  variable_set('jquery_update_jquery_migrate_plugin_cdn', 'none');
+  variable_set('jquery_update_jquery_migrate_plugin_enable', 0);
+  variable_set('jquery_update_jquery_migrate_plugin_migrate_trace', 1);
+  variable_set('jquery_update_jquery_migrate_plugin_migrate_warnings', 1);
+  variable_set('jquery_update_jquery_version', '1.8');
+
+  // Set default language.
+  $langs = language_list();
+  variable_set('language_default', $langs['da']);
+
+  // Disable english.
+  db_update("languages")
+    ->fields(array("enabled" => 0))
+    ->condition("language", "en")
+    ->execute();
+}
+
+/**
+ * Create taxonomy terms, during install.
+ */
+function os2sub_install_create_taxonomy_terms() {
+  // News category is just a single term.
+  $vocab = taxonomy_vocabulary_machine_name_load('os2web_news_page_newstypes');
+  $category = new StdClass();
+  $category->vid = $vocab->vid;
+  $category->name = 'Nyheder';
+  taxonomy_term_save($category);
+
+  $vocab = taxonomy_vocabulary_machine_name_load('os2web_taxonomies_tax_kle');
+
+  $file_path = DRUPAL_ROOT . '/' . drupal_get_path('module', 'os2web_taxonomies') . '/data/kle.xml';
+
+  $xml = simplexml_load_file($file_path);
+
+  foreach ($xml as $row) {
+    drupal_static_reset();
+    $term = new StdClass();
+    $term->vid = $vocab->vid;
+    $term->name = $row->Key . ' ' . $row->Name;
+    $term->description[LANGUAGE_NONE][0]['value'] = $row->Description;
+
+    if ($row->Tag['TagTypeSqlID'] && $type = reset($row->Tag['TagTypeSqlID'])) {
+      switch ($type) {
+        case 2:
+            $term->field_os2web_taxonomies_legi_ref[LANGUAGE_NONE][0]['url'] = $row->Tag->Value;
+            $term->field_os2web_taxonomies_legi_ref[LANGUAGE_NONE][0]['title'] = $row->Tag->Key;
+          break;
+
+        case 3:
+          $term->field_os2web_taxonomies_search[LANGUAGE_NONE][0]['value'] = $row->Tag->Key;
+          break;
+
+        case 4:
+          $term->field_os2web_taxonomies_cue_word[LANGUAGE_NONE][0]['value'] = $row->Tag->Key;
+          break;
+      }
+    }
+
+    taxonomy_term_save($term);
+  }
+}

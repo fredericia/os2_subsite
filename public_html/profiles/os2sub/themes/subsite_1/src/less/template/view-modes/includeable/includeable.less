@@ -1,0 +1,205 @@
+// |--------------------------------------------------------------------------
+// | Includeable
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .os2sub-includeable
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@fki-includeable-stacked-spacing: 3px;
+@fki-includeable-border-color: @border-color;
+
+@fki-includeable-heading-font-color: @brand-primary;
+@fki-includeable-heading-top-bottom-spacing: 3px;
+@fki-includeable-heading-left-right-spacing: 0;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Includeable
+.os2sub-includeable {
+	padding: @fki-includeable-stacked-spacing 0;
+	border-bottom: 1px solid @fki-includeable-border-color;
+
+	.os2sub-includeable-heading {
+		padding: @fki-includeable-heading-top-bottom-spacing @fki-includeable-heading-left-right-spacing;
+
+		.os2sub-includeable-heading-title {
+			margin: 0;
+			font-weight: bold;
+
+			&,
+			a {
+				color: @fki-includeable-heading-font-color;
+			}
+		}
+
+		.os2sub-includeable-heading-author {
+			font-size: @font-size-small;
+			font-style: italic;
+
+			.os2sub-includeable-heading-author-intro {}
+			.os2sub-includeable-heading-author-link {}
+		}
+	}
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+.os2sub-box,
+.os2sub-box-primary {
+
+	.os2sub-includeable {
+		.os2sub-mixin-includeable-box-variant(@brand-primary);
+	}
+}
+
+.os2sub-box-secondary {
+
+	.os2sub-includeable {
+		.os2sub-mixin-includeable-box-variant(@brand-secondary);
+	}
+}
+
+.os2sub-box-tertiary {
+
+	.os2sub-includeable {
+		.os2sub-mixin-includeable-box-variant(@brand-tertiary);
+	}
+}
+
+.os2sub-box-quaternary {
+
+	.os2sub-includeable {
+		.os2sub-mixin-includeable-box-variant(@brand-quaternary);
+	}
+}
+
+.os2sub-box-quinary {
+
+	.os2sub-includeable {
+		.os2sub-mixin-includeable-box-variant(@brand-quinary);
+	}
+}
+
+.field-items {
+
+	.field-item {
+
+		&:last-child {
+
+			.os2sub-includeable {
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Print
+@media print {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// Touch
+.touch {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// No touch
+.no-touch {
+
+	// Includeable
+	.os2sub-includeable {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Includeable mixin
+.os2sub-mixin-includeable() {}
+
+// Box variant mixin
+.os2sub-mixin-includeable-box-variant(@font-color) {
+
+	.os2sub-includeable-heading {
+
+		.os2sub-includeable-heading-title {
+			color: @font-color;
+		}
+	}
+}

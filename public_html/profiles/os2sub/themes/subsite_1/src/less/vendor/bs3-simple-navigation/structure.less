@@ -1,0 +1,187 @@
+// |--------------------------------------------------------------------------
+// | Header simple
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// |
+// | - Base
+// | - Logo
+// | - Sticky
+// | - Navigation
+// | -- Button
+// | - View modes
+// | - Sidebar toggle
+// |
+
+.simple-navigation {
+  position: relative;
+  display: none;
+  background-color: @bs3-simple-navigation-background-color;
+  background-color: @bs3-simple-navigation-background-color-rgba;
+  height: @bs3-simple-navigation-height;
+  min-height: @bs3-simple-navigation-height;
+  line-height: @bs3-simple-navigation-height;
+  text-align: center;
+
+  &:extend(.clearfix all);
+}
+
+// Logo
+.simple-navigation {
+
+  .simple-navigation-logo-link {
+
+    .simple-navigation-logo-image {
+      width: 100%;
+      max-width: floor( (@bs3-simple-navigation-logo-image-width / 2) );
+      max-height: @bs3-simple-navigation-height;
+      border: 0;
+    }
+  }
+}
+
+// Sticky
+.simple-navigation-sticky {
+
+  .simple-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: @bs3-simple-navigation-sticky-zindex;
+  }
+}
+
+// Navigation
+.simple-navigation {
+
+  .simple-navigation-list {
+    min-height: inherit;
+    line-height: inherit;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+      line-height: inherit;
+      float: left;
+      width: @bs3-simple-navigation-height;
+
+      &.simple-navigation-button {
+
+        a {
+          display: block;
+          line-height: inherit;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          border-radius: 0;
+          background-color: @bs3-simple-navigation-nav-button-background-color;
+          background-color: @bs3-simple-navigation-nav-button-background-color-rgba;
+          color: @bs3-simple-navigation-list-button-color;
+
+          .icon {
+            font-size: @bs3-simple-navigation-nav-button-icon-font-size;
+            color: @bs3-simple-navigation-list-button-icon-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Positioning
+.simple-navigation {
+
+  .simple-navigation-list {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    &.simple-navigation-list-left {
+      left: 0;
+    }
+
+    &.simple-navigation-list-right {
+      right: 0;
+    }
+  }
+}
+
+// Enabled
+@media @media-query-mobile-only {
+
+  .simple-navigation-enabled-xs {
+
+    .simple-navigation {
+      display: block;
+    }
+
+    &.simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          padding-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}
+@media @media-query-tablet-only {
+
+  .simple-navigation-enabled-sm {
+
+    .simple-navigation {
+      display: block;
+    }
+
+    &.simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          padding-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}
+@media @media-query-desktop-only {
+
+  .simple-navigation-enabled-md {
+
+    .simple-navigation {
+      display: block;
+    }
+
+    &.simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          padding-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}
+@media @media-query-large-desktop-only {
+
+  .simple-navigation-enabled-lg {
+
+    .simple-navigation {
+      display: block;
+    }
+
+    &.simple-navigation-sticky {
+
+      .outer-wrapper {
+
+        .inner-wrapper {
+          margin-top: @bs3-simple-navigation-height;
+        }
+      }
+    }
+  }
+}

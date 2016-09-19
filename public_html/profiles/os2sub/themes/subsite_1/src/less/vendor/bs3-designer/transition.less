@@ -1,0 +1,40 @@
+// |--------------------------------------------------------------------------
+// | Transition
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - div
+// | - a
+// | - .btn
+// | - .icon
+// |
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// No touch
+.no-touch {
+
+	.icon { .transition(color @bs3-designer-transition-time ease-in-out); }
+
+	a {
+
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			.transition(color @bs3-designer-transition-time-short ease-in-out);
+		}
+	}
+
+	.btn {
+
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			.transition(~"border-color @{bs3-designer-transition-time} ease-in-out, color @{bs3-designer-transition-time} ease-in-out, background-color @{bs3-designer-transition-time} ease-in-out");
+		}
+	}
+}

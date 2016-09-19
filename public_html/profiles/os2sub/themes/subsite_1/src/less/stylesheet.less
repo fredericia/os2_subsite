@@ -1,0 +1,273 @@
+@import 'variables/loader';
+@import 'vendor/loader';
+@import 'template/loader';
+
+
+.banner {
+	border-radius: 4px;
+	.banner-wrapper {
+		padding: 30px 50px;
+		.banner-headline 	{ font-size: floor((@bs3-designer-icon-font-size * 3.5));}
+		.banner-text		{ font-size:floor((@bs3-designer-icon-font-size * 2.2));}
+		&.color-1 { color: #FFF;}
+		a { .btn;
+			.btn-primary;			
+		}
+	}
+}
+
+.kontaktblok {
+		.kontaktblok-headline 	{ font-size: @font-size-h3;}	
+		.kontaktblok-text { font-size: @font-size-large;}
+}
+// os2-node-teaser node node-os2web-base-news view-mode-spotbox node--os2web_base_news--spotbox
+.view-mode-spotbox {
+		a { text-decoration: none;
+		}
+		&.imagespot {
+			position: relative;
+			width: 100%; /* for IE 6 */	
+			.os2-node-teaser-heading {
+				position: absolute;
+				bottom: 20px;
+				left: 0;
+				width: 100%;
+			}					
+		}
+		
+// os2-node-teaser view-mode-spotbox os2-box os2-box-small-spacing node node-os2web-base-news contextual-links-region view-mode-spotbox node--os2web_base_news--spotbox
+		
+		&.node-os2web-base-news {
+			.thumbnail { 
+				background-color: #FFF; 
+				margin-left: -4px;
+				margin-right: -4px;
+
+				.os2-node-teaser-heading {
+					padding: 5px 12px 12px;
+	
+					h3.os2-node-teaser-heading-title {
+						background-color: transparent;
+						color: @btn-primary-color;
+						margin: 10px 0 5px;
+						padding: 0;
+					}
+					.news-text-date {
+						font-style: italic;
+						font-size: @font-size-small;
+					}
+				}
+			}
+		}
+
+		.os2-node-teaser-heading {
+				
+			.os2-node-teaser-heading-title {
+				font-size: @font-size-h4 ;
+				background-color: @btn-primary-bg;
+				color: @btn-primary-color;
+				padding: @padding-base-horizontal;
+			}
+		}
+
+	
+		.os2-node-teaser-body {
+			.os2-node-teaser-body-content {
+				font-size: @font-size-large ;
+				padding: @padding-base-horizontal ;
+			}
+		}
+}
+
+.footer {
+	padding: @padding-base-horizontal;
+	color: #ccc;
+	border-radius: 3px 3px 0 0;
+	.contact-information {
+		clear: both;
+		text-align: center;
+	}
+
+
+	// Social icon list
+	.social-icon-list {
+		list-style: none;
+		padding: 0;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		text-align: center;
+		li {
+			display: inline-block;
+			text-align: center;
+		}
+	
+		.social-icon {
+			display: block;
+			font-family: "FontAwesome";
+			border-radius: 100%;
+			border: 0;
+      width: floor((@bs3-designer-icon-font-size * 1.8));
+      height: floor((@bs3-designer-icon-font-size * 1.8));
+      line-height: floor((@bs3-designer-icon-font-size * 1.8));
+      vertical-align: middle;
+	
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	// --------------------------------------------------
+	// Variants
+	// --------------------------------------------------
+	
+	// Social icon
+	.social-icon {
+	
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			color: #fff;
+			text-decoration: none;
+		}
+	
+		// Facebook
+		&.social-icon-facebook {
+			background-color: @social-link-color-facebook;
+	
+			&:before {
+				content: @fa-var-facebook;
+			}
+		}
+	
+		// Instagram
+		&.social-icon-instagram {
+			background-color: @social-link-color-instagram;
+	
+			&:before {
+				content: @fa-var-instagram;
+			}
+		}
+	
+		// Twitter
+		&.social-icon-twitter {
+			background-color: @social-link-color-twitter;
+	
+			&:before {
+				content: @fa-var-twitter;
+			}
+		}
+	
+		// Pinterest
+		&.social-icon-pinterest {
+			background-color: @social-link-color-pinterest;
+	
+			&:before {
+				content: @fa-var-pinterest-p;
+			}
+		}
+	
+		// Google Plus
+		&.social-icon-google-plus {
+			background-color: @social-link-color-google-plus;
+	
+			&:before {
+				content: @fa-var-google-plus;
+			}
+		}
+	
+		// LinkedIn
+		&.social-icon-linkedin {
+			background-color: @social-link-color-linkedin;
+	
+			&:before {
+				content: @fa-var-linkedin;
+			}
+		}
+	
+		// Vimeo
+		&.social-icon-vimeo {
+			background-color: @social-link-color-vimeo;
+	
+			&:before {
+				content: @fa-var-vimeo;
+			}
+		}
+	
+		// Youtube
+		&.social-icon-youtube {
+			background-color: @social-link-color-youtube;
+	
+			&:before {
+				content: @fa-var-youtube;
+			}
+		}
+	}
+}
+@bs3-simple-navigation-background-color: #FFF;
+
+//== List
+@bs3-simple-navigation-list-button-color: #333;
+@bs3-simple-navigation-list-button-icon-color: #000;
+
+
+@bs3-main-navigation-nav-link-hover-font-color: @state-secondary-bg;
+@bs3-main-navigation-nav-link-hover-background-color: transparent ;
+.front .pane-os2sub-banner  { margin-bottom: 10px; margin-top: 0;}
+.front .pane-os2sub-nyheder { margin-bottom: 10px; margin-top: 10px;}
+.os2web-spotbox-spotbox { border-radius: 6px;}
+@radius: 3px;
+
+.simple-navigation-logo-link { color: #333; text-align: left; font-size: @font-size-large;
+	&:hover { color: #dedede}
+}
+.main-navigation-list-link a { text-transform: uppercase; }
+
+.page-node .view-os2sub-banner { margin-bottom: 20px;}
+
+.main-navigation-wrapper .main-navigation-list.main-navigation-lang {
+  float: right;
+  .main-navigation-list-link {
+    border-left: none;
+    .lang-link {
+      display: inline-block;
+      margin-right: 5px;
+      height: 11px;
+      width: 16px;
+      overflow: hidden;
+      padding: 0 0;
+      &.lang-link-da {
+        background-image: url(../../flag/flag-denmark.png)
+      }
+      &.lang-link-en {
+        background-image: url(../../flag/flag-united-kingdom.png)
+      }
+      &.lang-link-no {
+        background-image: url(../../flag/flag-norway.png)
+      }
+      &.lang-link-se {
+        background-image: url(../../flag/flag-sweden.png)
+      }
+      &.lang-link-de {
+        background-image: url(../../flag/flag-germany.png)
+      }
+      &.lang-link-ar {
+        background-image: url(../../flag/flag-arabiac.png)
+      }
+    }
+  &:last-child { margin-right: 20px;}
+  }  
+}
+.view-mode-teaser  {
+  margin-bottom: 20px;
+  .node--os2web_base_news--teaser {}
+}
+
+.photoswipe-gallery {
+  a.photoswipe {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+}
+

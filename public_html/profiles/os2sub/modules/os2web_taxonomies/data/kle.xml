@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Taxonomy SqlID="1">
+  <Name>KLE</Name>
+  <Description>KL Emnesystematik</Description>
+  <Taxon SqlID="3646" ParentKey="00.03">
+    <Key>00.03.04</Key>
+    <Name>Regionaludvikling EU</Name>
+    <Description>&lt;p&gt;Her journaliseres sager vedrørende EU's organisation og udvikling, samt sager vedrørende aftaler om Regionale programmer som fx: Strukturfond, Mål2, Mål3, Artikel 33, Socialfond, Interreg III, LEADER+ og Carrefour. Konkrete EU-tilskud til kommunen journaliseres under det relevante emne med facet Ø34. Når kommuner administrerer tilskud (indstiller til eller yder), hvor tilskuddene er finansieret eller medfinansieret af EU og Staten, journaliseres sagen med Ø39.&lt;/p&gt;</Description>
+  </Taxon>
+</Taxonomy>

@@ -1,0 +1,157 @@
+// |--------------------------------------------------------------------------
+// | Front
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .front
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Front
+.front {
+
+	#homebox {
+		.make-row();
+
+		.homebox-column-wrapper {
+			.make-xs-column(12);
+
+			// Left
+			&.homebox-column-wrapper-1 {
+				.make-sm-column(7);
+			}
+
+			// Right
+			&.homebox-column-wrapper-2 {
+				.make-sm-column(5);
+			}
+		}
+
+		#homebox-buttons {
+			.text-right;
+			.make-xs-column(12);
+
+			#homebox-add-link {
+				font-size: 0;
+				margin: 0 @default-left-right-spacing;
+
+				&:before {
+					font-family: FontAwesome;
+					color: @brand-primary;
+					font-size: @font-size-base;
+					content: @fa-var-object-ungroup;
+				}
+
+				&,
+				&:hover,
+				&:focus,
+				&:active {
+					text-decoration: none;
+				}
+			}
+		}
+
+		#homebox-add {
+			.make-xs-column(12);
+
+			> ul {
+				margin: 0 @default-left-right-spacing;
+			}
+		}
+	}
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Front
+	.front {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	// Front
+	.front {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Front
+	.front {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	// Front
+	.front {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Front
+	.front {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	// Front
+	.front {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Front
+	.front {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	// Front
+	.front {}
+}
+
+// Print
+@media print {
+
+	// Front
+	.front {}
+}
+
+// Touch
+.touch {
+
+	// Front
+	.front {}
+}
+
+// No touch
+.no-touch {
+
+	// Front
+	.front {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Front mixin
+.mixin-front() {}

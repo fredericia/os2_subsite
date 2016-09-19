@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Taxonomy SqlID="2">
+  <Name>Politik</Name>
+  <Description>Politik</Description>
+  <Taxon SqlID="7627">
+    <Key>1</Key>
+    <Name>Politiske partier</Name>
+  </Taxon>
+  <Taxon SqlID="7628">
+    <Key>2</Key>
+    <Name>Råd, Nævn, Grupper og udvalg</Name>
+  </Taxon>
+  <Taxon SqlID="7629" ParentKey="1">
+    <Key>3</Key>
+    <Name>Socialdemokratiet</Name>
+  </Taxon>
+  <Taxon SqlID="7630" ParentKey="1">
+    <Key>4</Key>
+    <Name>Venstre</Name>
+  </Taxon>
+  <Taxon SqlID="7631" ParentKey="1">
+    <Key>5</Key>
+    <Name>Socialistisk Folkeparti</Name>
+  </Taxon>
+  <Taxon SqlID="7632" ParentKey="1">
+    <Key>6</Key>
+    <Name>Det Konservative Folkeparti</Name>
+  </Taxon>
+  <Taxon SqlID="7633" ParentKey="1">
+    <Key>7</Key>
+    <Name>Dansk Folkeparti</Name>
+  </Taxon>
+  <Taxon SqlID="7634" ParentKey="1">
+    <Key>8</Key>
+    <Name>Enhedslisten</Name>
+  </Taxon>
+  <Taxon SqlID="7635" ParentKey="1">
+    <Key>9</Key>
+    <Name>De Radikale</Name>
+  </Taxon>
+  <Taxon SqlID="7636" ParentKey="1">
+    <Key>10</Key>
+    <Name>Borgerlisten</Name>
+  </Taxon>
+  <Taxon SqlID="7637" ParentKey="2">
+    <Key>11</Key>
+    <Name>Beboerklagenævn</Name>
+  </Taxon>
+  <Taxon SqlID="7638" ParentKey="2">
+    <Key>12</Key>
+    <Name>Beredskabskommission</Name>
+  </Taxon>
+  <Taxon SqlID="7639" ParentKey="2">
+    <Key>13</Key>
+    <Name>Beskæftigelsesråd, LBR</Name>
+  </Taxon>
+  <Taxon SqlID="7640" ParentKey="2">
+    <Key>14</Key>
+    <Name>Bevaringsrådet for Ebeltoft Midtby</Name>
+  </Taxon>
+  <Taxon SqlID="7641" ParentKey="2">
+    <Key>15</Key>
+    <Name>Billedkunstrådet</Name>
+  </Taxon>
+  <Taxon SqlID="7642" ParentKey="2">
+    <Key>16</Key>
+    <Name>Børn &amp; Unge udvalg</Name>
+  </Taxon>
+  <Taxon SqlID="7643" ParentKey="2">
+    <Key>17</Key>
+    <Name>Det grønne råd</Name>
+  </Taxon>
+  <Taxon SqlID="7644" ParentKey="2">
+    <Key>18</Key>
+    <Name>Distriktsråd</Name>
+  </Taxon>
+  <Taxon SqlID="7645" ParentKey="2">
+    <Key>19</Key>
+    <Name>Djurs Mad I/S</Name>
+  </Taxon>
+  <Taxon SqlID="7646" ParentKey="2">
+    <Key>20</Key>
+    <Name>Djurslands Udviklingsråd, DUR</Name>
+  </Taxon>
+  <Taxon SqlID="7647" ParentKey="2">
+    <Key>21</Key>
+    <Name>Ekspropriation og Taksation</Name>
+  </Taxon>
+  <Taxon SqlID="7648" ParentKey="2">
+    <Key>22</Key>
+    <Name>Erhvervstænketanken</Name>
+  </Taxon>
+  <Taxon SqlID="7649" ParentKey="2">
+    <Key>23</Key>
+    <Name>Fredningsnævn</Name>
+  </Taxon>
+  <Taxon SqlID="7650" ParentKey="2">
+    <Key>24</Key>
+    <Name>Frivillighedsrådet</Name>
+  </Taxon>
+  <Taxon SqlID="7651" ParentKey="2">
+    <Key>25</Key>
+    <Name>Grundlisteudvalget</Name>
+  </Taxon>
+  <Taxon SqlID="7652" ParentKey="2">
+    <Key>26</Key>
+    <Name>Handicaprådet</Name>
+  </Taxon>
+  <Taxon SqlID="7653" ParentKey="2">
+    <Key>27</Key>
+    <Name>Hegnsynsnævn</Name>
+  </Taxon>
+  <Taxon SqlID="7654" ParentKey="2">
+    <Key>28</Key>
+    <Name>Hjemmeværnets distriktsudvalg</Name>
+  </Taxon>
+  <Taxon SqlID="7655" ParentKey="2">
+    <Key>29</Key>
+    <Name>Huslejenævn</Name>
+  </Taxon>
+  <Taxon SqlID="7656" ParentKey="2">
+    <Key>30</Key>
+    <Name>Kredsråd vedrørende politiets virksomhed</Name>
+  </Taxon>
+  <Taxon SqlID="7657" ParentKey="2">
+    <Key>31</Key>
+    <Name>Lokal Aktionsgruppe på Djursland - LAG</Name>
+  </Taxon>
+  <Taxon SqlID="7658" ParentKey="2">
+    <Key>32</Key>
+    <Name>Mark- og vejfred, vurderingsmænd</Name>
+  </Taxon>
+  <Taxon SqlID="7659" ParentKey="2">
+    <Key>33</Key>
+    <Name>Repræsentanter i bestyrelser, repræsentantskaber o.l.</Name>
+  </Taxon>
+  <Taxon SqlID="7660" ParentKey="2">
+    <Key>34</Key>
+    <Name>Ældrerådet</Name>
+  </Taxon>
+  <Taxon SqlID="53645" ParentKey="2">
+    <Key>35</Key>
+    <Name>Økonomiudvalget</Name>
+  </Taxon>
+  <Taxon SqlID="53646" ParentKey="2">
+    <Key>36</Key>
+    <Name>Byrådet</Name>
+  </Taxon>
+  <Taxon SqlID="53647" ParentKey="2">
+    <Key>37</Key>
+    <Name>Arbejdsmarkedsudvalget</Name>
+  </Taxon>
+  <Taxon SqlID="53648" ParentKey="2">
+    <Key>38</Key>
+    <Name>Udvalget for familie og institutioner</Name>
+  </Taxon>
+  <Taxon SqlID="53649" ParentKey="2">
+    <Key>39</Key>
+    <Name>Udvalget for plan, udvikling og kultur</Name>
+  </Taxon>
+  <Taxon SqlID="53650" ParentKey="2">
+    <Key>40</Key>
+    <Name>Udvalget for natur, teknik og miljø</Name>
+  </Taxon>
+  <Taxon SqlID="53651" ParentKey="2">
+    <Key>41</Key>
+    <Name>Udvalget for sundhed, ældre og social</Name>
+  </Taxon>
+</Taxonomy>

@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Taxonomy SqlID="5">
+  <Name>Organisation</Name>
+  <Description>Organisation</Description>
+  <Taxon SqlID="3137" ParentKey="">
+    <Key>819656</Key>
+    <Name>Syddjurs Kommune</Name>
+    <Tag SqlID="7181" TagType="Søgeord" TagTypeSqlID="3">
+      <Key>testsøg</Key>
+    </Tag>
+  </Taxon>
+  <Taxon SqlID="3138" ParentKey="819656">
+    <Key>825399</Key>
+    <Name>Direktion</Name>
+  </Taxon>
+  <Taxon SqlID="3139" ParentKey="883093">
+    <Key>825404</Key>
+    <Name>Plan og Byg / Kultur og Udvikling</Name>
+  </Taxon>
+  <Taxon SqlID="3140" ParentKey="883095">
+    <Key>825405</Key>
+    <Name>Borgerservice og Direktionssekretariat</Name>
+  </Taxon>
+  <Taxon SqlID="3141" ParentKey="887460">
+    <Key>825406</Key>
+    <Name>Digitalisering og IT</Name>
+  </Taxon>
+  <Taxon SqlID="3142" ParentKey="883094">
+    <Key>825407</Key>
+    <Name>Familie</Name>
+  </Taxon>
+  <Taxon SqlID="3143" ParentKey="883094">
+    <Key>825408</Key>
+    <Name>Skoler</Name>
+  </Taxon>
+  <Taxon SqlID="3144" ParentKey="883094">
+    <Key>825409</Key>
+    <Name>Dagtilbud</Name>
+  </Taxon>
+  <Taxon SqlID="3145" ParentKey="825413">
+    <Key>825410</Key>
+    <Name>Sundhedsfremme, sundhedscenter</Name>
+  </Taxon>
+  <Taxon SqlID="3146" ParentKey="883096">
+    <Key>825411</Key>
+    <Name>Beskæftigelse</Name>
+  </Taxon>
+  <Taxon SqlID="3147" ParentKey="883096">
+    <Key>825412</Key>
+    <Name>Voksen og handicap</Name>
+  </Taxon>
+  <Taxon SqlID="3148" ParentKey="883096">
+    <Key>825413</Key>
+    <Name>Ældre og sundhedsfremme</Name>
+  </Taxon>
+  <Taxon SqlID="3149" ParentKey="883095">
+    <Key>825414</Key>
+    <Name>Personale og HR</Name>
+  </Taxon>
+  <Taxon SqlID="3150" ParentKey="883095">
+    <Key>825415</Key>
+    <Name>Budget</Name>
+  </Taxon>
+  <Taxon SqlID="3151" ParentKey="883095">
+    <Key>825417</Key>
+    <Name>Regnskab</Name>
+  </Taxon>
+  <Taxon SqlID="3152" ParentKey="825419">
+    <Key>825418</Key>
+    <Name>Ejendomme, vedligeholdelse, energi og gr</Name>
+  </Taxon>
+  <Taxon SqlID="3153" ParentKey="883093">
+    <Key>825419</Key>
+    <Name>Vej, park og natur</Name>
+  </Taxon>
+  <Taxon SqlID="3154" ParentKey="825399">
+    <Key>825420</Key>
+    <Name>Forsyning</Name>
+  </Taxon>
+  <Taxon SqlID="3155" ParentKey="883093">
+    <Key>825421</Key>
+    <Name>Natur og miljø</Name>
+  </Taxon>
+  <Taxon SqlID="3157" ParentKey="825405">
+    <Key>825423</Key>
+    <Name>Borgerservice</Name>
+  </Taxon>
+  <Taxon SqlID="3158" ParentKey="884980">
+    <Key>825424</Key>
+    <Name>Plan</Name>
+  </Taxon>
+  <Taxon SqlID="3159" ParentKey="825404">
+    <Key>825425</Key>
+    <Name>Kultur og Udvikling</Name>
+  </Taxon>
+  <Taxon SqlID="3160" ParentKey="825423">
+    <Key>825449</Key>
+    <Name>Borgerservice Pensionsteam</Name>
+  </Taxon>
+  <Taxon SqlID="3161" ParentKey="825423">
+    <Key>825450</Key>
+    <Name>Borgerservice Dagpengeteam</Name>
+  </Taxon>
+  <Taxon SqlID="3162" ParentKey="825423">
+    <Key>825451</Key>
+    <Name>Borgerservice Boligstøtte</Name>
+  </Taxon>
+  <Taxon SqlID="3163" ParentKey="825423">
+    <Key>825452</Key>
+    <Name>Borgerservice Børneydelser</Name>
+  </Taxon>
+  <Taxon SqlID="3164" ParentKey="825408">
+    <Key>825454</Key>
+    <Name>Hornslet Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3165" ParentKey="825408">
+    <Key>825455</Key>
+    <Name>Mørke Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3166" ParentKey="825408">
+    <Key>825457</Key>
+    <Name>Ådalsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3167" ParentKey="825408">
+    <Key>825458</Key>
+    <Name>Rønde Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3168" ParentKey="825408">
+    <Key>825459</Key>
+    <Name>Thorsager Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3172" ParentKey="825408">
+    <Key>825463</Key>
+    <Name>Kolind Centralskole</Name>
+  </Taxon>
+  <Taxon SqlID="3173" ParentKey="825408">
+    <Key>825464</Key>
+    <Name>Marienhoffskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3175" ParentKey="825408">
+    <Key>825467</Key>
+    <Name>Molsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3176" ParentKey="825408">
+    <Key>825468</Key>
+    <Name>Rosmus Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3177" ParentKey="885703">
+    <Key>825469</Key>
+    <Name>Skelhøjeskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3178" ParentKey="885703">
+    <Key>825470</Key>
+    <Name>Toftevangsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3179" ParentKey="825409">
+    <Key>826209</Key>
+    <Name>Børnehuset Ågården</Name>
+  </Taxon>
+  <Taxon SqlID="3180" ParentKey="825409">
+    <Key>826212</Key>
+    <Name>Børnehuset Ådalen</Name>
+  </Taxon>
+  <Taxon SqlID="3181" ParentKey="825409">
+    <Key>826213</Key>
+    <Name>Børnehuset Hanehøj</Name>
+  </Taxon>
+  <Taxon SqlID="3182" ParentKey="825409">
+    <Key>826215</Key>
+    <Name>Kastanjehuset</Name>
+  </Taxon>
+  <Taxon SqlID="3183" ParentKey="825409">
+    <Key>826216</Key>
+    <Name>Børnehaven Mosegården</Name>
+  </Taxon>
+  <Taxon SqlID="3184" ParentKey="825409">
+    <Key>826217</Key>
+    <Name>Børnehuset Vigen</Name>
+  </Taxon>
+  <Taxon SqlID="3185" ParentKey="825409">
+    <Key>826224</Key>
+    <Name>Skovbørnehaven i Rønde</Name>
+  </Taxon>
+  <Taxon SqlID="3186" ParentKey="825409">
+    <Key>826225</Key>
+    <Name>Børnehuset Moesbakken</Name>
+  </Taxon>
+  <Taxon SqlID="3187" ParentKey="825409">
+    <Key>826227</Key>
+    <Name>Thorsager Børnehus</Name>
+  </Taxon>
+  <Taxon SqlID="3188" ParentKey="825409">
+    <Key>826228</Key>
+    <Name>Børnehaven Lille Arnold</Name>
+  </Taxon>
+  <Taxon SqlID="3189" ParentKey="825409">
+    <Key>826229</Key>
+    <Name>Feldballe Børnehave</Name>
+  </Taxon>
+  <Taxon SqlID="3190" ParentKey="825409">
+    <Key>826232</Key>
+    <Name>Børnehuset Uglen</Name>
+  </Taxon>
+  <Taxon SqlID="3191" ParentKey="825409">
+    <Key>826233</Key>
+    <Name>Balle Børnehave</Name>
+  </Taxon>
+  <Taxon SqlID="3192" ParentKey="825409">
+    <Key>826234</Key>
+    <Name>Børnenes Gård</Name>
+  </Taxon>
+  <Taxon SqlID="3193" ParentKey="825409">
+    <Key>826239</Key>
+    <Name>Dråby Skovbørnehave</Name>
+  </Taxon>
+  <Taxon SqlID="3194" ParentKey="825409">
+    <Key>826243</Key>
+    <Name>Børnehuset Hyrdebakken</Name>
+  </Taxon>
+  <Taxon SqlID="3195" ParentKey="825409">
+    <Key>826246</Key>
+    <Name>Knebel Børnehave</Name>
+  </Taxon>
+  <Taxon SqlID="3196" ParentKey="825409">
+    <Key>826247</Key>
+    <Name>Børnehaven Kornblomsten</Name>
+  </Taxon>
+  <Taxon SqlID="3197" ParentKey="825409">
+    <Key>826248</Key>
+    <Name>Børnehaven Lærkehuset</Name>
+  </Taxon>
+  <Taxon SqlID="3198" ParentKey="825409">
+    <Key>826249</Key>
+    <Name>Børnehaven Myretuen</Name>
+  </Taxon>
+  <Taxon SqlID="3199" ParentKey="825409">
+    <Key>826251</Key>
+    <Name>Naturbørnehaven Mols Bjerge</Name>
+  </Taxon>
+  <Taxon SqlID="3200" ParentKey="825409">
+    <Key>826254</Key>
+    <Name>Børnehaven Æblehaven</Name>
+  </Taxon>
+  <Taxon SqlID="3201" ParentKey="825409">
+    <Key>826258</Key>
+    <Name>Dortheabørnehaven</Name>
+  </Taxon>
+  <Taxon SqlID="3202" ParentKey="825409">
+    <Key>826259</Key>
+    <Name>Margrethebørnehaven</Name>
+  </Taxon>
+  <Taxon SqlID="3203" ParentKey="825409">
+    <Key>826261</Key>
+    <Name>Poppelvejens Børnehave</Name>
+  </Taxon>
+  <Taxon SqlID="3204" ParentKey="825409">
+    <Key>826263</Key>
+    <Name>Børnehuset Ringvejen</Name>
+  </Taxon>
+  <Taxon SqlID="3205" ParentKey="825409">
+    <Key>826264</Key>
+    <Name>Børnehuset Romlehøj</Name>
+  </Taxon>
+  <Taxon SqlID="3206" ParentKey="825409">
+    <Key>826266</Key>
+    <Name>Solbærkrogen</Name>
+  </Taxon>
+  <Taxon SqlID="3207" ParentKey="825457">
+    <Key>826278</Key>
+    <Name>SFO Ådalen</Name>
+  </Taxon>
+  <Taxon SqlID="3208" ParentKey="825454">
+    <Key>826279</Key>
+    <Name>SFO Hornslet Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3209" ParentKey="825455">
+    <Key>826280</Key>
+    <Name>SFO Mørke Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3211" ParentKey="825463">
+    <Key>826283</Key>
+    <Name>SFO Kolind Centralskole</Name>
+  </Taxon>
+  <Taxon SqlID="3212" ParentKey="825464">
+    <Key>826286</Key>
+    <Name>SFO Marienhoffskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3213" ParentKey="825458">
+    <Key>826288</Key>
+    <Name>SFO Rønde Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3214" ParentKey="825459">
+    <Key>826290</Key>
+    <Name>SFO Thorsager Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3216" ParentKey="825469">
+    <Key>826295</Key>
+    <Name>SFO Skelhøjeskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3217" ParentKey="825467">
+    <Key>826297</Key>
+    <Name>SFO Molsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3218" ParentKey="825468">
+    <Key>826298</Key>
+    <Name>SFO Rosmus Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3219" ParentKey="825470">
+    <Key>826299</Key>
+    <Name>SFO Toftevangsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3220" ParentKey="825412">
+    <Key>826306</Key>
+    <Name>Syddjurs Bo-og Aktivitetstilbud</Name>
+  </Taxon>
+  <Taxon SqlID="3221" ParentKey="848554">
+    <Key>826308</Key>
+    <Name>Misbrugscentret</Name>
+  </Taxon>
+  <Taxon SqlID="3222" ParentKey="825409">
+    <Key>826312</Key>
+    <Name>Kommunal dagpleje</Name>
+  </Taxon>
+  <Taxon SqlID="3223" ParentKey="825404">
+    <Key>826318</Key>
+    <Name>Bibliotek</Name>
+  </Taxon>
+  <Taxon SqlID="3224" ParentKey="825404">
+    <Key>826320</Key>
+    <Name>Musikskole</Name>
+  </Taxon>
+  <Taxon SqlID="3225" ParentKey="825408">
+    <Key>826321</Key>
+    <Name>Syddjurs Ungdomsskole</Name>
+  </Taxon>
+  <Taxon SqlID="3226" ParentKey="850552">
+    <Key>839893</Key>
+    <Name>VTA Team 2 Øst</Name>
+  </Taxon>
+  <Taxon SqlID="3227" ParentKey="871664">
+    <Key>839934</Key>
+    <Name>Syddjurs Hjælpere Nattevagt</Name>
+  </Taxon>
+  <Taxon SqlID="3228" ParentKey="850589">
+    <Key>839935</Key>
+    <Name>Ring-/Søhusparken Team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3229" ParentKey="850591">
+    <Key>839936</Key>
+    <Name>Ring-/Søhusparken Team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3230" ParentKey="871664">
+    <Key>839947</Key>
+    <Name>Ring-/Søhusparken Sygepleje</Name>
+  </Taxon>
+  <Taxon SqlID="3231" ParentKey="871309">
+    <Key>839960</Key>
+    <Name>Søhusparken plejeboliger team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3232" ParentKey="871309">
+    <Key>839962</Key>
+    <Name>Søhusparken Administration</Name>
+  </Taxon>
+  <Taxon SqlID="3233" ParentKey="850595">
+    <Key>839964</Key>
+    <Name>Søhusparken hus A</Name>
+  </Taxon>
+  <Taxon SqlID="3234" ParentKey="850595">
+    <Key>839966</Key>
+    <Name>Søhusparken hus B</Name>
+  </Taxon>
+  <Taxon SqlID="3235" ParentKey="839960">
+    <Key>839967</Key>
+    <Name>Søhusparken hus C</Name>
+  </Taxon>
+  <Taxon SqlID="3236" ParentKey="839960">
+    <Key>839975</Key>
+    <Name>Søhusparken hus D</Name>
+  </Taxon>
+  <Taxon SqlID="3237" ParentKey="839960">
+    <Key>839977</Key>
+    <Name>Søhusparken hus E</Name>
+  </Taxon>
+  <Taxon SqlID="3238" ParentKey="850595">
+    <Key>839979</Key>
+    <Name>Søhusparken NAT</Name>
+  </Taxon>
+  <Taxon SqlID="3239" ParentKey="850598">
+    <Key>840048</Key>
+    <Name>Rosengården/Lillerup team 6</Name>
+  </Taxon>
+  <Taxon SqlID="3240" ParentKey="850552">
+    <Key>840049</Key>
+    <Name>VTA Team 2 Syd</Name>
+  </Taxon>
+  <Taxon SqlID="3241" ParentKey="850602">
+    <Key>840051</Key>
+    <Name>Rosengården/Lillerup team 4</Name>
+  </Taxon>
+  <Taxon SqlID="3242" ParentKey="850602">
+    <Key>840052</Key>
+    <Name>Rosengården/Lillerup team 4 A</Name>
+  </Taxon>
+  <Taxon SqlID="3243" ParentKey="840929">
+    <Key>840053</Key>
+    <Name>Team Cafe og Serviceproduktion</Name>
+  </Taxon>
+  <Taxon SqlID="3244" ParentKey="871314">
+    <Key>840054</Key>
+    <Name>Lillerup serviceafdeling</Name>
+  </Taxon>
+  <Taxon SqlID="3245" ParentKey="850607">
+    <Key>840055</Key>
+    <Name>Poppelhuset</Name>
+  </Taxon>
+  <Taxon SqlID="3246" ParentKey="850607">
+    <Key>840056</Key>
+    <Name>Kildevæld</Name>
+  </Taxon>
+  <Taxon SqlID="3247" ParentKey="850607">
+    <Key>840057</Key>
+    <Name>Aftenstjernen</Name>
+  </Taxon>
+  <Taxon SqlID="3248" ParentKey="850553">
+    <Key>840066</Key>
+    <Name>Genoptræningscenter Syddjurs</Name>
+  </Taxon>
+  <Taxon SqlID="3249" ParentKey="850583">
+    <Key>840068</Key>
+    <Name>Plejeboligerne Vesterled</Name>
+  </Taxon>
+  <Taxon SqlID="3250" ParentKey="850577">
+    <Key>840070</Key>
+    <Name>Ring-/Søhusparken team 3 A</Name>
+  </Taxon>
+  <Taxon SqlID="3251" ParentKey="850568">
+    <Key>840095</Key>
+    <Name>Rosengården/Lillerup team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3252" ParentKey="850571">
+    <Key>840104</Key>
+    <Name>Rosengården Gr. 1</Name>
+  </Taxon>
+  <Taxon SqlID="3253" ParentKey="850569">
+    <Key>840105</Key>
+    <Name>Rosengården Gr. 3+4</Name>
+  </Taxon>
+  <Taxon SqlID="3254" ParentKey="850566">
+    <Key>840272</Key>
+    <Name>Rosengården/Lillerup team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3255" ParentKey="850571">
+    <Key>840273</Key>
+    <Name>Rosengården Gr. 5+6</Name>
+  </Taxon>
+  <Taxon SqlID="3256" ParentKey="850573">
+    <Key>840276</Key>
+    <Name>Rosengården Gr.2</Name>
+  </Taxon>
+  <Taxon SqlID="3257" ParentKey="850569">
+    <Key>840278</Key>
+    <Name>Rosengården Aftenvagt</Name>
+  </Taxon>
+  <Taxon SqlID="3258" ParentKey="840929">
+    <Key>840279</Key>
+    <Name>Team Rosengårdens Køkken</Name>
+  </Taxon>
+  <Taxon SqlID="3259" ParentKey="850569">
+    <Key>840280</Key>
+    <Name>Rosengården Nattevagt</Name>
+  </Taxon>
+  <Taxon SqlID="3260" ParentKey="871314">
+    <Key>840281</Key>
+    <Name>Rosengården Serviceafdeling</Name>
+  </Taxon>
+  <Taxon SqlID="3261" ParentKey="872354">
+    <Key>840286</Key>
+    <Name>Rosengården/Lillerup Sygepleje</Name>
+  </Taxon>
+  <Taxon SqlID="3263" ParentKey="850552">
+    <Key>840291</Key>
+    <Name>VTA Team 1 Vest</Name>
+  </Taxon>
+  <Taxon SqlID="3264" ParentKey="850552">
+    <Key>840358</Key>
+    <Name>VTA Team 1 Nord</Name>
+  </Taxon>
+  <Taxon SqlID="3265" ParentKey="850577">
+    <Key>840360</Key>
+    <Name>Ring-/Søhusparken Team 3</Name>
+  </Taxon>
+  <Taxon SqlID="3266" ParentKey="850583">
+    <Key>840365</Key>
+    <Name>Plejeboligerne Ringparken</Name>
+  </Taxon>
+  <Taxon SqlID="3267" ParentKey="850579">
+    <Key>840366</Key>
+    <Name>Ring-/Søhusparken Team 4</Name>
+  </Taxon>
+  <Taxon SqlID="3268" ParentKey="871664">
+    <Key>840367</Key>
+    <Name>Syddjurs Sygepleje Nattevagt</Name>
+  </Taxon>
+  <Taxon SqlID="3269" ParentKey="850579">
+    <Key>840369</Key>
+    <Name>Ring-/Søhusparken Team 6</Name>
+  </Taxon>
+  <Taxon SqlID="3270" ParentKey="850573">
+    <Key>840375</Key>
+    <Name>Plejeboligerne Frejasvænge</Name>
+  </Taxon>
+  <Taxon SqlID="3271" ParentKey="840929">
+    <Key>840380</Key>
+    <Name>Team Rønde Madservice</Name>
+  </Taxon>
+  <Taxon SqlID="3272" ParentKey="850605">
+    <Key>840610</Key>
+    <Name>Forglemmigej</Name>
+  </Taxon>
+  <Taxon SqlID="3274" ParentKey="850605">
+    <Key>840613</Key>
+    <Name>Marguritten</Name>
+  </Taxon>
+  <Taxon SqlID="3275" ParentKey="850598">
+    <Key>840614</Key>
+    <Name>Rosengården/Lillerup team 3</Name>
+  </Taxon>
+  <Taxon SqlID="3276" ParentKey="850605">
+    <Key>840618</Key>
+    <Name>Solsikken</Name>
+  </Taxon>
+  <Taxon SqlID="3277" ParentKey="850605">
+    <Key>840620</Key>
+    <Name>Valmuen</Name>
+  </Taxon>
+  <Taxon SqlID="3278" ParentKey="825413">
+    <Key>840927</Key>
+    <Name>Tandplejen</Name>
+  </Taxon>
+  <Taxon SqlID="3279" ParentKey="825412">
+    <Key>840928</Key>
+    <Name>Myndighedsopgaver på ældreområdet</Name>
+  </Taxon>
+  <Taxon SqlID="3280" ParentKey="825413">
+    <Key>840929</Key>
+    <Name>Køkken og madservice</Name>
+  </Taxon>
+  <Taxon SqlID="3281" ParentKey="825413">
+    <Key>840930</Key>
+    <Name>Træning og aktiviteter</Name>
+  </Taxon>
+  <Taxon SqlID="3282" ParentKey="825411">
+    <Key>840934</Key>
+    <Name>Jobcenter</Name>
+  </Taxon>
+  <Taxon SqlID="3283" ParentKey="848522">
+    <Key>840935</Key>
+    <Name>Projektcenter Syddjurs</Name>
+  </Taxon>
+  <Taxon SqlID="3284" ParentKey="825411">
+    <Key>840936</Key>
+    <Name>Ydelseskontor KMD Aktiv</Name>
+  </Taxon>
+  <Taxon SqlID="3285" ParentKey="825407">
+    <Key>840937</Key>
+    <Name>PPR</Name>
+  </Taxon>
+  <Taxon SqlID="3286" ParentKey="825407">
+    <Key>840938</Key>
+    <Name>Sundhedsplejen</Name>
+  </Taxon>
+  <Taxon SqlID="3287" ParentKey="825405">
+    <Key>840939</Key>
+    <Name>Byrådet</Name>
+  </Taxon>
+  <Taxon SqlID="3288" ParentKey="825405">
+    <Key>840940</Key>
+    <Name>Råd og nævn</Name>
+  </Taxon>
+  <Taxon SqlID="3289" ParentKey="825449">
+    <Key>840941</Key>
+    <Name>Borgerservice Pension</Name>
+  </Taxon>
+  <Taxon SqlID="3290" ParentKey="825449">
+    <Key>840942</Key>
+    <Name>Engangsydelser</Name>
+  </Taxon>
+  <Taxon SqlID="3291" ParentKey="825449">
+    <Key>840943</Key>
+    <Name>Boligssikring</Name>
+  </Taxon>
+  <Taxon SqlID="3292" ParentKey="825449">
+    <Key>840944</Key>
+    <Name>Boligydelse</Name>
+  </Taxon>
+  <Taxon SqlID="3293" ParentKey="825450">
+    <Key>840945</Key>
+    <Name>Dagpenge borgere</Name>
+  </Taxon>
+  <Taxon SqlID="3294" ParentKey="825450">
+    <Key>840946</Key>
+    <Name>Dagpenge lønrefusion</Name>
+  </Taxon>
+  <Taxon SqlID="3295" ParentKey="825449">
+    <Key>840947</Key>
+    <Name>Delpension</Name>
+  </Taxon>
+  <Taxon SqlID="3296" ParentKey="825450">
+    <Key>840948</Key>
+    <Name>Børnetilskud</Name>
+  </Taxon>
+  <Taxon SqlID="3297" ParentKey="825450">
+    <Key>840949</Key>
+    <Name>Underholdsbidrag</Name>
+  </Taxon>
+  <Taxon SqlID="3298" ParentKey="825417">
+    <Key>840950</Key>
+    <Name>Leverandørudbetalinger</Name>
+  </Taxon>
+  <Taxon SqlID="3299" ParentKey="825411">
+    <Key>845030</Key>
+    <Name>Ydelse B&amp;U, KMD Aktiv</Name>
+  </Taxon>
+  <Taxon SqlID="3300" ParentKey="825409">
+    <Key>848092</Key>
+    <Name>Børnehuset Bækdalen</Name>
+  </Taxon>
+  <Taxon SqlID="3301" ParentKey="826312">
+    <Key>848492</Key>
+    <Name>Dagpleje tilsyn og adm.</Name>
+  </Taxon>
+  <Taxon SqlID="3302" ParentKey="826312">
+    <Key>848493</Key>
+    <Name>Dagpleje</Name>
+  </Taxon>
+  <Taxon SqlID="3303" ParentKey="825407">
+    <Key>848494</Key>
+    <Name>Sekretariat familie</Name>
+  </Taxon>
+  <Taxon SqlID="3304" ParentKey="881819">
+    <Key>848496</Key>
+    <Name>Familieværket Team 3</Name>
+  </Taxon>
+  <Taxon SqlID="3305" ParentKey="825407">
+    <Key>848497</Key>
+    <Name>Familierådgivergruppen</Name>
+  </Taxon>
+  <Taxon SqlID="3306" ParentKey="881819">
+    <Key>848499</Key>
+    <Name>Familieværket Integrationsteam</Name>
+  </Taxon>
+  <Taxon SqlID="3307" ParentKey="825405">
+    <Key>848500</Key>
+    <Name>Direktionssekretariatet</Name>
+  </Taxon>
+  <Taxon SqlID="3308" ParentKey="825405">
+    <Key>848501</Key>
+    <Name>Serviceafdeling</Name>
+  </Taxon>
+  <Taxon SqlID="3309" ParentKey="825425">
+    <Key>848502</Key>
+    <Name>Kultur</Name>
+  </Taxon>
+  <Taxon SqlID="3310" ParentKey="825450">
+    <Key>848503</Key>
+    <Name>Børnefamilieydelser</Name>
+  </Taxon>
+  <Taxon SqlID="3311" ParentKey="825452">
+    <Key>848504</Key>
+    <Name>uhb debitor</Name>
+  </Taxon>
+  <Taxon SqlID="3314" ParentKey="826321">
+    <Key>848511</Key>
+    <Name>Juniorklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3316" ParentKey="826321">
+    <Key>848515</Key>
+    <Name>Cross ungdomsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3319" ParentKey="840928">
+    <Key>848519</Key>
+    <Name>Visitation og hjælpemidler</Name>
+  </Taxon>
+  <Taxon SqlID="3320" ParentKey="825412">
+    <Key>848521</Key>
+    <Name>Social og beskæftigelse sekretariat</Name>
+  </Taxon>
+  <Taxon SqlID="3321" ParentKey="825412">
+    <Key>848522</Key>
+    <Name>Syddjurs Projekter</Name>
+  </Taxon>
+  <Taxon SqlID="3322" ParentKey="840928">
+    <Key>848523</Key>
+    <Name>Socialcenter</Name>
+  </Taxon>
+  <Taxon SqlID="3323" ParentKey="840934">
+    <Key>848525</Key>
+    <Name>Jobcenter - Jobfokus</Name>
+  </Taxon>
+  <Taxon SqlID="3324" ParentKey="840934">
+    <Key>848526</Key>
+    <Name>Jobcenter -  Jobudvikling</Name>
+  </Taxon>
+  <Taxon SqlID="3325" ParentKey="825412">
+    <Key>848527</Key>
+    <Name>Syddjurs Bostøtte</Name>
+  </Taxon>
+  <Taxon SqlID="3326" ParentKey="877685">
+    <Key>848529</Key>
+    <Name>Aktivitetcenter MM</Name>
+  </Taxon>
+  <Taxon SqlID="3327" ParentKey="877686">
+    <Key>848530</Key>
+    <Name>Botilbud Broen MM</Name>
+  </Taxon>
+  <Taxon SqlID="3328" ParentKey="877686">
+    <Key>848533</Key>
+    <Name>Botilbud Broen vikarer MM</Name>
+  </Taxon>
+  <Taxon SqlID="3329" ParentKey="877686">
+    <Key>848534</Key>
+    <Name>Botilbud Kahytten MM</Name>
+  </Taxon>
+  <Taxon SqlID="3330" ParentKey="877686">
+    <Key>848535</Key>
+    <Name>Botilbud Kahytten vikarer MM</Name>
+  </Taxon>
+  <Taxon SqlID="3331" ParentKey="877686">
+    <Key>848536</Key>
+    <Name>Botilbud Lanternen MM</Name>
+  </Taxon>
+  <Taxon SqlID="3332" ParentKey="877686">
+    <Key>848538</Key>
+    <Name>Botilbud Lanternen vikarer MM</Name>
+  </Taxon>
+  <Taxon SqlID="3333" ParentKey="826306">
+    <Key>848539</Key>
+    <Name>Trinbrættet</Name>
+  </Taxon>
+  <Taxon SqlID="3334" ParentKey="826306">
+    <Key>848540</Key>
+    <Name>Køkken/rengøring MM</Name>
+  </Taxon>
+  <Taxon SqlID="3335" ParentKey="850547">
+    <Key>848541</Key>
+    <Name>Gransvinget</Name>
+  </Taxon>
+  <Taxon SqlID="3337" ParentKey="874839">
+    <Key>848547</Key>
+    <Name>Botilbud-Blå</Name>
+  </Taxon>
+  <Taxon SqlID="3338" ParentKey="877687">
+    <Key>848548</Key>
+    <Name>Botilbud-Lille Eje</Name>
+  </Taxon>
+  <Taxon SqlID="3339" ParentKey="877686">
+    <Key>848549</Key>
+    <Name>Botilbud-Rød</Name>
+  </Taxon>
+  <Taxon SqlID="3340" ParentKey="877687">
+    <Key>848551</Key>
+    <Name>Botilbud Randersvej 85</Name>
+  </Taxon>
+  <Taxon SqlID="3341" ParentKey="853157">
+    <Key>848553</Key>
+    <Name>Fællesadministration Roba</Name>
+  </Taxon>
+  <Taxon SqlID="3342" ParentKey="825412">
+    <Key>848554</Key>
+    <Name>Socialt udsatte</Name>
+  </Taxon>
+  <Taxon SqlID="3343" ParentKey="848554">
+    <Key>848557</Key>
+    <Name>Misbrugscentret projekt 18-23 år</Name>
+  </Taxon>
+  <Taxon SqlID="3344" ParentKey="884980">
+    <Key>848573</Key>
+    <Name>Byggesager myndighedsbehandling</Name>
+  </Taxon>
+  <Taxon SqlID="3345" ParentKey="825421">
+    <Key>848574</Key>
+    <Name>Team Miljø</Name>
+  </Taxon>
+  <Taxon SqlID="3346" ParentKey="825421">
+    <Key>848575</Key>
+    <Name>Vand</Name>
+  </Taxon>
+  <Taxon SqlID="3347" ParentKey="825421">
+    <Key>848576</Key>
+    <Name>Team Natur</Name>
+  </Taxon>
+  <Taxon SqlID="3348" ParentKey="825408">
+    <Key>848614</Key>
+    <Name>Pindstrupskolen Specialcenter Syddjurs</Name>
+  </Taxon>
+  <Taxon SqlID="3350" ParentKey="825409">
+    <Key>850518</Key>
+    <Name>Fremmed kommuner dagtilbud</Name>
+  </Taxon>
+  <Taxon SqlID="3351" ParentKey="825408">
+    <Key>850519</Key>
+    <Name>Fremmed kommuner skole/sfo</Name>
+  </Taxon>
+  <Taxon SqlID="3352" ParentKey="825408">
+    <Key>850520</Key>
+    <Name>Skoler og SFO fælles formål</Name>
+  </Taxon>
+  <Taxon SqlID="3353" ParentKey="825455">
+    <Key>850521</Key>
+    <Name>Firkløverskolen service</Name>
+  </Taxon>
+  <Taxon SqlID="3354" ParentKey="850520">
+    <Key>850522</Key>
+    <Name>Ungdommens uddannelsesvejledning</Name>
+  </Taxon>
+  <Taxon SqlID="3355" ParentKey="850522">
+    <Key>850523</Key>
+    <Name>EGU- elever</Name>
+  </Taxon>
+  <Taxon SqlID="3356" ParentKey="840940">
+    <Key>850524</Key>
+    <Name>Folkeoplysning</Name>
+  </Taxon>
+  <Taxon SqlID="3357" ParentKey="840940">
+    <Key>850525</Key>
+    <Name>Huslejenævn</Name>
+  </Taxon>
+  <Taxon SqlID="3358" ParentKey="840940">
+    <Key>850526</Key>
+    <Name>Beboerklagenævn</Name>
+  </Taxon>
+  <Taxon SqlID="3359" ParentKey="840940">
+    <Key>850528</Key>
+    <Name>Ældrerådet</Name>
+  </Taxon>
+  <Taxon SqlID="3360" ParentKey="840940">
+    <Key>850530</Key>
+    <Name>Klageråd vedr. hjemmehjælp</Name>
+  </Taxon>
+  <Taxon SqlID="3361" ParentKey="840940">
+    <Key>850531</Key>
+    <Name>Hegnsyn</Name>
+  </Taxon>
+  <Taxon SqlID="3362" ParentKey="840940">
+    <Key>850532</Key>
+    <Name>Beredskabskommission</Name>
+  </Taxon>
+  <Taxon SqlID="3363" ParentKey="840940">
+    <Key>850533</Key>
+    <Name>Koordinationsudvalget</Name>
+  </Taxon>
+  <Taxon SqlID="3364" ParentKey="840940">
+    <Key>850535</Key>
+    <Name>Kommissioner, råd og nævn andet</Name>
+  </Taxon>
+  <Taxon SqlID="3365" ParentKey="848502">
+    <Key>850536</Key>
+    <Name>Aftenskoler</Name>
+  </Taxon>
+  <Taxon SqlID="3366" ParentKey="848502">
+    <Key>850537</Key>
+    <Name>Haller, Mødelokaler m.v.</Name>
+  </Taxon>
+  <Taxon SqlID="3367" ParentKey="825409">
+    <Key>850538</Key>
+    <Name>Specialpædagogisk Team</Name>
+  </Taxon>
+  <Taxon SqlID="3369" ParentKey="825410">
+    <Key>850541</Key>
+    <Name>Opsøgende forebyggende hjemmebesøg</Name>
+  </Taxon>
+  <Taxon SqlID="3370" ParentKey="848494">
+    <Key>850542</Key>
+    <Name>Kommunelæge</Name>
+  </Taxon>
+  <Taxon SqlID="3371" ParentKey="840927">
+    <Key>850543</Key>
+    <Name>Tandpleje Rønde</Name>
+  </Taxon>
+  <Taxon SqlID="3372" ParentKey="840927">
+    <Key>850544</Key>
+    <Name>Fælleskommunal tandregulering FKO</Name>
+  </Taxon>
+  <Taxon SqlID="3373" ParentKey="848527">
+    <Key>850545</Key>
+    <Name>Syddjurs specialbostøtte</Name>
+  </Taxon>
+  <Taxon SqlID="3374" ParentKey="826306">
+    <Key>850547</Key>
+    <Name>Bofællesskab Skovpark m.v</Name>
+  </Taxon>
+  <Taxon SqlID="3375" ParentKey="848527">
+    <Key>850548</Key>
+    <Name>Syddjurs psykiatri bostøtte</Name>
+  </Taxon>
+  <Taxon SqlID="3377" ParentKey="840930">
+    <Key>850552</Key>
+    <Name>Vedligeholdende Træning og Aktivitet</Name>
+  </Taxon>
+  <Taxon SqlID="3378" ParentKey="840930">
+    <Key>850553</Key>
+    <Name>Det Ambulante Genoptræningscenter</Name>
+  </Taxon>
+  <Taxon SqlID="3382" ParentKey="840930">
+    <Key>850558</Key>
+    <Name>Rehab Syddjurs</Name>
+  </Taxon>
+  <Taxon SqlID="3383" ParentKey="850558">
+    <Key>850559</Key>
+    <Name>Genoptræningsafdeling Gruppe 1</Name>
+  </Taxon>
+  <Taxon SqlID="3386" ParentKey="871314">
+    <Key>850564</Key>
+    <Name>Rosengården administration</Name>
+  </Taxon>
+  <Taxon SqlID="3387" ParentKey="871314">
+    <Key>850566</Key>
+    <Name>Rosengården/Lillerup ude team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3388" ParentKey="850566">
+    <Key>850567</Key>
+    <Name>Rosengården/Lillerup team 5</Name>
+  </Taxon>
+  <Taxon SqlID="3389" ParentKey="871314">
+    <Key>850568</Key>
+    <Name>Rosengården/Lillerup ude team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3390" ParentKey="871314">
+    <Key>850569</Key>
+    <Name>Rosengården plejeboliger team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3391" ParentKey="871314">
+    <Key>850571</Key>
+    <Name>Rosengården plejeboliger team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3392" ParentKey="871314">
+    <Key>850573</Key>
+    <Name>Rosengården plejeboliger team 3</Name>
+  </Taxon>
+  <Taxon SqlID="3393" ParentKey="871309">
+    <Key>850575</Key>
+    <Name>Ringparken administration</Name>
+  </Taxon>
+  <Taxon SqlID="3394" ParentKey="871309">
+    <Key>850576</Key>
+    <Name>Ringparken serviceafdeling</Name>
+  </Taxon>
+  <Taxon SqlID="3395" ParentKey="871309">
+    <Key>850577</Key>
+    <Name>Ring-/Søhusparken ude Team 3</Name>
+  </Taxon>
+  <Taxon SqlID="3396" ParentKey="871309">
+    <Key>850579</Key>
+    <Name>Ring-/Søhusparken ude Team 4</Name>
+  </Taxon>
+  <Taxon SqlID="3397" ParentKey="871309">
+    <Key>850583</Key>
+    <Name>Ringparken plejeboliger team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3398" ParentKey="871309">
+    <Key>850585</Key>
+    <Name>Ringparken plejeboliger team 3</Name>
+  </Taxon>
+  <Taxon SqlID="3399" ParentKey="850585">
+    <Key>850586</Key>
+    <Name>Korttidsafdeling</Name>
+  </Taxon>
+  <Taxon SqlID="3400" ParentKey="871309">
+    <Key>850588</Key>
+    <Name>Søhusparken serviceafdeling</Name>
+  </Taxon>
+  <Taxon SqlID="3401" ParentKey="871309">
+    <Key>850589</Key>
+    <Name>Ring-/Søhusparken ude team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3402" ParentKey="850591">
+    <Key>850590</Key>
+    <Name>Ring-/Søhusparken Team 5</Name>
+  </Taxon>
+  <Taxon SqlID="3403" ParentKey="871309">
+    <Key>850591</Key>
+    <Name>Ring-/Søhusparken Ude Team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3404" ParentKey="871309">
+    <Key>850595</Key>
+    <Name>Søhusparken plejeboliger team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3405" ParentKey="871314">
+    <Key>850597</Key>
+    <Name>Lillerup administration</Name>
+  </Taxon>
+  <Taxon SqlID="3406" ParentKey="871314">
+    <Key>850598</Key>
+    <Name>Rosengården/Lillerup ude team 3</Name>
+  </Taxon>
+  <Taxon SqlID="3407" ParentKey="871314">
+    <Key>850602</Key>
+    <Name>Rosengården/Lillerup ude team 4</Name>
+  </Taxon>
+  <Taxon SqlID="3408" ParentKey="871314">
+    <Key>850605</Key>
+    <Name>Lillerup plejeboliger team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3409" ParentKey="871314">
+    <Key>850607</Key>
+    <Name>Lillerup plejeboliger team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3410" ParentKey="825413">
+    <Key>850608</Key>
+    <Name>Ældreområdet fælles formål</Name>
+  </Taxon>
+  <Taxon SqlID="3411" ParentKey="850608">
+    <Key>850609</Key>
+    <Name>Koordination af uddannelse ældreområdet</Name>
+  </Taxon>
+  <Taxon SqlID="3412" ParentKey="850609">
+    <Key>850610</Key>
+    <Name>SOSU-hjælperelever</Name>
+  </Taxon>
+  <Taxon SqlID="3413" ParentKey="850609">
+    <Key>850611</Key>
+    <Name>SOSU-assistentelever</Name>
+  </Taxon>
+  <Taxon SqlID="3414" ParentKey="850608">
+    <Key>850612</Key>
+    <Name>Koordination af demens ældreområdet</Name>
+  </Taxon>
+  <Taxon SqlID="3415" ParentKey="825419">
+    <Key>850613</Key>
+    <Name>Intern driftsafdeling veje og trafik</Name>
+  </Taxon>
+  <Taxon SqlID="3416" ParentKey="850613">
+    <Key>850614</Key>
+    <Name>Parkeringskontrol</Name>
+  </Taxon>
+  <Taxon SqlID="3417" ParentKey="850613">
+    <Key>850615</Key>
+    <Name>Havne</Name>
+  </Taxon>
+  <Taxon SqlID="3418" ParentKey="850613">
+    <Key>850616</Key>
+    <Name>Park og natur</Name>
+  </Taxon>
+  <Taxon SqlID="3420" ParentKey="881819">
+    <Key>852004</Key>
+    <Name>Familieværket Team 1</Name>
+  </Taxon>
+  <Taxon SqlID="3421" ParentKey="881819">
+    <Key>852005</Key>
+    <Name>Familieværket Team 2</Name>
+  </Taxon>
+  <Taxon SqlID="3422" ParentKey="825407">
+    <Key>852006</Key>
+    <Name>Foranstaltninger</Name>
+  </Taxon>
+  <Taxon SqlID="3423" ParentKey="852006">
+    <Key>852007</Key>
+    <Name>Familiepleje</Name>
+  </Taxon>
+  <Taxon SqlID="3424" ParentKey="848502">
+    <Key>852008</Key>
+    <Name>Billedskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3425" ParentKey="825452">
+    <Key>852009</Key>
+    <Name>Forbrugsafgifter - opkrævning</Name>
+  </Taxon>
+  <Taxon SqlID="3426" ParentKey="850537">
+    <Key>852010</Key>
+    <Name>Hotellet Rønde</Name>
+  </Taxon>
+  <Taxon SqlID="3427" ParentKey="850537">
+    <Key>852011</Key>
+    <Name>Brændpunktet Ebeltoft</Name>
+  </Taxon>
+  <Taxon SqlID="3428" ParentKey="850537">
+    <Key>852012</Key>
+    <Name>Kolind Hallen</Name>
+  </Taxon>
+  <Taxon SqlID="3429" ParentKey="850537">
+    <Key>852013</Key>
+    <Name>Midtdjurs Hallen</Name>
+  </Taxon>
+  <Taxon SqlID="3430" ParentKey="850537">
+    <Key>852014</Key>
+    <Name>Thorsager Hallen</Name>
+  </Taxon>
+  <Taxon SqlID="3431" ParentKey="850537">
+    <Key>852015</Key>
+    <Name>Feldballe Hallen</Name>
+  </Taxon>
+  <Taxon SqlID="3432" ParentKey="848502">
+    <Key>852016</Key>
+    <Name>Fritidspedeller</Name>
+  </Taxon>
+  <Taxon SqlID="3433" ParentKey="825420">
+    <Key>852041</Key>
+    <Name>Driftsafdeling forsyning</Name>
+  </Taxon>
+  <Taxon SqlID="3434" ParentKey="826306">
+    <Key>853157</Key>
+    <Name>Fællesadministration MM</Name>
+  </Taxon>
+  <Taxon SqlID="3435" ParentKey="825415">
+    <Key>853160</Key>
+    <Name>Budgetafdeling Hornslet</Name>
+  </Taxon>
+  <Taxon SqlID="3436" ParentKey="825417">
+    <Key>853161</Key>
+    <Name>Regnskabsafdeling Hornslet</Name>
+  </Taxon>
+  <Taxon SqlID="3437" ParentKey="848500">
+    <Key>853780</Key>
+    <Name>Forsikringsafdelingen</Name>
+  </Taxon>
+  <Taxon SqlID="3438" ParentKey="850613">
+    <Key>853781</Key>
+    <Name>Drift og anlæg</Name>
+  </Taxon>
+  <Taxon SqlID="3439" ParentKey="850613">
+    <Key>853782</Key>
+    <Name>Fællesfunktioner veje</Name>
+  </Taxon>
+  <Taxon SqlID="3441" ParentKey="850613">
+    <Key>853784</Key>
+    <Name>Distrikt Rønde</Name>
+  </Taxon>
+  <Taxon SqlID="3442" ParentKey="848501">
+    <Key>853857</Key>
+    <Name>Administrationsbygning Hornslet</Name>
+  </Taxon>
+  <Taxon SqlID="3443" ParentKey="848501">
+    <Key>853858</Key>
+    <Name>Administrationsbygning Kolind</Name>
+  </Taxon>
+  <Taxon SqlID="3444" ParentKey="848501">
+    <Key>853859</Key>
+    <Name>Administrationsbygning Rønde</Name>
+  </Taxon>
+  <Taxon SqlID="3445" ParentKey="848501">
+    <Key>853860</Key>
+    <Name>Administrationsbygning Ebeltoft</Name>
+  </Taxon>
+  <Taxon SqlID="3446" ParentKey="840927">
+    <Key>854962</Key>
+    <Name>Tandpleje Hornslet</Name>
+  </Taxon>
+  <Taxon SqlID="3447" ParentKey="826306">
+    <Key>855069</Key>
+    <Name>Klientløn Marie Magdalene</Name>
+  </Taxon>
+  <Taxon SqlID="3448" ParentKey="887594">
+    <Key>855070</Key>
+    <Name>Klientløn Trinbrættet</Name>
+  </Taxon>
+  <Taxon SqlID="3449" ParentKey="853157">
+    <Key>855224</Key>
+    <Name>Klientløn aktivitetcenter Skovly</Name>
+  </Taxon>
+  <Taxon SqlID="3450" ParentKey="825418">
+    <Key>855441</Key>
+    <Name>Nørreport 4</Name>
+  </Taxon>
+  <Taxon SqlID="3451" ParentKey="825418">
+    <Key>855442</Key>
+    <Name>Strandvejen 2</Name>
+  </Taxon>
+  <Taxon SqlID="3452" ParentKey="840927">
+    <Key>855671</Key>
+    <Name>Tandpleje Ebeltoft</Name>
+  </Taxon>
+  <Taxon SqlID="3453" ParentKey="848511">
+    <Key>855845</Key>
+    <Name>Fremmed kommuners juniorklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3454" ParentKey="825419">
+    <Key>856187</Key>
+    <Name>Veje og trafik myndighedsopgaver</Name>
+  </Taxon>
+  <Taxon SqlID="3455" ParentKey="850605">
+    <Key>858614</Key>
+    <Name>Lillerup vaskeri</Name>
+  </Taxon>
+  <Taxon SqlID="3457" ParentKey="826259">
+    <Key>858616</Key>
+    <Name>Margrethebørnehaven Rævestuen §32</Name>
+  </Taxon>
+  <Taxon SqlID="3458" ParentKey="852006">
+    <Key>858617</Key>
+    <Name>Plejefamilier netværksfamilier</Name>
+  </Taxon>
+  <Taxon SqlID="3459" ParentKey="852006">
+    <Key>858618</Key>
+    <Name>Støtte § 52</Name>
+  </Taxon>
+  <Taxon SqlID="3460" ParentKey="883285">
+    <Key>858619</Key>
+    <Name>Personlig hjælper</Name>
+  </Taxon>
+  <Taxon SqlID="3461" ParentKey="883285">
+    <Key>858620</Key>
+    <Name>Bostøtte</Name>
+  </Taxon>
+  <Taxon SqlID="3462" ParentKey="883285">
+    <Key>858621</Key>
+    <Name>Ledsager</Name>
+  </Taxon>
+  <Taxon SqlID="3463" ParentKey="852006">
+    <Key>858622</Key>
+    <Name>Merudgifter børn</Name>
+  </Taxon>
+  <Taxon SqlID="3464" ParentKey="825457">
+    <Key>858745</Key>
+    <Name>Ådalsskolen SFO Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3465" ParentKey="825420">
+    <Key>858796</Key>
+    <Name>Driftsafdeling regningsmodtager</Name>
+  </Taxon>
+  <Taxon SqlID="3466" ParentKey="850566">
+    <Key>859551</Key>
+    <Name>Rosengården plejeboliger team 4</Name>
+  </Taxon>
+  <Taxon SqlID="3467" ParentKey="859551">
+    <Key>859552</Key>
+    <Name>Lindebo plejeboliger</Name>
+  </Taxon>
+  <Taxon SqlID="3468" ParentKey="850612">
+    <Key>859553</Key>
+    <Name>Værested Rønde</Name>
+  </Taxon>
+  <Taxon SqlID="3469" ParentKey="825454">
+    <Key>862095</Key>
+    <Name>Mini A</Name>
+  </Taxon>
+  <Taxon SqlID="3470" ParentKey="825455">
+    <Key>862096</Key>
+    <Name>Mini C</Name>
+  </Taxon>
+  <Taxon SqlID="3471" ParentKey="825411">
+    <Key>863716</Key>
+    <Name>Ydelsesflex, KMD Aktiv</Name>
+  </Taxon>
+  <Taxon SqlID="3472" ParentKey="848502">
+    <Key>863804</Key>
+    <Name>Forsøg med kulturskoler</Name>
+  </Taxon>
+  <Taxon SqlID="3473" ParentKey="848519">
+    <Key>863805</Key>
+    <Name>Privat hjemmehjælp</Name>
+  </Taxon>
+  <Taxon SqlID="3474" ParentKey="848496">
+    <Key>864261</Key>
+    <Name>Handibasen</Name>
+  </Taxon>
+  <Taxon SqlID="3475" ParentKey="825418">
+    <Key>865098</Key>
+    <Name>Skolevangen 20 A-D</Name>
+  </Taxon>
+  <Taxon SqlID="3476" ParentKey="825449">
+    <Key>865380</Key>
+    <Name>Straks Aconto</Name>
+  </Taxon>
+  <Taxon SqlID="3477" ParentKey="848502">
+    <Key>865573</Key>
+    <Name>Baner og anlæg</Name>
+  </Taxon>
+  <Taxon SqlID="3478" ParentKey="825423">
+    <Key>865593</Key>
+    <Name>Borgerservice Sekretariat</Name>
+  </Taxon>
+  <Taxon SqlID="3479" ParentKey="848502">
+    <Key>865602</Key>
+    <Name>Kultur og fritids konsulenter</Name>
+  </Taxon>
+  <Taxon SqlID="3480" ParentKey="848502">
+    <Key>865603</Key>
+    <Name>Festpladsens Huse ( Ebeltoft )</Name>
+  </Taxon>
+  <Taxon SqlID="3481" ParentKey="840281">
+    <Key>865660</Key>
+    <Name>Rosengården rengøring</Name>
+  </Taxon>
+  <Taxon SqlID="3482" ParentKey="850547">
+    <Key>866448</Key>
+    <Name>Skovparken MM</Name>
+  </Taxon>
+  <Taxon SqlID="3483" ParentKey="889129">
+    <Key>866818</Key>
+    <Name>Bosted for unge (Kolind)</Name>
+  </Taxon>
+  <Taxon SqlID="3486" ParentKey="826279">
+    <Key>870301</Key>
+    <Name>Tidlig SFO Hornslet Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3487" ParentKey="826283">
+    <Key>870302</Key>
+    <Name>Tidlig SFO Kolind Centralskole</Name>
+  </Taxon>
+  <Taxon SqlID="3488" ParentKey="826286">
+    <Key>870303</Key>
+    <Name>Tidlig SFO Marienhoffskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3489" ParentKey="826297">
+    <Key>870304</Key>
+    <Name>Tidlig SFO Molsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3490" ParentKey="826280">
+    <Key>870305</Key>
+    <Name>Tidlig SFO Mørke Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3491" ParentKey="826298">
+    <Key>870306</Key>
+    <Name>Tidlig SFO Rosmus Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3492" ParentKey="826288">
+    <Key>870307</Key>
+    <Name>Tidlig SFO Rønde Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3493" ParentKey="826295">
+    <Key>870308</Key>
+    <Name>Tidlig SFO Skelhøjeskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3494" ParentKey="826290">
+    <Key>870309</Key>
+    <Name>Tidlig SFO Thorsager Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3495" ParentKey="826299">
+    <Key>870310</Key>
+    <Name>Tidlig SFO Toftevangsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3497" ParentKey="858745">
+    <Key>870312</Key>
+    <Name>Tidlig SFO Ådalsskolen</Name>
+  </Taxon>
+  <Taxon SqlID="3498" ParentKey="840940">
+    <Key>871247</Key>
+    <Name>Fredningsnævn</Name>
+  </Taxon>
+  <Taxon SqlID="3500" ParentKey="825420">
+    <Key>871251</Key>
+    <Name>Forsyning administration</Name>
+  </Taxon>
+  <Taxon SqlID="3501" ParentKey="825415">
+    <Key>871252</Key>
+    <Name>Budgetafdeling Ebeltoft</Name>
+  </Taxon>
+  <Taxon SqlID="3502" ParentKey="825417">
+    <Key>871253</Key>
+    <Name>Regnskabsafdeling Ebeltoft</Name>
+  </Taxon>
+  <Taxon SqlID="3503" ParentKey="825417">
+    <Key>871254</Key>
+    <Name>Revision og eksterne konsulenter</Name>
+  </Taxon>
+  <Taxon SqlID="3504" ParentKey="825414">
+    <Key>871255</Key>
+    <Name>HR-konsulenter</Name>
+  </Taxon>
+  <Taxon SqlID="3505" ParentKey="825414">
+    <Key>871256</Key>
+    <Name>Personalekonsulenter</Name>
+  </Taxon>
+  <Taxon SqlID="3506" ParentKey="825411">
+    <Key>871272</Key>
+    <Name>Sekretariat Beskæftigelse</Name>
+  </Taxon>
+  <Taxon SqlID="3507" ParentKey="840934">
+    <Key>871273</Key>
+    <Name>Team 3 sygedagpengeindsats</Name>
+  </Taxon>
+  <Taxon SqlID="3509" ParentKey="825409">
+    <Key>871275</Key>
+    <Name>Sekretariat dagtilbud</Name>
+  </Taxon>
+  <Taxon SqlID="3510" ParentKey="825409">
+    <Key>871276</Key>
+    <Name>Dagtilbud fælles formål</Name>
+  </Taxon>
+  <Taxon SqlID="3511" ParentKey="825407">
+    <Key>871279</Key>
+    <Name>Specialrådgivergruppen</Name>
+  </Taxon>
+  <Taxon SqlID="3512" ParentKey="825407">
+    <Key>871280</Key>
+    <Name>Døgnformidlingen</Name>
+  </Taxon>
+  <Taxon SqlID="3513" ParentKey="848499">
+    <Key>871281</Key>
+    <Name>Integration tolkebistand</Name>
+  </Taxon>
+  <Taxon SqlID="3514" ParentKey="848499">
+    <Key>871282</Key>
+    <Name>Integration hjemme-hos</Name>
+  </Taxon>
+  <Taxon SqlID="3515" ParentKey="825421">
+    <Key>871283</Key>
+    <Name>Sekretariat natur og miljø</Name>
+  </Taxon>
+  <Taxon SqlID="3516" ParentKey="848502">
+    <Key>871284</Key>
+    <Name>Midtdjurs Lokalarkiv</Name>
+  </Taxon>
+  <Taxon SqlID="3517" ParentKey="848502">
+    <Key>871285</Key>
+    <Name>Rosenholm Lokalarkiv</Name>
+  </Taxon>
+  <Taxon SqlID="3518" ParentKey="848502">
+    <Key>871286</Key>
+    <Name>Natur og Miljø Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3519" ParentKey="825408">
+    <Key>871287</Key>
+    <Name>Sekretariat Skoler</Name>
+  </Taxon>
+  <Taxon SqlID="3520" ParentKey="825419">
+    <Key>871288</Key>
+    <Name>Sekretariat Natur og Vejservice</Name>
+  </Taxon>
+  <Taxon SqlID="3521" ParentKey="848527">
+    <Key>871289</Key>
+    <Name>Fælles administration bostøtte</Name>
+  </Taxon>
+  <Taxon SqlID="3522" ParentKey="871289">
+    <Key>871290</Key>
+    <Name>Midtpunkt § 103</Name>
+  </Taxon>
+  <Taxon SqlID="3523" ParentKey="871289">
+    <Key>871291</Key>
+    <Name>Midtpunkt § 104</Name>
+  </Taxon>
+  <Taxon SqlID="3524" ParentKey="850547">
+    <Key>871292</Key>
+    <Name>Team Gransvinget</Name>
+  </Taxon>
+  <Taxon SqlID="3526" ParentKey="850545">
+    <Key>871294</Key>
+    <Name>Specialbostøtten</Name>
+  </Taxon>
+  <Taxon SqlID="3527" ParentKey="850548">
+    <Key>871295</Key>
+    <Name>Psykiatri Team Øst</Name>
+  </Taxon>
+  <Taxon SqlID="3528" ParentKey="850548">
+    <Key>871296</Key>
+    <Name>Bofællesskab Strandgårdshøj</Name>
+  </Taxon>
+  <Taxon SqlID="3529" ParentKey="850545">
+    <Key>871298</Key>
+    <Name>Psykiatri Team Vest</Name>
+  </Taxon>
+  <Taxon SqlID="3530" ParentKey="850545">
+    <Key>871299</Key>
+    <Name>Bofællesskabet Mølletorvet</Name>
+  </Taxon>
+  <Taxon SqlID="3531" ParentKey="825413">
+    <Key>871309</Key>
+    <Name>Ring-/Søhusparken Pleje</Name>
+  </Taxon>
+  <Taxon SqlID="3532" ParentKey="825413">
+    <Key>871314</Key>
+    <Name>Rosengården/Lillerup Pleje</Name>
+  </Taxon>
+  <Taxon SqlID="3533" ParentKey="871309">
+    <Key>871664</Key>
+    <Name>Ring-/Søhusparken Sygeplejeteam</Name>
+  </Taxon>
+  <Taxon SqlID="3534" ParentKey="825408">
+    <Key>872229</Key>
+    <Name>Special SFO</Name>
+  </Taxon>
+  <Taxon SqlID="3535" ParentKey="871314">
+    <Key>872354</Key>
+    <Name>Rosengården/Lillerup sygeplejeteam</Name>
+  </Taxon>
+  <Taxon SqlID="3536" ParentKey="840937">
+    <Key>873607</Key>
+    <Name>Børneteam</Name>
+  </Taxon>
+  <Taxon SqlID="3537" ParentKey="840934">
+    <Key>873835</Key>
+    <Name>Projekt fastholdelse</Name>
+  </Taxon>
+  <Taxon SqlID="3538" ParentKey="826306">
+    <Key>874839</Key>
+    <Name>Fakkelgården</Name>
+  </Taxon>
+  <Taxon SqlID="3539" ParentKey="826321">
+    <Key>875239</Key>
+    <Name>Ungdomsskolen fælles</Name>
+  </Taxon>
+  <Taxon SqlID="3540" ParentKey="875239">
+    <Key>875240</Key>
+    <Name>Ungdomsskolen administration</Name>
+  </Taxon>
+  <Taxon SqlID="3541" ParentKey="875239">
+    <Key>875241</Key>
+    <Name>Ungdomsskolen udveksling</Name>
+  </Taxon>
+  <Taxon SqlID="3542" ParentKey="826321">
+    <Key>875242</Key>
+    <Name>Distrikt 2, Kolind, Ryomgaard, Nimtofte</Name>
+  </Taxon>
+  <Taxon SqlID="3543" ParentKey="875242">
+    <Key>875244</Key>
+    <Name>Distrikt 2, Kolind-undervisning</Name>
+  </Taxon>
+  <Taxon SqlID="3544" ParentKey="875242">
+    <Key>875245</Key>
+    <Name>Distrikt 2, Juniorklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3545" ParentKey="875245">
+    <Key>875246</Key>
+    <Name>Kolind Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3546" ParentKey="875245">
+    <Key>875247</Key>
+    <Name>Ryomgaard Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3548" ParentKey="875242">
+    <Key>875249</Key>
+    <Name>Distrikt 2, Ungdomsklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3549" ParentKey="875249">
+    <Key>875250</Key>
+    <Name>Kolind Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3550" ParentKey="875242">
+    <Key>875251</Key>
+    <Name>Distrikt 2, Kolind-cross</Name>
+  </Taxon>
+  <Taxon SqlID="3551" ParentKey="826321">
+    <Key>875252</Key>
+    <Name>Distrikt 3, Hornslet, Mørke, Ådalen</Name>
+  </Taxon>
+  <Taxon SqlID="3552" ParentKey="875252">
+    <Key>875253</Key>
+    <Name>Distrikt 3, Hornslet-undervisning</Name>
+  </Taxon>
+  <Taxon SqlID="3553" ParentKey="875252">
+    <Key>875254</Key>
+    <Name>Distrikt 3, Juniorklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3554" ParentKey="875254">
+    <Key>875255</Key>
+    <Name>Hornslet Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3555" ParentKey="875254">
+    <Key>875256</Key>
+    <Name>Mørke Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3556" ParentKey="875254">
+    <Key>875257</Key>
+    <Name>Ådalen Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3557" ParentKey="875252">
+    <Key>875258</Key>
+    <Name>Distrikt 3, Ungdomsklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3558" ParentKey="875258">
+    <Key>875259</Key>
+    <Name>Hornslet Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3559" ParentKey="875258">
+    <Key>875260</Key>
+    <Name>Mørke Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3560" ParentKey="875258">
+    <Key>875261</Key>
+    <Name>Ådalen Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3561" ParentKey="875252">
+    <Key>875262</Key>
+    <Name>Distrikt 3, Hornslet Radio UNG</Name>
+  </Taxon>
+  <Taxon SqlID="3562" ParentKey="826321">
+    <Key>875263</Key>
+    <Name>Distrikt 1 Ebeltoft, Rosmus</Name>
+  </Taxon>
+  <Taxon SqlID="3563" ParentKey="875263">
+    <Key>875264</Key>
+    <Name>Distrikt 1 Ebeltoft -undervisning</Name>
+  </Taxon>
+  <Taxon SqlID="3564" ParentKey="875263">
+    <Key>875265</Key>
+    <Name>Distrikt 1 Juniorklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3565" ParentKey="875265">
+    <Key>875267</Key>
+    <Name>Ebeltoft Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3566" ParentKey="875265">
+    <Key>875268</Key>
+    <Name>Rosmus Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3567" ParentKey="875263">
+    <Key>875269</Key>
+    <Name>Distrikt 1, Ungdomsklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3568" ParentKey="875269">
+    <Key>875270</Key>
+    <Name>Ebeltoft Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3569" ParentKey="875269">
+    <Key>875271</Key>
+    <Name>Rosmus Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3570" ParentKey="826321">
+    <Key>875272</Key>
+    <Name>Distrikt 4, Rønde, Thorsager, Mols</Name>
+  </Taxon>
+  <Taxon SqlID="3571" ParentKey="875272">
+    <Key>875273</Key>
+    <Name>Distrikt 4, Rønde-undervisning</Name>
+  </Taxon>
+  <Taxon SqlID="3572" ParentKey="875272">
+    <Key>875274</Key>
+    <Name>Distrikt 4, Juniorklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3573" ParentKey="875274">
+    <Key>875275</Key>
+    <Name>Rønde Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3574" ParentKey="875274">
+    <Key>875276</Key>
+    <Name>Thorsager Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3575" ParentKey="875274">
+    <Key>875277</Key>
+    <Name>Mols Juniorklub</Name>
+  </Taxon>
+  <Taxon SqlID="3578" ParentKey="875272">
+    <Key>875280</Key>
+    <Name>Distrikt 4 - Ungdomsklubber</Name>
+  </Taxon>
+  <Taxon SqlID="3579" ParentKey="875280">
+    <Key>875281</Key>
+    <Name>Rønde Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3580" ParentKey="875280">
+    <Key>875282</Key>
+    <Name>Mols Ungdomsklub</Name>
+  </Taxon>
+  <Taxon SqlID="3581" ParentKey="875272">
+    <Key>875283</Key>
+    <Name>Distrikt 4, Rønde-Cross</Name>
+  </Taxon>
+  <Taxon SqlID="3582" ParentKey="826321">
+    <Key>875284</Key>
+    <Name>SSP1</Name>
+  </Taxon>
+  <Taxon SqlID="3583" ParentKey="875284">
+    <Key>875285</Key>
+    <Name>Ungdomskonsulenter</Name>
+  </Taxon>
+  <Taxon SqlID="3584" ParentKey="826321">
+    <Key>875286</Key>
+    <Name>Heltidsundervisning Ungdomsskolen1</Name>
+  </Taxon>
+  <Taxon SqlID="3585" ParentKey="875286">
+    <Key>875288</Key>
+    <Name>Heltidsundervisning i Syddjurs</Name>
+  </Taxon>
+  <Taxon SqlID="3587" ParentKey="825452">
+    <Key>875584</Key>
+    <Name>husleje - opkrævning</Name>
+  </Taxon>
+  <Taxon SqlID="3588" ParentKey="825410">
+    <Key>876364</Key>
+    <Name>Projekt Syddjurs gør livet lettere</Name>
+  </Taxon>
+  <Taxon SqlID="3589" ParentKey="825399">
+    <Key>877091</Key>
+    <Name>KMD Lønservice</Name>
+  </Taxon>
+  <Taxon SqlID="3590" ParentKey="840940">
+    <Key>877093</Key>
+    <Name>Handicapråd</Name>
+  </Taxon>
+  <Taxon SqlID="3591" ParentKey="825413">
+    <Key>877115</Key>
+    <Name>Sekretariat ældre og sundhedsfremme</Name>
+  </Taxon>
+  <Taxon SqlID="3592" ParentKey="825410">
+    <Key>877526</Key>
+    <Name>Projekt - Forbedret kronikerindsats i Sy</Name>
+  </Taxon>
+  <Taxon SqlID="3593" ParentKey="826306">
+    <Key>877685</Key>
+    <Name>Syddjurs Aktivitetstilbud</Name>
+  </Taxon>
+  <Taxon SqlID="3594" ParentKey="826306">
+    <Key>877686</Key>
+    <Name>Bofællesskab Marie Magdalene</Name>
+  </Taxon>
+  <Taxon SqlID="3595" ParentKey="826306">
+    <Key>877687</Key>
+    <Name>Syddjurs Botilbud</Name>
+  </Taxon>
+  <Taxon SqlID="3596" ParentKey="840934">
+    <Key>877828</Key>
+    <Name>Aktivering eksterne afde Personale</Name>
+  </Taxon>
+  <Taxon SqlID="3597" ParentKey="881836">
+    <Key>878322</Key>
+    <Name>Ejendomsadministration</Name>
+  </Taxon>
+  <Taxon SqlID="3598" ParentKey="825409">
+    <Key>878714</Key>
+    <Name>Vuggestuen HulaHop</Name>
+  </Taxon>
+  <Taxon SqlID="3599" ParentKey="825409">
+    <Key>878768</Key>
+    <Name>Ryomgård Børnehave</Name>
+  </Taxon>
+  <Taxon SqlID="3600" ParentKey="825409">
+    <Key>878769</Key>
+    <Name>Børnehaven Spiren</Name>
+  </Taxon>
+  <Taxon SqlID="3601" ParentKey="825418">
+    <Key>879028</Key>
+    <Name>Ugelbølle Skole (Ejendom)</Name>
+  </Taxon>
+  <Taxon SqlID="3602" ParentKey="850608">
+    <Key>881744</Key>
+    <Name>Koordination Hjerneskade</Name>
+  </Taxon>
+  <Taxon SqlID="3603" ParentKey="825407">
+    <Key>881819</Key>
+    <Name>Familieværket</Name>
+  </Taxon>
+  <Taxon SqlID="3604" ParentKey="887460">
+    <Key>881836</Key>
+    <Name>Intern Service og Opkrævning</Name>
+  </Taxon>
+  <Taxon SqlID="3605" ParentKey="887460">
+    <Key>881837</Key>
+    <Name>Udvikling og Projektledelse</Name>
+  </Taxon>
+  <Taxon SqlID="3606" ParentKey="853157">
+    <Key>882637</Key>
+    <Name>Fællesadm. Vestergade</Name>
+  </Taxon>
+  <Taxon SqlID="3607" ParentKey="848539">
+    <Key>882639</Key>
+    <Name>Bostøtte Trinbrættet</Name>
+  </Taxon>
+  <Taxon SqlID="3608" ParentKey="848536">
+    <Key>882642</Key>
+    <Name>Bostøtte Lanternen</Name>
+  </Taxon>
+  <Taxon SqlID="3609" ParentKey="866448">
+    <Key>882643</Key>
+    <Name>Bostøtte Skovparken</Name>
+  </Taxon>
+  <Taxon SqlID="3610" ParentKey="848541">
+    <Key>882644</Key>
+    <Name>Bostøtte Gransvinget</Name>
+  </Taxon>
+  <Taxon SqlID="3611" ParentKey="848548">
+    <Key>882645</Key>
+    <Name>Bostøtte Lille Eje</Name>
+  </Taxon>
+  <Taxon SqlID="3612" ParentKey="872229">
+    <Key>882937</Key>
+    <Name>Djurslandsskolen, klub</Name>
+  </Taxon>
+  <Taxon SqlID="3613" ParentKey="825399">
+    <Key>883093</Key>
+    <Name>Direktion PM</Name>
+  </Taxon>
+  <Taxon SqlID="3614" ParentKey="825399">
+    <Key>883094</Key>
+    <Name>Direktion SV</Name>
+  </Taxon>
+  <Taxon SqlID="3615" ParentKey="825399">
+    <Key>883095</Key>
+    <Name>Direktion STAB</Name>
+  </Taxon>
+  <Taxon SqlID="3616" ParentKey="825399">
+    <Key>883096</Key>
+    <Name>Direktion JA</Name>
+  </Taxon>
+  <Taxon SqlID="3617" ParentKey="840928">
+    <Key>883285</Key>
+    <Name>Foranstaltninger Voksen-Handicap</Name>
+  </Taxon>
+  <Taxon SqlID="3618" ParentKey="825457">
+    <Key>884250</Key>
+    <Name>Mini V</Name>
+  </Taxon>
+  <Taxon SqlID="3619" ParentKey="848511">
+    <Key>884370</Key>
+    <Name>Klub C</Name>
+  </Taxon>
+  <Taxon SqlID="3620" ParentKey="848511">
+    <Key>884371</Key>
+    <Name>Klub V</Name>
+  </Taxon>
+  <Taxon SqlID="3621" ParentKey="848511">
+    <Key>884369</Key>
+    <Name>Klub A</Name>
+  </Taxon>
+  <Taxon SqlID="3622" ParentKey="848496">
+    <Key>884494</Key>
+    <Name>Kontaktbasen</Name>
+  </Taxon>
+  <Taxon SqlID="3623" ParentKey="825410">
+    <Key>884712</Key>
+    <Name>Projekt arbejde og sundhed</Name>
+  </Taxon>
+  <Taxon SqlID="3624" ParentKey="840934">
+    <Key>884780</Key>
+    <Name>Jobcenter - Virksomhedsteamet</Name>
+  </Taxon>
+  <Taxon SqlID="3625" ParentKey="875252">
+    <Key>884779</Key>
+    <Name>Shanghaiakademiet</Name>
+  </Taxon>
+  <Taxon SqlID="3626" ParentKey="825404">
+    <Key>884980</Key>
+    <Name>Plan og Byg</Name>
+  </Taxon>
+  <Taxon SqlID="3627" ParentKey="826318">
+    <Key>884987</Key>
+    <Name>Rønde Bibliotek</Name>
+  </Taxon>
+  <Taxon SqlID="3628" ParentKey="825425">
+    <Key>884983</Key>
+    <Name>Udvikling</Name>
+  </Taxon>
+  <Taxon SqlID="3629" ParentKey="826318">
+    <Key>884986</Key>
+    <Name>Hornslet Bibliotek</Name>
+  </Taxon>
+  <Taxon SqlID="3630" ParentKey="826318">
+    <Key>884985</Key>
+    <Name>Kolind Bibliotek</Name>
+  </Taxon>
+  <Taxon SqlID="3631" ParentKey="884980">
+    <Key>884982</Key>
+    <Name>Service</Name>
+  </Taxon>
+  <Taxon SqlID="3632" ParentKey="826318">
+    <Key>884984</Key>
+    <Name>Ebeltoft Bibliotek</Name>
+  </Taxon>
+  <Taxon SqlID="3633" ParentKey="825408">
+    <Key>885703</Key>
+    <Name>Ebeltoft Skole</Name>
+  </Taxon>
+  <Taxon SqlID="3634" ParentKey="840935">
+    <Key>885738</Key>
+    <Name>STU Syddjurs</Name>
+  </Taxon>
+  <Taxon SqlID="3635" ParentKey="840935">
+    <Key>885744</Key>
+    <Name>Hjælpemiddelservice</Name>
+  </Taxon>
+  <Taxon SqlID="3636" ParentKey="840935">
+    <Key>885742</Key>
+    <Name>Arbejdsmarkedsindsats Vest</Name>
+  </Taxon>
+  <Taxon SqlID="3637" ParentKey="885739">
+    <Key>885740</Key>
+    <Name>Kantine Ebeltoft</Name>
+  </Taxon>
+  <Taxon SqlID="3638" ParentKey="840935">
+    <Key>885739</Key>
+    <Name>Projektcentrets Servicelinie</Name>
+  </Taxon>
+  <Taxon SqlID="3639" ParentKey="885739">
+    <Key>885741</Key>
+    <Name>Rønde Vandrehjem</Name>
+  </Taxon>
+  <Taxon SqlID="3640" ParentKey="840935">
+    <Key>885743</Key>
+    <Name>Arbejdsmarkedsindsats Øst</Name>
+  </Taxon>
+  <Taxon SqlID="3641" ParentKey="825409">
+    <Key>886987</Key>
+    <Name>Rosmus Børnehus</Name>
+  </Taxon>
+  <Taxon SqlID="3642" ParentKey="881836">
+    <Key>887461</Key>
+    <Name>Syddjurs Kontrolenhed</Name>
+  </Taxon>
+  <Taxon SqlID="3643" ParentKey="883095">
+    <Key>887460</Key>
+    <Name>Digitalisering IT og Service</Name>
+  </Taxon>
+  <Taxon SqlID="3644" ParentKey="840935">
+    <Key>887594</Key>
+    <Name>Projektcentret Trinbrættet</Name>
+  </Taxon>
+  <Taxon SqlID="3645" ParentKey="877685">
+    <Key>848545</Key>
+    <Name>Aktivitetscenter Skovly</Name>
+  </Taxon>
+  <Taxon SqlID="7624" ParentKey="865593">
+    <Key>888329</Key>
+    <Name>Begravelseshjælp</Name>
+  </Taxon>
+  <Taxon SqlID="7625" ParentKey="871276">
+    <Key>888324</Key>
+    <Name>Dagtilbud PAU Elever</Name>
+  </Taxon>
+  <Taxon SqlID="7626" ParentKey="871276">
+    <Key>888325</Key>
+    <Name>Dagtilbud fælles TR</Name>
+  </Taxon>
+  <Taxon SqlID="53652" ParentKey="850536">
+    <Key>889262</Key>
+    <Name>Aftenskolen Ebeltoft/Mols</Name>
+  </Taxon>
+  <Taxon SqlID="53653" ParentKey="850536">
+    <Key>889264</Key>
+    <Name>Dag og Aftenskolen Rønde</Name>
+  </Taxon>
+  <Taxon SqlID="53654" ParentKey="881819">
+    <Key>889129</Key>
+    <Name>Familieværket Ungehuse</Name>
+  </Taxon>
+  <Taxon SqlID="53655" ParentKey="850536">
+    <Key>889270</Key>
+    <Name>Røndeegnens Aftenskole</Name>
+  </Taxon>
+  <Taxon SqlID="53656" ParentKey="889129">
+    <Key>889130</Key>
+    <Name>Ungehus 2 Feldballe</Name>
+  </Taxon>
+  <Taxon SqlID="53657" ParentKey="850536">
+    <Key>889266</Key>
+    <Name>DOF Gigtforeningen</Name>
+  </Taxon>
+  <Taxon SqlID="53658" ParentKey="850536">
+    <Key>889269</Key>
+    <Name>Oplev</Name>
+  </Taxon>
+  <Taxon SqlID="53659" ParentKey="850536">
+    <Key>889263</Key>
+    <Name>Aftenskolen Nimtofte/Tøstrup</Name>
+  </Taxon>
+  <Taxon SqlID="53660" ParentKey="850536">
+    <Key>889268</Key>
+    <Name>Musikaftenskolen</Name>
+  </Taxon>
+</Taxonomy>

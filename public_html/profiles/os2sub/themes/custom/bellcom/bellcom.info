@@ -1,0 +1,98 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Theme information
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+name        = 'Bellcom extendable theme'
+description = 'Should never be used as a stand-alone theme.'
+core        = '7.x'
+screenshot  = 'screenshot.png'
+base theme  = 'bootstrap'
+version     = '7.x-1.1'
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Stylesheets
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Scripts
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Plugins
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Theme settings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Sidebar
+settings[sidebar_left_xs_enabled]         = 0
+settings[sidebar_left_xs_state]           = 'hidden'
+settings[sidebar_left_xs_content_effect]  = 'push'
+
+settings[sidebar_left_sm_enabled]         = 0
+settings[sidebar_left_sm_state]           = 'collapsed'
+settings[sidebar_left_sm_content_effect]  = 'shrink'
+
+settings[sidebar_left_md_enabled]         = 0
+settings[sidebar_left_md_state]           = 'expanded'
+settings[sidebar_left_md_content_effect]  = 'shrink'
+
+settings[sidebar_left_lg_enabled]         = 0
+settings[sidebar_left_lg_state]           = 'expanded'
+settings[sidebar_left_lg_content_effect]  = 'shrink'
+
+; Contact information
+settings[business_owner_name] = ''
+settings[address]             = ''
+settings[zipcode]             = ''
+settings[city]                = ''
+settings[phone_readable]      = ''
+settings[phone_system]        = ''
+settings[email]               = ''
+settings[skype]               = ''
+settings[working_hours]       = ''
+
+; Social links
+settings[facebook]      = 0
+settings[facebook_url]  = 'https://www.facebook.com/'
+settings[twitter]       = 0
+settings[twitter_url]   = 'https://twitter.com/'
+settings[googleplus]    = 0
+settings[googleplus_url]= 'https://plus.google.com/'
+settings[linkedin]      = 0
+settings[linkedin_url]  = 'https://www.linkedin.com/company/'
+settings[instagram]     = 0
+settings[instagram_url] = 'http://www.instagram.com/'
+settings[pinterest]     = 0
+settings[pinterest_url] = 'http://www.pinterest.com/'
+settings[vimeo]         = 0
+settings[vimeo_url]     = 'http://www.vimeo.com/'
+settings[youtube]       = 0
+settings[youtube_url]   = 'http://www.youtube.com/'
+
+; Layout
+settings[sidebar_show_social_links] = 0;
+settings[footer_show_social_links]  = 0;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Settings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Disable BootstrapCDN so the compiled LESS source files can be used.
+settings[bootstrap_cdn] = ''

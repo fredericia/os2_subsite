@@ -1,0 +1,20 @@
+{
+  "name": "OS2Subsite",
+  "description": "Website",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap": "~3.*",
+    "bs3-designer": "~0.*",
+    "bs3-sidebar": "~0.*",
+    "fastclick": "~1.*",
+    "fontawesome": "~4.*",
+    "html5shiv": "~3.*",
+    "respond": "~1.*"
+  },
+  "ignore": [
+    "bower_components"
+  ],
+  "authors": [
+    "Morten Nissen <mn@bellcom.dk> (http://bellcom.dk)"
+  ]
+}

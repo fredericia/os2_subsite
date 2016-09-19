@@ -1,0 +1,6 @@
+name = 'Panel layouts'
+description = ''
+core = 7.x
+package = 'Bellcom'
+dependencies[] = ctools
+dependencies[] = page_manager

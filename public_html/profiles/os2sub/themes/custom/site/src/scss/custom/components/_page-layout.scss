@@ -1,0 +1,116 @@
+// |--------------------------------------------------------------------------
+// | Page layout
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .content
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Responsive
+$xs-page-layout-content-padding-bottom: 25px;
+$sm-page-layout-content-padding-bottom: 40px;
+$md-page-layout-content-padding-bottom: 60px;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Page layout
+.content {
+  background-color: $body-bg-secondary;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Page layout
+  .content {
+    padding-bottom: $xs-page-layout-content-padding-bottom;
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Page layout
+  .content {}
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Page layout
+  .content {
+    padding-bottom: $sm-page-layout-content-padding-bottom;
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Page layout
+  .content {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Page layout
+  .content {
+    padding-bottom: $md-page-layout-content-padding-bottom;
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Page layout
+  .content {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Page layout
+  .content {}
+}
+
+// Print
+@media print {
+
+  // Page layout
+  .content {}
+}
+
+// Touch
+.touchevents {
+
+  // Page layout
+  .content {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Page layout
+  .content {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Page layout mixin
+@mixin content-mixin() {}

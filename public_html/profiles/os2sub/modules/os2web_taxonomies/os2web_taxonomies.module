@@ -1,0 +1,27 @@
+<?php
+/**
+ * @file
+ * Code for the Taxonomies and taxonomy importers feature.
+ */
+
+include_once('os2web_taxonomies.features.inc');
+
+/**
+ * Implements hook_os2web_help().
+ */
+function os2web_taxonomies_os2web_help($sections) {
+
+  // Specific fields.
+  $sections['fields'] = t('<p><b>Portal category:</b> Set in which category from the menu, this content is accesible from.</p>');
+  $sections['fields'] .= t('<p><b>Comittee:</b> A comittee is used to map e.g. a meeting to a specific department/comittee in your site.</p>');
+  $sections['fields'] .= t('<p><b>Places (<i>Egennavne/stednavne</i>):</b> Link your content to a specific GIS name on your site.</p>');
+  $sections['fields'] .= t('<p><b>KLE:</b> Link your content with KLE numbers. Use multiple numbers by seperating them with a comma. See a full list of KLE numbers at <a href="@url" target="_blank">KLE-Online</a></p>', array('@url' => 'http://www.kle-online.dk/'));
+  $sections['fields'] .= t('<p><b>Organization:</b> Set which organization which is responsible to the content. Use a comma to seperate multiple. Using this, its possible to group all content dependent on which organization it is owned by.</p>');
+  $sections['fields'] .= t('<p><b>Politics:</b> Set which politic party, council, board or committee is represented in this content. Use a comma to seperate multiple. Using this, its possible to group all content dependent on which politic party etc. is present in it.</p>');
+  $sections['fields'] .= t('<p><b>Tags (<i>Stikord</i>):</b> Use tags as an editor to group your content in several tags. Use a comma to seperate multiple. Using this, its possible to group all content in lists on tags.</p>');
+
+  // Import.
+  $sections['import'] = t('<p><b>Taxonomies:</b> Initialize the importer for all taxonomies herein GIS, KLE, Organizations and Politics at <a href="@url">the import page.</a><br />By Default the importer will import from an XML file located in the module. E.g you can upload your own XML file.</p>', array('@url' => 'import/os2web_selfservicelinks_feeds_import'));
+
+  return $sections;
+}

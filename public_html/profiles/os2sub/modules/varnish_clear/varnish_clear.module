@@ -1,0 +1,54 @@
+<?php
+/**
+ * @file
+ * Clears varnish host and url from admin page
+ * @author Morten M. Hansen <mmh@bellcom.dk>
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function varnish_clear_menu() {
+  $items = array();
+  $items['admin/config/development/varnish_clear'] = array(
+    'title'            => 'Varnish clear',
+    'description'      => 'Clear URLs from Varnish Cache.',
+    'page callback'    => 'drupal_get_form',
+    'type'             => MENU_NORMAL_ITEM,
+    'page arguments'   => array('varnish_clear_admin_form'),
+    'access arguments' => array('administer varnish clear'),
+    'file path'        => drupal_get_path('module', 'varnish_clear'),
+    'file'             => 'varnish_clear.admin.inc',
+  );
+  return $items;
+}
+
+/**
+ * Calls the actual purge function from the varnish module.
+ */
+function varnish_clear_cache($host = '.', $url = '/') {
+  if (module_exists('varnish')) {
+    varnish_purge($host, $url);
+    drupal_set_message(t('Clear of host: @host and url: @url was sent to Varnish.', array('@host' => $host, '@url' => $url)));
+  }
+  else {
+    drupal_set_message(t('Varnish module not found. Clear of host: @host and url: @url was NOT sent.', array('@host' => $host, '@url' => $url)), 'error');
+  }
+}
+
+/**
+ * Implements hook_permisson().
+ *
+ * Adds administer Varnish clear permission.
+ */
+function varnish_clear_permission() {
+  return array(
+    'administer varnish clear' => array(
+      'title' => t('Administer Varnish Clear'),
+      'description' => t('Allows clearing/purging of varnish'),
+      'restrict access' => FALSE,
+    ),
+  );
+}
+
+

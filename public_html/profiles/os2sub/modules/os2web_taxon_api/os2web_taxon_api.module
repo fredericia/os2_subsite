@@ -1,0 +1,68 @@
+<?php
+/**
+ * @file
+ * os2web_taxon_api.module
+ */
+
+include_once 'os2web_taxon_api.features.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function os2web_taxon_api_menu() {
+  $items['os2web/taxon/test'] = array(
+    'title' => 'Taxon test page',
+    'description' => 'taxon api test page.',
+    'access arguments' => array('administer os2web'),
+    'page callback' => 'os2web_taxon_api_page',
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Test page for abitrary test usage.
+ *
+ * @access public
+ * @return string
+ *   Html
+ */
+function os2web_taxon_api_page() {
+  $tmp = '<textarea cols=100 rows=50>';
+  $tmp .= print_r(os2web_taxon_api_get_terms("hegnssyn og naboejendom", 2), TRUE);
+  $tmp .= '</textarea>';
+  return $tmp;
+}
+
+/**
+ * Get turms function.
+ *
+ * @access public
+ * @return string
+ *   Terms
+ */
+function os2web_taxon_api_get_terms($text, $number_results_returned) {
+  $taxon = _os2web_taxon_api_get_instance();
+  $json = $taxon->getNames($text, $number_results_returned);
+  $result = array();
+  foreach ($json as $term) {
+    $result += taxonomy_get_term_by_name($term, 'kle');
+  }
+  return $result;
+}
+
+
+/**
+ * Factory for class instances. This allows easy changing between api classes.
+ *
+ * TODO: Make this proper plugin-able.
+ * @return TaxonWS object
+ */
+function _os2web_taxon_api_get_instance() {
+  $obj = &drupal_static(__FUNCTION__);
+  if (is_object($obj)) {
+    return $obj;
+  }
+  module_load_include('inc', 'os2web_taxon_api', 'includes/TaxonWS.class');
+  return $obj = new TaxonWS();
+}

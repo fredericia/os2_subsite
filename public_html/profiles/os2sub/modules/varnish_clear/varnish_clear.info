@@ -1,0 +1,10 @@
+name = Varnish Clear
+description = Varnish Clear purges/flushes urls from the varnish cache. Requires the varnish module.
+package = Performance and scalability
+core = 7.x
+dependencies[] = varnish
+
+files [] = varnish_clear.module
+files [] = varnish_clear.admin.inc
+configure = admin/config/development/varnish_clear
+

@@ -1,0 +1,38 @@
+<?php
+/**
+ * @file
+ * os2we_taxonomies.install
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function os2web_taxonomies_enable() {
+  //Set default KLE taxonomy feed url
+  $source = feeds_source('os2web_taxonomies_feed_kle');
+  $config = $source->getConfig();
+  $config['FeedsFileFetcher']['source'] = drupal_get_path('module', 'os2web_taxonomies') . '/data/kle.xml';
+  $source->setConfig($config);
+  $source->save();
+
+  //Set default Organisation taxonomy feed url
+  $source = feeds_source('os2web_taxonomies_feed_org');
+  $config = $source->getConfig();
+  $config['FeedsFileFetcher']['source'] = drupal_get_path('module', 'os2web_taxonomies') . '/data/org.xml';
+  $source->setConfig($config);
+  $source->save();
+
+  //Set default Politik taxonomy feed url
+  $source = feeds_source('os2web_taxonomies_feed_politics');
+  $config = $source->getConfig();
+  $config['FeedsFileFetcher']['source'] = drupal_get_path('module', 'os2web_taxonomies') . '/data/pol.xml';
+  $source->setConfig($config);
+  $source->save();
+
+  //Set default Egenavne/stednavne taxonomy feed url
+  $source = feeds_source('os2web_taxonomies_feed_gis');
+  $config = $source->getConfig();
+  $config['FeedsFileFetcher']['source'] = drupal_get_path('module', 'os2web_taxonomies') . '/data/kle.xml';
+  $source->setConfig($config);
+  $source->save();
+}

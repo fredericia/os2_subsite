@@ -1,0 +1,17 @@
+name = OS2web News Page Archive
+description = Arkiv funktion til OS2web News Page
+core = 7.x
+package = OS2Web - Frontend
+version = 7.x-1.0
+project = os2web_news_page_archive
+dependencies[] = ctools
+dependencies[] = date
+dependencies[] = features
+dependencies[] = os2web_base
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[field_base][] = field_os2web_news_page_archive
+features[field_instance][] = node-os2web_base_news-field_os2web_news_page_archive
+features[views_view][] = os2web_news_page_archive
+features_exclude[dependencies][views] = views
+project path = profiles/os2web/modules/os2web_news_page/
