@@ -17,7 +17,6 @@ function os2sub_banner_install() {
   $newnode->uid = $user->uid;
   $newnode->name = $user->name;
   $newnode->type = 'banner';
-  $newNode->format = 3;     // 1 means filtered html, 2 means full html, 3 is php
   $newnode->status = 1;     // 1 means published
   $newnode->promote = 1;
   $newnode->language = 'da';
