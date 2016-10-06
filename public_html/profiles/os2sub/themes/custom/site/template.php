@@ -34,6 +34,11 @@ function site_preprocess_html(&$variables) {
 
   // Load jQuery UI
   drupal_add_library('system', 'ui');
+
+  // Hook into color.module.
+  if (module_exists('color')) {
+    _color_html_alter($variables);
+  }
 }
 
 /*
@@ -46,6 +51,11 @@ function site_preprocess_page(&$variables) {
   $variables['tabs_secondary'] = $variables['tabs'];
   unset($variables['tabs_primary']['#secondary']);
   unset($variables['tabs_secondary']['#primary']);
+
+  // Color
+  if (module_exists('color')) {
+    _color_page_alter($variables);
+  }
 }
 
 /**
