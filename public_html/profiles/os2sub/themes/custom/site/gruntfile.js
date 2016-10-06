@@ -38,6 +38,17 @@ module.exports = function (grunt) {
             }
         },
 
+        // CSS build configuration
+        scsslint: {
+            options: {
+                config: 'src/linting/.scss-lint.yml',
+                reporterOutput: null
+            },
+            core: {
+                src: ['src/scss/**/*.scss']
+            }
+        },
+
         concat: {
             options: {
                 sourceMap: true,
@@ -105,10 +116,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-scss-lint');
     grunt.loadNpmTasks('grunt-modernizr');
     grunt.loadNpmTasks('grunt-autoprefixer');
 
     // Register
     grunt.registerTask('default', ['watch']);
     grunt.registerTask('build', ['clean', 'concat', 'sass', 'modernizr', 'autoprefixer']);
+    grunt.registerTask('lint', ['scsslint']);
 };
