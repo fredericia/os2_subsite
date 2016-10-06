@@ -8764,46 +8764,52 @@ h6,
 .header-is-sticky .header-bottom-outer .header-bottom-inner {
   background-color: #F5F4F4; }
 
-.content-tabs-container .tabs--primary,
-.content-tabs-container .tabs--secondary {
-  margin-bottom: 15px;
-  border: 0; }
-  .content-tabs-container .tabs--primary li + li,
-  .content-tabs-container .tabs--secondary li + li {
-    margin-left: 5px; }
-  .content-tabs-container .tabs--primary li a, .content-tabs-container .tabs--primary li a:hover, .content-tabs-container .tabs--primary li a:focus,
-  .content-tabs-container .tabs--secondary li a,
-  .content-tabs-container .tabs--secondary li a:hover,
-  .content-tabs-container .tabs--secondary li a:focus {
-    padding: 6px 12px;
-    color: #333;
-    background-color: #fff;
-    border-radius: 4px;
-    border: none; }
-  .content-tabs-container .tabs--primary li a:hover,
-  .content-tabs-container .tabs--secondary li a:hover {
-    color: #262626;
-    background-color: #d9d9d9; }
-  .content-tabs-container .tabs--primary li.active a, .content-tabs-container .tabs--primary li.active a:hover, .content-tabs-container .tabs--primary li.active a:focus,
-  .content-tabs-container .tabs--secondary li.active a,
-  .content-tabs-container .tabs--secondary li.active a:hover,
-  .content-tabs-container .tabs--secondary li.active a:focus {
-    color: #fff;
-    background-color: #00406f; }
-  .content-tabs-container .tabs--primary li.active a:after,
-  .content-tabs-container .tabs--secondary li.active a:after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    margin-left: -8px;
-    border-width: 5px 8px;
-    border-style: solid;
-    border-color: #00406f transparent transparent; }
+.content-tabs-container {
+  padding: 30px 0; }
+  .content-tabs-container .tabs--primary,
+  .content-tabs-container .tabs--secondary {
+    margin-bottom: 15px;
+    border: 0; }
+    .content-tabs-container .tabs--primary li + li,
+    .content-tabs-container .tabs--secondary li + li {
+      margin-left: 5px; }
+    .content-tabs-container .tabs--primary li a,
+    .content-tabs-container .tabs--secondary li a {
+      display: block; }
+      .content-tabs-container .tabs--primary li a, .content-tabs-container .tabs--primary li a:hover, .content-tabs-container .tabs--primary li a:focus,
+      .content-tabs-container .tabs--secondary li a,
+      .content-tabs-container .tabs--secondary li a:hover,
+      .content-tabs-container .tabs--secondary li a:focus {
+        padding: 6px 12px;
+        color: #333;
+        background-color: #fff;
+        border-radius: 4px;
+        border: none;
+        text-decoration: none; }
+      .content-tabs-container .tabs--primary li a:hover,
+      .content-tabs-container .tabs--secondary li a:hover {
+        color: #262626;
+        background-color: #d9d9d9; }
+    .content-tabs-container .tabs--primary li.active a, .content-tabs-container .tabs--primary li.active a:hover, .content-tabs-container .tabs--primary li.active a:focus,
+    .content-tabs-container .tabs--secondary li.active a,
+    .content-tabs-container .tabs--secondary li.active a:hover,
+    .content-tabs-container .tabs--secondary li.active a:focus {
+      color: #fff;
+      background-color: #00406f; }
+    .content-tabs-container .tabs--primary li.active a:after,
+    .content-tabs-container .tabs--secondary li.active a:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      margin-left: -8px;
+      border-width: 5px 8px;
+      border-style: solid;
+      border-color: #00406f transparent transparent; }
 
 .navigation-wrapper {
   background-color: #F5F4F4; }

@@ -32,6 +32,7 @@ $tabs-left-right-inner-spacing: $padding-base-horizontal;
 // Tabs
 .content-tabs-container {
   @extend .text-center;
+  padding: 30px 0;
 
   // Nav tabs
   .tabs--primary,
@@ -48,6 +49,7 @@ $tabs-left-right-inner-spacing: $padding-base-horizontal;
       }
 
       a {
+        display: block;
 
         &,
         &:hover,
@@ -57,6 +59,7 @@ $tabs-left-right-inner-spacing: $padding-base-horizontal;
           background-color: $tabs-background-color;
           border-radius: $tabs-border-radius;
           border: none;
+          text-decoration: none;
         }
 
         &:hover {
