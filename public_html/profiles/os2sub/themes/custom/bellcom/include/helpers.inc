@@ -124,7 +124,6 @@ function _bellcom_collect_theme_settings() {
   $settings['social_links']['youtube']['tooltip'] = t(theme_get_setting('youtube_tooltip'));
 
   // Layout
-  $settings['layout']['copyright'] = ($settings['contact_information']['business_startup_year'] < date('Y') AND $settings['contact_information']['business_startup_year'] !== NULL) ? $settings['contact_information']['business_startup_year'] . '-' . date('Y') : date('Y');
   $settings['layout']['footer']['show_social_links'] = theme_get_setting('footer_show_social_links');
   $settings['layout']['sidebar']['show_social_links'] = theme_get_setting('sidebar_show_social_links');
 
