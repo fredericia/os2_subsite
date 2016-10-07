@@ -45,14 +45,14 @@ $pagination-element-active-border-width: $pagination-element-border-width;
       > a,
       > span {
         margin-left: 0;
-        @include border-left-radius($pagination-element-border-radius);
+        //@include border-left-radius($pagination-element-border-radius);
       }
     }
 
     &:last-child {
       > a,
       > span {
-        @include border-right-radius($pagination-element-border-radius);
+        //@include border-right-radius($pagination-element-border-radius);
       }
     }
   }

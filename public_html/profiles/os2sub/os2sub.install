@@ -88,13 +88,13 @@ function os2sub_install() {
 
   // jQuery update module.
   variable_set('jquery_update_compression_type', 'min');
-  variable_set('jquery_update_jquery_admin_version', '1.8');
-  variable_set('jquery_update_jquery_cdn', 'none');
+  variable_set('jquery_update_jquery_admin_version', '1.7');
+  variable_set('jquery_update_jquery_cdn', 'google');
   variable_set('jquery_update_jquery_migrate_plugin_cdn', 'none');
   variable_set('jquery_update_jquery_migrate_plugin_enable', 0);
   variable_set('jquery_update_jquery_migrate_plugin_migrate_trace', 1);
   variable_set('jquery_update_jquery_migrate_plugin_migrate_warnings', 1);
-  variable_set('jquery_update_jquery_version', '1.8');
+  variable_set('jquery_update_jquery_version', '1.10');
 
   // Set default language.
   $langs = language_list();
