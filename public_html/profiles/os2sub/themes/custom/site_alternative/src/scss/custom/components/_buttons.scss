@@ -1,0 +1,66 @@
+// |--------------------------------------------------------------------------
+// | Buttons
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .buttons
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+.btn {
+  border-radius: 20px;
+  border-width: 2px;
+  font-family: $font-lato;
+  font-weight: bolder;
+  font-size: 1.31em;
+  text-transform: uppercase;
+
+  &.btn-primary {
+    border-color: $color-btn-primary;
+  }
+
+  &.btn-secondary {
+    background-color: $color-btn-secondary;
+    border-color: $color-btn-secondary;
+    &:hover, &:active {
+      color: $color-btn-secondary;
+      background-color: white;
+    }
+  }
+
+  &.btn-tertiary {
+
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// ----
+.btn {
+  &.btn-primary {
+    border-color: $color-btn-primary;
+  }
+
+  &.btn-secondary {
+    background-color: $color-btn-secondary;
+    border-color: $color-btn-secondary;
+    &:hover, &:active {
+      color: $color-btn-secondary;
+      background-color: white;
+    }
+  }
+
+  &.btn-tertiary {
+
+  }
+
+  &.btn-full-width {
+    width: 100%;
+  }
+}

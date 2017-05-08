@@ -1,0 +1,123 @@
+// |--------------------------------------------------------------------------
+// | Contact block
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .kontaktblok
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Contact block
+.kontaktblok {
+
+  .kontaktblok-headline {
+    @extend .heading-h3;
+  }
+
+  .kontaktblok-text {
+    font-size: $font-size-large;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Print
+@media print {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Contact block
+  .kontaktblok {
+  }
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Contact block mixin
+@mixin kontakt-mixin-block() {
+}
