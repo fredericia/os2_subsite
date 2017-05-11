@@ -78,12 +78,13 @@
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
         </a>
       <?php endif; ?>
 
       <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+        <a class="name navbar-brand" href="<?php print $front_page; ?>"
+           title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
 
       <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
@@ -122,7 +123,8 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
+  </header>
+  <!-- /#page-header -->
 
   <div class="row">
 
@@ -136,7 +138,7 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
+      <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>
@@ -165,10 +167,36 @@
   </div>
 </div>
 
-<?php //if (!empty($page['footer'])): ?>
-  <footer class="footer">
-    <div class="<?php print $container_class; ?>">
-      <?php print render($page['footer']); ?>
+<div class="prefooter">
+  <div class="<?php print $container_class; ?>">
+    <div class="row">
+      <div class="col-md-6">
+        <?php
+        //$view = views_get_view('os2web_kulturnaut_events_lists');
+        //$view->set_display('block_kulturnaut_events');
+        //print $view->get_title();
+        //print $view->preview('block_kulturnaut_events');
+        ?>
+      </div>
+      <div class="col-md-5 col-md-push-1">
+        <h2>
+          <?php print t('Populære'); ?>
+          <span class="focus">#tags</span>
+        </h2>
+        <?php
+        $view_popular_tags = views_get_view('os2web_taxonomies_tax_editor_tag_list');
+        $view_popular_tags->set_display('block');
+        print $view_popular_tags->preview('block');
+        ?>
+      </div>
     </div>
-  </footer>
+  </div>
+</div>
+
+<?php //if (!empty($page['footer'])): ?>
+<footer class="footer">
+  <div class="<?php print $container_class; ?>">
+    <?php print render($page['footer']); ?>
+  </div>
+</footer>
 <?php //endif; ?>

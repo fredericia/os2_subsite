@@ -36,7 +36,7 @@
     //custom block with links, not editable for user
     ?>
     <section class="block-image-links">
-      <div class="col-md-2 col-md-push-4">
+      <div class="col-md-3 col-md-push-5">
         <a class="block-image-links__link" href="http://google.com"><img
             src="<?php print base_path() . drupal_get_path('theme', 'site_alternative') . '/dist/img/logo_secondary.png'; ?>"></a>
         <a class="block-image-links__link" href="http://google.com"><img

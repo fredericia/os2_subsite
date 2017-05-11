@@ -1,0 +1,54 @@
+// |--------------------------------------------------------------------------
+// | Prefooter
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .prefooter
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.prefooter {
+  background-color: $color-background-secondary;
+  h2 .focus {
+    color: $color-focus;
+    font-weight: normal;
+  }
+  .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+    margin-top: 20px;
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 13px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          display: block;
+          padding: 7px 40px;
+          background-color: $color-background-primary;
+          border-radius: 30px;
+          font-size: 1.31em;
+          color: $color-focus;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------

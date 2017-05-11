@@ -45,7 +45,7 @@
  * @ingroup templates
  */
 ?>
-<div class="block-contact col-md-3 col-md-push-4">
+<div class="block-contact col-md-2 col-md-push-5">
   <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
     <?php print render($title_prefix); ?>

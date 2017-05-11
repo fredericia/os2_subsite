@@ -5,7 +5,7 @@
 
     <?php if ($content['top']): ?>
 	   	<!-- Begin - top -->
-		    <div class="col-md-12">
+		    <div class="col-md-12 content-top">
 		        <?php print $content['top']; ?>
 		    </div>
 		    <!-- End - top -->

@@ -1,3 +1,20 @@
+// |--------------------------------------------------------------------------
+// | Node full
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .node
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Node
 .node {
   font-size: 1.06em;
 }
@@ -8,5 +25,107 @@
     font-weight: bold;
     font-size: 1.31em;
     color: $color-font-dark-secondary;
+  }
+}
+
+.pane-node-field-os2web-kulturnaut-date.visible-xs {
+  .field-name-field-os2web-kulturnaut-date {
+    font-family: $font-lato;
+    font-weight: bold;
+    font-size: 1.31em;
+    color: $color-font-dark-secondary;
+  }
+}
+
+.pane-node-field-os2web-kulturnaut-url {
+  margin-top: 30px;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  .node--os2web_kulturnaut_knactivity--full {
+    //coming from another region
+    .field-name-field-os2web-kulturnaut-date {
+      display: none;
+    }
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  .node--os2web_kulturnaut_knactivity--full {
+    //coming from another region
+    .field-name-field-os2web-kulturnaut-date {
+      display: none;
+    }
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Print
+@media print {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Banner
+  .banner {
   }
 }

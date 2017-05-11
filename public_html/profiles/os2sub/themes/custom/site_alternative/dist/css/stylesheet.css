@@ -226,7 +226,6 @@ th {
   h3,
   .heading-h3,
   .kontaktblok .kontaktblok-headline,
-  .node-teaser .node-teaser-full-name,
   .node-list-title {
     orphans: 3;
     widows: 3; }
@@ -234,7 +233,6 @@ th {
   h3,
   .heading-h3,
   .kontaktblok .kontaktblok-headline,
-  .node-teaser .node-teaser-full-name,
   .node-list-title {
     page-break-after: avoid; }
   .navbar {
@@ -1124,7 +1122,7 @@ img {
   max-width: 100%;
   height: auto; }
 
-.img-circle, .node-teaser .node-teaser-profile-image img {
+.img-circle {
   border-radius: 50%; }
 
 hr {
@@ -1154,7 +1152,7 @@ hr {
 [role="button"] {
   cursor: pointer; }
 
-h1, .heading-h1, .banner .banner-wrapper .banner-headline, h2, .heading-h2, h3, .heading-h3, .kontaktblok .kontaktblok-headline, .node-teaser .node-teaser-full-name, .node-list-title, h4, .heading-h4, h5, .heading-h5, h6, .heading-h6,
+h1, .heading-h1, .banner .banner-wrapper .banner-headline, h2, .heading-h2, h3, .heading-h3, .kontaktblok .kontaktblok-headline, .node-list-title, h4, .heading-h4, h5, .heading-h5, h6, .heading-h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 700;
@@ -1162,8 +1160,8 @@ h1, .heading-h1, .banner .banner-wrapper .banner-headline, h2, .heading-h2, h3, 
   color: inherit; }
   h1 small, .heading-h1 small, .banner .banner-wrapper .banner-headline small,
   h1 .small, .heading-h1 .small, .banner .banner-wrapper .banner-headline .small, h2 small, .heading-h2 small,
-  h2 .small, .heading-h2 .small, h3 small, .heading-h3 small, .kontaktblok .kontaktblok-headline small, .node-teaser .node-teaser-full-name small, .node-list-title small,
-  h3 .small, .heading-h3 .small, .kontaktblok .kontaktblok-headline .small, .node-teaser .node-teaser-full-name .small, .node-list-title .small, h4 small, .heading-h4 small,
+  h2 .small, .heading-h2 .small, h3 small, .heading-h3 small, .kontaktblok .kontaktblok-headline small, .node-list-title small,
+  h3 .small, .heading-h3 .small, .kontaktblok .kontaktblok-headline .small, .node-list-title .small, h4 small, .heading-h4 small,
   h4 .small, .heading-h4 .small, h5 small, .heading-h5 small,
   h5 .small, .heading-h5 .small, h6 small, .heading-h6 small,
   h6 .small, .heading-h6 .small,
@@ -1184,7 +1182,6 @@ h2,
 h3,
 .heading-h3,
 .kontaktblok .kontaktblok-headline,
-.node-teaser .node-teaser-full-name,
 .node-list-title, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
@@ -1194,8 +1191,8 @@ h3,
   h2 small, .heading-h2 small,
   h2 .small, .heading-h2 .small, .h2 small,
   .h2 .small,
-  h3 small, .heading-h3 small, .kontaktblok .kontaktblok-headline small, .node-teaser .node-teaser-full-name small, .node-list-title small,
-  h3 .small, .heading-h3 .small, .kontaktblok .kontaktblok-headline .small, .node-teaser .node-teaser-full-name .small, .node-list-title .small, .h3 small,
+  h3 small, .heading-h3 small, .kontaktblok .kontaktblok-headline small, .node-list-title small,
+  h3 .small, .heading-h3 .small, .kontaktblok .kontaktblok-headline .small, .node-list-title .small, .h3 small,
   .h3 .small {
     font-size: 65%; }
 
@@ -1223,7 +1220,7 @@ h1, .heading-h1, .banner .banner-wrapper .banner-headline, .h1 {
 h2, .heading-h2, .h2 {
   font-size: 24px; }
 
-h3, .heading-h3, .kontaktblok .kontaktblok-headline, .node-teaser .node-teaser-full-name, .node-list-title, .h3 {
+h3, .heading-h3, .kontaktblok .kontaktblok-headline, .node-list-title, .h3 {
   font-size: 22px; }
 
 h4, .heading-h4, .h4 {
@@ -8574,8 +8571,7 @@ h2,
 h3,
 .heading-h3,
 .kontaktblok .kontaktblok-headline,
-.node-teaser .node-teaser-full-name,
-.node-list-title, .heading-h3, .kontaktblok .kontaktblok-headline, .node-teaser .node-teaser-full-name, .node-list-title,
+.node-list-title, .heading-h3, .kontaktblok .kontaktblok-headline, .node-list-title,
 h4,
 .heading-h4, .heading-h4,
 h5,
@@ -8590,8 +8586,7 @@ h6,
   h3.light,
   .light.heading-h3,
   .kontaktblok .light.kontaktblok-headline,
-  .node-teaser .light.node-teaser-full-name,
-  .light.node-list-title, .heading-h3.light, .kontaktblok .light.kontaktblok-headline, .node-teaser .light.node-teaser-full-name, .light.node-list-title,
+  .light.node-list-title, .heading-h3.light, .kontaktblok .light.kontaktblok-headline, .light.node-list-title,
   h4.light,
   .light.heading-h4, .heading-h4.light,
   h5.light,
@@ -8604,12 +8599,11 @@ h6,
   h2 strong, .heading-h2 strong,
   h2.bold,
   .bold.heading-h2, .heading-h2 strong, .heading-h2.bold,
-  h3 strong, .heading-h3 strong, .kontaktblok .kontaktblok-headline strong, .node-teaser .node-teaser-full-name strong, .node-list-title strong,
+  h3 strong, .heading-h3 strong, .kontaktblok .kontaktblok-headline strong, .node-list-title strong,
   h3.bold,
   .bold.heading-h3,
   .kontaktblok .bold.kontaktblok-headline,
-  .node-teaser .bold.node-teaser-full-name,
-  .bold.node-list-title, .heading-h3 strong, .kontaktblok .kontaktblok-headline strong, .node-teaser .node-teaser-full-name strong, .node-list-title strong, .heading-h3.bold, .kontaktblok .bold.kontaktblok-headline, .node-teaser .bold.node-teaser-full-name, .bold.node-list-title,
+  .bold.node-list-title, .heading-h3 strong, .kontaktblok .kontaktblok-headline strong, .node-list-title strong, .heading-h3.bold, .kontaktblok .bold.kontaktblok-headline, .bold.node-list-title,
   h4 strong, .heading-h4 strong,
   h4.bold,
   .bold.heading-h4, .heading-h4 strong, .heading-h4.bold,
@@ -8635,8 +8629,7 @@ h2,
 h3,
 .heading-h3,
 .kontaktblok .kontaktblok-headline,
-.node-teaser .node-teaser-full-name,
-.node-list-title, .heading-h3, .kontaktblok .kontaktblok-headline, .node-teaser .node-teaser-full-name, .node-list-title,
+.node-list-title, .heading-h3, .kontaktblok .kontaktblok-headline, .node-list-title,
 h4,
 .heading-h4, .heading-h4,
 h5,
@@ -8658,8 +8651,7 @@ h2,
 h3,
 .heading-h3,
 .kontaktblok .kontaktblok-headline,
-.node-teaser .node-teaser-full-name,
-.node-list-title, .heading-h3, .kontaktblok .kontaktblok-headline, .node-teaser .node-teaser-full-name, .node-list-title,
+.node-list-title, .heading-h3, .kontaktblok .kontaktblok-headline, .node-list-title,
 h4,
 .heading-h4, .heading-h4,
 h5,
@@ -8685,7 +8677,7 @@ h6,
   .dived-table .dived-table-cell {
     display: table-cell !important;
     vertical-align: top; }
-  .dived-table .div-vertical-align-middle, .dived-table .node-teaser .dived-table-cell, .node-teaser .dived-table .dived-table-cell {
+  .dived-table .div-vertical-align-middle {
     vertical-align: middle; }
 
 body {
@@ -8703,18 +8695,31 @@ h1.pane-title,
   color: #0f2846;
   border: 0; }
 
-h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-headline, .node-teaser .pane-title.node-teaser-full-name, .pane-title.node-list-title {
+h2, .heading-h2 {
+  font-family: "Roboto Slab", serif;
+  font-weight: lighter;
+  font-size: 3em;
+  color: #0f2846; }
+
+h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-headline, .pane-title.node-list-title {
   font-weight: bold;
   font-size: 1.25em;
   text-transform: uppercase;
   color: #666666; }
 
-.content {
-  background-color: #F5F4F4; }
-
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
+
+.row .content-top {
+  margin-bottom: 10px; }
+
+h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
+h1.pane-title,
+.pane-title.heading-h1,
+.banner .banner-wrapper .pane-title.banner-headline {
+  margin-top: 20px;
+  margin-bottom: 0; }
 
 @media (min-width: 768px) {
   .content-inner {
@@ -8724,7 +8729,9 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
 @media (min-width: 992px) {
   .content-inner {
     padding-top: 40px;
-    padding-bottom: 60px; } }
+    padding-bottom: 60px; }
+  .row .content-top {
+    margin-bottom: 30px; } }
 
 header.navbar {
   background-color: #0f2846; }
@@ -8893,6 +8900,30 @@ header.navbar {
     .banner .banner-wrapper.color-1 {
       color: #FFF; }
 
+.prefooter {
+  background-color: #eeeeee; }
+  .prefooter h2 .focus, .prefooter .heading-h2 .focus {
+    color: #ff0060;
+    font-weight: normal; }
+  .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+    margin-top: 20px; }
+    .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul {
+      padding: 0; }
+      .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li {
+        list-style: none;
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 13px; }
+        .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:last-child {
+          margin-right: 0; }
+        .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a {
+          display: block;
+          padding: 7px 40px;
+          background-color: #ffffff;
+          border-radius: 30px;
+          font-size: 1.31em;
+          color: #ff0060; }
+
 footer.footer {
   background-color: #0f2846;
   color: #ffffff; }
@@ -8976,48 +9007,48 @@ footer.footer a.block-image-links__link {
   font-size: 1.31em;
   color: #666666; }
 
-.node-teaser .node-teaser-top + .node-teaser-bottom {
-  margin-top: 15px; }
+.pane-node-field-os2web-kulturnaut-date.visible-xs .field-name-field-os2web-kulturnaut-date {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 1.31em;
+  color: #666666; }
 
-.node-teaser .node-teaser-profile-image {
-  width: 85px; }
-  .node-teaser .node-teaser-profile-image img {
-    width: 70px; }
+.pane-node-field-os2web-kulturnaut-url {
+  margin-top: 30px; }
 
-.node-teaser .node-teaser-treatment-center {
-  color: #89bd2a; }
+@media (max-width: 767px) {
+  .node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-date {
+    display: none; } }
 
-.node-teaser .node-teaser-full-name {
-  margin: 0;
-  margin-bottom: 5px; }
-  .node-teaser .node-teaser-full-name, .node-teaser .node-teaser-full-name:hover, .node-teaser .node-teaser-full-name:focus, .node-teaser .node-teaser-full-name:active,
-  .node-teaser .node-teaser-full-name a,
-  .node-teaser .node-teaser-full-name a:hover,
-  .node-teaser .node-teaser-full-name a:focus,
-  .node-teaser .node-teaser-full-name a:active {
-    color: inherit; }
+@media (min-width: 768px) and (max-width: 991px) {
+  .node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-date {
+    display: none; } }
 
-.node-teaser .node-teaser-number-of-measurements {
-  color: #ADA2A4; }
+.node-teaser.node-os2web-kulturnaut-knactivity header h2, .node-teaser.node-os2web-kulturnaut-knactivity header .heading-h2 {
+  font-size: 1.56em;
+  color: white;
+  margin-bottom: 3px; }
 
-.node-teaser .node-teaser-actions {
-  text-align: right; }
-  .node-teaser .node-teaser-actions .node-teaser-actions-top + .node-teaser-actions-bottom {
-    padding-top: 8px; }
-  .node-teaser .node-teaser-actions p {
-    white-space: nowrap; }
-  .node-teaser .node-teaser-actions a:not(.btn):not(.banner .banner-wrapper a), .node-teaser .node-teaser-actions a:not(.btn):not(.banner .banner-wrapper a):hover, .node-teaser .node-teaser-actions a:not(.btn):not(.banner .banner-wrapper a):focus, .node-teaser .node-teaser-actions a:not(.btn):not(.banner .banner-wrapper a):active {
-    text-decoration: underline;
-    color: #f24244; }
+.node-teaser.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
+  font-size: 0.94em;
+  color: #00beff;
+  font-weight: bold; }
 
-.node-teaser .list-border {
-  display: inline-block;
-  border: 1px solid #ddd; }
-  .node-teaser .list-border > li {
-    padding: 10px 20px;
-    border-right: 1px solid #ddd; }
-    .node-teaser .list-border > li:last-child {
-      border-right: 0; }
+.node-teaser.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-sname {
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder; }
+
+.node-teaser.node-os2web-kulturnaut-knactivity .upper-part {
+  padding: 15px;
+  position: absolute;
+  top: 0; }
+
+.node-teaser.node-os2web-kulturnaut-knactivity .bottom-part {
+  padding: 15px;
+  position: absolute;
+  bottom: 0; }
 
 .node-spotbox .card-block {
   background-color: #00406f; }
@@ -9036,24 +9067,31 @@ footer.footer a.block-image-links__link {
   color: #00406f; }
 
 .pane-block .addtoany_list a {
-  font-size: 1.06em;
   color: #00beff;
   padding: 0;
   margin-bottom: 10px; }
-  .pane-block .addtoany_list a span {
-    margin-right: 15px; }
 
-@media (max-width: 767px) {
+.pane-addtoany-addtoany-button.pane-block .pane-title {
+  display: none; }
+
+.pane-addtoany-addtoany-button.pane-block .pane-content {
+  text-align: right; }
+  .pane-addtoany-addtoany-button.pane-block .pane-content .addtoany_list a {
+    font-size: 0px; }
+    .pane-addtoany-addtoany-button.pane-block .pane-content .addtoany_list a span {
+      margin-right: 12px; }
+    .pane-addtoany-addtoany-button.pane-block .pane-content .addtoany_list a:last-child span {
+      margin-right: 0; }
+
+@media (min-width: 992px) {
   .pane-addtoany-addtoany-button.pane-block .pane-title {
-    display: none; }
+    display: block; }
   .pane-addtoany-addtoany-button.pane-block .pane-content {
-    text-align: right; }
+    text-align: left; }
     .pane-addtoany-addtoany-button.pane-block .pane-content .addtoany_list a {
-      font-size: 0px; }
+      font-size: 1.06em; }
       .pane-addtoany-addtoany-button.pane-block .pane-content .addtoany_list a span {
-        margin-right: 12px; }
-      .pane-addtoany-addtoany-button.pane-block .pane-content .addtoany_list a:last-child span {
-        margin-right: 0; } }
+        margin-right: 15px !important; } }
 
 .field-type-image .field-slideshow {
   z-index: -1; }
