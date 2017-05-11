@@ -1,0 +1,153 @@
+// |--------------------------------------------------------------------------
+// | Header
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .header
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+header.navbar {
+  background-color: $color-primary;
+  .container {
+    .menu.nav li {
+      padding-left: 21px;
+      padding-right: 21px;
+      > a {
+        padding-left: 0;
+        padding-right: 0;
+        text-transform: uppercase;
+        font-size: 1.75em;
+        font-family: $font-lato;
+        font-weight: lighter;
+        color: $color-font-light;
+        &.active, &:hover {
+          background: none;
+          /*border-bottom: 6px solid $color-focus;*/
+          font-weight: bolder;
+        }
+      }
+    }
+    .navbar-header {
+      .logo img {
+        max-height: 29px;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Header
+  .header {
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+  header.navbar {
+    .container {
+      .navbar-header {
+        .logo {
+          margin-top: 28px;
+          margin-bottom: 28px;
+          img {
+            max-height: 56px;
+          }
+        }
+      }
+
+      .navbar-collapse {
+        background: url("../img/logo_secondary_small.png") no-repeat center right;
+        .navbar-nav{
+          margin-top: 56px;
+        }
+      }
+    }
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Header
+  .header {
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Header
+  .header {
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Header
+  .header {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Header
+  .header {
+  }
+}
+
+// Print
+@media print {
+
+  // Header
+  .header {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Header
+  .header {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Header
+  .header {
+  }
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Header mixin
+@mixin header-mixin() {
+}

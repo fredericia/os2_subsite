@@ -1,0 +1,43 @@
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.pane-block {
+  .addtoany_list {
+    a {
+      font-size: 1.06em;
+      color: $color-focus-secondary;
+      padding: 0;
+      margin-bottom: 10px;
+      span {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+  .pane-addtoany-addtoany-button.pane-block {
+    .pane-title {
+      display: none;
+    }
+    .pane-content {
+      text-align: right;
+      .addtoany_list {
+        a {
+          font-size: 0px;
+          span {
+            margin-right: 12px;
+          }
+          &:last-child {
+            span {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,119 @@
+// |--------------------------------------------------------------------------
+// | Spotbox
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .node-spotbox
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Spotbox
+.node-spotbox {
+
+  .card-block {
+    background-color: $brand-primary;
+
+    &,
+    a {
+
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Print
+@media print {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// Touch
+.touchevents {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Spotbox
+  .node-spotbox {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Spotbox mixin
+@mixin node-mixin-spotbox() {}

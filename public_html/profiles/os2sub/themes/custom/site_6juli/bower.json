@@ -1,0 +1,14 @@
+{
+  "name": "Site alternative",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap-sass": "~3.*",
+    "fontawesome": "~4.*",
+    "jquery-sticky": "sticky-js#^1.0.3",
+    "select2-bootstrap-css": "^1.4.6"
+  },
+  "authors": [
+    "Morten Nissen <mn@bellcom.dk> (http://bellcom.dk)",
+    "Stanislav Kutasevits <stan@bellcom.dk> (http://bellcom.dk)"
+  ]
+}
