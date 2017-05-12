@@ -1,0 +1,82 @@
+// |--------------------------------------------------------------------------
+// | Slideshow
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .field-type-image
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.field-type-image {
+  .field-slideshow {
+    z-index: -1;
+  }
+  .field-slideshow-controls {
+    a {
+      position: absolute;
+      border-radius: 50%;
+      background-color: white;
+      border: 2px solid $color-primary;
+      height: 64px;
+      width: 64px;
+      line-height: 64px;
+      top: 50%;
+      transform: translate(0, -50%);
+      font-size: 2em;
+      padding: 0;
+      opacity: 0.9;
+      &.prev {
+        float: left;
+        left: -16px;
+      }
+      &.next {
+        float: right;
+        right: -16px;
+      }
+    }
+  }
+  .field-slideshow-pager {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    opacity: 0.9;
+    a {
+      font-size: 0px;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 2px solid white;
+      border-radius: 50%;
+      margin-right: 5px;
+      &.activeSlide {
+        background-color: white;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  .field-type-image {
+    .field-slideshow-controls {
+      display: none;
+    }
+
+    .field-slideshow-pager {
+      bottom: 10px;
+      right: 20px;
+    }
+  }
+}

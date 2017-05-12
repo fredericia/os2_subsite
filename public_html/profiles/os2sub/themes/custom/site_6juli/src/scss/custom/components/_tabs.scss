@@ -1,0 +1,187 @@
+// |--------------------------------------------------------------------------
+// | Tabs
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .content-tabs-container
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+$tabs-spacing:                 $line-height-computed;
+$tabs-font-color:              $btn-default-color;
+$tabs-background-color:        $btn-default-bg;
+$tabs-hover-font-color:        darken($tabs-font-color, 5%);
+$tabs-hover-background-color:  darken($tabs-background-color, 15%);
+$tabs-active-font-color:       $btn-primary-color;
+$tabs-active-background-color: $btn-primary-bg;
+$tabs-border-radius:           $border-radius-base;
+$tabs-stacked-spacing:         5px;
+$tabs-arrow-height:            5px;
+$tabs-arrow-width:             8px;
+
+$tabs-top-bottom-inner-spacing: $padding-base-vertical;
+$tabs-left-right-inner-spacing: $padding-base-horizontal;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Tabs
+//.content-tabs-container {
+//  @extend .text-center;
+//  padding: 30px 0;
+//
+//  // Nav tabs
+//  .tabs--primary,
+//  .tabs--secondary {
+//    @extend .list-inline;
+//    margin-bottom: floor( ($tabs-spacing - $tabs-arrow-height) );
+//    border: 0;
+//
+//    li {
+//
+//      // Stacked
+//      + li {
+//        margin-left: $tabs-stacked-spacing;
+//      }
+//
+//      a {
+//        display: block;
+//
+//        &,
+//        &:hover,
+//        &:focus {
+//          padding: $tabs-top-bottom-inner-spacing $tabs-left-right-inner-spacing;
+//          color: $tabs-font-color;
+//          background-color: $tabs-background-color;
+//          border-radius: $tabs-border-radius;
+//          border: none;
+//          text-decoration: none;
+//        }
+//
+//        &:hover {
+//          color: $tabs-hover-font-color;
+//          background-color: $tabs-hover-background-color;
+//        }
+//      }
+//
+//      // Active state
+//      &.active {
+//
+//        a {
+//
+//          &,
+//          &:hover,
+//          &:focus {
+//            color: $tabs-active-font-color;
+//            background-color: $tabs-active-background-color;
+//          }
+//
+//          // After
+//          &:after {
+//            content: "";
+//            display: block;
+//            position: absolute;
+//            left: 50%;
+//            bottom: floor( (0 - ($tabs-arrow-height * 2)) );
+//            width: 0;
+//            height: 0;
+//            overflow: hidden;
+//            margin-left: floor( (0 - $tabs-arrow-width) );
+//            border-width: $tabs-arrow-height $tabs-arrow-width;
+//            border-style: solid;
+//            border-color: $tabs-active-background-color transparent transparent;
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Print
+@media print {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// Touch
+.touchevents {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Tabs
+  .content-tabs-container {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Tabs mixin
+@mixin content-mixin-tabs-container() {}

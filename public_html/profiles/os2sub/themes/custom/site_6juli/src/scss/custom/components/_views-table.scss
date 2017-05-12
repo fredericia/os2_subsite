@@ -1,0 +1,176 @@
+// |--------------------------------------------------------------------------
+// | Table
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .views-table
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+$views-table-td-box-shadow: 0 1px 1px 0 rgba(225, 230, 234, 1);
+$views-table-td-background-color: #fff;
+$views-table-border-spacing: 7px;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Table
+.views-table {
+  border-collapse: separate;
+  border-spacing: 0 $views-table-border-spacing;
+
+  th, td {
+    border: none;
+  }
+
+  th {
+
+    &,
+    a {
+      font-size: $font-size-large;
+      @include line-height($font-size-large);
+      font-weight: $font-weight-bold;
+      color: #bac6ce;
+    }
+
+    a {
+
+      &:hover {
+        color: $brand-secondary;
+      }
+    }
+
+    &.active {
+
+      a {
+        color: $brand-tertiary;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  tbody {
+
+    > tr {
+
+      > td {
+        vertical-align: middle;
+        background-color: $views-table-td-background-color;
+        @include box-shadow($views-table-td-box-shadow);
+
+        &.active {
+
+          &,
+          &:hover {
+            background-color: $views-table-td-background-color;
+          }
+
+          &,
+          a {
+            color: $headings-color;
+            font-weight: $font-weight-bold;
+          }
+        }
+
+        .no-result {
+          font-style: italic;
+          font-weight: $font-weight;
+          color: $text-muted;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Table
+  .views-table {}
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Table
+  .views-table {}
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Table
+  .views-table {}
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Table
+  .views-table {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Table
+  .views-table {}
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Table
+  .views-table {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Table
+  .views-table {}
+}
+
+// Print
+@media print {
+
+  // Table
+  .views-table {}
+}
+
+// Touch
+.touchevents {
+
+  // Table
+  .views-table {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Table
+  .views-table {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Table mixin
+@mixin views-table-mixin() {}
