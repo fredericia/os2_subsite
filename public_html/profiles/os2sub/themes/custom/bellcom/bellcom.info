@@ -87,4 +87,4 @@ settings[footer_show_social_links] = 0;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
-settings[bootstrap_cdn] = ''
+;settings[bootstrap_cdn] = ''
