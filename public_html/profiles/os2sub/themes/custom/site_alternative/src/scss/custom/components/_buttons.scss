@@ -17,26 +17,11 @@
   border-radius: 20px;
   border-width: 2px;
   font-family: $font-lato;
-  font-weight: bolder;
+  font-weight: 900;
   font-size: 1.31em;
   text-transform: uppercase;
-
-  &.btn-primary {
-    border-color: $color-btn-primary;
-  }
-
-  &.btn-secondary {
-    background-color: $color-btn-secondary;
-    border-color: $color-btn-secondary;
-    &:hover, &:active {
-      color: $color-btn-secondary;
-      background-color: white;
-    }
-  }
-
-  &.btn-tertiary {
-
-  }
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 // --------------------------------------------------
@@ -44,20 +29,43 @@
 // ----
 .btn {
   &.btn-primary {
+    background-color: $color-btn-primary;
     border-color: $color-btn-primary;
+    &:hover, &:active, &:focus {
+      color: $color-btn-primary;
+      background-color: $color-background-primary;
+    }
   }
 
   &.btn-secondary {
     background-color: $color-btn-secondary;
     border-color: $color-btn-secondary;
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
       color: $color-btn-secondary;
-      background-color: white;
+      background-color: $color-background-primary;
     }
   }
 
   &.btn-tertiary {
+    color: $color-background-tertiary;
+    background-color: $color-background-primary;
+    border-color: $color-background-tertiary;
+    &:hover, &:active, &:focus {
+      color: $color-background-primary;
+      background-color: $color-background-tertiary;
+      border-color: $color-background-tertiary;
+    }
+  }
 
+  &.btn-quaternary {
+    color: $color-background-primary;
+    background-color: none;
+    border-color: $color-background-primary;
+    &:hover, &:active, &:focus {
+      color: $color-focus;
+      background-color: $color-background-primary;
+      border-color: $color-background-primary;
+    }
   }
 
   &.btn-full-width {

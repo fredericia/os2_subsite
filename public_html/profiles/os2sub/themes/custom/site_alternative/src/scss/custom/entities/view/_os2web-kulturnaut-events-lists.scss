@@ -1,0 +1,266 @@
+// |--------------------------------------------------------------------------
+// | os2web-kulturnaut-events-lists
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-os2web-kulturnaut-events-lists
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+$header-size: 112px;
+//size of header in desktop orientation and up
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.view-os2web-kulturnaut-events-lists {
+  &.view-display-id-pane_related_articles {
+    .pager--infinite-scroll {
+      margin-top: 0;
+      a {
+        @extend .btn;
+        @extend .btn.btn-tertiary;
+        @extend .btn-full-width;
+        font-family: $font-roboto-slab;
+        text-transform: none;
+        font-size: 2em;
+        font-weight: normal;
+        border-radius: 30px;
+        &:before {
+          content: '+';
+          font-size: 1.5em;
+          line-height: 0.1em;
+          font-weight: bold;
+          top: 0.1em;
+          position: relative;
+          padding-right: 5px;
+          color: $color-focus;
+        }
+      }
+    }
+  }
+  &.view-display-id-pane_activities_list_5_load_more {
+    .pager--infinite-scroll {
+      margin: 0;
+      li {
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        display: block;
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0;
+          background-color: $color-background-secondary;
+          font-family: $font-roboto-slab;
+          font-size: 3.18em;
+          &:before{
+            content: '+';
+            color: $color-focus;
+            font-weight: bold;
+            font-size: 3.18em;
+            line-height: 0.5em;
+          }
+          &:hover, &:active, &:focus {
+            background-color: $color-background-secondary;
+          }
+        }
+      }
+    }
+  }
+  &.view-display-id-attachment_activities_list_3_2 {
+    .views-field-title {
+      font-family: $font-roboto-slab;
+      font-size: 1.375em;
+      color: $color-focus-tertiary;
+    }
+    .views-field-field-os2web-kulturnaut-date, .views-field-view-node {
+      font-size: 1em;
+      color: #666666;
+    }
+    .views-field-view-node {
+      font-weight: bold;
+      a {
+        color: #666666 !important;
+      }
+    }
+  }
+}
+
+.not-front .container-fluid .menu-background-slideshow {
+  display: none;
+}
+
+.container-fluid .menu-background-slideshow {
+  position: relative;
+  top: -$header-size;
+  margin-bottom: -$header-size - 2;
+
+  //  .views-field-field-os2web-kulturnaut-slidesho {
+  //    position: relative;
+  //  }
+
+  .views-slideshow-controls-bottom {
+    > .container {
+      position: relative;
+    }
+    .widget_pager_bottom {
+      @include slideshow-pager-dots-block;
+      z-index: 9999;
+      bottom: 20px;
+      right: 10px;
+      a {
+        @include slideshow-pager-dot;
+      }
+      .active {
+        text-decoration: none;
+        a {
+          @include slideshow-pager-active-dot;
+        }
+      }
+      > div {
+        padding: 0;
+      }
+    }
+  }
+
+  .views-field-field-os2web-kulturnaut-slidesho .field-content .img-container {
+    width: 100vw;
+    height: 540px;
+
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .bottom-part {
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .views-field-title {
+    font-family: $font-roboto-slab;
+    font-size: 4em;
+    line-height: 1.0em;
+    font-weight: 900;
+    color: white;
+  }
+
+  .views-field-field-os2web-kulturnaut-sname,
+  .views-field-field-os2web-kulturnaut-date,
+  .views-field-field-os2web-base-field-edi-tags {
+    color: white;
+    font-size: 1.31em;
+  }
+  .views-field-field-os2web-base-field-edi-tags {
+    font-weight: bold;
+  }
+
+  .views-field-view-node {
+    margin-top: 30px;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Print
+@media print {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+
+

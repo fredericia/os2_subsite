@@ -6,8 +6,13 @@
 //// | Morten Nissen
 //// |
 //
-//var pageLayout = (function ($) {
-//    'use strict';
+var pageLayout = (function ($) {
+    'use strict';
+
+    //removing anchor tag when clicking the pager
+    $('.menu-background-slideshow .widget_pager a').click(function (e) {
+        e.preventDefault();
+    });
 //
 //    var pub = {};
 //
@@ -54,4 +59,4 @@
 //    }
 //
 //    return pub;
-//})(jQuery);
+})(jQuery);

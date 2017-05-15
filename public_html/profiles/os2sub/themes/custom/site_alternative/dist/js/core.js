@@ -6,8 +6,13 @@
 //// | Morten Nissen
 //// |
 //
-//var pageLayout = (function ($) {
-//    'use strict';
+var pageLayout = (function ($) {
+    'use strict';
+
+    //removing anchor tag when clicking the pager
+    $('.menu-background-slideshow .widget_pager a').click(function (e) {
+        e.preventDefault();
+    });
 //
 //    var pub = {};
 //
@@ -54,7 +59,7 @@
 //    }
 //
 //    return pub;
-//})(jQuery);
+})(jQuery);
 
 //// |--------------------------------------------------------------------------
 //// | Header
@@ -103,16 +108,12 @@
 //    return pub;
 //})(jQuery);
 
-//// Document ready
-//(function ($) {
-//    'use strict';
-//
-//    // Enable page layout
-//    pageLayout.init();
-//
-//    // Enable header
-//    header.init();
-//
-//})(jQuery);
+// Document ready
+(function ($) {
+    // Enable page layout
+    pageLayout.init();
 
+    // Enable header
+    //header.init();
+})(jQuery);
 //# sourceMappingURL=core.js.map

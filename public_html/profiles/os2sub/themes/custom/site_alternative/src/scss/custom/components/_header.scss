@@ -31,7 +31,7 @@ header.navbar {
         &.active, &:hover {
           background: none;
           border-bottom: 6px solid $color-focus;
-          font-weight: bolder;
+          font-weight: 900;
         }
       }
     }
@@ -98,18 +98,16 @@ header.navbar {
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-
-  // Header
-  .header {
+  //trick to mane menu clickable on the front page because of background slideshow
+  .front header > .container {
+    position: relative;
+    z-index: 9999;
   }
 }
 
 // Desktop - only
 @include media-breakpoint-only(md) {
 
-  // Header
-  .header {
-  }
 }
 
 // Large desktop - and up

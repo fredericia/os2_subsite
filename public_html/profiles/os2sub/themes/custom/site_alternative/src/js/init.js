@@ -1,11 +1,8 @@
-//// Document ready
-//(function ($) {
-//    'use strict';
-//
-//    // Enable page layout
-//    pageLayout.init();
-//
-//    // Enable header
-//    header.init();
-//
-//})(jQuery);
+// Document ready
+(function ($) {
+    // Enable page layout
+    pageLayout.init();
+
+    // Enable header
+    //header.init();
+})(jQuery);

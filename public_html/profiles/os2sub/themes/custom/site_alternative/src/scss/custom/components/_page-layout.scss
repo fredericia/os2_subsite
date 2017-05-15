@@ -39,11 +39,12 @@ h1.pane-title {
   border: 0;
 }
 
-h2 {
+h2.pane-title {
   font-family: $font-roboto-slab;
   font-weight: lighter;
   font-size: 3em;
   color: $color-primary;
+  margin-bottom: 30px;
 }
 
 h3.pane-title {
@@ -53,9 +54,48 @@ h3.pane-title {
   color: $color-font-dark-secondary;
 }
 
+.panel-pane {
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+.panel-pane {
+  &.panel-pane--title-pinned{
+    .pane-title {
+      font-family: $font-roboto-slab;
+      text-transform: none;
+      font-size: 2em;
+      font-weight: normal;
+      color: white;
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: -1.75em;
+      background-color: $color-focus-secondary;
+      padding: 10px 40px 10px 75px;
+      border-radius: 30px;
+      background-image: url('../img/icon-pin.png');
+      background-repeat: no-repeat;
+      background-position: 40px center;
+    }
+    .pane-content {
+      margin-top: -3.85em;
+    }
+  }
+
+  &.panel-pane--full-width{
+    margin-right: -9999rem;
+    margin-left: -9999rem;
+    /* add back negative margin value */
+    padding: 30px 9999rem;
+    background: $color-background-secondary;
+    border-bottom: 2px solid $color-background-tertiary;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
 
 // --------------------------------------------------
 // Responsive

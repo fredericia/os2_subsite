@@ -15,37 +15,7 @@
 // --------------------------------------------------
 
 // Teaser
-.node-teaser {
-  &.node-os2web-kulturnaut-knactivity {
-    header h2 {
-      font-size: 1.56em;
-      color: white;
-      margin-bottom: 3px;
-    }
-    .field-name-field-os2web-kulturnaut-date {
-      font-size: 0.94em;
-      color: $color-focus-secondary;
-      font-weight: bold;
-    }
-    .field-name-field-os2web-kulturnaut-sname {
-      font-size: 1em;
-      color: white;
-      text-transform: uppercase;
-      font-weight: bolder;
-    }
 
-    .upper-part {
-      padding: 15px;
-      position: absolute;
-      top: 0;
-    }
-    .bottom-part {
-      padding: 15px;
-      position: absolute;
-      bottom: 0;
-    }
-  }
-}
 
 // --------------------------------------------------
 // Variants

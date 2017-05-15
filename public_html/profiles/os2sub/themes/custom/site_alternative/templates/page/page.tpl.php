@@ -113,6 +113,15 @@
       </div>
     <?php endif; ?>
   </div>
+  <div class="container-fluid">
+    <div class="menu-background-slideshow hidden-xs hidden-sm row">
+      <?php
+      $view_popular_tags = views_get_view('os2web_kulturnaut_events_lists');
+      $view_popular_tags->set_display('block_slideshow');
+      print $view_popular_tags->preview('block_slideshow');
+      ?>
+    </div>
+  </div>
 </header>
 
 <div class="main-container <?php print $container_class; ?>">
@@ -179,7 +188,7 @@
         ?>
       </div>
       <div class="col-md-5 col-md-push-1">
-        <h2>
+        <h2 class="pane-title">
           <?php print t('Populære'); ?>
           <span class="focus">#tags</span>
         </h2>

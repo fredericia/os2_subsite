@@ -11,6 +11,32 @@
 // --------------------------------------------------
 
 // --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Banner mixin
+@mixin slideshow-pager-dots-block() {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  opacity: 0.9;
+}
+
+@mixin slideshow-pager-dot() {
+  font-size: 0px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+@mixin slideshow-pager-active-dot() {
+  background-color: white;
+}
+
+// --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
@@ -43,20 +69,11 @@
     }
   }
   .field-slideshow-pager {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
-    opacity: 0.9;
+    @include slideshow-pager-dots-block;
     a {
-      font-size: 0px;
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      border: 2px solid white;
-      border-radius: 50%;
-      margin-right: 5px;
+      @include slideshow-pager-dot;
       &.activeSlide {
-        background-color: white;
+        @include slideshow-pager-active-dot;
       }
     }
   }
