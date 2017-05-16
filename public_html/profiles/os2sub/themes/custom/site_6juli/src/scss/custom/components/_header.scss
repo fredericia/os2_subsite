@@ -14,33 +14,69 @@
 // Styling
 // --------------------------------------------------
 
-header.navbar {
-  background-color: $color-primary;
-  .container {
-    .menu.nav li {
-      padding-left: 21px;
-      padding-right: 21px;
-      > a {
-        padding-left: 0;
-        padding-right: 0;
-        text-transform: uppercase;
-        font-size: 1.75em;
-        font-family: $font-lato;
-        font-weight: lighter;
-        color: $color-font-light;
-        &.active, &:hover {
-          background: none;
-          /*border-bottom: 6px solid $color-focus;*/
-          font-weight: bolder;
-        }
-      }
-    }
-    .navbar-header {
-      .logo img {
-        max-height: 29px;
-      }
-    }
+header#navbar{
+  margin-bottom: 0px;
+  .navbar{
+  margin-bottom: 0px;	
   }
+  background-color: $color-light-background;
+  border: none;
+  box-shadow: 0px 0px 0px #777, 0px 5px 5px $color-font-grey-3;
+  .image-top-logo__link{
+	img{
+	  margin-top: 7px;
+	  margin-bottom: 7px; 
+	}
+
+  }
+  .image-top-small-logo__link{
+	img{
+	  margin-top: 7px;
+	  margin-bottom: 7px; 
+	}
+
+  }
+
+  .site-name{
+	margin-top: 20px;
+	font-size: 1.3125em;
+	font-family: $font-droid-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-left: -15px;
+	width: 150px;
+	color: $color-font-dark;
+  }
+  .site-name-small{
+	margin-top: 20px;
+	font-size: 0,885625em;
+	font-family: $font-droid-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 120px;
+	text-align: left;
+  }
+  .menu.nav li {
+	padding-left: 15px;
+	padding-right: 15px;
+	> a {
+	  padding-left: 0;
+	  padding-right: 0;
+	  font-size: 1.125em;
+	  font-family: $font-lato;
+	  font-weight: bold;
+	  color: $color-light-header;
+	  &.active, &:hover {
+		background: none;
+
+		/*border-bottom: 6px solid $color-focus;*/
+		/*font-weight: bolder;*/
+		color: $color-font-dark;
+	  }
+	}
+  }
+
+
 }
 
 // --------------------------------------------------
@@ -67,33 +103,34 @@ header.navbar {
 // Tablet - and up
 @include media-breakpoint-up(sm) {
   header.navbar {
-    .container {
-      .navbar-header {
-        .logo {
-          margin-top: 28px;
-          margin-bottom: 28px;
-          img {
-            max-height: 56px;
-          }
-        }
-      }
+	.container {
+	  .navbar-header {
+		.logo {
+		  margin-top: 28px;
+		  margin-bottom: 28px;
+		  img {
+			max-height: 56px;
+		  }
+		}
+	  }
 
-      .navbar-collapse {
-        background: url("../img/logo_secondary_small.png") no-repeat center right;
-        .navbar-nav{
-          margin-top: 56px;
-        }
-      }
-    }
+	  .navbar-collapse {
+
+		.navbar-nav{
+		  margin-top: 25px;
+		}
+	  }
+	}
   }
 }
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
-  // Header
-  .header {
+  .pull-right{
+	float: left;
   }
+  // Header
+  
 }
 
 // Desktop - and up

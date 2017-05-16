@@ -1,0 +1,177 @@
+
+// |--------------------------------------------------------------------------
+// | os2web-kulturnaut-events-lists
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-os2web-kulturnaut-events-lists
+// |
+
+// --------------------------------------------------
+// Varia  ble
+// --------------------------------------------------
+$header-size: 112px;
+//size of header in desktop orientation and up
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.view-os2web-kulturnaut-events-lists {
+}
+
+.container-fluid .background-slideshow {
+  .views-slideshow-controls-bottom {
+    > .container {
+      position: relative;
+    }
+    .widget_pager_bottom {
+      //@include slideshow-pager-dots-block;
+      z-index: 9999;
+      bottom: 20px;
+      right: 10px;
+      a {
+        //@include slideshow-pager-dot;
+      }
+      .active {
+        text-decoration: none;
+        a {
+          //@include slideshow-pager-active-dot;
+        }
+      }
+      > div {
+        padding: 0;
+      }
+    }
+  }
+
+  .views-field.views-field-field-image-event .field-content .img-container {
+    width: 100vw;
+    height: 600px;
+
+    background-position: center center;
+    //background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .bottom-part {
+    position: absolute;
+    bottom: 60px;
+  }
+
+  .views-field-title {
+    font-family: $font-droid-serif;
+    font-size: 3.25em;
+    //line-height: 1.0em;
+    color: $color-light-background;
+	font-weight: bold;
+  }
+
+  .views-field-field-os2web-kulturnaut-sname,
+  .views-field-field-os2web-kulturnaut-date,
+  .views-field-field-os2web-base-field-edi-tags {
+    color: white;
+    font-size: 1.31em;
+  }
+  .views-field-field-os2web-base-field-edi-tags {
+    font-weight: bold;
+  }
+
+  .views-field-view-node {
+    margin-top: 30px;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Print
+@media print {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+
+

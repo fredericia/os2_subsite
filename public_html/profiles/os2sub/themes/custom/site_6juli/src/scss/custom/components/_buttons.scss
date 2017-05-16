@@ -14,35 +14,120 @@
 // Styling
 // --------------------------------------------------
 .btn {
-  border-radius: 20px;
-  border-width: 2px;
-  font-family: $font-lato;
-  font-weight: bolder;
-  font-size: 1.31em;
-  text-transform: uppercase;
 
-  &.btn-primary {
-    border-color: $color-btn-primary;
+  font-family: $font-lato;
+  font-weight: bold;
+  font-size: 1.125em;
+  width: 180px;
+  background-color: $color-btn;
+  color: $color-light-background;
+  border-radius:50px;
+  margin-top:15px;
+  margin-bottom:15px;
+
+  &.btn-dark {
+  background-color: $color-btn;
+  color: $color-light-background;
+  margin-right: 10px;
+  
+  &:hover, &:active {
+  color: $color-light-background;
+      background-color: $color-btn-hover;
+    }
   }
 
-  &.btn-secondary {
-    background-color: $color-btn-secondary;
-    border-color: $color-btn-secondary;
-    &:hover, &:active {
-      color: $color-btn-secondary;
-      background-color: white;
+  &.btn-light {
+  background-color: $color-font-light;
+  color: $color-primary;
+  margin-left: 10px;
+  
+&:hover, &:active {
+  color: $color-primary;
+      background-color: $color-font-grey-4;
+    }
+  }
+
+  &.btn-white {
+  background-color: $color-light-background;
+  color: $color-font-dark;
+  margin-right: 10px;
+  
+  &:hover, &:active {
+  color: $color-font-dark;
+      background-color: $color-font-grey-4;
+    }
+  }
+  
+  &.btn-transparent {
+  background-color: transparent;
+  color: $color-light-background;
+  margin-right: 10px;
+  border-color: $color-light-background;
+  
+  &:hover, &:active {
+  color: $color-font-dark;
+      background-color: $color-font-grey-4;
+    }
+  }
+  
+  &.btn-tertiary {
+
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+    // Footer
+.btn {
+
+  font-family: $font-lato;
+  font-weight: bold;
+  font-size: 1.125em;
+  width: 180px;
+  background-color: $color-btn;
+  color: $color-light-background;
+  border-radius:50px;
+  margin-top:5px;
+  margin-bottom:5px;
+
+  &.btn-dark {
+  background-color: $color-btn;
+  color: $color-light-background;
+  margin-right: 0px;
+    margin-top:15px;
+  
+  &:hover, &:active {
+  color: $color-light-background;
+      background-color: $color-btn-hover;
+    }
+  }
+
+  &.btn-light {
+  background-color: $color-font-light;
+  color: $color-primary;
+  margin-left: 0px;
+  
+&:hover, &:active {
+  color: $color-primary;
+      background-color: $color-font-grey-4;
     }
   }
 
   &.btn-tertiary {
 
   }
+  
+}
+.button{
+	text-align: center;
+  }
 }
 
 // --------------------------------------------------
 // Variants
 // ----
-.btn {
+/*.btn {
   &.btn-primary {
     border-color: $color-btn-primary;
   }
@@ -63,4 +148,4 @@
   &.btn-full-width {
     width: 100%;
   }
-}
+}*/
