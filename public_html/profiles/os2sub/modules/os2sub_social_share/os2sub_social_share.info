@@ -1,0 +1,6 @@
+name = OS2sub - Social Share
+core = 7.x
+package = OS2Sub
+version = 7.x-1.0
+project = os2sub_social_share
+

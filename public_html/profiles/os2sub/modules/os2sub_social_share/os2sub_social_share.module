@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function os2sub_social_share_block_info() {
+  $blocks['os2sub_social_share'] = array(
+    'info' => t('OS2Sub social share links'),
+    //'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function os2sub_social_share_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'os2sub_social_share':
+      $block['subject'] = t('Social share');
+      $block['content'] = os2sub_social_share_content();
+      break;
+  }
+  return $block;
+}
+
+function os2sub_social_share_content(){
+  $items = array();
+  $items['VAR_ONE'] = array('#markup' => 'VAR_ONE_OUTPUT'); //this is the simplest kind of render array
+  $items['VAR_TWO'] = array(
+    '#prefix' => '<div>',
+    '#markup' => 'VAR_TWO_OUTPUT',
+    '#suffix' => '</div>',
+  );
+// this is where the $items get sent to your default MYMODULE_BLOCK.tpl.php that gets
+// registered below
+  return theme('os2sub_social_share_content', array('items' => $items));
+}
+
+//here you are registering your default tpl for the above block
+function os2sub_social_share_theme() {
+  $module_path = drupal_get_path('module', 'os2sub_social_share');
+  $base = array(
+    'path' => "$module_path/template",
+  );
+  $node = menu_get_object();
+
+  return array(
+    'os2sub_social_share_content' => $base + array(
+        'template' => 'os2sub_social_share',  //leave off .tpl.php
+        'variables' => array(
+          'title' => $node->title,
+          'url' => url(drupal_get_path_alias('node/' . $node->nid), array('absolute' => TRUE))
+        ),
+      ),
+  );
+}
