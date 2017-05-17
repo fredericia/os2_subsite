@@ -1,0 +1,138 @@
+<?php
+
+/**
+ * @file
+ * An color field with a custom color picker using the Field Types API.
+ */
+
+module_load_include('inc', 'color_field', 'color_field.field');
+
+/**
+ * Implements hook_library().
+ */
+function color_field_library() {
+  $path = libraries_get_path('jquery-simple-color');
+  $libraries['jquery-simple-color'] = array(
+    'title' => 'recurser jquery simple color',
+    'website' => 'https://github.com/recurser/jquery-simple-color',
+    'version' => '1.2.1',
+    'js' => array(
+      $path . '/jquery.simple-color.min.js' => array(),
+    ),
+  );
+
+  $path = libraries_get_path('bgrins-spectrum');
+  $libraries['bgrins-spectrum'] = array(
+    'title' => 'color_field_spectrum_color_picker',
+    'website' => 'http://bgrins.github.io/spectrum/',
+    'version' => '1.6.0',
+    'js' => array(
+      $path . '/spectrum.js' => array(),
+    ),
+    'css' => array(
+      $path . '/spectrum.css' => array(),
+    ),
+  );
+
+  $path = libraries_get_path('dematte-color-picker');
+  $libraries['dematte-color-picker'] = array(
+    'title' => 'color_field_dematte_color_picker',
+    'website' => 'http://www.dematte.at/colorPicker/',
+    'version' => '0.9',
+    'js' => array(
+      $path . '/colorPicker.js' => array(),
+    ),
+  );
+
+  $path = libraries_get_path('eyecon-color-picker');
+  $libraries['eyecon-color-picker'] = array(
+    'title' => 'color_field_eyecon_color_picker',
+    'website' => 'http://www.eyecon.ro/colorpicker/',
+    'version' => 'latest',
+    'js' => array(
+      $path . '/js/colorpicker.js' => array(),
+    ),
+  );
+  return $libraries;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function color_field_theme($existing, $type, $theme, $path) {
+  return array(
+    'color_swatch' => array(
+      'variables' => array('color' => '', 'width' => 50, 'height' => 50),
+      'file' => 'color_field.theme.inc',
+    ),
+    'color_field_plain_text' => array(
+      'render element' => 'element',
+      'file' => 'color_field.theme.inc',
+    ),
+    'color_field_default_widget' => array(
+      'render element' => 'element',
+      'file' => 'color_field.theme.inc',
+    ),
+    'color_field_simple_widget' => array(
+      'render element' => 'element',
+      'file' => 'color_field.theme.inc',
+    ),
+    'color_field_spectrum_widget' => array(
+      'render element' => 'element',
+      'file' => 'color_field.theme.inc',
+    ),
+  );
+}
+
+/**
+ * Helper: Convert RGB to HEX6.
+ *
+ * @param array $rgb
+ *   The colors specified as an RGB triplet.
+ *
+ * @return string $hex
+ *   The colors specified as an hexadecimal format (a hex triplet) (#134E1A).
+ */
+function color_field_rgb2hex($rgb = FALSE) {
+  $hex = '';
+  $hex .= str_pad(dechex($rgb[0]), 2, "0", STR_PAD_LEFT);
+  $hex .= str_pad(dechex($rgb[1]), 2, "0", STR_PAD_LEFT);
+  $hex .= str_pad(dechex($rgb[2]), 2, "0", STR_PAD_LEFT);
+  return $hex;
+}
+
+/**
+ * Helper: Convert HEX6 to RGB.
+ *
+ * @param string $hex
+ *   The colors specified as an hexadecimal format (a hex triplet) (134E1A).
+ *
+ * @return string $rgba
+ *   The colors specified as an RGB triplet.
+ */
+function color_field_hex2rgb($hex = FALSE) {
+  $r = hexdec(substr($hex,0,2));
+  $g = hexdec(substr($hex,2,2));
+  $b = hexdec(substr($hex,-2));
+  return compact('r', 'g', 'b');
+}
+
+/**
+ * Helper: Convert HEX6 to RGBA.
+ *
+ * @param string $hex
+ *   The colors specified as an hexadecimal format (a hex triplet) (134E1A).
+ *
+ * @param float $alpha
+ *   The opacity value ranging for 0 to 1.
+ *
+ * @return string $rgba
+ *   The colors specified as an RGB triplet plus the opacity.
+ */
+function color_field_hex2rgba($hex, $alpha = 1) {
+  $r = hexdec(substr($hex,0,2));
+  $g = hexdec(substr($hex,2,2));
+  $b = hexdec(substr($hex,-2));
+  $a = $alpha;
+  return 'rgba(' . implode(compact('r', 'g', 'b', 'a'),',') . ')';
+}
