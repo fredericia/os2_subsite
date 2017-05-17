@@ -116,9 +116,9 @@
   <div class="container-fluid">
     <div class="menu-background-slideshow hidden-xs hidden-sm row">
       <?php
-      $view_popular_tags = views_get_view('os2web_kulturnaut_events_lists');
-      $view_popular_tags->set_display('block_slideshow');
-      print $view_popular_tags->preview('block_slideshow');
+      $view_slideshow = views_get_view('os2web_kulturnaut_events_lists');
+      $view_slideshow->set_display('block_slideshow');
+      print $view_slideshow->preview('block_slideshow');
       ?>
     </div>
   </div>
@@ -147,7 +147,18 @@
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
+      <div class="row">
+        <div class="col-xs-6">
+          <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
+        </div>
+        <div class="col-xs-6">
+          <?php
+            $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_search-pane_activities_search');
+            print render($block['content']);
+          ?>
+        </div>
+      </div>
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if (!empty($title)): ?>

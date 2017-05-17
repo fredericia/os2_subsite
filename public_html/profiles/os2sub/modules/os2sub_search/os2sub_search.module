@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_form_alter()
+ *
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ */
+function os2sub_frontpage_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-os2sub-kulturnaut-search-pane-activities-search') {
+    $form['#action'] = 	base_path() . 'soeg';
+    $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Søg i kalender, steder, temaer og tags...');
+  }
+}

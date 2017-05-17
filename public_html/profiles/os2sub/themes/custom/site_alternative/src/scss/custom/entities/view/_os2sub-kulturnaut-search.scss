@@ -1,0 +1,58 @@
+// |--------------------------------------------------------------------------
+// | view-os2sub-kulturnaut-search
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-os2sub-kulturnaut-search
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.view-os2sub-kulturnaut-search {
+  .pager--infinite-scroll {
+    margin-top: 0;
+    a {
+      @include load-more-btn-full-width;
+    }
+  }
+  .search-summary {
+    color: $color-focus-tertiary;
+    font-size: 1.125em;
+  }
+  .view-content {
+    margin-top: 30px;
+  }
+}
+
+#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search {
+  .form-type-textfield input {
+    border-radius: 20px 0 0 20px;
+    background-color: $color-background-secondary;
+    border: 0;
+    box-shadow: none;
+    padding-left: 40px;
+  }
+  .input-group-btn .btn {
+    color: $color-font-light-secondary;
+    background-color: $color-background-secondary;
+    &:active, &:focus, &.progress {
+      background-color: $color-background-secondary;
+    }
+    max-height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    .glyphicon{
+      font-size: 20px;
+    }
+  }
+  .front & {
+    margin-top: 10px;
+  }
+}
+

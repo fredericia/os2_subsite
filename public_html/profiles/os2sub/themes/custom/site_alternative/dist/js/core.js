@@ -13,6 +13,11 @@ var pageLayout = (function ($) {
     $('.menu-background-slideshow .widget_pager a').click(function (e) {
         e.preventDefault();
     });
+
+    //$('#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search button').click(function(){alert('here')});
+    $('#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search input').change(function(){
+        $('#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search button').unbind();
+    });
 //
 //    var pub = {};
 //

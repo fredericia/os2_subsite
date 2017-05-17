@@ -54,6 +54,11 @@ h3.pane-title {
   color: $color-font-dark-secondary;
 }
 
+.breadcrumb {
+  background: none;
+  padding-left: 0;
+}
+
 .panel-pane {
 }
 
@@ -95,6 +100,12 @@ h3.pane-title {
     margin-top: 20px;
     margin-bottom: 30px;
   }
+}
+
+h2.pane-title--lifted {
+  top: -65px;
+  position: relative;
+  margin-bottom: -50px;
 }
 
 // --------------------------------------------------
