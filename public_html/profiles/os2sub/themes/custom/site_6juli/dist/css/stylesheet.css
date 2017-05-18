@@ -8753,6 +8753,9 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
 .content {
   background-color: #F5F4F4; }
 
+.instagram-image img {
+  height: 200px; }
+
 .facebook {
   background-color: #e0ded4; }
 
@@ -8967,6 +8970,9 @@ header#navbar {
       color: #FFF; }
 
 footer.footer {
+  padding-top: 0px;
+  margin-top: 0px;
+  border: none;
   background-color: #0f2846;
   color: #e0ded4; }
   footer.footer .social-links, footer.footer .social-footer {
@@ -8974,6 +8980,7 @@ footer.footer {
     color: #cccccc;
     font-family: "Droid Serif", serif;
     font-size: 1em;
+    padding-top: 20px;
     text-align: center; }
   footer.footer .social-footer {
     background: url("../img/page/footer-streamer.png") no-repeat bottom center;

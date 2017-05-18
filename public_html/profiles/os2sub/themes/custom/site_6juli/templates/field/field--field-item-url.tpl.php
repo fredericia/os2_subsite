@@ -43,6 +43,4 @@
  *
  * @ingroup themeable
  */
-?>
-
-<?php print($items[0]['#markup']);
+print($items[0]['#markup']);
