@@ -16,6 +16,9 @@
 
 // Footer
 footer.footer {
+padding-top: 0px;
+margin-top: 0px;
+border: none;
     background-color: $color-primary;
     color: $color-font-light;
 
@@ -24,7 +27,7 @@ footer.footer {
         color: $color-font-grey-3;
         font-family: $font-droid-serif;
         font-size: 1em;
-
+        padding-top: 20px;
         text-align: center;
     } 
 
