@@ -1,8 +1,9 @@
 <?php
-$title = $variables['title'];
-$url = $variables['url'];
+$title = $variables['current_node']['title'];
+$url = $variables['current_node']['url'];
 
 ?>
+
 <div class="block__share-links">
   <div class="block__share-links__link first">
     <a class="facebook"

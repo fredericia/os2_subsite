@@ -26,16 +26,15 @@ function os2sub_social_share_block_view($delta = '') {
 }
 
 function os2sub_social_share_content() {
-  $items = array();
-  $items['VAR_ONE'] = array('#markup' => 'VAR_ONE_OUTPUT'); //this is the simplest kind of render array
-  $items['VAR_TWO'] = array(
-    '#prefix' => '<div>',
-    '#markup' => 'VAR_TWO_OUTPUT',
-    '#suffix' => '</div>',
-  );
+  $node = menu_get_object();
+  if ($node) {
+    $title = $node->title;
+    $url = url(drupal_get_path_alias('node/' . $node->nid), array('absolute' => TRUE));
+    $current_node = array('url' => $url, 'title' => $title);
+  }
 // this is where the $items get sent to your default MYMODULE_BLOCK.tpl.php that gets
 // registered below
-  return theme('os2sub_social_share_content', array('items' => $items));
+  return theme('os2sub_social_share_content', array('current_node' => $current_node));
 }
 
 //here you are registering your default tpl for the above block
@@ -44,14 +43,12 @@ function os2sub_social_share_theme() {
   $base = array(
     'path' => "$module_path/template",
   );
-  $node = menu_get_object();
 
   return array(
     'os2sub_social_share_content' => $base + array(
         'template' => 'os2sub_social_share', //leave off .tpl.php
         'variables' => array(
-          'title' => ($node) ? $node->title : NULL,
-          'url' => ($node) ? url(drupal_get_path_alias('node/' . $node->nid), array('absolute' => TRUE)) : NULL
+          'current_node' => NULL,
         ),
       ),
   );
