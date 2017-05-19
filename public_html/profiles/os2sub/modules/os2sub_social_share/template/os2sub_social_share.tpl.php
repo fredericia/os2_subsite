@@ -5,9 +5,9 @@ $url = $variables['url'];
 ?>
 <div class="block__share-links">
   <div class="block__share-links__link first">
-<!--    <a class="facebook"-->
-<!--       href="http://www.facebook.com/sharer/sharer.php?u=--><?php //print $url; ?><!--&amp;title=--><?php //print $title; ?><!--"-->
-<!--       title="Del på Facebook" target="_blank">Facebook</a>-->
+    <a class="facebook"
+       href="http://www.facebook.com/sharer/sharer.php?u=<?php print $url; ?>&amp;title=<?php print $title; ?>"
+       title="Del på Facebook" target="_blank">Facebook</a>
   </div>
   <div class="block__share-links__link twitter">
     <a class="twitter" href="http://twitter.com/intent/tweet?status=<?php print $title; ?>+<?php print $url; ?>"
