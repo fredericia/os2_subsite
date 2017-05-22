@@ -8707,6 +8707,13 @@ body {
   color: #666666;
   font-size: 1.0625em; }
 
+.call-to-action {
+  text-align: center;
+  background-color: #a3283e;
+  color: #ffffff; }
+  .call-to-action .pane-title {
+    color: #ffffff; }
+
 h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
 h1.pane-title,
 .pane-title.heading-h1,
