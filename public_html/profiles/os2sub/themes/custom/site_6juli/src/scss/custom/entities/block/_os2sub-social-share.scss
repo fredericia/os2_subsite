@@ -1,0 +1,88 @@
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.pane-os2sub-social-share-os2sub-social-share {
+  .block__share-links {
+    .block__share-links__link {
+      a {
+        //color: $color-font-light;
+        height: 28px;
+        min-width: 28px;
+        background-repeat: no-repeat;
+        &.facebook {
+          background-image: url('../img/social/icon-facebook.png');
+        }
+        &.twitter {
+          background-image: url('../img/social/icon-twitter.png');
+        }
+        &.linkedin {
+          background-image: url('../img/social/icon-linkedin.png');
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+  .pane-os2sub-social-share-os2sub-social-share {
+    .pane-title {
+      display: none;
+    }
+    .pane-content {
+      text-align: right;
+      .block__share-links {
+        .block__share-links__link {
+          display: inline-block;
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            display: inline-block;
+            padding: 0;
+            font-size: 0px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+  .pane-os2sub-social-share-os2sub-social-share {
+    .pane-title {
+      display: block;
+    }
+    .pane-content {
+      text-align: left;
+      .block__share-links {
+        .block__share-links__link {
+          display: block;
+          margin-right: 0;
+          margin-bottom: 10px;
+          &:last-child {
+            margin-bottom: 0px;
+          }
+          a {
+            display: block;
+            padding-left: 45px;
+            padding-top: 5px;
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+}

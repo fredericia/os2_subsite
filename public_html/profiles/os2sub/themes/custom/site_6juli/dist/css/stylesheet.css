@@ -8707,6 +8707,13 @@ body {
   color: #666666;
   font-size: 1.0625em; }
 
+.call-to-action {
+  text-align: center;
+  background-color: #a3283e;
+  color: #ffffff; }
+  .call-to-action .pane-title {
+    color: #ffffff; }
+
 h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
 h1.pane-title,
 .pane-title.heading-h1,
@@ -8756,7 +8763,7 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
 .instagram-image img {
   height: 200px; }
 
-.facebook {
+.facebook-forside {
   background-color: #e0ded4; }
 
 .content-inner {
@@ -9229,6 +9236,49 @@ footer.footer a.image-links__link {
         margin-right: 12px; }
       .pane-addtoany-addtoany-button.pane-block .pane-content .addtoany_list a:last-child span {
         margin-right: 0; } }
+
+.pane-os2sub-social-share-os2sub-social-share .block__share-links .block__share-links__link a {
+  height: 28px;
+  min-width: 28px;
+  background-repeat: no-repeat; }
+  .pane-os2sub-social-share-os2sub-social-share .block__share-links .block__share-links__link a.facebook {
+    background-image: url("../img/social/icon-facebook.png"); }
+  .pane-os2sub-social-share-os2sub-social-share .block__share-links .block__share-links__link a.twitter {
+    background-image: url("../img/social/icon-twitter.png"); }
+  .pane-os2sub-social-share-os2sub-social-share .block__share-links .block__share-links__link a.linkedin {
+    background-image: url("../img/social/icon-linkedin.png"); }
+
+.pane-os2sub-social-share-os2sub-social-share .pane-title {
+  display: none; }
+
+.pane-os2sub-social-share-os2sub-social-share .pane-content {
+  text-align: right; }
+  .pane-os2sub-social-share-os2sub-social-share .pane-content .block__share-links .block__share-links__link {
+    display: inline-block;
+    margin-right: 15px; }
+    .pane-os2sub-social-share-os2sub-social-share .pane-content .block__share-links .block__share-links__link:last-child {
+      margin-right: 0; }
+    .pane-os2sub-social-share-os2sub-social-share .pane-content .block__share-links .block__share-links__link a {
+      display: inline-block;
+      padding: 0;
+      font-size: 0px; }
+
+@media (min-width: 992px) {
+  .pane-os2sub-social-share-os2sub-social-share .pane-title {
+    display: block; }
+  .pane-os2sub-social-share-os2sub-social-share .pane-content {
+    text-align: left; }
+    .pane-os2sub-social-share-os2sub-social-share .pane-content .block__share-links .block__share-links__link {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 10px; }
+      .pane-os2sub-social-share-os2sub-social-share .pane-content .block__share-links .block__share-links__link:last-child {
+        margin-bottom: 0px; }
+      .pane-os2sub-social-share-os2sub-social-share .pane-content .block__share-links .block__share-links__link a {
+        display: block;
+        padding-left: 45px;
+        padding-top: 5px;
+        font-size: inherit; } }
 
 .field-type-image .field-slideshow {
   z-index: -1; }

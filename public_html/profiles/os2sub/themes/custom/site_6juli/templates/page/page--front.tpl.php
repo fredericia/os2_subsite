@@ -127,6 +127,17 @@
 
 	  </div>
 	  </header>
+<!--Slideshow begin-->
+<div class="container-fluid">
+    <div class="background-slideshow row">
+      <?php
+      $view_popular_tags = views_get_view('os2web_events_slideshow');
+      $view_popular_tags->set_display('block_slideshow');
+      print $view_popular_tags->preview('block_slideshow');
+      ?>
+    </div>
+  </div>
+<!--Slideshow end-->
 	  <div class="main-container <?php print $container_class; ?>">
 
 		<header role="banner" id="page-header">

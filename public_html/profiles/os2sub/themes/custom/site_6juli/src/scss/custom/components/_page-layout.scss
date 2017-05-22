@@ -31,6 +31,16 @@ body {
   font-size: 1.0625em;
 }
 
+.call-to-action{
+    text-align: center;
+    background-color: $color-btn;
+    color: $color-light-background;
+    .pane-title{
+      color: $color-light-background;  
+    }
+    
+}
+
 h1.page-header,
 h1.pane-title {
   font-family: $font-droid-serif;
@@ -85,7 +95,7 @@ h3.pane-title {
 
 }
 
-.facebook{
+.facebook-forside{
   background-color: $color-font-light;
 }
 // --------------------------------------------------

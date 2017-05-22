@@ -40,7 +40,7 @@
   <?php endif; ?>
 
 
-<div class="row facebook">
+<div class="row facebook-forside">
 	<div class="col-md-6">
 	  <h2>Hold dig opdateretpå Facebook</h2>
 	  Placerat id purus et, interdum lobortis justo. Nunc eget lacus diam. Sed eu quam suscipit, pharetra urna at, rhoncus magna.
