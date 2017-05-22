@@ -333,3 +333,17 @@ function os2web_base_node_info() {
   drupal_alter('node_info', $items);
   return $items;
 }
+
+/**
+ * Implements hook_paragraphs_info().
+ */
+function os2web_base_paragraphs_info() {
+  $items = array(
+    'afsnit_m_billede' => array(
+      'name' => 'Afsnit m billede',
+      'bundle' => 'afsnit_m_billede',
+      'locked' => '1',
+    ),
+  );
+  return $items;
+}
