@@ -104,13 +104,14 @@
         </header>
       <?php endif; ?>
 
-      <?php print render($content['field_os2web_kulturnaut_date']);?> | <?php print render($content['field_os2web_kulturnaut_sname']);?>
+      <?php print render($content['field_os2web_kulturnaut_date']);?> | <?php print render($content['field_os2web_kulturnaut_venue']);?>
 
       <?php
       // Hide comments, tags, and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
       hide($content['field_tags']);
+      hide($content['field_os2web_kulturnaut_venue']);
       hide($content['field_os2web_kulturnaut_slidesho']);
       hide($content['field_os2web_kulturnaut_date']);
 

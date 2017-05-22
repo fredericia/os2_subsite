@@ -12,4 +12,9 @@ function os2sub_frontpage_form_alter(&$form, &$form_state, $form_id) {
     $form['#action'] = 	base_path() . 'soeg';
     $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Søg i kalender, steder, temaer og tags...');
   }
+
+  if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search') {
+    $form['#action'] = 	base_path() . 'soeg';
+    $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Søg i kalender, steder, temaer og tags...');
+  }
 }

@@ -82,6 +82,8 @@
 <a href="<?php print $node_url; ?>">
   <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="upper-part">
+      <?php print render($content['field_os2web_kulturnaut_venue']); ?>
+      <?php //print render($content['field_os2web_kulturnaut_sname']); ?>
       <?php print render($content['field_os2web_kulturnaut_sname']); ?>
     </div>
     <?php
@@ -90,7 +92,8 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_os2web_kulturnaut_date']);
-    hide($content['field_os2web_kulturnaut_sname']);
+    //hide($content['field_os2web_kulturnaut_sname']);
+    hide($content['field_os2web_kulturnaut_venue']);
 
     print render($content);
     ?>

@@ -153,7 +153,7 @@
         </div>
         <div class="col-xs-6">
           <?php
-            $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_search-pane_activities_search');
+            $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
             print render($block['content']);
           ?>
         </div>
@@ -191,11 +191,13 @@
   <div class="<?php print $container_class; ?>">
     <div class="row">
       <div class="col-md-6">
+        <h2 class="pane-title">
+          <?php print t('Temaer lige nu'); ?>
+        </h2>
         <?php
-        //$view = views_get_view('os2web_kulturnaut_events_lists');
-        //$view->set_display('block_kulturnaut_events');
-        //print $view->get_title();
-        //print $view->preview('block_kulturnaut_events');
+        $view_popular_tags = views_get_view('os2web_kulturnaut_tema_list');
+        $view_popular_tags->set_display('block');
+        print $view_popular_tags->preview('block');
         ?>
       </div>
       <div class="col-md-5 col-md-push-1">

@@ -17,7 +17,9 @@ $header-size: 112px;
 
 .view-os2web-kulturnaut-events-lists {
   &.view-display-id-pane_related_articles,
-  &.view-display-id-pane_activities_for_tag {
+  &.view-display-id-pane_activities_for_tag,
+  &.view-display-id-pane_activities_for_venue,
+  &.view-display-id-pane_activities_for_tema {
     .pager--infinite-scroll {
       margin-top: 0;
       a {

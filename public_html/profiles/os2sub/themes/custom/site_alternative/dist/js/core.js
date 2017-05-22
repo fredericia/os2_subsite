@@ -14,9 +14,8 @@ var pageLayout = (function ($) {
         e.preventDefault();
     });
 
-    //$('#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search button').click(function(){alert('here')});
-    $('#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search input').change(function(){
-        $('#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search button').unbind();
+    $('#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search input').change(function(){
+        $('#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search button').unbind();
     });
 //
 //    var pub = {};

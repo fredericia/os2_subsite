@@ -16,25 +16,23 @@
 
 // Node
 .view-mode-search_result {
-  &.node-os2web-kulturnaut-knactivity {
-    h2 {
-      font-family: $font-roboto-slab;
-      font-size: 2em;
-      text-decoration: underline;
-      margin-top: 10px;
-    }
-    .field-name-field-os2web-content-type {
-      text-transform: uppercase;
-      color: $color-font-light-secondary;
-      font-weight: bold;
-    }
-    .field-name-field-os2web-kulturnaut-date, .field-name-field-os2web-kulturnaut-sname {
-      color: $color-font-light-secondary;
-      font-size: 1.06em;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-    margin-bottom: 30px;
+  h2 {
+    font-family: $font-roboto-slab;
+    font-size: 2em;
+    text-decoration: underline;
+    margin-top: 10px;
   }
+  .field-name-field-os2web-content-type {
+    text-transform: uppercase;
+    color: $color-font-light-secondary;
+    font-weight: bold;
+  }
+  .field-name-field-os2web-kulturnaut-date, .field-name-field-os2web-kulturnaut-sname, .field-name-field-os2web-kulturnaut-venue {
+    color: $color-font-light-secondary;
+    font-size: 1.06em;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  margin-bottom: 30px;
 }

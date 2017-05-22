@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | view-os2sub-kulturnaut-search
+// | view-os2sub-kulturnaut-multi-search
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .view-os2sub-kulturnaut-search
+// | - .view-os2sub-kulturnaut-multi-search
 // |
 
 // --------------------------------------------------
@@ -14,7 +14,7 @@
 // Styling
 // --------------------------------------------------
 
-.view-os2sub-kulturnaut-search {
+.view-os2sub-kulturnaut-multi-search {
   .pager--infinite-scroll {
     margin-top: 0;
     a {
@@ -30,7 +30,7 @@
   }
 }
 
-#views-exposed-form-os2sub-kulturnaut-search-pane-activities-search {
+#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search {
   .form-type-textfield input {
     border-radius: 20px 0 0 20px;
     background-color: $color-background-secondary;

@@ -1,0 +1,32 @@
+// |--------------------------------------------------------------------------
+// | os2web-kulturnaut-tema-list
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-os2web-kulturnaut-tema-list
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.view-os2web-kulturnaut-tema-list {
+  .views-row {
+    margin-bottom: 25px;
+    .views-field-name {
+      font: $font-roboto-slab;
+      font-size: 1.625em;
+      a {
+        color: $color-focus;
+      }
+    }
+    .views-field-description {
+      font-size: 1.125em;
+    }
+  }
+}
