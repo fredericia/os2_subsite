@@ -32,21 +32,6 @@ function os2sub_frontpage_views_api($module = NULL, $api = NULL) {
 function os2sub_frontpage_image_default_styles() {
   $styles = array();
 
-  // Exported image style: os2sub_teaser_mini_image.
-  $styles['os2sub_teaser_mini_image'] = array(
-    'label' => 'OS2Sub teaser mini image',
-    'effects' => array(
-      33 => array(
-        'name' => 'image_scale_and_crop',
-        'data' => array(
-          'width' => 272,
-          'height' => 97,
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
   // Exported image style: os2web_cover.
   $styles['os2web_cover'] = array(
     'label' => 'os2web cover',

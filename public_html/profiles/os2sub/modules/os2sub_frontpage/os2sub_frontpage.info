@@ -24,7 +24,6 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[field_instance][] = node-velkomst-body
 features[field_instance][] = node-velkomst-field_baggrund
-features[image][] = os2sub_teaser_mini_image
 features[image][] = os2web_cover
 features[node][] = velkomst
 features[page_manager_pages][] = forside
