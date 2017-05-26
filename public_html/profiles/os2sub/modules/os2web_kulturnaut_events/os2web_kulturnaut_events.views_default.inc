@@ -22,7 +22,7 @@ function os2web_kulturnaut_events_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Relaterede begivenheder';
+  $handler->display->display_options['title'] = 'Arrangementer fra KulturauT';
   $handler->display->display_options['use_ajax'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
@@ -36,19 +36,13 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
-  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['inline'] = array(
-    'field_os2web_kulturnaut_slidesho' => 'field_os2web_kulturnaut_slidesho',
-  );
-  /* Relationship: Content: Related activities (field_os2web_kulturnaut_rel_acti) */
-  $handler->display->display_options['relationships']['field_os2web_kulturnaut_rel_acti_nid']['id'] = 'field_os2web_kulturnaut_rel_acti_nid';
-  $handler->display->display_options['relationships']['field_os2web_kulturnaut_rel_acti_nid']['table'] = 'field_data_field_os2web_kulturnaut_rel_acti';
-  $handler->display->display_options['relationships']['field_os2web_kulturnaut_rel_acti_nid']['field'] = 'field_os2web_kulturnaut_rel_acti_nid';
-  $handler->display->display_options['relationships']['field_os2web_kulturnaut_rel_acti_nid']['required'] = TRUE;
-  $handler->display->display_options['relationships']['field_os2web_kulturnaut_rel_acti_nid']['delta'] = '-1';
+  $handler->display->display_options['style_options']['row_class'] = 'col-md-3';
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
   /* Field: Content: Slideshow */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_slidesho']['id'] = 'field_os2web_kulturnaut_slidesho';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_slidesho']['table'] = 'field_data_field_os2web_kulturnaut_slidesho';
@@ -93,29 +87,6 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'not found';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['nid']['specify_validation'] = TRUE;
-  $handler->display->display_options['arguments']['nid']['validate']['type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['validate_options']['types'] = array(
-    'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
-  );
-  /* Contextual filter: Content: Related activities (field_os2web_kulturnaut_rel_acti) */
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['id'] = 'field_os2web_kulturnaut_rel_acti_nid';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['table'] = 'field_data_field_os2web_kulturnaut_rel_acti';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['field'] = 'field_os2web_kulturnaut_rel_acti_nid';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['relationship'] = 'field_os2web_kulturnaut_rel_acti_nid';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_rel_acti_nid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -437,7 +408,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'infinite_scroll';
   $handler->display->display_options['pager']['options']['manual_load'] = 1;
   $handler->display->display_options['pager']['options']['text'] = 'Indlæs flere';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -937,20 +908,21 @@ function os2web_kulturnaut_events_views_default_views() {
       'label' => 'Content: Tema (field_os2web_kulturnaut_tema)',
     ),
   );
+
+  /* Display: Content pane - activities list (4 mini) */
+  $handler = $view->new_display('panel_pane', 'Content pane - activities list (4 mini)', 'pane_activities_list_4_mini');
   $translatables['os2web_kulturnaut_events_lists'] = array(
     t('Master'),
-    t('Relaterede begivenheder'),
+    t('Arrangementer fra KulturauT'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
-    t('field_os2web_kulturnaut_rel_acti'),
     t('<a href=[field_os2web_kulturnaut_homepage] title=[title]>[title]</a>'),
     t('[title]'),
     t('Nid'),
-    t('All'),
     t('Page'),
     t('more'),
     t('Block - contentpage'),
@@ -971,6 +943,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Content pane - Activities for tag'),
     t('Relaterede begivenheder for tag'),
     t('term from field_os2web_base_field_edi_tags'),
+    t('All'),
     t('Page - kulturnaut activities administration'),
     t('Items per page'),
     t('- All -'),
@@ -990,6 +963,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Content pane - Activities for tema'),
     t('Relaterede begivenheder for tema'),
     t('term from field_os2web_kulturnaut_tema'),
+    t('Content pane - activities list (4 mini)'),
   );
   $export['os2web_kulturnaut_events_lists'] = $view;
 
