@@ -13,9 +13,9 @@
 $pagination-element-spacing: 8px;
 $pagination-element-border-width: 3px;
 $pagination-element-border-color: transparent;
-$pagination-element-border-radius: 50%;
-$pagination-element-height: 46px;
-$pagination-element-width: 46px;
+$pagination-element-border-radius: 100px;
+$pagination-element-height: 25px;
+$pagination-element-width: 25px;
 
 $pagination-element-active-border-width: $pagination-element-border-width;
 
@@ -39,20 +39,21 @@ $pagination-element-active-border-width: $pagination-element-border-width;
       height: $pagination-element-height;
       text-align: center;
       line-height: ($pagination-element-height - (2 * $pagination-element-border-width));
+        opacity: 0.5;
     }
 
     &:first-child {
       > a,
       > span {
         margin-left: 0;
-        //@include border-left-radius($pagination-element-border-radius);
+         border-radius: $pagination-element-border-radius;
       }
     }
 
     &:last-child {
       > a,
       > span {
-        //@include border-right-radius($pagination-element-border-radius);
+   border-radius: $pagination-element-border-radius;
       }
     }
   }
@@ -64,6 +65,7 @@ $pagination-element-active-border-width: $pagination-element-border-width;
     &:hover,
     &:focus {
       border-width: $pagination-element-active-border-width;
+        opacity: 1;
     }
   }
 }
