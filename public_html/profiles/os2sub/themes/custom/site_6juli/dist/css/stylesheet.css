@@ -9092,10 +9092,17 @@ header#navbar {
   border-width: 3px;
   border-color: transparent;
   border-radius: 100px;
+<<<<<<< 6346acbe7f49f1f53925bf469e37e5a9d6d963e0
   width: 20px;
   height: 20px;
   text-align: center;
   line-height: 14px;
+=======
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 19px;
+>>>>>>> Improved slideshow
   opacity: 0.5; }
 
 .pagination > li:first-child > a,
@@ -9281,6 +9288,7 @@ ul.pagination {
   height: 80px; }
 
 .prev a {
+<<<<<<< 6346acbe7f49f1f53925bf469e37e5a9d6d963e0
   width: 50px !important;
   height: 50px !important;
   opacity: 1 !important; }
@@ -9294,6 +9302,16 @@ ul.pagination {
           background-size: 20px !important;
   background-repeat: no-repeat !important;
   background-position: center !important; }
+=======
+  width: 70px !important;
+  height: 70px !important;
+  opacity: 1 !important; }
+
+.next a {
+  width: 70px !important;
+  height: 70px !important;
+  opacity: 1 !important; }
+>>>>>>> Improved slideshow
 
 footer.footer {
   padding-top: 0px;
@@ -9381,7 +9399,11 @@ footer.footer a.image-links__link {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   margin-right: 15px;
+<<<<<<< 6346acbe7f49f1f53925bf469e37e5a9d6d963e0
   font-size: 1.625em;
+=======
+  font-size: 1.525em;
+>>>>>>> Improved slideshow
   width: 180px;
   display: -webkit-box;
   display: -webkit-flex;
