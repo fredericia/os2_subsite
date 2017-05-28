@@ -911,6 +911,52 @@ function os2web_kulturnaut_events_views_default_views() {
 
   /* Display: Content pane - activities list (4 mini) */
   $handler = $view->new_display('panel_pane', 'Content pane - activities list (4 mini)', 'pane_activities_list_4_mini');
+
+  /* Display: Content pane - kultunaut events */
+  $handler = $view->new_display('panel_pane', 'Content pane - kultunaut events', 'pane_kultunaut_events');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Content pane - kultunaut events';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
+  $handler->display->display_options['pager']['options']['manual_load'] = 1;
+  $handler->display->display_options['pager']['options']['text'] = 'Indlæs flere';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_list';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Result summary */
+  $handler->display->display_options['header']['result']['id'] = 'result';
+  $handler->display->display_options['header']['result']['table'] = 'views';
+  $handler->display->display_options['header']['result']['field'] = 'result';
+  $handler->display->display_options['header']['result']['content'] = '@total resultater';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'field_os2web_kulturnaut_venue_tid' => array(
+      'type' => 'context',
+      'context' => 'entity:taxonomy_term.tid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Venue (field_os2web_kulturnaut_venue)',
+    ),
+  );
   $translatables['os2web_kulturnaut_events_lists'] = array(
     t('Master'),
     t('Arrangementer fra KulturauT'),
@@ -964,6 +1010,8 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Relaterede begivenheder for tema'),
     t('term from field_os2web_kulturnaut_tema'),
     t('Content pane - activities list (4 mini)'),
+    t('Content pane - kultunaut events'),
+    t('@total resultater'),
   );
   $export['os2web_kulturnaut_events_lists'] = $view;
 

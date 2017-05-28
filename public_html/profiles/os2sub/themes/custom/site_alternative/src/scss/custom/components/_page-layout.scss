@@ -204,7 +204,17 @@ h2.pane-title--lifted {
   // Page layout
   .content-inner {}
 }
-
+.kultunaut {
+  h1.page-header {
+    margin-left: 100px;
+    span {
+      display: block;
+      background: url('../img/logo_kultunaut.png') no-repeat;
+      width: 190px;
+      height: 19px;
+    }
+  }
+}
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------

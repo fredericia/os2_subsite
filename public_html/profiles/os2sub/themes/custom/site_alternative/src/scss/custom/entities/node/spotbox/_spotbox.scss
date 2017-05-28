@@ -94,6 +94,35 @@
   }
 }
 
+.view-mode-os2sub_spotbox_list.node {
+  &.node-os2web-kulturnaut-knactivity {
+    margin-bottom: 30px;
+    margin-left: 100px;
+  }
+  header h2 {
+    font-size: 2em;
+    font-family: RobotoSlab;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .field-name-field-os2web-kulturnaut-date {
+    font-size: 1.063em;
+    font-family: Lato;
+    font-weight: bold;
+    color: $color-font-light-secondary;
+    padding-bottom: 15px;
+   }
+   .link{
+     &.show-more {
+       a {
+        color: $color-focus;
+        font-weight: bold;
+       }
+     }
+   }
+  
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
