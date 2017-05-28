@@ -56,6 +56,9 @@ function os2web_kulturnaut_events_strongarm() {
       'os2sub_teaser_mini' => array(
         'custom_settings' => TRUE,
       ),
+      'os2sub_spotbox_list' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

@@ -65,10 +65,12 @@ function os2web_kulturnaut_events_field_default_field_bases() {
     'locked' => 0,
     'module' => 'date',
     'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 0,
       'granularity' => array(
         'day' => 'day',
-        'hour' => 0,
-        'minute' => 0,
+        'hour' => 'hour',
+        'minute' => 'minute',
         'month' => 'month',
         'second' => 0,
         'year' => 'year',

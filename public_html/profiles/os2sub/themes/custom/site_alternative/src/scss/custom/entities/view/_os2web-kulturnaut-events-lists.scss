@@ -19,7 +19,8 @@ $header-size: 112px;
   &.view-display-id-pane_related_articles,
   &.view-display-id-pane_activities_for_tag,
   &.view-display-id-pane_activities_for_venue,
-  &.view-display-id-pane_activities_for_tema {
+  &.view-display-id-pane_activities_for_tema, 
+  &.view-display-id-pane_kultunaut_events {
     .pager--infinite-scroll {
       margin-top: 0;
       a {
@@ -61,6 +62,12 @@ $header-size: 112px;
           }
         }
       }
+    }
+  }
+  &.view-display-id-pane_kultunaut_events {
+    margin-bottom: 80px;
+    .view-header {
+      margin-left: 100px;
     }
   }
   &.view-display-id-attachment_activities_list_3_2 {

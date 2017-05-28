@@ -23,9 +23,10 @@
  */
 ?>
 <?php
-
+$uri = "";
 preg_match('/src="(.*?)"/', $output, $matches);
-$uri = $matches[1];
+if (isset($matches[1]))
+  $uri = $matches[1];
 
 //print $output;
 ?>
