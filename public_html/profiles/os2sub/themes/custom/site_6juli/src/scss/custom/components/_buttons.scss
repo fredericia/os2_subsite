@@ -20,16 +20,16 @@
     margin-right: 15px;
   font-size: 1.625em;
   width: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid;
   background-color: $color-btn;
   color: $color-light-background;
   border-radius:100px;
   margin-top:15px;
   margin-bottom:15px;
-height: 40px;
+  height: 40px;
     
   &.btn-dark {
   background-color: $color-btn;
