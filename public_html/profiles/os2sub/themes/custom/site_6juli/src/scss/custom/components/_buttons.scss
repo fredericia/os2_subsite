@@ -17,14 +17,20 @@
 
   font-family: $font-lato;
   font-weight: bold;
-  font-size: 1.125em;
+    margin-right: 15px;
+  font-size: 1.525em;
   width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  border: 2px solid;
   background-color: $color-btn;
   color: $color-light-background;
-  border-radius:50px;
+  border-radius:100px;
   margin-top:15px;
   margin-bottom:15px;
-
+height: 40px;
+    
   &.btn-dark {
   background-color: $color-btn;
   color: $color-light-background;
@@ -51,6 +57,7 @@
   background-color: $color-light-background;
   color: $color-font-dark;
   margin-right: 10px;
+      border-color: #fff;
   
   &:hover, &:active {
   color: $color-font-dark;
