@@ -82,6 +82,7 @@ features[page_manager_pages][] = page_kultunaut_events
 features[taxonomy][] = os2web_kulturnaut_tema
 features[taxonomy][] = os2web_kulturnaut_venue
 features[variable][] = additional_settings__active_tab_os2web_kulturnaut_knactivity
+features[variable][] = date_format_os2sub_kultunaut_long_date
 features[variable][] = field_bundle_settings_node__os2web_kulturnaut_knactivity
 features[variable][] = language_content_type_os2web_kulturnaut_knactivity
 features[variable][] = menu_options_os2web_kulturnaut_knactivity
