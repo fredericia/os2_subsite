@@ -1302,6 +1302,78 @@ function os2web_kulturnaut_events_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_source'.
+  $field_instances['node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_source'] = array(
+    'bundle' => 'os2web_kulturnaut_knactivity',
+    'default_value' => array(
+      0 => array(
+        'value' => 'manual',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'manual or feed',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 22,
+      ),
+      'os2sub_spotbox_mini' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'os2sub_spotbox_single' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'os2sub_teaser_mini' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'spotbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_kulturnaut_source',
+    'label' => 'Data source',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 49,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_szip'.
   $field_instances['node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_szip'] = array(
     'bundle' => 'os2web_kulturnaut_knactivity',
@@ -1949,6 +2021,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Beskrivelse');
   t('Billeturl');
+  t('Data source');
   t('Dato');
   t('Genre');
   t('Hjemmeside');
@@ -1968,6 +2041,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
   t('Tema');
   t('Tid');
   t('Venue');
+  t('manual or feed');
 
   return $field_instances;
 }
