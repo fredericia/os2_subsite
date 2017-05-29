@@ -42,6 +42,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
           'xpathparser:17' => 'sted',
           'xpathparser:18' => 'kategori',
           'xpathparser:19' => '\'feed\'',
+          'xpathparser:20' => '\'feed\'',
         ),
         'rawXML' => array(
           'xpathparser:2' => 0,
@@ -54,6 +55,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
           'xpathparser:17' => 0,
           'xpathparser:18' => 0,
           'xpathparser:19' => 0,
+          'xpathparser:20' => 0,
         ),
         'context' => '/main/arrlist/arr',
         'exp' => array(
@@ -72,6 +74,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
             'xpathparser:17' => 'xpathparser:17',
             'xpathparser:18' => 'xpathparser:18',
             'xpathparser:19' => 'xpathparser:19',
+            'xpathparser:20' => 'xpathparser:20',
           ),
         ),
         'allow_override' => 0,
@@ -131,8 +134,8 @@ function os2web_kulturnaut_events_feeds_importer_default() {
             'autocreate' => 1,
           ),
           9 => array(
-            'source' => 'xpathparser:19',
-            'target' => 'field_os2web_kulturnaut_source',
+            'source' => 'xpathparser:20',
+            'target' => 'field_source',
             'unique' => FALSE,
           ),
         ),
