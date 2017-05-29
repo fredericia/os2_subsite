@@ -41,7 +41,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
           'xpathparser:16' => 'overskrift',
           'xpathparser:17' => 'sted',
           'xpathparser:18' => 'kategori',
-          'xpathparser:19' => '\'Feed\'',
+          'xpathparser:19' => '\'feed\'',
         ),
         'rawXML' => array(
           'xpathparser:2' => 0,
