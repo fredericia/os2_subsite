@@ -355,31 +355,6 @@ function os2web_kulturnaut_events_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_os2web_kulturnaut_source'.
-  $field_bases['field_os2web_kulturnaut_source'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_os2web_kulturnaut_source',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        'manual ' => ' Manual',
-        'feed ' => ' Feed',
-      ),
-      'allowed_values_function' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'list_text',
-  );
-
   // Exported field_base: 'field_os2web_kulturnaut_szip'.
   $field_bases['field_os2web_kulturnaut_szip'] = array(
     'active' => 1,
@@ -518,6 +493,31 @@ function os2web_kulturnaut_events_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_source'.
+  $field_bases['field_source'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_source',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'manual ' => ' Manual',
+        'feed ' => ' Feed',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   return $field_bases;
