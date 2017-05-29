@@ -20,13 +20,6 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'date_format_os2sub_kultunaut_long_date';
-  $strongarm->value = 'l \\d. d. M \\k\\l. H.i';
-  $export['date_format_os2sub_kultunaut_long_date'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__os2web_kulturnaut_knactivity';
   $strongarm->value = array(
     'view_modes' => array(
@@ -61,9 +54,6 @@ function os2web_kulturnaut_events_strongarm() {
         'custom_settings' => TRUE,
       ),
       'os2sub_teaser_mini' => array(
-        'custom_settings' => TRUE,
-      ),
-      'os2sub_spotbox_list' => array(
         'custom_settings' => TRUE,
       ),
     ),
