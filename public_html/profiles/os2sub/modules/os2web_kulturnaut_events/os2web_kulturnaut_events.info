@@ -14,6 +14,7 @@ dependencies[] = image
 dependencies[] = list
 dependencies[] = media
 dependencies[] = node_reference
+dependencies[] = nodequeue
 dependencies[] = options
 dependencies[] = os2web_base
 dependencies[] = page_manager
