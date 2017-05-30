@@ -16,6 +16,11 @@ $header-size: 112px;
 // --------------------------------------------------
 
 .view-os2web-kulturnaut-events-lists {
+  &.view-display-id-pane_activities_list_4_mini {
+    .date-display-single{
+      font-size: 0.8em;
+    }
+  }
   &.view-display-id-pane_related_articles,
   &.view-display-id-pane_activities_for_tag,
   &.view-display-id-pane_activities_for_venue,

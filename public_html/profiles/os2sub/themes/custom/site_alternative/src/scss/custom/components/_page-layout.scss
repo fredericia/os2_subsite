@@ -90,6 +90,40 @@ h3.pane-title {
     }
   }
 
+  &.panel-pane--title{
+    .pane-title {
+      font-family: $font-roboto-slab;
+      text-transform: none;
+      font-size: 2em;
+      font-weight: normal;
+      color: white;
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: -1.75em;
+      background-color: $color-focus-tertiary;
+      padding: 10px 20px 10px 20px;
+      border-radius: 30px;
+
+      span{
+        display: block;
+        background: url(../img/logo_kultunaut_white.png) no-repeat;
+        width: 217px;
+        height: 21px;
+        float: right;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-repeat: no-repeat;
+        //background-position: 5px 5px;
+      }
+    }
+
+    .pane-content {
+      margin-top: -3.85em;
+    }
+  }
+
   &.panel-pane--full-width{
     margin-right: -9999rem;
     margin-left: -9999rem;
