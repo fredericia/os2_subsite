@@ -194,7 +194,7 @@ function os2sub_frontpage_default_page_manager_pages() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'panel-pane--full-width panel-pane--title-pinned',
+      'css_class' => 'panel-pane--full-width panel-pane--title',
       'template_suggestion' => 'views_panes',
     );
     $pane->extras = array();
