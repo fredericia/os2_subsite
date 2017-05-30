@@ -15,7 +15,7 @@
 // --------------------------------------------------
 
 .prefooter {
-  background-color: $color-background-secondary;
+  //background-color: $color-background-secondary;
   h2 .focus {
     color: $color-focus;
     font-weight: normal;
@@ -34,7 +34,7 @@
         a {
           display: block;
           padding: 7px 40px;
-          background-color: $color-background-primary;
+          background-color: $color-background-secondary;
           border-radius: 30px;
           font-size: 1.31em;
           color: $color-focus;

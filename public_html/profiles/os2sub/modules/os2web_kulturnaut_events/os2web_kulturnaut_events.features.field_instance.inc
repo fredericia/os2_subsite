@@ -282,8 +282,10 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       'os2sub_teaser_mini' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'settings' => array(
+          'trim_length' => 330,
+        ),
+        'type' => 'text_trimmed',
         'weight' => 2,
       ),
       'related_block' => array(
