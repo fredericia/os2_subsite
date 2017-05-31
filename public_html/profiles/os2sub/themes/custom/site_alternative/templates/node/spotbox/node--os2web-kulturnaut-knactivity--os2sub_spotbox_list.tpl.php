@@ -96,6 +96,7 @@
             </span>
           <?php endif; ?>
           <?php print render($content['field_os2web_kulturnaut_date']);?> 
+          <?php print render($content['field_os2web_kulturnaut_venue']);?> 
         </header>
        <?php endif; ?>
      </div> 
