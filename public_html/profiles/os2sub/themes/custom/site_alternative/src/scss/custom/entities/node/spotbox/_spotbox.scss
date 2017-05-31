@@ -111,16 +111,27 @@
     font-weight: bold;
     color: $color-font-light-secondary;
     padding-bottom: 15px;
-   }
-   .link{
-     &.show-more {
-       a {
+    float: left;
+  }
+  .field-name-field-os2web-kulturnaut-venue {
+    a{
+    font-size: 1.063em;
+    font-family: Lato;
+    font-weight: bold;
+    color: $color-font-light-secondary;
+    padding-bottom: 15px;
+    margin-left: 5px;
+  }
+  }
+  .link{
+    &.show-more {
+      a {
         color: $color-focus;
         font-weight: bold;
-       }
-     }
-   }
-  
+      }
+    }
+  }
+
 }
 
 // --------------------------------------------------
