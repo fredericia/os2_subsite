@@ -314,18 +314,31 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['table'] = 'field_data_field_os2web_base_field_edi_tags';
   $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['field'] = 'field_os2web_base_field_edi_tags';
   $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['alter']['text'] = '#[field_os2web_base_field_edi_tags]';
   $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_os2web_base_field_edi_tags']['separator'] = ' ';
   /* Field: Content: Link */
   $handler->display->display_options['fields']['view_node']['id'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
   $handler->display->display_options['fields']['view_node']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['view_node']['alter']['link_class'] = 'btn btn-primary';
+  $handler->display->display_options['fields']['view_node']['alter']['link_class'] = 'btn btn-primary pull-left';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node']['text'] = 'Læs mere';
+  /* Field: Content: Link */
+  $handler->display->display_options['fields']['view_node_1']['id'] = 'view_node_1';
+  $handler->display->display_options['fields']['view_node_1']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['view_node_1']['field'] = 'view_node';
+  $handler->display->display_options['fields']['view_node_1']['label'] = '';
+  $handler->display->display_options['fields']['view_node_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['view_node_1']['alter']['link_class'] = 'btn btn-quaternary';
+  $handler->display->display_options['fields']['view_node_1']['alter']['target'] = '#';
+  $handler->display->display_options['fields']['view_node_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['view_node_1']['text'] = '+Tilføj kalender';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -333,6 +346,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -998,7 +1017,9 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Block - activities slideshow'),
     t('Block - Activities Slideshow'),
     t('- [field_os2web_kulturnaut_date] '),
+    t('#[field_os2web_base_field_edi_tags]'),
     t('Læs mere'),
+    t('+Tilføj kalender'),
     t('Content pane - Activities list (4)'),
     t('Activities list (4)'),
     t('Content pane - activities list (5+load more)'),
