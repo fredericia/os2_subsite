@@ -9065,8 +9065,7 @@ h2.pane-title, .pane-title.heading-h2 {
   font-family: "Roboto Slab", serif;
   font-weight: lighter;
   font-size: 3em;
-  color: #0f2846;
-  margin-bottom: 30px; }
+  color: #0f2846; }
 
 h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-headline, .pane-title.node-list-title {
   font-weight: bold;
@@ -9510,7 +9509,7 @@ footer.footer a.block-image-links__link {
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .node-list-title {
   color: background;
   font-size: 1,5em;
-  font-weight: bold;
+  font-weight: normal;
   margin-bottom: 3px; }
 
 .node-os2web-kulturnaut-knactivity .link.show-more a,
@@ -9756,7 +9755,8 @@ footer.footer a.block-image-links__link {
 
 .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4_mini .field-name-field-os2web-kulturnaut-date {
   font-size: 0.9em;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-transform: lowercase; }
 
 .view-os2web-kulturnaut-events-lists.view-display-id-pane_related_articles .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tag .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_venue .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tema .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_kultunaut_events .pager--infinite-scroll {
   margin-top: 0; }
@@ -9891,10 +9891,16 @@ footer.footer a.block-image-links__link {
   .container-fluid .menu-background-slideshow .views-field-field-os2web-base-field-edi-tags {
     color: white;
     font-size: 1.31em; }
+  .container-fluid .menu-background-slideshow .views-field-field-os2web-kulturnaut-date {
+    text-transform: lowercase; }
   .container-fluid .menu-background-slideshow .views-field-field-os2web-base-field-edi-tags {
     font-weight: bold; }
   .container-fluid .menu-background-slideshow .views-field-view-node {
     margin-top: 30px; }
+
+@media (min-width: 992px) {
+  .container-fluid .menu-background-slideshow .bottom-part {
+    min-width: 500px; } }
 
 .view-os2sub-kulturnaut-multi-search .pager--infinite-scroll {
   margin-top: 0; }

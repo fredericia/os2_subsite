@@ -20,6 +20,7 @@ $header-size: 112px;
     .field-name-field-os2web-kulturnaut-date{
       font-size: 0.9em;
       margin-bottom: 10px;
+      text-transform: lowercase;
     }
   }
   &.view-display-id-pane_related_articles,
@@ -148,6 +149,7 @@ $header-size: 112px;
   .bottom-part {
     position: absolute;
     bottom: 60px;
+
   }
 
   .views-field-title {
@@ -163,6 +165,9 @@ $header-size: 112px;
   .views-field-field-os2web-base-field-edi-tags {
     color: white;
     font-size: 1.31em;
+  }
+  .views-field-field-os2web-kulturnaut-date,{
+    text-transform: lowercase;
   }
   .views-field-field-os2web-base-field-edi-tags {
     font-weight: bold;
@@ -218,6 +223,13 @@ $header-size: 112px;
 
   // Banner
   .banner {
+  }
+  .container-fluid .menu-background-slideshow{
+    .bottom-part {
+      min-width: 500px;
+
+    }
+
   }
 }
 

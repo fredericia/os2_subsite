@@ -296,7 +296,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['alter']['text'] = '- [field_os2web_kulturnaut_date] ';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['settings'] = array(
-    'format_type' => 'os2web_base_date_only',
+    'format_type' => 'os2sub_minimal',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
