@@ -13,6 +13,20 @@ function os2sub_frontpage_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_os2sub_compact';
+  $strongarm->value = 'D, \\d.j M, \\k\\l.G:i';
+  $export['date_format_os2sub_compact'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_os2sub_minimal';
+  $strongarm->value = 'l \\d.j. F';
+  $export['date_format_os2sub_minimal'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__velkomst';
   $strongarm->value = array(
     'view_modes' => array(
