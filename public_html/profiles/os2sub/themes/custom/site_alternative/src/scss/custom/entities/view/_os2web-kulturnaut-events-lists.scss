@@ -227,7 +227,13 @@ $header-size: 112px;
   .container-fluid .menu-background-slideshow{
     .bottom-part {
       min-width: 500px;
-
+      .views-field.views-field-view-node{
+        .field-content{
+          a.btn.btn-primary.pull-left {
+            margin-right: 20px;
+          }
+        }
+      }
     }
 
   }
