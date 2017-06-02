@@ -34,7 +34,7 @@
     .field-name-field-os2web-kulturnaut-venue,
     .field-name-field-os2web-kulturnaut-sname,
     .field-name-field-os2web-base-field-edi-tags {
-      font-size: 1em;
+      font-size: 1.125em;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
@@ -55,6 +55,58 @@
       width: 100%;
       bottom: 0;
       @include  gradient-vertical(rgba($color-primary,0), rgba($color-primary,0.9), 20%, 80%);
+    }
+
+    .view-display-id-pane_activities_list_2_3 & {
+      img { 
+        outline: 6px solid $color-background-primary;
+      }
+      .field-name-field-os2web-kulturnaut-date {
+        font-size: 1em;
+        color: $color-font-light;
+        font-weight: normal;
+      }
+      header h2 {
+        font-size: 1.75em;
+      }
+    }
+    .view-display-id-pane_activities_list_5_load_more & {
+      .field-name-field-os2web-kulturnaut-date {
+        span.date-display-single{ 
+          font-size: 1.125em;
+          color: $color-focus-secondary;
+          font-weight: normal;
+        }
+      }
+      header h2 {
+        font-size: 1.75em;
+      }
+      .field-name-field-os2web-kulturnaut-venue{
+        font-size: 1.125em;
+        font-weight: normal;
+      }
+    }
+    .view-display-id-pane_activities_list_4 & {
+      .field-name-field-os2web-kulturnaut-date {
+        span.date-display-single{ 
+          font-size: 0.9em;
+          font-weight: normal;
+        }
+      }
+      header h2 {
+        font-size: 1.56em;
+      }
+      .field-name-field-os2web-kulturnaut-venue {
+        font-size: 1em;
+      }
+    }
+    .one-left & {
+      .field-name-field-os2web-kulturnaut-date.field-type-datetime {
+        span.date-display-single{ 
+          font-size: 1.32em;
+          font-weight: normal;
+        }
+      }
     }
   }
 }
@@ -115,13 +167,13 @@
   }
   .field-name-field-os2web-kulturnaut-venue {
     a{
-    font-size: 1.063em;
-    font-family: Lato;
-    font-weight: bold;
-    color: $color-font-light-secondary;
-    padding-bottom: 15px;
-    margin-left: 5px;
-  }
+      font-size: 1.063em;
+      font-family: Lato;
+      font-weight: bold;
+      color: $color-font-light-secondary;
+      padding-bottom: 15px;
+      margin-left: 5px;
+    }
   }
   .link{
     &.show-more {
