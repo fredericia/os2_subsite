@@ -1,0 +1,14 @@
+name = OS2Sub Hovedmenu
+core = 7.x
+package = OS2Sub
+version = 7.x-1.0-beta1
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = menu
+dependencies[] = views
+dependencies[] = webform
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[menu_custom][] = management
+features[menu_links][] = management_hovedmenu:admin/structure/menu/manage/main-menu
+features[views_view][] = os2sub_
