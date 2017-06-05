@@ -17,6 +17,9 @@
 .contextual-links-region,
 .iew-mode-os2sub_teaser_mini,
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini{
+  img {
+    outline: 1px solid $color-background-primary;
+  }
   word-break: break-word;
   header h3{
     color: background;
@@ -30,6 +33,7 @@
       a {
         color: $color-focus;
         font-weight: bold;
+        text-decoration: underline;
       }
     }
   }

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * This template is used to print a single field in a view.
@@ -25,9 +24,12 @@
 <?php
 $uri = "";
 preg_match('/src="(.*?)"/', $output, $matches);
-if (isset($matches[1]))
+if (isset($matches[1])):
   $uri = $matches[1];
+  ?>
+<?php endif; ?>
 
-//print $output;
-?>
-<img class="img-circle" src="<?php print $uri; ?>">
+<?php if ($uri): ?>
+  <img class="img-circle" src="<?php print $uri; ?>">
+  <div class="img-effect"></div>
+<?php endif; ?>

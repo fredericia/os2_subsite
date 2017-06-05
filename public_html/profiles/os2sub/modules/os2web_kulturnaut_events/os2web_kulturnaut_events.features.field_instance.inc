@@ -130,12 +130,12 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'os2sub_minimal_second',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -192,12 +192,12 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'long',
+          'format_type' => 'os2sub_full',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
-          'show_remaining_days' => FALSE,
+          'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
         'weight' => 1,
@@ -263,8 +263,10 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
+        'settings' => array(
+          'trim_length' => 250,
+        ),
+        'type' => 'text_summary_or_trimmed',
         'weight' => 3,
       ),
       'os2sub_spotbox_mini' => array(

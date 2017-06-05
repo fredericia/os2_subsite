@@ -65,6 +65,7 @@
         font-size: 1em;
         color: $color-font-light;
         font-weight: normal;
+        text-transform: lowercase;
       }
       header h2 {
         font-size: 1.75em;
@@ -76,6 +77,11 @@
           font-size: 1.125em;
           color: $color-focus-secondary;
           font-weight: normal;
+          text-transform: lowercase;
+          display: block;
+        }
+        span.date-display-single:first-letter{
+          text-transform: uppercase;
         }
       }
       header h2 {
@@ -83,14 +89,19 @@
       }
       .field-name-field-os2web-kulturnaut-venue{
         font-size: 1.125em;
-        font-weight: normal;
+        font-weight: bold;
       }
     }
     .view-display-id-pane_activities_list_4 & {
       .field-name-field-os2web-kulturnaut-date {
-        span.date-display-single{ 
+        span.date-display-single{
           font-size: 0.9em;
-          font-weight: normal;
+          font-weight: bold;
+          text-transform: lowercase;
+          display: block;
+        }
+        span.date-display-single:first-letter{
+          text-transform: uppercase;
         }
       }
       header h2 {
@@ -104,8 +115,16 @@
       .field-name-field-os2web-kulturnaut-date.field-type-datetime {
         span.date-display-single{ 
           font-size: 1.32em;
-          font-weight: normal;
+          font-weight: bold;
+          text-transform: lowercase;
+          display: block;
         }
+        span.date-display-single:first-letter{
+          text-transform: uppercase;
+        }
+      }
+      .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference{
+        font-weight: normal;
       }
     }
   }
@@ -123,7 +142,7 @@
       -ms-transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      background-color: rgba($color-focus, 0.75); ;
+      background-color: rgba($color-focus, 0.75);
 
       .overlay-content {
         position: relative;
@@ -164,6 +183,10 @@
     color: $color-font-light-secondary;
     padding-bottom: 15px;
     float: left;
+    text-transform: lowercase;
+  }
+  .field-name-field-os2web-kulturnaut-date:first-letter {
+    text-transform: uppercase;
   }
   .field-name-field-os2web-kulturnaut-venue {
     a{
@@ -180,6 +203,7 @@
       a {
         color: $color-focus;
         font-weight: bold;
+        text-decoration: underline;
       }
     }
   }

@@ -9495,6 +9495,11 @@ footer.footer a.block-image-links__link {
 .iew-mode-os2sub_teaser_mini,
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
   word-break: break-word; }
+  .node-os2web-kulturnaut-knactivity img,
+  .contextual-links-region img,
+  .iew-mode-os2sub_teaser_mini img,
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini img {
+    outline: 1px solid #ffffff; }
   .node-os2web-kulturnaut-knactivity header h3, .node-os2web-kulturnaut-knactivity header .heading-h3, .node-os2web-kulturnaut-knactivity header .kontaktblok .kontaktblok-headline, .kontaktblok .node-os2web-kulturnaut-knactivity header .kontaktblok-headline, .node-os2web-kulturnaut-knactivity header .node-list-title,
   .contextual-links-region header h3,
   .contextual-links-region header .heading-h3,
@@ -9520,7 +9525,8 @@ footer.footer a.block-image-links__link {
   .iew-mode-os2sub_teaser_mini .link.show-more a,
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a {
     color: #ff0060;
-    font-weight: bold; }
+    font-weight: bold;
+    text-decoration: underline; }
 
 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity,
 .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity,
@@ -9586,7 +9592,8 @@ footer.footer a.block-image-links__link {
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
     font-size: 1em;
     color: #ffffff;
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: lowercase; }
   .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_2_3
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_2_3
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_2_3
@@ -9598,7 +9605,13 @@ footer.footer a.block-image-links__link {
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single {
     font-size: 1.125em;
     color: #00beff;
-    font-weight: normal; }
+    font-weight: normal;
+    text-transform: lowercase;
+    display: block; }
+  .view-display-id-pane_activities_list_5_load_more .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single:first-letter, .view-display-id-pane_activities_list_5_load_more
+  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single:first-letter, .view-display-id-pane_activities_list_5_load_more
+  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single:first-letter {
+    text-transform: uppercase; }
   .view-display-id-pane_activities_list_5_load_more .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_5_load_more .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_5_load_more
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_5_load_more
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_5_load_more
@@ -9609,12 +9622,18 @@ footer.footer a.block-image-links__link {
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue, .view-display-id-pane_activities_list_5_load_more
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue {
     font-size: 1.125em;
-    font-weight: normal; }
+    font-weight: bold; }
   .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single {
     font-size: 0.9em;
-    font-weight: normal; }
+    font-weight: bold;
+    text-transform: lowercase;
+    display: block; }
+  .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single:first-letter, .view-display-id-pane_activities_list_4
+  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single:first-letter, .view-display-id-pane_activities_list_4
+  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single:first-letter {
+    text-transform: uppercase; }
   .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_4
@@ -9629,6 +9648,16 @@ footer.footer a.block-image-links__link {
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single, .one-left
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single {
     font-size: 1.32em;
+    font-weight: bold;
+    text-transform: lowercase;
+    display: block; }
+  .one-left .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single:first-letter, .one-left
+  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single:first-letter, .one-left
+  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single:first-letter {
+    text-transform: uppercase; }
+  .one-left .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference, .one-left
+  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference, .one-left
+  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference {
     font-weight: normal; }
 
 .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .overlay {
@@ -9677,7 +9706,11 @@ footer.footer a.block-image-links__link {
   font-weight: bold;
   color: #999999;
   padding-bottom: 15px;
-  float: left; }
+  float: left;
+  text-transform: lowercase; }
+
+.view-mode-os2sub_spotbox_list.node .field-name-field-os2web-kulturnaut-date:first-letter {
+  text-transform: uppercase; }
 
 .view-mode-os2sub_spotbox_list.node .field-name-field-os2web-kulturnaut-venue a {
   font-size: 1.063em;
@@ -9689,7 +9722,8 @@ footer.footer a.block-image-links__link {
 
 .view-mode-os2sub_spotbox_list.node .link.show-more a {
   color: #ff0060;
-  font-weight: bold; }
+  font-weight: bold;
+  text-decoration: underline; }
 
 .view-mode-search_result, .view-mode-os2sub_term_search_result {
   margin-bottom: 30px; }
@@ -9865,7 +9899,9 @@ footer.footer a.block-image-links__link {
       border-radius: 0;
       background-color: #eeeeee;
       font-family: "Roboto Slab", serif;
-      font-size: 3.18em; }
+      font-size: 3.18em;
+      padding-left: 60px;
+      padding-right: 60px; }
       .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_5_load_more .pager--infinite-scroll li a:before {
         content: '+';
         color: #ff0060;
@@ -9887,7 +9923,8 @@ footer.footer a.block-image-links__link {
 
 .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-field-os2web-kulturnaut-date, .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-view-node {
   font-size: 1em;
-  color: #666666; }
+  color: #666666;
+  text-transform: lowercase; }
 
 .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-view-node {
   font-weight: bold; }
@@ -9935,7 +9972,7 @@ footer.footer a.block-image-links__link {
     background-size: cover; }
   .container-fluid .menu-background-slideshow .bottom-part {
     position: absolute;
-    bottom: 60px; }
+    bottom: 75px; }
   .container-fluid .menu-background-slideshow .views-field-title {
     font-family: "Roboto Slab", serif;
     font-size: 4em;
@@ -9952,7 +9989,7 @@ footer.footer a.block-image-links__link {
   .container-fluid .menu-background-slideshow .views-field-field-os2web-base-field-edi-tags {
     font-weight: bold; }
   .container-fluid .menu-background-slideshow .views-field-view-node {
-    margin-top: 30px; }
+    margin-top: 35px; }
 
 @media (min-width: 992px) {
   .container-fluid .menu-background-slideshow .bottom-part {
@@ -10007,6 +10044,17 @@ footer.footer a.block-image-links__link {
 .front #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search {
   margin-top: 10px; }
 
+.views-field.views-field-field-os2web-kult-tema-image .field-content .img-effect {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  border-radius: 50% 50%;
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 0, 96, 0.5);
+  opacity: 50%;
+  margin-left: 15px; }
+
 .view-os2web-kulturnaut-tema-list .views-row {
   margin-bottom: 25px; }
   .view-os2web-kulturnaut-tema-list .views-row .views-field-name {
@@ -10016,4 +10064,7 @@ footer.footer a.block-image-links__link {
       color: #ff0060; }
   .view-os2web-kulturnaut-tema-list .views-row .views-field-description {
     font-size: 1.125em; }
+
+.view-os2web-kulturnaut-tema-list .view-content .views-field.views-field-description .field-content a.views-more-link {
+  text-decoration: underline; }
 /*# sourceMappingURL=stylesheet.css.map */
