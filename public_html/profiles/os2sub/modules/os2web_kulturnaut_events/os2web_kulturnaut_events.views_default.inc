@@ -629,7 +629,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['alter']['text'] = '[field_os2web_kulturnaut_date]  |';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['settings'] = array(
-    'format_type' => 'long',
+    'format_type' => 'os2sub_minimal_second',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -641,6 +641,8 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['view_node']['table'] = 'views_entity_node';
   $handler->display->display_options['fields']['view_node']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node']['label'] = '';
+  $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['view_node']['alter']['text'] = 'Læs mere';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
