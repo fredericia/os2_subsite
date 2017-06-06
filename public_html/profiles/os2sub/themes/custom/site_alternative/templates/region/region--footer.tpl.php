@@ -28,7 +28,7 @@
  */
 ?>
 <?php if ($content): ?>
-  <div class="<?php print $classes; ?>">
+  <div class="row <?php print $classes; ?>">
     <?php print $content; ?>
 
     <?php
