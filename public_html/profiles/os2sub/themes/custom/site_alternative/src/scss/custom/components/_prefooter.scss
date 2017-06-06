@@ -15,6 +15,12 @@
 // --------------------------------------------------
 
 .prefooter {
+  .right-vertical-line{
+    padding-top: 55px;
+  }
+  .pop-tags{
+    padding-top: 55px;
+  }
   //background-color: $color-background-secondary;
   h2 .focus {
     color: $color-focus;
@@ -47,7 +53,20 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+// Desktop - only
+@include media-breakpoint-up(lg) {
 
+  // Footer
+  .prefooter {
+    .right-vertical-line{
+      border-width: 0 4px 0 0;
+      border-color: $color-background-secondary;
+      border-style: solid; 
+      padding-right: 63px;
+
+    }
+  }
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

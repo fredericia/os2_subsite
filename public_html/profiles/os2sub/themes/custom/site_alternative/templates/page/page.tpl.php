@@ -190,7 +190,7 @@
 <div class="prefooter">
   <div class="<?php print $container_class; ?>">
     <div class="row">
-      <div class="col-md-6">
+      <div class="right-vertical-line col-lg-6 col-md-7">
         <h2 class="pane-title">
           <?php print t('Temaer lige nu'); ?>
         </h2>
@@ -200,7 +200,7 @@
         print $view_popular_tags->preview('block');
         ?>
       </div>
-      <div class="col-md-5 col-md-push-1">
+      <div class="pop-tags col-lg-5 col-lg-push-1 col-md-col-5 col-md-push-0">
         <h2 class="pane-title">
           <?php print t('Populære'); ?>
           <span class="focus">#tags</span>
