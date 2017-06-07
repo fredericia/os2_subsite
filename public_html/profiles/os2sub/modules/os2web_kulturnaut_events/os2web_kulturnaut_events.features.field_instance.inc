@@ -1949,6 +1949,79 @@ function os2web_kulturnaut_events_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_address'.
+  $field_instances['taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_address'] = array(
+    'bundle' => 'os2web_kulturnaut_venue',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'simple_gmap',
+        'settings' => array(
+          'apikey' => 'AIzaSyAgJA8d0t65vtmoUm1V4QzLUHxZCKaSSeE',
+          'iframe_height' => 184,
+          'iframe_width' => 369,
+          'include_link' => 0,
+          'include_map' => 0,
+          'include_static_map' => 1,
+          'include_text' => 0,
+          'langcode' => 'en',
+          'link_text' => 'View larger map',
+          'map_type' => 'm',
+          'static_scale' => 1,
+          'zoom_level' => 15,
+        ),
+        'type' => 'simple_gmap',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'simple_gmap',
+        'settings' => array(
+          'apikey' => '',
+          'iframe_height' => 200,
+          'iframe_width' => 200,
+          'include_link' => 0,
+          'include_map' => 1,
+          'include_static_map' => 0,
+          'include_text' => 0,
+          'langcode' => 'en',
+          'link_text' => 'View larger map',
+          'map_type' => 'm',
+          'static_scale' => 1,
+          'zoom_level' => 14,
+        ),
+        'type' => 'simple_gmap',
+        'weight' => 1,
+      ),
+      'os2sub_term_search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_os2web_kult_venue_address',
+    'label' => 'Address',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_image'.
   $field_instances['taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_image'] = array(
     'bundle' => 'os2web_kulturnaut_venue',
@@ -1956,6 +2029,12 @@ function os2web_kulturnaut_events_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'full' => array(
         'label' => 'above',
         'module' => 'image',
         'settings' => array(
@@ -2031,6 +2110,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Address');
   t('Beskrivelse');
   t('Billeturl');
   t('Created manual or imported from feeds importer Kulturnaut begivenheder');

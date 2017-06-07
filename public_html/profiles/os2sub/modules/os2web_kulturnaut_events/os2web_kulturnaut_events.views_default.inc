@@ -139,6 +139,8 @@ function os2web_kulturnaut_events_views_default_views() {
 
   /* Display: Content pane - related activities */
   $handler = $view->new_display('panel_pane', 'Content pane - related activities', 'pane_related_articles');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Relaterede begivenheder';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'infinite_scroll';
   $handler->display->display_options['pager']['options']['manual_load'] = 1;
@@ -1008,6 +1010,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('more'),
     t('Block - contentpage'),
     t('Content pane - related activities'),
+    t('Relaterede begivenheder'),
     t('Indlæs flere'),
     t('View panes'),
     t('Block - activities slideshow'),
