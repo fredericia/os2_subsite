@@ -9077,6 +9077,9 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
   background: none;
   padding-left: 0; }
 
+.search-and-title {
+  padding-top: 19px; }
+
 .panel-pane.panel-pane--title-pinned .pane-title {
   font-family: "Roboto Slab", serif;
   text-transform: none;
@@ -9154,7 +9157,8 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
 h2.pane-title--lifted, .pane-title--lifted.heading-h2 {
   top: -65px;
   position: relative;
-  margin-bottom: -50px; }
+  margin-bottom: -50px;
+  padding-bottom: 15px; }
 
 .content-inner {
   padding-top: 20px;
