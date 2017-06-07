@@ -22,7 +22,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -351,7 +351,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -433,7 +433,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -603,7 +603,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -685,7 +685,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -762,7 +762,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -844,7 +844,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -926,7 +926,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 20,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -1008,7 +1008,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -1089,7 +1089,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
@@ -1234,7 +1234,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -1319,10 +1319,9 @@ function os2web_kulturnaut_events_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 24,
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -1396,7 +1395,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -1478,7 +1477,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 12,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -1635,7 +1634,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 13,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -1717,7 +1716,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
@@ -1800,7 +1799,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
