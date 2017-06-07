@@ -15,12 +15,14 @@
 // --------------------------------------------------
 
 .prefooter {
-  .right-vertical-line{
+  .right-vertical-line, .pop-tags{
     padding-top: 55px;
+    h2.pane-title{
+      margin-top: 4px;
+      margin-bottom: 35px;
+    }
   }
-  .pop-tags{
-    padding-top: 55px;
-  }
+
   //background-color: $color-background-secondary;
   h2 .focus {
     color: $color-focus;

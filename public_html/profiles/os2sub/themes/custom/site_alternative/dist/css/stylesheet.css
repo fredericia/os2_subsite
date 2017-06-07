@@ -9362,11 +9362,11 @@ header.navbar {
     .banner .banner-wrapper.color-1 {
       color: #FFF; }
 
-.prefooter .right-vertical-line {
+.prefooter .right-vertical-line, .prefooter .pop-tags {
   padding-top: 55px; }
-
-.prefooter .pop-tags {
-  padding-top: 55px; }
+  .prefooter .right-vertical-line h2.pane-title, .prefooter .right-vertical-line .pane-title.heading-h2, .prefooter .pop-tags h2.pane-title, .prefooter .pop-tags .pane-title.heading-h2 {
+    margin-top: 4px;
+    margin-bottom: 35px; }
 
 .prefooter h2 .focus, .prefooter .heading-h2 .focus {
   color: #ff0060;
