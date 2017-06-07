@@ -28,6 +28,7 @@ header.navbar {
         font-family: $font-lato;
         font-weight: lighter;
         color: $color-font-light;
+        padding-bottom: 13px;
         &.active, &:hover {
           background: none;
           border-bottom: 6px solid $color-focus;
@@ -81,7 +82,7 @@ header.navbar {
       .navbar-collapse {
         background: url("../img/logo_secondary_small.png") no-repeat center right;
         .navbar-nav{
-          margin-top: 56px;
+          margin-top: 48px;
         }
       }
     }

@@ -9202,7 +9202,8 @@ header.navbar {
       font-size: 1.75em;
       font-family: "Lato", sans-serif;
       font-weight: lighter;
-      color: #ffffff; }
+      color: #ffffff;
+      padding-bottom: 13px; }
       header.navbar .container .menu.nav li > a.active, header.navbar .container .menu.nav li > a:hover {
         background: none;
         border-bottom: 6px solid #ff0060;
@@ -9219,7 +9220,7 @@ header.navbar {
   header.navbar .container .navbar-collapse {
     background: url("../img/logo_secondary_small.png") no-repeat center right; }
     header.navbar .container .navbar-collapse .navbar-nav {
-      margin-top: 56px; } }
+      margin-top: 48px; } }
 
 @media (min-width: 992px) {
   .front header > .container {
