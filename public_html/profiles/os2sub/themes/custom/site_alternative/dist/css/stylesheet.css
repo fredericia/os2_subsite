@@ -9558,6 +9558,9 @@ footer.footer a.block-image-links__link {
     font-weight: bold;
     text-decoration: underline; }
 
+.view-mode-os2sub_spotbox_mini.node {
+  border: 6px solid #ffffff; }
+
 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity,
 .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity,
 .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity {
@@ -9613,10 +9616,6 @@ footer.footer a.block-image-links__link {
     background-image: linear-gradient(to bottom, rgba(15, 40, 70, 0) 20%, rgba(15, 40, 70, 0.9) 80%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000F2846', endColorstr='#E60F2846', GradientType=0); }
-  .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity img, .view-display-id-pane_activities_list_2_3
-  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity img, .view-display-id-pane_activities_list_2_3
-  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity img {
-    outline: 6px solid #ffffff; }
   .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date, .view-display-id-pane_activities_list_2_3
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date, .view-display-id-pane_activities_list_2_3
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
