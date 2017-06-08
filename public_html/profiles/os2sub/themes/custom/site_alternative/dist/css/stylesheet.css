@@ -9195,11 +9195,15 @@ h1.pane-title,
     height: 19px; }
 
 header.navbar {
-  background-color: #0f2846;
-  background: url("../img/baggrund_himmel.png") no-repeat center center; }
+  background-color: #0f2846; }
   header.navbar .container .menu.nav li {
     padding-left: 21px;
     padding-right: 21px; }
+    header.navbar .container .menu.nav li.open > a {
+      background: none;
+      border-bottom: 6px solid #ff0060;
+      font-weight: 900;
+      margin-bottom: 0px; }
     header.navbar .container .menu.nav li > a {
       padding-left: 0;
       padding-right: 0;
@@ -9208,24 +9212,46 @@ header.navbar {
       font-family: "Lato", sans-serif;
       font-weight: lighter;
       color: #ffffff;
-      padding-bottom: 13px; }
+      padding-bottom: 13px;
+      margin-bottom: 6px; }
       header.navbar .container .menu.nav li > a.active, header.navbar .container .menu.nav li > a:hover {
         background: none;
         border-bottom: 6px solid #ff0060;
-        font-weight: 900; }
+        font-weight: 900;
+        margin-bottom: 0px; }
+      header.navbar .container .menu.nav li > a:after {
+        display: block;
+        content: attr(title);
+        font-weight: 900;
+        height: 1px;
+        color: transparent;
+        overflow: hidden;
+        visibility: hidden;
+        margin-bottom: -1px; }
+    header.navbar .container .menu.nav li .dropdown-menu {
+      background-color: #0f2846;
+      margin-top: 9px;
+      margin-left: 15px; }
+      header.navbar .container .menu.nav li .dropdown-menu a {
+        margin-bottom: 0; }
+        header.navbar .container .menu.nav li .dropdown-menu a.active, header.navbar .container .menu.nav li .dropdown-menu a:hover {
+          border: none;
+          color: #ffffff; }
   header.navbar .container .navbar-header .logo img {
     max-height: 29px; }
 
 @media (min-width: 768px) {
-  header.navbar .container .navbar-header .logo {
-    margin-top: 28px;
-    margin-bottom: 28px; }
-    header.navbar .container .navbar-header .logo img {
-      max-height: 56px; }
-  header.navbar .container .navbar-collapse {
-    background: url("../img/logo_secondary_small.png") no-repeat center right; }
-    header.navbar .container .navbar-collapse .navbar-nav {
-      margin-top: 48px; } }
+  header.navbar {
+    background: url("../img/baggrund_himmel.png") no-repeat center center; }
+    header.navbar .container .navbar-header .logo {
+      margin-top: 28px;
+      margin-bottom: 28px; }
+      header.navbar .container .navbar-header .logo img {
+        max-height: 56px; }
+    header.navbar .container .navbar-collapse {
+      background: url("../img/logo_secondary_small.png") no-repeat center right; }
+      header.navbar .container .navbar-collapse .navbar-nav {
+        margin-top: 48px; } }
 
 @media (min-width: 992px) {
   .front header > .container {
