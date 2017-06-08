@@ -806,7 +806,7 @@ function os2web_base_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'content-with-left-and-right-sidebar-top-footer';
+  $display->layout = 'os2web-3col-2-6-4-stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -908,8 +908,8 @@ function os2web_base_default_page_manager_handlers() {
       ),
     );
     $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Del dette',
       'override_title_heading' => 'h2',
     );
     $pane->cache = array();
