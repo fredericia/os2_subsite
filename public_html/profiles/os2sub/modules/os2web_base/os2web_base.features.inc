@@ -344,6 +344,16 @@ function os2web_base_paragraphs_info() {
       'bundle' => 'afsnit_m_billede',
       'locked' => '1',
     ),
+    'afsnit_m_citat' => array(
+      'name' => 'Afsnit m citat',
+      'bundle' => 'afsnit_m_citat',
+      'locked' => '1',
+    ),
+    'afsnit_m_link' => array(
+      'name' => 'Afsnit m link',
+      'bundle' => 'afsnit_m_link',
+      'locked' => '1',
+    ),
   );
   return $items;
 }
