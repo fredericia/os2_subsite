@@ -15,6 +15,14 @@ $header-size: 112px;
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.view-det-sker-slideshow {
+  .views-slideshow-cycle-main-frame-row {
+    @include make-row;
+    .views-slideshow-cycle-main-frame-row-item {
+      @include make-sm-column(4);
+    }    
+  }
+}
 
 .view-os2web-kulturnaut-events-lists {
 }
