@@ -42,7 +42,7 @@ function os2web_kulturnaut_events_image_default_styles() {
       33 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 272,
+          'width' => 370,
           'height' => 97,
         ),
         'weight' => 1,
