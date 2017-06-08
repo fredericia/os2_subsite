@@ -24,6 +24,7 @@ $header-size: 112px;
     }
   }
   &.view-display-id-pane_related_articles,
+  &.view-display-id-pane_activities_list_5_load_more,
   &.view-display-id-pane_activities_for_tag,
   &.view-display-id-pane_activities_for_venue,
   &.view-display-id-pane_activities_for_tema, 
@@ -35,6 +36,212 @@ $header-size: 112px;
       }
     }
   }
+
+  &.view-display-id-pane_kultunaut_events {
+    margin-bottom: 80px;
+    .view-header {
+      margin-left: 100px;
+      color: $color-primary;
+    }
+  }
+  &.view-display-id-attachment_activities_list_3_2 {
+    .views-field-title {
+      font-family: $font-roboto-slab;
+      font-size: 1.375em;
+      color: $color-focus-tertiary;
+    }
+    .views-field-field-os2web-kulturnaut-date, .views-field-view-node {
+      font-size: 1em;
+      color: #666666;
+      text-transform: lowercase;
+    }
+    .views-field-view-node {
+      font-weight: bold;
+      a {
+        color: #666666 !important;
+      }
+    }
+  }
+}
+
+.not-front .container-fluid .menu-background-slideshow {
+  display: none;
+}
+
+.container-fluid .menu-background-slideshow {
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+
+  //  .views-field-field-os2web-kulturnaut-slidesho {
+  //    position: relative;
+  //  }
+
+  .views-slideshow-controls-bottom {
+    > .container {
+      position: relative;
+    }
+    .widget_pager_bottom {
+      @include slideshow-pager-dots-block;
+      z-index: 9999;
+      bottom: 20px;
+      right: 10px;
+      a {
+        @include slideshow-pager-dot;
+      }
+      .active {
+        text-decoration: none;
+        a {
+          @include slideshow-pager-active-dot;
+        }
+      }
+      > div {
+        padding: 0;
+      }
+    }
+  }
+
+  .views-field-field-os2web-kulturnaut-slidesho .field-content .img-container {
+    width: 100vw;
+    height: 276px;
+
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .bottom-part {
+    position: absolute;
+    bottom: 75px;
+  }
+
+  .views-field-title {
+    font-family: $font-roboto-slab;
+    font-size: 2em;
+    line-height: 1.0em;
+    font-weight: 900;
+    color: white;
+  }
+
+  .views-field-field-os2web-kulturnaut-sname,
+  .views-field-field-os2web-kulturnaut-date,
+  .views-field-field-os2web-base-field-edi-tags {
+    color: white;
+    font-size: 1.31em;
+  }
+  .views-field-field-os2web-kulturnaut-date,{
+    text-transform: lowercase;
+  }
+  .views-field-field-os2web-base-field-edi-tags {
+    font-weight: bold;
+  }
+
+  .views-field-view-node {
+    margin-top: 25px;
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Banner
+  .banner {
+  }
+  .container-fluid .menu-background-slideshow {
+    .views-slideshow-controls-bottom {
+      .widget_pager_bottom {
+        display: none;
+      }
+    }
+    .bottom-part {
+      bottom: 30px;
+      width: 100%;
+      text-align: center;
+    }
+    .views-field-field-os2web-kulturnaut-sname,
+    .views-field-field-os2web-base-field-edi-tags,
+    .views-field-field-os2web-kulturnaut-date{
+      display: none;
+    }
+  }
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Banner
+  .banner {
+  }
+  .container-fluid .menu-background-slideshow {
+    .views-slideshow-controls-bottom {
+      .widget_pager_bottom {
+        display: none;
+      }
+    }
+    .bottom-part {
+      bottom: 30px;
+      width: 100%;
+      text-align: center;
+    } 
+    .views-field-field-os2web-kulturnaut-sname,
+    .views-field-field-os2web-base-field-edi-tags,
+    .views-field-field-os2web-kulturnaut-date{
+      display: none;
+    }
+  }
+
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Banner
+  .banner {
+  }
+  .container-fluid .menu-background-slideshow {
+    position: relative;
+    top: -$header-size;
+    margin-bottom: -$header-size - 2;
+    .views-field-field-os2web-kulturnaut-slidesho .field-content .img-container {
+      height: 540px;
+    }
+    .views-field-title {
+      font-size: 4em;
+    }
+    .views-field-view-node {
+      margin-top: 35px;
+    }
+  }
+  .view-os2web-kulturnaut-events-lists {
   &.view-display-id-pane_activities_list_5_load_more {
     .pager--infinite-scroll {
       margin: 0;
@@ -73,176 +280,8 @@ $header-size: 112px;
       }
     }
   }
-  &.view-display-id-pane_kultunaut_events {
-    margin-bottom: 80px;
-    .view-header {
-      margin-left: 100px;
-      color: $color-primary;
-    }
-  }
-  &.view-display-id-attachment_activities_list_3_2 {
-    .views-field-title {
-      font-family: $font-roboto-slab;
-      font-size: 1.375em;
-      color: $color-focus-tertiary;
-    }
-    .views-field-field-os2web-kulturnaut-date, .views-field-view-node {
-      font-size: 1em;
-      color: #666666;
-      text-transform: lowercase;
-    }
-    .views-field-view-node {
-      font-weight: bold;
-      a {
-        color: #666666 !important;
-      }
-    }
   }
 }
-
-.not-front .container-fluid .menu-background-slideshow {
-  display: none;
-}
-
-.container-fluid .menu-background-slideshow {
-  position: relative;
-  top: -$header-size;
-  margin-bottom: -$header-size - 2;
-
-  //  .views-field-field-os2web-kulturnaut-slidesho {
-  //    position: relative;
-  //  }
-
-  .views-slideshow-controls-bottom {
-    > .container {
-      position: relative;
-    }
-    .widget_pager_bottom {
-      @include slideshow-pager-dots-block;
-      z-index: 9999;
-      bottom: 20px;
-      right: 10px;
-      a {
-        @include slideshow-pager-dot;
-      }
-      .active {
-        text-decoration: none;
-        a {
-          @include slideshow-pager-active-dot;
-        }
-      }
-      > div {
-        padding: 0;
-      }
-    }
-  }
-
-  .views-field-field-os2web-kulturnaut-slidesho .field-content .img-container {
-    width: 100vw;
-    height: 540px;
-
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  .bottom-part {
-    position: absolute;
-    bottom: 75px;
-
-  }
-
-  .views-field-title {
-    font-family: $font-roboto-slab;
-    font-size: 4em;
-    line-height: 1.0em;
-    font-weight: 900;
-    color: white;
-  }
-
-  .views-field-field-os2web-kulturnaut-sname,
-  .views-field-field-os2web-kulturnaut-date,
-  .views-field-field-os2web-base-field-edi-tags {
-    color: white;
-    font-size: 1.31em;
-  }
-  .views-field-field-os2web-kulturnaut-date,{
-    text-transform: lowercase;
-  }
-  .views-field-field-os2web-base-field-edi-tags {
-    font-weight: bold;
-  }
-
-  .views-field-view-node {
-    margin-top: 35px;
-  }
-}
-
-// --------------------------------------------------
-// Variants
-// --------------------------------------------------
-
-// --------------------------------------------------
-// Responsive
-// --------------------------------------------------
-
-// Mobile - and up
-@include media-breakpoint-up(xs) {
-
-  // Banner
-  .banner {
-  }
-}
-
-// Mobile - only
-@include media-breakpoint-only(xs) {
-
-  // Banner
-  .banner {
-  }
-}
-
-// Tablet - and up
-@include media-breakpoint-up(sm) {
-
-  // Banner
-  .banner {
-  }
-}
-
-// Tablet - only
-@include media-breakpoint-only(sm) {
-
-  // Banner
-  .banner {
-  }
-}
-
-// Desktop - and up
-@include media-breakpoint-up(md) {
-
-  // Banner
-  .banner {
-  }
-  .container-fluid .menu-background-slideshow{
-    .bottom-part {
-      min-width: 500px;
-      .views-field.views-field-view-node{
-        .field-content{
-          a.btn.btn-primary.pull-left {
-            margin-right: 20px;
-          }
-        }
-      }
-    }
-
-  }
-}
-
 // Desktop - only
 @include media-breakpoint-only(md) {
 

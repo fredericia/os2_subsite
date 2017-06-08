@@ -114,7 +114,7 @@
     <?php endif; ?>
   </div>
   <div class="container-fluid">
-    <div class="menu-background-slideshow hidden-xs hidden-sm row">
+    <div class="menu-background-slideshow row">
       <?php
       $view_slideshow = views_get_view('os2web_kulturnaut_events_lists');
       $view_slideshow->set_display('block_slideshow');

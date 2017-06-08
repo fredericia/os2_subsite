@@ -522,7 +522,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'os2sub_spotbox_mini' => array(
         'label' => 'hidden',
@@ -1325,10 +1325,9 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'os2sub_spotbox_mini' => array(
         'label' => 'above',

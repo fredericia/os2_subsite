@@ -14,7 +14,7 @@
 // Styling
 // --------------------------------------------------
 
-header.navbar {
+header.navbar{
   background-color: $color-primary;
   .container {
     .menu.nav li {
@@ -96,10 +96,20 @@ header.navbar {
   // Header
   .header {
   }
+  header.navbar,
+  header .navbar-header{
+    background-color: $color-primary;
+    margin-bottom: 10px;
+    background: url("../img/baggrund_himmel.png") no-repeat center center;
+    .navbar-collapse{
+      background-color: $color-primary;
+    }
+  }
 }
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
+
   header.navbar {
     background: url("../img/baggrund_himmel.png") no-repeat center center;
     .container {
@@ -128,6 +138,15 @@ header.navbar {
 
   // Header
   .header {
+  }
+  header.navbar,
+  header .navbar-header{
+    background-color: $color-primary;
+    background: url("../img/baggrund_himmel.png") no-repeat center center;
+    padding-bottom: 0px;
+    .navbar-collapse{
+      background-color: $color-primary;
+    }
   }
 }
 

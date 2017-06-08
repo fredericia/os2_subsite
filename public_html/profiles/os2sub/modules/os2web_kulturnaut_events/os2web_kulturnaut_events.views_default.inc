@@ -331,7 +331,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['view_node_1']['field'] = 'view_node';
   $handler->display->display_options['fields']['view_node_1']['label'] = '';
   $handler->display->display_options['fields']['view_node_1']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['view_node_1']['alter']['link_class'] = 'btn btn-quaternary';
+  $handler->display->display_options['fields']['view_node_1']['alter']['link_class'] = 'btn btn-quaternary hidden-sm hidden-xs';
   $handler->display->display_options['fields']['view_node_1']['alter']['target'] = '#';
   $handler->display->display_options['fields']['view_node_1']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['view_node_1']['text'] = '+Tilføj kalender';
@@ -947,6 +947,14 @@ function os2web_kulturnaut_events_views_default_views() {
 
   /* Display: Content pane - activities list (4 mini) */
   $handler = $view->new_display('panel_pane', 'Content pane - activities list (4 mini)', 'pane_activities_list_4_mini');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-md-3 col-xs-6';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
 
   /* Display: Content pane - kultunaut events */
   $handler = $view->new_display('panel_pane', 'Content pane - kultunaut events', 'pane_kultunaut_events');
@@ -963,7 +971,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_list';
+  $handler->display->display_options['row_options']['view_mode'] = 'search_result';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;

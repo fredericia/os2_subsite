@@ -42,7 +42,7 @@ h1.pane-title {
 h2.pane-title {
   font-family: $font-roboto-slab;
   font-weight: lighter;
-  font-size: 3em;
+  font-size: 2.125em;
   color: $color-primary;
   //margin-bottom: 30px;
 }
@@ -63,7 +63,7 @@ h3.pane-title {
 }
 
 .search-and-title{
-  padding-top: 19px;
+  padding-top: 0px;
 }
 
 // --------------------------------------------------
@@ -109,7 +109,7 @@ h3.pane-title {
     .pane-title {
       font-family: $font-roboto-slab;
       text-transform: none;
-      font-size: 2em;
+      font-size: 1em;
       font-weight: normal;
       color: white;
       display: inline-block;
@@ -120,10 +120,13 @@ h3.pane-title {
       background-color: $color-focus-tertiary;
       padding: 10px 20px 10px 20px;
       border-radius: 30px;
+      line-height: 21px;
 
       span{
         display: block;
         background: url(../img/logo_kultunaut_white.png) no-repeat;
+              background-size: 65%;
+              background-position: center center;
         width: 217px;
         height: 21px;
         float: right;
@@ -217,6 +220,46 @@ h2.pane-title--lifted {
 
   .row .content-top {
     margin-bottom: 30px;
+  }
+  h2.pane-title {
+    font-size: 3em;
+  }
+  
+  .search-and-title{
+  padding-top: 19px;
+}
+  &.panel-pane--title{
+    .pane-title {
+      font-family: $font-roboto-slab;
+      text-transform: none;
+      font-size: 2em;
+      font-weight: normal;
+      color: white;
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: -1.75em;
+      background-color: $color-focus-tertiary;
+      padding: 10px 20px 10px 20px;
+      border-radius: 30px;
+
+      span{
+        display: block;
+        background: url(../img/logo_kultunaut_white.png) no-repeat;
+        width: 217px;
+        height: 21px;
+        float: right;
+        margin-top: 5px;
+        margin-left: 5px;
+        background-repeat: no-repeat;
+        //background-position: 5px 5px;
+      }
+    }
+
+    .pane-content {
+      margin-top: -3.85em;
+    }
   }
 }
 
