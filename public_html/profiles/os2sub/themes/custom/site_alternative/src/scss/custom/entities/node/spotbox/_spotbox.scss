@@ -135,6 +135,10 @@
 
 .view-mode-os2sub_spotbox_single.node{
   &.node-os2web-kulturnaut-knactivity {
+    .field-name-field-os2web-kulturnaut-slidesho {
+      max-height: 250px;
+      overflow: hidden;
+    }
     .overlay {
       transition: .5s ease;
       opacity: 0;
@@ -304,6 +308,13 @@
       }
     }
 
+  }
+  .view-mode-os2sub_spotbox_single.node{
+    &.node-os2web-kulturnaut-knactivity {
+      .field-name-field-os2web-kulturnaut-slidesho {
+        max-height: none;
+      }
+    }
   }
 
 

@@ -29,9 +29,10 @@
   <?php if ($title): ?>
     <<?php print $title_heading; ?><?php print $title_attributes; ?>>
     <?php
-    //Coutom title with logo
-    print t('Arrangementer fra <span></span> ');
+    //Custom title with logo
+    print t('Arrangementer fra');
     ?>
+    <img src="profiles/os2sub/themes/custom/site_alternative/dist/img/logo_kultunaut_white.png"/>
     </<?php print $title_heading; ?>>
   <?php endif; ?>
   <?php print render($title_suffix); ?>

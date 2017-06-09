@@ -39,11 +39,11 @@ function os2web_kulturnaut_events_image_default_styles() {
   $styles['os2sub_teaser_mini_image'] = array(
     'label' => 'OS2Sub teaser mini image',
     'effects' => array(
-      33 => array(
+      37 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 370,
-          'height' => 97,
+          'height' => 113,
         ),
         'weight' => 1,
       ),

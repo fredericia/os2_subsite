@@ -4,7 +4,7 @@
   @extend .btn-full-width;
   font-family: $font-roboto-slab;
   text-transform: none;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: normal;
   border-radius: 30px;
   &:before {
@@ -17,4 +17,8 @@
     padding-right: 5px;
     color: $color-focus;
   }
+}
+
+@mixin load-more-btn-full-width-md {
+  font-size: 2em;
 }

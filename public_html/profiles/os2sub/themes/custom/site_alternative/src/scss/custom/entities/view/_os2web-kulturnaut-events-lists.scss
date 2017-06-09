@@ -24,10 +24,10 @@ $header-size: 112px;
     }
   }
   &.view-display-id-pane_related_articles,
-  // &.view-display-id-pane_activities_list_5_load_more,
+  &.view-display-id-pane_activities_list_5_load_more,
   &.view-display-id-pane_activities_for_tag,
   &.view-display-id-pane_activities_for_venue,
-  &.view-display-id-pane_activities_for_tema, 
+  &.view-display-id-pane_activities_for_tema,
   &.view-display-id-pane_kultunaut_events {
     .pager--infinite-scroll {
       margin-top: 0;
@@ -63,6 +63,10 @@ $header-size: 112px;
       }
     }
   }
+
+  &.view-display-id-block_slideshow .views-slideshow-cycle-main-frame-row {
+    max-width: 100%;
+  }
 }
 
 .not-front .container-fluid .menu-background-slideshow {
@@ -73,10 +77,6 @@ $header-size: 112px;
   position: relative;
   top: 0;
   margin-bottom: 0;
-
-  //  .views-field-field-os2web-kulturnaut-slidesho {
-  //    position: relative;
-  //  }
 
   .views-slideshow-controls-bottom {
     > .container {
@@ -116,8 +116,12 @@ $header-size: 112px;
   }
 
   .bottom-part {
-    position: absolute;
-    bottom: 75px;
+    position: absolute;;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 100%;
   }
 
   .views-field-title {
@@ -143,6 +147,11 @@ $header-size: 112px;
 
   .views-field-view-node {
     margin-top: 25px;
+    a {
+      left: 50%;
+      position: relative;
+      transform: translate(-50%,0);
+    }
   }
 }
 
@@ -164,42 +173,16 @@ $header-size: 112px;
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
-
-  // Banner
-  .banner {
-  }
   .container-fluid .menu-background-slideshow {
     .views-slideshow-controls-bottom {
       .widget_pager_bottom {
         display: none;
       }
     }
-    .bottom-part {
-      bottom: 30px;
-      width: 100%;
-      text-align: center;
-    }
     .views-field-field-os2web-kulturnaut-sname,
     .views-field-field-os2web-base-field-edi-tags,
     .views-field-field-os2web-kulturnaut-date{
       display: none;
-    }
-  }
-  .view-os2web-kulturnaut-events-lists {
-    &.view-display-id-pane_activities_list_5_load_more{
-      .pager--infinite-scroll {
-        margin-top: 0;
-        a {
-          @include load-more-btn-full-width;
-          &:before{
-            content: '+';
-            color: $color-focus;
-            font-weight: bold;
-            font-size: 3.18em;
-            line-height: 0.5em;
-          }
-        }
-      }
     }
   }
 }
@@ -214,56 +197,47 @@ $header-size: 112px;
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
-  // Banner
-  .banner {
-  }
   .container-fluid .menu-background-slideshow {
     .views-slideshow-controls-bottom {
       .widget_pager_bottom {
         display: none;
       }
     }
-    .bottom-part {
-      bottom: 30px;
-      width: 100%;
-      text-align: center;
-    } 
     .views-field-field-os2web-kulturnaut-sname,
     .views-field-field-os2web-base-field-edi-tags,
     .views-field-field-os2web-kulturnaut-date{
       display: none;
     }
   }
-  .view-os2web-kulturnaut-events-lists {
-    &.view-display-id-pane_activities_list_5_load_more{
-      .pager--infinite-scroll {
-        margin-top: 0;
-        a {
-          @include load-more-btn-full-width;
-          &:before{
-            content: '+';
-            color: $color-focus;
-            font-weight: bold;
-            font-size: 3.18em;
-            line-height: 0.5em;
-          }        
-        }
-      }
-    }
-  }
 }
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-
-  // Banner
-  .banner {
+  .view-os2web-kulturnaut-events-lists {
+    &.view-display-id-pane_related_articles,
+    &.view-display-id-pane_activities_list_5_load_more,
+    &.view-display-id-pane_activities_for_tag,
+    &.view-display-id-pane_activities_for_venue,
+    &.view-display-id-pane_activities_for_tema,
+    &.view-display-id-pane_kultunaut_events {
+      .pager--infinite-scroll {
+        a {
+          @include load-more-btn-full-width-md;
+        }
+      }
+    }
   }
+
   .container-fluid .menu-background-slideshow {
     position: relative;
     top: -$header-size;
     margin-bottom: -$header-size - 2;
+    .bottom-part {
+      left: auto;
+      bottom: 75px;
+      text-align: left;
+      transform: none;
+    }
     .views-field-field-os2web-kulturnaut-slidesho .field-content .img-container {
       height: 540px;
     }
@@ -272,6 +246,13 @@ $header-size: 112px;
     }
     .views-field-view-node {
       margin-top: 35px;
+      a {
+        left: auto;
+        transform: none;
+      }
+    }
+    .views-field-view-node-1 .field-content {
+      margin-left: 15px;
     }
   }
   .view-os2web-kulturnaut-events-lists {
@@ -289,16 +270,20 @@ $header-size: 112px;
             left: 0;
             bottom: 0;
             right: 0;
+            border: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-radius: 0;
+            color: $color-primary;
             background-color: $color-background-secondary;
             font-family: $font-roboto-slab;
             font-size: 3.18em;
             padding-left: 60px;
             padding-right: 60px;
+            text-transform: none;
+            font-weight: normal;
             &:before{
               content: '+';
               color: $color-focus;
@@ -308,6 +293,7 @@ $header-size: 112px;
             }
             &:hover, &:active, &:focus {
               background-color: $color-background-secondary;
+              color: $color-primary;
             }
           }
         }
