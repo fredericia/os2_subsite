@@ -9118,7 +9118,7 @@ h1.pane-title,
 .banner .banner-wrapper .pane-title.banner-headline {
   font-family: "Roboto Slab", serif;
   font-weight: bold;
-  font-size: 3.375em;
+  font-size: 2.5em;
   color: #0f2846;
   border: 0; }
 
@@ -9219,6 +9219,10 @@ h2.pane-title--lifted, .pane-title--lifted.heading-h2 {
   margin-bottom: -50px;
   padding-bottom: 15px; }
 
+.simple-gmap-static-map {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
@@ -9258,7 +9262,27 @@ h1.pane-title,
     .panel-pane.panel-pane--title-kulturnaut .pane-title img {
       top: -4px;
       position: relative;
-      height: 21px; } }
+      height: 21px; }
+  h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
+  h1.pane-title,
+  .pane-title.heading-h1,
+  .banner .banner-wrapper .pane-title.banner-headline {
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    font-size: 3.375em;
+    color: #0f2846;
+    border: 0; }
+  .vertical-line {
+    border-width: 0 1px 0 0;
+    border-color: #eeeeee;
+    border-style: solid;
+    padding-right: 40px; }
+  #details {
+    display: block !important; }
+  .field.field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 30px; } }
 
 .kultunaut h1.page-header span, .kultunaut .page-header.heading-h1 span, .kultunaut .banner .banner-wrapper .page-header.banner-headline span, .banner .banner-wrapper .kultunaut .page-header.banner-headline span {
   display: block;
