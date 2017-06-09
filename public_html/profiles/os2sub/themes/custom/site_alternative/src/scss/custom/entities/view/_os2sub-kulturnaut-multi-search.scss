@@ -56,3 +56,13 @@
   }
 }
 
+// Desktop - and up
+@include media-breakpoint-up(md) {
+  .view-os2sub-kulturnaut-multi-search {
+    .pager--infinite-scroll {
+      a {
+        @include load-more-btn-full-width-md;
+      }
+    }
+  }
+}
