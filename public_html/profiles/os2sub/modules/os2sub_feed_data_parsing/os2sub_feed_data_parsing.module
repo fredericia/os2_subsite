@@ -9,7 +9,7 @@ if ($node->type == 'os2web_kulturnaut_knactivity'){
   $time_string = $node->field_os2web_kulturnaut_time['und'][0]['value'];
  $time_string_safe = NULL;
   
-  if(false == strtotime('2017.09.06 ' . $time_string)) {
+  if(false == strtotime('2017-09-06 ' . $time_string)) {
 
   $time_string_safe = str_replace ('kl.', '', $time_string);
   $time_string_safe = explode('-', $time_string_safe)[0];
@@ -29,12 +29,12 @@ if ($node->type == 'os2web_kulturnaut_knactivity'){
     //dsm('Correct ' . $time_string );
 }
   //dsm($time_string );
-
- if(true == strtotime('2017.09.06 ' . $time_string_safe . '00') and $time_string_safe) {
+//dsm('2017-09-06 ' . $time_string_safe . ':00');
+ if( true == strtotime('2017-09-06 ' . $time_string_safe . ':00') ) {
   //adding time from feed to date
    $node->field_os2web_kulturnaut_date['und'][0]['value'] = mb_substr($node->field_os2web_kulturnaut_date['und'][0]['value'], 0, -8);
    $node->field_os2web_kulturnaut_date['und'][0]['value'] = $node->field_os2web_kulturnaut_date['und'][0]['value'] . $time_string_safe . ':00';
-//dsm($time_string );
+//dsm($node->field_os2web_kulturnaut_date['und'][0]['value'] );
    
  }else{
   //Parsint time fail, nothing to add
