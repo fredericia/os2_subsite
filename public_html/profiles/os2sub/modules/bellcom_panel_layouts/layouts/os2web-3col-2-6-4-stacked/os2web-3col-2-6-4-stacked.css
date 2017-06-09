@@ -1,1 +1,10 @@
 @import '../grid.css';
+
+button.btn.btn-tertiary.btn-full-width.hidden-md.hidden-lg {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#details{
+  margin-bottom: 10px;
+}

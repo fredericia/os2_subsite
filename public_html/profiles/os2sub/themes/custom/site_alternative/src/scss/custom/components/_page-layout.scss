@@ -34,7 +34,7 @@ h1.page-header,
 h1.pane-title {
   font-family: $font-roboto-slab;
   font-weight: bold;
-  font-size: 3.375em;
+  font-size: 2.5em;
   color: $color-primary;
   border: 0;
 }
@@ -156,6 +156,11 @@ h2.pane-title--lifted {
   padding-bottom: 15px;
 }
 
+.simple-gmap-static-map{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
@@ -184,7 +189,7 @@ h2.pane-title--lifted {
 @include media-breakpoint-only(xs) {
 
   // Page layout
-  .content-inner {}
+
 }
 
 // Tablet - and up
@@ -219,7 +224,7 @@ h2.pane-title--lifted {
   h2.pane-title {
     font-size: 3em;
   }
-  
+
   .search-and-title{
     padding-top: 19px;
   }
@@ -245,6 +250,30 @@ h2.pane-title--lifted {
           height: 21px;
         }
       }
+    }
+  }
+  h1.page-header,
+  h1.pane-title {
+    font-family: $font-roboto-slab;
+    font-weight: bold;
+    font-size: 3.375em;
+    color: $color-primary;
+    border: 0;
+  }
+  .vertical-line{
+    border-width: 0 1px 0 0;
+    border-color: $color-background-secondary;
+    border-style: solid;
+    padding-right: 40px;
+  }
+  #details{
+    display: block !important;
+  }
+  .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
+    & span.date-display-single{
+      display: block;
+      margin-top: 25px;
+      margin-bottom: 30px;
     }
   }
 }
@@ -285,7 +314,7 @@ h2.pane-title--lifted {
 }
 .kultunaut {
   h1.page-header {
-   // margin-left: 100px;
+    // margin-left: 100px;
     span {
       display: block;
       background: url('../img/logo_kultunaut.png') no-repeat;
