@@ -24,7 +24,7 @@ $header-size: 112px;
     }
   }
   &.view-display-id-pane_related_articles,
-  &.view-display-id-pane_activities_list_5_load_more,
+  // &.view-display-id-pane_activities_list_5_load_more,
   &.view-display-id-pane_activities_for_tag,
   &.view-display-id-pane_activities_for_venue,
   &.view-display-id-pane_activities_for_tema, 
@@ -184,7 +184,23 @@ $header-size: 112px;
       display: none;
     }
   }
-
+  .view-os2web-kulturnaut-events-lists {
+    &.view-display-id-pane_activities_list_5_load_more{
+      .pager--infinite-scroll {
+        margin-top: 0;
+        a {
+          @include load-more-btn-full-width;
+          &:before{
+            content: '+';
+            color: $color-focus;
+            font-weight: bold;
+            font-size: 3.18em;
+            line-height: 0.5em;
+          }
+        }
+      }
+    }
+  }
 }
 
 // Tablet - and up
@@ -218,7 +234,23 @@ $header-size: 112px;
       display: none;
     }
   }
-
+  .view-os2web-kulturnaut-events-lists {
+    &.view-display-id-pane_activities_list_5_load_more{
+      .pager--infinite-scroll {
+        margin-top: 0;
+        a {
+          @include load-more-btn-full-width;
+          &:before{
+            content: '+';
+            color: $color-focus;
+            font-weight: bold;
+            font-size: 3.18em;
+            line-height: 0.5em;
+          }        
+        }
+      }
+    }
+  }
 }
 
 // Desktop - and up
@@ -242,44 +274,44 @@ $header-size: 112px;
     }
   }
   .view-os2web-kulturnaut-events-lists {
-  &.view-display-id-pane_activities_list_5_load_more {
-    .pager--infinite-scroll {
-      margin: 0;
-      li {
-        width: 100%;
-        padding-top: 100%;
-        position: relative;
-        display: block;
-        a {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          border-radius: 0;
-          background-color: $color-background-secondary;
-          font-family: $font-roboto-slab;
-          font-size: 3.18em;
-          padding-left: 60px;
-          padding-right: 60px;
-          &:before{
-            content: '+';
-            color: $color-focus;
-            font-weight: bold;
-            font-size: 3.18em;
-            line-height: 0.5em;
-          }
-          &:hover, &:active, &:focus {
+    &.view-display-id-pane_activities_list_5_load_more {
+      .pager--infinite-scroll {
+        margin: 0;
+        li {
+          width: 100%;
+          padding-top: 100%;
+          position: relative;
+          display: block;
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
             background-color: $color-background-secondary;
+            font-family: $font-roboto-slab;
+            font-size: 3.18em;
+            padding-left: 60px;
+            padding-right: 60px;
+            &:before{
+              content: '+';
+              color: $color-focus;
+              font-weight: bold;
+              font-size: 3.18em;
+              line-height: 0.5em;
+            }
+            &:hover, &:active, &:focus {
+              background-color: $color-background-secondary;
+            }
           }
         }
       }
     }
-  }
   }
 }
 // Desktop - only

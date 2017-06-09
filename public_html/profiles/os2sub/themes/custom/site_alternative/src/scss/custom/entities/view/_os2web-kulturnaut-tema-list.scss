@@ -99,7 +99,7 @@
       height: 80px;
 
     }
-    & img-circle{
+    & .img-circle{
       width: 80px;
       height: 80px;
     }
@@ -120,6 +120,10 @@
       .views-field-description {
         font-size: 1.125em;
       }
+      .col-xs-9.col-md-10{
+      padding-left: 30px;
+
+    }
     }
     .view-content .views-field.views-field-description .field-content a.views-more-link{
       text-decoration: underline;
