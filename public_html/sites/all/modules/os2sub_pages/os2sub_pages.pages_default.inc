@@ -105,6 +105,7 @@ function os2sub_pages_default_page_manager_handlers() {
       'footer' => NULL,
       'sidebar-left' => NULL,
       'sidebar-right' => NULL,
+      'sidebar-right-xs-collapsible' => NULL,
     ),
   );
   $display->cache = array();
@@ -266,6 +267,35 @@ function os2sub_pages_default_page_manager_handlers() {
     $display->content['new-e7dbf0ad-a196-4168-b43a-16cf9868060e'] = $pane;
     $display->panels['sidebar-right'][1] = 'new-e7dbf0ad-a196-4168-b43a-16cf9868060e';
     $pane = new stdClass();
+    $pane->pid = 'new-1fb317b7-3e15-47f3-95d4-0ba1e0f0def1';
+    $pane->panel = 'sidebar-right';
+    $pane->type = 'token';
+    $pane->subtype = 'node:field_os2web_kulturnaut_venue';
+    $pane->shown = FALSE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'sanitize' => 1,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '%none',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'visible-xs visible-sm',
+      'template_suggestion' => 'token',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $pane->uuid = '1fb317b7-3e15-47f3-95d4-0ba1e0f0def1';
+    $display->content['new-1fb317b7-3e15-47f3-95d4-0ba1e0f0def1'] = $pane;
+    $display->panels['sidebar-right'][2] = 'new-1fb317b7-3e15-47f3-95d4-0ba1e0f0def1';
+    $pane = new stdClass();
     $pane->pid = 'new-29ac8730-64ec-4ffc-b589-65d002685781';
     $pane->panel = 'sidebar-right';
     $pane->type = 'entity_field';
@@ -294,14 +324,14 @@ function os2sub_pages_default_page_manager_handlers() {
       'template_suggestion' => '',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '29ac8730-64ec-4ffc-b589-65d002685781';
     $display->content['new-29ac8730-64ec-4ffc-b589-65d002685781'] = $pane;
-    $display->panels['sidebar-right'][2] = 'new-29ac8730-64ec-4ffc-b589-65d002685781';
+    $display->panels['sidebar-right'][3] = 'new-29ac8730-64ec-4ffc-b589-65d002685781';
     $pane = new stdClass();
     $pane->pid = 'new-9be16197-abe9-4813-aaa9-8e754ba9de4e';
-    $pane->panel = 'sidebar-right';
+    $pane->panel = 'sidebar-right-xs-collapsible';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_kulturnaut_date';
     $pane->shown = TRUE;
@@ -335,14 +365,14 @@ function os2sub_pages_default_page_manager_handlers() {
       'template_suggestion' => 'entity_field',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 0;
     $pane->locks = array();
     $pane->uuid = '9be16197-abe9-4813-aaa9-8e754ba9de4e';
     $display->content['new-9be16197-abe9-4813-aaa9-8e754ba9de4e'] = $pane;
-    $display->panels['sidebar-right'][3] = 'new-9be16197-abe9-4813-aaa9-8e754ba9de4e';
+    $display->panels['sidebar-right-xs-collapsible'][0] = 'new-9be16197-abe9-4813-aaa9-8e754ba9de4e';
     $pane = new stdClass();
     $pane->pid = 'new-7f30286f-ddf1-4a0e-b850-8cce1de409a4';
-    $pane->panel = 'sidebar-right';
+    $pane->panel = 'sidebar-right-xs-collapsible';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_kulturnaut_venue';
     $pane->shown = TRUE;
@@ -365,18 +395,18 @@ function os2sub_pages_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'hidden-xs hidden-sm',
+      'css_class' => 'visible-md visible-lg',
       'template_suggestion' => 'entity_field',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '7f30286f-ddf1-4a0e-b850-8cce1de409a4';
     $display->content['new-7f30286f-ddf1-4a0e-b850-8cce1de409a4'] = $pane;
-    $display->panels['sidebar-right'][4] = 'new-7f30286f-ddf1-4a0e-b850-8cce1de409a4';
+    $display->panels['sidebar-right-xs-collapsible'][1] = 'new-7f30286f-ddf1-4a0e-b850-8cce1de409a4';
     $pane = new stdClass();
     $pane->pid = 'new-db4a95ec-e4b4-4bf7-869f-32b1bfb68f09';
-    $pane->panel = 'sidebar-right';
+    $pane->panel = 'sidebar-right-xs-collapsible';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_kulturnaut_price';
     $pane->shown = TRUE;
@@ -399,18 +429,18 @@ function os2sub_pages_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'hidden-xs hidden-sm',
+      'css_class' => '',
       'template_suggestion' => 'entity_field',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 2;
     $pane->locks = array();
     $pane->uuid = 'db4a95ec-e4b4-4bf7-869f-32b1bfb68f09';
     $display->content['new-db4a95ec-e4b4-4bf7-869f-32b1bfb68f09'] = $pane;
-    $display->panels['sidebar-right'][5] = 'new-db4a95ec-e4b4-4bf7-869f-32b1bfb68f09';
+    $display->panels['sidebar-right-xs-collapsible'][2] = 'new-db4a95ec-e4b4-4bf7-869f-32b1bfb68f09';
     $pane = new stdClass();
     $pane->pid = 'new-3cc2a94c-8afd-4077-aa04-1617055e84e5';
-    $pane->panel = 'sidebar-right';
+    $pane->panel = 'sidebar-right-xs-collapsible';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_kulturnaut_sarrang';
     $pane->shown = TRUE;
@@ -433,18 +463,18 @@ function os2sub_pages_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'hidden-xs hidden-sm',
+      'css_class' => '',
       'template_suggestion' => 'entity_field',
     );
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 3;
     $pane->locks = array();
     $pane->uuid = '3cc2a94c-8afd-4077-aa04-1617055e84e5';
     $display->content['new-3cc2a94c-8afd-4077-aa04-1617055e84e5'] = $pane;
-    $display->panels['sidebar-right'][6] = 'new-3cc2a94c-8afd-4077-aa04-1617055e84e5';
+    $display->panels['sidebar-right-xs-collapsible'][3] = 'new-3cc2a94c-8afd-4077-aa04-1617055e84e5';
     $pane = new stdClass();
     $pane->pid = 'new-33f17203-1e45-403b-b39b-acdf33cefc9a';
-    $pane->panel = 'sidebar-right';
+    $pane->panel = 'sidebar-right-xs-collapsible';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_kulturnaut_venue';
     $pane->shown = TRUE;
@@ -467,14 +497,14 @@ function os2sub_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 7;
+    $pane->position = 4;
     $pane->locks = array();
     $pane->uuid = '33f17203-1e45-403b-b39b-acdf33cefc9a';
     $display->content['new-33f17203-1e45-403b-b39b-acdf33cefc9a'] = $pane;
-    $display->panels['sidebar-right'][7] = 'new-33f17203-1e45-403b-b39b-acdf33cefc9a';
+    $display->panels['sidebar-right-xs-collapsible'][4] = 'new-33f17203-1e45-403b-b39b-acdf33cefc9a';
     $pane = new stdClass();
     $pane->pid = 'new-4aea3468-b776-4415-8c11-272837cc1350';
-    $pane->panel = 'sidebar-right';
+    $pane->panel = 'sidebar-right-xs-collapsible';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_os2web_base_field_edi_tags';
     $pane->shown = TRUE;
@@ -497,15 +527,15 @@ function os2sub_pages_default_page_manager_handlers() {
     );
     $pane->css = array(
       'css_id' => '',
-      'css_class' => 'hidden-xs hidden-sm',
+      'css_class' => '',
       'template_suggestion' => 'entity_field',
     );
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 5;
     $pane->locks = array();
     $pane->uuid = '4aea3468-b776-4415-8c11-272837cc1350';
     $display->content['new-4aea3468-b776-4415-8c11-272837cc1350'] = $pane;
-    $display->panels['sidebar-right'][8] = 'new-4aea3468-b776-4415-8c11-272837cc1350';
+    $display->panels['sidebar-right-xs-collapsible'][5] = 'new-4aea3468-b776-4415-8c11-272837cc1350';
     $pane = new stdClass();
     $pane->pid = 'new-26d19768-2e1f-4d8e-8017-42cb5dcb15d5';
     $pane->panel = 'top';
