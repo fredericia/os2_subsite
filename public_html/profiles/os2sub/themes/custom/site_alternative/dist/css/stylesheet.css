@@ -9283,13 +9283,11 @@ h1.pane-title,
   .panel-pane--title .pane-content {
     margin-top: -3.85em; } }
 
-.kultunaut h1.page-header, .kultunaut .page-header.heading-h1, .kultunaut .banner .banner-wrapper .page-header.banner-headline, .banner .banner-wrapper .kultunaut .page-header.banner-headline {
-  margin-left: 100px; }
-  .kultunaut h1.page-header span, .kultunaut .page-header.heading-h1 span, .kultunaut .banner .banner-wrapper .page-header.banner-headline span, .banner .banner-wrapper .kultunaut .page-header.banner-headline span {
-    display: block;
-    background: url("../img/logo_kultunaut.png") no-repeat;
-    width: 190px;
-    height: 19px; }
+.kultunaut h1.page-header span, .kultunaut .page-header.heading-h1 span, .kultunaut .banner .banner-wrapper .page-header.banner-headline span, .banner .banner-wrapper .kultunaut .page-header.banner-headline span {
+  display: block;
+  background: url("../img/logo_kultunaut.png") no-repeat;
+  width: 190px;
+  height: 19px; }
 
 header.navbar {
   background-color: #0f2846; }
@@ -10127,7 +10125,8 @@ footer.footer a.block-image-links__link {
 .view-os2web-kulturnaut-events-lists.view-display-id-pane_kultunaut_events {
   margin-bottom: 80px; }
   .view-os2web-kulturnaut-events-lists.view-display-id-pane_kultunaut_events .view-header {
-    margin-left: 100px;
+    margin-top: 5px;
+    margin-bottom: 60px;
     color: #0f2846; }
 
 .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-title {
