@@ -43,6 +43,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
           'xpathparser:18' => 'kategori',
           'xpathparser:21' => '\'feed\'',
           'xpathparser:22' => 'tid',
+          'xpathparser:23' => 'billede',
         ),
         'rawXML' => array(
           'xpathparser:2' => 0,
@@ -56,6 +57,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
           'xpathparser:18' => 0,
           'xpathparser:21' => 0,
           'xpathparser:22' => 0,
+          'xpathparser:23' => 0,
         ),
         'context' => '/main/arrlist/arr',
         'exp' => array(
@@ -75,6 +77,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
             'xpathparser:18' => 'xpathparser:18',
             'xpathparser:21' => 'xpathparser:21',
             'xpathparser:22' => 'xpathparser:22',
+            'xpathparser:23' => 'xpathparser:23',
           ),
         ),
         'allow_override' => 0,
@@ -141,6 +144,11 @@ function os2web_kulturnaut_events_feeds_importer_default() {
           10 => array(
             'source' => 'xpathparser:22',
             'target' => 'field_os2web_kulturnaut_time',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'xpathparser:23',
+            'target' => 'field_os2web_kulturnaut_url',
             'unique' => FALSE,
           ),
         ),
