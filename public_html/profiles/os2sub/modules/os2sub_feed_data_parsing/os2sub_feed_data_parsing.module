@@ -42,7 +42,7 @@ function os2sub_feed_data_parsing_node_presave($node) {
     $feed_img_basename = pathinfo($feed_img_url)['basename'];
     $feed_img_extension = pathinfo($feed_img_url)['extension'];
 
-    $node->field_os2web_kulturnaut_url['und'][0]['value'] = NULL;
+    $node->field_os2web_kulturnaut_url['und'][0]['value'] = '';
     
 //dsm($path_info = pathinfo($feed_img_url));
     $local_filename = $feed_img_filename;
@@ -57,7 +57,7 @@ function os2sub_feed_data_parsing_node_presave($node) {
     $local_basename = $local_filename . '.' . $feed_img_extension;
 
     //If we can copy file, then adding file to the node
-    if (@copy($feed_img_url, drupal_realpath('public://' . $local_basename))) {
+    if ( TRUE) {
       $uri = 'public://' . $local_basename;
 //Creating new file object
       $file = new stdClass();
@@ -72,10 +72,10 @@ function os2sub_feed_data_parsing_node_presave($node) {
 //Adding file to the node
       $node->field_os2web_kulturnaut_slidesho['und'][] = (array) $file;
 
-      dsm('save: ' . drupal_realpath('public://' . $local_basename) . 'url: ' . $feed_img_url);
+      dsm('save: ' . drupal_realpath('public://' . $local_basename) . ' url: ' . $feed_img_url);
     } else {
       //Image not saved
-      dsm('no: '  . drupal_realpath('public://' . $local_basename) .  'url: ' . $feed_img_url);
+      dsm('no: '  . drupal_realpath('public://' . $local_basename) .  ' url: ' . $feed_img_url);
     }
   }else{
     //node is not 'os2web_kulturnaut_knactivity' or node added not from feed
