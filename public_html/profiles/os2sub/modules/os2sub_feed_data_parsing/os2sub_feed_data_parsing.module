@@ -42,6 +42,8 @@ function os2sub_feed_data_parsing_node_presave($node) {
     $feed_img_basename = pathinfo($feed_img_url)['basename'];
     $feed_img_extension = pathinfo($feed_img_url)['extension'];
 
+    $node->field_os2web_kulturnaut_url['und'][0]['value'] = NULL;
+    
 //dsm($path_info = pathinfo($feed_img_url));
     $local_filename = $feed_img_filename;
 
