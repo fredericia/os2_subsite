@@ -8707,11 +8707,11 @@ body {
   color: #666666;
   font-size: 1.0625em; }
 
-.call-to-action {
+.contextual-links-region.panel-pane.pane-custom.pane-1.call-to-action {
   text-align: center;
   background-color: #a3283e;
   color: #ffffff; }
-  .call-to-action .pane-title {
+  .contextual-links-region.panel-pane.pane-custom.pane-1.call-to-action .pane-title {
     color: #ffffff; }
 
 h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
@@ -8763,8 +8763,13 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
 .instagram-image img {
   height: 200px; }
 
-.facebook-forside {
-  background-color: #e0ded4; }
+.full-width {
+  margin-right: -9999rem;
+  margin-left: -9999rem;
+  padding: 30px 9999rem 10px;
+  background: #e0ded4;
+  margin-top: 20px;
+  margin-bottom: 30px; }
 
 .content-inner {
   padding-top: 20px;
@@ -9388,4 +9393,7 @@ footer.footer a.image-links__link {
 
 .container-fluid .background-slideshow .views-field-view-node {
   margin-top: 30px; }
+
+.panel-pane.pane-views.pane-det-sker-slideshow {
+  background-color: #0f2846; }
 /*# sourceMappingURL=stylesheet.css.map */
