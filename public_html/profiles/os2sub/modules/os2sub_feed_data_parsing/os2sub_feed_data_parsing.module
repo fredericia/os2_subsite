@@ -30,7 +30,8 @@ function os2sub_feed_data_parsing_node_presave($node) {
       //adding time from feed to date
       $node->field_os2web_kulturnaut_date['und'][0]['value'] = mb_substr($node->field_os2web_kulturnaut_date['und'][0]['value'], 0, -8);
       $node->field_os2web_kulturnaut_date['und'][0]['value'] = $node->field_os2web_kulturnaut_date['und'][0]['value'] . $time_string_safe . ':00';
-//dsm($node->field_os2web_kulturnaut_date['und'][0]['value'] );
+      $node->field_os2web_kulturnaut_date['und'][0]['value2'] = $node->field_os2web_kulturnaut_date['und'][0]['value'];
+      //dsm($node->field_os2web_kulturnaut_date['und'][0]);
     } else {
       //Parsint time fail, nothing to add
     }
