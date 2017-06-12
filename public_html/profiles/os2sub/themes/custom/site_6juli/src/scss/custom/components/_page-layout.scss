@@ -49,7 +49,6 @@ body {
     .pane-title{
       color: $color-light-background;  
     }
-    
 }
 
 .panel-pane .pane-custom .pane-1 {
@@ -129,8 +128,13 @@ p {
 
 }
 
-.facebook-forside{
-  background-color: $color-font-light;
+.full-width{
+  margin-right: -9999rem;
+    margin-left: -9999rem;
+    padding: 30px 9999rem 10px;
+    background: $color-grey-background;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 // --------------------------------------------------
 // Variants

@@ -8685,16 +8685,20 @@ body {
   color: #666666;
   font-size: 1.0625em; }
 
+<<<<<<< f17becf36a3cc417bcab86aae3c2f4d15a6cabc1
 .events {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px; }
 
 .call-to-action {
+=======
+.contextual-links-region.panel-pane.pane-custom.pane-1.call-to-action {
+>>>>>>> 6juli Colors to edge
   text-align: center;
   background-color: #a3283e;
   color: #ffffff; }
-  .call-to-action .pane-title {
+  .contextual-links-region.panel-pane.pane-custom.pane-1.call-to-action .pane-title {
     color: #ffffff; }
 
 .panel-pane .pane-custom .pane-1 {
@@ -8775,8 +8779,13 @@ p {
 .instagram-image img {
   height: 200px; }
 
-.facebook-forside {
-  background-color: #e0ded4; }
+.full-width {
+  margin-right: -9999rem;
+  margin-left: -9999rem;
+  padding: 30px 9999rem 10px;
+  background: #e0ded4;
+  margin-top: 20px;
+  margin-bottom: 30px; }
 
 .content-inner {
   padding-top: 20px;
@@ -9715,4 +9724,7 @@ footer.footer a.image-links__link {
 
 .container-fluid .background-slideshow .views-field-view-node {
   margin-top: 30px; }
+
+.panel-pane.pane-views.pane-det-sker-slideshow {
+  background-color: #0f2846; }
 /*# sourceMappingURL=stylesheet.css.map */
