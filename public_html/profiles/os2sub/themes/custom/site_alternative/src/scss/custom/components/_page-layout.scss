@@ -269,11 +269,13 @@ h2.pane-title--lifted {
   #details{
     display: block !important;
   }
-  .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
-    & span.date-display-single{
-      display: block;
-      margin-top: 25px;
-      margin-bottom: 30px;
+  .node--os2web_kulturnaut_knactivity--full{
+    & .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
+      & span.date-display-single{
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 30px;
+      }
     }
   }
 }

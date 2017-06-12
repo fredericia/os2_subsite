@@ -9279,7 +9279,7 @@ h1.pane-title,
     padding-right: 40px; }
   #details {
     display: block !important; }
-  .field.field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single {
+  .node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single {
     display: block;
     margin-top: 25px;
     margin-bottom: 30px; } }

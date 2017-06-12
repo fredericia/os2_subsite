@@ -34,7 +34,7 @@ if ($include_static_map) {
   $static_s = (int) $static_scale;
 ?>
 <div class="simple-gmap-static-map">
-  <img src="https://maps.googleapis.com/maps/api/staticmap?size=<?php print $static_w; ?>x<?php print $static_h; ?>&amp;scale=<?php print $static_s; ?>&amp;zoom=<?php print $zoom; ?>&amp;language=<?php print $langcode; ?>&amp;maptype=<?php print $static_map_type; ?>&amp;markers=color:red|<?php print $url_suffix; ?>&amp;sensor=false&amp;key=<?php print $apikey; ?>" />
+  <img class="img-responsive" src="https://maps.googleapis.com/maps/api/staticmap?size=<?php print $static_w; ?>x<?php print $static_h; ?>&amp;scale=<?php print $static_s; ?>&amp;zoom=<?php print $zoom; ?>&amp;language=<?php print $langcode; ?>&amp;maptype=<?php print $static_map_type; ?>&amp;markers=color:red|<?php print $url_suffix; ?>&amp;sensor=false&amp;key=<?php print $apikey; ?>" />
 </div>
 <?php
 }
