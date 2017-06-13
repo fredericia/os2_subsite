@@ -8685,6 +8685,11 @@ body {
   color: #666666;
   font-size: 1.0625em; }
 
+.events {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px; }
+
 .call-to-action {
   text-align: center;
   background-color: #a3283e;
@@ -8692,13 +8697,39 @@ body {
   .call-to-action .pane-title {
     color: #ffffff; }
 
+.panel-pane .pane-custom .pane-1 {
+  display: none; }
+
+#block-system-main .col-xs-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+#block-system-main .panel-pane {
+  max-width: 1024px;
+  padding: 20px; }
+
 h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
 h1.pane-title,
 .pane-title.heading-h1,
 .banner .banner-wrapper .pane-title.banner-headline {
   font-family: "Droid Serif", serif;
   font-weight: bold;
-  font-size: 2.625em;
+  font-size: 4.625em;
   color: #0f2846;
   border: 0; }
 
@@ -8707,8 +8738,8 @@ h2.pane-title,
 .pane-title.heading-h2 {
   font-family: "Droid Serif", serif;
   font-weight: bold;
-  font-size: 3.25em;
-  color: #205692;
+  font-size: 4.25em;
+  color: #386c87;
   border: 0; }
 
 h2.pane-fb-likebox-0, .pane-fb-likebox-0.heading-h2,
@@ -8716,8 +8747,8 @@ h2.pane-title,
 .pane-title.heading-h2 {
   font-family: "Droid Serif", serif;
   font-weight: bold;
-  font-size: 3.25em;
-  color: #205692;
+  font-size: 4.25em;
+  color: #386c87;
   border: 0; }
 
 .event-teaser h2.page-header, .event-teaser .page-header.heading-h2,
@@ -8725,8 +8756,8 @@ h2.pane-title,
 .event-teaser .pane-title.heading-h2 {
   font-family: "Droid Serif", serif;
   font-weight: bold;
-  font-size: 2.625em;
-  color: #205692;
+  font-size: 4.625em;
+  color: #386c87;
   border: 0; }
 
 h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-headline, .node-teaser .pane-title.node-teaser-full-name, .pane-title.node-list-title {
@@ -8734,6 +8765,9 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
   font-size: 1.25em;
   text-transform: uppercase;
   color: #666666; }
+
+p {
+  font-size: 1.5em; }
 
 .content {
   background-color: #F5F4F4; }
@@ -9049,10 +9083,10 @@ header#navbar {
   border-width: 3px;
   border-color: transparent;
   border-radius: 100px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   text-align: center;
-  line-height: 19px;
+  line-height: 14px;
   opacity: 0.5; }
 
 .pagination > li:first-child > a,
@@ -9238,14 +9272,19 @@ ul.pagination {
   height: 80px; }
 
 .prev a {
-  width: 70px !important;
-  height: 70px !important;
+  width: 50px !important;
+  height: 50px !important;
   opacity: 1 !important; }
 
 .next a {
-  width: 70px !important;
-  height: 70px !important;
-  opacity: 1 !important; }
+  width: 50px !important;
+  height: 50px !important;
+  opacity: 1 !important;
+  background-image: url("http://www.seeicons.com/images/iconstore/512/seeicons__577f762bc10da.png") !important;
+  -webkit-background-size: 20px 20px !important;
+          background-size: 20px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important; }
 
 footer.footer {
   padding-top: 0px;
@@ -9333,7 +9372,7 @@ footer.footer a.image-links__link {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   margin-right: 15px;
-  font-size: 1.525em;
+  font-size: 1.625em;
   width: 180px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9638,7 +9677,8 @@ footer.footer a.image-links__link {
 
 .container-fluid .background-slideshow .bottom-part {
   position: absolute;
-  bottom: 60px; }
+  bottom: 60px;
+  left: 0; }
 
 .container-fluid .background-slideshow .views-field-title {
   font-family: "Droid Serif", serif;
