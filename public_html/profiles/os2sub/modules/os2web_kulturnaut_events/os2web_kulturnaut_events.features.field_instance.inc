@@ -103,7 +103,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long',
-          'fromto' => 'both',
+          'fromto' => 'value',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -116,8 +116,8 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'os2sub_kultunaut_long_date',
-          'fromto' => 'both',
+          'format_type' => 'os2web_base_date_only',
+          'fromto' => 'value',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',

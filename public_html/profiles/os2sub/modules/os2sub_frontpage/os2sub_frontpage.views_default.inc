@@ -600,6 +600,7 @@ function os2sub_frontpage_views_default_views() {
   $handler->display->display_options['fields']['description']['field'] = 'description';
   $handler->display->display_options['fields']['description']['label'] = '';
   $handler->display->display_options['fields']['description']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['description']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['description']['alter']['more_link'] = TRUE;
   $handler->display->display_options['fields']['description']['alter']['more_link_text'] = 'Læs mere';
   $handler->display->display_options['fields']['description']['alter']['more_link_path'] = 'taxonomy/term/[tid]';

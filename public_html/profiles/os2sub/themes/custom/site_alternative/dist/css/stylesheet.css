@@ -9313,7 +9313,6 @@ header.navbar {
       header.navbar .container .menu.nav li > a.active, header.navbar .container .menu.nav li > a:hover {
         background: none;
         border-bottom: 6px solid #ff0060;
-        font-weight: 900;
         margin-bottom: 0px; }
       header.navbar .container .menu.nav li > a:after {
         display: block;
