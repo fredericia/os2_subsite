@@ -160,6 +160,26 @@ h2.pane-title--lifted {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.field.field-name-field-os2web-kulturnaut-url.field-type-text{
+  & a.btn{
+    background-color: $color-btn-secondary;
+    border-color: $color-btn-secondary;
+    &:hover, &:active, &:focus {
+      color: $color-btn-secondary;
+      background-color: $color-background-primary;
+    }
+  }
+
+}
+span.caret{
+  width: 24px;
+  height: 14px;
+  background-image: url('../img/v.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none !important;
+}
+
 
 // --------------------------------------------------
 // Responsive

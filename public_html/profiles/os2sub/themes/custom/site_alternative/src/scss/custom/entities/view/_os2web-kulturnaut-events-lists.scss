@@ -130,6 +130,8 @@ $header-size: 112px;
     line-height: 1.0em;
     font-weight: 900;
     color: white;
+    padding-bottom: 10px;
+    text-shadow: 3px 3px 4px #4f6177;
   }
 
   .views-field-field-os2web-kulturnaut-sname,
@@ -243,6 +245,7 @@ $header-size: 112px;
     }
     .views-field-title {
       font-size: 4em;
+      padding-bottom: 20px;
     }
     .views-field-view-node {
       margin-top: 35px;
@@ -280,16 +283,18 @@ $header-size: 112px;
             background-color: $color-background-secondary;
             font-family: $font-roboto-slab;
             font-size: 3.18em;
-            padding-left: 60px;
-            padding-right: 60px;
+            padding-left: 160px;
+            padding-right: 160px;
             text-transform: none;
             font-weight: normal;
+
             &:before{
               content: '+';
               color: $color-focus;
               font-weight: bold;
               font-size: 3.18em;
               line-height: 0.5em;
+              padding-bottom: 25px;
             }
             &:hover, &:active, &:focus {
               background-color: $color-background-secondary;
