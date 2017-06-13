@@ -9550,14 +9550,90 @@ header.navbar {
       font-size: 1.31em;
       color: #ff0060; }
 
+.page-node .prefooter {
+  background-color: #eeeeee;
+  margin-top: 20px; }
+  .page-node .prefooter .right-vertical-line {
+    padding-top: 10px;
+    padding-bottom: 0px; }
+    .page-node .prefooter .right-vertical-line h2.pane-title, .page-node .prefooter .right-vertical-line .pane-title.heading-h2 {
+      margin-top: 4px;
+      margin-bottom: 15px; }
+  .page-node .prefooter .pop-tags {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px; }
+    .page-node .prefooter .pop-tags h2.pane-title, .page-node .prefooter .pop-tags .pane-title.heading-h2 {
+      margin-top: 4px;
+      margin-bottom: 15px; }
+  .page-node .prefooter h2 .focus, .page-node .prefooter .heading-h2 .focus {
+    color: #ff0060;
+    font-weight: normal; }
+  .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul {
+    padding: 0; }
+    .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li {
+      display: none;
+      list-style: none;
+      margin-right: 15px;
+      margin-bottom: 13px; }
+      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:last-child {
+        margin-right: 0; }
+      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:nth-child(1), .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:nth-child(2), .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:nth-child(3), .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:nth-child(4), .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:nth-child(5), .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:nth-child(6) {
+        display: inline-block; }
+      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a {
+        display: block;
+        padding: 7px 40px;
+        background-color: #eeeeee;
+        border-radius: 30px;
+        font-size: 1.31em;
+        color: #ff0060; }
+
 @media (min-width: 1200px) {
   .prefooter .right-vertical-line {
     border-width: 0 4px 0 0;
     border-color: #eeeeee;
     border-style: solid;
+    padding-right: 63px; }
+  .page-node .prefooter .right-vertical-line {
+    border-width: 0 4px 0 0;
+    border-color: white;
+    border-style: solid;
     padding-right: 63px; } }
 
 @media (min-width: 992px) {
+  .page-node .prefooter .right-vertical-line {
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .page-node .prefooter .right-vertical-line h2.pane-title, .page-node .prefooter .right-vertical-line .pane-title.heading-h2 {
+      margin-top: 4px;
+      margin-bottom: 35px; }
+  .page-node .prefooter .pop-tags {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 60px; }
+    .page-node .prefooter .pop-tags h2.pane-title, .page-node .prefooter .pop-tags .pane-title.heading-h2 {
+      margin-top: 4px;
+      margin-bottom: 35px; }
+  .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul {
+    padding: 0; }
+    .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li {
+      list-style: none;
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 13px; }
+      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:last-child {
+        margin-right: 0; }
+      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a {
+        display: block;
+        padding: 7px 40px;
+        background-color: white;
+        border-radius: 30px;
+        font-size: 1.31em;
+        color: #ff0060;
+        text-decoration: none; }
+        .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a:hover {
+          background-color: #ff0060;
+          color: white; }
   .prefooter .right-vertical-line {
     padding-top: 55px;
     padding-bottom: 30px; }
