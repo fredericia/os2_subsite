@@ -118,23 +118,42 @@ article .field-type-text-with-summary {
 }
 
 .event-teaser {
-    margin: 10px;
+    margin: 0px;
+    margin-bottom: 30px;
     overflow: hidden!important;
     width: 460px;
     height: 280px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
 }
 
 .event-teaser-title {
-    display: inline-flex;
-    position: absolute;
-    transform: translateY(220px);
-    margin-left: 40px;
+    
     font-size: 2.4em;
     color: #fff;
-    z-index: 9999999!important;
-    background: none!important;
+    margin-left: 20px!important;
+
+}
+
+.event-teaser-title:hover {
+    
+    color: #fff!important;
+}
+
+.event-teaser-title:focus {
+    
+    color: #fff;
+}
+
+#edit-title-wrapper input {
+    
+    width: 300px!important;
+}
+
+.event-teaser .col-lg-6 {
+    
+    padding: 0!important;
 }
 
 h1.page-header,
@@ -162,6 +181,12 @@ h2.pane-title {
     font-size: 4.25em;
     color: $section-heading-color;
     border: 0;
+}
+
+
+.node-event-calendar {
+    
+    margin-bottom: 30px;
 }
 
 .event-teaser {
@@ -369,3 +394,76 @@ select {
 // --------------------------------------------------
 // Page layout mixin
 @mixin content-mixin-inner() {}
+
+
+@media only screen and (max-width : 780px) {
+    
+    tr {
+        
+        display: flex;
+        flex-direction: column;
+    }
+    
+       .event-teaser {
+    
+    width: 310px!important;
+    height: 130px!important;
+}
+    
+    .views-exposed-widgets {
+        
+        flex-direction: column!important;
+    }
+    
+    #edit-event-calendar-date-value2-wrapper {
+        
+        width: 100%;
+        display: flex;
+    }
+    
+    #edit-title-wrapper {
+        
+        margin-bottom: 6px;
+    }
+    
+}
+
+@media only screen and (max-width : 980px) {
+    
+    .event-teaser {
+    
+    width: 280px!important;
+    height: 120px!important;
+}
+    
+}
+
+@media only screen and (max-width : 1024px) {
+    
+    .event-teaser {
+    
+    width: 310px;
+    height: 130px;
+}
+    
+}
+
+@media only screen and (max-width : 1180px) {
+    
+    .event-teaser {
+    
+    width: 360px;
+    height: 180px;
+}
+    
+}
+
+@media only screen and (max-width : 1424px) {
+    
+    .event-teaser {
+    
+    width: 360px;
+    height: 180px;
+}
+    
+}

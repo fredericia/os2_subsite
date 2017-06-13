@@ -105,10 +105,9 @@
 
   <div class = "row event-teaser">
 	<a class="event-teaser-title" href="<?php print $node_url; ?>"><?php print $title; ?></a>
-	<div class = "col-lg-6 visible-md visible-lg">
+	
         <a href="<?php print $node_url; ?>"><?php print render($content['field_image_event']); ?></a>
-	  
-	</div>
+
   </div>
 
 
