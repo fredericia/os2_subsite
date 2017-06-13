@@ -8763,10 +8763,6 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
     padding-top: 40px;
     padding-bottom: 60px; } }
 
-header {
-  position: fixed !important;
-  width: 100%; }
-
 header#navbar {
   margin-bottom: 0px;
   background-color: #ffffff;
@@ -9054,10 +9050,10 @@ header#navbar {
   border-width: 3px;
   border-color: transparent;
   border-radius: 100px;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   text-align: center;
-  line-height: 19px;
+  line-height: 14px;
   opacity: 0.5; }
 
 .pagination > li:first-child > a,
@@ -9207,8 +9203,11 @@ ul.pagination {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 290px;
+  position: relative;
+  -webkit-transform: translateY(-300px);
+      -ms-transform: translateY(-300px);
+       -o-transform: translateY(-300px);
+          transform: translateY(-300px);
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -9243,18 +9242,45 @@ ul.pagination {
   height: 80px; }
 
 .prev a {
-  width: 70px !important;
-  height: 70px !important;
+  width: 50px !important;
+  height: 50px !important;
   opacity: 1 !important; }
 
 .next a {
-  width: 70px !important;
-  height: 70px !important;
-  opacity: 1 !important; }
+  background-image: url("http://www.seeicons.com/images/iconstore/512/seeicons__577f762bc10da.png") !important;
+  -webkit-background-size: 20px 20px !important;
+          background-size: 20px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  width: 50px !important;
+  height: 50px !important;
+  opacity: 1 !important;
+  background-image: url("http://www.seeicons.com/images/iconstore/512/seeicons__577f762bc10da.png") !important;
+  -webkit-background-size: 20px 20px !important;
+          background-size: 20px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important; }
+
+.views-exposed-widgets {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
+
+.views-submit-button button {
+  display: none !important; }
+
+.views-exposed-form .views-exposed-widget .form-submit {
+  margin-top: 0 !important; }
+
+.views-exposed-form .views-exposed-widget .btn, .views-exposed-form .views-exposed-widget .banner .banner-wrapper a, .banner .banner-wrapper .views-exposed-form .views-exposed-widget a {
+  margin-top: 0 !important; }
 
 footer.footer {
   padding-top: 0px;
   margin-top: 0px;
+  padding-bottom: 80px !important;
   border: none;
   background-color: #0f2846;
   color: #e0ded4; }
@@ -9274,7 +9300,7 @@ footer.footer {
     margin-bottom: 20px; }
   footer.footer h2.block-title, footer.footer .block-title.heading-h2 {
     margin-top: 0;
-    font-size: 1.125em;
+    font-size: 1.625em;
     font-family: "Lato", sans-serif;
     color: #e0ded4;
     font-weight: bold;
@@ -9282,7 +9308,8 @@ footer.footer {
   footer.footer a {
     color: #e0ded4; }
   footer.footer .menu li {
-    padding: 3px 0; }
+    padding: 3px 0;
+    font-size: 1.4em; }
   footer.footer .menu a {
     background: none;
     display: inline;
@@ -9319,7 +9346,7 @@ footer.footer a.image-links__link {
     text-align: center; }
     footer.footer a.image-social-links__link img {
       margin-bottom: 15px;
-      width: 40px;
+      width: 36px;
       margin-left: 5px;
       margin-right: 5px; }
     footer.footer .social-footer {
@@ -9338,7 +9365,7 @@ footer.footer a.image-links__link {
   font-family: "Lato", sans-serif;
   font-weight: bold;
   margin-right: 15px;
-  font-size: 1.525em;
+  font-size: 1.625em;
   width: 180px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9661,7 +9688,8 @@ footer.footer a.image-links__link {
 
 .container-fluid .background-slideshow .bottom-part {
   position: absolute;
-  bottom: 60px; }
+  bottom: 60px;
+  left: 0; }
 
 .container-fluid .background-slideshow .views-field-title {
   font-family: "Droid Serif", serif;
@@ -9680,7 +9708,4 @@ footer.footer a.image-links__link {
 
 .container-fluid .background-slideshow .views-field-view-node {
   margin-top: 30px; }
-
-.panel-pane.pane-views.pane-det-sker-slideshow {
-  background-color: #0f2846; }
 /*# sourceMappingURL=stylesheet.css.map */
