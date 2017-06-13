@@ -135,25 +135,11 @@
     </div>
   </div>
 <!--Slideshow end-->
-	  <div class="main-container <?php print $container_class; ?>">
-
-	
-
-		<div class="row">
-
-		  <section<?php print $content_column_class; ?>>
-			<?php if (!empty($page['highlighted'])): ?>
-  			<div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-			<?php endif; ?>
-			<?php
-			if (!empty($breadcrumb)): print $breadcrumb;
-			endif;
-			?>
-			<a id="main-content"></a>
-			
-			<?php print render($title_suffix); ?>
-			<?php print $messages; ?>
-			<?php if (!empty($tabs)): ?>
+ <section class="main-container <?php print $container_class; ?>">
+     
+      <?php print render($title_suffix); ?>
+      <?php print $messages; ?>
+      	<?php if (!empty($tabs)): ?>
 			  <?php print render($tabs); ?>
 			<?php endif; ?>
 			<?php if (!empty($page['help'])): ?>
@@ -162,13 +148,17 @@
 			<?php if (!empty($action_links)): ?>
   			<ul class="action-links"><?php print render($action_links); ?></ul>
 			<?php endif; ?>
+ </section>
+
+  
+  <section class="events <?php print $container_class; ?>">
+     
+     <div class="row">
+			
 			<?php print render($page['content']); ?>
-		  </section>
-
-
-
-		</div>
-	  </div>
+      </div>
+  </section>
+	
 
 	  <?php //if (!empty($page['footer'])):    ?>
 
