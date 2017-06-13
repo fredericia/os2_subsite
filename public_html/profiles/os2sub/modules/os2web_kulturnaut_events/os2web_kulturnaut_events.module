@@ -19,3 +19,5 @@ function os2web_kulturnaut_events_os2web_help($sections) {
 
   return $sections;
 }
+
+

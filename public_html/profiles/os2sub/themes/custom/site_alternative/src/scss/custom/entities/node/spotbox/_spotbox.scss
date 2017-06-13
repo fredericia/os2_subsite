@@ -15,6 +15,10 @@
 // --------------------------------------------------
 
 // Teaser
+.view-mode-os2sub_spotbox_mini.node {
+  border: 6px solid $color-background-primary;
+}
+
 .view-mode-spotbox.node,
 .view-mode-os2sub_spotbox_single.node,
 .view-mode-os2sub_spotbox_mini.node {
@@ -34,7 +38,7 @@
     .field-name-field-os2web-kulturnaut-venue,
     .field-name-field-os2web-kulturnaut-sname,
     .field-name-field-os2web-base-field-edi-tags {
-      font-size: 1em;
+      font-size: 1.125em;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
@@ -56,11 +60,85 @@
       bottom: 0;
       @include  gradient-vertical(rgba($color-primary,0), rgba($color-primary,0.9), 20%, 80%);
     }
+
+    .view-display-id-pane_activities_list_2_3 & {
+      .field-name-field-os2web-kulturnaut-date {
+        font-size: 0.9em;
+        color: $color-focus-secondary;
+        font-weight: normal;
+        text-transform: lowercase;
+      }
+      header h2 {
+        font-size: 1.125em;
+      }
+    }
+    .view-display-id-pane_activities_list_5_load_more & {
+      .field-name-field-os2web-kulturnaut-date {
+        span.date-display-single{ 
+          font-size: 0.9em;
+          color: $color-focus-secondary;
+          font-weight: normal;
+          text-transform: lowercase;
+          display: block;
+        }
+        span.date-display-single:first-letter{
+          text-transform: uppercase;
+        }
+      }
+      header h2 {
+        font-size: 1.125em;
+      }
+      .field-name-field-os2web-kulturnaut-venue{
+        font-size: 1.125em;
+        font-weight: bold;
+        display: none;
+      }
+    }
+    .view-display-id-pane_activities_list_4 & {
+      .field-name-field-os2web-kulturnaut-date {
+        span.date-display-single{
+          font-size: 0.8em;
+          font-weight: bold;
+          text-transform: lowercase;
+          display: block;
+        }
+        span.date-display-single:first-letter{
+          text-transform: uppercase;
+        }
+      }
+      header h2 {
+        font-size: 0.9em;
+      }
+      .field-name-field-os2web-kulturnaut-venue {
+        font-size: 1em;
+        display: none;
+      }
+    }
+    .one-left & {
+      .field-name-field-os2web-kulturnaut-date.field-type-datetime {
+        span.date-display-single{ 
+          font-size: 1.32em;
+          font-weight: bold;
+          text-transform: lowercase;
+          display: block;
+        }
+        span.date-display-single:first-letter{
+          text-transform: uppercase;
+        }
+      }
+      .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference{
+        font-weight: normal;
+      }
+    }
   }
 }
 
 .view-mode-os2sub_spotbox_single.node{
   &.node-os2web-kulturnaut-knactivity {
+    .field-name-field-os2web-kulturnaut-slidesho {
+      max-height: 250px;
+      overflow: hidden;
+    }
     .overlay {
       transition: .5s ease;
       opacity: 0;
@@ -71,7 +149,7 @@
       -ms-transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      background-color: rgba($color-focus, 0.75); ;
+      background-color: rgba($color-focus, 0.75);
 
       .overlay-content {
         position: relative;
@@ -111,16 +189,32 @@
     font-weight: bold;
     color: $color-font-light-secondary;
     padding-bottom: 15px;
-   }
-   .link{
-     &.show-more {
-       a {
+    float: left;
+    text-transform: lowercase;
+  }
+  .field-name-field-os2web-kulturnaut-date:first-letter {
+    text-transform: uppercase;
+  }
+  .field-name-field-os2web-kulturnaut-venue {
+    a{
+      font-size: 1.063em;
+      font-family: Lato;
+      font-weight: bold;
+      color: $color-font-light-secondary;
+      padding-bottom: 15px;
+      margin-left: 5px;
+    }
+  }
+  .link{
+    &.show-more {
+      a {
         color: $color-focus;
         font-weight: bold;
-       }
-     }
-   }
-  
+        text-decoration: underline;
+      }
+    }
+  }
+
 }
 
 // --------------------------------------------------
@@ -128,3 +222,137 @@
 // --------------------------------------------------
 
 
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+
+
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+  .view-mode-spotbox.node,
+  .view-mode-os2sub_spotbox_single.node,
+  .view-mode-os2sub_spotbox_mini.node {
+    &.node-os2web-kulturnaut-knactivity {
+      .view-display-id-pane_activities_list_4 & {
+        .field-name-field-os2web-kulturnaut-date {
+          span.date-display-single{
+            font-size: 0.9em;
+          }
+        }
+        header h2 {
+          font-size: 1.56em;
+        }
+        .field-name-field-os2web-kulturnaut-venue {
+          display: block;
+        }
+      }
+
+      .view-display-id-pane_activities_list_2_3 & {
+        .field-name-field-os2web-kulturnaut-date {
+          font-size: 1em;
+          color: $color-font-light;
+          font-weight: normal;
+          text-transform: lowercase;
+        }
+        header h2 {
+          font-size: 1.75em;
+        }
+      }
+
+      .view-display-id-pane_activities_list_5_load_more & {
+        .field-name-field-os2web-kulturnaut-date {
+          span.date-display-single{ 
+            font-size: 1.125em;
+            color: $color-focus-secondary;
+            font-weight: normal;
+            text-transform: lowercase;
+            display: block;
+          }
+          span.date-display-single:first-letter{
+            text-transform: uppercase;
+          }
+        }
+        header h2 {
+          font-size: 1.75em;
+        }
+        .field-name-field-os2web-kulturnaut-venue{
+          font-size: 1.125em;
+          font-weight: bold;
+          display: block;
+        }
+      }
+    }
+
+  }
+  .view-mode-os2sub_spotbox_single.node{
+    &.node-os2web-kulturnaut-knactivity {
+      .field-name-field-os2web-kulturnaut-slidesho {
+        max-height: none;
+      }
+    }
+  }
+
+
+}
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Page layout
+  .content-inner {}
+}
+
+// No touch
+.no-touchevents {
+
+
+}
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Page layout mixin
+@mixin content-mixin-inner() {}

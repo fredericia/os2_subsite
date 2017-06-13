@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OS2Sub Hovedmenu feature.
+ */
+
+include_once 'os2sub_hovedmenu.features.inc';

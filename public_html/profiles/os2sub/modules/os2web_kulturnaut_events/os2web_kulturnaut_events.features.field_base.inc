@@ -32,6 +32,27 @@ function os2web_kulturnaut_events_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_os2web_kult_venue_address'.
+  $field_bases['field_os2web_kult_venue_address'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_os2web_kult_venue_address',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_os2web_kult_venue_image'.
   $field_bases['field_os2web_kult_venue_image'] = array(
     'active' => 1,
@@ -65,10 +86,12 @@ function os2web_kulturnaut_events_field_default_field_bases() {
     'locked' => 0,
     'module' => 'date',
     'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 0,
       'granularity' => array(
         'day' => 'day',
-        'hour' => 0,
-        'minute' => 0,
+        'hour' => 'hour',
+        'minute' => 'minute',
         'month' => 'month',
         'second' => 0,
         'year' => 'year',
@@ -361,17 +384,21 @@ function os2web_kulturnaut_events_field_default_field_bases() {
     'entity_types' => array(),
     'field_name' => 'field_os2web_kulturnaut_source',
     'indexes' => array(
-      'format' => array(
-        0 => 'format',
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
-    'module' => 'text',
+    'module' => 'list',
     'settings' => array(
-      'max_length' => 255,
+      'allowed_values' => array(
+        'manual' => 'Manual',
+        'feed' => 'Feed',
+      ),
+      'allowed_values_function' => '',
     ),
     'translatable' => 0,
-    'type' => 'text',
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_os2web_kulturnaut_szip'.

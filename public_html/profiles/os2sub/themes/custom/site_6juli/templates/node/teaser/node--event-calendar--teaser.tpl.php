@@ -80,6 +80,7 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+ 
   <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
     <header>
 	  <?php print render($title_prefix); ?>
@@ -103,30 +104,18 @@
   ?>
 
   <div class = "row event-teaser">
-	<div class = "col-lg-6 ">
-	  <?php print render($content['title']); ?>
-	  <?php print render($content['body']); ?>
-	  <div class="row button">
-		<a class="btn btn-dark" href="<?php print $front_page; ?>">Læs mere</a>
-		<a class="btn btn-light" href="<?php print $front_page; ?>">Se kalender</a>	
-	  </div>
-	</div>
+	<a class="event-teaser-title" href="<?php print $node_url; ?>"><?php print $title; ?></a>
 	<div class = "col-lg-6 visible-md visible-lg">
-	  <?php print render($content['field_image_event']); ?>
-	  
-	  <?php print render($content['field_image_event_alt_text']); ?>
-	  
-	  
+        <a href="<?php print $node_url; ?>"><?php print render($content['field_image_event']); ?></a>
 	  
 	</div>
   </div>
 
 
-
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
     <footer>
 	  <?php print render($content['field_tags']); ?>
-	  <?php print render($content['links']); ?>
+
     </footer>
   <?php endif; ?>
   <?php print render($content['comments']); ?>

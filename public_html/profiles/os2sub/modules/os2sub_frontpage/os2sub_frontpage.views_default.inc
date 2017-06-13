@@ -539,5 +539,168 @@ function os2sub_frontpage_views_default_views() {
   );
   $export['os2sub_velkomst'] = $view;
 
+  $view = new view();
+  $view->name = 'os2web_kulturnaut_tema_list';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'taxonomy_term_data';
+  $view->human_name = 'OS2Web Kulturnaut tema list';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'row';
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name' => 'name',
+    'description_1' => 'description_1',
+  );
+  /* Field: Taxonomy term: Term ID */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
+  /* Field: Taxonomy term: Image */
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['id'] = 'field_os2web_kult_tema_image';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['table'] = 'field_data_field_os2web_kult_tema_image';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['field'] = 'field_os2web_kult_tema_image';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['settings'] = array(
+    'image_style' => 'os2sub_tiny__80x80_',
+    'image_link' => '',
+  );
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['description']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['description']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['description']['alter']['more_link_text'] = 'Læs mere';
+  $handler->display->display_options['fields']['description']['alter']['more_link_path'] = 'taxonomy/term/[tid]';
+  $handler->display->display_options['fields']['description']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'os2web_kulturnaut_tema' => 'os2web_kulturnaut_tema',
+  );
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Temaer';
+
+  /* Display: Tema list footer */
+  $handler = $view->new_display('block', 'Tema list footer', 'block_tema_list_footer');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Temaer';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'tema-list-footer';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_options']['class'] = 'menu nav';
+  $handler->display->display_options['style_options']['wrapper_class'] = '';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'name' => 'name',
+  );
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Term ID */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['label'] = '';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['tid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['tid']['separator'] = '';
+  /* Field: Taxonomy term: Image */
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['id'] = 'field_os2web_kult_tema_image';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['table'] = 'field_data_field_os2web_kult_tema_image';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['field'] = 'field_os2web_kult_tema_image';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_kult_tema_image']['settings'] = array(
+    'image_style' => 'os2sub_tiny__80x80_',
+    'image_link' => '',
+  );
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['description']['alter']['max_length'] = '100';
+  $handler->display->display_options['fields']['description']['alter']['more_link'] = TRUE;
+  $handler->display->display_options['fields']['description']['alter']['more_link_text'] = 'Læs mere';
+  $handler->display->display_options['fields']['description']['alter']['more_link_path'] = 'taxonomy/term/[tid]';
+  $handler->display->display_options['fields']['description']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['block_description'] = 'tema-list-footer';
+  $translatables['os2web_kulturnaut_tema_list'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('.'),
+    t('Læs mere'),
+    t('Block'),
+    t('Temaer'),
+    t('Tema list footer'),
+    t('tema-list-footer'),
+  );
+  $export['os2web_kulturnaut_tema_list'] = $view;
+
   return $export;
 }

@@ -3,6 +3,8 @@
 // --------------------------------------------------
 
 
+$primary-color: #205692;
+
 // Wrapper and base class
 //
 // Provide a static navbar from which we expand to create full-width, fixed, and
@@ -49,10 +51,6 @@
 
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: $navbar-padding-horizontal;
-  padding-left:  $navbar-padding-horizontal;
-  border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
   @include clearfix;
   -webkit-overflow-scrolling: touch;
 
@@ -90,7 +88,7 @@
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   .navbar-collapse {
-    max-height: $navbar-collapse-max-height;
+   
 
     @media (max-device-width: $screen-xs-min) and (orientation: landscape) {
       max-height: 200px;
@@ -107,8 +105,7 @@
 .container-fluid {
   > .navbar-header,
   > .navbar-collapse {
-    margin-right: -$navbar-padding-horizontal;
-    margin-left:  -$navbar-padding-horizontal;
+
 
     @media (min-width: $grid-float-breakpoint) {
       margin-right: 0;
@@ -184,6 +181,10 @@
   }
 }
 
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    
+    border: none!important;
+}
 
 // Navbar toggle
 //
@@ -210,12 +211,11 @@
   // Bars
   .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
+    width: 28px;
+    height: 4px;
   }
   .icon-bar + .icon-bar {
-    margin-top: 4px;
+    margin-top: 5px;
   }
 
   @media (min-width: $grid-float-breakpoint) {
@@ -440,19 +440,18 @@
   }
 
   .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
     &:hover,
     &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
+      background-color: none;
     }
     .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
+      background-color: $primary-color;
     }
   }
 
   .navbar-collapse,
   .navbar-form {
-    border-color: $navbar-default-border;
+   
   }
 
   // Dropdown menu items
@@ -575,7 +574,6 @@
 
   // Darken the responsive nav toggle
   .navbar-toggle {
-    border-color: $navbar-inverse-toggle-border-color;
     &:hover,
     &:focus {
       background-color: $navbar-inverse-toggle-hover-bg;
@@ -587,7 +585,7 @@
 
   .navbar-collapse,
   .navbar-form {
-    border-color: darken($navbar-inverse-bg, 7%);
+    
   }
 
   // Dropdowns

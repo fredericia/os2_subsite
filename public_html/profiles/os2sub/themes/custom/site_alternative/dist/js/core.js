@@ -9,24 +9,21 @@
 var pageLayout = (function ($) {
     'use strict';
 
-    //removing anchor tag when clicking the pager
-    $('.menu-background-slideshow .widget_pager a').click(function (e) {
-        e.preventDefault();
-    });
+    var pub = {};
 
-    $('#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search input').change(function(){
-        $('#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search button').unbind();
-    });
-//
-//    var pub = {};
-//
-//    /**
-//     * Instantiate
-//     */
-//    pub.init = function () {
-//        registerBootEventHandlers();
-//        registerEventHandlers();
-//    };
+    /**
+     * Instantiate
+     */
+    pub.init = function () {
+        //removing anchor tag when clicking the pager
+        $('.menu-background-slideshow .widget_pager a').click(function (e) {
+            e.preventDefault();
+        });
+
+        $('#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search input').change(function(){
+            $('#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search button').unbind();
+        });
+    };
 //
 //    /**
 //     * Register boot event handlers
@@ -62,7 +59,7 @@ var pageLayout = (function ($) {
 //        }
 //    }
 //
-//    return pub;
+    return pub;
 })(jQuery);
 
 //// |--------------------------------------------------------------------------
@@ -114,6 +111,8 @@ var pageLayout = (function ($) {
 
 // Document ready
 (function ($) {
+    'use strict';
+
     // Enable page layout
     pageLayout.init();
 

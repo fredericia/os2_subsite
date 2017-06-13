@@ -16,10 +16,18 @@ $header-size: 112px;
 // --------------------------------------------------
 
 .view-os2web-kulturnaut-events-lists {
+  &.view-display-id-pane_activities_list_4_mini {
+    .field-name-field-os2web-kulturnaut-date{
+      font-size: 0.9em;
+      margin-bottom: 10px;
+      text-transform: lowercase;
+    }
+  }
   &.view-display-id-pane_related_articles,
+  &.view-display-id-pane_activities_list_5_load_more,
   &.view-display-id-pane_activities_for_tag,
   &.view-display-id-pane_activities_for_venue,
-  &.view-display-id-pane_activities_for_tema, 
+  &.view-display-id-pane_activities_for_tema,
   &.view-display-id-pane_kultunaut_events {
     .pager--infinite-scroll {
       margin-top: 0;
@@ -28,46 +36,13 @@ $header-size: 112px;
       }
     }
   }
-  &.view-display-id-pane_activities_list_5_load_more {
-    .pager--infinite-scroll {
-      margin: 0;
-      li {
-        width: 100%;
-        padding-top: 100%;
-        position: relative;
-        display: block;
-        a {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          border-radius: 0;
-          background-color: $color-background-secondary;
-          font-family: $font-roboto-slab;
-          font-size: 3.18em;
-          &:before{
-            content: '+';
-            color: $color-focus;
-            font-weight: bold;
-            font-size: 3.18em;
-            line-height: 0.5em;
-          }
-          &:hover, &:active, &:focus {
-            background-color: $color-background-secondary;
-          }
-        }
-      }
-    }
-  }
+
   &.view-display-id-pane_kultunaut_events {
     margin-bottom: 80px;
     .view-header {
-      margin-left: 100px;
+     margin-top: 5px;
+     margin-bottom: 60px;
+      color: $color-primary;
     }
   }
   &.view-display-id-attachment_activities_list_3_2 {
@@ -79,6 +54,7 @@ $header-size: 112px;
     .views-field-field-os2web-kulturnaut-date, .views-field-view-node {
       font-size: 1em;
       color: #666666;
+      text-transform: lowercase;
     }
     .views-field-view-node {
       font-weight: bold;
@@ -86,6 +62,10 @@ $header-size: 112px;
         color: #666666 !important;
       }
     }
+  }
+
+  &.view-display-id-block_slideshow .views-slideshow-cycle-main-frame-row {
+    max-width: 100%;
   }
 }
 
@@ -95,12 +75,8 @@ $header-size: 112px;
 
 .container-fluid .menu-background-slideshow {
   position: relative;
-  top: -$header-size;
-  margin-bottom: -$header-size - 2;
-
-  //  .views-field-field-os2web-kulturnaut-slidesho {
-  //    position: relative;
-  //  }
+  top: 0;
+  margin-bottom: 0;
 
   .views-slideshow-controls-bottom {
     > .container {
@@ -128,7 +104,7 @@ $header-size: 112px;
 
   .views-field-field-os2web-kulturnaut-slidesho .field-content .img-container {
     width: 100vw;
-    height: 540px;
+    height: 276px;
 
     background-position: center center;
     background-attachment: fixed;
@@ -140,13 +116,17 @@ $header-size: 112px;
   }
 
   .bottom-part {
-    position: absolute;
-    bottom: 60px;
+    position: absolute;;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 100%;
   }
 
   .views-field-title {
     font-family: $font-roboto-slab;
-    font-size: 4em;
+    font-size: 2em;
     line-height: 1.0em;
     font-weight: 900;
     color: white;
@@ -158,12 +138,20 @@ $header-size: 112px;
     color: white;
     font-size: 1.31em;
   }
+  .views-field-field-os2web-kulturnaut-date,{
+    text-transform: lowercase;
+  }
   .views-field-field-os2web-base-field-edi-tags {
     font-weight: bold;
   }
 
   .views-field-view-node {
-    margin-top: 30px;
+    margin-top: 25px;
+    a {
+      left: 50%;
+      position: relative;
+      transform: translate(-50%,0);
+    }
   }
 }
 
@@ -185,9 +173,17 @@ $header-size: 112px;
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
-
-  // Banner
-  .banner {
+  .container-fluid .menu-background-slideshow {
+    .views-slideshow-controls-bottom {
+      .widget_pager_bottom {
+        display: none;
+      }
+    }
+    .views-field-field-os2web-kulturnaut-sname,
+    .views-field-field-os2web-base-field-edi-tags,
+    .views-field-field-os2web-kulturnaut-date{
+      display: none;
+    }
   }
 }
 
@@ -201,20 +197,110 @@ $header-size: 112px;
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
-  // Banner
-  .banner {
+  .container-fluid .menu-background-slideshow {
+    .views-slideshow-controls-bottom {
+      .widget_pager_bottom {
+        display: none;
+      }
+    }
+    .views-field-field-os2web-kulturnaut-sname,
+    .views-field-field-os2web-base-field-edi-tags,
+    .views-field-field-os2web-kulturnaut-date{
+      display: none;
+    }
   }
 }
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
+  .view-os2web-kulturnaut-events-lists {
+    &.view-display-id-pane_related_articles,
+    &.view-display-id-pane_activities_list_5_load_more,
+    &.view-display-id-pane_activities_for_tag,
+    &.view-display-id-pane_activities_for_venue,
+    &.view-display-id-pane_activities_for_tema,
+    &.view-display-id-pane_kultunaut_events {
+      .pager--infinite-scroll {
+        a {
+          @include load-more-btn-full-width-md;
+        }
+      }
+    }
+  }
 
-  // Banner
-  .banner {
+  .container-fluid .menu-background-slideshow {
+    position: relative;
+    top: -$header-size;
+    margin-bottom: -$header-size - 2;
+    .bottom-part {
+      left: auto;
+      bottom: 75px;
+      text-align: left;
+      transform: none;
+    }
+    .views-field-field-os2web-kulturnaut-slidesho .field-content .img-container {
+      height: 540px;
+    }
+    .views-field-title {
+      font-size: 4em;
+    }
+    .views-field-view-node {
+      margin-top: 35px;
+      a {
+        left: auto;
+        transform: none;
+      }
+    }
+    .views-field-view-node-1 .field-content {
+      margin-left: 15px;
+    }
+  }
+  .view-os2web-kulturnaut-events-lists {
+    &.view-display-id-pane_activities_list_5_load_more {
+      .pager--infinite-scroll {
+        margin: 0;
+        li {
+          width: 100%;
+          padding-top: 100%;
+          position: relative;
+          display: block;
+          a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            color: $color-primary;
+            background-color: $color-background-secondary;
+            font-family: $font-roboto-slab;
+            font-size: 3.18em;
+            padding-left: 60px;
+            padding-right: 60px;
+            text-transform: none;
+            font-weight: normal;
+            &:before{
+              content: '+';
+              color: $color-focus;
+              font-weight: bold;
+              font-size: 3.18em;
+              line-height: 0.5em;
+            }
+            &:hover, &:active, &:focus {
+              background-color: $color-background-secondary;
+              color: $color-primary;
+            }
+          }
+        }
+      }
+    }
   }
 }
-
 // Desktop - only
 @include media-breakpoint-only(md) {
 

@@ -14,19 +14,158 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.views-field.views-field-field-os2web-kult-tema-image .field-content {
+  & .img-effect {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 50% 50%;
+    width: 60px;
+    height: 60px;
+    background-color: rgba($color-img-effect-1, 0.50);
+    opacity: 50%;
+    margin-left: 15px;
 
+  }
+  & .img-circle{
+    width: 60px;
+    height: 60px;
+  }
+}
 .view-os2web-kulturnaut-tema-list {
   .views-row {
     margin-bottom: 25px;
+    .col-xs-9.col-md-10{
+      padding-left: 0px;
+
+    }
     .views-field-name {
       font: $font-roboto-slab;
-      font-size: 1.625em;
+      font-size: 0.875em;
+
       a {
         color: $color-focus;
+
       }
     }
     .views-field-description {
       font-size: 1.125em;
     }
   }
+  .view-content .views-field.views-field-description .field-content a.views-more-link{
+    text-decoration: underline;
+  }
 }
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+}
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+  .social-icons {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  .views-field.views-field-field-os2web-kult-tema-image .field-content{
+    & .img-effect {
+      width: 80px;
+      height: 80px;
+
+    }
+    & .img-circle{
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .view-os2web-kulturnaut-tema-list {
+    .views-row {
+      margin-bottom: 25px;
+
+      .views-field-name {
+        font: $font-roboto-slab;
+        font-size: 1.625em;
+        a {
+          color: $color-focus;
+
+        }
+      }
+      .views-field-description {
+        font-size: 1.125em;
+      }
+      .col-xs-9.col-md-10{
+      padding-left: 30px;
+
+    }
+    }
+    .view-content .views-field.views-field-description .field-content a.views-more-link{
+      text-decoration: underline;
+    }
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Social icons mixin
+@mixin social-mixin-icons() {}

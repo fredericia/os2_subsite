@@ -13,7 +13,32 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-
+.node-os2web-kulturnaut-knactivity,
+.contextual-links-region,
+.iew-mode-os2sub_teaser_mini,
+.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini{
+  img {
+    outline: 1px solid $color-background-primary;
+  }
+  word-break: break-word;
+  margin-bottom: 20px;
+  header h3{
+    color: background;
+    font-size: 1,5em;
+    //font-family: RobotoSlab;
+    font-weight: normal;
+    margin-bottom: 3px;
+  }
+  .link{
+    &.show-more {
+      a {
+        color: $color-focus;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+}
 // Teaser
 
 

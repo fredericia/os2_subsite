@@ -34,7 +34,7 @@ h1.page-header,
 h1.pane-title {
   font-family: $font-roboto-slab;
   font-weight: bold;
-  font-size: 3.375em;
+  font-size: 2.5em;
   color: $color-primary;
   border: 0;
 }
@@ -42,9 +42,9 @@ h1.pane-title {
 h2.pane-title {
   font-family: $font-roboto-slab;
   font-weight: lighter;
-  font-size: 3em;
+  font-size: 2.125em;
   color: $color-primary;
-  margin-bottom: 30px;
+  //margin-bottom: 30px;
 }
 
 h3.pane-title {
@@ -62,6 +62,10 @@ h3.pane-title {
 .panel-pane {
 }
 
+.search-and-title{
+  padding-top: 0px;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -70,14 +74,14 @@ h3.pane-title {
     .pane-title {
       font-family: $font-roboto-slab;
       text-transform: none;
-      font-size: 2em;
+      font-size: 1.31em;
       font-weight: normal;
       color: white;
       display: inline-block;
       position: relative;
       left: 50%;
       transform: translate(-50%, -50%);
-      top: -1.75em;
+      top: -2.6em;
       background-color: $color-focus-secondary;
       padding: 10px 40px 10px 75px;
       border-radius: 30px;
@@ -90,15 +94,58 @@ h3.pane-title {
     }
   }
 
+  &.panel-pane--title-kulturnaut {
+    .pane-title {
+      font-family: $font-roboto-slab;
+      text-transform: none;
+      font-size: 1em;
+      font-weight: normal;
+      color: white;
+      display: inline-block;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: -3.6em;
+      width: 100%;
+      text-align: center;
+
+      background-color: $color-focus-tertiary;
+      padding: 10px 30px 10px 30px;
+      border-radius: 30px;
+
+      img {
+        outline: none;
+        top: -2px;
+        position: relative;
+        height: 13px;
+      }
+    }
+
+    .pane-content {
+      margin-top: -3.85em;
+    }
+  }
+
   &.panel-pane--full-width{
+    margin-right: -9999rem;
+    margin-left: -9999rem;
+    /* add back negative margin value */
+    padding: 30px 9999rem 10px;
+    background: $color-background-secondary;
+    border-bottom: 2px solid $color-background-tertiary;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  &.panel-pane--full-width.pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini{
     margin-right: -9999rem;
     margin-left: -9999rem;
     /* add back negative margin value */
     padding: 30px 9999rem;
     background: $color-background-secondary;
-    border-bottom: 2px solid $color-background-tertiary;
+    border-bottom: none;
     margin-top: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 }
 
@@ -106,6 +153,12 @@ h2.pane-title--lifted {
   top: -65px;
   position: relative;
   margin-bottom: -50px;
+  padding-bottom: 15px;
+}
+
+.simple-gmap-static-map{
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 // --------------------------------------------------
@@ -136,7 +189,7 @@ h2.pane-title--lifted {
 @include media-breakpoint-only(xs) {
 
   // Page layout
-  .content-inner {}
+
 }
 
 // Tablet - and up
@@ -167,6 +220,63 @@ h2.pane-title--lifted {
 
   .row .content-top {
     margin-bottom: 30px;
+  }
+  h2.pane-title {
+    font-size: 3em;
+  }
+
+  .search-and-title{
+    padding-top: 19px;
+  }
+
+
+
+  .panel-pane {
+    &.panel-pane--title-pinned{
+      .pane-title {
+        font-size: 2em;
+        top: -1.75em;
+      }
+    }
+    &.panel-pane--title-kulturnaut {
+      .pane-title {
+        font-size: 1.625em;
+        top: -2.2em;
+        width: auto;
+
+        img {
+          top: -4px;
+          position: relative;
+          height: 21px;
+        }
+      }
+    }
+  }
+  h1.page-header,
+  h1.pane-title {
+    font-family: $font-roboto-slab;
+    font-weight: bold;
+    font-size: 3.375em;
+    color: $color-primary;
+    border: 0;
+  }
+  .vertical-line{
+    border-width: 0 1px 0 0;
+    border-color: $color-background-secondary;
+    border-style: solid;
+    padding-right: 40px;
+  }
+  #details{
+    display: block !important;
+  }
+  .node--os2web_kulturnaut_knactivity--full{
+    & .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
+      & span.date-display-single{
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 30px;
+      }
+    }
   }
 }
 
@@ -206,7 +316,7 @@ h2.pane-title--lifted {
 }
 .kultunaut {
   h1.page-header {
-    margin-left: 100px;
+    // margin-left: 100px;
     span {
       display: block;
       background: url('../img/logo_kultunaut.png') no-repeat;

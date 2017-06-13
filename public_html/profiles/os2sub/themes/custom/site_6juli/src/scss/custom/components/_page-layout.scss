@@ -31,14 +31,13 @@ body {
   font-size: 1.0625em;
 }
 
-.call-to-action{
+.contextual-links-region.panel-pane.pane-custom.pane-1.call-to-action{
     text-align: center;
     background-color: $color-btn;
     color: $color-light-background;
     .pane-title{
       color: $color-light-background;  
     }
-    
 }
 
 h1.page-header,
@@ -95,8 +94,13 @@ h3.pane-title {
 
 }
 
-.facebook-forside{
-  background-color: $color-font-light;
+.full-width{
+  margin-right: -9999rem;
+    margin-left: -9999rem;
+    padding: 30px 9999rem 10px;
+    background: $color-grey-background;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 // --------------------------------------------------
 // Variants

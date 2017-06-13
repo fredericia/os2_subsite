@@ -15,12 +15,113 @@
 // --------------------------------------------------
 
 .prefooter {
-  background-color: $color-background-secondary;
+  .right-vertical-line, .pop-tags{
+    padding-top: 10px;
+    h2.pane-title{
+      margin-top: 4px;
+      margin-bottom: 15px;
+    }
+  }
+
+  //background-color: $color-background-secondary;
   h2 .focus {
     color: $color-focus;
     font-weight: normal;
   }
   .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+    ul {
+      padding: 0;
+      li {
+        display: none;
+        list-style: none;
+        //display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 13px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),  {
+          display: inline-block;
+        }
+
+        a {
+          display: block;
+          padding: 7px 40px;
+          background-color: $color-background-secondary;
+          border-radius: 30px;
+          font-size: 1.31em;
+          color: $color-focus;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+// Desktop - only
+@include media-breakpoint-up(lg) {
+
+  // Footer
+  .prefooter {
+    .right-vertical-line{
+      border-width: 0 4px 0 0;
+      border-color: $color-background-secondary;
+      border-style: solid; 
+      padding-right: 63px;
+
+    }
+  }
+}
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+}
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+  .social-icons {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  .prefooter {
+    .right-vertical-line, .pop-tags{
+      padding-top: 55px;
+      h2.pane-title{
+        margin-top: 4px;
+        margin-bottom: 35px;
+      }
+    }
+    
+      .view-os2web-taxonomies-tax-editor-tag-list .item-list {
     ul {
       padding: 0;
       li {
@@ -34,7 +135,7 @@
         a {
           display: block;
           padding: 7px 40px;
-          background-color: $color-background-primary;
+          background-color: $color-background-secondary;
           border-radius: 30px;
           font-size: 1.31em;
           color: $color-focus;
@@ -42,12 +143,44 @@
       }
     }
   }
+  }
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Social icons
+  .social-icons {}
 }
 
 // --------------------------------------------------
-// Variants
+// Mixins
 // --------------------------------------------------
 
-// --------------------------------------------------
-// Responsive
-// --------------------------------------------------
+// Social icons mixin
+@mixin social-mixin-icons() {}

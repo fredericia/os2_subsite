@@ -1,0 +1,6 @@
+name = OS2sub - Feed data parsing
+core = 7.x
+package = OS2Sub
+version = 7.x-1.0
+project = os2sub_feed_data_parsing
+

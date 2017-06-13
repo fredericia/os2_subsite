@@ -114,7 +114,7 @@
     <?php endif; ?>
   </div>
   <div class="container-fluid">
-    <div class="menu-background-slideshow hidden-xs hidden-sm row">
+    <div class="menu-background-slideshow row">
       <?php
       $view_slideshow = views_get_view('os2web_kulturnaut_events_lists');
       $view_slideshow->set_display('block_slideshow');
@@ -135,7 +135,7 @@
   </header>
   <!-- /#page-header -->
 
-  <div class="row">
+  <div class="row search-and-title">
 
     <?php if (!empty($page['sidebar_first'])): ?>
       <aside class="col-sm-3" role="complementary">
@@ -190,7 +190,7 @@
 <div class="prefooter">
   <div class="<?php print $container_class; ?>">
     <div class="row">
-      <div class="col-md-6">
+      <div class="right-vertical-line col-lg-6 col-md-7">
         <h2 class="pane-title">
           <?php print t('Temaer lige nu'); ?>
         </h2>
@@ -200,7 +200,7 @@
         print $view_popular_tags->preview('block');
         ?>
       </div>
-      <div class="col-md-5 col-md-push-1">
+      <div class="pop-tags col-lg-5 col-lg-push-1 col-md-col-5 col-md-push-0">
         <h2 class="pane-title">
           <?php print t('Populære'); ?>
           <span class="focus">#tags</span>
