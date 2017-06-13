@@ -74,8 +74,8 @@ ul.pagination {
     width: 100%;
     right: 20px;
     display: flex;
-    position: absolute;
-    top: 290px;
+    position: relative;
+    transform: translateY(-300px);
     justify-content: flex-end;
 }
 
@@ -85,6 +85,7 @@ ul.pagination {
     right: 50px;
     top: 190px;
 }
+
 .pagination .next {
     
     position: absolute;
@@ -137,6 +138,23 @@ ul.pagination {
     background-size: 20px!important;
     background-repeat: no-repeat!important;
     background-position: center!important;
+}
+
+.views-exposed-widgets { flex-direction: row-reverse; }
+
+.views-submit-button button {
+    
+    display: none!important;
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+    
+    margin-top: 0!important;
+}
+
+.views-exposed-form .views-exposed-widget .btn {
+    
+    margin-top: 0!important;
 }
 
 // --------------------------------------------------

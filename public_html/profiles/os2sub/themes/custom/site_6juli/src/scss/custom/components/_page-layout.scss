@@ -36,10 +36,7 @@ body {
 }
 
 .events {
-    
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .call-to-action{
@@ -65,9 +62,90 @@ body {
 }
 
 #block-system-main .panel-pane {
+   width: 100%;
+    padding: 0;
+}
+
+.pane-events h2 {
+    display: none!important;
+}
+.pane-events {
+    background: #e0ded4;
+    padding: 40px!important;
+}
+
+.pane-events .pane-title {
     
+    display: none!important;
+}
+
+.pane-events { display: flex; align-items: center; justify-content: center; }
+
+.pane-block-1 {
     max-width: 1024px;
-    padding: 20px;
+    padding: 40px!important;
+}
+.views-exposed-form label {
+    
+    display: none;
+}
+
+.views-exposed-widgets {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px;
+    margin-bottom: 15px;
+}
+
+
+article .field-type-text-with-summary {
+    
+    display: none!important;
+}
+
+
+.panel-pane .views-view-grid {
+    
+    width: 100%!important;
+}
+
+.panel-pane tbody {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-name-field-image-event {
+    
+    width: 600px!important;
+}
+.panel-pane article {
+    
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.event-teaser {
+    margin: 10px;
+    overflow: hidden!important;
+    width: 460px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-teaser-title {
+    
+    display: inline-flex;
+    position: absolute;
+    transform: translateY(220px);
+    margin-left: 40px;
+    font-size: 2.4em;
+    color: #fff;
+    z-index: 9999999!important;
+    background: none!important;
 }
 
 h1.page-header,
@@ -129,12 +207,107 @@ p {
 }
 
 .full-width{
-  margin-right: -9999rem;
-    margin-left: -9999rem;
-    padding: 30px 9999rem 10px;
     background: $color-grey-background;
     margin-top: 20px;
     margin-bottom: 30px;
+}
+
+.form-control {
+    
+    border: none!important;
+    height: 45px;
+    box-shadow: none!important;
+    text-indent: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+select {
+-webkit-appearance: none;
+-moz-appearance: none;
+}
+
+.date-month {
+    
+    border-radius: 0px!important;
+    text-indent: 10px!important;
+    padding: 0!important;
+    width: 50px;
+    padding-left: 0!important;
+}
+
+.date-day {
+    
+    border-top-right-radius: 0px!important;
+    border-bottom-right-radius: 0px!important;
+text-indent: 8px!important;
+    width: 50px;
+    padding-right: 0!important;
+}
+
+.date-year {
+    
+   border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+     padding-right: 100px;
+    text-indent: 10px!important;
+    padding-left: 0!important;
+    
+}
+
+#edit-event-calendar-date-value-1-value-year, #edit-event-calendar-date-value-value-year {
+    
+    width: 148px!important;
+}
+
+#edit-event-calendar-date-value-wrapper {
+    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.form-item-body-value input {
+    
+    width: 300px;
+}
+
+.form-item-event-calendar-date-value-1-value-year .date-year {
+    
+    padding-right: 20px;
+}
+
+#edit-event-calendar-date-value-1-value {
+    
+        width: 100%;
+    display: flex;
+}
+
+#edit-event-calendar-date-value-1-wrapper {
+    
+    padding: 0!important;
+}
+
+.views-widget-filter-event_calendar_date_value select {
+    
+    background: none;
+    border: 2px solid #fff!important;
+}
+
+.views-widget-filter-event_calendar_date_value .date-day {
+    
+    border-right: none!important;
+}
+
+.views-widget-filter-event_calendar_date_value .date-month {
+    
+    border-right: none!important;
+}
+
+.container-inline-date .form-item input, .container-inline-date .form-item select, .container-inline-date .form-item option {
+    
+    margin: 0!important;
 }
 // --------------------------------------------------
 // Variants
