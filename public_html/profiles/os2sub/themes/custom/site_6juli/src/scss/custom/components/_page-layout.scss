@@ -3,195 +3,369 @@
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .content-inners
+// | - .content-inner
 // |
-
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-
 // Responsive
 $xs-page-layout-content-inner-padding-top: 20px;
 $sm-page-layout-content-inner-padding-top: 30px;
 $md-page-layout-content-inner-padding-top: 40px;
-
 $xs-page-layout-content-inner-padding-bottom: 25px;
 $sm-page-layout-content-inner-padding-bottom: 40px;
 $md-page-layout-content-inner-padding-bottom: 60px;
-
+// Color on headings
+$section-heading-color: #386c87;
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-
 // Page layout
 body {
-  font-family: $font-lato;
-  font-weight: normal;
-  color: $color-font-dark-secondary;
-  font-size: 1.0625em;
+    font-family: $font-lato;
+    font-weight: normal;
+    color: $color-font-dark-secondary;
+    font-size: 1.0625em;
 }
 
-.contextual-links-region.panel-pane.pane-custom.pane-1.call-to-action{
+.events {
+    width: 100%;
+}
+
+.call-to-action {
     text-align: center;
     background-color: $color-btn;
     color: $color-light-background;
-    .pane-title{
-      color: $color-light-background;  
+    .pane-title {
+        color: $color-light-background;
     }
+}
+
+.panel-pane .pane-custom .pane-1 {
+    display: none;
+}
+
+#block-system-main .col-xs-12 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#block-system-main .panel-pane {
+    width: 100%;
+    padding: 0;
+}
+
+.pane-events h2 {
+    display: none!important;
+}
+
+.pane-events {
+    background: #e0ded4;
+    padding: 40px!important;
+}
+
+.pane-events .pane-title {
+    display: none!important;
+}
+
+.pane-events {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pane-block-1 {
+    max-width: 1024px;
+    padding: 40px!important;
+}
+
+.views-exposed-form label {
+    display: none;
+}
+
+.views-exposed-widgets {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 5px;
+    margin-bottom: 15px;
+}
+
+article .field-type-text-with-summary {
+    display: none!important;
+}
+
+.panel-pane .views-view-grid {
+    width: 100%!important;
+}
+
+.panel-pane tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-name-field-image-event {
+    width: 600px!important;
+}
+
+.panel-pane article {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.event-teaser {
+    margin: 10px;
+    overflow: hidden!important;
+    width: 460px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-teaser-title {
+    display: inline-flex;
+    position: absolute;
+    transform: translateY(220px);
+    margin-left: 40px;
+    font-size: 2.4em;
+    color: #fff;
+    z-index: 9999999!important;
+    background: none!important;
 }
 
 h1.page-header,
 h1.pane-title {
-  font-family: $font-droid-serif;
-  font-weight: bold;
-  font-size: 2.625em;
-  color: $color-primary;
-  border: 0;
+    font-family: $font-droid-serif;
+    font-weight: bold;
+    font-size: 4.625em;
+    color: $color-primary;
+    border: 0;
 }
 
 h2.page-header,
 h2.pane-title {
-  font-family: $font-droid-serif;
-  font-weight: bold;
-  font-size: 3.25em;
-  color: $color-font-dark;
-  border: 0;
-} 
+    font-family: $font-droid-serif;
+    font-weight: bold;
+    font-size: 4.25em;
+    color: $section-heading-color;
+    border: 0;
+}
+
 h2.pane-fb-likebox-0,
 h2.pane-title {
-  font-family: $font-droid-serif;
-  font-weight: bold;
-  font-size: 3.25em;
-  color: $color-font-dark;
-  border: 0;
-} 
-.event-teaser{
-  h2.page-header,
-  h2.pane-title {
-	font-family: $font-droid-serif;
-	font-weight: bold;
-	font-size: 2.625em;
-	color: $color-font-dark;
-	border: 0;
-  }
+    font-family: $font-droid-serif;
+    font-weight: bold;
+    font-size: 4.25em;
+    color: $section-heading-color;
+    border: 0;
+}
+
+.event-teaser {
+    h2.page-header,
+    h2.pane-title {
+        font-family: $font-droid-serif;
+        font-weight: bold;
+        font-size: 4.625em;
+        color: $section-heading-color;
+        border: 0;
+    }
 }
 
 h3.pane-title {
-  font-weight: bold;
-  font-size: 1.25em;
-  text-transform: uppercase;
-  color: $color-font-dark-secondary;
+    font-weight: bold;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    color: $color-font-dark-secondary;
+}
+
+p {
+    font-size: 1.5em;
 }
 
 .content {
-  background-color: $body-bg-secondary;
+    background-color: $body-bg-secondary;
 }
 
-.instagram-image{
-    img{
-    height: 200px;
+.instagram-image {
+    img {
+        height: 200px;
     }
-
 }
 
-.full-width{
-  margin-right: -9999rem;
-    margin-left: -9999rem;
-    padding: 30px 9999rem 10px;
+.full-width {
     background: $color-grey-background;
     margin-top: 20px;
     margin-bottom: 30px;
 }
+
+.form-control {
+    border: none!important;
+    height: 45px;
+    box-shadow: none!important;
+    text-indent: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.date-month {
+    border-radius: 0px!important;
+    text-indent: 10px!important;
+    padding: 0!important;
+    width: 50px;
+    padding-left: 0!important;
+}
+
+.date-day {
+    border-top-right-radius: 0px!important;
+    border-bottom-right-radius: 0px!important;
+    text-indent: 8px!important;
+    width: 50px;
+    padding-right: 0!important;
+}
+
+.date-year {
+    border-top-left-radius: 0px!important;
+    border-bottom-left-radius: 0px!important;
+    padding-right: 100px;
+    text-indent: 10px!important;
+    padding-left: 0!important;
+}
+
+#edit-event-calendar-date-value-1-value-year,
+#edit-event-calendar-date-value-value-year {
+    width: 148px!important;
+}
+
+#edit-event-calendar-date-value-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-item-body-value input {
+    width: 300px;
+}
+
+.form-item-event-calendar-date-value-1-value-year .date-year {
+    padding-right: 20px;
+}
+
+#edit-event-calendar-date-value-1-value {
+    width: 100%;
+    display: flex;
+}
+
+#edit-event-calendar-date-value-1-wrapper {
+    padding: 0!important;
+}
+
+.views-widget-filter-event_calendar_date_value select {
+    background: none;
+    border: 2px solid #fff!important;
+}
+
+.views-widget-filter-event_calendar_date_value .date-day {
+    border-right: none!important;
+}
+
+.views-widget-filter-event_calendar_date_value .date-month {
+    border-right: none!important;
+}
+
+.container-inline-date .form-item input,
+.container-inline-date .form-item select,
+.container-inline-date .form-item option {
+    margin: 0!important;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
-
 // Mobile - and up
 @include media-breakpoint-up(xs) {
-
-  // Page layout
-  .content-inner {
-    padding-top: $xs-page-layout-content-inner-padding-top;
-    padding-bottom: $xs-page-layout-content-inner-padding-bottom;
-  }
+    // Page layout
+    .content-inner {
+        padding-top: $xs-page-layout-content-inner-padding-top;
+        padding-bottom: $xs-page-layout-content-inner-padding-bottom;
+    }
 }
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
-
-  // Page layout
-  .content-inner {}
+    // Page layout
+    .content-inner {}
 }
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-
-  // Page layout
-  .content-inner {
-    padding-top: $sm-page-layout-content-inner-padding-top;
-    padding-bottom: $sm-page-layout-content-inner-padding-bottom;
-  }
+    // Page layout
+    .content-inner {
+        padding-top: $sm-page-layout-content-inner-padding-top;
+        padding-bottom: $sm-page-layout-content-inner-padding-bottom;
+    }
 }
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
-  // Page layout
-  .content-inner {}
+    // Page layout
+    .content-inner {}
 }
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-
-  // Page layout
-  .content-inner {
-    padding-top: $md-page-layout-content-inner-padding-top;
-    padding-bottom: $md-page-layout-content-inner-padding-bottom;
-  }
+    // Page layout
+    .content-inner {
+        padding-top: $md-page-layout-content-inner-padding-top;
+        padding-bottom: $md-page-layout-content-inner-padding-bottom;
+    }
 }
 
 // Desktop - only
 @include media-breakpoint-only(md) {
-
-  // Page layout
-  .content-inner {}
+    // Page layout
+    .content-inner {}
 }
 
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
-
-  // Page layout
-  .content-inner {}
+    // Page layout
+    .content-inner {}
 }
 
 // Print
 @media print {
-
-  // Page layout
-  .content-inner {}
+    // Page layout
+    .content-inner {}
 }
 
 // Touch
 .touchevents {
-
-  // Page layout
-  .content-inner {}
+    // Page layout
+    .content-inner {}
 }
 
 // No touch
 .no-touchevents {
-
-  // Page layout
-  .content-inner {}
+    // Page layout
+    .content-inner {}
 }
 
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------
-
 // Page layout mixin
 @mixin content-mixin-inner() {}
