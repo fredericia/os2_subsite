@@ -116,7 +116,12 @@ header.navbar {
 @include media-breakpoint-up(sm) {
 
   header.navbar {
-    background: url("../img/baggrund_himmel.png") no-repeat center center;
+    background: url("../img/baggrund_himmel.png") center center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size:cover;
+    
     .container {
       .navbar-header {
         .logo {
