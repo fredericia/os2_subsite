@@ -119,7 +119,7 @@ ul.pagination {
     height: 80px;
 }
 
-.prev a {
+.prev a { 
     width: 50px!important;
     height: 50px!important;
     opacity: 1!important;
@@ -130,9 +130,13 @@ ul.pagination {
     background-size: 20px!important;
     background-repeat: no-repeat!important;
     background-position: center!important;
-    width: 70px!important;
-    height: 70px!important;
+    width: 50px!important;
+    height: 50px!important;
     opacity: 1!important;
+    background-image: url('http://www.seeicons.com/images/iconstore/512/seeicons__577f762bc10da.png')!important;
+    background-size: 20px!important;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
 }
 
 // --------------------------------------------------
