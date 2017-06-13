@@ -50,7 +50,7 @@
   <?php endif; ?>
   <div class="field-items"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item): ?>
-      <a class="btn btn-secondary btn-full-width" href="<?php print render($item); ?>"><?php print t('Køb billet');?></a>
+      <a class="btn btn-full-width" href="<?php print render($item); ?>"><?php print t('Køb billet');?></a>
     <?php endforeach; ?>
   </div>
 </div>

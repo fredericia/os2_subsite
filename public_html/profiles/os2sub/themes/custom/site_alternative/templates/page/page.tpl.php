@@ -200,7 +200,7 @@
         print $view_popular_tags->preview('block');
         ?>
       </div>
-      <div class="pop-tags col-lg-5 col-lg-push-1 col-md-col-5 col-md-push-0">
+      <div class="pop-tags col-lg-6 col-lg-push-0 col-md-col-5 col-md-push-0">
         <h2 class="pane-title">
           <?php print t('Populære'); ?>
           <span class="focus">#tags</span>
