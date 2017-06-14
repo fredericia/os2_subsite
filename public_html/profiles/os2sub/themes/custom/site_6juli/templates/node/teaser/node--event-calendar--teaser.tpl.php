@@ -102,13 +102,15 @@
   hide($content['links']);
   hide($content['field_tags']);
   ?>
-
-  <div class = "row event-teaser">
+   <div class="teaser">
+   <div class="date">1</div>
+    <a href="<?php print $node_url; ?>">
+  <span class = "row event-teaser">
 	<a class="event-teaser-title" href="<?php print $node_url; ?>"><?php print $title; ?></a>
 	
         <a href="<?php print $node_url; ?>"><?php print render($content['field_image_event']); ?></a>
 
-  </div>
+  </span></a></div>
 
 
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
