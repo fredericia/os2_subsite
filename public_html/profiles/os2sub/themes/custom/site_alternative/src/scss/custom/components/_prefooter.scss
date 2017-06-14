@@ -23,7 +23,7 @@
       margin-bottom: 15px;
     }
   }
-.pop-tags{
+  .pop-tags{
     padding-top: 10px;
     padding-bottom: 0px;
     padding-left: 10px;
@@ -50,11 +50,11 @@
           margin-right: 0;
         }
         &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6),  {
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6),  {
           display: inline-block;
         }
 
@@ -83,7 +83,7 @@
       margin-bottom: 15px;
     }
   }
-& .pop-tags{
+  & .pop-tags{
     padding-top: 10px;
     padding-bottom: 0px;
     padding-left: 10px;
@@ -110,11 +110,11 @@
           margin-right: 0;
         }
         &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6),  {
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:nth-child(5),
+          &:nth-child(6),  {
           display: inline-block;
         }
 
@@ -149,10 +149,10 @@
 
     }
   }
-  
- .page-node 
+
+  .page-node 
   & .prefooter {
-   & .right-vertical-line{
+    & .right-vertical-line{
       border-width: 0 4px 0 0;
       border-color: white;
       border-style: solid; 
@@ -193,57 +193,58 @@
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-.page-node
- & .prefooter {
-   & .right-vertical-line{
+  .page-node
+  & .prefooter {
+    margin-top: 40px;
+    & .right-vertical-line{
       padding-top: 30px;
       padding-bottom: 30px;
-     & h2.pane-title{
+      & h2.pane-title{
         margin-top: 4px;
         margin-bottom: 35px;
       }
     }
-   & .pop-tags{
+    & .pop-tags{
       padding-top: 30px;
       padding-bottom: 30px;
       padding-left: 60px;
-     & h2.pane-title{
+      & h2.pane-title{
         margin-top: 4px;
         margin-bottom: 35px;
       }
     }
-     & .view-os2web-taxonomies-tax-editor-tag-list .item-list {
-   & ul {
-      padding: 0;
-     & li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 15px;
-        margin-bottom: 13px;
-        &:last-child {
-          margin-right: 0;
-        }
-       & a {
-          display: block;
-          padding: 7px 40px;
-          background-color: white;
-          border-radius: 30px;
-          font-size: 1.31em;
-          color: $color-focus;
-          text-decoration: none;
-          &:hover{
-            background-color: $color-focus;
-            color: white;
+    & .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+      & ul {
+        padding: 0;
+        & li {
+          list-style: none;
+          display: inline-block;
+          margin-right: 15px;
+          margin-bottom: 13px;
+          &:last-child {
+            margin-right: 0;
+          }
+          & a {
+            display: block;
+            padding: 7px 40px;
+            background-color: white;
+            border-radius: 30px;
+            font-size: 1.31em;
+            color: $color-focus;
+            text-decoration: none;
+            &:hover{
+              background-color: $color-focus;
+              color: white;
+            }
           }
         }
       }
     }
   }
-  }
 
 
   .prefooter {
-      margin-top: 40px;
+
     .right-vertical-line{
       padding-top: 55px;
       padding-bottom: 30px;
@@ -261,33 +262,33 @@
         margin-bottom: 35px;
       }
     }
-      .view-os2web-taxonomies-tax-editor-tag-list .item-list {
-    ul {
-      padding: 0;
-      li {
-        list-style: none;
-        display: inline-block;
-        margin-right: 15px;
-        margin-bottom: 13px;
-        &:last-child {
-          margin-right: 0;
-        }
-        a {
-          display: block;
-          padding: 7px 40px;
-          background-color: $color-background-secondary;
-          border-radius: 30px;
-          font-size: 1.31em;
-          color: $color-focus;
-          text-decoration: none;
-          &:hover{
-            background-color: $color-focus;
-            color: white;
+    .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          display: inline-block;
+          margin-right: 15px;
+          margin-bottom: 13px;
+          &:last-child {
+            margin-right: 0;
+          }
+          a {
+            display: block;
+            padding: 7px 40px;
+            background-color: $color-background-secondary;
+            border-radius: 30px;
+            font-size: 1.31em;
+            color: $color-focus;
+            text-decoration: none;
+            &:hover{
+              background-color: $color-focus;
+              color: white;
+            }
           }
         }
       }
     }
-  }
   }
 }
 

@@ -9606,74 +9606,74 @@ header.navbar {
     padding-right: 63px; } }
 
 @media (min-width: 992px) {
-  .page-node .prefooter .right-vertical-line {
-    padding-top: 30px;
-    padding-bottom: 30px; }
-    .page-node .prefooter .right-vertical-line h2.pane-title, .page-node .prefooter .right-vertical-line .pane-title.heading-h2 {
-      margin-top: 4px;
-      margin-bottom: 35px; }
-  .page-node .prefooter .pop-tags {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 60px; }
-    .page-node .prefooter .pop-tags h2.pane-title, .page-node .prefooter .pop-tags .pane-title.heading-h2 {
-      margin-top: 4px;
-      margin-bottom: 35px; }
-  .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul {
-    padding: 0; }
-    .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li {
-      list-style: none;
-      display: inline-block;
-      margin-right: 15px;
-      margin-bottom: 13px; }
-      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:last-child {
-        margin-right: 0; }
-      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a {
-        display: block;
-        padding: 7px 40px;
-        background-color: white;
-        border-radius: 30px;
-        font-size: 1.31em;
-        color: #ff0060;
-        text-decoration: none; }
-        .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a:hover {
-          background-color: #ff0060;
-          color: white; }
-  .prefooter {
+  .page-node .prefooter {
     margin-top: 40px; }
-    .prefooter .right-vertical-line {
-      padding-top: 55px;
+    .page-node .prefooter .right-vertical-line {
+      padding-top: 30px;
       padding-bottom: 30px; }
-      .prefooter .right-vertical-line h2.pane-title, .prefooter .right-vertical-line .pane-title.heading-h2 {
+      .page-node .prefooter .right-vertical-line h2.pane-title, .page-node .prefooter .right-vertical-line .pane-title.heading-h2 {
         margin-top: 4px;
         margin-bottom: 35px; }
-    .prefooter .pop-tags {
-      padding-top: 55px;
+    .page-node .prefooter .pop-tags {
+      padding-top: 30px;
       padding-bottom: 30px;
       padding-left: 60px; }
-      .prefooter .pop-tags h2.pane-title, .prefooter .pop-tags .pane-title.heading-h2 {
+      .page-node .prefooter .pop-tags h2.pane-title, .page-node .prefooter .pop-tags .pane-title.heading-h2 {
         margin-top: 4px;
         margin-bottom: 35px; }
-    .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul {
+    .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul {
       padding: 0; }
-      .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li {
+      .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li {
         list-style: none;
         display: inline-block;
         margin-right: 15px;
         margin-bottom: 13px; }
-        .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:last-child {
+        .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:last-child {
           margin-right: 0; }
-        .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a {
+        .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a {
           display: block;
           padding: 7px 40px;
-          background-color: #eeeeee;
+          background-color: white;
           border-radius: 30px;
           font-size: 1.31em;
           color: #ff0060;
           text-decoration: none; }
-          .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a:hover {
+          .page-node .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a:hover {
             background-color: #ff0060;
-            color: white; } }
+            color: white; }
+  .prefooter .right-vertical-line {
+    padding-top: 55px;
+    padding-bottom: 30px; }
+    .prefooter .right-vertical-line h2.pane-title, .prefooter .right-vertical-line .pane-title.heading-h2 {
+      margin-top: 4px;
+      margin-bottom: 35px; }
+  .prefooter .pop-tags {
+    padding-top: 55px;
+    padding-bottom: 30px;
+    padding-left: 60px; }
+    .prefooter .pop-tags h2.pane-title, .prefooter .pop-tags .pane-title.heading-h2 {
+      margin-top: 4px;
+      margin-bottom: 35px; }
+  .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul {
+    padding: 0; }
+    .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li {
+      list-style: none;
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 13px; }
+      .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li:last-child {
+        margin-right: 0; }
+      .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a {
+        display: block;
+        padding: 7px 40px;
+        background-color: #eeeeee;
+        border-radius: 30px;
+        font-size: 1.31em;
+        color: #ff0060;
+        text-decoration: none; }
+        .prefooter .view-os2web-taxonomies-tax-editor-tag-list .item-list ul li a:hover {
+          background-color: #ff0060;
+          color: white; } }
 
 footer.footer {
   background-color: #0f2846;
