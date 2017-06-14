@@ -74,30 +74,35 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="<?php print $container_class; ?>">
-    <div class="navbar">
-	  <div class="row">
-		<div class="header-logo col-md-1 visible-md visible-lg">
+<div class="navbar">
+  <div class="row">
+  <div class="social-share"><a href="#"><img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/share.svg'; ?>"></a></div>
+   <div class="header-logo">
 		  <a class="image-top-logo__link" href="<?php print $front_page; ?>"><img
 			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/6-juli-dagene-fredericia.png'; ?>"></a>
-		</div>    
-		<div class="site-name col-md-3 visible-md visible-lg">
-		  6. juli-dagene Fredericia
+			  <div class="site-name">
+		  6. juli-dagene <br> Fredericia
 		</div>
-		<div class="menu">
+		</div>
+      
+      
+       
+           	<div class="menu">
 		  <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+           <div class="mobile-nav">
   		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
   			<span class="sr-only"><?php print t('Toggle navigation'); ?></span>
   			<span class="icon-bar"></span>
   			<span class="icon-bar"></span>
   			<span class="icon-bar"></span>
   		  </button>
+  		  </div>
 		  <?php endif; ?>
 
 
 		  <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
   		  <div class="navbar-collapse collapse">
-  			<nav role="navigation">
+  			<nav id="navigation-menu" role="navigation">
 				<?php if (!empty($primary_nav)): ?>
 				  <?php print render($primary_nav); ?>
 				<?php endif; ?>
@@ -110,23 +115,12 @@
   			</nav>
   		  </div>
 		  <?php endif; ?>
-		</div>
-
-
-
-
-		<div class="text-center visible-xs visible-sm">
-		  <div class="header-logo-small">
-			<a class="image-top-small-logo__link" href="<?php print $front_page; ?>"><img
-				src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/6-juli-logo-small.png'; ?>"></a>
-		  </div>    
-		  <div class="site-name-small">
-			6. juli-dagene Fredericia
-		  </div>
-		</div>	
-
-	  </div>
-	  </header>
+		</div>        
+        </div>
+        
+</div>
+    
+</header>
 <!--Slideshow begin-->
 <div class="container-fluid">
     <div class="background-slideshow row">
