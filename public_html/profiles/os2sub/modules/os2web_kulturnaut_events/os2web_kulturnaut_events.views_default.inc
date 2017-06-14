@@ -1016,6 +1016,33 @@ function os2web_kulturnaut_events_views_default_views() {
       'label' => 'Content: Venue (field_os2web_kulturnaut_venue)',
     ),
   );
+
+  /* Display: Content pane - activities list (single) */
+  $handler = $view->new_display('panel_pane', 'Content pane - activities list (single)', 'panel_pane_activities_list_single');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-md-3';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'os2sub_front_1_single' => 'os2sub_front_1_single',
+    'os2sub_calendar_right' => 0,
+    'os2sub_focus' => 0,
+    'os2sub_front_slideshow' => 0,
+    'os2sub_front_load_more' => 0,
+    'os2sub_front_4_mini' => 0,
+  );
   $translatables['os2web_kulturnaut_events_lists'] = array(
     t('Master'),
     t('Arrangementer fra KulturauT'),
@@ -1074,6 +1101,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Content pane - activities list (4 mini)'),
     t('Content pane - kultunaut events'),
     t('@total resultater'),
+    t('Content pane - activities list (single)'),
   );
   $export['os2web_kulturnaut_events_lists'] = $view;
 
