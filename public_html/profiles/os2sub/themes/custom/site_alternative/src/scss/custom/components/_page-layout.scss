@@ -164,6 +164,7 @@ h2.pane-title--lifted {
   & a.btn{
     background-color: $color-btn-secondary;
     border-color: $color-btn-secondary;
+    color: white;
     &:hover, &:active, &:focus {
       color: $color-btn-secondary;
       background-color: $color-background-primary;
