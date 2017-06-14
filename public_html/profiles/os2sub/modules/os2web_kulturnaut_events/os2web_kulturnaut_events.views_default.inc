@@ -37,25 +37,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'col-md-3';
   $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
-  /* Relationship: Nodequeue: Queue */
-  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
-  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
-  $handler->display->display_options['relationships']['nodequeue_rel']['required'] = TRUE;
-  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
-  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
-    'os2sub_front_4_mini' => 'os2sub_front_4_mini',
-    'os2sub_calendar_right' => 0,
-    'os2sub_focus' => 0,
-    'os2sub_front_slideshow' => 0,
-    'os2sub_front_load_more' => 0,
-  );
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
   /* Field: Content: Slideshow */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_slidesho']['id'] = 'field_os2web_kulturnaut_slidesho';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_slidesho']['table'] = 'field_data_field_os2web_kulturnaut_slidesho';
@@ -100,6 +87,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['order'] = 'DESC';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -947,6 +935,10 @@ function os2web_kulturnaut_events_views_default_views() {
 
   /* Display: Content pane - activities list (4 mini) */
   $handler = $view->new_display('panel_pane', 'Content pane - activities list (4 mini)', 'pane_activities_list_4_mini');
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['row_class'] = 'col-sm-6 col-md-3';
@@ -955,6 +947,29 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
+  );
+  /* Filter criterion: Content: Data source (field_os2web_kulturnaut_source) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_source_value']['id'] = 'field_os2web_kulturnaut_source_value';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_source_value']['table'] = 'field_data_field_os2web_kulturnaut_source';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_source_value']['field'] = 'field_os2web_kulturnaut_source_value';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_source_value']['value'] = array(
+    'feed' => 'feed',
+  );
 
   /* Display: Content pane - kultunaut events */
   $handler = $view->new_display('panel_pane', 'Content pane - kultunaut events', 'pane_kultunaut_events');
@@ -1010,7 +1025,6 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Sortér efter'),
     t('Stigende'),
     t('Faldende'),
-    t('queue'),
     t('<a href=[field_os2web_kulturnaut_homepage] title=[title]>[title]</a>'),
     t('[title]'),
     t('Nid'),
@@ -1023,6 +1037,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('View panes'),
     t('Block - activities slideshow'),
     t('Block - Activities Slideshow'),
+    t('queue'),
     t('- [field_os2web_kulturnaut_date] '),
     t('#[field_os2web_base_field_edi_tags]'),
     t('Læs mere'),
