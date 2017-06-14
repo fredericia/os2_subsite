@@ -8980,6 +8980,10 @@ select {
 .container-inline-date .form-item option {
   margin: 0 !important; }
 
+.form-item-event-calendar-date-value-value-date input {
+  background: none !important;
+  border: 2px solid #fff !important; }
+
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
