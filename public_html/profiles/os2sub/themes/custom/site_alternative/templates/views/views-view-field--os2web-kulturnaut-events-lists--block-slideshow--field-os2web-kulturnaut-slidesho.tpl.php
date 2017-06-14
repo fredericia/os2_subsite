@@ -30,7 +30,7 @@
 preg_match('/src="(.*?)"/', $output, $matches);
 $uri = $matches[1];
 ?>
-<div class="img-container" style="
+<div class="img-container" data-image="<?php print $uri ?>" style="
   background-image: #0f2846, url(<?php print $uri ?>);
   background-image: -moz-linear-gradient(left, rgba(15,40,70,1) 0%, rgba(15,40,70,0) 25%, rgba(15,40,70,0) 50%, rgba(15,40,70,0) 75%, rgba(15,40,70,1) 100%), url(<?php print $uri ?>);
   background-image: -webkit-linear-gradient(left, rgba(15,40,70,1) 0%,rgba(15,40,70,0) 25%,rgba(15,40,70,0) 50%,rgba(15,40,70,0) 75%,rgba(15,40,70,1) 100%), url(<?php print $uri ?>);

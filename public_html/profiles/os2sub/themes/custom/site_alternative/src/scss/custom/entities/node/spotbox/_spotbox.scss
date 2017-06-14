@@ -137,18 +137,18 @@
   & .overlay{
     & .field.field-name-field-os2web-kulturnaut-url{
       & a.btn{
- color: $color-background-tertiary;
-    background-color: $color-background-primary;
-    border-color: $color-background-tertiary;
-    &:hover, &:active, &:focus {
-      color: $color-background-primary;
-      background-color: $color-background-tertiary;
-      border-color: $color-background-tertiary;
-    }
+        color: $color-focus;
+        background-color: $color-background-primary;
+        border-color: $color-background-primary;
+        &:hover, &:active, &:focus {
+          color: $color-background-primary;
+          background: none;
+          border-color: $color-background-primary;
+        }
       }
     }
   }
-  
+
   &.node-os2web-kulturnaut-knactivity {
     .field-name-field-os2web-kulturnaut-slidesho {
       max-height: 250px;
