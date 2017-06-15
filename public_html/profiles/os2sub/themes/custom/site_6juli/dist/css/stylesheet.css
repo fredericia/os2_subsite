@@ -8843,6 +8843,47 @@ article .field-type-text-with-summary {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
+.sidebar-left .pane-title {
+  font-size: 16px !important;
+  text-transform: uppercase;
+  color: #555; }
+
+.sidebar-right .pane-title {
+  font-size: 16px !important;
+  text-transform: uppercase;
+  color: #aaa; }
+
+.sidebar-right {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 30px; }
+
+.page-node .main-container {
+  padding-top: 40px; }
+
+.pane-os2sub-social-share-os2sub-social-share .pane-title {
+  padding-bottom: 10px; }
+
+.pane-node-field-image-event img {
+  width: 120%; }
+
+.pane-node-field-image-event {
+  overflow: hidden;
+  width: 120% !important;
+  margin-left: -100px;
+  position: relative;
+  height: auto;
+  margin-top: 30px;
+  background: blue; }
+
+.block__share-links__link a {
+  font-size: 16px !important;
+  padding: 0;
+  margin: 0; }
+
+.panel-pane .field-item {
+  font-size: 16px;
+  font-weight: 200; }
+
 .teaser {
   -webkit-box-shadow: inset 0px 0px 63px 0px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 0px 63px 0px rgba(0, 0, 0, 0.5); }

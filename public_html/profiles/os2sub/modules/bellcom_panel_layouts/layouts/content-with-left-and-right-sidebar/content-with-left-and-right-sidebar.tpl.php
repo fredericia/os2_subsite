@@ -13,7 +13,7 @@
 
   <?php if ($content['sidebar-left']): ?>
     <!-- Begin - left sidebar -->
-    <div class="col-md-3">
+    <div class="col-md-3 sidebar-left">
       <?php print $content['sidebar-left']; ?>
     </div>
     <!-- End - left sidebar -->
@@ -21,7 +21,7 @@
 
   <?php if ($content['sidebar-right']): ?>
     <!-- Begin - right sidebar -->
-    <div class="col-md-3 col-md-push-6 hidden-print">
+    <div class="col-md-3 col-md-push-6 hidden-print sidebar-right">
       <?php print $content['sidebar-right']; ?>
     </div>
     <!-- End - right sidebar -->
@@ -31,7 +31,7 @@
 
     <?php if ($content['sidebar-left'] && $content['sidebar-right']): ?>
       <!-- Begin - content -->
-      <div class="col-md-6 col-md-pull-3">
+      <div class="col-md-5 col-md-pull-3">
         <?php print $content['content']; ?>
       </div>
       <!-- End - content -->
@@ -45,7 +45,7 @@
 
     <?php else: ?>
       <!-- Begin - content -->
-      <div class="col-md-9">
+      <div class="col-md-6">
         <?php print $content['content']; ?>
       </div>
       <!-- End - content -->
