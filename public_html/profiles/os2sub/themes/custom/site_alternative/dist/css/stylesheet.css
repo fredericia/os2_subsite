@@ -9194,20 +9194,23 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
   margin-top: -3.85em; }
 
 .panel-pane.panel-pane--full-width {
-  margin-right: -9999rem;
-  margin-left: -9999rem;
   /* add back negative margin value */
-  padding: 30px 9999rem 10px;
   background: #eeeeee;
   border-bottom: 2px solid #cccccc;
   margin-top: 20px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
+  min-width: 100%;
+  padding: 30px -webkit-calc(50vw - 50%) 10px;
+  padding: 30px calc(50vw - 50%) 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; }
 
 .panel-pane.panel-pane--full-width.pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini {
-  margin-right: -9999rem;
-  margin-left: -9999rem;
-  /* add back negative margin value */
-  padding: 30px 9999rem;
   background: #eeeeee;
   border-bottom: none;
   margin-top: 20px;

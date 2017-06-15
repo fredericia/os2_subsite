@@ -127,21 +127,26 @@ h3.pane-title {
   }
 
   &.panel-pane--full-width{
-    margin-right: -9999rem;
-    margin-left: -9999rem;
+    //margin-right: -9999rem;
+    //margin-left: -9999rem;
     /* add back negative margin value */
-    padding: 30px 9999rem 10px;
+    //padding: 30px 9999rem 10px;
+    
     background: $color-background-secondary;
     border-bottom: 2px solid $color-background-tertiary;
     margin-top: 20px;
     margin-bottom: 30px;
+
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+    min-width: 100%;
+    padding: 30px calc(50vw - 50%) 10px;
+    box-sizing: border-box;
+    position: relative;
   }
 
   &.panel-pane--full-width.pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini{
-    margin-right: -9999rem;
-    margin-left: -9999rem;
-    /* add back negative margin value */
-    padding: 30px 9999rem;
     background: $color-background-secondary;
     border-bottom: none;
     margin-top: 20px;
