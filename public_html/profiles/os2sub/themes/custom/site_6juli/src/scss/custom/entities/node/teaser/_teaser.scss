@@ -96,6 +96,23 @@
     }
   }
 }
+.view-det-sker-slideshow {
+  .front-teaser {
+    height: 350px;
+    .date {
+      .dag {
+        color: #FFF;
+      }
+      .maaned {
+        color: #FFF;
+      }
+    }
+    .headline {
+      color: #FFF;
+      font-size: 24px;
+    }
+  }
+}
 
 // --------------------------------------------------
 // Variants
