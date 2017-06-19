@@ -109,7 +109,7 @@ article .field-type-text-with-summary {
 }
 
 .field-name-field-image-event {
-    width: 400px!important;
+    height: 400px!important;
 }
 
 .panel-pane article {
@@ -175,7 +175,7 @@ article .field-type-text-with-summary {
 
 .pane-node-field-image-event img {
     
-   width: 120%;
+   width: 100%;
     
 }
 
@@ -189,6 +189,11 @@ iframe {
     width: 100%;
     height: 150px;
 }
+
+//.owl-item .item-0 {
+//    
+//    height: 350px;
+//}
 
 .page-node .field-name-field-image-event .field-item {
     
