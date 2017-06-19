@@ -40,8 +40,14 @@
   }
 }
 .contextual-links-region{
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
+.pair-4-mini{
+    float: left;
+    &:last-child{
+    float: none;
+    }
+  }
 // Teaser
 
 
@@ -86,6 +92,9 @@
 
   // Teaser
   .node-teaser {}
+  .pair-4-mini{
+    float: none;
+  }
 }
 
 // Desktop - only

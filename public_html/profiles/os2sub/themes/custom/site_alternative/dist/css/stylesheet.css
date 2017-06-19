@@ -9843,6 +9843,15 @@ footer.footer a.block-image-links__link {
 .contextual-links-region {
   margin-bottom: 0px; }
 
+.pair-4-mini {
+  float: left; }
+  .pair-4-mini:last-child {
+    float: none; }
+
+@media (min-width: 992px) {
+  .pair-4-mini {
+    float: none; } }
+
 .view-mode-os2sub_spotbox_mini.node {
   border: 6px solid #ffffff; }
 
