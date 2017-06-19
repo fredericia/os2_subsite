@@ -34,7 +34,7 @@ function os2sub_banner_image_default_styles() {
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 1200,
-          'height' => 400,
+          'height' => 350,
           'anchor' => 'center-center',
           'jcrop_settings' => array(
             'aspect_ratio' => '',

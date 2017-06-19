@@ -121,6 +121,13 @@
 </div>
     
 </header>
+
+		  <?php if (!empty($page['highlighted'])): ?>
+  		  <div role="complementary">
+			  <?php print render($page['highlighted']); ?>
+  		  </div>  <!-- /#highlighted -->
+		  <?php endif; ?>
+		  
 	  <div class="main-container <?php print $container_class; ?>">
 
 		
@@ -134,9 +141,6 @@
 		  <?php endif; ?>
 
 		  <section<?php print $content_column_class; ?>>
-			<?php if (!empty($page['highlighted'])): ?>
-  			<div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-			<?php endif; ?>
 			<?php
 			if (!empty($breadcrumb)): print $breadcrumb;
 			endif;
