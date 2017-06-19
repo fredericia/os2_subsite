@@ -8866,6 +8866,10 @@ article .field-type-text-with-summary {
 .pane-node-field-image-event img {
   width: 100%; }
 
+.pane-node-body {
+  padding-left: 40px;
+  padding-right: 40px; }
+
 .page-node .pane-custom {
   margin-bottom: 20px; }
 

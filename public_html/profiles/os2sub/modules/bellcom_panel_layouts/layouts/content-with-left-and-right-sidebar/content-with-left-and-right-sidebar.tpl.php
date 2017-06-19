@@ -21,7 +21,7 @@
 
   <?php if ($content['sidebar-right']): ?>
     <!-- Begin - right sidebar -->
-    <div class="col-md-3 col-md-push-6 hidden-print sidebar-right">
+    <div class="col-md-4 col-md-push-6 hidden-print sidebar-right">
       <?php print $content['sidebar-right']; ?>
     </div>
     <!-- End - right sidebar -->
@@ -31,7 +31,7 @@
 
     <?php if ($content['sidebar-left'] && $content['sidebar-right']): ?>
       <!-- Begin - content -->
-      <div class="col-md-5 col-md-pull-3">
+      <div class="col-md-6 col-md-pull-4">
         <?php print $content['content']; ?>
       </div>
       <!-- End - content -->
