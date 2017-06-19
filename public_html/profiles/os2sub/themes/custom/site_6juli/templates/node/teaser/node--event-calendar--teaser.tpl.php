@@ -103,7 +103,7 @@
   hide($content['field_tags']);
   ?>
    <div class="teaser">
-   <div class="date">1</div>
+   <div class="date"><?php echo date('d', strtotime($node->field_event_calendar_date['und'][0]['value']));?></div>
     <a href="<?php print $node_url; ?>">
   <span class = "row event-teaser">
 	<a class="event-teaser-title" href="<?php print $node_url; ?>"><?php print $title; ?></a>
