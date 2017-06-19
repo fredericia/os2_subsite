@@ -31,8 +31,8 @@
 
     <?php if ($content['sidebar-left'] && $content['sidebar-right']): ?>
       <!-- Begin - content -->
-      <div class="col-md-6 col-md-pull-4">
-        <?php print $content['content']; ?>
+      <div class="col-md-6 col-md-pull-4 content-wrapper">
+        <div class="inner-content"><?php print $content['content']; ?></div>
       </div>
       <!-- End - content -->
 

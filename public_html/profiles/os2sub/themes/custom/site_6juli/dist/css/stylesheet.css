@@ -8866,8 +8866,7 @@ article .field-type-text-with-summary {
 .pane-node-field-image-event img {
   width: 100%; }
 
-.pane-node-body {
-  padding-left: 40px;
+.content-wrapper .inner-content {
   padding-right: 40px; }
 
 .page-node .pane-custom {
