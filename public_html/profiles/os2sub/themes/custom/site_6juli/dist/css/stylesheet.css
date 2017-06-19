@@ -1,7 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:400,700&amp;subset=latin-ext");
-.front .pane-content {
-  max-width: 1170px; }
+.front .pane-content,
+.front .facebook-forside {
+  max-width: 1170px;
+  margin: 0 auto; }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
