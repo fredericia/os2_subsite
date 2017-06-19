@@ -121,6 +121,13 @@
 </div>
     
 </header>
+
+		  <?php if (!empty($page['highlighted'])): ?>
+  		  <div role="complementary">
+			  <?php print render($page['highlighted']); ?>
+  		  </div>  <!-- /#highlighted -->
+		  <?php endif; ?>
+		  
 	  <div class="main-container <?php print $container_class; ?>">
 
 		
