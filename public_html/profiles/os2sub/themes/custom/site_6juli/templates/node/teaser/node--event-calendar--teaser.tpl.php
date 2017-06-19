@@ -103,7 +103,14 @@
   hide($content['field_tags']);
   ?>
    <div class="teaser">
-   <div class="date"><?php echo date('M', strtotime($node->field_event_calendar_date['und'][0]['value']));?></div>
+   <div class="date">
+     <?php print render(field_view_value('node', $node, 'field_event_calendar_date[', $node->language, array(
+  'settings' => array(
+    'format_type' => 'dag'
+  )
+)));
+?>
+     <?php echo date('M', strtotime($node->field_event_calendar_date['und'][0]['value']));?></div>
     <a href="<?php print $node_url; ?>">
   <span class = "row event-teaser">
 	<a class="event-teaser-title" href="<?php print $node_url; ?>"><?php print $title; ?></a>
