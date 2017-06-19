@@ -1,3 +1,9 @@
 $text-muted: #ADA2A4;
 $body-bg-secondary: #F5F4F4;
 $body-bg-tertiary: #5c4b51;
+
+.front {
+  .pane-content {
+    max-width: 1170px;
+  }
+}

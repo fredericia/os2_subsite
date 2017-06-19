@@ -1,11 +1,14 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:400,700&amp;subset=latin-ext");
+.front .pane-content {
+  max-width: 1170px; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:400,700&amp;subset=latin-ext");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -9860,6 +9863,16 @@ footer.footer a.image-links__link {
     border-right: 1px solid #ddd; }
     .node-teaser .list-border > li:last-child {
       border-right: 0; }
+
+.view-det-sker-slideshow .front-teaser {
+  height: 350px; }
+  .view-det-sker-slideshow .front-teaser .date .dag {
+    color: #FFF; }
+  .view-det-sker-slideshow .front-teaser .date .maaned {
+    color: #FFF; }
+  .view-det-sker-slideshow .front-teaser .headline {
+    color: #FFF;
+    font-size: 24px; }
 
 .node-spotbox .card-block {
   background-color: #00406f; }
