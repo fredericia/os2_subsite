@@ -96,9 +96,13 @@
     }
   }
 }
+.front-teaser-outer {
+  margin: 20px;
+}
 .view-det-sker-slideshow {
   .front-teaser {
-    height: 350px;
+    height: 250px;
+    padding: 10px;
     .date {
       .dag {
         color: #FFF;

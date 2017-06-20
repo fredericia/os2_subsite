@@ -9866,8 +9866,12 @@ footer.footer a.image-links__link {
     .node-teaser .list-border > li:last-child {
       border-right: 0; }
 
+.front-teaser-outer {
+  margin: 20px; }
+
 .view-det-sker-slideshow .front-teaser {
-  height: 350px; }
+  height: 250px;
+  padding: 10px; }
   .view-det-sker-slideshow .front-teaser .date .dag {
     color: #FFF; }
   .view-det-sker-slideshow .front-teaser .date .maaned {

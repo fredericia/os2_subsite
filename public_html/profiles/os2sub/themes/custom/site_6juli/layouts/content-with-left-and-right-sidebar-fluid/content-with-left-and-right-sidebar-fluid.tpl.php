@@ -38,7 +38,7 @@
 
     <?php elseif (!$content['sidebar-left'] && !$content['sidebar-right']): ?>
       <!-- Begin - content -->
-      <div class="col-md-12">
+      <div class="content-nosidebars">
         <?php print $content['content']; ?>
       </div>
       <!-- End - content -->
