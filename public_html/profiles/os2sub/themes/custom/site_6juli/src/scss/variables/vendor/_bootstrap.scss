@@ -892,7 +892,7 @@ $hr-border:                   $gray-lighter !default;
     color: #e0ded4;
     font-size: $font-size-h1;
   }
-  .pane-det-sker-slideshow {
+  #block-system-main .panel-pane.pane-det-sker-slideshow {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 40px;
@@ -901,6 +901,7 @@ $hr-border:                   $gray-lighter !default;
   .sealle-link {
     float: left;
     margin-top: -40px;
+    color: #FFF;
   }
   .owl-dots {
     text-align: right;

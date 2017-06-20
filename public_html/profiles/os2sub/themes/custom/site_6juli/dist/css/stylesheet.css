@@ -10,7 +10,7 @@
   color: #e0ded4;
   font-size: 32px; }
 
-.front .pane-det-sker-slideshow {
+.front #block-system-main .panel-pane.pane-det-sker-slideshow {
   margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 40px;
@@ -18,7 +18,8 @@
 
 .front .sealle-link {
   float: left;
-  margin-top: -40px; }
+  margin-top: -40px;
+  color: #FFF; }
 
 .front .owl-dots {
   text-align: right;
