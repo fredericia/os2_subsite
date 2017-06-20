@@ -8987,9 +8987,6 @@ article .field-type-text-with-summary {
 .pane-os2sub-social-share-os2sub-social-share .pane-title {
   padding-bottom: 10px; }
 
-.pane-node-field-image-event img {
-  width: 100%; }
-
 .content-wrapper .inner-content {
   padding-right: 80px; }
 
@@ -9005,15 +9002,6 @@ iframe {
 
 .page-node .pane-custom h2, .page-node .pane-custom .heading-h2 {
   margin-top: 0px; }
-
-.pane-node-field-image-event {
-  overflow: hidden;
-  width: 120% !important;
-  margin-left: -100px;
-  position: relative;
-  height: auto;
-  margin-top: 30px;
-  background: blue; }
 
 .block__share-links__link a {
   font-size: 16px !important;
@@ -9890,6 +9878,15 @@ footer.footer a.image-links__link {
 
 .readmore-btns {
   margin-top: 20px; }
+  .readmore-btns .btn, .readmore-btns .banner .banner-wrapper a, .banner .banner-wrapper .readmore-btns a {
+    margin-right: 20px; }
+
+.youtube-text {
+  padding-left: 40px;
+  padding-top: 40px; }
+  .youtube-text btn {
+    width: auto;
+    max-width: 70%; }
 
 .node-spotbox .card-block {
   background-color: #112a49; }
