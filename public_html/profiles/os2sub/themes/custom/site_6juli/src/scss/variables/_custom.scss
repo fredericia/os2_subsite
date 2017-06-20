@@ -3,9 +3,14 @@ $body-bg-secondary: #F5F4F4;
 $body-bg-tertiary: #5c4b51;
 
 .front {
-  .pane-content,
-  .facebook-forside {
+  .panel-pane .pane-content,
+  .facebook-forside,
+  .panel-pane .pane-title {
     max-width: 1170px;
     margin: 0 auto;
+  }
+  .panel-pane .pane-title {
+    color: #e0ded4;
+    font-size: $font-size-h1;
   }
 }

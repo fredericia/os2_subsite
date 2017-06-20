@@ -1,9 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:400,700&amp;subset=latin-ext");
-.front .pane-content,
-.front .facebook-forside {
+.front .panel-pane .pane-content,
+.front .facebook-forside,
+.front .panel-pane .pane-title {
   max-width: 1170px;
   margin: 0 auto; }
+
+.front .panel-pane .pane-title {
+  color: #e0ded4;
+  font-size: 32px; }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -9847,6 +9852,10 @@ footer.footer a.image-links__link {
     left: 20px;
     text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
     text-align: left; }
+
+.view-det-sker-slideshow .owl-theme .owl-dot {
+  text-align: right;
+  margin-top: 0; }
 
 .node-spotbox .card-block {
   background-color: #112a49; }
