@@ -881,10 +881,12 @@ $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 $hr-border:                   $gray-lighter !default;
 
 
-.front {
-  #block-system-main .panel-pane .pane-content,
-  #block-system-main .facebook-forside,
-  #block-system-main .panel-pane .pane-title {
+  .node-type-os2web-base-gallery .region.region-content,
+  .node-type-event-calendar .region.region-content,
+  .node-type-os2web-base-news .region.region-content,
+  .front #block-system-main .panel-pane .pane-content,
+  .front #block-system-main .facebook-forside,
+  .front #block-system-main .panel-pane .pane-title {
     max-width: 1170px;
     margin: 0 auto;
   }
@@ -916,4 +918,3 @@ $hr-border:                   $gray-lighter !default;
       width: 75%;
     }
   }
-}

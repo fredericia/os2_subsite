@@ -1,36 +1,39 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:400,700&amp;subset=latin-ext");
+.node-type-os2web-base-gallery .region.region-content,
+.node-type-event-calendar .region.region-content,
+.node-type-os2web-base-news .region.region-content,
 .front #block-system-main .panel-pane .pane-content,
 .front #block-system-main .facebook-forside,
 .front #block-system-main .panel-pane .pane-title {
   max-width: 1170px;
   margin: 0 auto; }
 
-.front .panel-pane .pane-title {
+.panel-pane .pane-title {
   color: #e0ded4;
   font-size: 32px; }
 
-.front #block-system-main .panel-pane.pane-det-sker-slideshow {
+#block-system-main .panel-pane.pane-det-sker-slideshow {
   margin-top: 20px;
   margin-bottom: 40px;
   padding-bottom: 40px;
   padding-top: 40px; }
 
-.front .sealle-link {
+.sealle-link {
   float: left;
   margin-top: -40px;
   color: #FFF; }
 
-.front .owl-dots {
+.owl-dots {
   text-align: right;
   margin-top: 0 !important;
   padding-top: 0;
   float: right; }
 
-.front #block-system-main .facebook-forside {
+#block-system-main .facebook-forside {
   padding-top: 20px;
   padding-bottom: 20px; }
-  .front #block-system-main .facebook-forside a.btn, .front #block-system-main .facebook-forside .banner .banner-wrapper a, .banner .banner-wrapper .front #block-system-main .facebook-forside a {
+  #block-system-main .facebook-forside a.btn, #block-system-main .facebook-forside .banner .banner-wrapper a, .banner .banner-wrapper #block-system-main .facebook-forside a {
     width: 75%; }
 
 /*!
