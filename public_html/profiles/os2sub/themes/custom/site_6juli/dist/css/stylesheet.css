@@ -9,6 +9,9 @@
   max-width: 1170px;
   margin: 0 auto; }
 
+.pane-content.full-width {
+  max-width: 100%; }
+
 .panel-pane .pane-title {
   color: #e0ded4;
   font-size: 32px; }
@@ -8991,7 +8994,7 @@ p {
 .instagram-image img {
   height: 200px; }
 
-.full-width {
+.bg-grey {
   background: #e0ded4;
   margin-top: 20px;
   margin-bottom: 30px; }
@@ -9924,7 +9927,7 @@ footer.footer a.image-links__link {
 .youtube-text {
   padding-left: 40px;
   padding-top: 40px; }
-  .youtube-text btn {
+  .youtube-text a.btn, .youtube-text .banner .banner-wrapper a, .banner .banner-wrapper .youtube-text a {
     width: auto;
     max-width: 70%; }
 

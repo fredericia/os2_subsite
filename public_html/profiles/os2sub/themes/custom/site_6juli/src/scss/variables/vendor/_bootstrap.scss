@@ -890,6 +890,9 @@ $hr-border:                   $gray-lighter !default;
     max-width: 1170px;
     margin: 0 auto;
   }
+  .pane-content.full-width {
+    max-width: 100%;
+  }
   .panel-pane .pane-title {
     color: #e0ded4;
     font-size: $font-size-h1;
