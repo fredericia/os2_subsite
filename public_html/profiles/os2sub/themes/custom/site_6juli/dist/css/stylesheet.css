@@ -9914,10 +9914,15 @@ footer.footer a.image-links__link {
       color: #FFF;
       display: block;
       font-size: 16px;
-      text-align: center; }
+      text-align: center;
+      line-height: 14px;
+      padding-top: 3px; }
     .view-det-sker-slideshow .front-teaser .date .maaned {
       color: #FFF;
-      font-size: 10px; }
+      font-size: 12px;
+      text-transform: uppercase;
+      line-height: 12px;
+      padding-top: 1px; }
   .view-det-sker-slideshow .front-teaser .headline {
     color: #FFF;
     font-size: 24px;
@@ -9932,6 +9937,9 @@ footer.footer a.image-links__link {
 .view-det-sker-slideshow .owl-theme .owl-dot {
   text-align: right;
   margin-top: 0; }
+
+.readmore-btns {
+  margin-top: 20px; }
 
 .node-spotbox .card-block {
   background-color: #112a49; }

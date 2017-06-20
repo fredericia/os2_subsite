@@ -115,10 +115,15 @@
         display: block;
         font-size: 16px;
         text-align: center;
+        line-height: 14px;
+        padding-top: 3px;
       }
       .maaned {
         color: #FFF;
-        font-size: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 12px;
+        padding-top: 1px;
       }
     }
     .headline {
@@ -137,6 +142,10 @@
     text-align: right;
     margin-top: 0;
   }
+}
+
+.readmore-btns {
+  margin-top: 20px;
 }
 
 // --------------------------------------------------
