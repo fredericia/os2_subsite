@@ -882,9 +882,9 @@ $hr-border:                   $gray-lighter !default;
 
 
 .front {
-  .panel-pane .pane-content,
-  .facebook-forside,
-  .panel-pane .pane-title {
+  #block-system-main .panel-pane .pane-content,
+  #block-system-main .facebook-forside,
+  #block-system-main .panel-pane .pane-title {
     max-width: 1170px;
     margin: 0 auto;
   }
@@ -905,7 +905,12 @@ $hr-border:                   $gray-lighter !default;
   }
   .owl-dots {
     text-align: right;
-    margin-top: 0;
+    margin-top: 0 !important;
     padding-top: 0;
+    float: right;
+  }
+  #block-system-main .facebook-forside {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
