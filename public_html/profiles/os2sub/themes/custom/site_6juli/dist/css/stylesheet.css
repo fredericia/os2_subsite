@@ -8999,9 +8999,7 @@ p {
   height: 200px; }
 
 .bg-grey {
-  background: #e0ded4;
-  margin-top: 20px;
-  margin-bottom: 30px; }
+  background: #e0ded4; }
 
 .form-control {
   border: none !important;
