@@ -299,7 +299,9 @@ p {
 .bg-grey{
     background: $color-grey-background;
 }
-
+.pane-clone-of-forside-first-minipanel {
+  padding-bottom: 40px;
+}
 .form-control {
     border: none!important;
     height: 45px;

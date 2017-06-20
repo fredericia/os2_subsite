@@ -9089,6 +9089,9 @@ p {
 .bg-grey {
   background: #e0ded4; }
 
+.pane-clone-of-forside-first-minipanel {
+  padding-bottom: 40px; }
+
 .form-control {
   border: none !important;
   height: 45px;
