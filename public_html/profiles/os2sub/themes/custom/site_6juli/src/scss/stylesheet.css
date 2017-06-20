@@ -9821,8 +9821,6 @@ footer.footer a.image-links__link {
 
 .view-det-sker-slideshow .front-teaser {
   height: 240px;
-  padding: 10px;
-  margin: 10px;
   position: relative; }
   .view-det-sker-slideshow .front-teaser .date {
     position: absolute;
@@ -9843,6 +9841,7 @@ footer.footer a.image-links__link {
     color: #FFF;
     font-size: 24px;
     font-family: "Droid Serif", serif;
+    font-weight: normal;
     position: absolute;
     bottom: 20px;
     left: 20px;

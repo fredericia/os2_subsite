@@ -102,8 +102,6 @@
 .view-det-sker-slideshow {
   .front-teaser {
     height: 240px;
-    padding: 10px;
-    margin: 10px;
     position: relative;
     .date {
       position: absolute;
@@ -127,6 +125,7 @@
       color: #FFF;
       font-size: 24px;
       font-family: $font-droid-serif;
+      font-weight: normal;
       position: absolute;
       bottom: 20px;
       left: 20px;
