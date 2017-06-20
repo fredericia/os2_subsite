@@ -3,13 +3,14 @@
 .node-type-os2web-base-gallery .region.region-content,
 .node-type-event-calendar .region.region-content,
 .node-type-os2web-base-news .region.region-content,
-.front #block-system-main .panel-pane .pane-content,
-.front #block-system-main .facebook-forside,
-.front #block-system-main .panel-pane .pane-title {
+.front .panel-pane .pane-content,
+.front .facebook-forside,
+.front .panel-pane .pane-title {
   max-width: 1170px;
   margin: 0 auto; }
 
-.pane-content.full-width {
+.full-width .pane-content,
+.full-width .pane-title {
   max-width: 100%; }
 
 .panel-pane .pane-title {
