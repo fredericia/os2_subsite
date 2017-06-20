@@ -103,7 +103,13 @@
   .front-teaser {
     height: 250px;
     padding: 10px;
+    margin: 10px;
+    position: relative;
     .date {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $color-focus-secondary;
       .dag {
         color: #FFF;
       }
