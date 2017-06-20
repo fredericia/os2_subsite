@@ -25,19 +25,6 @@ function owlcarousel_views_views_plugins() {
         'type' => 'normal',
         'even empty' => FALSE,
       ),
-    ),
-    'pager' => array(
-      'owlcarousel_views_pager' => array(
-        'title' => t('Paged output, carousel'),
-        'help' => t('Provides a carousel pager for view output.'),
-        'help topic' => '',
-        'handler' => 'owlcarousel_views_plugin_pager_owlcarousel',
-        'theme' => 'owlcarousel_views_pager',
-        'theme file' => 'owlcarousel_views.theme.inc',
-        'theme path' => drupal_get_path('module', 'owlcarousel_views') . '/theme',
-        'uses options' => TRUE,
-        'parent' => 'full',
-      ),
-    ),
+    )
   );
 }

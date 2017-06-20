@@ -21,12 +21,12 @@ function owlcarousel_requirements($phase) {
 
   $requirements = array();
   if ($phase == 'runtime') {
-    $library = libraries_get_path('owl-carousel');
+    $library = libraries_get_path('owlcarousel');
     $path = $library . '/owl.carousel.min.js';
 
     $requirements['owlcarousel'] = array(
       'title' => $t('Owl Carousel'),
-      'value' => $t('Owl Carousel library not found; the correct path should be @path.', array('@path' => 'sites/all/libraries/owl-carousel/owl.carousel.min.js')),
+      'value' => $t('Owl Carousel library not found; the correct path should be @path.', array('@path' => 'sites/all/libraries/owlcarousel/owl.carousel.min.js')),
       'severity' => REQUIREMENT_ERROR,
     );
 
@@ -44,7 +44,6 @@ function owlcarousel_requirements($phase) {
  */
 function owlcarousel_uninstall() {
   $query = 'SELECT name FROM {variable} WHERE name LIKE :name';
-  // @todo, add like for owlcarousel_settings_
   $results = db_query($query, array(':name' => db_like('owlcarousel_') . '%'))->fetchAll();
 
   foreach ($results as $result) {

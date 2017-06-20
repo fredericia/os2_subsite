@@ -4,6 +4,20 @@
  * @file
  * owlcarousel_ui.module
  */
+
+/**
+ * Implements hook_theme().
+ */
+function owlcarousel_ui_theme() {
+  return array(
+    'owlcarousel_admin_settings_form' => array(
+      'render element' => 'form',
+    ),
+    'owlcarousel_admin_settings_form_fields' => array(
+      'render element' => 'form',
+    ),
+  );
+}
  
 /**
  * Implements hook_menu().
@@ -24,21 +38,47 @@ function owlcarousel_ui_menu() {
     'page callback' => 'owlcarousel_instance_settings_form',
     'page arguments' => array(4),
     'access arguments' => array('administer owlcarousel settings'),
-    'type' => MENU_NORMAL_ITEM,
+    'type' => MENU_CALLBACK,
+    'file' => 'owlcarousel_ui.admin.inc',
+  );
+  $items['admin/config/user-interface/owlcarousel/settings'] = array(
+    'title' => 'Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('owlcarousel_global_settings_form'),
+    'access arguments' => array('administer owlcarousel settings'),
+    'weight' => 1,
+    'type' => MENU_LOCAL_ACTION,
     'file' => 'owlcarousel_ui.admin.inc',
   );
   $items['admin/config/user-interface/owlcarousel/import'] = array(
-    'title' => 'Import Settings',
+    'title' => 'Import',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('owlcarousel_variable_settings_import_form'),
     'access arguments' => array('administer owlcarousel settings'),
-    'type' => MENU_NORMAL_ITEM,
+    'weight' => 2,
+    'type' => MENU_LOCAL_ACTION,
+    'file' => 'owlcarousel_ui.admin.inc',
+  );
+  $items['admin/config/user-interface/owlcarousel/%/add'] = array(
+    'title' => 'Responsive Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('owlcarousel_responsive_breakpoint_form', 4),
+    'access arguments' => array('administer owlcarousel settings'),
+    'type' => MENU_CALLBACK,
     'file' => 'owlcarousel_ui.admin.inc',
   );
   $items['admin/config/user-interface/owlcarousel/%/export'] = array(
     'title' => 'Export Settings',
     'page callback' => 'owlcarousel_export_instance_settings',
     'page arguments' => array(4),
+    'access arguments' => array('administer owlcarousel settings'),
+    'type' => MENU_CALLBACK,
+    'file' => 'owlcarousel_ui.admin.inc',
+  );
+  $items['admin/config/user-interface/owlcarousel/%/add/%'] = array(
+    'title' => 'Responsive Settings',
+    'page callback' => 'owlcarousel_add_responsive_settings',
+    'page arguments' => array(4, 6),
     'access arguments' => array('administer owlcarousel settings'),
     'type' => MENU_CALLBACK,
     'file' => 'owlcarousel_ui.admin.inc',
@@ -69,50 +109,25 @@ function owlcarousel_ui_permission() {
 /**
  * Implements hook_variable_settings_form_alter().
  */
-function owlcarousel_ui_variable_settings_form_alter(&$form, $form_state, $form_id) {
+function owlcarousel_ui_variable_settings_form_alter(&$form, &$form_state, $form_id) {
   if (isset($form_state['build_info']['args'][0]) && $form_state['build_info']['args'][0] == 'owlcarousel') {
     $instance = $form_state['build_info']['args'][1];
- 
-    $check = _owlcarousel_return_instances($instance);
-    if ($check) {
-      // Include additional submit handler to update settings cache.
-      $form['#submit'][] = 'owlcarousel_variable_settings_submit';
- 
-      // This needs a graceful solution... =/
-      $settings = owlcarousel_ui_build_instance_settings($instance, $form['#variable_edit_form']);
-      foreach ($form as $key => $component) {
-        if (strpos($key, '[instance_id]') !== FALSE) {
-          $form[$key] = $settings[$key];
-        }
+
+    // Include additional submit handler to update settings cache.
+    $form['#submit'][] = 'owlcarousel_variable_settings_submit';
+
+    // This needs a graceful solution... =/
+    $settings = owlcarousel_ui_build_instance_settings($instance, $form['#variable_edit_form']);
+    foreach ($form as $key => $component) {
+      // Group variables into fieldsets by type.
+      // we need @https://www.drupal.org/node/1897462
+      // $types = array('string', 'number', 'boolean', 'array');
+
+      if (strpos($key, '[instance_id]') !== FALSE) {
+        $form[$key] = $settings[$key];
       }
     }
-    else {
-      hide($form);
-
-      // Alert user; no group was found.
-      drupal_set_message(t('No settings group found with the name @name.', array('@name' => $instance)), 'warning');
-    }
   }
-}
-
-/**
- * Format variable settings form to only display our
- * instance variables.
- */
-function owlcarousel_ui_build_instance_settings($instance, $settings) {
-  module_load_include('form.inc', 'variable');  
-
-  foreach ($settings as $key => $setting) {
-    $variable = variable_get_child($setting, $instance);
-    $form[$setting][$variable['name']] = variable_form_element($variable);
-
-    if ($setting == 'owlcarousel_navigation_text_[instance_id]') {
-      $form[$setting][$variable['name']][0]['#title'] = t('Previous');
-      $form[$setting][$variable['name']][1]['#title'] = t('Next');
-    }
-  }
-
-  return $form;
 }
 
 /**

@@ -7,47 +7,50 @@
 
   Drupal.behaviors.owlcarousel = {
     attach: function(context, settings) {
-
       for (var carousel in settings.owlcarousel) {
-        // Carousel instance.
-        var owl = $('.' + carousel);
+        this.attachInit(carousel, settings.owlcarousel);
+      }
+    },
 
-        // lazyLoad support.
-        if (settings.owlcarousel[carousel].settings.lazyLoad) {
-          var images = owl.find('img');
+    /**
+     * Find and select carousel element.
+     *
+     * @param carousel htmlSelector
+     * @param settings object
+     */
+    attachInit: function(carousel, settings) {
+      var element = $('#' + carousel);
+      this.attachOwlCarousel(element, settings[carousel].settings);
+    },
 
-          $.each(images, function(i, image) {
-            $(image).attr('data-src', $(image).attr('src'));
-          });
+    /**
+     * Attaches each individual carousel instance
+     * to the provided HTML selector.
+     *
+     * @param element htmlElement
+     * @param settings object
+     */
+    attachOwlCarousel: function(element, settings) {
+      // Provide settings alter before init.
+      $(document).trigger('owlcarousel.alterSettings', settings);
 
-          images.addClass('lazyOwl');
-        }
+      // lazyLoad support.
+      if (settings.lazyLoad) {
+        var images = element.find('img');
 
-        // Attach instance settings.
-        owl.owlCarousel(settings.owlcarousel[carousel].settings);
+        $.each(images, function(i, image) {
+          $(image).attr('data-src', $(image).attr('src'));
+        });
 
-        // Set an inline height if custom AJAX pagination is enabled;
-        // otherwise replacement of carousel element causes scrolling effect.
-        if (settings.owlcarousel[carousel].views.ajax_pagination) {
-          var owlnav = $('.' + carousel);
-          owlnav.parent().css('height', owlnav.height());
+        images.addClass('owl-lazy');
+      }
 
-          var view = owlnav.parent().parent();
-          var next = $(view).find('.pager-next a', context);
-          var prev = $(view).find('.pager-previous a', context);
-
-          // Attach Owl Carousel behaviors to pager elements.
-          $(next).once('ajax', function() {
-            $(next, context).click(function() {
-              owlnav.trigger('owl.next');
-            });
-          });
-          $(prev).once('ajax', function() {
-            $(prev, context).click(function() {
-              owlnav.trigger('owl.prev');
-            });
-          });
-        }
+      if (element.hasClass('disabled') || settings.forceDisplay) {
+        element.show();
+      }
+      else {
+        // Attach instance settings & provide alter.
+        $(document).trigger('owlcarousel.alterInstance', [element.owlCarousel(settings)]);
       }
     }
   };

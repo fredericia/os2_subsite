@@ -6,64 +6,42 @@
  */
 
 /**
- * Add helper variables for carousel view.
+ * Template process Owl Carousel Views variables.
  */
-function template_process_owlcarousel_views(&$vars) {
-  if (!empty($vars['view'])) {
-    $options = $vars['options'];
-    $view = $vars['view'];
-
-    $function = !module_exists('variable') ? 'variable_get' : 'variable_get_value';
-    if ($function('owlcarousel_override_ajax_pagination_' . $options['instance'])) {
-      drupal_add_js(drupal_get_path('module', 'owlcarousel_views') . '/js/owlcarousel.views.js', array('scope' => 'footer', 'type' => 'file'));
-      drupal_add_css(drupal_get_path('module', 'owlcarousel_views') . '/css/owlcarousel.views.css', array('scope' => 'header', 'type' => 'file'));
-    }
+function template_process_owlcarousel_views(&$variables) {
+  if (!empty($variables['view'])) {
+    $settings = $variables['options'];
+    $view = $variables['view'];
 
     $items = array();
     $row_plugin = $view->style_plugin->row_plugin;
-    foreach ($vars['rows'] as $id => $row) {
-      $view->row_index = $id;
-      $item['row'] = $row_plugin->render($row);
 
-      $items[] = $item;
+    foreach ($variables['rows'] as $id => $row) {
+      $view->row_index = $id;
+
+      if ($item['row'] = $row_plugin->render($row)) {
+        $items[] = $item;
+      }
     }
 
-    // Add the slide items.
-    $vars['items'] = $items;
-    $options['id'] = $vars['options']['id'];
-    $vars['settings'] = $options;
-  }
+    // Attribute id.
+    $settings['attributes']['id'] = $variables['options']['id'];
 
-  return $vars;
+    // Row items & instance settings.
+    $variables['settings'] = $settings;
+    $variables['items'] = $items;
+  }
 }
 
 /**
- * Theme callback for pager.
+ * Theme declaration for Owl Carousel View output.
  */
-function theme_owlcarousel_views_pager($vars) {
-  global $pager_page_array, $pager_total;
+function theme_owlcarousel_views($variables) {
+  $output = array(
+    '#theme' => 'owlcarousel',
+    '#items' => $variables['items'],
+    '#settings' => $variables['settings']
+  );
 
-  $element = $vars['element'];
-  $options = $vars['options'];
-
-  $prev_label = (!isset($options['prev_label'])) ? $options['prev_label'] : 'previous';
-  $next_label = (!isset($options['next_label'])) ? $options['next_label'] : 'next';
-
-  if ($pager_total[$element] > 1) {
-    $items = array(
-      array(
-        'class' => array('pager-previous'),
-        'data' => l(t($prev_label), '', array('attributes' => array('class' => 'previous'), 'external' => TRUE, 'fragment' => 'pre')),
-      ),
-      array(
-        'class' => array('pager-next'),
-        'data' => l(t($next_label), '', array('attributes' => array('class' => 'next'), 'external' => TRUE, 'fragment' => 'next')),
-      ),
-    );
-
-    return theme('item_list', array(
-      'items' => $items,
-      'attributes' => array('class' => array('pager')),
-    ));
-  }
+  return drupal_render($output);
 }
