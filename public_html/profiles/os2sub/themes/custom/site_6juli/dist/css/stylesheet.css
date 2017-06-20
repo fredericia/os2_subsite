@@ -12,7 +12,7 @@
 
 .front #block-system-main .panel-pane.pane-det-sker-slideshow {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding-bottom: 40px;
   padding-top: 40px; }
 
@@ -30,6 +30,8 @@
 .front #block-system-main .facebook-forside {
   padding-top: 20px;
   padding-bottom: 20px; }
+  .front #block-system-main .facebook-forside a.btn, .front #block-system-main .facebook-forside .banner .banner-wrapper a, .banner .banner-wrapper .front #block-system-main .facebook-forside a {
+    width: 75%; }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
