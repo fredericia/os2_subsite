@@ -886,8 +886,9 @@ $hr-border:                   $gray-lighter !default;
   .node-type-os2web-base-news .region.region-content,
   .front .panel-pane .pane-content,
   .front .facebook-forside,
-  .front .panel-pane .pane-title {
-    max-width: 1170px;
+  .front .panel-pane .pane-title,
+  .full-width .pane-content .view-content {
+    max-width: $container-lg;
     margin: 0 auto;
   }
   .full-width .pane-content,

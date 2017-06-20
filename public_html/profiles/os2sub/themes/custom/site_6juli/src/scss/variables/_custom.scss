@@ -1,16 +1,12 @@
-$text-muted: #ADA2A4;
-$body-bg-secondary: #F5F4F4;
-$body-bg-tertiary: #5c4b51;
-
-.front {
-  .panel-pane .pane-content,
-  .facebook-forside,
-  .panel-pane .pane-title {
-    max-width: 1170px;
-    margin: 0 auto;
+.view-os2web-events-slideshow-footer {
+  .views-field-title,
+  .views-field-body,
+  .views-field-view-node {
+    max-width: 45%;
+    color: #FFF;
   }
-  .panel-pane .pane-title {
-    color: #e0ded4;
-    font-size: $font-size-h1;
+  .views-field-title .h1 {
+    color: #FFF;
+    margin-top: 60px;
   }
 }

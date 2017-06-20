@@ -5,7 +5,8 @@
 .node-type-os2web-base-news .region.region-content,
 .front .panel-pane .pane-content,
 .front .facebook-forside,
-.front .panel-pane .pane-title {
+.front .panel-pane .pane-title,
+.full-width .pane-content .view-content {
   max-width: 1170px;
   margin: 0 auto; }
 
