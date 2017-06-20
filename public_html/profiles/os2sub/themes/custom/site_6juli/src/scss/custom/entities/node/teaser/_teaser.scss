@@ -110,11 +110,17 @@
       right: 0;
       top: 0;
       background-color: $color-focus-secondary;
-      .dag {
+      width: 40px;
+      height: 40px;
+      .dag, .maaned {
         color: #FFF;
+        display: block;
+        font-size: 16px;
+        text-align: center;
       }
       .maaned {
         color: #FFF;
+        font-size: 10px;
       }
     }
     .headline {

@@ -9828,11 +9828,17 @@ footer.footer a.image-links__link {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #00beff; }
-    .view-det-sker-slideshow .front-teaser .date .dag {
-      color: #FFF; }
+    background-color: #00beff;
+    width: 40px;
+    height: 40px; }
+    .view-det-sker-slideshow .front-teaser .date .dag, .view-det-sker-slideshow .front-teaser .date .maaned {
+      color: #FFF;
+      display: block;
+      font-size: 16px;
+      text-align: center; }
     .view-det-sker-slideshow .front-teaser .date .maaned {
-      color: #FFF; }
+      color: #FFF;
+      font-size: 10px; }
   .view-det-sker-slideshow .front-teaser .headline {
     color: #FFF;
     font-size: 24px; }
