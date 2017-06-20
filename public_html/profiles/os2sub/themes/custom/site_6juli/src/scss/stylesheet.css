@@ -10,7 +10,9 @@
   margin: 0 auto; }
 
 .full-width .pane-content,
-.full-width .pane-title {
+.full-width .pane-title,
+.front .full-width .pane-content,
+.front .full-width .pane-title {
   max-width: 100%; }
 
 .panel-pane .pane-title {
