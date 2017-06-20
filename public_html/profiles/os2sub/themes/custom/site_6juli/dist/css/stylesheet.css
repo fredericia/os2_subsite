@@ -8829,9 +8829,6 @@ article .field-type-text-with-summary {
       -ms-flex-align: center;
           align-items: center; }
 
-.field-name-field-image-event {
-  height: 400px !important; }
-
 .panel-pane article {
   margin-left: 15px;
   margin-right: 15px; }
@@ -8908,9 +8905,6 @@ article .field-type-text-with-summary {
 iframe {
   width: 100%;
   height: 250px; }
-
-.page-node .field-name-field-image-event .field-item {
-  height: 40vh; }
 
 .page-node .pane-custom h2, .page-node .pane-custom .heading-h2 {
   margin-top: 0px; }
