@@ -10,6 +10,21 @@
   color: #e0ded4;
   font-size: 32px; }
 
+.front .pane-det-sker-slideshow {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
+  padding-top: 40px; }
+
+.front .sealle-link {
+  float: left;
+  margin-top: -40px; }
+
+.front .owl-dots {
+  text-align: right;
+  margin-top: 0;
+  padding-top: 0; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
