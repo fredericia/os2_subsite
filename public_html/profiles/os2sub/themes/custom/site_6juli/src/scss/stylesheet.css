@@ -9820,7 +9820,7 @@ footer.footer a.image-links__link {
   margin: 20px; }
 
 .view-det-sker-slideshow .front-teaser {
-  height: 250px;
+  height: 240px;
   padding: 10px;
   margin: 10px;
   position: relative; }
@@ -9828,7 +9828,7 @@ footer.footer a.image-links__link {
     position: absolute;
     right: 0;
     top: 0;
-    background-color: #89bd2a;
+    background-color: #6c2833;
     width: 40px;
     height: 40px; }
     .view-det-sker-slideshow .front-teaser .date .dag, .view-det-sker-slideshow .front-teaser .date .maaned {
@@ -9846,7 +9846,8 @@ footer.footer a.image-links__link {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.84); }
+    text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.84);
+    text-align: left; }
 
 .node-spotbox .card-block {
   background-color: #112a49; }
