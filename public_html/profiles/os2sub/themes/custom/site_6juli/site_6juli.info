@@ -30,6 +30,12 @@ regions[page_bottom] = 'Page bottom'
 stylesheets[all][] = 'dist/css/stylesheet.css'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Panels
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Panels layouts. You can place multiple layouts under the "layouts" folder.
+plugins[panels][layouts] = layouts
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
