@@ -21,6 +21,10 @@
   color: #e0ded4;
   font-size: 32px; }
 
+.panel-pane h1.pane-title, .panel-pane .pane-title.heading-h1, .panel-pane .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .panel-pane .pane-title.banner-headline {
+  color: #112a49;
+  font-size: 32px; }
+
 #block-system-main .panel-pane.pane-det-sker-slideshow {
   margin-top: 20px;
   margin-bottom: 40px;
@@ -8962,65 +8966,109 @@ h2.pane-title,
   color: #386c87;
   border: 0; }
 
-.paragraphs-items-field-afsnit .entity-paragraphs-item {
-  margin-bottom: 30px; }
-
-.paragraphs-items-field-afsnit .field-name-field-paragraph-header {
-  font-family: "Droid Serif", serif;
-  font-weight: bold;
-  font-size: 1.5em;
-  color: #112a49;
-  margin-bottom: 20px; }
-
-.paragraphs-items-field-afsnit .field-name-field-image {
-  margin-left: -100px;
-  margin-bottom: 20px; }
-
-.paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat {
-  margin-left: -100px;
-  margin-left: -15px;
-  margin-right: -15px; }
-  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:before, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:after {
-    content: " ";
-    display: table; }
-  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:after {
-    clear: both; }
-  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
-    @media (min-width: 768px) {
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
-        left: 16.6666666667%; } }
-    @media (min-width: 768px) {
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
-        float: left;
-        width: 83.3333333333%; } }
-  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
-    @media (min-width: 768px) {
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
-        left: 33.3333333333%; } }
-    @media (min-width: 768px) {
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
-        float: left;
-        width: 66.6666666667%; } }
-  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
-    @media (min-width: 768px) {
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
-        right: 66.6666666667%; } }
-    @media (min-width: 768px) {
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
-        float: left;
-        width: 33.3333333333%; } }
+.paragraphs-items-field-afsnit {
+  margin-top: 20px; }
+  .paragraphs-items-field-afsnit .entity-paragraphs-item {
+    margin-bottom: 20px; }
+  .paragraphs-items-field-afsnit .field-name-field-paragraph-header {
+    font-family: "Droid Serif", serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #112a49;
+    margin-bottom: 20px; }
+  .paragraphs-items-field-afsnit .field-name-field-image {
+    margin-left: -100px;
+    margin-bottom: 20px; }
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat {
+    margin-left: -100px;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:before, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:after {
+      content: " ";
+      display: table; }
+    .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:after {
+      clear: both; }
+    .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media (min-width: 768px) {
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
+          left: 16.6666666667%; } }
+      @media (min-width: 768px) {
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
+          float: left;
+          width: 83.3333333333%; } }
+    .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media (min-width: 768px) {
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
+          left: 33.3333333333%; } }
+      @media (min-width: 768px) {
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
+          float: left;
+          width: 66.6666666667%; } }
+    .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
+      position: relative;
+      min-height: 1px;
+      padding-left: 15px;
+      padding-right: 15px; }
+      @media (min-width: 768px) {
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
+          right: 66.6666666667%; } }
+      @media (min-width: 768px) {
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
+          float: left;
+          width: 33.3333333333%; } }
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link {
+    background-color: gray;
+    padding: 20px; }
+    .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link {
+      margin-top: 20px; }
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a {
+        color: #fff;
+        background-color: #112a49;
+        border-color: #0c1e34;
+        padding: 10px 16px;
+        font-size: 16px;
+        line-height: 1.3333333;
+        border-radius: 6px; }
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.focus {
+          color: #fff;
+          background-color: #071220;
+          border-color: black; }
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:hover {
+          color: #fff;
+          background-color: #071220;
+          border-color: #010203; }
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active,
+        .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle {
+          color: #fff;
+          background-color: #071220;
+          border-color: #010203; }
+          .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active:hover, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active.focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active:hover, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active.focus,
+          .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle:hover,
+          .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle:focus,
+          .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle.focus {
+            color: #fff;
+            background-color: #010203;
+            border-color: black; }
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active,
+        .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle {
+          background-image: none; }
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.disabled:hover, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.disabled:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.disabled.focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a[disabled]:hover, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a[disabled]:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a[disabled].focus,
+        fieldset[disabled] .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:hover,
+        fieldset[disabled] .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:focus,
+        fieldset[disabled] .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.focus {
+          background-color: #112a49;
+          border-color: #0c1e34; }
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a .badge {
+          color: #112a49;
+          background-color: #fff; }
 
 .node-event-calendar {
   margin-bottom: 30px; }

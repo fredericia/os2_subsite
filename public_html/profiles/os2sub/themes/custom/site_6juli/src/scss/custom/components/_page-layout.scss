@@ -244,8 +244,9 @@ h2.pane-title {
 }
 
 .paragraphs-items-field-afsnit {
+  margin-top: 20px;
   .entity-paragraphs-item {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .field-name-field-paragraph-header {
     font-family: $font-droid-serif;
@@ -272,6 +273,17 @@ h2.pane-title {
     .field-name-field-citat {
       @include make-sm-column-pull(8);
       @include make-sm-column(4);
+    }
+  }
+  .paragraphs-item-afsnit-m-link {
+    background-color: gray;
+    padding: 20px;
+    .field-name-field-knap-link {
+      margin-top: 20px;
+      a {
+        @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+        @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+      }
     }
   }
 }

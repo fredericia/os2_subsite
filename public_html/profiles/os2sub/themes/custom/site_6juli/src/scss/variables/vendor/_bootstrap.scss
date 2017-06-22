@@ -901,6 +901,10 @@ $hr-border:                   $gray-lighter !default;
     color: #e0ded4;
     font-size: $font-size-h1;
   }
+  .panel-pane h1.pane-title {
+    color: $brand-primary;
+    font-size: $font-size-h1;
+  }
   #block-system-main .panel-pane.pane-det-sker-slideshow {
     margin-top: 20px;
     margin-bottom: 40px;
