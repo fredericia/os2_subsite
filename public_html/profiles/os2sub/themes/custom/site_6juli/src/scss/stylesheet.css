@@ -9185,16 +9185,21 @@ h2.pane-title, .pane-title.heading-h2 {
           color: #6c2833;
           background-color: #fff; }
 
-.front .panels-flexible-9-inside {
+.front .panels-flexible-9-inside,
+.front .panels-flexible-10-inside {
   margin-left: -15px;
   margin-right: -15px; }
   .front .panels-flexible-9-inside:before,
-  .front .panels-flexible-9-inside:after {
+  .front .panels-flexible-9-inside:after,
+  .front .panels-flexible-10-inside:before,
+  .front .panels-flexible-10-inside:after {
     content: " ";
     display: table; }
-  .front .panels-flexible-9-inside:after {
+  .front .panels-flexible-9-inside:after,
+  .front .panels-flexible-10-inside:after {
     clear: both; }
-  .front .panels-flexible-9-inside .panels-flexible-region {
+  .front .panels-flexible-9-inside .panels-flexible-region,
+  .front .panels-flexible-10-inside .panels-flexible-region {
     position: relative;
     float: left;
     width: 100%;
@@ -9206,7 +9211,8 @@ h2.pane-title, .pane-title.heading-h2 {
     padding-left: 15px;
     padding-right: 15px; }
     @media (min-width: 768px) {
-      .front .panels-flexible-9-inside .panels-flexible-region {
+      .front .panels-flexible-9-inside .panels-flexible-region,
+      .front .panels-flexible-10-inside .panels-flexible-region {
         float: left;
         width: 50%; } }
 

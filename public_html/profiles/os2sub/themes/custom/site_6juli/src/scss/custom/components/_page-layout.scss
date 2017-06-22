@@ -302,7 +302,8 @@ h2.pane-title {
     }
   }
 }
-.front .panels-flexible-9-inside {
+.front .panels-flexible-9-inside,
+.front .panels-flexible-10-inside {
   @include make-row();
   .panels-flexible-region {
     @include make-xs-column(12);
