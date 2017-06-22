@@ -302,7 +302,13 @@ h2.pane-title {
     }
   }
 }
-
+.front .panels-flexible-9-inside {
+  @include make-row();
+  .panels-flexible-region {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+  }
+}
 .node-event-calendar {
     margin-bottom: 30px;
 }
