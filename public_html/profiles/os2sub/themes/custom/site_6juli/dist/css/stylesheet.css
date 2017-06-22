@@ -2828,7 +2828,7 @@ select[multiple].input-lg,
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  border-radius: 4px;
+  border-radius: 20px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3118,19 +3118,19 @@ fieldset[disabled] a {
   padding: 10px 16px;
   font-size: 16px;
   line-height: 1.3333333;
-  border-radius: 6px; }
+  border-radius: 20px; }
 
 .btn-sm, .btn-group-sm > .btn, .banner .banner-wrapper .btn-group-sm > a {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px; }
+  border-radius: 20px; }
 
 .btn-xs, .btn-group-xs > .btn, .banner .banner-wrapper .btn-group-xs > a {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px; }
+  border-radius: 20px; }
 
 .btn-block {
   display: block;
@@ -3446,16 +3446,16 @@ tbody.collapse.in {
   border-radius: 0; }
 
 .btn-group-vertical > .btn:first-child:not(:last-child), .banner .banner-wrapper .btn-group-vertical > a:first-child:not(:last-child) {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn:last-child:not(:first-child), .banner .banner-wrapper .btn-group-vertical > a:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px; }
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px; }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .banner .banner-wrapper .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a {
   border-radius: 0; }
@@ -9046,7 +9046,9 @@ h2.pane-title,
         padding: 10px 16px;
         font-size: 16px;
         line-height: 1.3333333;
-        border-radius: 6px; }
+        border-radius: 20px;
+        padding-left: 30px;
+        padding-right: 30px; }
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.focus {
           color: #fff;
           background-color: #471a21;

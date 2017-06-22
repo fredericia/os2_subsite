@@ -296,6 +296,8 @@ h2.pane-title {
       a {
         @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
         @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+        padding-left: 30px;
+        padding-right: 30px;
       }
     }
   }
