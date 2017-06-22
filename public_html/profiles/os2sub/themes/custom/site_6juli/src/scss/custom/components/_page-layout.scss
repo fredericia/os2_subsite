@@ -261,8 +261,8 @@ h2.pane-title {
     margin-bottom: 20px;
   }
   .paragraphs-item-afsnit-m-citat {
-    margin-left: -100px;
     @include make-row();
+    margin-left: -115px;
    .field-name-field-paragraph-header {
      @include make-sm-column-push(2);
      @include make-sm-column(10);
@@ -274,11 +274,17 @@ h2.pane-title {
     .field-name-field-citat {
       @include make-sm-column-pull(8);
       @include make-sm-column(4);
-      color: $color-font-light;
+      color: #999;
       font-family: $font-droid-serif;
       font-size: $font-size-large;
       text-align: center;
       font-style: italic;
+      .field-item:before {
+        content: '"';
+      }
+      .field-item:after {
+        content: '"';
+      }
     }
   }
   .paragraphs-item-afsnit-m-link {

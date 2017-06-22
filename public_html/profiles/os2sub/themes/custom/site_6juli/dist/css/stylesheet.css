@@ -8981,9 +8981,9 @@ h2.pane-title,
     margin-left: -100px;
     margin-bottom: 20px; }
   .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat {
-    margin-left: -100px;
     margin-left: -15px;
-    margin-right: -15px; }
+    margin-right: -15px;
+    margin-left: -115px; }
     .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:before, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:after {
       content: " ";
       display: table; }
@@ -9018,7 +9018,7 @@ h2.pane-title,
       min-height: 1px;
       padding-left: 15px;
       padding-right: 15px;
-      color: #e0ded4;
+      color: #999;
       font-family: "Droid Serif", serif;
       font-size: 16px;
       text-align: center;
@@ -9030,6 +9030,10 @@ h2.pane-title,
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
           float: left;
           width: 33.3333333333%; } }
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat .field-item:before {
+        content: '"'; }
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat .field-item:after {
+        content: '"'; }
   .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link {
     background-color: #e0ded4;
     padding: 20px; }
