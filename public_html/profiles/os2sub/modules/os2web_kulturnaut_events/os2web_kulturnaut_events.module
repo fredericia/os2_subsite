@@ -20,4 +20,19 @@ function os2web_kulturnaut_events_os2web_help($sections) {
   return $sections;
 }
 
+function os2web_kulturnaut_events_preprocess_taxonomy_term(&$variables) {
+  $term = $variables['term'];
+  if ($term->vocabulary_machine_name == 'os2web_kulturnaut_venue') {
+    $query = new EntityFieldQuery();
+    $count = $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'os2web_kulturnaut_knactivity')
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->fieldCondition('field_os2web_kulturnaut_venue', 'tid', $term->tid)
+      ->count()
+      ->execute();
+
+    $variables['related_activities'] = $count;
+  }
+}
+
 

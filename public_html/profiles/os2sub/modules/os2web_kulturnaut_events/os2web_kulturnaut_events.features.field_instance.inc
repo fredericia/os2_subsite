@@ -1994,6 +1994,13 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'simple_gmap',
         'weight' => 1,
       ),
+      'os2sub_spotbox_list' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 1,
+      ),
       'os2sub_term_search_result' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2038,6 +2045,16 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'settings' => array(
           'image_link' => '',
           'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'os2sub_spotbox_list' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'os2sub_spotbox_image',
         ),
         'type' => 'image',
         'weight' => 0,

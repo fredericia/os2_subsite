@@ -16,6 +16,7 @@ function os2web_kulturnaut_events_ds_view_modes_info() {
   $ds_view_mode->label = 'OS2sub Spotbox list';
   $ds_view_mode->entities = array(
     'node' => 'node',
+    'taxonomy_term' => 'taxonomy_term',
   );
   $export['os2sub_spotbox_list'] = $ds_view_mode;
 
