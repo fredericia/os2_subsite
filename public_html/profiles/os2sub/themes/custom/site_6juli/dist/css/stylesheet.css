@@ -9030,10 +9030,10 @@ h2.pane-title,
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
           float: left;
           width: 33.3333333333%; } }
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat .field-item:before {
-        content: '"'; }
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat .field-item:after {
-        content: '"'; }
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat .field-item {
+        padding-top: 20px; }
+        .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat .field-item:before, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat .field-item:after {
+          content: '"'; }
   .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link {
     background-color: #e0ded4;
     padding: 20px; }

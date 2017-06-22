@@ -279,11 +279,12 @@ h2.pane-title {
       font-size: $font-size-large;
       text-align: center;
       font-style: italic;
-      .field-item:before {
-        content: '"';
-      }
-      .field-item:after {
-        content: '"';
+      .field-item {
+        padding-top: 20px;
+        &:before,
+        &:after {
+          content: '"';
+        }
       }
     }
   }
