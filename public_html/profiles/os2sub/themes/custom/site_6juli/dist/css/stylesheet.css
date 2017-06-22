@@ -8967,7 +8967,8 @@ h2.pane-title,
   border: 0; }
 
 .paragraphs-items-field-afsnit {
-  margin-top: 20px; }
+  margin-top: 20px;
+  color: #666; }
   .paragraphs-items-field-afsnit .entity-paragraphs-item {
     margin-bottom: 20px; }
   .paragraphs-items-field-afsnit .field-name-field-paragraph-header {
@@ -9025,37 +9026,37 @@ h2.pane-title,
           float: left;
           width: 33.3333333333%; } }
   .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link {
-    background-color: gray;
+    background-color: #e0ded4;
     padding: 20px; }
     .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link {
       margin-top: 20px; }
       .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a {
         color: #fff;
-        background-color: #112a49;
-        border-color: #0c1e34;
+        background-color: #6c2833;
+        border-color: #59212a;
         padding: 10px 16px;
         font-size: 16px;
         line-height: 1.3333333;
         border-radius: 6px; }
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.focus {
           color: #fff;
-          background-color: #071220;
+          background-color: #471a21;
           border-color: black; }
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:hover {
           color: #fff;
-          background-color: #071220;
-          border-color: #010203; }
+          background-color: #471a21;
+          border-color: #2d1115; }
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active,
         .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle {
           color: #fff;
-          background-color: #071220;
-          border-color: #010203; }
+          background-color: #471a21;
+          border-color: #2d1115; }
           .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active:hover, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active.focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active:hover, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active.focus,
           .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle:hover,
           .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle:focus,
           .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle.focus {
             color: #fff;
-            background-color: #010203;
+            background-color: #2d1115;
             border-color: black; }
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:active, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.active,
         .open > .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.dropdown-toggle {
@@ -9064,10 +9065,10 @@ h2.pane-title,
         fieldset[disabled] .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:hover,
         fieldset[disabled] .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:focus,
         fieldset[disabled] .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.focus {
-          background-color: #112a49;
-          border-color: #0c1e34; }
+          background-color: #6c2833;
+          border-color: #59212a; }
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a .badge {
-          color: #112a49;
+          color: #6c2833;
           background-color: #fff; }
 
 .node-event-calendar {

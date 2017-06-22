@@ -245,6 +245,7 @@ h2.pane-title {
 
 .paragraphs-items-field-afsnit {
   margin-top: 20px;
+  color: #666;
   .entity-paragraphs-item {
     margin-bottom: 20px;
   }
@@ -276,12 +277,12 @@ h2.pane-title {
     }
   }
   .paragraphs-item-afsnit-m-link {
-    background-color: gray;
+    background-color: $color-font-light;
     padding: 20px;
     .field-name-field-knap-link {
       margin-top: 20px;
       a {
-        @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+        @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
         @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
       }
     }
