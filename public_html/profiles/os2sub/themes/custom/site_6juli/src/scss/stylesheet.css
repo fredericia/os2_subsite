@@ -9000,10 +9000,6 @@ iframe {
   padding: 0;
   margin: 0; }
 
-.panel-pane .field-item {
-  font-size: 16px;
-  font-weight: 200; }
-
 .teaser {
   -webkit-box-shadow: inset 0px 0px 63px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0px 0px 63px 0px rgba(0, 0, 0, 0.5);
@@ -9054,11 +9050,66 @@ h2.pane-title, .pane-title.heading-h2 {
   color: #386c87;
   border: 0; }
 
+.paragraphs-items-field-afsnit .entity-paragraphs-item {
+  margin-bottom: 30px; }
+
 .paragraphs-items-field-afsnit .field-name-field-paragraph-header {
-  font-family: "Lato", sans-serif;
+  font-family: "Droid Serif", serif;
   font-weight: bold;
-  font-size: 1.31em;
-  color: #666666; }
+  font-size: 1.5em;
+  color: #112a49;
+  margin-bottom: 20px; }
+
+.paragraphs-items-field-afsnit .field-name-field-image {
+  margin-left: -100px;
+  margin-bottom: 20px; }
+
+.paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat {
+  margin-left: -100px;
+  margin-left: -15px;
+  margin-right: -15px; }
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:before,
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:after {
+    content: " ";
+    display: table; }
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat:after {
+    clear: both; }
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
+        left: 16.66667%; } }
+    @media (min-width: 768px) {
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-header {
+        float: left;
+        width: 83.33333%; } }
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
+        left: 33.33333%; } }
+    @media (min-width: 768px) {
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-paragraph-text {
+        float: left;
+        width: 66.66667%; } }
+  .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
+        right: 66.66667%; } }
+    @media (min-width: 768px) {
+      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
+        float: left;
+        width: 33.33333%; } }
 
 .node-event-calendar {
   margin-bottom: 30px; }

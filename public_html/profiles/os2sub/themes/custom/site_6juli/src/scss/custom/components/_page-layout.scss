@@ -181,11 +181,6 @@ iframe {
     margin: 0;
 }
 
-.panel-pane .field-item {
-    
-    font-size: 16px;
-    font-weight: 200;
-}
 .teaser {
     -webkit-box-shadow: inset 0px 0px 63px 0px rgba(0,0,0,0.50);
 -moz-box-shadow: inset 0px 0px 63px 0px rgba(0,0,0,0.50);
@@ -249,11 +244,35 @@ h2.pane-title {
 }
 
 .paragraphs-items-field-afsnit {
+  .entity-paragraphs-item {
+    margin-bottom: 30px;
+  }
   .field-name-field-paragraph-header {
-    font-family: $font-lato;
+    font-family: $font-droid-serif;
     font-weight: bold;
-    font-size: 1.31em;
-    color: $color-font-dark-secondary;
+    font-size: 1.5em;
+    color: $brand-primary;
+    margin-bottom: 20px;
+  }
+  .field-name-field-image {
+    margin-left: -100px;
+    margin-bottom: 20px;
+  }
+  .paragraphs-item-afsnit-m-citat {
+    margin-left: -100px;
+    @include make-row();
+   .field-name-field-paragraph-header {
+     @include make-sm-column-push(2);
+     @include make-sm-column(10);
+    }
+    .field-name-field-paragraph-text {
+      @include make-sm-column-push(4);
+      @include make-sm-column(8);
+    }
+    .field-name-field-citat {
+      @include make-sm-column-pull(8);
+      @include make-sm-column(4);
+    }
   }
 }
 
