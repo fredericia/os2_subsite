@@ -8945,7 +8945,7 @@ h1.pane-title,
   font-family: "Droid Serif", serif;
   font-weight: bold;
   font-size: 4.625em;
-  color: #0f2846;
+  color: #306783;
   border: 0; }
 
 h2.page-header, .page-header.heading-h2,
@@ -8974,9 +8974,9 @@ h2.pane-title,
   .paragraphs-items-field-afsnit .field-name-field-paragraph-header {
     font-family: "Droid Serif", serif;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.9em;
     color: #112a49;
-    margin-bottom: 20px; }
+    margin-bottom: 10px; }
   .paragraphs-items-field-afsnit .field-name-field-image {
     margin-left: -100px;
     margin-bottom: 20px; }
