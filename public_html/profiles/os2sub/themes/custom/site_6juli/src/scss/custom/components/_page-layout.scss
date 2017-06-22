@@ -274,6 +274,17 @@ h2.pane-title {
     .field-name-field-citat {
       @include make-sm-column-pull(8);
       @include make-sm-column(4);
+      color: $color-font-light;
+      font-family: $font-droid-serif;
+      font-size: $font-size-large;
+      text-align: center;
+      font-style: italic;
+      :before {
+        content: '"';
+      }
+      :after {
+        content: '"';
+      }
     }
   }
   .paragraphs-item-afsnit-m-link {
