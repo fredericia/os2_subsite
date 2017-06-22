@@ -279,12 +279,6 @@ h2.pane-title {
       font-size: $font-size-large;
       text-align: center;
       font-style: italic;
-      :before {
-        content: '"';
-      }
-      :after {
-        content: '"';
-      }
     }
   }
   .paragraphs-item-afsnit-m-link {

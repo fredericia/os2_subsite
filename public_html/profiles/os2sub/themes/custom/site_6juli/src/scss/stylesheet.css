@@ -9119,10 +9119,6 @@ h2.pane-title, .pane-title.heading-h2 {
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat {
           float: left;
           width: 33.33333%; } }
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat :before {
-        content: '"'; }
-      .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-citat .field-name-field-citat :after {
-        content: '"'; }
   .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link {
     background-color: #e0ded4;
     padding: 20px; }
