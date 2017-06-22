@@ -880,10 +880,10 @@ $dl-horizontal-breakpoint:    $grid-float-breakpoint !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
 
-
   .node-type-os2web-base-gallery .region.region-content,
   .node-type-event-calendar .region.region-content,
   .node-type-os2web-base-news .region.region-content,
+  .node-type-os2web-base-contentpage .region.region-content,
   .front .panel-pane .pane-content,
   .front .facebook-forside,
   .front .panel-pane .pane-title,
