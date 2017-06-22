@@ -59,7 +59,7 @@ function os2web_kulturnaut_events_image_default_styles() {
 function os2web_kulturnaut_events_node_info() {
   $items = array(
     'os2web_kulturnaut_knactivity' => array(
-      'name' => t('Kultunaut begivenhed'),
+      'name' => t('Begivenhed'),
       'base' => 'node_content',
       'description' => t('Præsentere importeret kulturnaut begivenheder fra Kulturnaut.'),
       'has_title' => '1',
