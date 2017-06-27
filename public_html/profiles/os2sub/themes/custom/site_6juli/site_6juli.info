@@ -41,6 +41,8 @@ plugins[panels][layouts] = layouts
 
 ;scripts[] = 'dist/js/modernizr.js'
 ;scripts[] = 'dist/js/core.js'
+scripts[] = 'dist/js/jquery.smartmenus.min.js'
+scripts[] = 'dist/addons/query.smartmenus.bootstrap.js'
 
 ; Disable the CDN provider so compiled source files can be used.
 ;settings[bootstrap_cdn] = ''
