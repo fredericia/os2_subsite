@@ -9316,7 +9316,6 @@ header.navbar {
     padding-right: 21px; }
     header.navbar .container .menu.nav li.open > a {
       background: none;
-      border-bottom: 6px solid #ff0060;
       font-weight: 900;
       margin-bottom: 0px; }
     header.navbar .container .menu.nav li > a {
@@ -9331,7 +9330,7 @@ header.navbar {
       margin-bottom: 6px; }
       header.navbar .container .menu.nav li > a.active, header.navbar .container .menu.nav li > a:hover {
         background: none;
-        border-bottom: 6px solid #ff0060;
+        font-weight: 900;
         margin-bottom: 0px;
         -webkit-transition: none;
         -o-transition: none;
@@ -9363,6 +9362,21 @@ header.navbar {
     max-height: 29px; }
 
 @media (min-width: 768px) {
+  header.navbar .container .menu.nav li.open > a {
+    border-bottom: 6px solid #ff0060;
+    font-weight: 900; }
+  header.navbar .container .menu.nav li > a {
+    font-weight: lighter; }
+    header.navbar .container .menu.nav li > a.active, header.navbar .container .menu.nav li > a:hover {
+      font-weight: lighter;
+      border-bottom: 6px solid #ff0060;
+      /*          -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+          -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+          transition:  border-color 300ms ease-in-out, background-color 300ms ease-in-out;*/ }
+    header.navbar .container .menu.nav li > a:after {
+      font-weight: 900; }
+    header.navbar .container .menu.nav li > a.active {
+      font-weight: 900; }
   header.navbar {
     background: url("../img/baggrund_himmel.png") center center;
     background-size: cover;

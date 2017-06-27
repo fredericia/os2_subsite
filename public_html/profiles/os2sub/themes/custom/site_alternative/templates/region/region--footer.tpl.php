@@ -35,9 +35,9 @@
     //custom block with links, not editable for user
     ?>
     <section class="block-image-links col-md-3 col-md-push-3">
-      <a class="block-image-links__link" href="http://google.com"><img
+      <a class="block-image-links__link" href="/"><img
           src="<?php print base_path() . drupal_get_path('theme', 'site_alternative') . '/dist/img/logo_primary.png'; ?>"></a>
-      <a class="block-image-links__link" href="http://google.com"><img
+      <a class="block-image-links__link" href="http://www.fredericia.dk/" target="_blank"><img
           src="<?php print base_path() . drupal_get_path('theme', 'site_alternative') . '/dist/img/logo_secondary.png'; ?>"></a>
     </section>
   </div>
