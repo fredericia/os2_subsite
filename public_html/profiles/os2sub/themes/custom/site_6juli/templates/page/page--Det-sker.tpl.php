@@ -151,12 +151,9 @@
   			<ul class="action-links"><?php print render($action_links); ?></ul>
 			<?php endif; ?>
  </section>
-
   
   <section class="events <?php print $container_class; ?>">
-     
-     <div class="row content-width">
-			
+     <div class="content-width">			
 			<?php print render($page['content']); ?>
       </div>
   </section>
