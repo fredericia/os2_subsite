@@ -8992,9 +8992,11 @@ p {
 .instagram-image img {
   height: 200px; }
 
-.bg-grey {
+.bg-grey,
+.content-width .event-teasers {
   background: #e0ded4; }
-  .bg-grey.panel-pane {
+  .bg-grey.panel-pane,
+  .content-width .event-teasers.panel-pane {
     padding-bottom: 40px;
     padding-top: 40px; }
 

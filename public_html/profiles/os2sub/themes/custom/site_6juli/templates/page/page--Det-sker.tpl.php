@@ -152,7 +152,7 @@
 			<?php endif; ?>
  </section>
   
-  <section class="events <?php print $container_class; ?>">
+  <section class="events">
      <div class="content-width">			
 			<?php print render($page['content']); ?>
       </div>

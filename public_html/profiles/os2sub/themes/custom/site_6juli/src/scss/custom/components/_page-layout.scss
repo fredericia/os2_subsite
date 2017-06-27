@@ -222,7 +222,8 @@ p {
     }
 }
 
-.bg-grey{
+.bg-grey,
+.content-width .event-teasers {
     background: $color-grey-background;
     &.panel-pane {
       padding-bottom: 40px;
