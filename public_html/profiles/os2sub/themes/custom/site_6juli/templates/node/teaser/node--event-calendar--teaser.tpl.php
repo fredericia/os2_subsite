@@ -83,19 +83,24 @@
  
   <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
     <header>
-	  <?php print render($title_prefix); ?>
-	  <?php if (!$page && !empty($title)): ?>
-		<h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-	  <?php endif; ?>
-	  <?php print render($title_suffix); ?>
-	  <?php if ($display_submitted): ?>
-		<span class="submitted">
-		  <?php print $user_picture; ?>
-		  <?php print $submitted; ?>
-		</span>
-	  <?php endif; ?>
+  	  <?php print render($title_prefix); ?>
+  	  <?php if (!$page && !empty($title)): ?>
+  		  <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+  	  <?php endif; ?>
+  	  <?php print render($title_suffix); ?>
+  	  <?php if ($display_submitted): ?>
+    		<span class="submitted">
+    		  <?php print $user_picture; ?>
+    		  <?php print $submitted; ?>
+    		</span>
+  	  <?php endif; ?>
     </header>
   <?php endif; ?>
+  
+  
+
+  
+  
   <?php
   // Hide comments, tags, and links now so that we can render them later.
   hide($content['comments']);
@@ -103,21 +108,22 @@
   hide($content['field_tags']);
   ?>
    <div class="teaser">
-   <div class="date"><?php print render($content['event_calendar_date']); ?></div>
-    <a href="<?php print $node_url; ?>">
-  <span class= "row event-teaser">
-	<a class="event-teaser-title" href="<?php print $node_url; ?>"><?php print $title; ?></a>
-	
-        <a href="<?php print $node_url; ?>"><?php print render($content['field_image_event']); ?></a>
+     <div class="date">  <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'd M'); ?>
+     </div>
+      <a href="<?php print $node_url; ?>">
+        <span class= "row event-teaser">
+      	  <?php print $title; ?>
+          <?php print render($content['field_image_event']); ?>
+        </span>
+      </a>
+    </div>
 
-  </span></a></div>
 
+    <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
+      <footer>
+        <?php print render($content['field_tags']); ?>
 
-  <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
-    <footer>
-	  <?php print render($content['field_tags']); ?>
-
-    </footer>
-  <?php endif; ?>
-  <?php print render($content['comments']); ?>
+      </footer>
+    <?php endif; ?>
+    <?php print render($content['comments']); ?>
 </article>
