@@ -8,7 +8,9 @@
 .front .facebook-forside,
 .front .panel-pane .pane-title,
 .full-width .pane-content .view-content,
-.content-width {
+.content-width .event-teasers,
+.content-width .pane-block-1,
+.content-width .pane-events .pane-title {
   max-width: 1170px;
   margin: 0 auto; }
 
