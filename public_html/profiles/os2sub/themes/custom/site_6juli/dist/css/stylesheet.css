@@ -8743,19 +8743,10 @@ body {
   .call-to-action .pane-title {
     color: #ffffff; }
 
+.views-exposed-form label {
+  display: none; }
+
 .pane-events .views-exposed-widgets {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   padding-left: 5px;
   margin-bottom: 30px;
   margin-top: 20px; }
@@ -9042,20 +9033,6 @@ select {
 #edit-event-calendar-date-value-1-value-year,
 #edit-event-calendar-date-value-value-year {
   width: 148px !important; }
-
-#edit-event-calendar-date-value-wrapper {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row; }
 
 .form-item-body-value input {
   width: 300px; }

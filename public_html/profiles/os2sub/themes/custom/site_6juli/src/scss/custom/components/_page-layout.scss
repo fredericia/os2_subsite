@@ -37,10 +37,11 @@ body {
     }
 }
 
+.views-exposed-form label {
+    display: none;
+}
+
 .pane-events .views-exposed-widgets {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     padding-left: 5px;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -54,22 +55,18 @@ body {
 }
 
 .sidebar-right .pane-title {
-    
     font-size: 16px!important;
     text-transform: uppercase;
     color: #aaa;
 }
 
 .sidebar-right {
-    
-    border-left: 1px solid rgba(0,0,0,0.1);
-    padding: 30px;
+  border-left: 1px solid rgba(0,0,0,0.1);
+  padding: 30px;
 }
 
-
 .pane-os2sub-social-share-os2sub-social-share .pane-title {
-    
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .content-wrapper .inner-content {
@@ -87,7 +84,6 @@ iframe {
 }
 
 .block__share-links__link a {
-    
     font-size: 16px!important;
     padding: 0;
     margin: 0;
@@ -279,13 +275,6 @@ select {
     width: 148px!important;
 }
 
-#edit-event-calendar-date-value-wrapper {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
 
 .form-item-body-value input {
     width: 300px;
