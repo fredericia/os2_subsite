@@ -172,7 +172,7 @@
         		data-placement="top" 
         	  title="<?php print $theme_settings['social_links']['facebook']['tooltip']; ?>" 
             href="<?php print $theme_settings['social_links']['facebook']['url']; ?>">
-              <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/facebook.png'; ?>">
+              <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/facebook.png'; ?>" title="<?php print $theme_settings['social_links']['facebook']['tooltip']; ?>">
           </a>
         <?php endif; ?>
         
@@ -182,8 +182,8 @@
         		 data-placement="top" 
              title="<?php print $theme_settings['social_links']['instagram']['tooltip']; ?>" 
              href="<?php print $theme_settings['social_links']['instagram']['url']; ?>">
-      		  <img
-  			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/instagram.png'; ?>"></a>
+      		  <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/instagram.png'; ?>" title="<?php print $theme_settings['social_links']['instagram']['tooltip']; ?>">
+  			  </a>
         <?php endif; ?>
     
   			<?php if ($theme_settings['social_links']['youtube']['active']): ?>
@@ -192,14 +192,16 @@
       		  data-placement="top"
         		title="<?php print $theme_settings['social_links']['youtube']['tooltip']; ?>"
       		  href="<?php print $theme_settings['social_links']['youtube']['url']; ?>">
-    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/youtube.png'; ?>">
+    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/youtube.png'; ?>" title="<?php print $theme_settings['social_links']['youtube']['tooltip']; ?>">
     		  </a>
         <?php endif; ?>
   			<?php if ($theme_settings['social_links']['twitter']['active']): ?>  
   		    <a class="image-social-links__link social-icon social-icon-twitter" 
-    		    data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['twitter']['tooltip']; ?> "
+    		    data-toggle="tooltip" 
+      		  data-placement="top" 
+        		title="<?php print $theme_settings['social_links']['twitter']['tooltip']; ?> "
   		    href="<?php print $theme_settings['social_links']['twitter']['url']; ?>">
-    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/twitter.png'; ?>">
+    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/twitter.png'; ?>" title="<?php print $theme_settings['social_links']['twitter']['tooltip']; ?> ">
     		  </a>
         <?php endif; ?>
   
@@ -209,16 +211,15 @@
   		      data-placement="top" 
   		      title="<?php print $theme_settings['social_links']['pinterest']['tooltip']; ?>" 
   		      href="<?php print $theme_settings['social_links']['pinterest']['url']; ?>">
-    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/snapchat.png'; ?>">
+    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/snapchat.png'; ?>" title="<?php print $theme_settings['social_links']['pinterest']['tooltip']; ?>">
     		  </a>
         <?php endif; ?>			  
   			  
   		</div> 
-
-		<div class="social-footer">
-		</div>
-		<div class="<?php print $container_class; ?>">
-		  <?php print render($page['footer']); ?>
-		</div>
+		  <div class="<?php print $container_class; ?>">
+        <div class="content-width">			
+		    <?php print render($page['footer']); ?>
+        </div>
+      </div>
 	  </footer>
 	  <?php //endif; ?>
