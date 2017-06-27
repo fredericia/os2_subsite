@@ -887,7 +887,8 @@ $hr-border:                   $gray-lighter !default;
   .front .panel-pane .pane-content,
   .front .facebook-forside,
   .front .panel-pane .pane-title,
-  .full-width .pane-content .view-content {
+  .full-width .pane-content .view-content,
+  .content-width {
     max-width: $container-lg;
     margin: 0 auto;
   }
