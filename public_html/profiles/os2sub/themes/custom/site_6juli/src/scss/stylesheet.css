@@ -8894,15 +8894,13 @@ body {
   .call-to-action .pane-title {
     color: #ffffff; }
 
-.views-exposed-form label {
-  display: none; }
-
-.views-exposed-widgets {
+.pane-events .views-exposed-widgets {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding-left: 5px;
-  margin-bottom: 15px; }
+  margin-bottom: 30px;
+  margin-top: 20px; }
 
 .sidebar-left .pane-title {
   font-size: 16px !important;
@@ -9152,7 +9150,8 @@ p {
 .content-width .pane-events .pane-content {
   background-color: #e0ded4;
   padding-top: 10px;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  margin-top: 20px; }
 
 .bg-grey {
   background: #e0ded4; }
@@ -9163,7 +9162,7 @@ p {
 .pane-clone-of-forside-first-minipanel {
   padding-bottom: 40px; }
 
-.form-control {
+.content-width .pane-events .form-control {
   border: none !important;
   height: 45px;
   box-shadow: none !important;

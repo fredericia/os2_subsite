@@ -37,16 +37,13 @@ body {
     }
 }
 
-.views-exposed-form label {
-    display: none;
-}
-
-.views-exposed-widgets {
+.pane-events .views-exposed-widgets {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-left: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
 
 .sidebar-left .pane-title {
@@ -226,6 +223,7 @@ p {
   background-color: $color-grey-background;
   padding-top: 10px;
   padding-bottom: 40px;
+  margin-top: 20px;
 }
 
 .bg-grey {
@@ -238,7 +236,7 @@ p {
 .pane-clone-of-forside-first-minipanel {
   padding-bottom: 40px;
 }
-.form-control {
+.content-width .pane-events .form-control {
     border: none!important;
     height: 45px;
     box-shadow: none!important;
@@ -498,11 +496,10 @@ select {
 
 @media only screen and (max-width: 1023px) {
     
-    .event-teaser {
-        
-        width: 80vw;
-        height: 40vh;
-    }
+  .event-teaser { 
+    width: 80vw;
+    height: 40vh;
+  }
     
     tr {
       
