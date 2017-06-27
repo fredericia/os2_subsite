@@ -216,6 +216,9 @@
         <?php endif; ?>			  
   			  
   		</div> 
+
+		<div class="social-footer">
+		</div>
 		  <div class="<?php print $container_class; ?>">
         <div class="content-width">			
 		    <?php print render($page['footer']); ?>
