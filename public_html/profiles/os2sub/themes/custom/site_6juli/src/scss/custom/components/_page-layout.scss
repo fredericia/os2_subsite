@@ -222,8 +222,13 @@ p {
     }
 }
 
-.bg-grey,
-.content-width .event-teasers {
+.content-width .pane-events .pane-content {
+  background-color: $color-grey-background;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.bg-grey {
     background: $color-grey-background;
     &.panel-pane {
       padding-bottom: 40px;

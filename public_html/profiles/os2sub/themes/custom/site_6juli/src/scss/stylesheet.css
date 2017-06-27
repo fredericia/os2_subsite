@@ -9149,11 +9149,14 @@ p {
 .instagram-image img {
   height: 200px; }
 
-.bg-grey,
-.content-width .event-teasers {
+.content-width .pane-events .pane-content {
+  background-color: #e0ded4;
+  padding-top: 10px;
+  padding-bottom: 40px; }
+
+.bg-grey {
   background: #e0ded4; }
-  .bg-grey.panel-pane,
-  .content-width .event-teasers.panel-pane {
+  .bg-grey.panel-pane {
     padding-bottom: 40px;
     padding-top: 40px; }
 
