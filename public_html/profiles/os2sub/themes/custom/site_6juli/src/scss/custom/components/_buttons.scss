@@ -17,9 +17,8 @@
 
   font-family: $font-lato;
   font-weight: bold;
-    margin-right: 15px;
+  margin-right: 15px;
   font-size: 1.625em;
-  width: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,36 +31,37 @@
   height: 40px;
     
   &.btn-dark {
-  background-color: $color-btn;
-  color: $color-light-background;
-  margin-right: 10px;
-  
+    background-color: $color-btn;
+    color: $color-light-background;
+    margin-right: 10px;
+    
   &:hover, &:active {
-  color: $color-light-background;
-      background-color: $color-btn-hover;
+    color: $color-light-background;
+    background-color: $color-btn-hover;
     }
   }
 
   &.btn-light {
-  background-color: $color-font-light;
-  color: $color-primary;
-  margin-left: 10px;
-  
-&:hover, &:active {
-  color: $color-primary;
-      background-color: $color-font-grey-4;
+    background-color: $color-font-light;
+    color: $color-primary;
+    margin-left: 10px;
+    
+  &:hover, &:active {
+    color: $color-primary;
+    background-color: $color-font-grey-4;
     }
   }
 
   &.btn-white {
-  background-color: $color-light-background;
-  color: $color-font-dark;
-  margin-right: 10px;
-      border-color: #fff;
+    background-color: $color-light-background;
+    color: $color-font-dark;
+    margin-right: 10px;
+    border-color: #fff;
+    display: inline-block;
   
   &:hover, &:active {
-  color: $color-font-dark;
-      background-color: $color-font-grey-4;
+    color: $color-font-dark;
+    background-color: $color-font-grey-4;
     }
   }
   

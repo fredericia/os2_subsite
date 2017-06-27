@@ -344,6 +344,10 @@ p {
 
 .bg-grey{
     background: $color-grey-background;
+    &.panel-pane {
+      padding-bottom: 40px;
+      padding-bottom: 40px;
+    }
 }
 .pane-clone-of-forside-first-minipanel {
   padding-bottom: 40px;

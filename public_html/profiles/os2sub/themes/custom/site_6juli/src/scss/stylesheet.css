@@ -9242,6 +9242,9 @@ p {
 
 .bg-grey {
   background: #e0ded4; }
+  .bg-grey.panel-pane {
+    padding-bottom: 40px;
+    padding-bottom: 40px; }
 
 .pane-clone-of-forside-first-minipanel {
   padding-bottom: 40px; }
@@ -9836,7 +9839,6 @@ footer.footer a.image-links__link {
   font-weight: bold;
   margin-right: 15px;
   font-size: 1.625em;
-  width: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9865,7 +9867,8 @@ footer.footer a.image-links__link {
     background-color: #ffffff;
     color: #205692;
     margin-right: 10px;
-    border-color: #fff; }
+    border-color: #fff;
+    display: inline-block; }
     .btn.btn-white:hover, .banner .banner-wrapper a.btn-white:hover, .btn.btn-white:active, .banner .banner-wrapper a.btn-white:active {
       color: #205692;
       background-color: #eeeeee; }
