@@ -233,7 +233,7 @@ p {
   padding-bottom: 40px;
 }
 .content-width .pane-events .form-control {
-    border: none!important;
+    border: #fff 1px solid;
     height: 45px;
     box-shadow: none!important;
     text-indent: 10px;
@@ -314,13 +314,19 @@ select {
 
 .form-item-event-calendar-date-value2-value-date input {
     background: none!important;
-    border: 2px solid #fff!important;
+    border: 2px solid #fff !important;
 }
 .pane-views.pane-events {
   .views-widget-filter-title {
     float: right;
     &:before {
       content: 'Filter: ';
+      float: left;
+      width: 50px;
+      margin-left: -65px;
+      font-size: 17px;
+      line-height: 40px;
+
     }
   }
 }
