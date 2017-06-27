@@ -162,9 +162,7 @@
 	  <?php //if (!empty($page['footer'])):    ?>
 
 	  <footer class="footer">
-  	  
-    <?php if ($theme_settings['layout']['footer']['show_social_links']) : ?>
-  
+ 
   		<div class="social-links">
   		  <h2><?php print t('Mød os på'); ?></h2>
   		  		  
@@ -216,7 +214,6 @@
         <?php endif; ?>			  
   			  
   		</div> 
-    <?php endif ?>
 
 		<div class="social-footer">
 		</div>
