@@ -9993,9 +9993,11 @@ footer.footer a.image-links__link {
 .front-teaser-outer {
   margin: 20px 0; }
 
+.event-teasers,
 .view-det-sker-slideshow .front-teaser {
   height: 240px;
   position: relative; }
+  .event-teasers .date,
   .view-det-sker-slideshow .front-teaser .date {
     position: absolute;
     right: 0;
@@ -10003,6 +10005,8 @@ footer.footer a.image-links__link {
     background-color: #6c2833;
     width: 40px;
     height: 40px; }
+    .event-teasers .date .dag,
+    .event-teasers .date .maaned,
     .view-det-sker-slideshow .front-teaser .date .dag, .view-det-sker-slideshow .front-teaser .date .maaned {
       color: #FFF;
       display: block;
@@ -10010,12 +10014,14 @@ footer.footer a.image-links__link {
       text-align: center;
       line-height: 14px;
       padding-top: 3px; }
+    .event-teasers .date .maaned,
     .view-det-sker-slideshow .front-teaser .date .maaned {
       color: #FFF;
       font-size: 12px;
       text-transform: uppercase;
       line-height: 12px;
       padding-top: 1px; }
+  .event-teasers .headline,
   .view-det-sker-slideshow .front-teaser .headline {
     color: #FFF;
     font-size: 24px;
@@ -10026,10 +10032,10 @@ footer.footer a.image-links__link {
     left: 20px;
     text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
     text-align: left; }
-
-.view-det-sker-slideshow .owl-theme .owl-dot {
-  text-align: right;
-  margin-top: 0; }
+  .event-teasers .owl-theme .owl-dot,
+  .view-det-sker-slideshow .front-teaser .owl-theme .owl-dot {
+    text-align: right;
+    margin-top: 0; }
 
 .readmore-btns {
   margin-top: 20px; }
