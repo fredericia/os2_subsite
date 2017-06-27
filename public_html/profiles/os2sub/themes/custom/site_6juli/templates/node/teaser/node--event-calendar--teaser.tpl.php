@@ -91,8 +91,8 @@
           <span class="maaned">
             <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'M'); ?>
           </span>
-          
-    	  <span class="headline"></span><?php print $title; ?>
+        </span>  
+    	  <span class="headline"><?php print $title; ?></span>
         <?php print render($content['field_image_event']); ?>
       </span>
     </a>
