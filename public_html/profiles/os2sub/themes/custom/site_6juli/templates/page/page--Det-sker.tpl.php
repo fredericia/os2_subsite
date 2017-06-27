@@ -162,19 +162,62 @@
 	  <?php //if (!empty($page['footer'])):    ?>
 
 	  <footer class="footer">
-		<div class="social-links">
-		  <h2><?php print t('Mød os på'); ?></h2>
-		  <a class="image-social-links__link" href="http://google.com"><img
-			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/facebook.png'; ?>"></a>
-		  <a class="image-social-links__link" href="http://google.com"><img
-			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/instagram.png'; ?>"></a>
-		  <a class="image-social-links__link" href="http://google.com"><img
-			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/youtube.png'; ?>"></a>
-		  <a class="image-social-links__link" href="http://google.com"><img
-			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/twitter.png'; ?>"></a>
-		  <a class="image-social-links__link" href="http://google.com"><img
-			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/snapchat.png'; ?>"></a>
-		</div> 
+  	  
+    <?php if ($theme_settings['layout']['footer']['show_social_links']) : ?>
+  
+  		<div class="social-links">
+  		  <h2><?php print t('Mød os på'); ?></h2>
+  		  		  
+  		  <?php if ($theme_settings['social_links']['facebook']['active']): ?>
+    		  <a class="image-social-links__link social-icon social-icon-facebook" 
+      		  data-toggle="tooltip" 
+        		data-placement="top" 
+        	  title="<?php print $theme_settings['social_links']['facebook']['tooltip']; ?>" 
+            href="<?php print $theme_settings['social_links']['facebook']['url']; ?>">
+              <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/facebook.png'; ?>">
+          </a>
+        <?php endif; ?>
+        
+        <?php if ($theme_settings['social_links']['instagram']['active']): ?>
+    		  <a class="image-social-links__link social-icon social-icon-instagram" 
+      		   data-toggle="tooltip" 
+        		 data-placement="top" 
+             title="<?php print $theme_settings['social_links']['instagram']['tooltip']; ?>" 
+             href="<?php print $theme_settings['social_links']['instagram']['url']; ?>">
+      		  <img
+  			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/instagram.png'; ?>"></a>
+        <?php endif; ?>
+    
+  			<?php if ($theme_settings['social_links']['youtube']['active']): ?>
+  		    <a class="image-social-links__link social-icon social-icon-youtube"
+    		    data-toggle="tooltip" 
+      		  data-placement="top"
+        		title="<?php print $theme_settings['social_links']['youtube']['tooltip']; ?>"
+      		  href="<?php print $theme_settings['social_links']['youtube']['url']; ?>">
+    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/youtube.png'; ?>">
+    		  </a>
+        <?php endif; ?>
+  			<?php if ($theme_settings['social_links']['twitter']['active']): ?>  
+  		    <a class="image-social-links__link social-icon social-icon-twitter" 
+    		    data-toggle="tooltip" data-placement="top" title="<?php print $theme_settings['social_links']['twitter']['tooltip']; ?> "
+  		    href="<?php print $theme_settings['social_links']['twitter']['url']; ?>">
+    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/twitter.png'; ?>">
+    		  </a>
+        <?php endif; ?>
+  
+        <?php if ($theme_settings['social_links']['pinterest']['active']): ?>
+  		    <a class="image-social-links__link social-icon social-icon-pinterest" 
+  		      data-toggle="tooltip" 
+  		      data-placement="top" 
+  		      title="<?php print $theme_settings['social_links']['pinterest']['tooltip']; ?>" 
+  		      href="<?php print $theme_settings['social_links']['pinterest']['url']; ?>">
+    		    <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/social/snapchat.png'; ?>">
+    		  </a>
+        <?php endif; ?>			  
+  			  
+  		</div> 
+    <?php endif ?>
+
 		<div class="social-footer">
 		</div>
 		<div class="<?php print $container_class; ?>">
