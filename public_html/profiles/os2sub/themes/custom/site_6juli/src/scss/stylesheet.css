@@ -9231,9 +9231,9 @@ select {
   background: none !important;
   border: 2px solid #fff !important; }
 
-.pane-views pane-events .views-widget-filter-title {
+.pane-views.pane-events .views-widget-filter-title {
   float: right; }
-  .pane-views pane-events .views-widget-filter-title:before {
+  .pane-views.pane-events .views-widget-filter-title:before {
     content: 'Filter: '; }
 
 .content-inner {
