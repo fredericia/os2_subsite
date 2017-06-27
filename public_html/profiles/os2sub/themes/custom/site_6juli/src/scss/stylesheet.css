@@ -10,7 +10,8 @@
 .full-width .pane-content .view-content,
 .content-width .event-teasers,
 .content-width .pane-block-1,
-.content-width .pane-events .pane-title {
+.content-width .pane-events .pane-title,
+.footer .content-width {
   max-width: 1170px;
   margin: 0 auto; }
 
@@ -9169,6 +9170,9 @@ p {
   text-indent: 10px;
   padding-left: 10px;
   padding-right: 10px; }
+
+.footer .content-width {
+  padding-top: 40px; }
 
 select {
   -webkit-appearance: none;
