@@ -100,49 +100,52 @@
   margin: 20px 0;
 }
 .event-teasers,
-.view-det-sker-slideshow .front-teaser {
-  height: 240px;
-  position: relative;
-  .date {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: $brand-secondary;
-    width: 40px;
-    height: 40px;
-    .dag, .maaned {
-      color: #FFF;
-      display: block;
-      font-size: 16px;
-      text-align: center;
-      line-height: 14px;
-      padding-top: 3px;
+.view-det-sker-slideshow {
+  .front-teaser,
+  .node-teaser {
+    height: 240px;
+    position: relative;
+    .date {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: $brand-secondary;
+      width: 40px;
+      height: 40px;
+      .dag, .maaned {
+        color: #FFF;
+        display: block;
+        font-size: 16px;
+        text-align: center;
+        line-height: 14px;
+        padding-top: 3px;
+      }
+      .maaned {
+        color: #FFF;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 12px;
+        padding-top: 1px;
+      }
     }
-    .maaned {
+    .headline {
       color: #FFF;
-      font-size: 12px;
-      text-transform: uppercase;
-      line-height: 12px;
-      padding-top: 1px;
+      font-size: 24px;
+      font-family: $font-droid-serif;
+      font-weight: normal;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
+      text-align: left;
     }
   }
-  .headline {
-    color: #FFF;
-    font-size: 24px;
-    font-family: $font-droid-serif;
-    font-weight: normal;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
-    text-align: left;
-  }
-
   .owl-theme .owl-dot {
     text-align: right;
     margin-top: 0;
   }
 }
+ 
 
 .readmore-btns {
   margin-top: 20px;

@@ -9899,36 +9899,48 @@ footer.footer a.image-links__link {
 .front-teaser-outer {
   margin: 20px 0; }
 
-.event-teasers,
-.view-det-sker-slideshow .front-teaser {
+.event-teasers .front-teaser,
+.event-teasers .node-teaser,
+.view-det-sker-slideshow .front-teaser,
+.view-det-sker-slideshow .node-teaser {
   height: 240px;
   position: relative; }
-  .event-teasers .date,
-  .view-det-sker-slideshow .front-teaser .date {
+  .event-teasers .front-teaser .date,
+  .event-teasers .node-teaser .date,
+  .view-det-sker-slideshow .front-teaser .date,
+  .view-det-sker-slideshow .node-teaser .date {
     position: absolute;
     right: 0;
     top: 0;
     background-color: #6c2833;
     width: 40px;
     height: 40px; }
-    .event-teasers .date .dag,
-    .event-teasers .date .maaned,
-    .view-det-sker-slideshow .front-teaser .date .dag, .view-det-sker-slideshow .front-teaser .date .maaned {
+    .event-teasers .front-teaser .date .dag,
+    .event-teasers .front-teaser .date .maaned,
+    .event-teasers .node-teaser .date .dag,
+    .event-teasers .node-teaser .date .maaned,
+    .view-det-sker-slideshow .front-teaser .date .dag,
+    .view-det-sker-slideshow .front-teaser .date .maaned,
+    .view-det-sker-slideshow .node-teaser .date .dag, .view-det-sker-slideshow .node-teaser .date .maaned {
       color: #FFF;
       display: block;
       font-size: 16px;
       text-align: center;
       line-height: 14px;
       padding-top: 3px; }
-    .event-teasers .date .maaned,
-    .view-det-sker-slideshow .front-teaser .date .maaned {
+    .event-teasers .front-teaser .date .maaned,
+    .event-teasers .node-teaser .date .maaned,
+    .view-det-sker-slideshow .front-teaser .date .maaned,
+    .view-det-sker-slideshow .node-teaser .date .maaned {
       color: #FFF;
       font-size: 12px;
       text-transform: uppercase;
       line-height: 12px;
       padding-top: 1px; }
-  .event-teasers .headline,
-  .view-det-sker-slideshow .front-teaser .headline {
+  .event-teasers .front-teaser .headline,
+  .event-teasers .node-teaser .headline,
+  .view-det-sker-slideshow .front-teaser .headline,
+  .view-det-sker-slideshow .node-teaser .headline {
     color: #FFF;
     font-size: 24px;
     font-family: "Droid Serif", serif;
@@ -9938,10 +9950,11 @@ footer.footer a.image-links__link {
     left: 20px;
     text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
     text-align: left; }
-  .event-teasers .owl-theme .owl-dot,
-  .view-det-sker-slideshow .front-teaser .owl-theme .owl-dot {
-    text-align: right;
-    margin-top: 0; }
+
+.event-teasers .owl-theme .owl-dot,
+.view-det-sker-slideshow .owl-theme .owl-dot {
+  text-align: right;
+  margin-top: 0; }
 
 .readmore-btns {
   margin-top: 20px; }
