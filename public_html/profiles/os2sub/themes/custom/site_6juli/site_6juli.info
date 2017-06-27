@@ -28,6 +28,7 @@ regions[page_bottom] = 'Page bottom'
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = 'dist/css/stylesheet.css'
+stylesheets[all][] = 'dist/addons/jquery.smartmenus.bootstrap.css'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Panels
