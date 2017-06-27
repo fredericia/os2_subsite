@@ -9069,6 +9069,11 @@ select {
   background: none !important;
   border: 2px solid #fff !important; }
 
+.pane-views pane-events .views-widget-filter-title {
+  float: right; }
+  .pane-views pane-events .views-widget-filter-title:before {
+    content: 'Filter: '; }
+
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
