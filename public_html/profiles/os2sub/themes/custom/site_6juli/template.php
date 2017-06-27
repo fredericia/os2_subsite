@@ -115,17 +115,3 @@ function site_6juli_menu_local_tasks(&$variables) {
 
   return $output;
 }
-
-function site_6juli_menu_link(array $variables) {
-        $element = $variables['element'];
-        $sub_menu = '';
-        $dropdown = '';
-        if ($element['#below']) {
-            $sub_menu = drupal_render($element['#below']);
-            $sub_menu = str_replace('nav navbar-nav', 'dropdown-menu', $sub_menu);
-            $dropdown = 'class="dropdown"';
-            $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-         }
-         $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-         return '<li ' .$dropdown. ' >' . $output . $sub_menu . "</li>\n";
-}
