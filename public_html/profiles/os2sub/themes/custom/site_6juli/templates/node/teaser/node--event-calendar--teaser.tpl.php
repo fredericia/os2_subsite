@@ -109,7 +109,7 @@
             </span>
             
           </span>
-      	  <?php print $title; ?>
+      	  <span class="headline"></span><?php print $title; ?>
           <?php print render($content['field_image_event']); ?>
         </span>
       </a>
