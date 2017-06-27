@@ -80,44 +80,21 @@
  */
 ?>
 <article id="node-event-teaser-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
- 
-  <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
-    <header>
-  	  <?php print render($title_prefix); ?>
-  	  <?php if (!$page && !empty($title)): ?>
-  		  <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  	  <?php endif; ?>
-  	  <?php print render($title_suffix); ?>
-  	  <?php if ($display_submitted): ?>
-    		<span class="submitted">
-    		  <?php print $user_picture; ?>
-    		  <?php print $submitted; ?>
-    		</span>
-  	  <?php endif; ?>
-    </header>
-  <?php endif; ?>
-  
-   <div class="teaser">
-      <a href="<?php print $node_url; ?>">
-        <span class= "row event-teaser">
-          <span class="date">
-            <span class="dag">
-              <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'd'); ?>
-            </span>
-            <span class="maaned">
-              <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'M'); ?>
-            </span>
-            
+  <?php print render($title_prefix); ?>
+	<?php print render($title_suffix); ?>
+  <div class="teaser">
+    <a href="<?php print $node_url; ?>">
+        <span class="date">
+          <span class="dag">
+            <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'd'); ?>
           </span>
-      	  <span class="headline"></span><?php print $title; ?>
-          <?php print render($content['field_image_event']); ?>
-        </span>
-      </a>
-    </div>
-    <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
-      <footer>
-        <?php print render($content['field_tags']); ?>
-
-      </footer>
-    <?php endif; ?>
+          <span class="maaned">
+            <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'M'); ?>
+          </span>
+          
+    	  <span class="headline"></span><?php print $title; ?>
+        <?php print render($content['field_image_event']); ?>
+      </span>
+    </a>
+  </div>
 </article>
