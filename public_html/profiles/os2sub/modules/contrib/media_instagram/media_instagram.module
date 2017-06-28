@@ -1,0 +1,259 @@
+<?php
+
+/**
+ * @file
+ * Primarily Drupal hooks.
+ *
+ * Provides a stream wrapper and formatters appropriate for accessing and
+ * displaying Instagram objects.
+ */
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function media_instagram_ctools_plugin_api($module, $api) {
+  if ($module == 'file_entity' && $api == 'file_default_displays') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function media_instagram_theme() {
+  return array(
+    'media_instagram' => array(
+      'variables' => array('uri' => NULL, 'options' => array()),
+      'template' => 'theme/media-instagram',
+    ),
+  );
+}
+
+/**
+ * Implements hook_file_mimetype_mapping_alter().
+ */
+function media_instagram_file_mimetype_mapping_alter(&$mapping) {
+  $mapping['mimetypes'][] = 'text/instagram';
+}
+
+/**
+ * Implements hook_file_default_types_alter().
+ */
+function media_instagram_file_default_types_alter(&$types) {
+  $types['instagram'] = (object) array(
+    'api_version' => 1,
+    'type' => 'instagram',
+    'label' => t('Instagram'),
+    'description' => t("An <em>Instagram</em> file is a still visual."),
+    'mimetypes' => array(
+      'text/instagram',
+    ),
+  );
+}
+
+/**
+ * Implements hook_stream_wrappers().
+ */
+function media_instagram_stream_wrappers() {
+  return array(
+    'instagram' => array(
+      'name' => t('Instagram'),
+      'class' => 'MediaInstagramStreamWrapper',
+      'description' => t('Remote images hosted on the Instagram.'),
+      'type' => STREAM_WRAPPERS_READ_VISIBLE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_media_internet_providers().
+ */
+function media_instagram_media_internet_providers() {
+  return array(
+    'MediaInternetInstagramHandler' => array(
+      'title' => t('Instagram'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_media_parse().
+ */
+function media_instagram_media_parse($url) {
+  $handler = new MediaInternetInstagramHandler($url);
+  return $handler->parse();
+}
+
+/**
+ * Implements hook_file_formatter_info().
+ */
+function media_instagram_file_formatter_info() {
+  return array(
+    'media_instagram' => array(
+      'label' => t('Instagram'),
+      'file types' => array('instagram'),
+      'default settings' => array('maxwidth' => '', 'hidecaption' => FALSE),
+      'view callback' => 'media_instagram_file_formatter_view',
+      'settings callback' => 'media_instagram_file_formatter_settings',
+      'mime types' => array('text/instagram'),
+    ),
+    'media_instagram_image' => array(
+      'label' => t('Instagram Image'),
+      'file types' => array('instagram'),
+      'default settings' => array('image_style' => ''),
+      'view callback' => 'media_instagram_file_formatter_image_view',
+      'settings callback' => 'media_instagram_file_formatter_image_settings',
+      'mime types' => array('text/instagram'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_file_formatter_FORMATTER_view().
+ */
+function media_instagram_file_formatter_view($file, $display, $langcode) {
+  $scheme = file_uri_scheme($file->uri);
+  if ($scheme == 'instagram' && empty($file->override['wysiwyg'])) {
+    $element = array(
+      '#theme' => 'media_instagram',
+      '#uri' => $file->uri,
+      '#options' => array(),
+    );
+
+    // Fake a default for attributes so the ternary doesn't choke.
+    $display['settings']['attributes'] = array();
+
+    foreach (array('maxwidth', 'hidecaption') as $setting) {
+      $element['#options'][$setting] = isset($file->override[$setting]) ? $file->override[$setting] : $display['settings'][$setting];
+    }
+
+    return $element;
+  }
+}
+
+/**
+ * Implements hook_file_formatter_FORMATTER_settings().
+ */
+function media_instagram_file_formatter_settings($form, &$form_state, $settings) {
+  $element = array();
+
+  $element['maxwidth'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Max width'),
+    '#default_value' => $settings['maxwidth'],
+    '#element_validate' => array('_media_instagram_validate_max_width'),
+  );
+
+  $element['hidecaption'] = array(
+    '#title' => t('Hide caption'),
+    '#type' => 'checkbox',
+    '#default_value' => $settings['hidecaption'],
+  );
+
+  return $element;
+}
+
+/**
+ * Implements hook_file_formatter_FORMATTER_view().
+ */
+function media_instagram_file_formatter_image_view($file, $display, $langcode) {
+  $element = array();
+
+  $scheme = file_uri_scheme($file->uri);
+  if ($scheme == 'instagram') {
+    $external_url = file_create_url($file->uri);
+    $handler = new MediaInternetInstagramHandler($external_url);
+
+    $image_style = $display['settings']['image_style'];
+    $valid_image_styles = image_style_options(FALSE);
+
+    $theme = (empty($image_style) || !isset($valid_image_styles[$image_style])) ? 'image' : 'image_style';
+    $path = $theme == 'image' ? $handler->getOriginalThumbnailPath() : $handler->getLocalThumbnailPath();
+    $alt = isset($file->override['attributes']['alt']) ? $file->override['attributes']['alt'] : $file->filename;
+
+    $element = array(
+      '#theme' => $theme,
+      '#path' => $path,
+      '#alt' => $alt,
+    );
+
+    if ($theme == 'image_style') {
+      $element['#style_name'] = $image_style;
+    }
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_file_formatter_FORMATTER_settings().
+ */
+function media_instagram_file_formatter_image_settings($form, &$form_state, $settings) {
+  $element = array();
+
+  $element['image_style'] = array(
+    '#title' => t('Image style'),
+    '#type' => 'select',
+    '#options' => image_style_options(FALSE),
+    '#default_value' => !empty($settings['image_style']) ? $settings['image_style'] : '',
+    '#empty_option' => t('None (original image)'),
+  );
+
+  return $element;
+}
+
+/**
+ * Form element validation handler.
+ *
+ * Value must be be equal or greater than 320.
+ */
+function _media_instagram_validate_max_width($element, &$form_state) {
+  $value = $element['#value'];
+  if ($value !== '' && (!is_numeric($value) || intval($value) != $value || $value < 320)) {
+    form_error($element, t('%name must be equal or greater than 320.', array('%name' => $element['#title'])));
+  }
+}
+
+/**
+ * Preprocess function for media-instagram.tpl.php.
+ */
+function template_preprocess_media_instagram(&$variables) {
+  $wrapper = file_stream_wrapper_get_instance_by_uri($variables['uri']);
+  $parts = $wrapper->get_parameters();
+  $variables['short_code'] = check_plain($parts['p']);
+
+  $variables['content_attributes_array'] = array();
+
+  $variables['content_attributes_array']['id'] = 'instagram-embed-' . $variables['id'];
+  $variables['content_attributes_array']['class'] = array('instagram-media', 'instagram-media-rendered');
+
+  $variables['content_attributes_array']['scrolling'] = 'no';
+  $variables['content_attributes_array']['frameborder'] = 0;
+  $variables['content_attributes_array']['allowtransparency'] = 'true';
+  $variables['content_attributes_array']['data-instgrm-payload-id'] = 'instagram-media-payload-' . $variables['id'];
+
+  $variables['content_attributes_array']['style'] = array(
+    'background: rgb(255, 255, 255) none repeat scroll 0% 0%;',
+    'border: 0px none;',
+    'margin: 1px;',
+    'width: calc(100% - 2px);',
+    'border-radius: 4px;',
+    'box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5), 0px 1px 10px 0px rgba(0, 0, 0, 0.15);',
+    'display: block;',
+    'padding: 0px;',
+  );
+
+  if ($variables['options']['maxwidth']) {
+    $maxwidth = $variables['options']['maxwidth'];
+    $variables['content_attributes_array']['style'][] = "max-width: {$maxwidth}px;";
+  }
+
+  $src = file_create_url($variables['uri']) . '/embed';
+  if (!$variables['options']['hidecaption']) {
+    $src .= '/captioned';
+  }
+
+  $variables['content_attributes_array']['src'] = url($src, array('query' => array('v' => 6)));
+
+  $variables['classes_array'][] = 'instagram-' . $variables['short_code'];
+}

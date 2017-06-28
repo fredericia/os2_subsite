@@ -1,0 +1,15 @@
+name = Media: Instagram
+description = Adds Instagram as a supported media provider.
+core = 7.x
+dependencies[] = media_internet
+package = Media
+
+files[] = includes/MediaInstagramStreamWrapper.inc
+files[] = includes/MediaInternetInstagramHandler.inc
+
+; Information added by Drupal.org packaging script on 2016-07-16
+version = "7.x-2.1"
+core = "7.x"
+project = "media_instagram"
+datestamp = "1468652743"
+
