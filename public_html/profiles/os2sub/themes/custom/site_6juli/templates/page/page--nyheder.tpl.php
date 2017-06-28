@@ -191,8 +191,9 @@
 
 	  <?php //if (!empty($page['footer'])):    ?>
 
-	  <footer class="footer">
-		<div class="social-links">
+	 	  <footer class="footer">
+ 
+  		<div class="social-links">
   		  <h2><?php print t('Mød os på'); ?></h2>
   		  		  
   		  <?php if ($theme_settings['social_links']['facebook']['active']): ?>
@@ -245,10 +246,13 @@
         <?php endif; ?>			  
   			  
   		</div> 
+
 		<div class="social-footer">
 		</div>
-		<div class="<?php print $container_class; ?>">
-		  <?php print render($page['footer']); ?>
-		</div>
+		  <div class="<?php print $container_class; ?>">
+        <div class="content-width">			
+		    <?php print render($page['footer']); ?>
+        </div>
+      </div>
 	  </footer>
 	  <?php //endif; ?>
