@@ -89,7 +89,7 @@
             <?php print date('d', $created); ?>
           </span>
           <span class="maaned">
-            <?php print date('M', $created); ?>
+            <?php print t(date('M', $created)); ?>
           </span>
         </span>  
     	  <span class="headline">
