@@ -214,7 +214,13 @@ p {
         height: 200px;
     }
 }
-
+.breadcrumb {
+  background-color: transparent;
+  color: $brand-primary;
+  a {
+    color: $color-font-dark-secondary;
+  }
+}
 .content-width .pane-events .pane-content {
   background-color: $color-grey-background;
   padding-top: 10px;
