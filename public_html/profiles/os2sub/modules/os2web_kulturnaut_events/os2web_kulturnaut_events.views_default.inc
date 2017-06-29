@@ -379,7 +379,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['view_node_1']['alter']['link_class'] = 'btn btn-quaternary hidden-sm hidden-xs';
   $handler->display->display_options['fields']['view_node_1']['alter']['target'] = '#';
   $handler->display->display_options['fields']['view_node_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['view_node_1']['text'] = '+Tilføj kalender';
+  $handler->display->display_options['fields']['view_node_1']['text'] = '+Tilføj til kalender';
   /* Field: Content: Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -1125,7 +1125,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('- [field_os2web_kulturnaut_date] '),
     t('#[field_os2web_base_field_edi_tags]'),
     t('Læs mere'),
-    t('+Tilføj kalender'),
+    t('+Tilføj til kalender'),
     t('Content pane - Activities list (4)'),
     t('Activities list (4)'),
     t('Content pane - activities list (5+load more)'),
