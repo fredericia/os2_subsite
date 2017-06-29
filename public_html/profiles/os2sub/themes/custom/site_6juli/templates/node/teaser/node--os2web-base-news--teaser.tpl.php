@@ -76,20 +76,20 @@
  * @see template_preprocess_node()
  * @see template_process()
  *
- * @ingroup templates
+ * @ingroup templates  
  */
 ?>
-<article id="node-event-teaser-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article id="node-news-teaser-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
 	<?php print render($title_suffix); ?>
   <div class="teaser">
     <a href="<?php print $node_url; ?>">
         <span class="date">
           <span class="dag">
-            <?php print format_date(strtotime($content['created']['#items'][0]['value']), 'custom', 'd'); ?>
+            <?php print date('d', $created); ?>
           </span>
           <span class="maaned">
-            <?php print format_date(strtotime($content['created']['#items'][0]['value']), 'custom', 'M'); ?>
+            <?php print date('M', $created); ?>
           </span>
         </span>  
     	  <span class="headline"><?php print $title; ?></span>
