@@ -43,9 +43,10 @@ body {
 }
 
 .pane-events .views-exposed-widgets {
-    padding-left: 5px;
+    padding-left: 15px;
     margin-bottom: 30px;
     margin-top: 20px;
+    padding-right: 5px;
 }
 
 .sidebar-left .pane-title {
@@ -422,6 +423,67 @@ select {
     font-weight: bold;
 }
 
+
+
+// -------
+// Det Sker
+// -------
+
+.page-det-sker .pane-block-1 {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.page-det-sker .panel-pane h1 {
+    
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.page-det-sker .pane-page-breadcrumb {
+    
+        max-width: 1170px;
+    margin: 0 auto;
+}
+
+.page-det-sker .breadcrumb {
+    
+    font-size: 16px;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.page-det-sker .breadcrumb li.active {
+    color: #306783;
+}
+
+// ------
+// Page node
+// ------
+
+.page-node .nav > li > a {
+    
+    padding-left: 0!important;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.page-node .breadcrumb {
+    font-size: 16px;
+        max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 0!important;
+    margin-bottom: 20px;
+}
+
+.page-node .breadcrumb li.active {
+    color: #306783;
+}
+
+.page-node iframe {
+    margin-top: 20px;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -585,6 +647,13 @@ select {
 //}
 //    
 //}
+.extend-button { display: none; }
+
+.fb_iframe_widget iframe {
+        
+        width: 100%;
+    }
+
 
 @media only screen and (max-width: 768px) {
     
@@ -653,6 +722,29 @@ select {
         width: 100%;
         font-size: 18px;
         max-width: inherit!important;
+    }
+    
+    .fb_iframe_widget iframe {
+        
+        width: 100%!important;
+    }
+    
+    .extend-button {
+        display: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        border: 2px solid #fff;
+        background: #E0DED4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        transform: translateX(160px);
+    }
+    .extend-button i {
+        
+        font-size: 22px;
     }
 }
 
