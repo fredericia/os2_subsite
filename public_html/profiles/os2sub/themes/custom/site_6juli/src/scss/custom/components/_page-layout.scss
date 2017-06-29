@@ -16,7 +16,8 @@ $xs-page-layout-content-inner-padding-bottom: 25px;
 $sm-page-layout-content-inner-padding-bottom: 40px;
 $md-page-layout-content-inner-padding-bottom: 60px;
 // Color on headings
-$section-heading-color: #386c87;
+$section-heading-color: #306783;
+$headline-color: #306783;
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
@@ -75,7 +76,7 @@ body {
 
 iframe {
     width: 100%;
-    height: 250px;
+    height: 400px;
 }
 
 .page-node .pane-custom h2 {
@@ -94,7 +95,7 @@ h1.pane-title {
     font-family: $font-droid-serif;
     font-weight: bold;
     font-size: 4.625em;
-    color: #306783;
+    color: $headline-color;
     border: 0;
 }
 
@@ -240,7 +241,8 @@ p {
   padding-right: 10%;
 }
 .pane-clone-of-forside-first-minipanel {
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+    padding-top: 60px;
 }
 .content-width .pane-events .form-control {
     border: #fff 1px solid;
@@ -342,6 +344,84 @@ select {
     }
   }
 }
+
+//-------
+// Frontpage
+//-----------
+
+.pane-forside-first-minipanel {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.page-forside .pane-det-sker-slideshow {
+    padding-top: 60px!important;
+    padding-bottom: 60px!important;
+    margin-bottom: 0!important;
+}
+
+#block-system-main .panel-pane.pane-det-sker-slideshow {
+    margin-top: 0;
+}
+
+.page-forside .pane-frontpage-gallery .views-row {
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+.page-forside .views-row .h1 a {
+    color: $headline-color;
+    font-family: "Droid Serif", serif;
+    font-weight: bold;
+}
+
+.youtube-text h1 {
+    color: $headline-color;
+    font-family: "Droid Serif", serif;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#mini-panel-facebook_panel h1 {
+    color: $headline-color;
+    font-family: "Droid Serif", serif;
+    font-weight: bold;
+    font-size: 46px;
+}
+
+#mini-panel-facebook_panel .button {
+    
+    margin: 0!important;
+}
+
+#mini-panel-facebook_panel {
+    display: flex;
+    align-items: center;
+}
+
+#mini-panel-facebook_panel .pane-1 {
+    
+    margin-top: -20px;
+}
+
+.panels-flexible-10 .panels-flexible-region-inside-last {
+    padding: 0;
+    margin: 0;
+}
+
+.page-forside .front-teaser-outer .front-teaser {
+    border: 1px solid rgba(224, 222, 212, 0.5)!important;
+    overflow: hidden;
+}
+
+.page-forside .front-teaser-outer .date-display-single {
+    font-weight: bold;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

@@ -117,22 +117,30 @@
       right: 0;
       top: 0;
       background-color: $brand-secondary;
-      width: 40px;
-      height: 40px;
+      width: 55px;
+      height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content:space-around; 
+        padding-top: 8px;
+        padding-bottom: 8px;
       .dag, .maaned {
         color: #FFF;
         display: block;
-        font-size: 16px;
+        font-size: 22px;
         text-align: center;
         line-height: 14px;
         padding-top: 3px;
       }
       .maaned {
         color: #FFF;
-        font-size: 12px;
+        font-size: 16px;
         text-transform: uppercase;
         line-height: 12px;
         padding-top: 1px;
+          font-weight: 100!important;
       }
     }
     .headline {
@@ -171,12 +179,29 @@
   }
 }
 
+.youtube-text .pane-content {
+        height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .youtube-text {
   padding-left: 40px;
-  padding-top: 40px;
+  padding-top: 0px;
+
+    
   a.btn { 
     width: auto; 
-    max-width: 70%;}
+    max-width: 55%;
+    font-size: 18px;
+    background-color: $color-btn-red!important;
+    
+      &.btn:hover {
+          
+          border: none!important;
+      }
+    }
 }
 
 .view-os2web-events-slideshow-footer {

@@ -13,6 +13,8 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+$color-btn-red: #A3283E;
+
 .btn {
 
   font-family: $font-lato;
@@ -23,12 +25,13 @@
   justify-content: center;
   align-items: center;
   border: 2px solid;
-  background-color: $color-btn;
+  background-color: $color-btn-red;
   color: $color-light-background;
   border-radius:100px;
   margin-top:15px;
   margin-bottom:15px;
   height: 40px;
+  padding: 10px 35px;
     
   &.btn-dark {
     background-color: $color-btn;
@@ -56,8 +59,14 @@
     background-color: $color-light-background;
     color: $color-font-dark;
     margin-right: 10px;
+    padding-top: 0px;
+      padding: 10px 35px!important;
+      display: flex!important;
+      align-items: center!important;
+      justify-content: center!important;
     border-color: #fff;
     display: inline-block;
+      max-width: 50%;
   
   &:hover, &:active {
     color: $color-font-dark;
@@ -80,6 +89,25 @@
   &.btn-tertiary {
 
   }
+}
+
+.btn-lg {        
+    padding: 10px 35px;
+    font-weight: bold;
+    
+    }
+
+.btn-default {
+    color: #0F2846;
+    background-color: #E0DED4;
+    border-color: #E0DED4;
+    font-weight: bold;
+}
+
+.readmore-btns {
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
 }
 
 // Mobile - only
