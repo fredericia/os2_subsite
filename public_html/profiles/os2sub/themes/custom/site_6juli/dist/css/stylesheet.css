@@ -8896,7 +8896,8 @@ h2.pane-title,
         line-height: 1.3333333;
         border-radius: 20px;
         padding-left: 30px;
-        padding-right: 30px; }
+        padding-right: 30px;
+        padding: 10px 36px; }
         .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a:focus, .paragraphs-items-field-afsnit .paragraphs-item-afsnit-m-link .field-name-field-knap-link a.focus {
           color: #fff;
           background-color: #471a21;
@@ -9191,6 +9192,17 @@ select {
 .page-det-sker .breadcrumb li.active {
   color: #306783; }
 
+.field-name-field-citat {
+  font-family: "Droid Serif", serif !important;
+  font-size: 20px !important; }
+
+.paragraphs-item-afsnit-m-link {
+  min-height: 220px; }
+
+.paragraphs-item-afsnit-m-link h2, .paragraphs-item-afsnit-m-link .heading-h2 {
+  font-family: "Droid Serif", serif !important;
+  color: #0F2846; }
+
 .page-node .nav > li > a {
   padding-left: 0 !important;
   font-size: 16px;
@@ -9208,6 +9220,12 @@ select {
 
 .page-node iframe {
   margin-top: 20px; }
+
+.page-node .field-name-field-paragraph-header {
+  display: none; }
+
+nav .leaf a {
+  font-size: 16px !important; }
 
 .content-inner {
   padding-top: 20px;

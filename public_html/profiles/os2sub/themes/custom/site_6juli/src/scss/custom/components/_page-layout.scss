@@ -173,6 +173,7 @@ h2.pane-title {
         @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
         padding-left: 30px;
         padding-right: 30px;
+          padding: 10px 36px;
       }
     }
   }
@@ -461,6 +462,21 @@ select {
 // Page node
 // ------
 
+.field-name-field-citat {
+    
+     font-family: "Droid Serif", serif!important;
+    font-size: 20px!important;
+}
+
+.paragraphs-item-afsnit-m-link {
+    min-height: 220px;
+}
+
+.paragraphs-item-afsnit-m-link h2 {
+        font-family: "Droid Serif", serif!important;
+    color: #0F2846;
+}
+
 .page-node .nav > li > a {
     
     padding-left: 0!important;
@@ -482,6 +498,12 @@ select {
 
 .page-node iframe {
     margin-top: 20px;
+}
+.page-node .field-name-field-paragraph-header { display: none; }
+
+nav .leaf a {
+    
+    font-size: 16px!important;
 }
 
 // --------------------------------------------------
