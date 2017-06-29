@@ -139,7 +139,16 @@
       left: 20px;
       text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
       text-align: left;
+      .subheadline {
+        font-size: 12pc;
+      }
     }
+    &.node-os2web-base-news {
+      .headline {
+      font-size: 18px;
+      }
+    }
+
   }
   .owl-theme .owl-dot {
     text-align: right;

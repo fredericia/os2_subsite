@@ -9977,6 +9977,20 @@ footer.footer a.image-links__link {
     left: 20px;
     text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
     text-align: left; }
+    .pane-os2sub-nyheder .front-teaser .headline .subheadline,
+    .pane-os2sub-nyheder .node-teaser .headline .subheadline,
+    .event-teasers .front-teaser .headline .subheadline,
+    .event-teasers .node-teaser .headline .subheadline,
+    .view-det-sker-slideshow .front-teaser .headline .subheadline,
+    .view-det-sker-slideshow .node-teaser .headline .subheadline {
+      font-size: 12pc; }
+  .pane-os2sub-nyheder .front-teaser.node-os2web-base-news .headline,
+  .pane-os2sub-nyheder .node-teaser.node-os2web-base-news .headline,
+  .event-teasers .front-teaser.node-os2web-base-news .headline,
+  .event-teasers .node-teaser.node-os2web-base-news .headline,
+  .view-det-sker-slideshow .front-teaser.node-os2web-base-news .headline,
+  .view-det-sker-slideshow .node-teaser.node-os2web-base-news .headline {
+    font-size: 18px; }
 
 .pane-os2sub-nyheder .owl-theme .owl-dot,
 .event-teasers .owl-theme .owl-dot,
