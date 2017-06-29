@@ -106,6 +106,7 @@
   .node-teaser {
     height: 240px;
     position: relative;
+    border: 1px solid $brand-primary;
     a.teaser-link {
       position: absolute;
       height: 100%;
