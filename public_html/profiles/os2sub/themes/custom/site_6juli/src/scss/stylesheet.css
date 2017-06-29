@@ -9914,12 +9914,16 @@ footer.footer a.image-links__link {
 .front-teaser-outer {
   margin: 20px 0; }
 
+.pane-os2sub-nyheder .front-teaser,
+.pane-os2sub-nyheder .node-teaser,
 .event-teasers .front-teaser,
 .event-teasers .node-teaser,
 .view-det-sker-slideshow .front-teaser,
 .view-det-sker-slideshow .node-teaser {
   height: 240px;
   position: relative; }
+  .pane-os2sub-nyheder .front-teaser .date,
+  .pane-os2sub-nyheder .node-teaser .date,
   .event-teasers .front-teaser .date,
   .event-teasers .node-teaser .date,
   .view-det-sker-slideshow .front-teaser .date,
@@ -9930,6 +9934,10 @@ footer.footer a.image-links__link {
     background-color: #6c2833;
     width: 40px;
     height: 40px; }
+    .pane-os2sub-nyheder .front-teaser .date .dag,
+    .pane-os2sub-nyheder .front-teaser .date .maaned,
+    .pane-os2sub-nyheder .node-teaser .date .dag,
+    .pane-os2sub-nyheder .node-teaser .date .maaned,
     .event-teasers .front-teaser .date .dag,
     .event-teasers .front-teaser .date .maaned,
     .event-teasers .node-teaser .date .dag,
@@ -9943,6 +9951,8 @@ footer.footer a.image-links__link {
       text-align: center;
       line-height: 14px;
       padding-top: 3px; }
+    .pane-os2sub-nyheder .front-teaser .date .maaned,
+    .pane-os2sub-nyheder .node-teaser .date .maaned,
     .event-teasers .front-teaser .date .maaned,
     .event-teasers .node-teaser .date .maaned,
     .view-det-sker-slideshow .front-teaser .date .maaned,
@@ -9952,6 +9962,8 @@ footer.footer a.image-links__link {
       text-transform: uppercase;
       line-height: 12px;
       padding-top: 1px; }
+  .pane-os2sub-nyheder .front-teaser .headline,
+  .pane-os2sub-nyheder .node-teaser .headline,
   .event-teasers .front-teaser .headline,
   .event-teasers .node-teaser .headline,
   .view-det-sker-slideshow .front-teaser .headline,
@@ -9966,6 +9978,7 @@ footer.footer a.image-links__link {
     text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.94);
     text-align: left; }
 
+.pane-os2sub-nyheder .owl-theme .owl-dot,
 .event-teasers .owl-theme .owl-dot,
 .view-det-sker-slideshow .owl-theme .owl-dot {
   text-align: right;

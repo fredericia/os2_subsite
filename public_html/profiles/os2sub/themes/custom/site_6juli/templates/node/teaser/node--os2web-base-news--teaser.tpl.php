@@ -92,8 +92,13 @@
             <?php print date('M', $created); ?>
           </span>
         </span>  
-    	  <span class="headline"><?php print $title; ?></span>
-    	  <span class="subheadline"><?php print render($content['field_os2web_base_field_summary']); ?></span>
+    	  <span class="headline">
+    	    <?php print $title; ?>
+      	  <span class="subheadline">
+      	    <?php print render($content['field_os2web_base_field_summary']); ?>
+          </span>
+    	  </span>
+    	  
         <?php print render($content['field_os2web_base_field_lead_img']); ?>
       </span>
     </a>
