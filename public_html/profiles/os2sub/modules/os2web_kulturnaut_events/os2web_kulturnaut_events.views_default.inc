@@ -159,6 +159,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -416,6 +422,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
 
   /* Display: Content pane - Activities list (4) */
   $handler = $view->new_display('panel_pane', 'Content pane - Activities list (4)', 'pane_activities_list_4');
@@ -431,7 +443,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['view_mode'] = 'spotbox';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
@@ -467,6 +479,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -534,6 +552,16 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['operator_id'] = 'field_os2web_kulturnaut_date_value2_op';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['label'] = 'Dato - end date (field_os2web_kulturnaut_date:value2)';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['operator'] = 'field_os2web_kulturnaut_date_value2_op';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['identifier'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -607,6 +635,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
   $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
   $handler->display->display_options['filters']['in_queue']['value'] = '1';
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -1027,6 +1061,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['field_os2web_kulturnaut_source_value']['value'] = array(
     'feed' => 'feed',
   );
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
 
   /* Display: Content pane - kultunaut events */
   $handler = $view->new_display('panel_pane', 'Content pane - kultunaut events', 'pane_kultunaut_events');
@@ -1129,6 +1169,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Content pane - Activities list (4)'),
     t('Activities list (4)'),
     t('Content pane - activities list (5+load more)'),
+    t('Dato - end date (field_os2web_kulturnaut_date:value2)'),
     t('Content pane - activities list (2+3)'),
     t('Attachment activities 3 (skip 2)'),
     t('[field_os2web_kulturnaut_date]  |'),

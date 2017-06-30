@@ -10192,6 +10192,9 @@ footer.footer a.block-image-links__link {
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000F2846', endColorstr='#E60F2846', GradientType=0); }
 
+.panel-pane.pane-entity-field-extra.pane-taxonomy-term-description {
+  padding-bottom: 30px; }
+
 .pane-os2sub-social-share-os2sub-social-share .block__share-links .block__share-links__link a {
   color: #205692;
   height: 28px;
@@ -10329,6 +10332,25 @@ footer.footer a.block-image-links__link {
   font-weight: bold; }
   .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-view-node a {
     color: #666666 !important; }
+
+.view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .upper-part .field.field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference.field-label-hidden {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .upper-part .field.field-name-field-os2web-base-field-edi-tags.field-type-taxonomy-term-reference.field-label-hidden {
+  display: none; }
+
+.view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .bottom-part header h2, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .bottom-part header .heading-h2 {
+  font-weight: 1.56em; }
+
+.view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a.btn.btn-full-width, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .banner .banner-wrapper a.btn-full-width, .banner .banner-wrapper .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a.btn-full-width, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .view-os2web-kulturnaut-events-lists.view-display-id-pane_related_articles .pager--infinite-scroll a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_related_articles .pager--infinite-scroll .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_5_load_more .pager--infinite-scroll a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_5_load_more .pager--infinite-scroll .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tag .pager--infinite-scroll a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tag .pager--infinite-scroll .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_venue .pager--infinite-scroll a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_venue .pager--infinite-scroll .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tema .pager--infinite-scroll a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tema .pager--infinite-scroll .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .view-os2web-kulturnaut-events-lists.view-display-id-pane_kultunaut_events .pager--infinite-scroll a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_kultunaut_events .pager--infinite-scroll .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .view-os2sub-kulturnaut-multi-search .pager--infinite-scroll a, .view-os2sub-kulturnaut-multi-search .pager--infinite-scroll .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay a {
+  padding-left: initial;
+  padding-right: initial;
+  font-size: 1em; }
+
+.view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4 .overlay .overlay-content {
+  padding: 20px !important; }
 
 .view-os2web-kulturnaut-events-lists.view-display-id-block_slideshow .views-slideshow-cycle-main-frame-row {
   max-width: 100%; }

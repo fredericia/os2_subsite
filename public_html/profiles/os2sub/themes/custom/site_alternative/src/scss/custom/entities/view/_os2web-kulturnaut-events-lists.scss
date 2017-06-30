@@ -63,6 +63,33 @@ $header-size: 112px;
       }
     }
   }
+  &.view-display-id-pane_activities_list_4 {
+    .upper-part{
+      .field.field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference.field-label-hidden{
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .field.field-name-field-os2web-base-field-edi-tags.field-type-taxonomy-term-reference.field-label-hidden{
+        display: none;
+      }
+    }
+    .bottom-part{
+      header h2{
+        font-weight: 1.56em;
+      }
+    }
+    .overlay{
+      a.btn.btn-full-width{
+        padding-left: initial;
+        padding-right: initial;
+        font-size: 1em;
+      }
+      .overlay-content{
+        padding: 20px !important;
+      }
+    }
+  }
 
   &.view-display-id-block_slideshow .views-slideshow-cycle-main-frame-row {
     max-width: 100%;
