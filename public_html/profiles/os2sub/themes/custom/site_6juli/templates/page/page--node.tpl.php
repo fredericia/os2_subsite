@@ -80,8 +80,8 @@
    <div class="header-logo">
 		  <a class="image-top-logo__link" href="<?php print $front_page; ?>"><img
 			  src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/6-juli-dagene-fredericia.png'; ?>"></a>
-			  <div class="site-name">
-		  6. juli-dagene <br> Fredericia
+			  <div class="site-name"><a href="<?php print $front_page; ?>">
+		  6. juli-dagene <br> Fredericia</a>
 		</div>
 		</div>
       

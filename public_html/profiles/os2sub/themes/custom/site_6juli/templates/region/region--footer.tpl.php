@@ -37,15 +37,15 @@
       <section class="block-image-links">
           
               <div class="col-md-1 col-md-offset-4">
-                  <a class="image-links__link" href="http://google.com"><img
+                  <a class="image-links__link"><img
                           src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/dfb-logo.png'; ?>"></a>
               </div>
               <div class="col-md-1">
-                  <a class="image-links__link" href="http://google.com"><img
+                  <a class="image-links__link"><img
                           src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/6-juli-logo.png'; ?>"></a>
               </div>
               <div class="col-md-2">
-                  <a class="image-links__link" href="http://google.com"><img
+                  <a class="image-links__link"><img
                           src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/falogo-negativ.png'; ?>"></a>
               </div>
           
