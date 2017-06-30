@@ -993,13 +993,13 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
-    'field_os2web_kulturnaut_venue_tid' => array(
+    'term_node_tid_depth' => array(
       'type' => 'context',
       'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Content: Venue (field_os2web_kulturnaut_venue)',
+      'label' => 'Content: Has taxonomy term ID (with depth)',
     ),
   );
 
