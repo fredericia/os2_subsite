@@ -121,6 +121,17 @@
 </div>
     
 </header>
+           <!--Slideshow begin-->
+<div class="container-fluid node-slideshow" style="height:350px;">
+    <div class="background-slideshow row">
+      <?php
+      $view_popular_tags = views_get_view('os2web_events_slideshow');
+      $view_popular_tags->set_display('block_slideshow');
+      print $view_popular_tags->preview('block_slideshow');
+      ?>
+    </div>
+  </div>
+<!--Slideshow end-->
 
 		  <?php if (!empty($page['highlighted'])): ?>
   		  <div role="complementary">
@@ -170,9 +181,9 @@
 	  </div>
 
 	  <?php //if (!empty($page['footer'])):    ?>
-
 	  <footer class="footer">
-		<div class="social-links">
+ 
+  		<div class="social-links">
   		  <h2><?php print t('Mød os på'); ?></h2>
   		  		  
   		  <?php if ($theme_settings['social_links']['facebook']['active']): ?>
@@ -225,10 +236,14 @@
         <?php endif; ?>			  
   			  
   		</div> 
+
 		<div class="social-footer">
 		</div>
-		<div class="<?php print $container_class; ?>">
-		  <?php print render($page['footer']); ?>
-		</div>
+		  <div class="<?php print $container_class; ?>">
+        <div class="content-width">			
+		    <?php print render($page['footer']); ?>
+        </div>
+      </div>
 	  </footer>
 	  <?php //endif; ?>
+
