@@ -70,14 +70,17 @@ header.navbar {
         }
       }
       .dropdown-menu {
-        background-color: $color-primary;
+        background-color: white;
         margin-top: 9px;
         margin-left: 15px;
+        
         a {
           margin-bottom: 0;
+          color: $color-primary; 
           &.active, &:hover {
             border: none;
-            color: $color-font-light;
+            color: $color-primary;
+            font-weight: bold;
           }
         }
       }

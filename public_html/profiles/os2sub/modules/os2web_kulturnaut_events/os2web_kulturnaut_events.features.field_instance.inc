@@ -1880,7 +1880,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'os2sub_term_search_result' => array(
         'label' => 'hidden',
@@ -1972,7 +1972,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'zoom_level' => 15,
         ),
         'type' => 'simple_gmap',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -1996,9 +1996,8 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_plain',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'os2sub_term_search_result' => array(
@@ -2027,6 +2026,56 @@ function os2web_kulturnaut_events_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_enable'.
+  $field_instances['taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_enable'] = array(
+    'bundle' => 'os2web_kulturnaut_venue',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Vis på siden Steder',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'os2sub_spotbox_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'os2sub_term_search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_os2web_kult_venue_enable',
+    'label' => 'Vis på siden Steder',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_image'.
   $field_instances['taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_image'] = array(
     'bundle' => 'os2web_kulturnaut_venue',
@@ -2037,7 +2086,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -2149,6 +2198,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
   t('Tema');
   t('Tid');
   t('Venue');
+  t('Vis på siden Steder');
 
   return $field_instances;
 }

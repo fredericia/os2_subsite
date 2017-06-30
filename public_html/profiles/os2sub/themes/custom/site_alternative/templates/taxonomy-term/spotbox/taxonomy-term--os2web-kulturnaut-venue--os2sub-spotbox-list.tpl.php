@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @file
  * Default theme implementation to display a term.
@@ -48,16 +47,18 @@
     <div class="content">
       <?php print render($content); ?>
     </div>
-    <div class="upper-part">
-      <span class="activities-count">
-        <?php print $related_activities; ?>
-      </span>
-      <?php print t('Aktiviterer'); ?>
-    </div>
+    <?php if ( $related_activities > 0 ): ?>
+      <div class="upper-part">
+        <span class="activities-count">
+          <?php print $related_activities; ?>
+        </span>
+        <?php print t('Aktiviterer'); ?>
+      </div>
+    <?php endif; ?>
     <div class="bottom-part">
-      <?php if (!$page): ?>
+      <?php if ( !$page ): ?>
         <header>
-          <?php if (!$page): ?>
+          <?php if ( !$page ): ?>
             <h2><?php print $term_name; ?></h2>
           <?php endif; ?>
         </header>

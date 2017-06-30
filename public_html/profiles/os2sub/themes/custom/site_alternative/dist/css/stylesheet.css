@@ -9350,14 +9350,16 @@ header.navbar {
       header.navbar .container .menu.nav li > a.active {
         font-weight: 900; }
     header.navbar .container .menu.nav li .dropdown-menu {
-      background-color: #0f2846;
+      background-color: white;
       margin-top: 9px;
       margin-left: 15px; }
       header.navbar .container .menu.nav li .dropdown-menu a {
-        margin-bottom: 0; }
+        margin-bottom: 0;
+        color: #0f2846; }
         header.navbar .container .menu.nav li .dropdown-menu a.active, header.navbar .container .menu.nav li .dropdown-menu a:hover {
           border: none;
-          color: #ffffff; }
+          color: #0f2846;
+          font-weight: bold; }
   header.navbar .container .navbar-header .logo img {
     max-height: 29px; }
 
@@ -10607,6 +10609,9 @@ footer.footer a.block-image-links__link {
 
 .view-os2web-kulturnaut-tema-list .view-content .views-field.views-field-description .field-content a.views-more-link {
   text-decoration: underline; }
+
+.taxonomy-term.vocabulary-os2web-kulturnaut-venue.view-mode-full .taxonomy-term-description {
+  display: none; }
 
 @media (min-width: 992px) {
   .views-field.views-field-field-os2web-kult-tema-image .field-content .img-effect {

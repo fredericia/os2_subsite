@@ -13,7 +13,7 @@ function os2web_kulturnaut_events_taxonomy_default_vocabularies() {
       'name' => 'Tema',
       'machine_name' => 'os2web_kulturnaut_tema',
       'description' => '',
-      'hierarchy' => 0,
+      'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,
     ),
