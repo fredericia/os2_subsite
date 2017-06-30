@@ -30,15 +30,16 @@ function os2sub_social_share_content() {
   if ($node) {
     $title = $node->title;
     $url = url(drupal_get_path_alias('node/' . $node->nid), array('absolute' => TRUE));
-  }else{
-    $term = menu_get_object('taxonomy_term', 2);
+  } elseif ($term = menu_get_object('taxonomy_term', 2)) {
     $title = $term->name;
     $url = url(drupal_get_path_alias('taxonomy/term/' . $term->tid), array('absolute' => TRUE));
   }
 // this is where the $items get sent to your default MYMODULE_BLOCK.tpl.php that gets
 // registered below
-  $current_object = array('url' => $url, 'title' => $title);
-  return theme('os2sub_social_share_content', array('current_node' => $current_object));
+  if (isset($url)) {
+    $current_object = array('url' => $url, 'title' => $title);
+    return theme('os2sub_social_share_content', array('current_node' => $current_object));
+  }
 }
 
 //here you are registering your default tpl for the above block
