@@ -152,8 +152,24 @@ ul.pagination {
 
 .views-submit-button button {
     
-    display: none!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(108, 40, 51);
+    border-radius: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 200;
+    height: 45px;
+    border-color: rgb(108, 40, 51);
 }
+.views-submit-button button:hover {
+    background-color: #306783;
+    border-collapse: #306783;
+}
+
 
 .views-exposed-form .views-exposed-widget .form-submit {
     

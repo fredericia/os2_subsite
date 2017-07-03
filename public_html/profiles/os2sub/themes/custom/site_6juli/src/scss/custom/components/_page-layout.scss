@@ -38,8 +38,86 @@ body {
     }
 }
 
-.views-exposed-form label {
-    display: none;
+#edit-event-calendar-date-value-wrapper label {
+    width: 2px;
+    height: 45px;
+    background: #e0ded4;
+    color: transparent;
+    position: absolute;
+    transform: translate(168px, 0px);
+}
+
+#edit-event-calendar-date-value2-value-datepicker-popup-0 {
+    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png')!important;
+    background-size: 25px!important;
+    background-position: right 10px center!important;
+    background-repeat: no-repeat!important;
+}
+
+#edit-event-calendar-date-value2-value:before {
+content: 'Til: ';
+    float: left;
+    width: 30px;
+    margin-left: -45px;
+    font-size: 17px;
+    line-height: 40px;    
+}
+
+#edit-event-calendar-date-value-value:before {
+content: 'Fra: ';
+    float: left;
+    width: 30px;
+    margin-left: -45px;
+    font-size: 17px;
+    line-height: 40px;    
+}
+
+#edit-event-calendar-date-value2-value {
+    
+    margin-left: 50px;
+}
+
+#edit-event-calendar-date-value-value {
+    
+    margin-left: 48px;
+}
+
+.form-control {
+    background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png');
+    background-size: 25px;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+}
+
+#edit-title {
+    background-image: none!important;
+}
+
+#edit-event-calendar-date-value2-wrapper label {
+        width: 2px;
+    height: 45px;
+    background: #fff;
+    color: transparent;
+    position: absolute;
+    transform: translate(170px, 0px);
+}
+
+#edit-title-wrapper label {
+    display: none!important;
+}
+
+.views-row-even .teaser {
+    display: flex!important;
+    flex-direction: row-reverse!important;
+}
+
+.pane-os2sub-nyheder {
+    height:395px;
+}
+
+.teaser .img-responsive {
+    max-width: inherit!important;
+    width: 500px;
 }
 
 .pane-events .views-exposed-widgets {
@@ -199,6 +277,58 @@ h2.pane-title {
         color: $section-heading-color;
         border: 0;
     }
+}
+
+// News teaser
+
+.teaser-news-img {
+    
+    width: 23vw;
+    overflow: hidden;
+}
+
+.node--os2web_base_news--teaser .teaser {
+    display: flex;
+}
+
+.node-os2web-base-news {
+    
+    border-top: none!important;
+    border-left: none!important;
+    border-right: none!important;
+    border-bottom: 1px solid #ddd!important;
+}
+
+.teaser-news-date {
+    
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.teaser-news-title {
+    font-family: "Droid Serif", serif;
+    font-weight: bold;    
+    font-size: 28px!important;
+    margin-bottom: 10px;
+}
+
+.teaser-news-content {
+    
+    padding: 10px;
+    padding-left: 25px;
+}
+
+.teaser .field-name-field-os2web-base-field-summary {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 h3.pane-title {
@@ -496,7 +626,16 @@ select {
     padding-top: 40px;
 }
 
+.page-nyheder .pane-block-12 {
+    display: none;
+}
+.node-type-os2web-base-news .pane-block-12 {
+    display: none;
+}
 
+//.page-node-49 .sidebar-right {
+//    display: none!important;
+//}
 
 // ------
 // Page node

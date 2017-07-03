@@ -83,24 +83,20 @@
   <?php print render($title_prefix); ?>
 	<?php print render($title_suffix); ?>
   <div class="teaser">
-    <a href="<?php print $node_url; ?>">
-        <span class="date">
-          <span class="dag">
-            <?php print date('d', $created); ?>
-          </span>
-          <span class="maaned">
-            <?php print t(date('M', $created)); ?>
-          </span>
-        </span>  
-    	  <span class="headline">
-    	    <?php print $title; ?>
-      	  <span class="subheadline">
-      	    <?php print render($content['field_os2web_base_field_summary']); ?>
-          </span>
-    	  </span>
+   <div class="teaser-news-img">
+    <?php print render($content['field_os2web_base_field_lead_img']); ?>
+   </div>
+   <div class="teaser-news-content">
+   <div class="teaser-news-date">
+    <?php print date('d', $created); ?>
+    <?php print (date('M', $created)); ?>
+    </div>
+       <a class="teaser-news-title" href="<?php print $node_url; ?>"><?php print $title; ?></a>
+    <?php print render($content['field_os2web_base_field_summary']); ?>
+        
     	  
-        <?php print render($content['field_os2web_base_field_lead_img']); ?>
-      </span>
+    	  <a class="read-more" href="<?php print $node_url; ?>">Læs mere	  
     </a>
+    </div>
   </div>
 </article>

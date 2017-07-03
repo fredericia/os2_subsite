@@ -8745,8 +8745,87 @@ body {
   .call-to-action .pane-title {
     color: #ffffff; }
 
-.views-exposed-form label {
-  display: none; }
+#edit-event-calendar-date-value-wrapper label {
+  width: 2px;
+  height: 45px;
+  background: #e0ded4;
+  color: transparent;
+  position: absolute;
+  -webkit-transform: translate(168px, 0px);
+      -ms-transform: translate(168px, 0px);
+       -o-transform: translate(168px, 0px);
+          transform: translate(168px, 0px); }
+
+#edit-event-calendar-date-value2-value-datepicker-popup-0 {
+  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png") !important;
+  -webkit-background-size: 25px 25px !important;
+          background-size: 25px !important;
+  background-position: right 10px center !important;
+  background-repeat: no-repeat !important; }
+
+#edit-event-calendar-date-value2-value:before {
+  content: 'Til: ';
+  float: left;
+  width: 30px;
+  margin-left: -45px;
+  font-size: 17px;
+  line-height: 40px; }
+
+#edit-event-calendar-date-value-value:before {
+  content: 'Fra: ';
+  float: left;
+  width: 30px;
+  margin-left: -45px;
+  font-size: 17px;
+  line-height: 40px; }
+
+#edit-event-calendar-date-value2-value {
+  margin-left: 50px; }
+
+#edit-event-calendar-date-value-value {
+  margin-left: 48px; }
+
+.form-control {
+  background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png");
+  -webkit-background-size: 25px 25px;
+          background-size: 25px;
+  background-position: right 10px center;
+  background-repeat: no-repeat; }
+
+#edit-title {
+  background-image: none !important; }
+
+#edit-event-calendar-date-value2-wrapper label {
+  width: 2px;
+  height: 45px;
+  background: #fff;
+  color: transparent;
+  position: absolute;
+  -webkit-transform: translate(170px, 0px);
+      -ms-transform: translate(170px, 0px);
+       -o-transform: translate(170px, 0px);
+          transform: translate(170px, 0px); }
+
+#edit-title-wrapper label {
+  display: none !important; }
+
+.views-row-even .teaser {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+  -webkit-flex-direction: row-reverse !important;
+      -ms-flex-direction: row-reverse !important;
+          flex-direction: row-reverse !important; }
+
+.pane-os2sub-nyheder {
+  height: 395px; }
+
+.teaser .img-responsive {
+  max-width: inherit !important;
+  width: 500px; }
 
 .pane-events .views-exposed-widgets {
   padding-left: 15px;
@@ -8972,6 +9051,46 @@ h2.pane-title,
   font-size: 4.625em;
   color: #306783;
   border: 0; }
+
+.teaser-news-img {
+  width: 23vw;
+  overflow: hidden; }
+
+.node--os2web_base_news--teaser .teaser {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.node-os2web-base-news {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #ddd !important; }
+
+.teaser-news-date {
+  color: #aaa;
+  font-size: 16px;
+  margin-bottom: 5px; }
+
+.teaser-news-title {
+  font-family: "Droid Serif", serif;
+  font-weight: bold;
+  font-size: 28px !important;
+  margin-bottom: 10px; }
+
+.teaser-news-content {
+  padding: 10px;
+  padding-left: 25px; }
+
+.teaser .field-name-field-os2web-base-field-summary {
+  font-size: 16px;
+  margin-bottom: 10px; }
+
+.read-more {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px; }
 
 h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-headline, .node-teaser .pane-title.node-teaser-full-name, .pane-title.node-list-title {
   font-weight: bold;
@@ -9225,6 +9344,12 @@ select {
 
 .page-nyheder .pane-os2sub-nyheder {
   padding-top: 40px; }
+
+.page-nyheder .pane-block-12 {
+  display: none; }
+
+.node-type-os2web-base-news .pane-block-12 {
+  display: none; }
 
 .node-slideshow .img-container {
   height: 350px !important; }
@@ -9914,7 +10039,31 @@ ul.pagination {
           flex-direction: row-reverse; }
 
 .views-submit-button button {
-  display: none !important; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #6c2833;
+  border-radius: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 200;
+  height: 45px;
+  border-color: #6c2833; }
+
+.views-submit-button button:hover {
+  background-color: #306783;
+  border-collapse: #306783; }
 
 .views-exposed-form .views-exposed-widget .form-submit {
   margin-top: 0 !important; }
@@ -10211,7 +10360,7 @@ footer.footer a.image-links__link {
 .event-teasers .node-teaser,
 .view-det-sker-slideshow .front-teaser,
 .view-det-sker-slideshow .node-teaser {
-  height: 240px;
+  height: 295px;
   position: relative;
   border: 1px solid #112a49; }
   .pane-os2sub-nyheder .front-teaser a.teaser-link,
