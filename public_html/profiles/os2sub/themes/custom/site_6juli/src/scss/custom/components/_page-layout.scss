@@ -177,6 +177,22 @@ h1.pane-title {
     color: $headline-color;
     border: 0;
 }
+.pane-det-sker-slideshow .pane-title {
+    display: none;
+}
+
+.det-sker-title {
+   font-family: $font-droid-serif;
+    font-weight: bold;
+    font-size: 32px;
+    color: $section-heading-color; 
+    text-align: left!important;
+}
+
+.det-sker-title a {
+     color: #e0ded4;
+    font-size: 32px;
+}
 
 h2.page-header,
 h2.pane-title {

@@ -8875,6 +8875,20 @@ h1.pane-title,
   color: #306783;
   border: 0; }
 
+.pane-det-sker-slideshow .pane-title {
+  display: none; }
+
+.det-sker-title {
+  font-family: "Droid Serif", serif;
+  font-weight: bold;
+  font-size: 32px;
+  color: #306783;
+  text-align: left !important; }
+
+.det-sker-title a {
+  color: #e0ded4;
+  font-size: 32px; }
+
 h2.page-header, .page-header.heading-h2,
 h2.pane-title,
 .pane-title.heading-h2 {
