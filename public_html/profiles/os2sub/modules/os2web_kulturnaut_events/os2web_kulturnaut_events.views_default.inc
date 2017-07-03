@@ -43,6 +43,10 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -53,6 +57,27 @@ function os2web_kulturnaut_events_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
+  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
+  $handler->display->display_options['filters']['machine_name']['value'] = array(
+    'os2web_kulturnaut_venue' => 'os2web_kulturnaut_venue',
+  );
+  /* Filter criterion: Taxonomy term: Image (field_os2web_kult_venue_image:width) */
+  $handler->display->display_options['filters']['field_os2web_kult_venue_image_width']['id'] = 'field_os2web_kult_venue_image_width';
+  $handler->display->display_options['filters']['field_os2web_kult_venue_image_width']['table'] = 'field_data_field_os2web_kult_venue_image';
+  $handler->display->display_options['filters']['field_os2web_kult_venue_image_width']['field'] = 'field_os2web_kult_venue_image_width';
+  $handler->display->display_options['filters']['field_os2web_kult_venue_image_width']['operator'] = 'not empty';
+  /* Filter criterion: Taxonomy term: Vis på siden Steder (field_os2web_kult_venue_enable) */
+  $handler->display->display_options['filters']['field_os2web_kult_venue_enable_value']['id'] = 'field_os2web_kult_venue_enable_value';
+  $handler->display->display_options['filters']['field_os2web_kult_venue_enable_value']['table'] = 'field_data_field_os2web_kult_venue_enable';
+  $handler->display->display_options['filters']['field_os2web_kult_venue_enable_value']['field'] = 'field_os2web_kult_venue_enable_value';
+  $handler->display->display_options['filters']['field_os2web_kult_venue_enable_value']['value'] = array(
+    1 => '1',
+  );
   $handler->display->display_options['path'] = 'steder';
   $translatables['os2sub_venues'] = array(
     t('Master'),
@@ -86,7 +111,8 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
@@ -784,15 +810,16 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['relationships']['field_os2web_base_field_edi_tags_tid']['table'] = 'field_data_field_os2web_base_field_edi_tags';
   $handler->display->display_options['relationships']['field_os2web_base_field_edi_tags_tid']['field'] = 'field_os2web_base_field_edi_tags_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Stikord (field_os2web_base_field_edi_tags) */
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['id'] = 'field_os2web_base_field_edi_tags_tid';
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['table'] = 'field_data_field_os2web_base_field_edi_tags';
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['field'] = 'field_os2web_base_field_edi_tags_tid';
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -803,13 +830,13 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
-    'field_os2web_base_field_edi_tags_tid' => array(
+    'term_node_tid_depth' => array(
       'type' => 'context',
       'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Stikord (field_os2web_base_field_edi_tags)',
+      'label' => 'Content: Has taxonomy term ID (with depth)',
     ),
   );
 
@@ -922,11 +949,15 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane - Activities for venue', 'pane_activities_for_venue');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Relaterede begivenheder for venue';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'infinite_scroll';
   $handler->display->display_options['pager']['options']['manual_load'] = 1;
   $handler->display->display_options['pager']['options']['text'] = 'Indlæs flere';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -942,15 +973,16 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['table'] = 'field_data_field_os2web_kulturnaut_venue';
   $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['field'] = 'field_os2web_kulturnaut_venue_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Venue (field_os2web_kulturnaut_venue) */
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['id'] = 'field_os2web_kulturnaut_venue_tid';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['table'] = 'field_data_field_os2web_kulturnaut_venue';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['field'] = 'field_os2web_kulturnaut_venue_tid';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_venue_tid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -961,13 +993,13 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
-    'field_os2web_kulturnaut_venue_tid' => array(
+    'term_node_tid_depth' => array(
       'type' => 'context',
       'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Content: Venue (field_os2web_kulturnaut_venue)',
+      'label' => 'Content: Has taxonomy term ID (with depth)',
     ),
   );
 
@@ -975,11 +1007,15 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane - Activities for tema', 'pane_activities_for_tema');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Relaterede begivenheder for tema';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'infinite_scroll';
   $handler->display->display_options['pager']['options']['manual_load'] = 1;
   $handler->display->display_options['pager']['options']['text'] = 'Læs mere';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -995,15 +1031,16 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['relationships']['field_os2web_kulturnaut_tema_tid']['table'] = 'field_data_field_os2web_kulturnaut_tema';
   $handler->display->display_options['relationships']['field_os2web_kulturnaut_tema_tid']['field'] = 'field_os2web_kulturnaut_tema_tid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Tema (field_os2web_kulturnaut_tema) */
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['id'] = 'field_os2web_kulturnaut_tema_tid';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['table'] = 'field_data_field_os2web_kulturnaut_tema';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['field'] = 'field_os2web_kulturnaut_tema_tid';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['default_action'] = 'empty';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
+  $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '10';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -1014,13 +1051,13 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['allow']['exposed_form'] = 0;
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
-    'field_os2web_kulturnaut_tema_tid' => array(
+    'term_node_tid_depth' => array(
       'type' => 'context',
       'context' => 'entity:taxonomy_term.tid',
       'context_optional' => 0,
       'panel' => '0',
       'fixed' => '',
-      'label' => 'Content: Tema (field_os2web_kulturnaut_tema)',
+      'label' => 'Content: Has taxonomy term ID (with depth)',
     ),
   );
 

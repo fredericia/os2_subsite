@@ -57,6 +57,12 @@
   }
 }
 
+.taxonomy-term.vocabulary-os2web-kulturnaut-venue.view-mode-full{
+  .taxonomy-term-description{
+    display: none;
+  }
+
+}
 
 // --------------------------------------------------
 // Variants
@@ -121,9 +127,9 @@
         font-size: 1.125em;
       }
       .col-xs-9.col-md-10{
-      padding-left: 30px;
+        padding-left: 30px;
 
-    }
+      }
     }
     .view-content .views-field.views-field-description .field-content a.views-more-link{
       text-decoration: underline;
