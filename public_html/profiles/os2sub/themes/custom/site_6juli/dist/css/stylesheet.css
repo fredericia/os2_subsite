@@ -9381,7 +9381,7 @@ select {
   display: none; }
 
 .page-nyheder .pane-title {
-  display: none; }
+  display: inherit; }
 
 .page-nyheder .pane-os2sub-nyheder {
   padding-top: 40px; }
