@@ -194,6 +194,20 @@ h1.pane-title {
     font-size: 32px;
 }
 
+.field-name-event-calendar-date .field-item {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.date-display-single {
+        font-size: 16px;
+    color: #306783;
+    font-weight: bold;
+}
+
+.region-highlighted {
+    display: none!important;
+}
+
 h2.page-header,
 h2.pane-title {
     font-family: $font-droid-serif;

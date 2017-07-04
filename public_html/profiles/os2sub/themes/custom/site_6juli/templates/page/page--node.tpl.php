@@ -122,7 +122,7 @@
     
 </header>
            <!--Slideshow begin-->
-<div class="container-fluid node-slideshow" style="height:350px;">
+<div class="container-fluid">
     <div class="background-slideshow row">
       <?php
       $view_popular_tags = views_get_view('os2web_events_slideshow');

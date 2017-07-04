@@ -8889,6 +8889,18 @@ h1.pane-title,
   color: #e0ded4;
   font-size: 32px; }
 
+.field-name-event-calendar-date .field-item {
+  margin-bottom: 15px;
+  margin-top: 15px; }
+
+.date-display-single {
+  font-size: 16px;
+  color: #306783;
+  font-weight: bold; }
+
+.region-highlighted {
+  display: none !important; }
+
 h2.page-header, .page-header.heading-h2,
 h2.pane-title,
 .pane-title.heading-h2 {
