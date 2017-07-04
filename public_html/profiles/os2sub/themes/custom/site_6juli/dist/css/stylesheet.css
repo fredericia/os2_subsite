@@ -8910,6 +8910,12 @@ h1.pane-title,
 .page-forside .date-display-single {
   color: #fff !important; }
 
+.pane-block-11 .pane-title {
+  display: block !important;
+  font-size: 16px !important;
+  text-transform: uppercase;
+  color: #aaa; }
+
 h2.page-header, .page-header.heading-h2,
 h2.pane-title,
 .pane-title.heading-h2 {
