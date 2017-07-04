@@ -4,7 +4,7 @@
 	$style_url = image_style_url($style, $path); ?>
 	
 	<article id="node-<?php print $node->nid; ?>" class="banner <?php print $classes . " all"; ?> clearfix"<?php print $attributes; ?> 
-		style="background: url(<?php print file_create_url($style_url); ?>) no-repeat scroll ;height:350px;background-size: cover;">
+		style="background: url(<?php print file_create_url($style_url); ?>) no-repeat scroll ;height:600px;background-size: cover;">
 	
 	<div class="row">
 		<div class="col-md-6 ">

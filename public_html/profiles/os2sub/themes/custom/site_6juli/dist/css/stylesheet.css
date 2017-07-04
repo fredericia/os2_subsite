@@ -8889,6 +8889,12 @@ h1.pane-title,
   color: #e0ded4;
   font-size: 32px; }
 
+.node-type-os2web-base-contentpage .container-fluid .background-slideshow {
+  display: none !important; }
+
+.node--banner--teaser {
+  height: 600px !important; }
+
 .field-name-event-calendar-date .field-item {
   margin-bottom: 15px;
   margin-top: 15px; }
