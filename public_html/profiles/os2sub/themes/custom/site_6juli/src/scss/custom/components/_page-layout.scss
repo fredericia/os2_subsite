@@ -194,6 +194,10 @@ h1.pane-title {
     font-size: 32px;
 }
 
+.pane-menu-menu-menupunkter-for-aktive-feat {
+    display: none;
+}
+
 .node-type-os2web-base-contentpage .container-fluid .background-slideshow {
     display: none!important;
 }
@@ -210,9 +214,10 @@ h1.pane-title {
     font-weight: bold;
 }
 
-.region-highlighted {
-    display: none!important;
+.page-forside .date-display-single {
+    color: #fff!important;
 }
+
 
 h2.page-header,
 h2.pane-title {

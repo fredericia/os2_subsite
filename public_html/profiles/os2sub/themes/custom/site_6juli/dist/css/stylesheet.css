@@ -8889,6 +8889,9 @@ h1.pane-title,
   color: #e0ded4;
   font-size: 32px; }
 
+.pane-menu-menu-menupunkter-for-aktive-feat {
+  display: none; }
+
 .node-type-os2web-base-contentpage .container-fluid .background-slideshow {
   display: none !important; }
 
@@ -8904,8 +8907,8 @@ h1.pane-title,
   color: #306783;
   font-weight: bold; }
 
-.region-highlighted {
-  display: none !important; }
+.page-forside .date-display-single {
+  color: #fff !important; }
 
 h2.page-header, .page-header.heading-h2,
 h2.pane-title,
