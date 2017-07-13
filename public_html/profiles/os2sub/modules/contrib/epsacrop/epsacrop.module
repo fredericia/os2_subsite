@@ -667,14 +667,21 @@ function epsacrop_element_process($element, $form_state, $form) {
   }
 
   if ($element['#type'] == 'media') {
-    //for media, need to include the media elements even if the file is not defined, because it's not defined when file initially selected
-    $element['#attached']['js'][] = array('type' => 'setting', 'data' => array( 'epsacrop_dialog' => array($element['#id'] => $setting)));
+    // For media, we need to include the media elements even if the file is not
+    // defined, because it's not defined when the file is initially selected.
+    $element_id = drupal_clean_css_identifier($element['#name']);
+    $element['#attached']['js'][] = array('type' => 'setting', 'data' => array( 'epsacrop_dialog' => array($element_id => $setting)));
     $element['#attached']['js'][] = drupal_get_path('module', 'epsacrop') . '/js/epsacrop-media.js';
     $element['epsacrop'] = array(
       '#type' => 'link',
       '#href' => '',
       '#title' => t('Manage image crops'),
-      '#attributes' => array('class' => array('button', 'manage-crop')),
+      '#attributes' => array(
+        'class' => array('button', 'manage-crop'),
+        // We need to include the parent id because the Media widget doesn't
+        // include it itself.
+        'data-epsaid' => array($element_id),
+      ),
       '#options' => array('fragment' => FALSE, 'external' => TRUE),
       '#weight' => 0,
     );

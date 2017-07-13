@@ -974,11 +974,12 @@ function os2web_base_field_default_field_instances() {
       'default_image' => 0,
       'epsacrop' => array(
         'styles' => array(
+          'afsnit_stort_billede' => 0,
           'os2sub_220x130' => 0,
           'os2sub_300x175' => 0,
           'os2sub_banner' => 0,
-          'svendborg_content_image' => 'svendborg_content_image',
-          'svendborg_spotbox' => 0,
+          'os2sub_normal_imagesize' => 'os2sub_normal_imagesize',
+          'os2web_spotbox_image' => 0,
         ),
       ),
       'file_directory' => '',
