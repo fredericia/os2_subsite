@@ -79,7 +79,6 @@
  * @ingroup templates
  */
 ?>
-<a href="<?php print $node_url; ?>">
   <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
     <div class="upper-part">
       <?php print render($content['field_os2web_kulturnaut_sname']); ?>
@@ -90,32 +89,40 @@
     hide($content['links']);
     hide($content['field_tags']);
     hide($content['field_os2web_kulturnaut_date']);
+    hide($content['field_os2web_kulturnaut_url']);
 
     print render($content);
     ?>
     <div class="bottom-part">
-      <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
+      <?php if ( (!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted ): ?>
         <header>
           <?php print render($title_prefix); ?>
-          <?php if (!$page && !empty($title)): ?>
+          <?php if ( !$page && !empty($title) ): ?>
             <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
           <?php endif; ?>
           <?php
           //disabled as it adds additional a tag which breaks the layout
           //print render($title_suffix);
           ?>
-          <?php if ($display_submitted): ?>
+          <?php if ( $display_submitted ): ?>
             <span class="submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </span>
+              <?php print $user_picture; ?>
+              <?php print $submitted; ?>
+            </span>
           <?php endif; ?>
         </header>
       <?php endif; ?>
       <?php print render($content['field_os2web_kulturnaut_date']); ?>
     </div>
 
-    <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
+    <div class="overlay">
+      <div class="overlay-content">
+        <?php print render($content['field_os2web_kulturnaut_url']); ?>
+        <a class="btn btn-quaternary btn-full-width" href="<?php print $node_url; ?>"><?php print t('Læs mere') . '...'; ?></a>
+      </div>
+    </div>
+
+    <?php if ( !empty($content['field_tags']) || !empty($content['links']) ): ?>
       <footer>
         <?php print render($content['field_tags']); ?>
         <?php print render($content['links']); ?>
@@ -123,4 +130,3 @@
     <?php endif; ?>
     <?php print render($content['comments']); ?>
   </article>
-</a>
