@@ -1111,7 +1111,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'single_image_delta' => '',
         ),
         'type' => 'single_image',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'os2sub_spotbox_single' => array(
         'label' => 'hidden',
@@ -1725,8 +1725,9 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       ),
       'os2sub_spotbox_mini' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 4,
       ),
       'os2sub_spotbox_single' => array(
