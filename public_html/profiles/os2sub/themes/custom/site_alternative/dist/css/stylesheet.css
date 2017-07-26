@@ -10037,7 +10037,7 @@ footer.footer a.block-image-links__link {
          -o-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    padding: 70px; }
+    padding: 20px; }
     .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .overlay .overlay-content .field-name-field-os2web-kulturnaut-url {
       margin-bottom: 13px; }
 
@@ -10633,4 +10633,7 @@ footer.footer a.block-image-links__link {
       padding-left: 30px; }
   .view-os2web-kulturnaut-tema-list .view-content .views-field.views-field-description .field-content a.views-more-link {
     text-decoration: underline; } }
+
+.panel-pane.pane-views-panes.pane-os2web-kulturnaut-events-lists-panel-pane-activities-list-single .overlay-content {
+  padding: 70px !important; }
 /*# sourceMappingURL=stylesheet.css.map */
