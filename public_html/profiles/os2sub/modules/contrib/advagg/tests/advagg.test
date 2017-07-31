@@ -6,6 +6,13 @@
  */
 
 /**
+ * @defgroup advagg_tests Advanced Aggregates Tests
+ *
+ * @{
+ * Advanced Aggregates testing functionality.
+ */
+
+/**
  * Resets static variables related to adding CSS to a page.
  */
 function advagg_test_reset_statics() {
@@ -14,6 +21,53 @@ function advagg_test_reset_statics() {
   drupal_static_reset('drupal_get_library');
   drupal_static_reset('drupal_add_js');
   drupal_static_reset('drupal_add_js:jquery_added');
+}
+
+/**
+ * Generates a large CSS string.
+ *
+ * @param int $selector_count
+ *   The number of selectors to generate.
+ * @param int $denominator
+ *   The max string length of the selector names.
+ *
+ * @return string
+ *   Generated CSS string.
+ */
+function advagg_test_generate_selector_css($selector_count, $denominator = 5) {
+  static $count = 0;
+  $pool = array_merge(range('a', 'z'), range('A', 'Z'));
+  $selector_count = 10000;
+  $css = '';
+  while ($selector_count > 0) {
+    $rand_string = advagg_test_randon_string(($selector_count % $denominator) + 3, $pool);
+    $css .= ".{$rand_string}, ";
+    --$selector_count;
+  }
+  $css .= "#last$count {z-index: 2; margin-left: -1px; content: \" \"; display: table;}";
+
+  ++$count;
+  return $css;
+}
+
+/**
+ * Generates random string.
+ *
+ * @param int $length
+ *   How many characters will this string contain.
+ * @param array $pool
+ *   Array of characters to use.
+ *
+ * @return string
+ *   Random string.
+ */
+function advagg_test_randon_string($length, array $pool) {
+  $string = '';
+  $count = count($pool);
+  for ($i = 0; $i < $length; $i++) {
+    $string .= $pool[mt_rand(0, $count - 1)];
+  }
+  return $string;
 }
 
 /**
@@ -36,6 +90,8 @@ function advagg_test_remove_sniffer_comments($input) {
 class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
   /**
    * Store configured value for CSS preprocessing.
+   *
+   * @var bool
    */
   protected $preprocessCss = NULL;
 
@@ -56,7 +112,13 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
   public function setUp() {
     // Enable any modules required for the test. This should be an array of
     // module names.
-    parent::setUp(array('advagg', 'php', 'locale', 'common_test', 'menu_test'));
+    parent::setUp(array(
+      'advagg',
+      'php',
+      'locale',
+      'common_test',
+      'menu_test',
+    ));
     // Include the advagg.module file.
     drupal_load('module', 'advagg');
     module_load_include('inc', 'advagg', 'advagg');
@@ -226,13 +288,28 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
     global $language;
     $language->direction = LANGUAGE_RTL;
     $path = drupal_get_path('module', 'system');
-    drupal_add_css($path . '/system.base.css');
+    drupal_add_css($path . '/system.base.css', array('group' => CSS_SYSTEM));
+    drupal_add_css($path . '/system.menus.css', array('group' => CSS_SYSTEM));
+    drupal_add_css($path . '/system.theme.css', array('group' => CSS_SYSTEM));
     // Get the render array.
     $full_css = advagg_get_css();
     // Render the CSS.
     $styles = drupal_render($full_css);
     // Check to see if system.base-rtl.css was also added.
-    $this->assert(strpos($styles, $path . '/system.base-rtl.css') !== FALSE, 'CSS is alterable as right to left overrides are added.');
+    $base_pos = strpos($styles, $path . '/system.base.css');
+    $base_rtl_pos = strpos($styles, $path . '/system.base-rtl.css');
+    $this->assert($base_rtl_pos !== FALSE, 'CSS is alterable as right to left overrides are added.');
+    $this->assert($base_pos < $base_rtl_pos, 'system.base-rtl.css is added after system.base.css.');
+    // Check to see if system.menus-rtl.css was also added.
+    $menus_pos = strpos($styles, $path . '/system.menus.css');
+    $menus_rtl_pos = strpos($styles, $path . '/system.menus-rtl.css');
+    $this->assert($menus_rtl_pos !== FALSE, 'CSS is alterable as right to left overrides are added.');
+    $this->assert($menus_pos < $menus_rtl_pos, 'system.menus-rtl.css is added after system.menus.css.');
+    // Check to see if system.theme-rtl.css was also added.
+    $theme_pos = strpos($styles, $path . '/system.theme.css');
+    $theme_rtl_pos = strpos($styles, $path . '/system.theme-rtl.css');
+    $this->assert($theme_rtl_pos !== FALSE, 'CSS is alterable as right to left overrides are added.');
+    $this->assert($theme_pos < $theme_rtl_pos, 'system.theme-rtl.css is added after system.theme.css.');
     // Change the language back to left to right.
     $language->direction = LANGUAGE_LTR;
 
@@ -358,6 +435,56 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
     $this->assertRaw('seven/style.css', "The Seven theme's CSS appears on the page.");
 
     //
+    // Test css split file processing.
+    // Generate a massive css file.
+    $css_string = advagg_test_generate_selector_css(1000);
+    $css_string .= '@media print {' . advagg_test_generate_selector_css(1000) . '}';
+    $css_string .= advagg_test_generate_selector_css(1000);
+    $css_string .= '@media screen {' . advagg_test_generate_selector_css(1000) . '}';
+    $css_string .= advagg_test_generate_selector_css(1000);
+    $css_string .= '@media print {' . advagg_test_generate_selector_css(1000) . '}';
+    $css_string .= advagg_test_generate_selector_css(9000);
+    $css_string .= '@media print {' . advagg_test_generate_selector_css(9000) . '}';
+    $css_string .= advagg_test_generate_selector_css(9000);
+    $css_string .= '@media screen {' . advagg_test_generate_selector_css(9000) . '}';
+    $css_string .= '@media print {' . advagg_test_generate_selector_css(50) . '}';
+    $css_string .= '@media screen {' . advagg_test_generate_selector_css(50) . '}';
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= '@media print {' . advagg_test_generate_selector_css(50) . '}';
+    $css_string .= '@media screen {' . advagg_test_generate_selector_css(50) . '}';
+    $css_string .= '@media print {' . advagg_test_generate_selector_css(50) . '}';
+    $css_string .= '@media screen {' . advagg_test_generate_selector_css(50) . '}';
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(15000);
+    $css_string .= '@media print {' . advagg_test_generate_selector_css(15000) . '}';
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(10);
+    $css_string .= advagg_test_generate_selector_css(10);
+    $file_info = array(
+      // Use a file that exists but isn't actually being used here.
+      'data' => drupal_get_path('module', 'advagg') . '/tests/css_test_files/advagg.css',
+    );
+    $before_selector_count = advagg_count_css_selectors($css_string);
+    // Split the huge css file.
+    $parts = advagg_split_css_file($file_info, $css_string);
+    $after = '';
+    foreach ($parts as $part) {
+      // Get written file.
+      $after .= "\n" . (string) @file_get_contents($part['data']);
+      // Cleanup.
+      unlink($part['data']);
+    }
+    // Note that a diff of the text can not be used for this test. Counting
+    // selectors is close enough for now.
+    $after_selector_count = advagg_count_css_selectors($after);
+    $this->assertEqual($before_selector_count, $after_selector_count, t('Expected %before selectors, got %after.', array('%before' => $before_selector_count, '%after' => $after_selector_count)));
+
+    //
     // Test css file processing.
     advagg_test_reset_statics();
     // Array of files to test living in 'advagg/tests/css_test_files/'.
@@ -423,6 +550,7 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
       'charset_newline.css',
       'charset_sameline.css',
     );
+    $path = drupal_get_path('module', 'advagg') . '/tests/css_test_files';
     foreach ($testfiles as $file) {
       $file_path = $path . '/' . $file;
       $file_url = $GLOBALS['base_url'] . '/' . $file_path;
@@ -438,11 +566,14 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
       $this->assertEqual($optimized_output_url, $expected, format_string('Optimized CSS file (loaded from an URL) has expected contents (@file)', array('@file' => $file)));
     }
 
+    // Set all to FALSE.
     $GLOBALS['conf']['advagg_convert_absolute_to_relative_path'] = FALSE;
     $GLOBALS['conf']['advagg_convert_absolute_to_protocol_relative_path'] = FALSE;
     $GLOBALS['conf']['advagg_force_https_path'] = FALSE;
+    $GLOBALS['conf']['advagg_skip_file_create_url_inside_css'] = FALSE;
     $settings_to_change = array(
       '' => '',
+      'advagg_skip_file_create_url_inside_css' => TRUE,
       'advagg_convert_absolute_to_relative_path' => TRUE,
       'advagg_convert_absolute_to_protocol_relative_path' => TRUE,
       'advagg_force_https_path' => TRUE,
@@ -463,9 +594,11 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
       $testfiles = array(
         'advagg.css',
       );
+      $path = drupal_get_path('module', 'advagg') . '/tests/css_test_files';
       foreach ($testfiles as $file) {
-        $file_path = $path . '/' . $file;
-        $file_url = $GLOBALS['base_url'] . '/' . $file_path;
+        $base_url_before = $GLOBALS['base_url'];
+        $GLOBALS['base_url'] = advagg_force_http_path($GLOBALS['base_url']);
+
         $aggregate_settings = array(
           'variables' => array(
             'is_https' => FALSE,
@@ -480,10 +613,15 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
           $aggregate_settings['variables'][CDN_STATUS_VARIABLE] = CDN_DISABLED;
         }
 
+        $file_path = $path . '/' . $file;
+        $file_url = $GLOBALS['base_url'] . '/' . $file_path;
+
         $expected = file_get_contents($file_path . '.optimized.css');
         $expected = advagg_test_remove_sniffer_comments($expected);
         $optimized_output = advagg_load_css_stylesheet($file_path, TRUE, $aggregate_settings);
-        if ($aggregate_settings['variables']['advagg_convert_absolute_to_relative_path']) {
+        if ($GLOBALS['conf']['advagg_skip_file_create_url_inside_css']
+        || $aggregate_settings['variables']['advagg_convert_absolute_to_relative_path']
+        ) {
           $optimized_output = str_replace($aggregate_settings['variables']['base_path'] . drupal_get_path('module', 'advagg') . '/', '', $optimized_output);
         }
         elseif ($aggregate_settings['variables']['advagg_convert_absolute_to_protocol_relative_path']) {
@@ -495,7 +633,7 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
         else {
           $optimized_output = str_replace('http://' . $_SERVER['HTTP_HOST'] . $aggregate_settings['variables']['base_path'] . drupal_get_path('module', 'advagg') . '/', '', $optimized_output);
         }
-        $this->assertEqual($optimized_output, $expected, format_string('Optimized CSS file has expected contents (@file). Setting tested: @name; value before: @before, value after: @after', array(
+        $this->assertEqual($optimized_output, $expected, format_string("Optimized CSS file has expected contents (@file). Setting tested: @name; value before: @before, value after: @after.", array(
           '@file' => $file,
           '@name' => $name,
           '@before' => (is_bool($before) || strlen((string) $before) == 0) ? strtoupper(var_export($before, TRUE)) : $before,
@@ -505,7 +643,9 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
         $expected = file_get_contents($file_path . '.optimized.css');
         $expected = advagg_test_remove_sniffer_comments($expected);
         $optimized_output_url = advagg_load_css_stylesheet($file_url, TRUE, $aggregate_settings);
-        if ($aggregate_settings['variables']['advagg_convert_absolute_to_relative_path']) {
+        if ($GLOBALS['conf']['advagg_skip_file_create_url_inside_css']
+        || $aggregate_settings['variables']['advagg_convert_absolute_to_relative_path']
+        ) {
           $optimized_output_url = str_replace($aggregate_settings['variables']['base_path'] . drupal_get_path('module', 'advagg') . '/', '', $optimized_output_url);
         }
         elseif ($aggregate_settings['variables']['advagg_convert_absolute_to_protocol_relative_path']) {
@@ -517,12 +657,14 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
         else {
           $optimized_output_url = str_replace('http://' . $_SERVER['HTTP_HOST'] . $aggregate_settings['variables']['base_path'] . drupal_get_path('module', 'advagg') . '/', '', $optimized_output_url);
         }
-        $this->assertEqual($optimized_output_url, $expected, format_string('Optimized CSS file (loaded from an URL) has expected contents (@file). Setting tested: @name; value before: @before, value after: @after', array(
+        $this->assertEqual($optimized_output_url, $expected, format_string("Optimized CSS file (loaded from an URL) has expected contents (@file). Setting tested: @name; value before: @before, value after: @after.", array(
           '@file' => $file,
           '@name' => $name,
           '@before' => (is_bool($before) || strlen((string) $before) == 0) ? strtoupper(var_export($before, TRUE)) : $before,
           '@after' => (is_bool($value) || strlen((string) $value) == 0) ? strtoupper(var_export($value, TRUE)) : $value,
         )));
+
+        $GLOBALS['base_url'] = $base_url_before;
       }
 
       if (!empty($name)) {
@@ -539,6 +681,8 @@ class AdvAggCascadingStylesheetsTestCase extends DrupalWebTestCase {
 class AdvAggJavaScriptTestCase extends DrupalWebTestCase {
   /**
    * Store configured value for JavaScript preprocessing.
+   *
+   * @var bool
    */
   protected $preprocessJs = NULL;
 
@@ -560,6 +704,7 @@ class AdvAggJavaScriptTestCase extends DrupalWebTestCase {
     // Enable Locale and SimpleTest in the test environment.
     parent::setUp(array(
       'locale',
+      'locale_test',
       'simpletest',
       'common_test',
       'form_test',
@@ -1033,6 +1178,153 @@ class AdvAggJavaScriptTestCase extends DrupalWebTestCase {
     $this->assertTrue(strpos($scripts, $child_js), 'The child #attached JavaScript was included when loading from cache.');
     $this->assertTrue(strpos($scripts, $subchild_js), 'The subchild #attached JavaScript was included when loading from cache.');
     $_SERVER['REQUEST_METHOD'] = $request_method;
+
+    //
+    // Tests the localisation of JavaScript libraries. Verifies that the
+    // datepicker can be localized.
+    advagg_test_reset_statics();
+    drupal_add_library('system', 'ui.datepicker');
+    $GLOBALS['conf']['advagg_mod_js_footer'] = 0;
+    $render_array = advagg_get_js();
+    $javascript = drupal_render($render_array);
+    $this->assertTrue(strpos($javascript, 'locale.datepicker.js'), 'locale.datepicker.js added to scripts.');
+
+    //
+    // Functional tests for JavaScript parsing for translatable strings.
+    // Tests parsing js files for translatable strings.
+    advagg_test_reset_statics();
+    $filename = drupal_get_path('module', 'locale_test') . '/locale_test.js';
+    // Parse the file to look for source strings.
+    _locale_parse_js_file($filename);
+
+    // Get all of the source strings that were found.
+    $source_strings = db_select('locales_source', 's')
+      ->fields('s', array('source', 'context'))
+      ->condition('s.location', $filename)
+      ->execute()
+      ->fetchAllKeyed();
+
+    // List of all strings that should be in the file.
+    $test_strings = array(
+      "Standard Call t" => '',
+      "Whitespace Call t" => '',
+
+      "Single Quote t" => '',
+      "Single Quote \\'Escaped\\' t" => '',
+      "Single Quote Concat strings t" => '',
+
+      "Double Quote t" => '',
+      "Double Quote \\\"Escaped\\\" t" => '',
+      "Double Quote Concat strings t" => '',
+
+      "Context !key Args t" => "Context string",
+
+      "Context Unquoted t" => "Context string unquoted",
+      "Context Single Quoted t" => "Context string single quoted",
+      "Context Double Quoted t" => "Context string double quoted",
+
+      "Standard Call plural" => '',
+      "Standard Call @count plural" => '',
+      "Whitespace Call plural" => '',
+      "Whitespace Call @count plural" => '',
+
+      "Single Quote plural" => '',
+      "Single Quote @count plural" => '',
+      "Single Quote \\'Escaped\\' plural" => '',
+      "Single Quote \\'Escaped\\' @count plural" => '',
+
+      "Double Quote plural" => '',
+      "Double Quote @count plural" => '',
+      "Double Quote \\\"Escaped\\\" plural" => '',
+      "Double Quote \\\"Escaped\\\" @count plural" => '',
+
+      "Context !key Args plural" => "Context string",
+      "Context !key Args @count plural" => "Context string",
+
+      "Context Unquoted plural" => "Context string unquoted",
+      "Context Unquoted @count plural" => "Context string unquoted",
+      "Context Single Quoted plural" => "Context string single quoted",
+      "Context Single Quoted @count plural" => "Context string single quoted",
+      "Context Double Quoted plural" => "Context string double quoted",
+      "Context Double Quoted @count plural" => "Context string double quoted",
+    );
+
+    // Assert that all strings were found properly.
+    foreach ($test_strings as $str => $context) {
+      $args = array('%source' => $str, '%context' => $context);
+
+      // Make sure that the string was found in the file.
+      $this->assertTrue(isset($source_strings[$str]), format_string('Found source string: %source', $args));
+
+      // Make sure that the proper context was matched.
+      $this->assertTrue(isset($source_strings[$str]) && $source_strings[$str] === $context, strlen($context) > 0 ? format_string('Context for %source is %context', $args) : format_string('Context for %source is blank', $args));
+    }
+    $this->assertEqual(count($source_strings), count($test_strings), 'Found correct number of source strings.');
+
+    //
+    // Adds a language and checks that the JavaScript translation files are
+    // properly created and rebuilt on deletion.
+    $user = $this->drupalCreateUser(array(
+      'translate interface',
+      'administer languages',
+      'access administration pages',
+    ));
+    $this->drupalLogin($user);
+
+    $langcode = 'xx';
+    // The English name for the language. This will be translated.
+    $name = $this->randomName(16);
+    // The native name for the language.
+    $native = $this->randomName(16);
+    // The domain prefix.
+    $prefix = $langcode;
+
+    // Add custom language.
+    $edit = array(
+      'langcode' => $langcode,
+      'name' => $name,
+      'native' => $native,
+      'prefix' => $prefix,
+      'direction' => '0',
+    );
+    $this->drupalPost('admin/config/regional/language/add', $edit, t('Add custom language'));
+    drupal_static_reset('language_list');
+
+    // Build the JavaScript translation file.
+    $this->drupalGet('admin/config/regional/translate/translate');
+
+    // Retrieve the id of the first string available in the {locales_source}
+    // table and translate it.
+    $query = db_select('locales_source', 'l');
+    $query->addExpression('min(l.lid)', 'lid');
+    $result = $query->condition('l.location', '%.js%', 'LIKE')
+      ->condition('l.textgroup', 'default')
+      ->execute();
+    $url = 'admin/config/regional/translate/edit/' . $result->fetchObject()->lid;
+    $edit = array('translations[' . $langcode . ']' => $this->randomName());
+    $this->drupalPost($url, $edit, t('Save translations'));
+
+    // Trigger JavaScript translation parsing and building.
+    require_once DRUPAL_ROOT . '/includes/locale.inc';
+    _locale_rebuild_js($langcode);
+
+    // Retrieve the JavaScript translation hash code for the custom language to
+    // check that the translation file has been properly built.
+    $file = db_select('languages', 'l')
+      ->fields('l', array('javascript'))
+      ->condition('language', $langcode)
+      ->execute()
+      ->fetchObject();
+    $js_file = 'public://' . variable_get('locale_js_directory', 'languages') . '/' . $langcode . '_' . $file->javascript . '.js';
+    $this->assertTrue($result = file_exists($js_file), format_string('JavaScript file created: %file', array('%file' => $result ? $js_file : 'not found')));
+
+    // Test JavaScript translation rebuilding.
+    file_unmanaged_delete($js_file);
+    $this->assertTrue($result = !file_exists($js_file), format_string('JavaScript file deleted: %file', array('%file' => $result ? $js_file : 'found')));
+    cache_clear_all();
+    _locale_rebuild_js($langcode);
+    $this->assertTrue($result = file_exists($js_file), format_string('JavaScript file rebuilt: %file', array('%file' => $result ? $js_file : 'not found')));
+
   }
 
 }
@@ -1361,3 +1653,7 @@ class AdvAggThemeTestCase extends AJAXTestCase {
   }
 
 }
+
+/**
+ * @} End of "defgroup advagg_tests".
+ */

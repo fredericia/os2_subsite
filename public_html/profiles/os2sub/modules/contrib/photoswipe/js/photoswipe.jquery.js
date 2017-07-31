@@ -107,7 +107,6 @@
       gallery.init();
       this.galleries.push(gallery);
     },
- 
     /**
      * Parse picture index and gallery index from URL (#&pid=1&gid=2)
      *
