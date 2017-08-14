@@ -8868,6 +8868,10 @@ body {
 .panel-pane.pane-node-body h1.pane-title, .panel-pane.pane-node-body .pane-title.heading-h1, .panel-pane.pane-node-body .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .panel-pane.pane-node-body .pane-title.banner-headline {
   margin-bottom: 30px; }
 
+.field.field-name-field-os2web-base-field-related.field-type-node-reference {
+  font-size: 16px !important;
+  margin-bottom: 30px; }
+
 .node-os2web-contact-contact .card-title {
   display: none; }
 
