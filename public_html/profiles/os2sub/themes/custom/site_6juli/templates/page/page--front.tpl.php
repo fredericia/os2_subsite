@@ -76,16 +76,17 @@
 
 <?php
 //Title and url for social-share
-$url = url(drupal_get_path_alias('/'), array('absolute' => TRUE));
-if ( !$title ) {
-  $title = str_replace(parse_url($url, PHP_URL_SCHEME) . '://', '', $url);
+$social_share_url = url(drupal_get_path_alias('/'), array('absolute' => TRUE));
+$social_share_title = $title;
+if ( !$social_share_title ) {
+  $social_share_title = str_replace(parse_url($social_share_url, PHP_URL_SCHEME) . '://', '', $social_share_url);
 }
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="navbar">
     <div class="row">
       <div class="social-share">
-        <?php echo" <a href=\"http://www.facebook.com/sharer/sharer.php?u=$url&title=$title\">"; ?>
+        <?php echo" <a href=\"http://www.facebook.com/sharer/sharer.php?u=$social_share_url&title=$social_share_title\">"; ?>
         <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/share.svg'; ?>"></a></div>
       <div class="header-logo">
         <a class="image-top-logo__link" href="<?php print $front_page; ?>"><img
