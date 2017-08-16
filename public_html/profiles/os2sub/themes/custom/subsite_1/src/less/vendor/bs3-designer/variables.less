@@ -1,0 +1,202 @@
+// |--------------------------------------------------------------------------
+// | Variables
+// |--------------------------------------------------------------------------
+// |
+// | This file contains exposures for the following:
+// | - variables
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Brand
+@brand-secondary:	 #4ec6f8;
+@brand-tertiary:   #67c10e;
+@brand-quaternary: #ff911c;
+@brand-quinary: 	 #ea6060;
+
+// Social
+@social-link-color-facebook:    #3b5998;
+@social-link-color-twitter:     #55acee;
+@social-link-color-instagram:   #3f729b;
+@social-link-color-linkedin:    #0976b4;
+@social-link-color-pinterest:   #cc2127;
+@social-link-color-vimeo: 	    #1ab7ea;
+@social-link-color-youtube:     #e52d27;
+@social-link-color-google-plus: #d64431;
+
+// States
+@state-primary-text:	#fff;
+@state-primary-bg:    @brand-primary;
+
+@state-secondary-text:  #fff;
+@state-secondary-bg:    @brand-secondary;
+
+@state-tertiary-text:   #fff;
+@state-tertiary-bg:     @brand-tertiary;
+
+@state-quaternary-text:   #fff;
+@state-quaternary-bg:     @brand-quaternary;
+
+@state-quinary-text:   #fff;
+@state-quinary-bg:     @brand-quinary;
+
+// Content
+@content-bg:           #fff;
+@content-border-color: @body-bg;
+@border-color: 				 #d4d9e4;
+
+// Typography
+@text-color-light: 	#6c8ba8;
+
+// Button
+@btn-secondary-color:   #fff;
+@btn-secondary-bg:      @brand-secondary;
+@btn-secondary-border:  darken(@btn-secondary-bg, 5%);
+
+@btn-tertiary-color:    #fff;
+@btn-tertiary-bg:       @brand-tertiary;
+@btn-tertiary-border:   darken(@btn-tertiary-bg, 5%);
+
+@btn-quaternary-color:    #fff;
+@btn-quaternary-bg:       @brand-quaternary;
+@btn-quaternary-border:   darken(@btn-quaternary-bg, 5%);
+
+@btn-quinary-color:    #fff;
+@btn-quinary-bg:       @brand-quinary;
+@btn-quinary-border:   darken(@btn-quinary-bg, 5%);
+
+// Paths
+@path-image: 	"../img/";
+
+// Media queries
+@media-query-mobile:            	~"screen";
+@media-query-mobile-only:         ~"screen and (max-width: @{screen-xs-max})";
+@media-query-tablet:            	~"screen and (min-width: @{screen-sm-min})";
+@media-query-tablet-only:         ~"screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})";
+@media-query-desktop:           	~"screen and (min-width: @{screen-md-min})";
+@media-query-desktop-only:        ~"screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+@media-query-large-desktop:     	~"screen and (min-width: @{screen-lg-min})";
+@media-query-large-desktop-only:	@media-query-large-desktop;
+
+
+// --------------------------------------------------
+// Form (form.less)
+// --------------------------------------------------
+
+// Form control
+@bs3-designer-form-control-border-width:	1px;
+@bs3-designer-form-control-box-shadow:		none;
+
+// --------------------------------------------------
+// Icon (icon.less)
+// --------------------------------------------------
+
+// Sizing
+@bs3-designer-icon-font-size-xxs:	floor((@bs3-designer-icon-font-size * 0.85));
+@bs3-designer-icon-font-size-xs: 	floor((@bs3-designer-icon-font-size * 0.90));
+@bs3-designer-icon-font-size-s:  	floor((@bs3-designer-icon-font-size * 0.95));
+@bs3-designer-icon-font-size:    	@font-size-base;
+@bs3-designer-icon-font-size-l:  	floor((@bs3-designer-icon-font-size * 1.25));
+@bs3-designer-icon-font-size-xl: 	floor((@bs3-designer-icon-font-size * 1.5));
+@bs3-designer-icon-font-size-xxl:	floor((@bs3-designer-icon-font-size * 2.5));
+
+// --------------------------------------------------
+// Margin and padding (margin-and-padding.less)
+// --------------------------------------------------
+
+// Mobile
+@bs3-designer-margin-and-padding-xs-xxs:	2px;
+@bs3-designer-margin-and-padding-xs-xs:		5px;
+@bs3-designer-margin-and-padding-xs-s:		8px;
+@bs3-designer-margin-and-padding-xs-m:		12px;
+@bs3-designer-margin-and-padding-xs-l:		16px;
+@bs3-designer-margin-and-padding-xs-xl:		24px;
+@bs3-designer-margin-and-padding-xs-xxl:	32px;
+
+// Tablet
+@bs3-designer-margin-and-padding-sm-xxs:	3px;
+@bs3-designer-margin-and-padding-sm-xs:		6px;
+@bs3-designer-margin-and-padding-sm-s:		10px;
+@bs3-designer-margin-and-padding-sm-m:		15px;
+@bs3-designer-margin-and-padding-sm-l:		22px;
+@bs3-designer-margin-and-padding-sm-xl:		30px;
+@bs3-designer-margin-and-padding-sm-xxl:	40px;
+
+// Desktop
+@bs3-designer-margin-and-padding-md-xxs:	5px;
+@bs3-designer-margin-and-padding-md-xs:		10px;
+@bs3-designer-margin-and-padding-md-s:		15px;
+@bs3-designer-margin-and-padding-md-m:		25px;
+@bs3-designer-margin-and-padding-md-l:		40px;
+@bs3-designer-margin-and-padding-md-xl:		60px;
+@bs3-designer-margin-and-padding-md-xxl:	90px;
+
+// Large desktop
+@bs3-designer-margin-and-padding-lg-xxs:	5px;
+@bs3-designer-margin-and-padding-lg-xs:		10px;
+@bs3-designer-margin-and-padding-lg-s:		15px;
+@bs3-designer-margin-and-padding-lg-m:		25px;
+@bs3-designer-margin-and-padding-lg-l:		40px;
+@bs3-designer-margin-and-padding-lg-xl:		60px;
+@bs3-designer-margin-and-padding-lg-xxl:	90px;
+
+// --------------------------------------------------
+// Tooltip (tooltip.less)
+// --------------------------------------------------
+
+@bs3-designer-tooltip-border-radius: 			@border-radius-base;
+@bs3-designer-tooltip-font-size: 					@font-size-small;
+@bs3-designer-tooltip-padding-horizontal:	@padding-base-horizontal;
+@bs3-designer-tooltip-padding-vertical: 	@padding-large-vertical;
+
+// --------------------------------------------------
+// Transition (transition.less)
+// --------------------------------------------------
+
+@bs3-designer-transition-time-short:	.15s;
+@bs3-designer-transition-time:       	.25s;
+@bs3-designer-transition-time-long:  	.4s;
+
+// --------------------------------------------------
+// Typography (typography.less)
+// --------------------------------------------------
+
+// Font weight
+@headings-font-weight-light: 				400;
+@headings-font-weight-semi-light: 	@headings-font-weight-light;
+@headings-font-weight: 							700;
+@headings-font-weight-semi-bold: 		@headings-font-weight;
+@headings-font-weight-bold: 				@headings-font-weight-semi-bold;
+
+@font-weight-light: 			300;
+@font-weight-semi-light: 	@font-weight-light;
+@font-weight: 						400;
+@font-weight-semi-bold: 	@font-weight;
+@font-weight-bold: 				700;
+
+// Line height
+@bs3-designer-headings-h1-line-height: 	bs3-designer-mixin-line-height(@font-size-h1);
+@bs3-designer-headings-h2-line-height: 	bs3-designer-mixin-line-height(@font-size-h2);
+@bs3-designer-headings-h3-line-height:	bs3-designer-mixin-line-height(@font-size-h3);
+@bs3-designer-headings-h4-line-height: 	bs3-designer-mixin-line-height(@font-size-h4);
+@bs3-designer-headings-h5-line-height: 	bs3-designer-mixin-line-height(@font-size-h5);
+@bs3-designer-headings-h6-line-height: 	bs3-designer-mixin-line-height(@font-size-h6);
+
+@bs3-designer-line-height-small:	floor((@font-size-small * @line-height-base));
+@bs3-designer-line-height-large:	floor((@font-size-large * @line-height-base));
+
+// Letter spacing
+@bs3-designer-headings-h1-letter-spacing:   -1px;
+@bs3-designer-headings-h2-letter-spacing:   -1px;
+@bs3-designer-headings-h3-letter-spacing:   0;
+@bs3-designer-headings-h4-letter-spacing:   @bs3-designer-headings-h3-letter-spacing;
+@bs3-designer-headings-h5-letter-spacing:   @bs3-designer-headings-h4-letter-spacing;
+@bs3-designer-headings-h6-letter-spacing:		@bs3-designer-headings-h5-letter-spacing;
+
+// Font size (responsiveness)
+@bs3-designer-headings-font-size-xs: 0.80;
+@bs3-designer-headings-font-size-sm: 0.85;
+@bs3-designer-headings-font-size-md: 0.9;
+@bs3-designer-headings-font-size-lg: 1.0;

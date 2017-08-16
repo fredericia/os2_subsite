@@ -1,0 +1,90 @@
+// |--------------------------------------------------------------------------
+// | Teaser (default)
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .os2sub-teaser
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@fki-teaser-inner-top-bottom-spacing: 10px;
+@fki-teaser-inner-entity-info-top-spacing: @default-heading-top-bottom-spacing;
+@fki-teaser-inner-heading-top-bottom-spacing: @default-heading-top-bottom-spacing;
+@fki-teaser-inner-body-top-bottom-spacing: @default-body-top-bottom-spacing;
+@fki-teaser-inner-footer-top-bottom-spacing: @default-footer-top-bottom-spacing;
+@fki-teaser-inner-left-right-spacing: @default-left-right-spacing;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Teaser
+.os2sub-teaser {
+    padding: @fki-teaser-inner-top-bottom-spacing 0;
+
+    .os2sub-teaser-info {
+        padding: @fki-teaser-inner-entity-info-top-spacing @fki-teaser-inner-left-right-spacing;
+        padding-top: 0;
+    }
+
+    // Heading
+    .os2sub-teaser-heading {
+        padding: @fki-teaser-inner-heading-top-bottom-spacing @fki-teaser-inner-left-right-spacing;
+
+        .os2sub-teaser-heading-title {
+            .heading-h4;
+            margin: 0;
+        }
+    }
+
+    .table {
+        margin: 0;
+    }
+
+    // Image
+    .os2sub-teaser-image-container {
+        max-width: 120px;
+    }
+    .os2sub-teaser-image {
+        padding-left: @fki-teaser-inner-left-right-spacing;
+    }
+
+    // Body
+    .os2sub-teaser-body {
+        padding: @fki-teaser-inner-body-top-bottom-spacing @fki-teaser-inner-left-right-spacing;
+        padding-bottom: 0;
+
+        + .os2sub-teaser-footer {
+            padding-top: 0;
+        }
+    }
+
+    // Footer
+    .os2sub-teaser-footer {
+        padding: @fki-teaser-inner-footer-top-bottom-spacing @fki-teaser-inner-left-right-spacing;
+        padding-bottom: 0;
+    }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+}
+
+// Tablet
+@media @media-query-tablet {
+}
+
+// Desktop and up
+@media @media-query-desktop {
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------

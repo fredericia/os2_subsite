@@ -1,0 +1,263 @@
+// |--------------------------------------------------------------------------
+// | Box
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .os2sub-box
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+@os2sub-box-background-color: #fff;
+@os2sub-box-border-color: lighten(@gray-base, 70.0%);
+@os2sub-box-border: @os2sub-box-border-width solid @os2sub-box-border-color ;
+@os2sub-box-border-radius: 	 	@border-radius-base;
+@os2sub-box-border-width: 2px;
+
+@os2sub-box-heading-top-bottom-spacing: 10px 20px;
+@os2sub-box-heading-left-right-spacing:  @grid-gutter-width;
+
+@os2sub-box-body-top-bottom-spacing:10px 20px;
+@os2sub-box-body-left-right-spacing: @grid-gutter-width;
+
+@os2sub-box-footer-top-bottom-spacing: 5px;
+@os2sub-box-footer-left-right-spacing:  @grid-gutter-width;
+
+// Responsive
+@os2sub-box-xs-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-box-sm-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-box-md-stacked-spacing: floor( (@grid-gutter-width / 2) );
+@os2sub-box-lg-stacked-spacing: floor( (@grid-gutter-width / 2) );
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Box
+.os2sub-box {
+	background-color: @os2sub-box-background-color;
+	border-radius: @os2sub-box-border-radius;
+	border: @os2sub-box-border;
+
+	.os2sub-box-heading {
+		padding: @os2sub-box-heading-top-bottom-spacing @os2sub-box-heading-left-right-spacing;
+		.border-top-radius(@os2sub-box-border-radius);
+
+		.pane-title,
+		.os2sub-box-heading-title {
+			margin: 0;
+			.heading-h3;
+			color: @brand-primary;
+		}
+	}
+
+	.os2sub-box-body {
+		padding: @os2sub-box-body-top-bottom-spacing @os2sub-box-body-left-right-spacing;
+
+		+ .os2sub-box-footer {
+			padding-top: 0;
+		}
+	}
+
+	.os2sub-box-footer {
+		padding: @os2sub-box-footer-top-bottom-spacing @os2sub-box-footer-left-right-spacing;
+	}
+}
+
+.os2sub-box-stacked {
+  .os2sub-box {
+    border-radius: 0;
+    margin-bottom: 0;
+    border: @os2sub-box-border-width solid @os2sub-box-border-color;
+    border-bottom: none;
+    &:first-child {
+    border-top-left-radius: @border-radius-base;
+    border-top-right-radius: @border-radius-base;
+    border-bottom: none;
+    }
+    &:last-child {
+    border-bottom-left-radius: @border-radius-base;
+    border-bottom-right-radius: @border-radius-base;
+    margin-bottom: 10px;
+    border-bottom: @os2sub-box-border-width solid @os2sub-box-border-color;
+    }
+
+    .os2sub-box-heading {
+      padding: 10px 20px;
+    }
+    .linkmenuer {
+      a {
+        border-top: none;
+        color: #000;
+      }
+    }
+  }
+  .pane-os2sub-kontaktblok {
+    .view-mode-teaser {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-xs-stacked-spacing ;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-xs-stacked-spacing / 3) ) ;
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-xs-stacked-spacing * 2) ) ;
+		}
+	}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-sm-stacked-spacing;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-sm-stacked-spacing / 3) );
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-sm-stacked-spacing * 2) );
+		}
+	}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-md-stacked-spacing ;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-md-stacked-spacing / 3) );
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-md-stacked-spacing * 2) );
+		}
+	}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-lg-stacked-spacing ;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-lg-stacked-spacing / 3) );
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-lg-stacked-spacing * 2) ) ;
+		}
+	}
+}
+
+// Print
+@media print {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Touch
+.touch {
+
+	// Box
+	.os2sub-box {}
+}
+
+// No touch
+.no-touch {
+
+	// Box
+	.os2sub-box {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Box mixin
+.os2sub-mixin-box() {}

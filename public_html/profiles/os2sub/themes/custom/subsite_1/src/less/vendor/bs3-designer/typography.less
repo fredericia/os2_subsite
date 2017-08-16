@@ -1,0 +1,403 @@
+// |--------------------------------------------------------------------------
+// | Typography
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .heading-h1 / h1
+// | - .heading-h2 / h2
+// | - .heading-h3 / h3
+// | - .heading-h4 / h4
+// | - .heading-h5 / h5
+// | - .heading-h6 / h6
+// | - .lead
+// | - .font-color-white
+// | - .font-color-primary
+// | - .font-color-secondary
+// | - .font-color-tertiary
+// | - .font-color-quaternary
+// | - .text-left-xs-only
+// | - .text-right-xs-only
+// | - .text-center-xs-only
+// | - .text-left-xs
+// | - .text-right-xs
+// | - .text-center-xs
+// | - .text-left-sm-only
+// | - .text-right-sm-only
+// | - .text-center-sm-only
+// | - .text-left-sm
+// | - .text-right-sm
+// | - .text-center-sm
+// | - .text-left-md-only
+// | - .text-right-md-only
+// | - .text-center-md-only
+// | - .text-left-md
+// | - .text-right-md
+// | - .text-center-md
+// | - .text-left-lg-only
+// | - .text-right-lg-only
+// | - .text-center-lg-only
+// | - .text-left-lg
+// | - .text-right-lg
+// | - .text-center-lg
+// | - .text-left-no-touch
+// | - .text-right-no-touch
+// | - .text-center-no-touch
+// | - .text-left-touch
+// | - .text-right-touch
+// | - .text-center-touch
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Font weight
+@bs3-designer-headings-font-weight-light: 	    @headings-font-weight-light;
+@bs3-designer-headings-font-weight-semi-light:  @headings-font-weight-semi-light;
+@bs3-designer-headings-font-weight: 		    		@headings-font-weight;
+@bs3-designer-headings-font-weight-semi-bold:		@headings-font-weight-semi-bold;
+@bs3-designer-headings-font-weight-bold: 	    	@headings-font-weight-bold;
+
+@bs3-designer-font-weight-light: 	    @font-weight-light;
+@bs3-designer-font-weight-semi-light:	@font-weight-semi-light;
+@bs3-designer-font-weight: 		        @font-weight;
+@bs3-designer-font-weight-semi-bold:	@font-weight-semi-bold;
+@bs3-designer-font-weight-bold: 	    @font-weight-bold;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Headings
+h1, .heading-h1 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-xs));
+		.line-height-heading( floor((@font-size-h1 * @bs3-designer-headings-font-size-xs)) );
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-sm));
+		.line-height-heading( floor((@font-size-h1 * @bs3-designer-headings-font-size-sm)) );
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-md));
+		.line-height-heading( floor((@font-size-h1 * @bs3-designer-headings-font-size-md)) );
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h1 * @bs3-designer-headings-font-size-lg));
+		.line-height-heading( floor((@font-size-h1 * @bs3-designer-headings-font-size-lg)) );
+	}
+}
+h2, .heading-h2 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-xs));
+		.line-height-heading( floor((@font-size-h2 * @bs3-designer-headings-font-size-xs)) );
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-sm));
+		.line-height-heading( floor((@font-size-h2 * @bs3-designer-headings-font-size-sm)) );
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-md));
+		.line-height-heading( floor((@font-size-h2 * @bs3-designer-headings-font-size-md)) );
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h2 * @bs3-designer-headings-font-size-lg));
+		.line-height-heading( floor((@font-size-h2 * @bs3-designer-headings-font-size-lg)) );
+	}
+}
+h3, .heading-h3 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-xs));
+		.line-height-heading( floor((@font-size-h3 * @bs3-designer-headings-font-size-xs)) );
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-sm));
+		.line-height-heading( floor((@font-size-h3 * @bs3-designer-headings-font-size-sm)) );
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-md));
+		.line-height-heading( floor((@font-size-h3 * @bs3-designer-headings-font-size-md)) );
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h3 * @bs3-designer-headings-font-size-lg));
+		.line-height-heading( floor((@font-size-h3 * @bs3-designer-headings-font-size-lg)) );
+	}
+}
+h4, .heading-h4, .lead {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-xs));
+		.line-height-heading( floor((@font-size-h4 * @bs3-designer-headings-font-size-xs)) );
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-sm));
+		.line-height-heading( floor((@font-size-h4 * @bs3-designer-headings-font-size-sm)) );
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-md));
+		.line-height-heading( floor((@font-size-h4 * @bs3-designer-headings-font-size-md)) );
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-lg));
+		.line-height-heading( floor((@font-size-h4 * @bs3-designer-headings-font-size-lg)) );
+	}
+}
+h5, .heading-h5 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-xs));
+		.line-height-heading( floor((@font-size-h5 * @bs3-designer-headings-font-size-xs)) );
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-sm));
+		.line-height-heading( floor((@font-size-h5 * @bs3-designer-headings-font-size-sm)) );
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-md));
+		.line-height-heading( floor((@font-size-h5 * @bs3-designer-headings-font-size-md)) );
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h5 * @bs3-designer-headings-font-size-lg));
+		.line-height-heading( floor((@font-size-h5 * @bs3-designer-headings-font-size-lg)) );
+	}
+}
+h6, .heading-h6 {
+
+	@media @media-query-mobile-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-xs));
+		.line-height-heading( floor((@font-size-h6 * @bs3-designer-headings-font-size-xs)) );
+	}
+	@media @media-query-tablet-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-sm));
+		.line-height-heading( floor((@font-size-h6 * @bs3-designer-headings-font-size-sm)) );
+	}
+	@media @media-query-desktop-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-md));
+		.line-height-heading( floor((@font-size-h6 * @bs3-designer-headings-font-size-md)) );
+	}
+	@media @media-query-large-desktop-only {
+		font-size: floor((@font-size-h6 * @bs3-designer-headings-font-size-lg));
+		.line-height-heading( floor((@font-size-h6 * @bs3-designer-headings-font-size-lg)) );
+	}
+}
+
+// Colouring
+.font-color-white {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+	}
+}
+.font-color-primary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-primary;
+	}
+}
+.font-color-secondary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-secondary;
+	}
+}
+.font-color-tertiary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-tertiary;
+	}
+}
+.font-color-quaternary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-quaternary;
+	}
+}
+.font-color-quinary {
+
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: @brand-quinary;
+	}
+}
+
+// Font weight
+body {
+	font-weight: @bs3-designer-font-weight;
+
+	.light { font-weight: @bs3-designer-font-weight-light; }
+	.semi-light { font-weight: @bs3-designer-font-weight-semi-light; }
+	.semi-bold { font-weight: @bs3-designer-font-weight-semi-bold; }
+	.bold, strong { font-weight: @bs3-designer-font-weight-bold; }
+
+	h1,	.heading-h1,
+	h2,	.heading-h2,
+	h3,	.heading-h3,
+	h4,	.heading-h4,
+	h5,	.heading-h5,
+	h6,	.heading-h6,
+	.lead {
+		font-weight: @bs3-designer-headings-font-weight;
+
+		&.light { font-weight: @bs3-designer-headings-font-weight-light; }
+		&.semi-light { font-weight: @bs3-designer-headings-font-weight-semi-light; }
+		&.semi-bold { font-weight: @bs3-designer-headings-font-weight-semi-bold; }
+		strong, &.bold { font-weight: @bs3-designer-headings-font-weight-bold; }
+	}
+}
+
+// Letter spacing
+h1, .heading-h1 { letter-spacing: @bs3-designer-headings-h1-letter-spacing; }
+h2, .heading-h2 { letter-spacing: @bs3-designer-headings-h2-letter-spacing; }
+h3, .heading-h3 { letter-spacing: @bs3-designer-headings-h3-letter-spacing; }
+h4, .heading-h4 { letter-spacing: @bs3-designer-headings-h4-letter-spacing; }
+h5, .heading-h5 { letter-spacing: @bs3-designer-headings-h5-letter-spacing; }
+h6, .heading-h6 { letter-spacing: @bs3-designer-headings-h6-letter-spacing; }
+.lead { letter-spacing: @bs3-designer-headings-h4-letter-spacing; }
+
+// Smoothing
+body {
+
+	&,
+	a,
+	p,
+	span,
+	input { .bs3-designer-mixin-font-smoothing(); }
+
+	h1,	.heading-h1,
+	h2,	.heading-h2,
+	h3,	.heading-h3,
+	h4,	.heading-h4,
+	h5,	.heading-h5,
+	h6,	.heading-h6,
+	.lead { .bs3-designer-mixin-font-smoothing(); }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile-only {
+	.text-left-xs-only { text-align: left; }
+	.text-right-xs-only { text-align: right; }
+	.text-center-xs-only { text-align: center; }
+
+	.lead {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-xs));
+		.line-height( floor((@font-size-h4 * @bs3-designer-headings-font-size-xs)) );
+	}
+}
+@media @media-query-mobile {
+	.text-left-xs { text-align: left; }
+	.text-right-xs { text-align: right; }
+	.text-center-xs { text-align: center; }
+}
+
+// Tablet
+@media @media-query-tablet-only {
+	.text-left-sm-only { text-align: left; }
+	.text-right-sm-only { text-align: right; }
+	.text-center-sm-only { text-align: center; }
+
+	.lead {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-sm));
+		.line-height( floor((@font-size-h4 * @bs3-designer-headings-font-size-sm)) );
+	}
+}
+@media @media-query-tablet {
+	.text-left-sm { text-align: left; }
+	.text-right-sm { text-align: right; }
+	.text-center-sm { text-align: center; }
+}
+
+// Desktop
+@media @media-query-desktop-only {
+	.text-left-md-only { text-align: left; }
+	.text-right-md-only { text-align: right; }
+	.text-center-md-only { text-align: center; }
+
+	.lead {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-md));
+		.line-height( floor((@font-size-h4 * @bs3-designer-headings-font-size-md)) );
+	}
+}
+@media @media-query-desktop {
+	.text-left-md { text-align: left; }
+	.text-right-md { text-align: right; }
+	.text-center-md { text-align: center; }
+}
+
+// Large desktop
+@media @media-query-large-desktop-only {
+	.text-left-lg-only { text-align: left; }
+	.text-right-lg-only { text-align: right; }
+	.text-center-lg-only { text-align: center; }
+
+	.lead {
+		font-size: floor((@font-size-h4 * @bs3-designer-headings-font-size-lg));
+		.line-height( floor((@font-size-h4 * @bs3-designer-headings-font-size-lg)) );
+	}
+}
+@media @media-query-large-desktop {
+	.text-left-lg { text-align: left; }
+	.text-right-lg { text-align: right; }
+	.text-center-lg { text-align: center; }
+}
+
+// Non touch devices
+.no-touch {
+
+	.text-left-no-touch { text-align: left; }
+	.text-right-no-touch { text-align: right; }
+	.text-center-no-touch { text-align: center; }
+}
+
+// Touch devices
+.touch {
+
+	.text-left-touch { text-align: left; }
+	.text-right-touch { text-align: right; }
+	.text-center-touch { text-align: center; }
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Font smoothing
+.bs3-designer-mixin-font-smoothing(@type: antialiased) {
+	-webkit-font-smoothing: @type;
+	-moz-font-smoothing: @type;
+	-ms-font-smoothing: @type;
+	-o-font-smoothing: @type;
+	font-smoothing: @type;
+}
+
+// Line height
+.bs3-designer-mixin-line-height(@font-size) {
+	line-height: floor((@font-size * @line-height-base));
+}
+
+// Line height
+.bs3-designer-mixin-line-height-heading(@font-size) {
+	line-height: floor((@font-size * @headings-line-height));
+}

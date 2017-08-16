@@ -1,0 +1,368 @@
+// |--------------------------------------------------------------------------
+// | Box
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .os2sub-box
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+@os2sub-spot-background-color: #fff;
+@os2sub-spot-border-color: @gray-lighter;
+@os2sub-spot-border: @os2sub-spot-border-width solid @os2sub-spot-border-color ;
+@os2sub-spot-border-radius: 	 	@border-radius-base;
+@os2sub-spot-border-width: 2px;
+
+@os2sub-spot-heading-top-bottom-spacing: 10px;
+@os2sub-spot-heading-left-right-spacing: @default-left-right-spacing;
+
+@os2sub-spot-body-top-bottom-spacing: @default-left-right-spacing;
+@os2sub-spot-body-left-right-spacing: @default-left-right-spacing;
+
+@os2sub-spot-footer-top-bottom-spacing: 5px;
+@os2sub-spot-footer-left-right-spacing: @default-left-right-spacing;
+
+@os2sub-banner-background-color: @os2sub-spot-background-color;
+@os2sub-banner-border-color: @os2sub-spot-border-color;
+@os2sub-banner-border: @os2sub-spot-border ;
+@os2sub-banner-border-radius: @os2sub-spot-border-radius;
+@os2sub-banner-border-width: @os2sub-spot-border-width;
+
+@os2sub-banner-heading-top-bottom-spacing: @os2sub-spot-heading-top-bottom-spacing;
+@os2sub-banner-heading-left-right-spacing: @os2sub-spot-heading-left-right-spacing;
+
+@os2sub-banner-body-top-bottom-spacing: @os2sub-spot-body-top-bottom-spacing;
+@os2sub-banner-body-left-right-spacing: @os2sub-spot-body-left-right-spacing;
+
+@os2sub-banner-footer-top-bottom-spacing: @os2sub-spot-footer-top-bottom-spacing;
+@os2sub-banner-footer-left-right-spacing: @os2sub-spot-footer-left-right-spacing;
+
+// Responsive
+@os2sub-spot-xs-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-spot-sm-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-spot-md-stacked-spacing: floor( (@grid-gutter-width / 2) );
+@os2sub-spot-lg-stacked-spacing: floor( (@grid-gutter-width / 2) );
+
+@os2sub-banner-xs-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-banner-sm-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-banner-md-stacked-spacing: floor( (@grid-gutter-width / 2) );
+@os2sub-banner-lg-stacked-spacing: floor( (@grid-gutter-width / 2) );
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.view-mode-spotbox {
+		a { text-decoration: none;
+		}
+		&.imagespot {
+			position: relative;
+			width: 100%; /* for IE 6 */
+			.os2-node-teaser-heading {
+				position: absolute;
+				bottom: 20px;
+				left: 0;
+				width: 100%;
+			}
+		}
+
+// os2-node-teaser view-mode-spotbox os2-box os2-box-small-spacing node node-os2web-base-news contextual-links-region view-mode-spotbox node--os2web_base_news--spotbox
+
+		&.node-os2web-base-news {
+			.thumbnail {
+				background-color: #FFF;
+				margin-left: -4px;
+				margin-right: -4px;
+
+				.os2-node-teaser-heading {
+					padding: 5px 12px 12px;
+
+					h3.os2-node-teaser-heading-title {
+						background-color: transparent;
+						color: @btn-primary-color;
+						margin: 10px 0 5px;
+						padding: 0;
+					}
+					.news-text-date {
+						font-style: italic;
+						font-size: @font-size-small;
+					}
+				}
+			}
+		}
+
+		.os2-node-teaser-heading {
+
+			.os2-node-teaser-heading-title {
+				font-size: @font-size-h4 ;
+				background-color: @btn-primary-bg;
+				color: @btn-primary-color;
+				padding: @padding-base-horizontal;
+			}
+		}
+
+
+		.os2-node-teaser-body {
+			.os2-node-teaser-body-content {
+				font-size: @font-size-large ;
+				padding: @padding-base-horizontal ;
+			}
+		}
+}
+.node-banner {
+  &.view-mode-teaser {
+    border-radius: @border-radius-base;
+      .banner-headline {
+        position: absolute;
+        bottom: 0;
+    		font-size: floor((@bs3-designer-icon-font-size * 1.1));
+        line-height: normal;        
+        align-items: center;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-size: 20px;
+        font-weight: normal;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 10px;
+        
+        background: rgba(107,45,82,1);
+        width: 100%;
+        height: 50px;
+        text-decoration: none;
+        flex-direction: row;
+        background-image: url('../img/sk_coa_white.svg');
+        background-size: 80px;
+        background-repeat: no-repeat;
+        background-position: right 40px top -20px;
+        border-bottom-left-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+        border-top: 3px solid @brand-primary-light;
+      
+        .btn-banner {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+          font-size: 26px;
+          color: rgba(107,45,82,1);
+          width: 50px;
+          min-width: 50px;
+          height: 50px;
+          background: #fff;
+          border: 3px solid lightgrey;
+          border-radius: 50%;
+          margin: 0;
+          padding: 0;
+          margin-top: -52px;
+          position: absolute;
+          right: 10px;
+        }
+      
+      .fa {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }  
+}
+
+.node-os2web-spotbox-box {
+  &.view-mode-spotbox {
+    border-radius: @border-radius-base;
+    .spotbox-wrapper {
+      height: 85px;
+      position: relative;
+      display: block;
+      .spotbox-text {
+        position: absolute;
+        bottom: 0;
+
+    		color: #FFF;
+        line-height: normal;        
+        align-items: center;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: normal;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 10px;
+        background: rgba(107,45,82,1);
+        width: 100%;
+        height: 30px;
+        text-decoration: none;
+        flex-direction: row;
+        background-image: url('../img/sk_coa_white.svg');
+        background-size: 60px;
+        background-repeat: no-repeat;
+        background-position: right 20px top -20px;
+        border-bottom-left-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+        border-top: 3px solid @brand-primary-light;
+      }
+    }
+    
+    .btn-spotbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 26px;
+      color: rgba(107,45,82,1);
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      background: #fff;
+      border: 3px solid lightgrey;
+      border-radius: 50%;
+      margin: 0;
+      padding: 0;
+
+      margin-top: -32px;
+      position: absolute;
+      right: 10px;
+    }
+    
+    .fa {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &.no-image-spot {
+    .bottom-link {
+      height: 100%;
+      display: block;
+    }
+    .spotbox-wrapper {
+      height: 85px;
+      .spotbox-text {
+        position: relative;
+
+        line-height: normal;        
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        padding-right: 41px;
+        
+        color: #fff;
+        font-size: 15px;
+        font-weight: normal;
+
+        justify-content:flex-start;
+        padding-left: 10px;
+        
+        background: rgba(107,45,82,1);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        text-decoration: none;
+        flex-direction: row;
+        background-image: url('../img/sk_coa_white.svg');
+        background-size: 160px;
+        background-repeat: no-repeat;
+        background-position: right -32px top -26px;
+        border-bottom-left-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+        border-top-right-radius: @border-radius-base;
+        border-top-left-radius: @border-radius-base;
+        border-top: 3px solid @brand-primary-light;
+      }
+    }
+    .btn-spotbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 26px;
+      color: rgba(107,45,82,1);
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      background: #fff;
+      border: 3px solid lightgrey;
+      border-radius: 50%;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      
+      .fa {
+
+        margin: 0;
+        padding: 0;
+      }
+    }
+  } 
+}
+
+
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+}
+
+// Tablet
+@media @media-query-tablet {
+
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+}
+
+// Desktop
+@media @media-query-desktop {
+
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+}
+
+// Print
+@media print {
+}
+
+// Touch
+.touch {
+}
+
+// No touch
+.no-touch {
+
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Spot mixin
+.os2sub-mixin-spot() {}

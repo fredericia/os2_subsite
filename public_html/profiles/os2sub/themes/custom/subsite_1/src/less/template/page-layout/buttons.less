@@ -1,0 +1,124 @@
+// |--------------------------------------------------------------------------
+// | Button
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .btn
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Button
+.btn {
+
+  &.btn-default {
+    .mixin-btn-hover(@btn-secondary-color; @btn-secondary-bg; @btn-secondary-border);
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+  // Button
+  .btn {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+  // Button
+  .btn {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+  // Button
+  .btn {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+  // Button
+  .btn {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+  // Button
+  .btn {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+  // Button
+  .btn {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+  // Button
+  .btn {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+  // Button
+  .btn {}
+}
+
+// Print
+@media print {
+
+  // Button
+  .btn {}
+}
+
+// Touch
+.touch {
+
+  // Button
+  .btn {}
+}
+
+// No touch
+.no-touch {
+
+  // Button
+  .btn {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Button mixin
+.mixin-btn() {}
+
+.mixin-btn-hover(@color; @background; @border) {
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus,
+  &:hover {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+  }
+}

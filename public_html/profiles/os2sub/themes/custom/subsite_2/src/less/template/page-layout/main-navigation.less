@@ -1,0 +1,166 @@
+// |--------------------------------------------------------------------------
+// | Main navigation
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .main-navigation-wrapper
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Main navigation
+.main-navigation-wrapper {
+  background-color: @brand-primary-light;
+  padding: @default-left-right-spacing 0;
+    .searchbox {
+      float: right;
+      width: 20%;
+      line-height: 16px;
+      .searchbox-inner {
+        margin: 0 10px;
+        background-color: #FFF;
+        border-radius: @border-radius-base;
+        border: 1px solid #ddd;
+      }
+      .searchbox-title {
+        background-color: #F7F7F7;
+        border-bottom: 1px solid #ccc;
+        color: @brand-primary;
+        text-align: center;
+        padding: 3px;
+        border-top-left-radius: @border-radius-base;
+        border-top-right-radius: @border-radius-base;
+        font-weight: bold;
+      }
+      .form-wrapper {
+        margin-bottom: 0;
+        border: none;
+        .form-control {
+          border: none;
+        }
+        button {
+          background-color: transparent;
+          border-color: transparent;
+          .icon::before { color: #333}
+        }
+      }
+        .btn {
+
+            .icon {
+
+                &:before {
+                    font-family: FontAwesome;
+                    content: @fa-var-search;
+                    font-size: 20px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .main-navigation-list {
+      width: 100%;
+        > li {
+            padding: 0 10px;
+            float: right;
+            border-radius: @border-radius-base;
+        }
+    }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+    // Main navigation
+    .main-navigation-wrapper {
+    }
+}
+
+// Tablet
+@media @media-query-tablet {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+    // Main navigation
+    .main-navigation-wrapper {
+    }
+}
+
+// Desktop
+@media @media-query-desktop {
+
+    // Main navigation
+    .main-navigation-wrapper {
+    }
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// Print
+@media print {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// Touch
+.touch {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// No touch
+.no-touch {
+
+    // Main navigation
+    .main-navigation-wrapper {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Main navigation mixin
+.mixin-main-navigation() {}

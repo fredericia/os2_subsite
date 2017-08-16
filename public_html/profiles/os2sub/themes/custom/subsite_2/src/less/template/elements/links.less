@@ -1,0 +1,205 @@
+// |--------------------------------------------------------------------------
+// | Links
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .os2sub-links
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+@fki-links-font-size: @fki-footer-elements-element-font-size;
+@fki-links-font-weight: @fki-footer-elements-element-font-weight;
+
+@fki-links-text-color: @fki-footer-elements-element-text-color;
+@fki-links-hover-text-color: @fki-footer-elements-element-hover-text-color;
+
+@fki-links-icon-font-size: @fki-footer-elements-element-icon-font-size;
+@fki-links-icon-color: @fki-footer-elements-element-icon-color;
+@fki-links-icon-hover-color: @fki-footer-elements-element-icon-hover-color;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Links
+.os2sub-links {
+
+	.number-of-files a,
+	.flag {
+		font-size: @fki-links-font-size;
+		font-weight: @fki-links-font-weight;
+		color: @fki-links-text-color;
+
+		&:before {
+			display: inline-block;
+			font-family: FontAwesome;
+			font-size: @fki-links-icon-font-size;
+			color: @fki-links-icon-color;
+			margin-right: 3px;
+			.line-height(@fki-links-icon-font-size);
+			.transition(all @bs3-designer-transition-time ease-in-out);
+		}
+
+		&:hover {
+			color: @fki-links-hover-text-color;
+
+			&:before {
+				color: @fki-links-icon-hover-color;
+			}
+		}
+	}
+
+	.number-of-files {
+
+		a {
+
+			&:before {
+				content: @fa-var-cloud-download;
+			}
+		}
+	}
+
+	.flag-os2intra-flag-node-like {
+
+		.flag {
+
+			&.flag-action {
+
+				&:before {
+					content: @fa-var-thumbs-up;
+				}
+			}
+
+			&.unflag-action {
+
+				&:before {
+					content: @fa-var-thumbs-down;
+				}
+			}
+		}
+	}
+
+	.flag-os2intra-flag-node-follow {
+
+		.flag {
+
+			&.flag-action {
+
+				&:before {
+					content: @fa-var-star;
+				}
+			}
+
+			&.unflag-action {
+
+				&:before {
+					content: @fa-var-star-o;
+				}
+			}
+		}
+	}
+
+	.flag-papirkurv {
+
+		.flag {
+
+			&.flag-action {
+
+				&:before {
+					content: @fa-var-trash;
+				}
+			}
+		}
+	}
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Print
+@media print {
+
+	// Links
+	.os2sub-links {}
+}
+
+// Touch
+.touch {
+
+	// Links
+	.os2sub-links {}
+}
+
+// No touch
+.no-touch {
+
+	// Links
+	.os2sub-links {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Links mixin
+.os2sub-mixin-links() {}

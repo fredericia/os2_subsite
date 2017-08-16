@@ -1,0 +1,54 @@
+// |--------------------------------------------------------------------------
+// | Mixins
+// |--------------------------------------------------------------------------
+// |
+
+// Transform style
+.transform-style(@style) {
+	-webkit-transform-style: @style;
+	-ms-transform-style: @style;
+	transform-style: @style;
+}
+
+// Translate Y
+.translateY(@y) {
+	.bs3-designer-mixin-translateY(@y);
+};
+
+// Translate X
+.translateX(@x) {
+	.bs3-designer-mixin-translateX(@x);
+};
+
+// Background size
+.background-size(@size) {
+	.bs3-designer-mixin-background-size(@size);
+}
+
+// 3D button
+.btn-3d(@background-color; @box-shadow-color: darken(@background-color, 12%);) {
+	@box-shadow-color-hover: darken(@box-shadow-color, 14%);
+	@box-shadow-color-active: darken(@box-shadow-color, 16%);
+
+	.box-shadow(~'0 2px 0 @{box-shadow-color}');
+
+	// Hover state
+	&:hover {
+		.box-shadow(~'0 2px 0 @{box-shadow-color-hover}');
+	}
+
+	// Active state
+	&:active {
+		.box-shadow(~'0 2px 0 @{box-shadow-color-active}');
+	}
+}
+
+// Line height
+.line-height(@font-size) {
+	.bs3-designer-mixin-line-height(@font-size);
+}
+
+// Line height heading
+.line-height-heading(@font-size) {
+	.bs3-designer-mixin-line-height-heading(@font-size);
+}

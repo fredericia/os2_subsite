@@ -1,0 +1,224 @@
+// |--------------------------------------------------------------------------
+// | Box
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .os2sub-box
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+@os2sub-box-background-color: #fff;
+@os2sub-box-border-radius: 	 	@border-radius-base;
+
+@os2sub-box-heading-top-bottom-spacing: 10px;
+@os2sub-box-heading-left-right-spacing: @default-left-right-spacing;
+
+@os2sub-box-body-top-bottom-spacing: @default-left-right-spacing;
+@os2sub-box-body-left-right-spacing: @default-left-right-spacing;
+
+@os2sub-box-footer-top-bottom-spacing: 5px;
+@os2sub-box-footer-left-right-spacing: @default-left-right-spacing;
+
+// Responsive
+@os2sub-box-xs-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-box-sm-stacked-spacing: floor( (@grid-gutter-width / 3) );
+@os2sub-box-md-stacked-spacing: floor( (@grid-gutter-width / 2) );
+@os2sub-box-lg-stacked-spacing: floor( (@grid-gutter-width / 2) );
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Box
+.os2sub-box {
+	background-color: @os2sub-box-background-color;
+	border-radius: @os2sub-box-border-radius;
+
+	.os2sub-box-heading {
+		padding: @os2sub-box-heading-top-bottom-spacing @os2sub-box-heading-left-right-spacing;
+		.border-top-radius(@os2sub-box-border-radius);
+
+		.pane-title,
+		.os2sub-box-heading-title {
+			margin: 0;
+			.heading-h4;
+			text-transform: uppercase;
+		}
+	}
+
+	.os2sub-box-body {
+		padding: @os2sub-box-body-top-bottom-spacing @os2sub-box-body-left-right-spacing;
+
+		+ .os2sub-box-footer {
+			padding-top: 0;
+		}
+	}
+
+	.os2sub-box-footer {
+		padding: @os2sub-box-footer-top-bottom-spacing @os2sub-box-footer-left-right-spacing;
+	}
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile
+@media @media-query-mobile {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Mobile - only
+@media @media-query-mobile-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-xs-stacked-spacing !important;;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-xs-stacked-spacing / 3) ) !important;;
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-xs-stacked-spacing * 2) ) !important;;
+		}
+	}
+}
+
+// Tablet
+@media @media-query-tablet {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Tablet - only
+@media @media-query-tablet-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-sm-stacked-spacing !important;;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-sm-stacked-spacing / 3) ) !important;;
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-sm-stacked-spacing * 2) ) !important;;
+		}
+	}
+}
+
+// Desktop
+@media @media-query-desktop {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Desktop - only
+@media @media-query-desktop-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-md-stacked-spacing !important;;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-md-stacked-spacing / 3) ) !important;;
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-md-stacked-spacing * 2) ) !important;;
+		}
+	}
+}
+
+// Large desktop
+@media @media-query-large-desktop {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Large desktop - only
+@media @media-query-large-desktop-only {
+
+	// Box
+	.os2sub-box {
+		margin-bottom: @os2sub-box-lg-stacked-spacing !important;;
+	}
+
+	.os2sub-box-small-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-lg-stacked-spacing / 3) ) !important;;
+		}
+	}
+
+	.os2sub-box-large-spacing {
+
+		&.os2sub-box,
+		> .os2sub-box {
+			margin-bottom: floor( (@os2sub-box-lg-stacked-spacing * 2) ) !important;
+		}
+	}
+}
+
+// Print
+@media print {
+
+	// Box
+	.os2sub-box {}
+}
+
+// Touch
+.touch {
+
+	// Box
+	.os2sub-box {}
+}
+
+// No touch
+.no-touch {
+
+	// Box
+	.os2sub-box {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Box mixin
+.os2sub-mixin-box() {}
