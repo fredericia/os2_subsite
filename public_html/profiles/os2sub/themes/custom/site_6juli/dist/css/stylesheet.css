@@ -10443,7 +10443,7 @@ footer.footer a.image-links__link {
 .event-teasers .node-teaser,
 .view-det-sker-slideshow .front-teaser,
 .view-det-sker-slideshow .node-teaser {
-  padding-bottom: 30px;
+  height: 295px;
   position: relative;
   border: 1px solid #112a49; }
   .pane-os2sub-nyheder .front-teaser a.teaser-link,
@@ -10560,6 +10560,10 @@ footer.footer a.image-links__link {
 .view-det-sker-slideshow .owl-theme .owl-dot {
   text-align: right;
   margin-top: 0; }
+
+.view.view-os2sub-nyheder.view-id-os2sub_nyheder.view-display-id-block.row .node.node-os2web-base-news.node-teaser.contextual-links-region.view-mode-teaser.node--os2web_base_news--teaser {
+  height: unset;
+  padding-bottom: 30px; }
 
 .readmore-btns {
   margin-top: 20px; }

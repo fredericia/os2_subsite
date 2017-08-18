@@ -104,7 +104,7 @@
 .view-det-sker-slideshow {
   .front-teaser,
   .node-teaser {
-    padding-bottom: 30px;
+    height: 295px; 
     position: relative;
     border: 1px solid $brand-primary;
     a.teaser-link {
@@ -170,7 +170,12 @@
     margin-top: 0;
   }
 }
- 
+.view.view-os2sub-nyheder.view-id-os2sub_nyheder.view-display-id-block.row{
+  & .node.node-os2web-base-news.node-teaser.contextual-links-region.view-mode-teaser.node--os2web_base_news--teaser{
+    height: unset;
+    padding-bottom: 30px;
+  }
+} 
 
 .readmore-btns {
   margin-top: 20px;
