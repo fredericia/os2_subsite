@@ -132,18 +132,51 @@ if ( !$social_share_title ) {
   </div>
 
 </header>
-<!--Slideshow begin-->
-<div class="container-fluid">
-  <div class="background-slideshow row">
-    <?php
-    $view_popular_tags = views_get_view('os2web_events_slideshow');
-    $view_popular_tags->set_display('block_slideshow');
-    print $view_popular_tags->preview('block_slideshow');
-    ?>
-  </div>
-</div>
-<!--Slideshow end-->
 
+<?php
+if ( isset($node->field_os2web_base_field_image) ) {
+  ?>
+  <!--Slideshow begin-->
+  <div class="container-fluid">
+    <div class="background-slideshow row">
+      <div class="views-field views-field-field-image-event">
+        <div class="field-content">
+          <div class="img-container" style="background-image:url(<?php print file_create_url($node->field_os2web_base_field_image['und'][0]['uri']); ?>);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+<?php
+if ( isset($node->field_os2web_base_field_lead_img) ) {
+  ?>
+  <div class="container-fluid">
+    <div class="background-slideshow row">
+      <div class="views-field views-field-field-image-event">
+        <div class="field-content">
+          <div class="img-container" style="background-image:url(<?php print file_create_url($node->field_os2web_base_field_lead_img['da'][0]['uri']); ?>);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+<?php
+if ( isset($node->field_image_event) ) {
+  ?>
+  <div class="container-fluid">
+    <div class="background-slideshow row">
+      <div class="views-field views-field-field-image-event">
+        <div class="field-content">
+          <div class="img-container" style="background-image:url(<?php print file_create_url($node->field_image_event['und'][0]['uri']); ?>);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<?php } ?>
+<!--Slideshow end-->
 <?php if ( !empty($page['highlighted']) ): ?>
   <div role="complementary">
     <?php print render($page['highlighted']); ?>
