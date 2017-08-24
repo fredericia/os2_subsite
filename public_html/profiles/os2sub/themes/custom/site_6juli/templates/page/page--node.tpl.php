@@ -155,7 +155,7 @@ if ( isset($node->field_os2web_base_field_lead_img) ) {
     <div class="background-slideshow row">
       <div class="views-field views-field-field-image-event">
         <div class="field-content">
-          <div class="img-container" style="background-image:url(<?php print image_style_url('6_juli_banner', $node->field_os2web_base_field_lead_img['und'][0]['uri']); ?>);">
+          <div class="img-container" style="background-image:url(<?php print image_style_url('6_juli_banner', $node->field_os2web_base_field_lead_img['da'][0]['uri']); ?>);">
           </div>
         </div>
       </div>
