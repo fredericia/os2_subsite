@@ -79,22 +79,21 @@
  * @ingroup templates
  */
 ?>
-<article id="node-event-teaser-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php print render($title_prefix); ?>
-	<?php print render($title_suffix); ?>
-  <div class="teaser">
-    <a href="<?php print $node_url; ?>">
-        <span class="date">
-          <span class="dag">
-            <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'd'); ?>
-          </span>
-          <span class="maaned">
-            <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'M'); ?>
-          </span>
-        </span>  
-    	  <span class="headline"><?php print $title; ?></span>
-        <?php print render($content['field_image_event']); ?>
-      </span>
-    </a>
-  </div>
-</article>
+<?php print render($title_prefix); ?>
+<?php print render($title_suffix); ?>
+<a href="<?php print $node_url ?>">
+  <article id="node-event-teaser-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+    <div class="teaser">
+      <span class="date">
+        <span class="dag">
+          <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'd'); ?>
+        </span>
+        <span class="maaned">
+          <?php print format_date(strtotime($content['event_calendar_date']['#items'][0]['value']), 'custom', 'M'); ?>
+        </span>
+      </span>  
+      <span class="headline"><?php print $title; ?></span>
+      <?php print render($content['field_image_event']); ?>
+    </div>
+  </article>
+</a>
