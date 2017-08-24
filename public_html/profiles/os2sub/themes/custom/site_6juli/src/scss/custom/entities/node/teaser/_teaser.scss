@@ -200,10 +200,10 @@
     width: auto; 
     max-width: 55%;
     font-size: 18px;
-    background-color: $color-btn-red!important;
+    //background-color: $color-btn-red!important;
+    border: none!important;
     
-      &.btn:hover {
-          
+      &.btn:hover, &.btn:focus, &.btn:active {
           border: none!important;
       }
     }

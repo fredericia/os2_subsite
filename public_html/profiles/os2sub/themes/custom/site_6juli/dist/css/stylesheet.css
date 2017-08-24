@@ -9205,10 +9205,10 @@ p {
     padding-bottom: 40px;
     padding-top: 40px; }
 
-.80-procent {
+/*.80-procent {
   padding-left: 10%;
-  padding-right: 10%; }
-
+  padding-right: 10%;
+}*/
 .pane-clone-of-forside-first-minipanel {
   padding-bottom: 60px;
   padding-top: 60px; }
@@ -9358,6 +9358,9 @@ select {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  #mini-panel-facebook_panel .btn.btn-secondary.btn-lg, #mini-panel-facebook_panel .btn-group-lg > .btn.btn-secondary, #mini-panel-facebook_panel .banner .banner-wrapper .btn-group-lg > a.btn-secondary, .banner .banner-wrapper #mini-panel-facebook_panel .btn-group-lg > a.btn-secondary, #mini-panel-facebook_panel .banner .banner-wrapper a.btn-secondary.btn-lg, .banner .banner-wrapper #mini-panel-facebook_panel a.btn-secondary.btn-lg {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important; }
 
 #mini-panel-facebook_panel .pane-1 {
   margin-top: -20px; }
@@ -10592,8 +10595,8 @@ footer.footer a.image-links__link {
     width: auto;
     max-width: 55%;
     font-size: 18px;
-    background-color: #A3283E !important; }
-    .youtube-text a.btn.btn:hover, .youtube-text .banner .banner-wrapper a:hover, .banner .banner-wrapper .youtube-text a:hover {
+    border: none !important; }
+    .youtube-text a.btn.btn:hover, .youtube-text .banner .banner-wrapper a:hover, .banner .banner-wrapper .youtube-text a:hover, .youtube-text a.btn.btn:focus, .youtube-text .banner .banner-wrapper a:focus, .banner .banner-wrapper .youtube-text a:focus, .youtube-text a.btn.btn:active, .youtube-text .banner .banner-wrapper a:active, .banner .banner-wrapper .youtube-text a:active {
       border: none !important; }
 
 .view-os2web-events-slideshow-footer {
