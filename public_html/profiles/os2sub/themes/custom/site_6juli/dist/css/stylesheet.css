@@ -9290,8 +9290,8 @@ select {
   .pane-views.pane-events .views-widget-filter-title:before {
     content: 'Søg efter: ';
     float: left;
-    width: 50px;
-    margin-left: -65px;
+    width: 80px;
+    margin-left: -85px;
     font-size: 17px;
     line-height: 40px; }
 
