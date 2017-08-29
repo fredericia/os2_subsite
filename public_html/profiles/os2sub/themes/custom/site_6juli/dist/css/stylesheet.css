@@ -10018,10 +10018,9 @@ header#navbar {
     .banner .banner-wrapper.color-1 {
       color: #FFF; }
 
-.img-container {
-  /*    -webkit-box-shadow: inset 101px -88px 230px 0px rgba(32,86,146,1);
--moz-box-shadow: inset 101px -88px 230px 0px rgba(32,86,146,1);
-box-shadow: inset 10px -28px 330px 0px rgba(32,86,146,1);*/ }
+.view.view-os2web-events-slideshow.view-id-os2web_events_slideshow.view-display-id-block_slideshow .img-container {
+  -webkit-box-shadow: inset 101px -88px 230px 0px #205692;
+  box-shadow: inset 10px -28px 330px 0px #205692; }
 
 .views-field-view-node-1 {
   display: -webkit-box;
