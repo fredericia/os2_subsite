@@ -134,7 +134,6 @@ if ( !$social_share_title ) {
 </header>
 <!--Slideshow begin-->
 <div class="container-fluid">
-  <div class="top-section-headline"><h1>Seneste nyheder</h1></div>
   <div class="background-slideshow row">
     <?php
     $view_popular_tags = views_get_view('os2web_events_slideshow');
