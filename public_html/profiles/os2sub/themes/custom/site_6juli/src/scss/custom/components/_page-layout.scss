@@ -709,7 +709,7 @@ select {
 }
 
 .page-nyheder .pane-os2sub-nyheder {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .page-nyheder .pane-block-12 {
@@ -766,6 +766,10 @@ select {
 
 .page-nyheder .breadcrumb, .page-det-sker .breadcrumb{
     margin-top: -60px;
+}
+
+.page-node .breadcrumb{
+margin-bottom: 40px;
 }
 
 .page-node iframe {
