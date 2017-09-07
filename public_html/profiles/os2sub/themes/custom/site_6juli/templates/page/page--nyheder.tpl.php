@@ -167,10 +167,6 @@ if ( !$social_share_title ) {
         <?php if ( !empty($page['highlighted']) ): ?>
           <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>
-        <?php
-        if ( !empty($breadcrumb) ): print $breadcrumb;
-        endif;
-        ?>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php if ( !empty($title) ): ?>
