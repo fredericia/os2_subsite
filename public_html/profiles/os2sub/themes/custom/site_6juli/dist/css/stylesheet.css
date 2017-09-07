@@ -9450,6 +9450,9 @@ select {
 .page-node .breadcrumb li.active, .page-nyheder .breadcrumb li.active, .page-det-sker .breadcrumb li.active {
   color: #306783; }
 
+.page-nyheder .breadcrumb, .page-det-sker .breadcrumb {
+  margin-top: -60px; }
+
 .page-node iframe {
   margin-top: 20px; }
 

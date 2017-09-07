@@ -764,6 +764,10 @@ select {
   color: #306783;
 }
 
+.page-nyheder .breadcrumb, .page-det-sker .breadcrumb{
+    margin-top: -60px;
+}
+
 .page-node iframe {
   margin-top: 20px;
 }
