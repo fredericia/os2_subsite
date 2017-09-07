@@ -678,17 +678,6 @@ select {
   margin: 0 auto;
 }
 
-.page-det-sker .breadcrumb {
-
-  font-size: 16px;
-  padding: 0;
-  margin-top: 20px;
-}
-
-.page-det-sker .breadcrumb li.active {
-  color: #306783;
-}
-
 .top-section-headline {
 
   width: 100%;
@@ -714,10 +703,6 @@ select {
 // ----
 // Page Nyheder
 // ----
-
-.page-nyheder .breadcrumb {
-  display: none; 
-}
 
 .page-nyheder .pane-title {
   display: inherit;
@@ -767,7 +752,7 @@ select {
   padding: 5px;
 }
 
-.page-node .breadcrumb {
+.page-node .breadcrumb, .page-nyheder .breadcrumb, .page-det-sker .breadcrumb{
   font-size: 16px;
   max-width: 1170px;
   margin: 0 auto;
@@ -775,7 +760,7 @@ select {
   margin-bottom: 20px;
 }
 
-.page-node .breadcrumb li.active {
+.page-node .breadcrumb li.active, .page-nyheder .breadcrumb li.active, .page-det-sker .breadcrumb li.active{
   color: #306783;
 }
 
