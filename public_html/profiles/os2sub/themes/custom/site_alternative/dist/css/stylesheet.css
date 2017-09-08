@@ -9289,6 +9289,7 @@ h1.pane-title,
     font-family: "Roboto Slab", serif;
     font-weight: bold;
     font-size: 3.375em;
+    line-height: normal;
     color: #0f2846;
     border: 0; }
   .vertical-line {
@@ -9799,6 +9800,9 @@ footer.footer a.block-image-links__link {
   font-weight: bold;
   font-size: 1.31em;
   color: #666666; }
+
+.pane-node-field-os2web-kulturnaut-venue {
+  margin-bottom: 20px; }
 
 .pane-node-field-os2web-kulturnaut-date.visible-xs .field-name-field-os2web-kulturnaut-date {
   font-family: "Lato", sans-serif;
