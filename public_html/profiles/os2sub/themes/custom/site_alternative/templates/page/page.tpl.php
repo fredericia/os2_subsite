@@ -74,7 +74,7 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="<?php print $container_class; ?> wrapper">
+  <div class="<?php print $container_class; ?> headerwrapper">
     <div class="<?php print $container_class; ?> inner">
       <div class="navbar-header">
         <?php if ($logo): ?>
