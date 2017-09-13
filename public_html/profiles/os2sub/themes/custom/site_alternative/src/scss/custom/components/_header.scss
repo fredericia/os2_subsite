@@ -138,8 +138,10 @@ header.navbar {
       }
       > a {
         font-weight: lighter;
+          font-weight: normal;
         &.active, &:hover  {
           font-weight: lighter;
+            font-weight: normal;
           border-bottom: 6px solid $color-focus;
           //font-weight: 900;
 

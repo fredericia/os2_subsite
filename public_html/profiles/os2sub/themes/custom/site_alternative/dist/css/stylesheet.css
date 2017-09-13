@@ -9383,9 +9383,11 @@ header.navbar {
     border-bottom: 6px solid #ff0060;
     font-weight: 900; }
   header.navbar .container .menu.nav li > a {
-    font-weight: lighter; }
+    font-weight: lighter;
+    font-weight: normal; }
     header.navbar .container .menu.nav li > a.active, header.navbar .container .menu.nav li > a:hover {
       font-weight: lighter;
+      font-weight: normal;
       border-bottom: 6px solid #ff0060;
       /*          -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
           -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
