@@ -74,8 +74,8 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="header-wrapper">
-    <div class="<?php print $container_class; ?>">
+  <div class="<?php print $container_class; ?>" wrapper>
+    <div class="<?php print $container_class; ?>" inner>
       <div class="navbar-header">
         <?php if ($logo): ?>
           <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -111,9 +111,10 @@
             <?php endif; ?>
           </nav>
         </div>
-      <?php endif; ?>
-    </div>
+      </div>
+    <?php endif; ?>
   </div>
+  
   <div class="container-fluid">
     <div class="menu-background-slideshow row">
       <?php
