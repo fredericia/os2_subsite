@@ -128,9 +128,14 @@ header.navbar {
       }
       > a {
         font-weight: lighter;
+        text-shadow: 0.07em 0 black, 0 0.07em black, -0.07em 0 black, 0 -0.07em black;
+        &:hover  { 
+          color: $color-focus; 
+          }
         &.active, &:hover  {
           font-weight: lighter;
           border-bottom: 6px solid $color-focus;
+          text-shadow: none;
           //font-weight: 900;
 
 /*          -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
