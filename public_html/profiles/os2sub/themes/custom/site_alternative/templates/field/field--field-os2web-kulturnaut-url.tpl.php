@@ -44,7 +44,7 @@
  */
 ?>
 
-<?php if ( isset($items) ): ?>
+<?php if ( isset($items) AND  $items[0]['#markup'] <> ''): ?>
   <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <?php if ( !$label_hidden ): ?>
       <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
