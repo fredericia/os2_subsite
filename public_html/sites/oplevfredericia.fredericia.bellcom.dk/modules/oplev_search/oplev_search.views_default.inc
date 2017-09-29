@@ -41,6 +41,13 @@ function oplev_search_views_default_views() {
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
   $handler->display->display_options['header']['result']['content'] = '<div class="search-summary">@total resultater i alt</div>';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'Din søgning gav ingen resultater. Prøv gerne igen med et andet søgeord';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Indexed Multiple types: Node */
   $handler->display->display_options['fields']['node']['id'] = 'node';
   $handler->display->display_options['fields']['node']['table'] = 'search_api_index_oplev_index';
@@ -102,6 +109,7 @@ function oplev_search_views_default_views() {
     t('Desc'),
     t('Læs mere'),
     t('<div class="search-summary">@total resultater i alt</div>'),
+    t('Din søgning gav ingen resultater. Prøv gerne igen med et andet søgeord'),
     t('OS2Sub kulturnaut multisearch'),
     t('View panes'),
   );
