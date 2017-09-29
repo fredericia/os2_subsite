@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function os2web_base_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -36,7 +36,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_afsnit|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_afsnit|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -68,7 +68,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_billeder|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
+  $field_groups['group_billeder|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -102,7 +102,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_indstillinger|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
+  $field_groups['group_indstillinger|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -132,7 +132,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_3|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_os2web_base_group_3|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -163,7 +163,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_content|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_os2web_base_group_content|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -184,7 +184,7 @@ function os2web_base_field_group_info() {
       'instance_settings' => array(),
     ),
   );
-  $export['group_os2web_base_group_document|node|os2web_base_contentpage|default'] = $field_group;
+  $field_groups['group_os2web_base_group_document|node|os2web_base_contentpage|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -213,7 +213,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_os2web_base_group_esdh|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_os2web_base_group_esdh|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -243,7 +243,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_extras|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_os2web_base_group_extras|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -272,7 +272,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_os2web_base_group_general|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_os2web_base_group_general|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -297,7 +297,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_hidden|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_os2web_base_group_hidden|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -326,7 +326,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_hidden|node|os2web_base_gallery|form'] = $field_group;
+  $field_groups['group_os2web_base_group_hidden|node|os2web_base_gallery|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -357,7 +357,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_os2web_base_group_hidden|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_os2web_base_group_hidden|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -387,7 +387,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_images|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_os2web_base_group_images|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -415,7 +415,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_image|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_os2web_base_group_image|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -448,7 +448,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_os2web_base_group_settings|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_os2web_base_group_settings|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -476,7 +476,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_taxono|node|os2web_base_gallery|form'] = $field_group;
+  $field_groups['group_os2web_base_group_taxono|node|os2web_base_gallery|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -507,7 +507,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_group_taxono|node|os2web_base_iframe|form'] = $field_group;
+  $field_groups['group_os2web_base_group_taxono|node|os2web_base_iframe|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -538,7 +538,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_os2web_base_group_taxono|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_os2web_base_group_taxono|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -568,7 +568,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_os2web_base_group_text|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_os2web_base_group_text|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -599,7 +599,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_base_news_tabs|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_os2web_base_news_tabs|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -628,7 +628,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_os2web_news_group_media|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_os2web_news_group_media|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -658,7 +658,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_relationer|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_relationer|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -687,7 +687,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_relationer|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_relationer|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -715,7 +715,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_selvbetjening|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
+  $field_groups['group_selvbetjening|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -745,7 +745,7 @@ function os2web_base_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_spotbokse|node|os2web_base_contentpage|form'] = $field_group;
+  $field_groups['group_spotbokse|node|os2web_base_contentpage|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -773,7 +773,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_spotbokse|node|os2web_base_news|form'] = $field_group;
+  $field_groups['group_spotbokse|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -801,7 +801,7 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_spotbokse|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
+  $field_groups['group_spotbokse|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -830,7 +830,28 @@ function os2web_base_field_group_info() {
       ),
     ),
   );
-  $export['group_term|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
+  $field_groups['group_term|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Afsnit');
+  t('Billede');
+  t('Billeder og filer');
+  t('Emneord');
+  t('Hentet fra kommunens sagssystem');
+  t('Indholdsside');
+  t('Indstillinger');
+  t('Media og filer');
+  t('News');
+  t('Relationer');
+  t('Sager og dokumenter');
+  t('Selvbetjeningslinks');
+  t('Skjult');
+  t('Spotbokse');
+  t('Spotbokse / Webform');
+  t('Taksonomi');
+  t('Tekst');
+  t('Term');
+
+  return $field_groups;
 }

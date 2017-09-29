@@ -16,7 +16,7 @@ function os2web_base_filter_default_formats() {
     'name' => 'Plain text',
     'cache' => 1,
     'status' => 1,
-    'weight' => -8,
+    'weight' => -9,
     'filters' => array(
       'filter_html_escape' => array(
         'weight' => -10,
