@@ -10155,6 +10155,7 @@ footer.footer a.block-image-links__link {
     max-height: none; } }
 
 .view-mode-search_result, .view-mode-os2sub_term_search_result {
+  margin-bottom: 20px;
   margin-bottom: 30px; }
   .view-mode-search_result h2, .view-mode-os2sub_term_search_result h2, .view-mode-search_result .heading-h2, .view-mode-os2sub_term_search_result .heading-h2 {
     font-family: "Roboto Slab", serif;
