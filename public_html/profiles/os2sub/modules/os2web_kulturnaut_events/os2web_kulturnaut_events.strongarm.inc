@@ -14,7 +14,7 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_os2web_kulturnaut_knactivity';
-  $strongarm->value = 'edit-workflow';
+  $strongarm->value = 'edit-submission';
   $export['additional_settings__active_tab_os2web_kulturnaut_knactivity'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -37,6 +37,27 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm->name = 'date_format_os2sub_minimal_second';
   $strongarm->value = 'j. F';
   $export['date_format_os2sub_minimal_second'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_os2web_kulturnaut_knactivity';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_os2web_kulturnaut_knactivity';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_os2web_kulturnaut_knactivity';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_os2web_kulturnaut_knactivity'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

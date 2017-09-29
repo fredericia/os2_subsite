@@ -166,11 +166,10 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
-  /* Sort criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
-  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
-  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
-  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
-  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['order'] = 'DESC';
+  /* Sort criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -374,7 +373,8 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['alter']['text'] = '- [field_os2web_kulturnaut_date] ';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['settings'] = array(
-    'format_type' => 'os2sub_minimal',
+    'format_type' => 'long',
+    'custom_date_format' => '',
     'fromto' => 'value',
     'multiple_number' => '',
     'multiple_from' => '',
@@ -471,6 +471,13 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: View area */
+  $handler->display->display_options['empty']['view']['id'] = 'view';
+  $handler->display->display_options['empty']['view']['table'] = 'views';
+  $handler->display->display_options['empty']['view']['field'] = 'view';
+  $handler->display->display_options['empty']['view']['empty'] = TRUE;
+  $handler->display->display_options['empty']['view']['view_to_insert'] = 'os2web_kulturnaut_events_lists:panel_pane_1';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
@@ -541,6 +548,13 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: View area */
+  $handler->display->display_options['empty']['view']['id'] = 'view';
+  $handler->display->display_options['empty']['view']['table'] = 'views';
+  $handler->display->display_options['empty']['view']['field'] = 'view';
+  $handler->display->display_options['empty']['view']['empty'] = TRUE;
+  $handler->display->display_options['empty']['view']['view_to_insert'] = 'os2web_kulturnaut_events_lists:panel_pane_2';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
@@ -636,6 +650,11 @@ function os2web_kulturnaut_events_views_default_views() {
     'test' => 0,
     'os2sub_calendar_right' => 0,
   );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -749,6 +768,11 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['view_node']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['view_node']['alter']['text'] = 'Læs mere';
   $handler->display->display_options['fields']['view_node']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -1160,6 +1184,14 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: View area */
+  $handler->display->display_options['empty']['view']['id'] = 'view';
+  $handler->display->display_options['empty']['view']['table'] = 'views';
+  $handler->display->display_options['empty']['view']['field'] = 'view';
+  $handler->display->display_options['empty']['view']['empty'] = TRUE;
+  $handler->display->display_options['empty']['view']['view_to_insert'] = 'os2web_kulturnaut_events_lists:panel_pane_3';
+  $handler->display->display_options['empty']['view']['inherit_arguments'] = TRUE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Nodequeue: Queue */
   $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
@@ -1175,6 +1207,160 @@ function os2web_kulturnaut_events_views_default_views() {
     'os2sub_front_load_more' => 0,
     'os2sub_front_4_mini' => 0,
   );
+
+  /* Display: Content pane - Activities list (4) - empty */
+  $handler = $view->new_display('panel_pane', 'Content pane - Activities list (4) - empty', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Activities list (4) - empty';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-xs-6';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'os2sub_calendar_right' => 'os2sub_calendar_right',
+    'test' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
+  );
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+
+  /* Display: Content pane - activities list (5+load more) - empty */
+  $handler = $view->new_display('panel_pane', 'Content pane - activities list (5+load more) - empty', 'panel_pane_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Content pane - activities list (5+load more) - empty';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
+  $handler->display->display_options['pager']['options']['manual_load'] = 1;
+  $handler->display->display_options['pager']['options']['text'] = 'Indlæs flere';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-xs-6 col-md-4';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Nodequeue: Queue */
+  $handler->display->display_options['relationships']['nodequeue_rel']['id'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['nodequeue_rel']['field'] = 'nodequeue_rel';
+  $handler->display->display_options['relationships']['nodequeue_rel']['limit'] = 1;
+  $handler->display->display_options['relationships']['nodequeue_rel']['names'] = array(
+    'os2sub_front_load_more' => 'os2sub_front_load_more',
+    'os2sub_calendar_right' => 0,
+    'os2sub_focus' => 0,
+    'os2sub_front_slideshow' => 0,
+  );
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
+  );
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['operator_id'] = 'field_os2web_kulturnaut_date_value2_op';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['label'] = 'Dato - end date (field_os2web_kulturnaut_date:value2)';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['operator'] = 'field_os2web_kulturnaut_date_value2_op';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['identifier'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
+  $handler->display->display_options['argument_input'] = array(
+    'nid' => array(
+      'type' => 'context',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+  );
+
+  /* Display: Content pane - activities list (single) - emty */
+  $handler = $view->new_display('panel_pane', 'Content pane - activities list (single) - emty', 'panel_pane_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-md-3';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_spotbox_single';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   $translatables['os2web_kulturnaut_events_lists'] = array(
     t('Master'),
     t('Arrangementer fra KulturauT'),
@@ -1235,6 +1421,10 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Content pane - kultunaut events'),
     t('@total resultater'),
     t('Content pane - activities list (single)'),
+    t('Content pane - Activities list (4) - empty'),
+    t('Activities list (4) - empty'),
+    t('Content pane - activities list (5+load more) - empty'),
+    t('Content pane - activities list (single) - emty'),
   );
   $export['os2web_kulturnaut_events_lists'] = $view;
 

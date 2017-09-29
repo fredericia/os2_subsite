@@ -61,7 +61,7 @@ function os2web_kulturnaut_events_node_info() {
     'os2web_kulturnaut_knactivity' => array(
       'name' => t('Begivenhed'),
       'base' => 'node_content',
-      'description' => t('Præsentere importeret kulturnaut begivenheder fra Kulturnaut.'),
+      'description' => t('Bruges til at oprette egne begivendheder, samt til at præsentere importerede begivenheder fra Kulturnaut.'),
       'has_title' => '1',
       'title_label' => t('Overskrift'),
       'help' => '',
