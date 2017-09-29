@@ -137,7 +137,7 @@ function oplev_search_default_page_manager_pages() {
   $pane->panel = 'sidebar';
   $pane->type = 'block';
   $pane->subtype = 'facetapi-fQNToBgWvm3yT7qgOGpGJNTxpOpG0h16';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
@@ -156,6 +156,29 @@ function oplev_search_default_page_manager_pages() {
   $display->content['new-89378d67-7177-4b53-b1dd-9a46b00fb2c0'] = $pane;
   $display->panels['sidebar'][2] = 'new-89378d67-7177-4b53-b1dd-9a46b00fb2c0';
   $pane = new stdClass();
+  $pane->pid = 'new-a2ba0a57-8d69-4224-a725-16bf35683670';
+  $pane->panel = 'sidebar';
+  $pane->type = 'block';
+  $pane->subtype = 'facetapi-d4WEcsHmSoYZNNFF7noESNmgomp68Q5Q';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'Tema',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = 'a2ba0a57-8d69-4224-a725-16bf35683670';
+  $display->content['new-a2ba0a57-8d69-4224-a725-16bf35683670'] = $pane;
+  $display->panels['sidebar'][3] = 'new-a2ba0a57-8d69-4224-a725-16bf35683670';
+  $pane = new stdClass();
   $pane->pid = 'new-da46ec25-d019-4061-a37c-b7d1b159a47f';
   $pane->panel = 'sidebar';
   $pane->type = 'block';
@@ -173,11 +196,11 @@ function oplev_search_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 3;
+  $pane->position = 4;
   $pane->locks = array();
   $pane->uuid = 'da46ec25-d019-4061-a37c-b7d1b159a47f';
   $display->content['new-da46ec25-d019-4061-a37c-b7d1b159a47f'] = $pane;
-  $display->panels['sidebar'][3] = 'new-da46ec25-d019-4061-a37c-b7d1b159a47f';
+  $display->panels['sidebar'][4] = 'new-da46ec25-d019-4061-a37c-b7d1b159a47f';
   $pane = new stdClass();
   $pane->pid = 'new-b91e0fe3-2b32-44e3-b688-942f52dc0b4f';
   $pane->panel = 'sidebar';
@@ -196,11 +219,11 @@ function oplev_search_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 5;
   $pane->locks = array();
   $pane->uuid = 'b91e0fe3-2b32-44e3-b688-942f52dc0b4f';
   $display->content['new-b91e0fe3-2b32-44e3-b688-942f52dc0b4f'] = $pane;
-  $display->panels['sidebar'][4] = 'new-b91e0fe3-2b32-44e3-b688-942f52dc0b4f';
+  $display->panels['sidebar'][5] = 'new-b91e0fe3-2b32-44e3-b688-942f52dc0b4f';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

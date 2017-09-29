@@ -52,13 +52,20 @@ function oplev_search_default_search_api_index() {
         "node:field_os2web_kulturnaut_descrip:value" : { "type" : "text" },
         "node:field_os2web_kulturnaut_longdesc:value" : { "type" : "text" },
         "node:field_os2web_kulturnaut_tema:name" : { "type" : "list\\u003Ctext\\u003E" },
+        "node:field_os2web_kulturnaut_tema:parents_all" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "taxonomy_term"
+        },
         "node:title" : { "type" : "text" },
         "node:type" : { "type" : "string" },
         "search_api_language" : { "type" : "string" },
-        "taxonomy_term" : { "type" : "integer", "entity_type" : "taxonomy_term" },
-        "taxonomy_term:description" : { "type" : "text" },
-        "taxonomy_term:name" : { "type" : "text" },
-        "taxonomy_term:vocabulary" : { "type" : "integer", "entity_type" : "taxonomy_vocabulary" }
+        "taxonomy_term" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
+        "taxonomy_term:description" : { "type" : "list\\u003Ctext\\u003E" },
+        "taxonomy_term:name" : { "type" : "list\\u003Ctext\\u003E" },
+        "taxonomy_term:vocabulary" : {
+          "type" : "list\\u003Cinteger\\u003E",
+          "entity_type" : "taxonomy_vocabulary"
+        }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
@@ -85,7 +92,11 @@ function oplev_search_default_search_api_index() {
             }
           }
         },
-        "search_api_alter_add_hierarchy" : { "status" : 0, "weight" : "0", "settings" : { "fields" : [] } },
+        "search_api_alter_add_hierarchy" : {
+          "status" : 1,
+          "weight" : "0",
+          "settings" : { "fields" : { "taxonomy_term:parents_all" : "taxonomy_term:parents_all" } }
+        },
         "search_api_alter_language_control" : {
           "status" : 0,
           "weight" : "0",
@@ -168,9 +179,9 @@ function oplev_search_default_search_api_server() {
             "boost" : "1.0"
           },
           "taxonomy_term" : {
-            "table" : "search_api_db_oplev_index",
-            "column" : "taxonomy_term",
-            "type" : "integer",
+            "table" : "search_api_db_oplev_index_taxonomy_term",
+            "column" : "value",
+            "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           },
           "search_api_language" : {
@@ -186,12 +197,12 @@ function oplev_search_default_search_api_server() {
           },
           "taxonomy_term:name" : {
             "table" : "search_api_db_oplev_index_text",
-            "type" : "text",
+            "type" : "list\\u003Ctext\\u003E",
             "boost" : "1.0"
           },
           "taxonomy_term:description" : {
             "table" : "search_api_db_oplev_index_text",
-            "type" : "text",
+            "type" : "list\\u003Ctext\\u003E",
             "boost" : "1.0"
           },
           "node:field_os2web_kulturnaut_date:value" : {
@@ -224,9 +235,9 @@ function oplev_search_default_search_api_server() {
             "boost" : "1.0"
           },
           "taxonomy_term:vocabulary" : {
-            "table" : "search_api_db_oplev_index",
-            "column" : "taxonomy_term_vocabulary",
-            "type" : "integer",
+            "table" : "search_api_db_oplev_index_taxonomy_term_vocabulary",
+            "column" : "value",
+            "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
           },
           "node:field_os2web_kulturnaut_longdesc:value" : {
@@ -237,6 +248,12 @@ function oplev_search_default_search_api_server() {
           "node:field_os2web_kulturnaut_descrip:value" : {
             "table" : "search_api_db_oplev_index_text",
             "type" : "text",
+            "boost" : "1.0"
+          },
+          "node:field_os2web_kulturnaut_tema:parents_all" : {
+            "table" : "search_api_db_oplev_index_node_field_os2web_kulturnaut_tema_pa",
+            "column" : "value",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
             "boost" : "1.0"
           }
         },
