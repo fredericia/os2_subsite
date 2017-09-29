@@ -178,7 +178,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'os2web_base_date_only',
+          'format_type' => 'date_only',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
