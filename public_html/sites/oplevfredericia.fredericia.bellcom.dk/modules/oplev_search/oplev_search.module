@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Oplev Search feature.
+ */
+
+include_once 'oplev_search.features.inc';
