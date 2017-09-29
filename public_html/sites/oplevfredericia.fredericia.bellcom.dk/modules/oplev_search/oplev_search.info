@@ -19,6 +19,7 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[ds_view_modes][] = os2sub_term_search_result
 features[facetapi][] = search_api@oplev_index::node:field_os2web_kulturnaut_date:value
+features[facetapi][] = search_api@oplev_index::node:field_os2web_kulturnaut_tema:parents_all
 features[facetapi][] = search_api@oplev_index:block:node
 features[facetapi][] = search_api@oplev_index:block:node:field_os2web_kulturnaut_date:duration
 features[facetapi][] = search_api@oplev_index:block:node:field_os2web_kulturnaut_date:value

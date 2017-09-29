@@ -38,6 +38,32 @@ function oplev_search_facetapi_default_facet_settings() {
   $facet = new stdClass();
   $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
   $facet->api_version = 1;
+  $facet->name = 'search_api@oplev_index::node:field_os2web_kulturnaut_tema:parents_all';
+  $facet->searcher = 'search_api@oplev_index';
+  $facet->realm = '';
+  $facet->facet = 'node:field_os2web_kulturnaut_tema:parents_all';
+  $facet->enabled = FALSE;
+  $facet->settings = array(
+    'operator' => 'and',
+    'hard_limit' => '50',
+    'dependencies' => array(
+      'roles' => array(),
+    ),
+    'facet_mincount' => '1',
+    'facet_missing' => '0',
+    'flatten' => '0',
+    'individual_parent' => '0',
+    'query_type' => 'term',
+    'limit_active_items' => 0,
+    'default_true' => TRUE,
+    'facet_search_ids' => array(),
+    'exclude' => 0,
+  );
+  $export['search_api@oplev_index::node:field_os2web_kulturnaut_tema:parents_all'] = $facet;
+
+  $facet = new stdClass();
+  $facet->disabled = FALSE; /* Edit this to true to make a default facet disabled initially */
+  $facet->api_version = 1;
   $facet->name = 'search_api@oplev_index:block:node';
   $facet->searcher = 'search_api@oplev_index';
   $facet->realm = 'block';
