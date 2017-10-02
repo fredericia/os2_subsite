@@ -10427,8 +10427,7 @@ span.date-display-end {
 
 .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_4_mini .field-name-field-os2web-kulturnaut-date {
   font-size: 0.9em;
-  margin-bottom: 10px;
-  text-transform: lowercase; }
+  margin-bottom: 10px; }
 
 .view-os2web-kulturnaut-events-lists.view-display-id-pane_related_articles .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_list_5_load_more .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tag .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_venue .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_activities_for_tema .pager--infinite-scroll, .view-os2web-kulturnaut-events-lists.view-display-id-pane_kultunaut_events .pager--infinite-scroll {
   margin-top: 0; }
