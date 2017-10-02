@@ -10720,15 +10720,15 @@ span.date-display-end {
   top: 0%;
   left: 0%;
   border-radius: 50% 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background-color: rgba(255, 0, 96, 0.5);
   opacity: 50%;
   margin-left: 15px; }
 
 .views-field.views-field-field-os2web-kult-tema-image .field-content .img-circle {
-  width: 60px;
-  height: 60px; }
+  width: 50px;
+  height: 50px; }
 
 .view-os2web-kulturnaut-tema-list .views-row {
   margin-bottom: 25px; }
@@ -10747,6 +10747,14 @@ span.date-display-end {
 
 .taxonomy-term.vocabulary-os2web-kulturnaut-venue.view-mode-full .taxonomy-term-description {
   display: none; }
+
+@media (min-width: 768px) {
+  .views-field.views-field-field-os2web-kult-tema-image .field-content .img-effect {
+    width: 60px;
+    height: 60px; }
+  .views-field.views-field-field-os2web-kult-tema-image .field-content .img-circle {
+    width: 60px;
+    height: 60px; } }
 
 @media (min-width: 992px) {
   .views-field.views-field-field-os2web-kult-tema-image .field-content .img-effect {
