@@ -169,6 +169,7 @@
       background-color: rgba($color-focus, 0.75);
 
       .overlay-content {
+        text-align: center;
         position: relative;
         top: 50%;
         left: 50%;
@@ -177,6 +178,9 @@
         padding: 20px;
         .field-name-field-os2web-kulturnaut-url {
           margin-bottom: 13px;
+        }
+        .btn-full-width {
+          max-width: 350px;
         }
       }
     }
