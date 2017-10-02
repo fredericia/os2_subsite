@@ -9882,8 +9882,6 @@ footer.footer a.block-image-links__link {
 
 .pair-4-mini {
   float: left; }
-  .pair-4-mini:last-child {
-    float: none; }
 
 @media (min-width: 992px) {
   .pair-4-mini {
