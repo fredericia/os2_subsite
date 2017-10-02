@@ -388,7 +388,7 @@ function os2sub_pages_default_page_manager_handlers() {
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'hidden-xs hidden-sm',
+    'css_class' => '',
     'template_suggestion' => 'entity_field',
   );
   $pane->extras = array();
@@ -422,7 +422,7 @@ function os2sub_pages_default_page_manager_handlers() {
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => 'visible-md visible-lg',
+    'css_class' => '',
     'template_suggestion' => 'entity_field',
   );
   $pane->extras = array();
@@ -1329,7 +1329,7 @@ function os2sub_pages_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
-    'override_title_text' => 'Del på',
+    'override_title_text' => ' Del på',
     'override_title_heading' => 'h3',
   );
   $pane->cache = array();
