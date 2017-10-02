@@ -9920,14 +9920,10 @@ footer.footer a.block-image-links__link {
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue,
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-sname,
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-base-field-edi-tags {
-    font-size: 1.125em;
+    font-size: 0.70em;
     color: white;
     text-transform: uppercase;
     font-weight: bold; }
-  .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-base-field-edi-tags,
-  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-base-field-edi-tags,
-  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-base-field-edi-tags {
-    font-weight: 900; }
   .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .upper-part,
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .upper-part,
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .upper-part {
@@ -10155,6 +10151,11 @@ footer.footer a.block-image-links__link {
     font-size: 1.125em;
     font-weight: bold;
     display: block; }
+  .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-base-field-edi-tags,
+  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-base-field-edi-tags,
+  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-base-field-edi-tags {
+    font-size: 1.125em;
+    font-weight: 900; }
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-slidesho {
     max-height: none; } }
 

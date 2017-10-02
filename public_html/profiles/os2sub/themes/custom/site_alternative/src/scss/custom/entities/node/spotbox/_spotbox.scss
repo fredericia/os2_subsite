@@ -38,13 +38,13 @@
     .field-name-field-os2web-kulturnaut-venue,
     .field-name-field-os2web-kulturnaut-sname,
     .field-name-field-os2web-base-field-edi-tags {
-      font-size: 1.125em;
+      font-size: 0.70em;
       color: white;
       text-transform: uppercase;
       font-weight: bold;
     }
     .field-name-field-os2web-base-field-edi-tags {
-      font-weight: 900;
+      
     }
 
     .upper-part {
@@ -272,6 +272,7 @@
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
+
   .view-mode-spotbox.node,
   .view-mode-os2sub_spotbox_single.node,
   .view-mode-os2sub_spotbox_mini.node {
@@ -323,6 +324,10 @@
           font-weight: bold;
           display: block;
         }
+      }
+      .field-name-field-os2web-base-field-edi-tags {
+      font-size: 1.125em;
+      font-weight: 900;
       }
     }
 
