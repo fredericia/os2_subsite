@@ -132,7 +132,10 @@
     }
   }
 }
-.view-mode-os2sub_spotbox_single.node, .view-mode-os2sub_spotbox_mini.node{
+.view-mode-os2sub_spotbox_single.node, .view-mode-os2sub_spotbox_mini.node, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
+  .overlay-wrapper {
+    position: relative;
+  }
   & .overlay{
     & .field.field-name-field-os2web-kulturnaut-url{
       & a.btn{

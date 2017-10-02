@@ -81,14 +81,25 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> "<?php print $attributes; ?>>
 
-    <?php
-    // Hide comments, tags, and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);
-    hide($content['field_tags']);
+    <div class="overlay-wrapper">
+      <?php
+      // Hide comments, tags, and links now so that we can render them later.
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['field_tags']);
 
-    print render($content['field_os2web_kulturnaut_slidesho']);
-    ?> 
+      print render($content['field_os2web_kulturnaut_slidesho']);
+      ?>
+
+      <?php if (!empty($content['field_os2web_kulturnaut_slidesho'])): ?>
+        <div class="overlay">
+          <div class="overlay-content">
+            <?php print render($content['field_os2web_kulturnaut_url']); ?>
+            <a class="btn btn-quaternary btn-full-width" href="<?php print $node_url; ?>"><?php print t('Læs mere') . '...'; ?></a>
+          </div>
+        </div>
+      <?php endif; ?>
+    </div>
 
     <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
         <header>
