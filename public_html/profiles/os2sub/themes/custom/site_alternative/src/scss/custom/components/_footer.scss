@@ -21,6 +21,9 @@ footer.footer {
   margin: 0;
   padding-top: 8px;
 
+  a {
+    color: $color-font-light;
+  }
   section {
     margin-bottom: 20px;
   }
@@ -36,7 +39,6 @@ footer.footer {
       padding: 3px 0;
     }
     a {
-      color: $color-font-light;
       background: none;
       display: inline;
       padding: 0;

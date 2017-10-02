@@ -9716,6 +9716,8 @@ footer.footer {
   color: #ffffff;
   margin: 0;
   padding-top: 8px; }
+  footer.footer a {
+    color: #ffffff; }
   footer.footer section {
     margin-bottom: 20px; }
   footer.footer h2.block-title, footer.footer .block-title.heading-h2 {
@@ -9726,7 +9728,6 @@ footer.footer {
   footer.footer .menu li {
     padding: 3px 0; }
   footer.footer .menu a {
-    color: #ffffff;
     background: none;
     display: inline;
     padding: 0;
