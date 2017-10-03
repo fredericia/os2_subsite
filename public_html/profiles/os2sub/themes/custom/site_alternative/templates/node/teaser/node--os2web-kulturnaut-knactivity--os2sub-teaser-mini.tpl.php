@@ -81,55 +81,54 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> "<?php print $attributes; ?>>
 
-    <div class="overlay-wrapper">
-      <?php
-      // Hide comments, tags, and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      hide($content['field_tags']);
-
-      print render($content['field_os2web_kulturnaut_slidesho']);
-      ?>
-
-      <?php if (!empty($content['field_os2web_kulturnaut_slidesho'])): ?>
-        <div class="overlay">
-          <div class="overlay-content">
-            <?php print render($content['field_os2web_kulturnaut_url']); ?>
-            <a class="btn btn-quaternary btn-full-width" href="<?php print $node_url; ?>"><?php print t('Læs mere') . '...'; ?></a>
-          </div>
-        </div>
-      <?php endif; ?>
-    </div>
-
-    <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
-        <header>
-            <?php print render($title_prefix); ?>
-            <?php if (!$page && !empty($title)): ?>
-                <h3 <?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
-            <?php endif; ?>
-            <?php print render($title_suffix); ?>
-            <?php if ($display_submitted): ?>
-                <span class="submitted">
-                    <?php print $user_picture; ?>
-                    <?php print $submitted; ?>
-                </span>
-            <?php endif; ?>
-        </header>
-    <?php endif; ?>
-
+  <div class="overlay-wrapper">
     <?php
-    print render($content['field_os2web_kulturnaut_date']);
-    print render($content['field_os2web_kulturnaut_descrip']);
+    // Hide comments, tags, and links now so that we can render them later.
+    hide($content['comments']);
+    hide($content['links']);
+    hide($content['field_tags']);
+
+    print render($content['field_os2web_kulturnaut_slidesho']);
     ?>
 
-    <div class="link show-more">
-        <a href="<?php print $node_url; ?>"><?php print t('Læs mere') ?></a>
-    </div>
-        <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
-        <footer>
-            <?php print render($content['field_tags']); ?>
-        <?php print render($content['links']); ?>
-        </footer>
+    <?php if ( !empty($content['field_os2web_kulturnaut_slidesho']) ): ?>
+      <div class="overlay">
+        <div class="overlay-content">
+          <?php print render($content['field_os2web_kulturnaut_url']); ?>
+          <a class="btn btn-quaternary btn-full-width" href="<?php print $node_url; ?>"><?php print t('Læs mere') . '...'; ?></a>
+        </div>
+      </div>
     <?php endif; ?>
-<?php print render($content['comments']); ?>
+  </div>
+
+  <?php if ( (!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted ): ?>
+    <header>
+      <?php print render($title_prefix); ?>
+      <?php if ( !$page && !empty($title) ): ?>
+        <h3 <?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+      <?php endif; ?>
+      <?php print render($title_suffix); ?>
+      <?php if ( $display_submitted ): ?>
+        <span class="submitted">
+          <?php print $user_picture; ?>
+          <?php print $submitted; ?>
+        </span>
+      <?php endif; ?>
+    </header>
+  <?php endif; ?>
+
+  <?php
+  print render($content['field_os2web_kulturnaut_date']);
+  print render($content['field_os2web_kulturnaut_descrip']);
+  ?>
+
+  <div class="link show-more">
+    <a href="<?php print $node_url; ?>"><?php print t('Læs mere') ?></a>
+  </div>
+  <?php if ( !empty($content['field_tags']) || !empty($content['links']) ): ?>
+    <footer>
+      <?php print render($content['field_tags']); ?>
+    </footer>
+  <?php endif; ?>
+  <?php print render($content['comments']); ?>
 </article>
