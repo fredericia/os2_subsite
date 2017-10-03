@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Code for the os2web_admin_theme_tweaks.
+ * 
+ * Add some tweaks to admin (adminimal) theme
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function os2web_admin_theme_tweaks_preprocess_html(&$variables) {
+
+  global $theme;
+  
+  //Adding custom css to admin theme
+  if($theme == 'adminimal') {
+    drupal_add_css(drupal_get_path('module', 'os2web_admin_theme_tweaks') . '/css/os2web_admin_theme_tweaks.css', array('weight' => CSS_THEME));
+  }
+}
