@@ -602,7 +602,7 @@ function os2sub_pages_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'slideshow',
+    'formatter' => 'image',
     'delta_limit' => '0',
     'delta_offset' => '0',
     'delta_reversed' => 0,
@@ -631,6 +631,8 @@ function os2sub_pages_default_page_manager_handlers() {
       'slideshow_carousel_circular' => 0,
       'slideshow_carousel_follow' => 0,
       'slideshow_carousel_skin' => '',
+      'image_style' => 'os2sub_banner',
+      'image_link' => '',
     ),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 0,
