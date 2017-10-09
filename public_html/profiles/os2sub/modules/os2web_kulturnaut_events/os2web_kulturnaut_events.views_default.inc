@@ -78,7 +78,6 @@ function os2web_kulturnaut_events_views_default_views() {
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'pane_venues_for_tag');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -101,6 +100,15 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_os2web_base_field_edi_tags_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'field_os2web_base_field_edi_tags_tid' => array(
       'type' => 'context',
@@ -115,7 +123,6 @@ function os2web_kulturnaut_events_views_default_views() {
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'pane_venues_for_tema');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = '<none>';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -138,6 +145,15 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_os2web_kulturnaut_tema_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 'title_override';
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'field_os2web_kulturnaut_tema_tid' => array(
       'type' => 'context',
@@ -159,7 +175,6 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Desc'),
     t('Page'),
     t('Content pane'),
-    t('<none>'),
     t('All'),
     t('View panes'),
   );
