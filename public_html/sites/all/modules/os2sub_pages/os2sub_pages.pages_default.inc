@@ -546,7 +546,7 @@ function os2sub_pages_default_page_manager_handlers() {
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
     'override_title_text' => '',
-    'override_title_heading' => 'h2',
+    'override_title_heading' => 'h3',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -741,10 +741,10 @@ function os2sub_pages_default_page_manager_handlers() {
   $display->content['new-62f38573-c252-4c36-9355-f83001c115be'] = $pane;
   $display->panels['content'][0] = 'new-62f38573-c252-4c36-9355-f83001c115be';
   $pane = new stdClass();
-  $pane->pid = 'new-d8b4660b-578e-4514-bd75-40817e2e0f82';
+  $pane->pid = 'new-87f04d25-23ed-4bb6-aa30-a3577b23d7b2';
   $pane->panel = 'content';
   $pane->type = 'views_panes';
-  $pane->subtype = 'oplevfredericia_venues_with_tag-panel_pane_1';
+  $pane->subtype = 'os2sub_venues-pane_venues_for_tema';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -760,9 +760,9 @@ function os2sub_pages_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = 'd8b4660b-578e-4514-bd75-40817e2e0f82';
-  $display->content['new-d8b4660b-578e-4514-bd75-40817e2e0f82'] = $pane;
-  $display->panels['content'][1] = 'new-d8b4660b-578e-4514-bd75-40817e2e0f82';
+  $pane->uuid = '87f04d25-23ed-4bb6-aa30-a3577b23d7b2';
+  $display->content['new-87f04d25-23ed-4bb6-aa30-a3577b23d7b2'] = $pane;
+  $display->panels['content'][1] = 'new-87f04d25-23ed-4bb6-aa30-a3577b23d7b2';
   $pane = new stdClass();
   $pane->pid = 'new-286730f6-d89f-410b-9181-df6c5f004cfe';
   $pane->panel = 'sidebar-left';
@@ -834,7 +834,7 @@ function os2sub_pages_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'image_style' => 'os2sub_banner',
+      'image_style' => 'os2sub_normal_imagesize',
       'image_link' => '',
     ),
     'context' => 'argument_term_1',
@@ -864,7 +864,7 @@ function os2sub_pages_default_page_manager_handlers() {
     'view_mode' => 'full',
     'context' => 'argument_term_1',
     'override_title' => 1,
-    'override_title_text' => 'Tema #%term:name',
+    'override_title_text' => '',
     'override_title_heading' => 'h3',
   );
   $pane->cache = array();
@@ -1242,7 +1242,7 @@ function os2sub_pages_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Begivenheder tagget med #%term:name';
+  $display->title = 'Oplevelser tagget med #%term:name';
   $display->uuid = '8bb7a5e6-6a90-4ed6-92cf-07b3544c05a3';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'term_view__panel_context_b93bf237-6097-4919-81ee-fbf94710de8c';
@@ -1300,10 +1300,10 @@ function os2sub_pages_default_page_manager_handlers() {
   $display->content['new-399d4c08-bc42-497f-b526-c1476344551b'] = $pane;
   $display->panels['content'][1] = 'new-399d4c08-bc42-497f-b526-c1476344551b';
   $pane = new stdClass();
-  $pane->pid = 'new-7518307e-5b4e-48cb-a7e5-6915ceb8e1d3';
+  $pane->pid = 'new-aeb8b1cb-0d32-4dee-9038-1bfbb5af5567';
   $pane->panel = 'content';
   $pane->type = 'views_panes';
-  $pane->subtype = 'oplevfredericia_venues_with_tag-panel_pane_1';
+  $pane->subtype = 'os2sub_venues-pane_venues_for_tag';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -1319,9 +1319,9 @@ function os2sub_pages_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
-  $pane->uuid = '7518307e-5b4e-48cb-a7e5-6915ceb8e1d3';
-  $display->content['new-7518307e-5b4e-48cb-a7e5-6915ceb8e1d3'] = $pane;
-  $display->panels['content'][2] = 'new-7518307e-5b4e-48cb-a7e5-6915ceb8e1d3';
+  $pane->uuid = 'aeb8b1cb-0d32-4dee-9038-1bfbb5af5567';
+  $display->content['new-aeb8b1cb-0d32-4dee-9038-1bfbb5af5567'] = $pane;
+  $display->panels['content'][2] = 'new-aeb8b1cb-0d32-4dee-9038-1bfbb5af5567';
   $pane = new stdClass();
   $pane->pid = 'new-09a6fd8b-f629-44f9-b20d-0660f86d2fc6';
   $pane->panel = 'sidebar-left';
