@@ -14,14 +14,19 @@
 // Styling
 // --------------------------------------------------
 .btn {
-  border-radius: 20px;
-  border-width: 2px;
+  
+  border: 5px solid $color-black;
   font-family: $font-lato;
   font-weight: 900;
   font-size: 1.31em;
   text-transform: uppercase;
   padding-left: 50px;
   padding-right: 50px;
+  width: 139px;
+  height: 58px;
+  border-radius: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 // --------------------------------------------------

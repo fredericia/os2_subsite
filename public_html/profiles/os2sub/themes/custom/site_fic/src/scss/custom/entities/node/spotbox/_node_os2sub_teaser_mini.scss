@@ -1,0 +1,248 @@
+// |--------------------------------------------------------------------------
+// | Spotbox, Spotbox single, Spotbox mini
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-mode-spotbox, .view-mode-os2sub_spotbox_single, .view-mode-os2sub_spotbox_mini
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Teaser
+
+
+.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
+  .overlay-wrapper {
+    position: relative;
+    & .field-type-image.field-name-field-os2web-kulturnaut-slidesho{
+      img{
+        border: 7px solid $color-black;
+      }
+    }
+  }
+  & .overlay{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-red, 0.75);
+    .overlay-content {
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      padding: 20px;
+
+
+    }
+    & .field.field-name-field-os2web-kulturnaut-url{
+      & a.btn{
+        color: $color-white;
+        background-color: $color-white;
+        border-color: $color-white;
+        &:hover, &:active, &:focus {
+          color: $color-white;
+          background: none;
+          border-color: $color-white;
+        }
+      }
+    }
+  }
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+  }
+  & .link.show-more{
+    a{
+      text-transform: uppercase;
+      color: $color-blue;
+      font-weight: bold;
+      text-decoration: none;
+      &:active, &:hover, &:focus{
+        text-decoration: underline;
+      }
+    }
+  }
+  & .field-name-field-os2web-kulturnaut-date{
+    
+    text-transform: uppercase;
+    color: $color-red;
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  & header{
+    & h3{
+      text-transform: uppercase;
+      margin-top: 0px;
+    }
+  }
+  & .field-name-field-os2web-kulturnaut-descrip{
+   & .field-items{
+      :after{
+        content: '...';
+      }
+    }
+
+  }
+}
+
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+
+
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  .view-mode-spotbox.node,
+  .view-mode-os2sub_spotbox_single.node,
+  .view-mode-os2sub_spotbox_mini.node {
+    &.node-os2web-kulturnaut-knactivity {
+      .view-display-id-pane_activities_list_4 & {
+        .field-name-field-os2web-kulturnaut-date {
+          span.date-display-single{
+            font-size: 0.9em;
+          }
+        }
+        header h2 {
+          font-size: 1.56em;
+        }
+        .field-name-field-os2web-kulturnaut-venue {
+          display: block;
+        }
+      }
+
+      .view-display-id-pane_activities_list_2_3 & {
+        .field-name-field-os2web-kulturnaut-date {
+          font-size: 1em;
+          color: $color-black;
+          font-weight: normal;
+          text-transform: lowercase;
+        }
+        header h2 {
+          font-size: 1.75em;
+        }
+      }
+
+      .view-display-id-pane_activities_list_5_load_more & {
+        .field-name-field-os2web-kulturnaut-date {
+          span.date-display-single{ 
+            font-size: 1.125em;
+            color: $color-white;
+            font-weight: normal;
+            text-transform: lowercase;
+            display: block;
+          }
+          span.date-display-single:first-letter{
+            text-transform: uppercase;
+          }
+        }
+        header h2 {
+          font-size: 1.75em;
+        }
+        .field-name-field-os2web-kulturnaut-venue{
+          font-size: 1.125em;
+          font-weight: bold;
+          display: block;
+        }
+      }
+      .field-name-field-os2web-base-field-edi-tags {
+        font-size: 1.125em;
+        font-weight: 900;
+      }
+    }
+
+  }
+  .view-mode-os2sub_spotbox_single.node{
+    &.node-os2web-kulturnaut-knactivity {
+      .field-name-field-os2web-kulturnaut-slidesho {
+        max-height: none;
+      }
+    }
+  }
+
+
+}
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Page layout
+  .content-inner {}
+}
+
+// No touch
+.no-touchevents {
+
+
+}
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Page layout mixin
+@mixin content-mixin-inner() {}
