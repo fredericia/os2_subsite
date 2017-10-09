@@ -92,6 +92,7 @@
     hide($content['field_os2web_kulturnaut_url']);
 
     if (empty($content['field_os2web_kulturnaut_slidesho'])) {
+      $field_instance = field_info_instance('node', 'field_os2web_kulturnaut_slidesho', 'os2web_kulturnaut_knactivity');
       $image_style = $field_instance['display']['os2sub_spotbox_mini']['settings']['image_style'];
       $field_instance = field_info_instance('node', 'field_os2web_kulturnaut_slidesho', 'os2web_kulturnaut_knactivity');
       print theme('image_style', array('style_name' => $image_style, 'path' => 'public://knactivity_image_stub.png'));
