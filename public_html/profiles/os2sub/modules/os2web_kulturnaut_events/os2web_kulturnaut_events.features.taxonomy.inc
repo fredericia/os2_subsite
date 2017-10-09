@@ -18,7 +18,7 @@ function os2web_kulturnaut_events_taxonomy_default_vocabularies() {
       'weight' => 0,
     ),
     'os2web_kulturnaut_venue' => array(
-      'name' => 'Venue',
+      'name' => 'Steder',
       'machine_name' => 'os2web_kulturnaut_venue',
       'description' => '',
       'hierarchy' => 0,

@@ -62,8 +62,6 @@ function os2web_kulturnaut_events_feeds_importer_default() {
         'context' => '/main/arrlist/arr',
         'exp' => array(
           'errors' => 1,
-          'tidy' => 0,
-          'tidy_encoding' => 'UTF8',
           'debug' => array(
             'context' => 'context',
             'xpathparser:2' => 'xpathparser:2',
@@ -158,6 +156,8 @@ function os2web_kulturnaut_events_feeds_importer_default() {
         'authorize' => TRUE,
         'update_non_existent' => 'skip',
         'skip_hash_check' => FALSE,
+        'insert_new' => 1,
+        'language' => 'und',
       ),
     ),
     'content_type' => '',
