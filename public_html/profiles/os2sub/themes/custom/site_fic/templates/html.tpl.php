@@ -21,22 +21,22 @@
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
 
-<!-- Begin - skip link -->
-<div id="skip-link" class="show-on-focus">
-  <a href="#content" class="element-invisible element-focusable">
-    <?php print t('Skip to main content'); ?>
-  </a>
-</div>
-<!-- End - skip link -->
+  <!-- Begin - skip link -->
+  <div id="skip-link" class="show-on-focus">
+    <a href="#content" class="element-invisible element-focusable">
+      <?php print t('Skip to main content'); ?>
+    </a>
+  </div>
+  <!-- End - skip link -->
 
-<?php print $page_top; ?>
-<?php print $page; ?>
+  <?php print $page_top; ?>
+  <?php print $page; ?>
 
-<!-- Begin - load javascript files -->
-<?php print $scripts; ?>
-<!-- End - load javascript files -->
+  <!-- Begin - load javascript files -->
+  <?php print $scripts; ?>
+  <!-- End - load javascript files -->
 
-<?php print $page_bottom; ?>
+  <?php print $page_bottom; ?>
 
 </body>
 </html>
