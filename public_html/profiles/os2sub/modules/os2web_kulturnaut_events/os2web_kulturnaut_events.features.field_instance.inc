@@ -1962,7 +1962,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -2029,8 +2029,8 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'module' => 'simple_gmap',
         'settings' => array(
           'apikey' => '',
-          'iframe_height' => 200,
-          'iframe_width' => 200,
+          'iframe_height' => '200px',
+          'iframe_width' => '100%',
           'include_link' => 0,
           'include_map' => 1,
           'include_static_map' => 0,
@@ -2042,7 +2042,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'zoom_level' => 14,
         ),
         'type' => 'simple_gmap',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
@@ -2088,7 +2088,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
     'description' => 'Vis på siden Steder',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -2096,9 +2096,8 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'os2sub_spotbox_list' => array(
@@ -2151,7 +2150,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'weight' => 2,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
@@ -2255,7 +2254,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -2340,7 +2339,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
