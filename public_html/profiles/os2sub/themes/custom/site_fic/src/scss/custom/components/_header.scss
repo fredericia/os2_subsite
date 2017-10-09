@@ -1,0 +1,102 @@
+// |--------------------------------------------------------------------------
+// | Header
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .header
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Header
+  .header {
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Header
+  .header {
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+  //trick to mane menu clickable on the front page because of background slideshow
+
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Header
+  .header {
+  }
+}
+
+// Print
+@media print {
+
+  // Header
+  .header {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Header
+  .header {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Header
+  .header {
+  }
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Header mixin
+@mixin header-mixin() {
+}

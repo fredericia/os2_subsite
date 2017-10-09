@@ -1,0 +1,103 @@
+// |--------------------------------------------------------------------------
+// | Teaser
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .node-teaser
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Teaser
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Teaser
+  
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// Print
+@media print {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// Touch
+.touchevents {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Teaser
+  .node-teaser {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Teaser mixin
+@mixin node-mixin-teaser() {}

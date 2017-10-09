@@ -1,0 +1,96 @@
+// |--------------------------------------------------------------------------
+// | Pagination
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .pagination
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Pagination
+  .pagination {}
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Pagination
+  .pagination {}
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Pagination
+  .pagination {}
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Pagination
+  .pagination {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Pagination
+  .pagination {}
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Pagination
+  .pagination {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Pagination
+  .pagination {}
+}
+
+// Print
+@media print {
+
+  // Pagination
+  .pagination {}
+}
+
+// Touch
+.touchevents {
+
+  // Pagination
+  .pagination {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Pagination
+  .pagination {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Pagination mixin
+@mixin pagination-mixin() {}

@@ -1,0 +1,170 @@
+// |--------------------------------------------------------------------------
+// | Page layout
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .content-inner
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Responsive
+$xs-page-layout-content-inner-padding-top: 20px;
+$sm-page-layout-content-inner-padding-top: 30px;
+$md-page-layout-content-inner-padding-top: 40px;
+
+$xs-page-layout-content-inner-padding-bottom: 25px;
+$sm-page-layout-content-inner-padding-bottom: 40px;
+$md-page-layout-content-inner-padding-bottom: 60px;
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Page layout
+body {
+  font-family: $font-lato;
+  font-weight: normal;
+  color: $color-black;
+}
+
+h1.page-header,
+h1.pane-title {
+  font-family: $font-roboto-slab;
+  font-weight: bold;
+  font-size: 2.5em;
+  color: $color-black;
+  border: 0;
+}
+
+h2.pane-title {
+  font-family: $font-roboto-slab;
+  font-weight: lighter;
+  font-size: 2.125em;
+  color: $color-black;
+  //margin-bottom: 30px;
+}
+
+h3.pane-title {
+  font-weight: bold;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+.breadcrumb {
+  background: none;
+  padding-left: 0;
+}
+
+.panel-pane {
+}
+
+.search-and-title{
+  padding-top: 0px;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Page layout
+  .content-inner {
+    padding-top: $xs-page-layout-content-inner-padding-top;
+    padding-bottom: $xs-page-layout-content-inner-padding-bottom;
+  }
+
+  .row .content-top {
+    margin-bottom: 10px;
+  }
+
+  h1.page-header,
+  h1.pane-title {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Page layout
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Page layout
+  .content-inner {
+    padding-top: $sm-page-layout-content-inner-padding-top;
+    padding-bottom: $sm-page-layout-content-inner-padding-bottom;
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Page layout
+  .content-inner {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Page layout
+ 
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Page layout
+  .content-inner {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Page layout
+  .content-inner {}
+}
+
+// Print
+@media print {
+
+  // Page layout
+  .content-inner {}
+}
+
+// Touch
+.touchevents {
+
+  // Page layout
+  .content-inner {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Page layout
+  .content-inner {}
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Page layout mixin
+@mixin content-mixin-inner() {}

@@ -1,0 +1,99 @@
+// |--------------------------------------------------------------------------
+// | os2web-kulturnaut-events-lists
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-os2web-kulturnaut-events-lists
+// |
+
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+//size of header in desktop orientation and up
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+
+}
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Print
+@media print {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+
+

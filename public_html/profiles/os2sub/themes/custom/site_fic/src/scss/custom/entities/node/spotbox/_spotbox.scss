@@ -1,0 +1,97 @@
+// |--------------------------------------------------------------------------
+// | Spotbox, Spotbox single, Spotbox mini
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-mode-spotbox, .view-mode-os2sub_spotbox_single, .view-mode-os2sub_spotbox_mini
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Teaser
+
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+
+
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+ 
+}
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Page layout
+  .content-inner {}
+}
+
+// No touch
+.no-touchevents {
+
+
+}
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Page layout mixin
+@mixin content-mixin-inner() {}

@@ -1,0 +1,67 @@
+// |--------------------------------------------------------------------------
+// | Buttons
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .buttons
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+.btn {
+  border-radius: 20px;
+  border-width: 2px;
+  font-family: $font-lato;
+  font-weight: 900;
+  font-size: 1.31em;
+  text-transform: uppercase;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+// --------------------------------------------------
+// Variants
+// ----
+.btn {
+  &.btn-red {
+    background-color: $color-red;
+    border-color: $color-red;
+    color: $color-white;
+    &:hover, &:active, &:focus {
+      color: $color-red;
+      background-color: $color-white;
+    }
+  }
+
+  &.btn-blue {
+    background-color: $color-blue;
+    border-color: $color-blue;
+    color: $color-white;
+    &:hover, &:active, &:focus {
+      color: $color-blue;
+      background-color: $color-white;
+    }
+  }
+
+  &.btn-black {
+    background-color: $color-black;
+    border-color: $color-black;
+    color: $color-white;
+    &:hover, &:active, &:focus {
+      color: $color-black;
+      background-color: $color-white;
+    }
+  }
+
+ 
+  &.btn-full-width {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

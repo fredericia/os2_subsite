@@ -1,0 +1,63 @@
+// |--------------------------------------------------------------------------
+// | os2web-kulturnaut-events-lists
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .view-os2web-kulturnaut-events-lists
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+//size of header in desktop orientation and up
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Add to calendar
+
+/* General */
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Print
+@media print {
+
+  // Banner
+  .banner {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Banner
+  .banner {
+  }
+}
+
+
+
