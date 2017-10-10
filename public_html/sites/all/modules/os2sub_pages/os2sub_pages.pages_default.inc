@@ -837,7 +837,7 @@ function os2sub_pages_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'image_style' => 'os2sub_normal_imagesize',
+      'image_style' => 'os2sub_banner',
       'image_link' => '',
     ),
     'context' => 'argument_term_1',

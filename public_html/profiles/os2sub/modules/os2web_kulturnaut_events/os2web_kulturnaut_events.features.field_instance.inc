@@ -2196,6 +2196,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'os2sub_banner' => 0,
           'os2sub_normal_imagesize' => 'os2sub_normal_imagesize',
           'os2sub_page_slideshow' => 0,
+          'os2sub_spotbox_image' => 'os2sub_spotbox_image',
           'os2web_spotbox_image' => 0,
         ),
       ),
