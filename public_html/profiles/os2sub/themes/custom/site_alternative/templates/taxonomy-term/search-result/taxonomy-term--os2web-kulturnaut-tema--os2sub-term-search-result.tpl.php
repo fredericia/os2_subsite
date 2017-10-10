@@ -45,10 +45,10 @@
 
   <div class="content">
     <div class="row">
-      <div class="col-xs-4 col-md-2">
+      <div class="col-sm-3 col-md-2 hidden-xs">
         <?php print render($content['field_os2web_kult_tema_image']); ?>
       </div>
-      <div class="col-xs-8 col-md-10">
+      <div class="col-xs-12 col-sm-9 col-md-10">
         <div class="field-name-field-os2web-content-type">
           <?php $vocabulary_name = taxonomy_vocabulary_machine_name_load($term->vocabulary_machine_name)->name;
           print($vocabulary_name);
@@ -61,6 +61,20 @@
 
         <?php
           hide($content['field_os2web_kult_tema_image']);
+        ?>
+        <div class="visible-xs">
+          <?php print render($content['field_os2web_kult_tema_image']); ?>
+        </div>
+
+        <?php
+          $alter = array();
+          $alter['html'] = TRUE;
+          $alter['max_length'] = 200;
+          $alter['word_boundary'] = TRUE;
+          $alter['ellipsis'] = FALSE;
+          print (views_trim_text($alter, render($content['description'])));
+
+          hide($content['description']);
           print render($content);
         ?>
       </div>

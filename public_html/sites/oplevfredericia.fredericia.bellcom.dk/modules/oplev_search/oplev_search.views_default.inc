@@ -72,11 +72,16 @@ function oplev_search_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
   $handler->display->display_options['sorts']['search_api_relevance']['table'] = 'search_api_index_oplev_index';
   $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'OR',
+  );
   /* Filter criterion: Search: Fulltext search */
   $handler->display->display_options['filters']['search_api_views_fulltext']['id'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['table'] = 'search_api_index_oplev_index';
   $handler->display->display_options['filters']['search_api_views_fulltext']['field'] = 'search_api_views_fulltext';
   $handler->display->display_options['filters']['search_api_views_fulltext']['operator'] = 'OR';
+  $handler->display->display_options['filters']['search_api_views_fulltext']['group'] = 1;
   $handler->display->display_options['filters']['search_api_views_fulltext']['exposed'] = TRUE;
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator_id'] = 'search_api_views_fulltext_op';
   $handler->display->display_options['filters']['search_api_views_fulltext']['expose']['operator'] = 'search_api_views_fulltext_op';
@@ -95,6 +100,13 @@ function oplev_search_views_default_views() {
   $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['field'] = 'node_field_os2web_kulturnaut_date_value2';
   $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['value'] = 'now';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['group'] = 2;
+  /* Filter criterion: Node » Dato: End date (indexed) */
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['id'] = 'node_field_os2web_kulturnaut_date_value2_1';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['table'] = 'search_api_index_oplev_index';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['field'] = 'node_field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['group'] = 2;
 
   /* Display: OS2Sub kulturnaut multisearch */
   $handler = $view->new_display('panel_pane', 'OS2Sub kulturnaut multisearch', 'pane_activities_multi_search');

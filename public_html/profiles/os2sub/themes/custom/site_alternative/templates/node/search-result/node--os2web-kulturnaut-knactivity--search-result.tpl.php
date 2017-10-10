@@ -81,13 +81,14 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <div class="row">
-    <div class="col-xs-12 col-sm-3 col-md-2">
+    <div class="col-sm-3 col-md-2 hidden-xs">
       <?php print render($content['field_os2web_kulturnaut_slidesho']); ?>
     </div>
     <div class="col-xs-12 col-sm-9 col-md-10">
       <div class="field-name-field-os2web-content-type">
         <?php print node_type_get_name($node); ?>
       </div>
+
       <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
         <header>
           <?php print render($title_prefix); ?>
@@ -114,8 +115,14 @@
       hide($content['field_os2web_kulturnaut_venue']);
       hide($content['field_os2web_kulturnaut_slidesho']);
       hide($content['field_os2web_kulturnaut_date']);
+      ?>
 
-      print render($content);
+      <div class="visible-xs">
+        <?php print render($content['field_os2web_kulturnaut_slidesho']); ?>
+      </div>
+
+      <?php
+        print render($content);
       ?>
     </div>
   </div>

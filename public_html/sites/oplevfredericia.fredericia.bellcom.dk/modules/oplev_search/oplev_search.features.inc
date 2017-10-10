@@ -75,7 +75,8 @@ function oplev_search_default_search_api_index() {
             "default" : "0",
             "bundles" : {
               "node:os2web_kulturnaut_knactivity" : "node:os2web_kulturnaut_knactivity",
-              "taxonomy_term:os2web_kulturnaut_tema" : "taxonomy_term:os2web_kulturnaut_tema"
+              "taxonomy_term:os2web_kulturnaut_tema" : "taxonomy_term:os2web_kulturnaut_tema",
+              "taxonomy_term:os2web_kulturnaut_venue" : "taxonomy_term:os2web_kulturnaut_venue"
             }
           }
         },
