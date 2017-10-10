@@ -80,5 +80,31 @@ function os2web_kulturnaut_events_metatag_export_default() {
     ),
   );
 
+  // Exported Metatag config instance: taxonomy_term:os2web_kulturnaut_tema.
+  $config['taxonomy_term:os2web_kulturnaut_tema'] = array(
+    'instance' => 'taxonomy_term:os2web_kulturnaut_tema',
+    'config' => array(
+      'og:image' => array(
+        'value' => '[term:field_os2web_kult_tema_image:os2sub_normal_imagesize]',
+      ),
+      'og:image:url' => array(
+        'value' => '[term:field_os2web_kult_tema_image:os2sub_normal_imagesize]',
+      ),
+    ),
+  );
+
+  // Exported Metatag config instance: taxonomy_term:os2web_kulturnaut_venue.
+  $config['taxonomy_term:os2web_kulturnaut_venue'] = array(
+    'instance' => 'taxonomy_term:os2web_kulturnaut_venue',
+    'config' => array(
+      'og:image' => array(
+        'value' => '[term:field_os2web_kult_venue_image_lg:os2sub_normal_imagesize]',
+      ),
+      'og:image:url' => array(
+        'value' => '[term:field_os2web_kult_venue_image_lg:os2sub_normal_imagesize]',
+      ),
+    ),
+  );
+
   return $config;
 }
