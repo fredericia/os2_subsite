@@ -46,7 +46,7 @@
   <div class="content">
     <div class="row">
       <div class="col-sm-3 col-md-2 hidden-xs">
-        <?php print render($content['field_os2web_kult_venue_image']); ?>
+        <?php print render($content['field_os2web_kult_venue_image_lg']); ?>
       </div>
       <div class="col-xs-12 col-sm-9 col-md-10">
         <div class="field-name-field-os2web-content-type">
@@ -60,10 +60,10 @@
         <?php endif; ?>
 
         <?php
-          hide($content['field_os2web_kult_venue_image']);
+          hide($content['field_os2web_kult_venue_image_lg']);
         ?>
         <div class="visible-xs">
-          <?php print render($content['field_os2web_kult_venue_image']); ?>
+          <?php print render($content['field_os2web_kult_venue_image_lg']); ?>
         </div>
 
         <?php

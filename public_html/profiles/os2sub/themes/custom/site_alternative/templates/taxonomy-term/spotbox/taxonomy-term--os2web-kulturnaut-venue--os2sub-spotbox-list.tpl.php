@@ -46,8 +46,8 @@
 
     <div class="content">
       <?php
-        if (empty($content['field_os2web_kult_venue_image'])) {
-          $field_instance = field_info_instance('taxonomy_term', 'field_os2web_kult_venue_image', 'os2web_kulturnaut_venue');
+        if (empty($content['field_os2web_kult_venue_image_lg'])) {
+          $field_instance = field_info_instance('taxonomy_term', 'field_os2web_kult_venue_image_lg', 'os2web_kulturnaut_venue');
           $image_style = $field_instance['display']['os2sub_spotbox_list']['settings']['image_style'];
 
           print theme('image_style', array('style_name' => $image_style, 'path' => 'public://knactivity_image_stub.png'));
