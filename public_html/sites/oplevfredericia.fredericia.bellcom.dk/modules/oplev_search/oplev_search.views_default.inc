@@ -74,6 +74,7 @@ function oplev_search_views_default_views() {
   $handler->display->display_options['sorts']['search_api_relevance']['field'] = 'search_api_relevance';
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
+    3 => 'OR',
     2 => 'OR',
   );
   /* Filter criterion: Search: Fulltext search */
@@ -114,6 +115,14 @@ function oplev_search_views_default_views() {
   $handler->display->display_options['filters']['node_status']['value'] = array(
     1 => '1',
   );
+  $handler->display->display_options['filters']['node_status']['group'] = 3;
+  /* Filter criterion: Node: Status (indexed) */
+  $handler->display->display_options['filters']['node_status_1']['id'] = 'node_status_1';
+  $handler->display->display_options['filters']['node_status_1']['table'] = 'search_api_index_oplev_index';
+  $handler->display->display_options['filters']['node_status_1']['field'] = 'node_status';
+  $handler->display->display_options['filters']['node_status_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['node_status_1']['value'] = array();
+  $handler->display->display_options['filters']['node_status_1']['group'] = 3;
 
   /* Display: OS2Sub kulturnaut multisearch */
   $handler = $view->new_display('panel_pane', 'OS2Sub kulturnaut multisearch', 'pane_activities_multi_search');
