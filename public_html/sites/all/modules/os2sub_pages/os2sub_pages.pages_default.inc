@@ -751,6 +751,9 @@ function os2sub_pages_default_page_manager_handlers() {
     'context' => array(
       0 => 'argument_term_1',
     ),
+    'override_title' => 1,
+    'override_title_text' => 'Steder',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -1310,6 +1313,9 @@ function os2sub_pages_default_page_manager_handlers() {
     'context' => array(
       0 => 'argument_term_1',
     ),
+    'override_title' => 1,
+    'override_title_text' => 'Steder',
+    'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
