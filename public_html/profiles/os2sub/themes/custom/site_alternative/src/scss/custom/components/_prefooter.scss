@@ -15,24 +15,15 @@
 // --------------------------------------------------
 
 .prefooter {
-  .right-vertical-line{
+  .prefooter__block {
     padding-top: 10px;
     padding-bottom: 0px;
-    h2.pane-title{
+    h2.pane-title {
       margin-top: 4px;
       margin-bottom: 15px;
     }
   }
-  .pop-tags{
-    padding-top: 10px;
-    padding-bottom: 0px;
-    padding-left: 10px;
-    h2.pane-title{
-      margin-top: 4px;
-      margin-bottom: 15px;
-    }
-  }
-  //background-color: $color-background-secondary;
+
   h2 .focus {
     color: $color-focus;
     font-weight: normal;
@@ -50,11 +41,11 @@
           margin-right: 0;
         }
         &:nth-child(1),
-          &:nth-child(2),
-          &:nth-child(3),
-          &:nth-child(4),
-          &:nth-child(5),
-          &:nth-child(6),  {
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6), {
           display: inline-block;
         }
 
@@ -65,6 +56,11 @@
           border-radius: 30px;
           font-size: 1.31em;
           color: $color-focus;
+          text-decoration: none;
+          &:hover, &:active {
+            background-color: $color-focus;
+            color: white;
+          }
         }
       }
     }
@@ -75,218 +71,72 @@
 & .prefooter {
   background-color: $color-background-secondary;
   margin-top: 20px;
-  & .right-vertical-line{
-    padding-top: 10px;
-    padding-bottom: 0px;
-    h2.pane-title{
-      margin-top: 4px;
-      margin-bottom: 15px;
-    }
-  }
-  & .pop-tags{
-    padding-top: 10px;
-    padding-bottom: 0px;
-    padding-left: 10px;
-    & h2.pane-title{
-      margin-top: 4px;
-      margin-bottom: 15px;
-    }
-  }
-  //background-color: $color-background-secondary;
-  & h2 .focus {
-    color: $color-focus;
-    font-weight: normal;
-  }
-  & .view-os2web-taxonomies-tax-editor-tag-list .item-list {
-    & ul {
-      padding: 0;
-      & li {
-        display: none;
-        list-style: none;
-        //display: inline-block;
-        margin-right: 15px;
-        margin-bottom: 13px;
-        &:last-child {
-          margin-right: 0;
-        }
-        &:nth-child(1),
-          &:nth-child(2),
-          &:nth-child(3),
-          &:nth-child(4),
-          &:nth-child(5),
-          &:nth-child(6),  {
-          display: inline-block;
-        }
-
-        & a {
-          display: block;
-          padding: 7px 40px;
-          background-color: $color-background-secondary;
-          border-radius: 30px;
-          font-size: 1.31em;
-          color: $color-focus;
-        }
+  .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+    ul {
+      a {
+        background-color: white;
       }
     }
   }
 }
-
-
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-// Desktop - only
-@include media-breakpoint-up(lg) {
 
-  // Footer
-  .prefooter {
-    .right-vertical-line{
-      border-width: 0 4px 0 0;
-      border-color: $color-background-secondary;
-      border-style: solid; 
-      padding-right: 63px;
-
-    }
-  }
-
-  .page-node 
-  & .prefooter {
-    & .right-vertical-line{
-      border-width: 0 4px 0 0;
-      border-color: white;
-      border-style: solid; 
-      padding-right: 63px;
-
-    }
-  }
-}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
-
-
-
 // Mobile - and up
 @include media-breakpoint-up(xs) {
-
-
 }
+
 // Mobile - only
 @include media-breakpoint-only(xs) {
-
-
 }
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-
-
 }
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
-
-  .social-icons {}
 }
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-  .page-node
-  & .prefooter {
-    margin-top: 40px;
-    & .right-vertical-line{
-      padding-top: 30px;
+  .prefooter {
+    .prefooter__block {
+      padding-top: 55px;
       padding-bottom: 30px;
-      & h2.pane-title{
+      &:last-child {
+        border-left: 4px solid $color-background-secondary;
+      }
+      h2.pane-title {
         margin-top: 4px;
         margin-bottom: 35px;
       }
-    }
-    & .pop-tags{
-      padding-top: 30px;
-      padding-bottom: 30px;
-      padding-left: 60px;
-      & h2.pane-title{
-        margin-top: 4px;
-        margin-bottom: 35px;
+      .prefooter__block-inner--left {
+        padding-right: 50px;
+      }
+      .prefooter__block-inner--right {
+        padding-left: 50px;
       }
     }
-    & .view-os2web-taxonomies-tax-editor-tag-list .item-list {
-      & ul {
-        padding: 0;
-        & li {
-          list-style: none;
+
+    .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+      ul {
+        li {
           display: inline-block;
-          margin-right: 15px;
-          margin-bottom: 13px;
-          &:last-child {
-            margin-right: 0;
-          }
-          & a {
-            display: block;
-            padding: 7px 40px;
-            background-color: white;
-            border-radius: 30px;
-            font-size: 1.31em;
-            color: $color-focus;
-            text-decoration: none;
-            &:hover{
-              background-color: $color-focus;
-              color: white;
-            }
-          }
         }
       }
     }
   }
 
-
-  .prefooter {
-
-    .right-vertical-line{
-      padding-top: 55px;
-      padding-bottom: 30px;
-      h2.pane-title{
-        margin-top: 4px;
-        margin-bottom: 35px;
-      }
-    }
-    .pop-tags{
-      padding-top: 55px;
-      padding-bottom: 30px;
-      padding-left: 60px;
-      h2.pane-title{
-        margin-top: 4px;
-        margin-bottom: 35px;
-      }
-    }
-    .view-os2web-taxonomies-tax-editor-tag-list .item-list {
-      ul {
-        padding: 0;
-        li {
-          list-style: none;
-          display: inline-block;
-          margin-right: 15px;
-          margin-bottom: 13px;
-          &:last-child {
-            margin-right: 0;
-          }
-          a {
-            display: block;
-            padding: 7px 40px;
-            background-color: $color-background-secondary;
-            border-radius: 30px;
-            font-size: 1.31em;
-            color: $color-focus;
-            text-decoration: none;
-            &:hover{
-              background-color: $color-focus;
-              color: white;
-            }
-          }
-        }
+  .page-node {
+    .prefooter__block {
+      &:last-child {
+        border-left: 4px solid white;
       }
     }
   }
@@ -294,34 +144,23 @@
 
 // Desktop - only
 @include media-breakpoint-only(md) {
-
-
 }
 
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
-
-
 }
 
 // Print
 @media print {
-
-
 }
 
 // Touch
 .touchevents {
 
-  // Social icons
-  .social-icons {}
 }
 
 // No touch
 .no-touchevents {
-
-  // Social icons
-  .social-icons {}
 }
 
 // --------------------------------------------------
@@ -329,4 +168,5 @@
 // --------------------------------------------------
 
 // Social icons mixin
-@mixin social-mixin-icons() {}
+@mixin social-mixin-icons() {
+}

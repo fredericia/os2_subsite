@@ -192,26 +192,30 @@
 <div class="prefooter">
   <div class="<?php print $container_class; ?>">
     <div class="row">
-      <div class="right-vertical-line col-lg-6 col-md-7">
-        <h2 class="pane-title">
-          <?php print t('Temaer lige nu'); ?>
-        </h2>
-        <?php
-        $view_popular_themes = views_get_view('os2web_kulturnaut_tema_list');
-        $view_popular_themes->set_display('block');
-        print $view_popular_themes->preview('block');
-        ?>
+      <div class="prefooter__block col-md-6">
+        <div class="prefooter__block-inner prefooter__block-inner--left">
+          <h2 class="pane-title">
+            <?php print t('Temaer lige nu'); ?>
+          </h2>
+          <?php
+          $view_popular_themes = views_get_view('os2web_kulturnaut_tema_list');
+          $view_popular_themes->set_display('block');
+          print $view_popular_themes->preview('block');
+          ?>
+        </div>
       </div>
-      <div class="pop-tags col-lg-6 col-lg-push-0 col-md-col-5 col-md-push-0">
-        <h2 class="pane-title">
-          <?php print t('Populære'); ?>
-          <span class="focus">#tags</span>
-        </h2>
-        <?php
-        $view_popular_tags = views_get_view('os2web_taxonomies_tax_editor_tag_list');
-        $view_popular_tags->set_display('block');
-        print $view_popular_tags->preview('block');
-        ?>
+      <div class="prefooter__block col-md-6">
+        <div class="prefooter__block-inner prefooter__block-inner--right">
+          <h2 class="pane-title">
+            <?php print t('Populære'); ?>
+            <span class="focus">#tags</span>
+          </h2>
+          <?php
+          $view_popular_tags = views_get_view('os2web_taxonomies_tax_editor_tag_list');
+          $view_popular_tags->set_display('block');
+          print $view_popular_tags->preview('block');
+          ?>
+        </div>
       </div>
     </div>
   </div>
