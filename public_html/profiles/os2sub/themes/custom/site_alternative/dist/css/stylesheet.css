@@ -9110,7 +9110,8 @@ h6,
 body {
   font-family: "Lato", sans-serif;
   font-weight: normal;
-  color: #333333; }
+  color: #333333;
+  -ms-overflow-style: scrollbar; }
 
 h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
 h1.pane-title,

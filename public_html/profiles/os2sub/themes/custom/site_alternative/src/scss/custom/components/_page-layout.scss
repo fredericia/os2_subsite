@@ -28,6 +28,7 @@ body {
   font-family: $font-lato;
   font-weight: normal;
   color: $color-font-dark;
+  -ms-overflow-style: scrollbar;
 }
 
 h1.page-header,
