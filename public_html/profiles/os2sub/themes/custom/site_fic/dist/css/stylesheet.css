@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto+Slab:300,400,700&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Roboto+Slab:300,400,700|Open+Sans:400,600,700&subset=latin-ext");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -8673,15 +8673,15 @@ h6,
     vertical-align: middle; }
 
 /* Main colors */
-/*rgb(252, 51, 6);*/
-/*rgb(23, 176, 209);*/
-/*rgb(36, 40, 46);*/
-/*rgb(21, 28, 30);*/
+/*rgb(255, 66, 0);*/
+/*rgb(1, 181, 213);*/
+/*rgb(42, 47, 54);*/
+/*rgb(25, 33, 36);*/
 /*rgb(255, 255, 255);*/
 body {
   font-family: "Lato", sans-serif;
   font-weight: normal;
-  color: #151c1e; }
+  color: #192124; }
 
 h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
 h1.pane-title,
@@ -8690,20 +8690,20 @@ h1.pane-title,
   font-family: "Roboto Slab", serif;
   font-weight: bold;
   font-size: 2.5em;
-  color: #151c1e;
+  color: #192124;
   border: 0; }
 
 h2.pane-title, .pane-title.heading-h2 {
   font-family: "Roboto Slab", serif;
   font-weight: lighter;
   font-size: 2.125em;
-  color: #151c1e; }
+  color: #192124; }
 
 h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-headline {
   font-weight: bold;
   font-size: 1.25em;
   text-transform: uppercase;
-  color: #151c1e; }
+  color: #192124; }
 
 .breadcrumb {
   background: none;
@@ -8803,7 +8803,7 @@ h1.pane-title,
       color: #FFF; }
 
 .btn, .banner .banner-wrapper a {
-  border: 5px solid #151c1e;
+  border: 5px solid #192124;
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-size: 1.31em;
@@ -8817,27 +8817,27 @@ h1.pane-title,
   padding-bottom: 10px; }
 
 .btn.btn-red, .banner .banner-wrapper a.btn-red {
-  background-color: #fc3306;
-  border-color: #fc3306;
+  background-color: #ff4200;
+  border-color: #ff4200;
   color: #ffffff; }
   .btn.btn-red:hover, .banner .banner-wrapper a.btn-red:hover, .btn.btn-red:active, .banner .banner-wrapper a.btn-red:active, .btn.btn-red:focus, .banner .banner-wrapper a.btn-red:focus {
-    color: #fc3306;
+    color: #ff4200;
     background-color: #ffffff; }
 
 .btn.btn-blue, .banner .banner-wrapper a.btn-blue {
-  background-color: #17b0d1;
-  border-color: #17b0d1;
+  background-color: #01b5d5;
+  border-color: #01b5d5;
   color: #ffffff; }
   .btn.btn-blue:hover, .banner .banner-wrapper a.btn-blue:hover, .btn.btn-blue:active, .banner .banner-wrapper a.btn-blue:active, .btn.btn-blue:focus, .banner .banner-wrapper a.btn-blue:focus {
-    color: #17b0d1;
+    color: #01b5d5;
     background-color: #ffffff; }
 
 .btn.btn-black, .banner .banner-wrapper a.btn-black {
-  background-color: #151c1e;
-  border-color: #151c1e;
+  background-color: #192124;
+  border-color: #192124;
   color: #ffffff; }
   .btn.btn-black:hover, .banner .banner-wrapper a.btn-black:hover, .btn.btn-black:active, .banner .banner-wrapper a.btn-black:active, .btn.btn-black:focus, .banner .banner-wrapper a.btn-black:focus {
-    color: #151c1e;
+    color: #192124;
     background-color: #ffffff; }
 
 .btn.btn-full-width, .banner .banner-wrapper a.btn-full-width {
@@ -8850,8 +8850,11 @@ h1.pane-title,
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper {
   position: relative; }
-  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper .field-type-image.field-name-field-os2web-kulturnaut-slidesho img {
-    border: 7px solid #151c1e; }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper .field-type-image.field-name-field-os2web-kulturnaut-slidesho {
+    max-width: 395px;
+    max-height: 240px; }
+    .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper .field-type-image.field-name-field-os2web-kulturnaut-slidesho img {
+      border: 7px solid #192124; }
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay {
   -webkit-transition: .5s ease;
@@ -8867,7 +8870,7 @@ h1.pane-title,
   -ms-transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: rgba(252, 51, 6, 0.75); }
+  background-color: rgba(255, 66, 0, 0.75); }
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content {
     text-align: center;
     position: relative;
@@ -8892,21 +8895,29 @@ h1.pane-title,
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a {
   text-transform: uppercase;
-  color: #17b0d1;
+  color: #01b5d5;
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 0.875em; }
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:focus {
     text-decoration: underline; }
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field-name-field-os2web-kulturnaut-date {
   text-transform: uppercase;
-  color: #fc3306;
+  color: #ff4200;
   margin-top: 30px;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em; }
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline {
-  text-transform: uppercase;
   margin-top: 0px; }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3 a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3 a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline a, .kontaktblok .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline a {
+    text-transform: uppercase;
+    margin-top: 0px;
+    font-size: 0.875em;
+    font-family: "Lato", sans-serif;
+    color: #192124; }
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field-name-field-os2web-kulturnaut-descrip .field-items :after {
   content: '...'; }
@@ -8930,7 +8941,7 @@ h1.pane-title,
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date, .view-display-id-pane_activities_list_2_3
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
     font-size: 1em;
-    color: #151c1e;
+    color: #192124;
     font-weight: normal;
     text-transform: lowercase; }
   .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_2_3
@@ -8972,7 +8983,7 @@ h1.pane-title,
     max-height: none; } }
 
 .pane-os2sub-social-share-os2sub-social-share .block__share-links .block__share-links__link a {
-  color: #151c1e;
+  color: #192124;
   height: 28px;
   min-width: 28px;
   background-repeat: no-repeat; }
@@ -9016,4 +9027,7 @@ h1.pane-title,
         font-size: inherit; } }
 
 /* General */
+.pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini .show-all {
+  text-align: right;
+  margin-top: 45px; }
 /*# sourceMappingURL=stylesheet.css.map */

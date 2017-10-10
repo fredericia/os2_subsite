@@ -21,6 +21,8 @@
   .overlay-wrapper {
     position: relative;
     & .field-type-image.field-name-field-os2web-kulturnaut-slidesho{
+      max-width: 395px;
+      max-height: 240px;
       img{
         border: 7px solid $color-black;
       }
@@ -72,26 +74,36 @@
       color: $color-blue;
       font-weight: bold;
       text-decoration: none;
+      font-size: 0.875em;
       &:active, &:hover, &:focus{
         text-decoration: underline;
       }
     }
   }
+
   & .field-name-field-os2web-kulturnaut-date{
-    
+
     text-transform: uppercase;
     color: $color-red;
     margin-top: 30px;
     font-weight: bold;
+    font-family: $font-open-sans;
+    font-size: 0.875em;
   }
   & header{
     & h3{
-      text-transform: uppercase;
       margin-top: 0px;
+      a{
+        text-transform: uppercase;
+        margin-top: 0px;
+        font-size: 0.875em;
+        font-family: $font-rbn021a;
+        color: $color-black;
+      }
     }
   }
   & .field-name-field-os2web-kulturnaut-descrip{
-   & .field-items{
+    & .field-items{
       :after{
         content: '...';
       }
@@ -172,7 +184,7 @@
 
       .view-display-id-pane_activities_list_5_load_more & {
         .field-name-field-os2web-kulturnaut-date {
-          span.date-display-single{ 
+          span.date-display-single{
             font-size: 1.125em;
             color: $color-white;
             font-weight: normal;
