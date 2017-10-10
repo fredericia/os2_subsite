@@ -107,6 +107,13 @@ function oplev_search_views_default_views() {
   $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['field'] = 'node_field_os2web_kulturnaut_date_value2';
   $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['operator'] = 'empty';
   $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2_1']['group'] = 2;
+  /* Filter criterion: Node: Status (indexed) */
+  $handler->display->display_options['filters']['node_status']['id'] = 'node_status';
+  $handler->display->display_options['filters']['node_status']['table'] = 'search_api_index_oplev_index';
+  $handler->display->display_options['filters']['node_status']['field'] = 'node_status';
+  $handler->display->display_options['filters']['node_status']['value'] = array(
+    1 => '1',
+  );
 
   /* Display: OS2Sub kulturnaut multisearch */
   $handler = $view->new_display('panel_pane', 'OS2Sub kulturnaut multisearch', 'pane_activities_multi_search');

@@ -56,6 +56,7 @@ function oplev_search_default_search_api_index() {
           "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
           "entity_type" : "taxonomy_term"
         },
+        "node:status" : { "type" : "boolean" },
         "node:title" : { "type" : "text" },
         "node:type" : { "type" : "string" },
         "search_api_language" : { "type" : "string" },
@@ -255,6 +256,12 @@ function oplev_search_default_search_api_server() {
             "table" : "search_api_db_oplev_index_node_field_os2web_kulturnaut_tema_pa",
             "column" : "value",
             "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+            "boost" : "1.0"
+          },
+          "node:status" : {
+            "table" : "search_api_db_oplev_index",
+            "column" : "node_status",
+            "type" : "boolean",
             "boost" : "1.0"
           }
         },
