@@ -89,6 +89,12 @@ function oplev_search_views_default_views() {
     5 => 0,
     3 => 0,
   );
+  /* Filter criterion: Node » Dato: End date (indexed) */
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['id'] = 'node_field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['table'] = 'search_api_index_oplev_index';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['field'] = 'node_field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['node_field_os2web_kulturnaut_date_value2']['value'] = 'now';
 
   /* Display: OS2Sub kulturnaut multisearch */
   $handler = $view->new_display('panel_pane', 'OS2Sub kulturnaut multisearch', 'pane_activities_multi_search');
