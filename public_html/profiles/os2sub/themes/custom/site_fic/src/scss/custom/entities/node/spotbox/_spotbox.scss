@@ -1,34 +1,27 @@
 // |--------------------------------------------------------------------------
-// | os2web-kulturnaut-events-lists
+// | Spotbox, Spotbox single, Spotbox mini
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .view-os2web-kulturnaut-events-lists
+// | - .view-mode-spotbox, .view-mode-os2sub_spotbox_single, .view-mode-os2sub_spotbox_mini
 // |
-
 
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
 
-//size of header in desktop orientation and up
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.activities-list-background{
-  background-color: $color-dark-gray;
-  padding-top: 120px !important;
-  padding-bottom: 120px !important;
-  .activities-list-container{
-    float: unset;
-    .panels-flexible-region-inside{
-      @extend .row;
-    }
-  }
-}
+
+// Teaser
+
+
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
 
 // --------------------------------------------------
 // Responsive
@@ -37,26 +30,26 @@
 // Mobile - and up
 @include media-breakpoint-up(xs) {
 
-  // Banner
-  .banner {
-  }
+
+
+
 }
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
+
 
 }
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
-  // Banner
-  .banner {
-  }
+
 }
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
+
 
 }
 
@@ -68,42 +61,37 @@
 // Desktop - only
 @include media-breakpoint-only(md) {
 
-  // Banner
-  .banner {
-  }
+
+
 }
 
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
 
-  // Banner
-  .banner {
-  }
+
 }
 
 // Print
 @media print {
 
-  // Banner
-  .banner {
-  }
+
 }
 
 // Touch
 .touchevents {
 
-  // Banner
-  .banner {
-  }
+  // Page layout
+  .content-inner {}
 }
 
 // No touch
 .no-touchevents {
 
-  // Banner
-  .banner {
-  }
+
 }
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
 
-
-
+// Page layout mixin
+@mixin content-mixin-inner() {}

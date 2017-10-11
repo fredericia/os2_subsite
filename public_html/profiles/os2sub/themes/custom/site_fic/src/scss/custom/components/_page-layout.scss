@@ -66,6 +66,14 @@ h3.pane-title {
   padding-top: 0px;
 }
 
+/*Some flex panel tweaks start*/
+.panels-flexible-region-1-center{
+  width: 100% !important;
+}
+.panel-separator{
+  display: none;
+}
+/*Some flex panel tweaks stop*/
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

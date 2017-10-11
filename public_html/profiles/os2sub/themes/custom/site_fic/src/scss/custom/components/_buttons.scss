@@ -39,7 +39,7 @@
     color: $color-white;
     &:hover, &:active, &:focus {
       color: $color-red;
-      background-color: $color-white;
+      background-color: transparent;
     }
   }
 
@@ -49,7 +49,7 @@
     color: $color-white;
     &:hover, &:active, &:focus {
       color: $color-blue;
-      background-color: $color-white;
+      background-color: transparent;
     }
   }
 
@@ -59,7 +59,7 @@
     color: $color-white;
     &:hover, &:active, &:focus {
       color: $color-black;
-      background-color: $color-white;
+      background-color: transparent;
     }
   }
 

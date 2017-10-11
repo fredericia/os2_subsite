@@ -146,6 +146,7 @@
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
+<div class="container">
       <?php if ( !empty($page['highlighted']) ): ?>
         <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
       <?php endif; ?>
@@ -178,17 +179,16 @@
       <?php if ( !empty($action_links) ): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
-<?php print render($page['content']); ?>
+</div>
     </section>
-
+<?php print render($page['content']); ?>
       <?php if ( !empty($page['sidebar_second']) ): ?>
       <aside class="col-sm-3" role="complementary">
       <?php print render($page['sidebar_second']); ?>
       </aside>  <!-- /#sidebar-second -->
 <?php endif; ?>
 
-  </div>
-</div>
+  </div>  
 
 <div class="prefooter">
   <div class="<?php print $container_class; ?>">
