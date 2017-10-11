@@ -30,6 +30,10 @@ function os2sub_pages_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Relationship: Content: Venue (field_os2web_kulturnaut_venue) */
+  $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['id'] = 'field_os2web_kulturnaut_venue_tid';
+  $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['table'] = 'field_data_field_os2web_kulturnaut_venue';
+  $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['field'] = 'field_os2web_kulturnaut_venue_tid';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -87,21 +91,32 @@ function os2sub_pages_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['table'] = 'field_data_field_os2web_kulturnaut_longdesc';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['field'] = 'field_os2web_kulturnaut_longdesc';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['exclude'] = TRUE;
-  /* Field: Content: Sted Adresse */
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['id'] = 'field_os2web_kulturnaut_saddress';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['table'] = 'field_data_field_os2web_kulturnaut_saddress';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['field'] = 'field_os2web_kulturnaut_saddress';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['exclude'] = TRUE;
-  /* Field: Content: Sted arrang */
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['id'] = 'field_os2web_kulturnaut_sarrang';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['table'] = 'field_data_field_os2web_kulturnaut_sarrang';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['field'] = 'field_os2web_kulturnaut_sarrang';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['exclude'] = TRUE;
   /* Field: Content: Sted homepage */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['id'] = 'field_os2web_kulturnaut_shomepag';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['table'] = 'field_data_field_os2web_kulturnaut_shomepag';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['field'] = 'field_os2web_kulturnaut_shomepag';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['exclude'] = TRUE;
+  /* Field: Taxonomy term: Address */
+  $handler->display->display_options['fields']['field_os2web_kult_venue_address']['id'] = 'field_os2web_kult_venue_address';
+  $handler->display->display_options['fields']['field_os2web_kult_venue_address']['table'] = 'field_data_field_os2web_kult_venue_address';
+  $handler->display->display_options['fields']['field_os2web_kult_venue_address']['field'] = 'field_os2web_kult_venue_address';
+  $handler->display->display_options['fields']['field_os2web_kult_venue_address']['relationship'] = 'field_os2web_kulturnaut_venue_tid';
+  $handler->display->display_options['fields']['field_os2web_kult_venue_address']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_kult_venue_address']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_kult_venue_address']['element_label_colon'] = FALSE;
+  /* Field: Content: Sted Adresse */
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['id'] = 'field_os2web_kulturnaut_saddress';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['table'] = 'field_data_field_os2web_kulturnaut_saddress';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['field'] = 'field_os2web_kulturnaut_saddress';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['empty'] = '[field_os2web_kult_venue_address]';
+  /* Field: Content: Sted arrang */
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['id'] = 'field_os2web_kulturnaut_sarrang';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['table'] = 'field_data_field_os2web_kulturnaut_sarrang';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['field'] = 'field_os2web_kulturnaut_sarrang';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['exclude'] = TRUE;
   /* Field: Content: Sted navn */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['id'] = 'field_os2web_kulturnaut_sname';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['table'] = 'field_data_field_os2web_kulturnaut_sname';
@@ -192,14 +207,15 @@ function os2sub_pages_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('term from field_os2web_kulturnaut_venue'),
     t('Beskrivelse'),
     t('Dato'),
     t('[field_os2web_kulturnaut_date-value]'),
     t('[field_os2web_kulturnaut_date_1-value2] '),
     t('Lang Beskrivelse'),
-    t('Sted Adresse'),
-    t('Sted arrang'),
     t('Sted homepage'),
+    t('[field_os2web_kult_venue_address]'),
+    t('Sted arrang'),
     t('Sted navn'),
     t('Sted Postby'),
     t('Venue'),
