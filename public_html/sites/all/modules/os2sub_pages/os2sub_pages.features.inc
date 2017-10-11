@@ -30,7 +30,7 @@ function os2sub_pages_image_default_styles() {
   $styles['os2sub_spotbox_image'] = array(
     'label' => 'OS2Sub spotbox image',
     'effects' => array(
-      36 => array(
+      42 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 370,
@@ -44,15 +44,15 @@ function os2sub_pages_image_default_styles() {
             'fallback' => 0,
           ),
         ),
-        'weight' => -10,
+        'weight' => -9,
       ),
-      29 => array(
+      41 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 370,
           'height' => 370,
         ),
-        'weight' => -9,
+        'weight' => -8,
       ),
     ),
   );
@@ -61,13 +61,29 @@ function os2sub_pages_image_default_styles() {
   $styles['os2sub_spotbox_mini_image'] = array(
     'label' => 'OS2sub Spotbox mini image',
     'effects' => array(
+      43 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 720,
+          'height' => 330,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
+        ),
+        'weight' => -10,
+      ),
       31 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 720,
           'height' => 330,
         ),
-        'weight' => 1,
+        'weight' => -9,
       ),
     ),
   );
@@ -76,13 +92,29 @@ function os2sub_pages_image_default_styles() {
   $styles['os2sub_spotbox_single_image'] = array(
     'label' => 'OS2Sub spotbox single image',
     'effects' => array(
+      38 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 720,
+          'height' => 720,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 0,
+          ),
+        ),
+        'weight' => -10,
+      ),
       30 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 720,
           'height' => 720,
         ),
-        'weight' => 1,
+        'weight' => -9,
       ),
     ),
   );
