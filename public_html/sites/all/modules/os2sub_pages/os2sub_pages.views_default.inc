@@ -147,6 +147,7 @@ function os2sub_pages_views_default_views() {
 	    <span class="description">[field_os2web_kulturnaut_descrip]</span>
 	    <span class="location">[field_os2web_kulturnaut_saddress]</span>
 	    <span class="organizer">[field_os2web_kulturnaut_venue]</span>
+	    <span class="organizer_email">detskeri@fredericia.dk</span>
 	    <span class="all_day_event">false</span>
 	</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
@@ -228,6 +229,7 @@ function os2sub_pages_views_default_views() {
 	    <span class="description">[field_os2web_kulturnaut_descrip]</span>
 	    <span class="location">[field_os2web_kulturnaut_saddress]</span>
 	    <span class="organizer">[field_os2web_kulturnaut_venue]</span>
+	    <span class="organizer_email">detskeri@fredericia.dk</span>
 	    <span class="all_day_event">false</span>
 	</div>'),
     t('Alle'),
