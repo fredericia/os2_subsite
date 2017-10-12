@@ -223,5 +223,8 @@
   <div class="<?php print $container_class; ?>">
 <?php print render($page['footer']); ?>
   </div>
+  <?php if (!empty($section_logo)): ?>
+  <div class="section-logo"><?php print $section_logo; ?></div>
+  <?php endif; ?>
 </footer>
 <?php //endif; ?>

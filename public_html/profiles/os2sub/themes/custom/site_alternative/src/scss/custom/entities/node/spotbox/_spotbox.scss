@@ -93,6 +93,9 @@
         font-weight: bold;
         display: none;
       }
+      .field-name-field-os2web-base-field-edi-tags {
+        display: none;
+      }
     }
     .view-display-id-pane_activities_list_4 & {
       .field-name-field-os2web-kulturnaut-date {
@@ -328,10 +331,13 @@
           font-weight: bold;
           display: block;
         }
+        .field-name-field-os2web-base-field-edi-tags {
+          display: block;
+        }
       }
       .field-name-field-os2web-base-field-edi-tags {
-      font-size: 1.125em;
-      font-weight: 900;
+        font-size: 1.125em;
+        font-weight: 900;
       }
     }
 

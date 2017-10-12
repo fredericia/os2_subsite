@@ -5004,6 +5004,54 @@ function os2web_base_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'taxonomy_term-os2web_base_tax_site_structure-field_afsnit'.
+  $field_instances['taxonomy_term-os2web_base_tax_site_structure-field_afsnit'] = array(
+    'bundle' => 'os2web_base_tax_site_structure',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 15,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_afsnit',
+    'label' => 'Paragraph',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'afsnit_m_billede' => -1,
+        'afsnit_m_citat' => -1,
+        'afsnit_m_link' => -1,
+      ),
+      'bundle_weights' => array(
+        'afsnit_m_billede' => 2,
+        'afsnit_m_citat' => 3,
+        'afsnit_m_link' => 4,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance:
   // 'taxonomy_term-os2web_base_tax_site_structure-field_alternative_display'.
   $field_instances['taxonomy_term-os2web_base_tax_site_structure-field_alternative_display'] = array(
     'bundle' => 'os2web_base_tax_site_structure',
@@ -5271,12 +5319,20 @@ function os2web_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'backstretch',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'svendborg_content_image',
+          'center_x' => 1,
+          'center_y' => 1,
+          'delta' => '',
+          'duration' => 5000,
+          'element' => 'other',
+          'element_other' => '.html.not-front',
+          'fade' => 0,
+          'field' => '',
+          'image_style' => 'os2web_cover',
+          'random' => FALSE,
         ),
-        'type' => 'image',
+        'type' => 'backstretch',
         'weight' => 0,
       ),
     ),
@@ -5693,6 +5749,7 @@ function os2web_base_field_default_field_instances() {
   t('Overordnet placering');
   t('PDF Filer');
   t('PDF filer');
+  t('Paragraph');
   t('Politik');
   t('Primære billede');
   t('Resume (maks 2 linier!)');

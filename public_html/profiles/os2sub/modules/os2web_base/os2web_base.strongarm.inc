@@ -716,13 +716,6 @@ function os2web_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'file_temporary_path';
-  $strongarm->value = '../tmp';
-  $export['file_temporary_path'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'jquery_update_compression_type';
   $strongarm->value = 'min';
   $export['jquery_update_compression_type'] = $strongarm;
@@ -997,7 +990,7 @@ function os2web_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_admin_theme';
-  $strongarm->value = 1;
+  $strongarm->value = '1';
   $export['node_admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -1218,6 +1211,13 @@ function os2web_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_webform_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_webform_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_punctuation_left_curly';
   $strongarm->value = '0';
   $export['pathauto_punctuation_left_curly'] = $strongarm;
@@ -1228,6 +1228,55 @@ function os2web_base_strongarm() {
   $strongarm->name = 'pathauto_punctuation_right_curly';
   $strongarm->value = '0';
   $export['pathauto_punctuation_right_curly'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_os2web_base_tax_promoteto_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_os2web_base_tax_promoteto_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_os2web_base_tax_site_structure_pattern';
+  $strongarm->value = '[term:parents:join-path]/[term:name]';
+  $export['pathauto_taxonomy_term_os2web_base_tax_site_structure_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_os2web_taxonomies_tax_editor_tag_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_os2web_taxonomies_tax_editor_tag_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_os2web_taxonomies_tax_kle_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_os2web_taxonomies_tax_kle_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_os2web_taxonomies_tax_org_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_os2web_taxonomies_tax_org_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_os2web_taxonomies_tax_places_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_os2web_taxonomies_tax_places_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_os2web_taxonomies_tax_politics_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_os2web_taxonomies_tax_politics_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

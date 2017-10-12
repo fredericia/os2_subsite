@@ -17,8 +17,8 @@
 // Teaser
 
 
-.view-mode-os2sub_spotbox_single.node,
-&.node-os2web-kulturnaut-knactivity {
+
+.node-os2web-kulturnaut-knactivity {
   position: relative;
   margin-bottom: 30px;
   header h2 {
@@ -202,8 +202,12 @@
 
 .event-list-4-show-all{
   .event-list-4-article{
+
     margin-bottom: 0px;
+
     .event-list-4{
+      max-height: 250px;
+      border: 10px dashed $color-black;
       width: 100%;
       //padding-top: 100%;
 
@@ -213,12 +217,13 @@
       text-transform: uppercase;
       position: relative;
       margin-bottom: -15px;
+
       .event-list-4-bottom-part{
         position: absolute;
         top: 50%;
         width: 100%;
         .event-list-4-text{
-          
+
           text-align: center;
           span.event-list-4-pluss{
             display: block;
@@ -230,10 +235,8 @@
           }
         }
       }
-      img.bordered{
-        max-height: 250px;
-        border: 10px dashed $color-black;
-
+      &:hover{
+        border-color: $color-white;
       }
     }
   }
@@ -348,9 +351,7 @@
   .event-list-4-show-all{
     .event-list-4-article{
       .event-list-4{
-        img.bordered{
-          max-height: unset;
-        }
+        max-height: unset;
       }
     }
   }

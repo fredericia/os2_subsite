@@ -1,0 +1,11 @@
+name = FIC theme settings
+description = FIC theme settings
+core = 7.x
+package = FIC site settings
+version = 7.x-1.0-beta1
+dependencies[] = ctools
+dependencies[] = strongarm
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[variable][] = theme_site_fic_settings
+project path = sites/fic.subsites.fredericia.dk/modules/features

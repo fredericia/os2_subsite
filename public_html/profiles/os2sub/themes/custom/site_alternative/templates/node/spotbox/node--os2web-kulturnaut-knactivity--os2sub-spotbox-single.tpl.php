@@ -96,11 +96,12 @@
   hide($content['field_os2web_base_field_edi_tags']);
   hide($content['field_os2web_kulturnaut_url']);
 
-  if (empty($content['field_os2web_kulturnaut_slidesho'])) {
-    $field_instance = field_info_instance('node', 'field_os2web_kulturnaut_slidesho', 'os2web_kulturnaut_knactivity');
-    $image_style = $field_instance['display']['os2sub_spotbox_single']['settings']['image_style'];
-    print theme('image_style', array('style_name' => $image_style, 'path' => 'public://knactivity_image_stub.png'));
-  }
+  //displaying default image, if image is missing, FKDK-822 - using the field default image instead
+//  if (empty($content['field_os2web_kulturnaut_slidesho'])) {
+//    $field_instance = field_info_instance('node', 'field_os2web_kulturnaut_slidesho', 'os2web_kulturnaut_knactivity');
+//    $image_style = $field_instance['display']['os2sub_spotbox_single']['settings']['image_style'];
+//    print theme('image_style', array('style_name' => $image_style, 'path' => 'public://knactivity_image_stub.png'));
+//  }
 
   print render($content);
   ?>
@@ -133,11 +134,11 @@
     </div>
   </div>
 
-  <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
-    <footer>
-      <?php print render($content['field_tags']); ?>
-      <?php print render($content['links']); ?>
-    </footer>
-  <?php endif; ?>
-  <?php print render($content['comments']); ?>
+<!--  --><?php //if (!empty($content['field_tags']) || !empty($content['links'])): ?>
+<!--    <footer>-->
+<!--      --><?php //print render($content['field_tags']); ?>
+<!--      --><?php //print render($content['links']); ?>
+<!--    </footer>-->
+<!--  --><?php //endif; ?>
+<!--  --><?php //print render($content['comments']); ?>
 </article>
