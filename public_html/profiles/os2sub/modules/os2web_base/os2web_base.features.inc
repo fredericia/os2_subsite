@@ -354,6 +354,11 @@ function os2web_base_paragraphs_info() {
       'bundle' => 'afsnit_m_link',
       'locked' => '1',
     ),
+    'header_text_links_image' => array(
+      'name' => 'Paragraph with header, text, links, image',
+      'bundle' => 'header_text_links_image',
+      'locked' => '1',
+    ),
   );
   return $items;
 }
