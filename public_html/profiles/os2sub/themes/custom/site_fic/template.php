@@ -56,6 +56,16 @@ function site_fic_preprocess_page(&$variables) {
   if (module_exists('color')) {
     _color_page_alter($variables);
   }
+
+  // Render section logo image.
+  if (isset($variables['section_logo_image']['uri'])) {
+    $section_logo_uri = $variables['section_logo_image']['uri'];
+    $variables['section_logo'] = theme('image_style', array(
+      // @TODO replace image_style_name.
+      'style_name' => 'thumbnail',
+      'path' => $section_logo_uri,
+    ));
+  }
 }
 
 /**
