@@ -8815,7 +8815,7 @@ h1.pane-title,
     .banner .banner-wrapper.color-1 {
       color: #FFF; }
 
-.btn, .banner .banner-wrapper a {
+.btn:not(.form-submit), .banner .banner-wrapper a:not(.form-submit) {
   border: 5px solid #192124;
   font-family: "Lato", sans-serif;
   font-weight: 900;
@@ -8829,31 +8829,31 @@ h1.pane-title,
   padding-top: 10px;
   padding-bottom: 10px; }
 
-.btn.btn-red, .banner .banner-wrapper a.btn-red {
+.btn:not(.form-submit).btn-red, .banner .banner-wrapper a:not(.form-submit).btn-red {
   background-color: #ff4200;
   border-color: #ff4200;
   color: #ffffff; }
-  .btn.btn-red:hover, .banner .banner-wrapper a.btn-red:hover, .btn.btn-red:active, .banner .banner-wrapper a.btn-red:active, .btn.btn-red:focus, .banner .banner-wrapper a.btn-red:focus {
+  .btn:not(.form-submit).btn-red:hover, .banner .banner-wrapper a:not(.form-submit).btn-red:hover, .btn:not(.form-submit).btn-red:active, .banner .banner-wrapper a:not(.form-submit).btn-red:active, .btn:not(.form-submit).btn-red:focus, .banner .banner-wrapper a:not(.form-submit).btn-red:focus {
     color: #ff4200;
     background-color: transparent; }
 
-.btn.btn-blue, .banner .banner-wrapper a.btn-blue {
+.btn:not(.form-submit).btn-blue, .banner .banner-wrapper a:not(.form-submit).btn-blue {
   background-color: #01b5d5;
   border-color: #01b5d5;
   color: #ffffff; }
-  .btn.btn-blue:hover, .banner .banner-wrapper a.btn-blue:hover, .btn.btn-blue:active, .banner .banner-wrapper a.btn-blue:active, .btn.btn-blue:focus, .banner .banner-wrapper a.btn-blue:focus {
+  .btn:not(.form-submit).btn-blue:hover, .banner .banner-wrapper a:not(.form-submit).btn-blue:hover, .btn:not(.form-submit).btn-blue:active, .banner .banner-wrapper a:not(.form-submit).btn-blue:active, .btn:not(.form-submit).btn-blue:focus, .banner .banner-wrapper a:not(.form-submit).btn-blue:focus {
     color: #01b5d5;
     background-color: transparent; }
 
-.btn.btn-black, .banner .banner-wrapper a.btn-black {
+.btn:not(.form-submit).btn-black, .banner .banner-wrapper a:not(.form-submit).btn-black {
   background-color: #192124;
   border-color: #192124;
   color: #ffffff; }
-  .btn.btn-black:hover, .banner .banner-wrapper a.btn-black:hover, .btn.btn-black:active, .banner .banner-wrapper a.btn-black:active, .btn.btn-black:focus, .banner .banner-wrapper a.btn-black:focus {
+  .btn:not(.form-submit).btn-black:hover, .banner .banner-wrapper a:not(.form-submit).btn-black:hover, .btn:not(.form-submit).btn-black:active, .banner .banner-wrapper a:not(.form-submit).btn-black:active, .btn:not(.form-submit).btn-black:focus, .banner .banner-wrapper a:not(.form-submit).btn-black:focus {
     color: #192124;
     background-color: transparent; }
 
-.btn.btn-full-width, .banner .banner-wrapper a.btn-full-width {
+.btn:not(.form-submit).btn-full-width, .banner .banner-wrapper a:not(.form-submit).btn-full-width {
   width: 100%;
   padding-left: 0;
   padding-right: 0; }
