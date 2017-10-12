@@ -147,6 +147,15 @@ $header-size: 112px;
       }
     }
   }
+  &.view-display-id-pane_activities_list_5_load_more {
+    .overlay{
+      a.btn.btn-full-width{
+        padding-left: initial;
+        padding-right: initial;
+        font-size: 1em;
+      }
+    }
+  }
 
   &.view-display-id-block_slideshow .views-slideshow-cycle-main-frame-row {
     max-width: 100%;
