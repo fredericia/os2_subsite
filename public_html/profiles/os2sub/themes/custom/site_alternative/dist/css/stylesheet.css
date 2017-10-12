@@ -10106,6 +10106,7 @@ footer.footer a.block-image-links__link {
       display: inline-block;
       border-radius: 10px; }
   .view-mode-os2sub_spotbox_list.vocabulary-os2web-kulturnaut-venue .bottom-part {
+    word-break: break-all;
     padding: 15px;
     position: absolute;
     width: 100%;
