@@ -1,0 +1,125 @@
+<?php
+
+/**
+ * @file
+ * Render logo of site section.
+ *
+ * Setup configuration of logo image from site structure term depends on
+ * current path and provide variable to render in page template.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function os2web_logo_menu() {
+  $items['admin/appearance/logo'] = array(
+    'title' => 'Section logo',
+    'description' => 'Define paths and terms of Site structure volabulary.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('os2web_logo_config'),
+    'access arguments' => array('administer themes'),
+  );
+  return $items;
+}
+
+/**
+ * Define os2web_logo_config form.
+ */
+function os2web_logo_config($form, &$form_state) {
+  $os2web_logo_config = variable_get('os2web_logo_paths', array());
+  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_base_tax_site_structure');
+  $terms = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
+  $form['#tree'] = TRUE;
+  $options = array('' => t('All'));
+  foreach ($terms as $term) {
+    $options[$term->tid] = $term->name;
+    $form['os2web_logo_paths'][$term->tid] = array(
+      '#type' => 'fieldset',
+      '#title' => $term->name,
+      '#collapsible' => TRUE,
+      '#collapsed' => empty($os2web_logo_config[$term->tid]),
+      'paths' => array(
+        '#type' => 'textarea',
+        '#title' => t('Specify paths set for section'),
+        '#default_value' => !empty($os2web_logo_config[$term->tid]) ? $os2web_logo_config[$term->tid] : '',
+      ),
+    );
+  }
+
+  $form['os2web_logo_default_tid'] = array(
+    '#type' => 'select',
+    '#title' => t('Select default term for section logo'),
+    '#options' => $options,
+    '#default_value' => variable_get('os2web_logo_default_term'),
+  );
+
+  $form['actions'] = array(
+    '#type' => 'actions',
+  );
+
+  $form['actions']['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save configuration'),
+  );
+  return $form;
+}
+
+/**
+ * Submit callback for os2web_logo_config form.
+ */
+function os2web_logo_config_submit($form, &$form_state) {
+  $os2web_logo_config = array();
+  foreach ($form_state['values']['os2web_logo_paths'] as $tid => $value) {
+    $os2web_logo_config[$tid] = $value['paths'];
+  }
+  variable_set('os2web_logo_paths', $os2web_logo_config);
+
+  if (isset($form_state['values']['os2web_logo_default_tid'])) {
+    variable_set('os2web_logo_default_tid', $form_state['values']['os2web_logo_default_tid']);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function os2web_logo_preprocess_page(&$vars) {
+  $section_logo_tid = variable_get('os2web_logo_default_tid');
+  $os2web_logo_paths = variable_get('os2web_logo_paths', array());
+  if (empty($os2web_logo_paths)) {
+    return;
+  }
+
+  foreach ($os2web_logo_paths as $tid => $paths) {
+    if (empty($paths)) {
+      continue;
+    }
+
+    // Convert path to lowercase. This allows comparison of the same path
+    // with different case. Ex: /Page, /page, /PAGE.
+    $pages = drupal_strtolower($paths);
+    // Convert the Drupal path to lowercase.
+    $path = drupal_strtolower(drupal_get_path_alias($_GET['q']));
+    // Compare the lowercase internal and lowercase path alias (if any).
+    $page_match = drupal_match_path($path, $pages);
+    if ($path != $_GET['q']) {
+      $page_match = $page_match || drupal_match_path($_GET['q'], $pages);
+    }
+
+    if (!$page_match) {
+      continue;
+    }
+
+    $section_logo_tid = $tid;
+    break;
+  }
+
+  if (empty($section_logo_tid)) {
+    return;
+  }
+
+  $term = taxonomy_term_load($section_logo_tid);
+  $logo_field_value = field_get_items('taxonomy_term', $term, 'field_os2web_base_field_logo');
+  if (isset($logo_field_value[0])) {
+    $vars['section_logo_image'] = $logo_field_value[0];
+  }
+}

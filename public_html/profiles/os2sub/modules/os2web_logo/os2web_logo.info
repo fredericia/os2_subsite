@@ -1,0 +1,9 @@
+name = OS2sub - Section logo
+core = 7.x
+package = OS2Sub
+version = 7.x-1.0
+project = os2sub_logo
+
+dependencies[] = os2web_base
+
+
