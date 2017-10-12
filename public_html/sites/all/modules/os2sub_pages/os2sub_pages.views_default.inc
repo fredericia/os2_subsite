@@ -90,7 +90,9 @@ function os2sub_pages_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['id'] = 'field_os2web_kulturnaut_longdesc';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['table'] = 'field_data_field_os2web_kulturnaut_longdesc';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['field'] = 'field_os2web_kulturnaut_longdesc';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['element_label_colon'] = FALSE;
   /* Field: Content: Sted homepage */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['id'] = 'field_os2web_kulturnaut_shomepag';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['table'] = 'field_data_field_os2web_kulturnaut_shomepag';
@@ -144,7 +146,7 @@ function os2sub_pages_views_default_views() {
 	    <span class="end">[field_os2web_kulturnaut_date_1]</span>
 	    <span class="timezone">Europe/Copenhagen</span>
 	    <span class="title">[title]</span>
-	    <span class="description">[field_os2web_kulturnaut_descrip]</span>
+	    <span class="description">[field_os2web_kulturnaut_longdesc] [field_os2web_kulturnaut_descrip]</span>
 	    <span class="location">[field_os2web_kulturnaut_saddress]</span>
 	    <span class="organizer">[field_os2web_kulturnaut_venue]</span>
 	    <span class="organizer_email">detskeri@fredericia.dk</span>
@@ -213,7 +215,6 @@ function os2sub_pages_views_default_views() {
     t('Dato'),
     t('[field_os2web_kulturnaut_date-value]'),
     t('[field_os2web_kulturnaut_date_1-value2] '),
-    t('Lang Beskrivelse'),
     t('Sted homepage'),
     t('[field_os2web_kult_venue_address]'),
     t('Sted arrang'),
@@ -226,7 +227,7 @@ function os2sub_pages_views_default_views() {
 	    <span class="end">[field_os2web_kulturnaut_date_1]</span>
 	    <span class="timezone">Europe/Copenhagen</span>
 	    <span class="title">[title]</span>
-	    <span class="description">[field_os2web_kulturnaut_descrip]</span>
+	    <span class="description">[field_os2web_kulturnaut_longdesc] [field_os2web_kulturnaut_descrip]</span>
 	    <span class="location">[field_os2web_kulturnaut_saddress]</span>
 	    <span class="organizer">[field_os2web_kulturnaut_venue]</span>
 	    <span class="organizer_email">detskeri@fredericia.dk</span>

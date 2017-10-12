@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FIC theme settings feature.
+ */
+
+include_once 'fic_theme_settings.features.inc';

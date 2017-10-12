@@ -30,22 +30,23 @@ function os2sub_banner_image_default_styles() {
   $styles['os2sub_banner'] = array(
     'label' => 'OS2sub Banner',
     'effects' => array(
-      1 => array(
+      34 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 1200,
           'height' => 350,
           'anchor' => 'center-center',
+          'disable_scale' => 0,
           'jcrop_settings' => array(
             'aspect_ratio' => '',
             'bgcolor' => 'black',
             'bgopacity' => 0.6,
-            'fallback' => 0,
+            'fallback' => 1,
           ),
         ),
         'weight' => 1,
       ),
-      2 => array(
+      35 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1200,

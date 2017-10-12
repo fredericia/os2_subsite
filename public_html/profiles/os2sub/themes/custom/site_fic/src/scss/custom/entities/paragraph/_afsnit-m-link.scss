@@ -1,0 +1,136 @@
+// |--------------------------------------------------------------------------
+// | 
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | 
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+.paragraphs-item-afsnit-m-link{
+  padding-bottom: 40px;
+  padding-top: 40px;
+  font-family: $font-rbn021a;
+  background-color: $color-blue;
+  .row{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    .field.field-name-field-paragraph-text{
+      flex-grow: unset;
+      color: $color-white;
+      font-size: 3.125em;
+      font-weight: normal;
+    }
+    .field.field-name-field-knap-link{
+      a{
+        @extend .btn;
+        @extend .btn-black;
+        font-size: 1.875em !important;
+        width: auto !important;
+        height: auto !important;
+        line-height: 0.9em !important;
+        font-family: $font-rbn021a !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        font-weight: normal !important;
+      }
+    }
+    .field-label{
+      display: none;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+}
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+  .social-icons {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  .paragraphs-item-afsnit-m-link{
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    .row{
+      display: flex;
+      justify-content: center;
+      .field.field-name-field-paragraph-text{
+        flex-grow: 1;
+      }
+    }
+  }
+
+
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+
