@@ -1,4 +1,8 @@
 /* Hide epsacrop button on CKEditor Media Browser (ckeditor_media) edit window */
-a.button.epsacrop{
+a.button.epsacrop {
   display: none;
+}
+
+.page-file-edit a.button.epsacrop {
+  display: inline;
 }
