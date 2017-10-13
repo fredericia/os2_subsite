@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FIC Frontpage settings feature.
+ */
+
+include_once 'fic_frontpage_settings.features.inc';

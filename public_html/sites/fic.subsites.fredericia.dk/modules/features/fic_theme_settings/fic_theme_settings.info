@@ -1,7 +1,7 @@
-name = FIC theme settings
+name = FIC theme settings feature
 description = FIC theme settings
 core = 7.x
-package = FIC site settings
+package = FIC
 version = 7.x-1.0-beta1
 dependencies[] = ctools
 dependencies[] = strongarm

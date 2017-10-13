@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Main deployment module install file.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function fic_deployment_enable() {
+  fic_deployment_update_7000();
+}
+
+/**
+ * Enable frontpage features.
+ */
+function fic_deployment_update_7000() {
+  module_enable(array('fic_frontpage_settings'));
+}
