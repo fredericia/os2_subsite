@@ -8928,13 +8928,19 @@ h1.pane-title,
     padding-bottom: 40px; } }
 
 .bg-white {
-  background-color: #FFF; }
+  background-color: #FFF;
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .bg-darker {
-  background-color: #222222; }
+  background-color: #222222;
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .bg-dark {
-  background-color: #333333; }
+  background-color: #333333;
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .panel-pane.views-container.full-width .views-container-inner {
   margin-right: auto;

@@ -16,12 +16,18 @@
 
 .bg-white {
   background-color: #FFF;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
 }
 .bg-darker {
   background-color: $gray-darker;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
 }
 .bg-dark {
   background-color: $gray-dark;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
 }
 
 .panel-pane.views-container.full-width .views-container-inner {
