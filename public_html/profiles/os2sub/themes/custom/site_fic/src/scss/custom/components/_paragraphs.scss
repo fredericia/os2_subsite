@@ -50,6 +50,9 @@
     }
   }
 }
+.panel-pane.views-container.full-width .view-id-fic_artikler .views-row-first {
+  @include make-md-column(6);
+}
 
 // --------------------------------------------------
 // Variants

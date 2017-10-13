@@ -8993,6 +8993,16 @@ h1.pane-title,
           float: left;
           width: 25%; } }
 
+.panel-pane.views-container.full-width .view-id-fic_artikler .views-row-first {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .panel-pane.views-container.full-width .view-id-fic_artikler .views-row-first {
+      float: left;
+      width: 50%; } }
+
 .bgimage {
   position: absolute;
   height: 100%;
