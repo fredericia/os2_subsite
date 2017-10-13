@@ -8937,6 +8937,15 @@ h1.pane-title,
     display: table; }
   .panel-pane.views-container.full-width .views-container-inner:after {
     clear: both; }
+  @media (min-width: 768px) {
+    .panel-pane.views-container.full-width .views-container-inner {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .panel-pane.views-container.full-width .views-container-inner {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .panel-pane.views-container.full-width .views-container-inner {
+      width: 1170px; } }
 
 .social-icons-list {
   padding: 0;
