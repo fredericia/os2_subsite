@@ -8930,6 +8930,11 @@ h1.pane-title,
           float: left;
           width: 25%; } }
 
+#sbgimage {
+  position: absolute;
+  height: 600px;
+  width: 100%; }
+
 .social-icons-list {
   padding: 0;
   margin-bottom: 5px;

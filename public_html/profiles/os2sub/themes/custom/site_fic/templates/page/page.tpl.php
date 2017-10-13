@@ -73,6 +73,7 @@
  * @ingroup templates
  */
 ?>
+<div id="sbgimage" class="bgimage">&nbsp;</div>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="headerwrapper">
     <div class="headerwrapper-inner">
