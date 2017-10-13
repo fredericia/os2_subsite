@@ -169,6 +169,7 @@
         <?php endif; ?>
       </div>
     </section>
+  </div>
 <?php if (panels_get_current_page_display()): ?>
   <?php print render($page['content']); ?>
 <?php else: ?>
