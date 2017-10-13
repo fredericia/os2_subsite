@@ -28,8 +28,17 @@
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <div class="container">
-      <div class="paragraph-content">
-          <?php print render($content); ?>
+      <div class="row">
+        <div class="col-md-12 col-lg-6">
+          <div class="aligner">
+          <?php print render($content['field_paragraph_header']); ?>
+          <?php print render($content['field_paragraph_text']); ?>
+          <?php print render($content['field_knap_link']); ?>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-6">
+          <?php print render($content['field_image']); ?>
+        </div>
       </div>
     </div>
   </div>

@@ -14,26 +14,37 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-afsnit-m-link{
+.paragraphs-item-header-text-links-image{
   padding-bottom: 40px;
   padding-top: 40px;
-  font-family: $font-rbn021a;
-  background-color: $color-blue;
-  .paragraph-content{
-    justify-content: center;
+  background-color: $color-dark-gray;
+  .row{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
 
     .field.field-name-field-paragraph-text{
-      flex-grow: unset;
       color: $color-white;
-      font-size: 3.125em;
+      font-size: 1.25em;
       font-weight: normal;
+      font-family: $font-lato;
+      margin-bottom: 30px;
     }
+
+    .field.field-name-field-paragraph-header{
+      margin-bottom: 30px;
+      color: $color-white;
+      text-transform: uppercase;
+      font-size: 2.368em;
+      font-weight: normal;
+      font-family: $font-rbn021a;
+    }
+
     .field.field-name-field-knap-link{
+
       a{
         @extend .btn;
-        @extend .btn-black;
+        @extend .btn-red;
+
         font-size: 1.875em !important;
         width: auto !important;
         height: auto !important;
@@ -42,6 +53,26 @@
         padding-left: 20px !important;
         padding-right: 20px !important;
         font-weight: normal !important;
+
+      }
+
+      .field-item{
+        float: left;
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+
+        &:last-child {
+          margin-right: 0px !important;
+        }
+        &:first-child{
+          margin-left: 0px !important;
+        }
+      }
+    }
+
+    .field.field-name-field-image{
+      img{
+        border: 10px solid $color-white;
       }
     }
     .field-label{
@@ -86,15 +117,14 @@
 // Desktop - and up
 @include media-breakpoint-up(md) {
 
-  .paragraphs-item-afsnit-m-link{
+  .paragraphs-item-header-text-links-image{
     padding-bottom: 60px;
     padding-top: 60px;
 
-    .paragraph-content{
-      display: flex;
-      justify-content: center;
+    .row{
+
       .field.field-name-field-paragraph-text{
-        flex-grow: 1;
+
       }
     }
   }
