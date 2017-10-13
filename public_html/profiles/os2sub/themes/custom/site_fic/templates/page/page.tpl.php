@@ -169,13 +169,7 @@
       </div>
     </section>
 <?php if (panels_get_current_page_display()): ?>
-    <?php if ($wrap_panels_layout): ?>
-        <div class="container">
-            <?php print render($page['content']); ?>
-        </div>
-    <?php else: ?>
-        <?php print render($page['content']); ?>
-    <?php endif; ?>
+  <?php print render($page['content']); ?>
 <?php else: ?>
     <div class="container">
         <div class="os2-box">
@@ -193,7 +187,7 @@
 
   </div>  
 
-
+  
 
 <?php //if (!empty($page['footer'])):  ?>
 <footer class="footer">
