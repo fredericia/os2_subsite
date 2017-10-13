@@ -50,7 +50,7 @@
     }
   }
 }
-.panel-pane.views-container.full-width .view-id-fic_artikler .views-row-first {
+.panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row.views-row-first {
   @include make-md-column(6);
 }
 
