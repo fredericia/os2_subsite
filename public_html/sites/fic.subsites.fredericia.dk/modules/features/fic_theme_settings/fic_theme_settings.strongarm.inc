@@ -31,7 +31,7 @@ function fic_theme_settings_strongarm() {
     'favicon_path' => '',
     'favicon_upload' => '',
     'bootstrap__active_tab' => 'edit-general',
-    'bootstrap_fluid_container' => 1,
+    'bootstrap_fluid_container' => 0,
     'bootstrap_button_size' => '',
     'bootstrap_button_colorize' => 1,
     'bootstrap_button_iconize' => 1,
