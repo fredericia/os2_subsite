@@ -27,15 +27,10 @@
   }
   .view-content {
     @include make-row();
-    display: flex;
-    flex-wrap: wrap;
     .views-row {
-      flex-basis: 0;
-      flex-grow: 1;
-      flex: 0 0 25%;
-      max-width: 25%;
-      padding-left:  ($grid-gutter-width / 2);
-      padding-right: ($grid-gutter-width / 2);
+      @include make-xs-column(12);
+      @include make-sm-column(6);
+      @include make-md-column(3);
     }
   }
 }
