@@ -25,11 +25,11 @@
   @media (min-width: $screen-lg-min) {
       width: $container-lg;
   }
-  .views-row {
+  .view-content {
     @include make-row($gutter: $grid-gutter-width);
     display: flex;
     flex-wrap: wrap;
-    .row {
+    .views-row {
       flex-basis: 0;
       flex-grow: 1;
       flex: 0 0 25%;
