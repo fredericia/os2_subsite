@@ -65,6 +65,73 @@ function fic_page_settings_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
+  $pane->pid = 'new-bf9deb60-d67d-4342-993e-abc5da1f784b';
+  $pane->panel = 'dark_section_1';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'taxonomy_term:field_os2web_base_field_image';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'title',
+    'formatter' => 'backstretch',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'image_style' => '',
+      'element' => '',
+      'element_other' => '.bgimage',
+      'duration' => 5000,
+      'fade' => '0',
+      'center_x' => 1,
+      'center_y' => 1,
+      'random' => FALSE,
+    ),
+    'context' => 'argument_term_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'bf9deb60-d67d-4342-993e-abc5da1f784b';
+  $display->content['new-bf9deb60-d67d-4342-993e-abc5da1f784b'] = $pane;
+  $display->panels['dark_section_1'][0] = 'new-bf9deb60-d67d-4342-993e-abc5da1f784b';
+  $pane = new stdClass();
+  $pane->pid = 'new-cb60b7b3-93f2-4014-9c55-9b41070764d7';
+  $pane->panel = 'dark_section_2';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'fic_kommende_arrangementer-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'more_link' => 1,
+    'arguments' => array(
+      'term_node_tid_depth' => '%term:tid',
+    ),
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'fw-views',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'cb60b7b3-93f2-4014-9c55-9b41070764d7';
+  $display->content['new-cb60b7b3-93f2-4014-9c55-9b41070764d7'] = $pane;
+  $display->panels['dark_section_2'][0] = 'new-cb60b7b3-93f2-4014-9c55-9b41070764d7';
+  $pane = new stdClass();
   $pane->pid = 'new-fd64dc95-8b4a-486d-a902-b4af8d5025c5';
   $pane->panel = 'light_section_1';
   $pane->type = 'entity_field';
@@ -100,32 +167,6 @@ function fic_page_settings_default_page_manager_handlers() {
   $pane->uuid = 'fd64dc95-8b4a-486d-a902-b4af8d5025c5';
   $display->content['new-fd64dc95-8b4a-486d-a902-b4af8d5025c5'] = $pane;
   $display->panels['light_section_1'][0] = 'new-fd64dc95-8b4a-486d-a902-b4af8d5025c5';
-  $pane = new stdClass();
-  $pane->pid = 'new-a7d04197-787b-4360-a736-bfe253cceb77';
-  $pane->panel = 'light_section_1';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'os2web_kulturnaut_events_lists-pane_activities_for_tag';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'context' => array(
-      0 => 'argument_term_1',
-    ),
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = 'a7d04197-787b-4360-a736-bfe253cceb77';
-  $display->content['new-a7d04197-787b-4360-a736-bfe253cceb77'] = $pane;
-  $display->panels['light_section_1'][1] = 'new-a7d04197-787b-4360-a736-bfe253cceb77';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-fd64dc95-8b4a-486d-a902-b4af8d5025c5';
   $handler->conf['display'] = $display;
