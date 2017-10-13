@@ -1,7 +1,7 @@
-name = FIC page settings
+name = FIC page settings feature
 description = Panels etc
 core = 7.x
-package = FIC site settings
+package = FIC
 version = 7.x-1.0
 dependencies[] = ctools
 dependencies[] = features
