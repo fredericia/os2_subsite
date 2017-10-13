@@ -45,12 +45,30 @@ function site_fic_preprocess_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function site_fic_preprocess_page(&$variables) {
+  $current_theme = variable_get('theme_default','none');
+  $primary_navigation_name = variable_get('menu_main_links_source', 'main-menu');
+  $secondary_navigation_name = variable_get('menu_secondary_links_source', 'user-menu');
 
-  // Tabs
-//  $variables['tabs_primary'] = $variables['tabs'];
-//  $variables['tabs_secondary'] = $variables['tabs'];
-//  unset($variables['tabs_primary']['#secondary']);
-//  unset($variables['tabs_secondary']['#primary']);
+  // Wrap panels layout.
+  $variables['wrap_panels_layout'] = FALSE;
+
+  $exclude_layouts_from_wrapping = array(
+    'full-width-dark-light-dark',
+    'full-width-light-dark-light',
+  );
+  if (!in_array($variables['panels']->layout, $exclude_layouts_from_wrapping)) {
+    $variables['wrap_panels_layout'] = TRUE;
+  }
+
+  // Tabs.
+  $variables['tabs_primary'] = $variables['tabs'];
+  $variables['tabs_secondary'] = $variables['tabs'];
+  unset($variables['tabs_primary']['#secondary']);
+  unset($variables['tabs_secondary']['#primary']);
+
+
+  // Tabbed navigation
+  $variables['tabbed_navigation'] = _bellcom_generate_menu($primary_navigation_name, 'tabbed', 1);
 
   // Color
   if (module_exists('color')) {
