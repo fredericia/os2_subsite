@@ -1,0 +1,15 @@
+name = FIC Frontpage settings
+description = Feature with frontpage related configuration
+core = 7.x
+package = FIC
+dependencies[] = ds
+dependencies[] = views
+dependencies[] = views_slideshow
+dependencies[] = views_slideshow_cycle
+dependencies[] = views_slideshow_rendered_entity_pager
+features[ctools][] = ds:ds:1
+features[ctools][] = views:views_default:3.0
+features[ds_view_modes][] = fic_header
+features[features_api][] = api:2
+features[views_view][] = fic_header_banners
+features_exclude[dependencies][ctools] = ctools
