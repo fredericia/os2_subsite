@@ -23,7 +23,8 @@
       </div>
     <?php endif; ?>
 
-    <div class="pane-content container">
+    <div class="pane-content paragraphs-container">
+      <div class=""></div>
       <?php print render($content); ?>
     </div>
 
