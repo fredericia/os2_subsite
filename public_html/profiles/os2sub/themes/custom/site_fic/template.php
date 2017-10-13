@@ -53,8 +53,8 @@ function site_fic_preprocess_page(&$variables) {
   $variables['wrap_panels_layout'] = FALSE;
 
   $exclude_layouts_from_wrapping = array(
-    'full-width-dark-light-dark',
-    'full-width-light-dark-light',
+    'full-width-dark-light-dark-no',
+    'full-width-light-dark-light-no',
   );
   if (!in_array($variables['panels']->layout, $exclude_layouts_from_wrapping)) {
     $variables['wrap_panels_layout'] = TRUE;
