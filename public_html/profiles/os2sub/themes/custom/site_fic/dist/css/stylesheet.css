@@ -8942,16 +8942,6 @@ h1.pane-title,
   padding-top: 30px;
   padding-bottom: 30px; }
 
-.panel-pane.views-container.full-width .view-id-fic_artikler .views-row-first {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 992px) {
-    .panel-pane.views-container.full-width .view-id-fic_artikler .views-row-first {
-      float: left;
-      width: 50%; } }
-
 .panel-pane.views-container.full-width .views-container-inner {
   margin-right: auto;
   margin-left: auto;
@@ -9002,6 +8992,16 @@ h1.pane-title,
         .panel-pane.views-container.full-width .views-container-inner .view-content .views-row {
           float: left;
           width: 25%; } }
+
+.panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row.views-row-first {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 992px) {
+    .panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row.views-row-first {
+      float: left;
+      width: 50%; } }
 
 .bgimage {
   position: absolute;
