@@ -25,6 +25,17 @@
   @media (min-width: $screen-lg-min) {
       width: $container-lg;
   }
+  .views-row {
+    @include make-row($gutter: $grid-gutter-width);
+    display: flex;
+    flex-wrap: wrap;
+    .row {
+      flex-basis: 0;
+      flex-grow: 1;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+  }
 }
 
 // --------------------------------------------------
