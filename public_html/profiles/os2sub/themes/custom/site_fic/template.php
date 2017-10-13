@@ -49,17 +49,6 @@ function site_fic_preprocess_page(&$variables) {
   $primary_navigation_name = variable_get('menu_main_links_source', 'main-menu');
   $secondary_navigation_name = variable_get('menu_secondary_links_source', 'user-menu');
 
-  // Wrap panels layout.
-  $variables['wrap_panels_layout'] = FALSE;
-
-  $exclude_layouts_from_wrapping = array(
-    'full-width-dark-light-dark-no',
-    'full-width-light-dark-light-no',
-  );
-  if (!in_array($variables['panels']->layout, $exclude_layouts_from_wrapping)) {
-    $variables['wrap_panels_layout'] = TRUE;
-  }
-
   // Tabs.
   $variables['tabs_primary'] = $variables['tabs'];
   $variables['tabs_secondary'] = $variables['tabs'];
