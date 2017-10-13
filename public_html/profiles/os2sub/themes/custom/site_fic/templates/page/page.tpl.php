@@ -74,8 +74,8 @@
  */
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="<?php print $container_class; ?> headerwrapper">
-    <div class="<?php print $container_class; ?> inner">
+  <div class="headerwrapper">
+    <div class="headerwrapper-inner">
       <div class="navbar-header">
         <?php if ( $logo ): ?>
           <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -115,18 +115,9 @@
     <?php endif; ?>
   </div>
 
-  <div class="container-fluid">
-    <div class="menu-background-slideshow row">
-      <?php
-      $view_slideshow = views_get_view('os2web_kulturnaut_events_lists');
-      $view_slideshow->set_display('block_slideshow');
-      print $view_slideshow->preview('block_slideshow');
-      ?>
-    </div>
-  </div>
 </header>
 
-<div class="main-container <?php print $container_class; ?>">
+<div class="main-container">
 
   <header role="banner" id="page-header">
     <?php if ( !empty($site_slogan) ): ?>
@@ -146,42 +137,54 @@
     <?php endif; ?>
 
     <section<?php print $content_column_class; ?>>
-<div class="container">
-      <?php if ( !empty($page['highlighted']) ): ?>
-        <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-      <div class="row">
-        <div class="col-xs-6">
-          <?php if ( !empty($breadcrumb) ): print $breadcrumb;
-          endif; ?>
+      <div class="container">
+        <?php if ( !empty($page['highlighted']) ): ?>
+          <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+        <?php endif; ?>
+        <div class="row">
+          <div class="col-xs-6">
+            <?php if ( !empty($breadcrumb) ): print $breadcrumb;
+            endif; ?>
+          </div>
+          <div class="col-xs-6">
+          </div>
         </div>
-        <div class="col-xs-6">
-          <?php
-          $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
-          print render($block['content']);
-          ?>
-        </div>
+  
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if ( !empty($title) ): ?>
+          <h1 class="page-header"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
+        <?php if ( !empty($tabs) ): ?>
+          <?php print render($tabs); ?>
+        <?php endif; ?>
+        <?php if ( !empty($page['help']) ): ?>
+          <?php print render($page['help']); ?>
+        <?php endif; ?>
+        <?php if ( !empty($action_links) ): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
       </div>
-
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if ( !empty($title) ): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php if ( !empty($tabs) ): ?>
-        <?php print render($tabs); ?>
-      <?php endif; ?>
-      <?php if ( !empty($page['help']) ): ?>
-        <?php print render($page['help']); ?>
-      <?php endif; ?>
-      <?php if ( !empty($action_links) ): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-</div>
     </section>
-<?php print render($page['content']); ?>
+<?php if (panels_get_current_page_display()): ?>
+    <?php if ($wrap_panels_layout): ?>
+        <div class="container">
+            <?php print render($page['content']); ?>
+        </div>
+    <?php else: ?>
+        <?php print render($page['content']); ?>
+    <?php endif; ?>
+<?php else: ?>
+    <div class="container">
+        <div class="os2-box">
+            <div class="os2-box-body">
+                <?php print render($page['content']); ?>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
       <?php if ( !empty($page['sidebar_second']) ): ?>
       <aside class="col-sm-3" role="complementary">
       <?php print render($page['sidebar_second']); ?>
@@ -190,33 +193,7 @@
 
   </div>  
 
-<div class="prefooter">
-  <div class="<?php print $container_class; ?>">
-    <div class="row">
-      <div class="right-vertical-line col-lg-6 col-md-7">
-        <h2 class="pane-title">
-        <?php print t('Temaer lige nu'); ?>
-        </h2>
-        <?php
-        $view_popular_tags = views_get_view('os2web_kulturnaut_tema_list');
-        $view_popular_tags->set_display('block');
-        print $view_popular_tags->preview('block');
-        ?>
-      </div>
-      <div class="pop-tags col-lg-6 col-lg-push-0 col-md-col-5 col-md-push-0">
-        <h2 class="pane-title">
-<?php print t('Populære'); ?>
-          <span class="focus">#tags</span>
-        </h2>
-        <?php
-//        $view_popular_tags = views_get_view('os2web_kulturnaut_events_lists');
-//        $view_popular_tags->set_display('pane_activities_list_4');
-//        print $view_popular_tags->preview('pane_activities_list_4');
-        ?>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 <?php //if (!empty($page['footer'])):  ?>
 <footer class="footer">

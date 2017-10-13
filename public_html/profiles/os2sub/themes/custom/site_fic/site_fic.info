@@ -65,6 +65,7 @@ settings[bootstrap_cdn_jsdelivr_theme] = 'bootstrap'
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; sassy[] = 'colors/variables.scss'
+plugins[panels][layouts] = 'layouts'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Theme settings
