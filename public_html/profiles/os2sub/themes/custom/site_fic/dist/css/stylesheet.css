@@ -8973,8 +8973,8 @@ h1.pane-title,
           -ms-flex: 0 0 25%;
               flex: 0 0 25%;
       max-width: 25%;
-      padding-left: 30px;
-      padding-right: 30px; }
+      padding-left: 15px;
+      padding-right: 15px; }
 
 .social-icons-list {
   padding: 0;
