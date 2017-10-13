@@ -89,7 +89,11 @@ function fic_page_settings_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'paragraphs',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
@@ -170,12 +174,15 @@ function fic_page_settings_default_page_manager_pages() {
     'name' => 'panel',
   );
   $display = new panels_display();
-  $display->layout = 'flexible';
+  $display->layout = 'full-width-dark-light-dark';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'center' => NULL,
+      'light_section_1' => NULL,
+      'dark_section_1' => NULL,
+      'dark_section_2' => NULL,
     ),
   );
   $display->cache = array();
@@ -187,7 +194,7 @@ function fic_page_settings_default_page_manager_pages() {
   $display->panels = array();
   $pane = new stdClass();
   $pane->pid = 'new-48069c2e-9da4-4428-9f1f-f2dedf977652';
-  $pane->panel = 'center';
+  $pane->panel = 'light_section_1';
   $pane->type = 'views';
   $pane->subtype = 'fic_header_banners';
   $pane->shown = TRUE;
@@ -219,10 +226,10 @@ function fic_page_settings_default_page_manager_pages() {
   $pane->locks = array();
   $pane->uuid = '48069c2e-9da4-4428-9f1f-f2dedf977652';
   $display->content['new-48069c2e-9da4-4428-9f1f-f2dedf977652'] = $pane;
-  $display->panels['center'][0] = 'new-48069c2e-9da4-4428-9f1f-f2dedf977652';
+  $display->panels['light_section_1'][0] = 'new-48069c2e-9da4-4428-9f1f-f2dedf977652';
   $pane = new stdClass();
   $pane->pid = 'new-5c5d563e-bedf-40d2-aede-66998d36167e';
-  $pane->panel = 'center';
+  $pane->panel = 'light_section_1';
   $pane->type = 'views_panes';
   $pane->subtype = 'os2web_kulturnaut_events_lists-pane_activities_list_4_mini';
   $pane->shown = TRUE;
@@ -238,7 +245,31 @@ function fic_page_settings_default_page_manager_pages() {
   $pane->locks = array();
   $pane->uuid = '5c5d563e-bedf-40d2-aede-66998d36167e';
   $display->content['new-5c5d563e-bedf-40d2-aede-66998d36167e'] = $pane;
-  $display->panels['center'][1] = 'new-5c5d563e-bedf-40d2-aede-66998d36167e';
+  $display->panels['light_section_1'][1] = 'new-5c5d563e-bedf-40d2-aede-66998d36167e';
+  $pane = new stdClass();
+  $pane->pid = 'new-76ddba32-d033-4033-8131-0fff43b9f77e';
+  $pane->panel = 'light_section_1';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'fic_kommende_arrangementer-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'more_link' => 1,
+    'arguments' => array(
+      'term_node_tid_depth' => '',
+    ),
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '76ddba32-d033-4033-8131-0fff43b9f77e';
+  $display->content['new-76ddba32-d033-4033-8131-0fff43b9f77e'] = $pane;
+  $display->panels['light_section_1'][2] = 'new-76ddba32-d033-4033-8131-0fff43b9f77e';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-48069c2e-9da4-4428-9f1f-f2dedf977652';
   $handler->conf['display'] = $display;
