@@ -1,0 +1,104 @@
+// |--------------------------------------------------------------------------
+// | Paragraphs
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .paragraphs
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.panel-pane.views-container.full-width .views-container-inner {
+  @include container-fixed();
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Header
+  .paragraphs {
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Header
+  .paragraphs {
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+  //trick to mane menu clickable on the front page because of background slideshow
+
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Header
+  .paragraphs {
+  }
+}
+
+// Print
+@media print {
+
+  // Header
+  .paragraphs {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Header
+  .paragraphs {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Header
+  .paragraphs {
+  }
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Header mixin
+@mixin paragraphs-mixin() {
+}

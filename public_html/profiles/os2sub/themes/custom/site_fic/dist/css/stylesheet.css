@@ -8927,6 +8927,17 @@ h1.pane-title,
     padding-top: 30px;
     padding-bottom: 40px; } }
 
+.panel-pane.views-container.full-width .views-container-inner {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .panel-pane.views-container.full-width .views-container-inner:before, .panel-pane.views-container.full-width .views-container-inner:after {
+    content: " ";
+    display: table; }
+  .panel-pane.views-container.full-width .views-container-inner:after {
+    clear: both; }
+
 .social-icons-list {
   padding: 0;
   margin-bottom: 5px;
