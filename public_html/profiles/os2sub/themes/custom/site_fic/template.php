@@ -134,20 +134,6 @@ function site_fic_menu_local_tasks(&$variables) {
 }
 
 /**
- * Views Slideshow: pager field item field.
- */
-function site_fic_preprocess_views_slideshow_pager_field_field(&$vars) {
-  $view = $vars['view'];
-  $vars['field_item'] = $view->field[$vars['field']];
-  $vars['field_rendered'] = $view->style_plugin->rendered_fields[$vars['count']][$vars['field']];
-  $vars['css_id'] = drupal_clean_css_identifier($vars['field_item']->field);
-  if (!strstr($vars['field_rendered'], '<a')) {
-    $vars['field_rendered'] = "<a href='#'></a>";
-  }
-  //dpm($view);
-}
-
-/**
  * Returns HTML for a menu link and submenu.
  *
  * @param array $variables
