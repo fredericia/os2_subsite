@@ -13,12 +13,10 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.bgimage {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+.front #page-header,
+.page-taxonomy-term #page-header {
+  height: 940px;
 }
-
 
 // --------------------------------------------------
 // Variants

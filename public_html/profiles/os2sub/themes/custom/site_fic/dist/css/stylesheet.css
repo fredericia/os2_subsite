@@ -9003,10 +9003,9 @@ h1.pane-title,
       float: left;
       width: 50%; } }
 
-.bgimage {
-  position: absolute;
-  height: 100%;
-  width: 100%; }
+.front #page-header,
+.page-taxonomy-term #page-header {
+  height: 940px; }
 
 .social-icons-list {
   padding: 0;

@@ -73,8 +73,7 @@
  * @ingroup templates
  */
 ?>
-<div id="sbgimage" class="bgimage">&nbsp;</div>
-<header role="navigation" id="page-header">
+<header role="navigation" id="page-header" class="page-header-wrapper">
   <div class="header-container container">
     <div class="logo-wrapper col-sm-5">
       <?php if ( $logo ): ?>
