@@ -93,7 +93,7 @@
         <?php print render($secondary_nav); ?>
       <?php endif; ?>
     </nav>
-    <nav id="navbar" role="banner" class="col-sm-7 col-sm-push-5 <?php print $navbar_classes; ?>">
+    <nav id="navbar" role="banner" class="col-sm-7 <?php print $navbar_classes; ?>">
       <div class="headerwrapper-inner">
         <div class="navbar-header">
           <?php if ( !empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation']) ): ?>
