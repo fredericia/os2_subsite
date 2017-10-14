@@ -339,6 +339,45 @@ function fic_page_settings_default_page_manager_pages() {
   $pane->uuid = 'b6ad54bc-ba9f-4616-8017-e50b0e515855';
   $display->content['new-b6ad54bc-ba9f-4616-8017-e50b0e515855'] = $pane;
   $display->panels['light_section_1'][2] = 'new-b6ad54bc-ba9f-4616-8017-e50b0e515855';
+  $pane = new stdClass();
+  $pane->pid = 'new-efded6ec-a2b4-4ffc-bc50-df1c9075d6f7';
+  $pane->panel = 'light_section_1';
+  $pane->type = 'views';
+  $pane->subtype = 'instagram_billeder';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '7',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'block',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'bg-darker',
+    'template_suggestion' => 'paragraphs',
+  );
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $pane->uuid = 'efded6ec-a2b4-4ffc-bc50-df1c9075d6f7';
+  $display->content['new-efded6ec-a2b4-4ffc-bc50-df1c9075d6f7'] = $pane;
+  $display->panels['light_section_1'][3] = 'new-efded6ec-a2b4-4ffc-bc50-df1c9075d6f7';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-48069c2e-9da4-4428-9f1f-f2dedf977652';
   $handler->conf['display'] = $display;

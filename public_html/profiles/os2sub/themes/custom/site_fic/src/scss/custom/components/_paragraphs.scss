@@ -29,7 +29,34 @@
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
 }
-
+.paragraphs-container {
+  @include container-fixed($gutter: $grid-gutter-width); 
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+      width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+  }
+}
+.pane-instagram-billeder {
+  .view-content {
+    @include make-row();
+    background-image: url('../img/bg-instagram.png');
+    background-repeat: no-repeat;
+    background-position-x: 20px;
+    background-position-y: 20px;
+  }
+  .views-row {
+    @include make-xs-column(6);
+    @include make-sm-column(3);
+  }
+  .views-row-first {
+    @include make-sm-column-push(3);
+  }
+}
 .panel-pane.views-container.full-width .views-container-inner {
   @include container-fixed($gutter: $grid-gutter-width); 
   @media (min-width: $screen-sm-min) {
