@@ -92,6 +92,9 @@
       <?php if ( !empty($secondary_nav) ): ?>
         <?php print render($secondary_nav); ?>
       <?php endif; ?>
+      <?php if ( !empty($page['navigation']) ): ?>
+        <?php print render($page['navigation']); ?>
+      <?php endif; ?>
     </nav>
     <nav id="navbar" role="banner" class="col-sm-7 <?php print $navbar_classes; ?>">
       <div class="headerwrapper-inner">
@@ -111,11 +114,6 @@
               <?php if ( !empty($primary_nav) ): ?>
                 <?php print render($primary_nav); ?>
               <?php endif; ?>
-
-              <?php if ( !empty($page['navigation']) ): ?>
-                <?php print render($page['navigation']); ?>
-              <?php endif; ?>
-              
             </nav>
           </div>
         <?php endif; ?>
