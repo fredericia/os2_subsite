@@ -295,6 +295,13 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: 'administer news type-4'.
+  $permissions['administer news type-4'] = array(
+    'name' => 'administer news type-4',
+    'roles' => array(),
+    'module' => 'os2web_news_page',
+  );
+
   // Exported permission: 'administer nodes'.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
@@ -1429,16 +1436,6 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'module' => 'epsacrop',
   );
 
-  // Exported permission: 'import media'.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'subsiteadmin' => 'subsiteadmin',
-    ),
-    'module' => 'media',
-  );
-
   // Exported permission: 'notify of path changes'.
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
@@ -1466,15 +1463,6 @@ function os2sub_uses_and_tools_user_default_permissions() {
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: 'schedule (un)publishing of nodes'.
-  $permissions['schedule (un)publishing of nodes'] = array(
-    'name' => 'schedule (un)publishing of nodes',
-    'roles' => array(
-      'subsiteadmin' => 'subsiteadmin',
-    ),
-    'module' => 'scheduler',
   );
 
   // Exported permission: 'select account cancellation method'.
