@@ -4,6 +4,7 @@ core = 7.x
 package = FIC
 dependencies[] = ds
 dependencies[] = entity
+dependencies[] = media_instagram
 dependencies[] = views
 dependencies[] = views_slideshow
 dependencies[] = views_slideshow_cycle
