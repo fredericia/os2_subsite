@@ -126,4 +126,4 @@ features[views_view][] = os2sub_nyheder
 features[views_view][] = os2sub_spotbokse
 features[views_view][] = os2sub_velkomst
 features[views_view][] = os2web_kulturnaut_tema_list
-project path = profiles/os2sub/modules
+project path = sites/fic.subsites.fredericia.dk/modules
