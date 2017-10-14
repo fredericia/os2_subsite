@@ -13,5 +13,6 @@ $plugin = array(
     'sidebar' => t('Sidebar'),
     'dark_section_1' => t('Dark section'),
     'light_section_1' => t('Light section'),
+    'dark_section_2' => t('Dark section 2'),
   ),
 );

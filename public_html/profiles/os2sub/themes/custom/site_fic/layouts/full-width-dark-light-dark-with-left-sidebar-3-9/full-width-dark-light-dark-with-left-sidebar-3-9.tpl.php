@@ -37,6 +37,7 @@
     </div>
     <!-- End - dark section no. 1 -->
   <?php endif ?>
+  <?php echo $content['dark_section_1']; ?>
   <?php echo $content['light_section_1']; ?>
   <?php echo $content['dark_section_2']; ?>
 </div>
