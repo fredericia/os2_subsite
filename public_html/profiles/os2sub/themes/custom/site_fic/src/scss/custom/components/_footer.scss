@@ -16,6 +16,10 @@
 
 // Footer
 footer.footer {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  border-top: none;
   .footer-dark {
     background-color: $gray-darker;
     padding-top: $grid-gutter-width;
