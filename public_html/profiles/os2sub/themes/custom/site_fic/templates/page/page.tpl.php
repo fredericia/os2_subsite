@@ -107,7 +107,7 @@
     </div>
   <?php endif; ?>
   <?php if (!empty($page['footer1'])) : ?>
-    <div class="container footer-container footer1-container">
+    <div class="footer-container footer1-container">
       <?php print render($page['footer1']); ?>
     </div>
   <?php endif; ?>
@@ -185,7 +185,7 @@
         <?php if (!empty($page['footer5'])) : ?>
           <div class="col-sm-3">
             <div class="footer5">
-              <div class="custom-links">
+              <div class="custom-text">
                 <?php print render($page['footer5']); ?>
               </div>
             </div>
