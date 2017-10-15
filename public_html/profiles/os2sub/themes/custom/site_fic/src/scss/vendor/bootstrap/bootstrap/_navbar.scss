@@ -397,8 +397,13 @@
 .navbar-default {
   background-color:transparent;
   border-color: transparent;
+  .navbar-collapse {
+    border: none;
+  }
   .search-form {
     line-height: 30px;
+    background-color: #ff4200;
+    margin-left: 45%;
     .form-text {
       background-color: transparent;
       border: none;
@@ -411,6 +416,7 @@
 
   .navbar-brand {
     background-color: #FFF;
+    margin-right: 30px;
     color: $navbar-default-brand-color;
     &:hover,
     &:focus {

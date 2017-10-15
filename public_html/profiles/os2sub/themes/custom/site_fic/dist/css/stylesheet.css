@@ -4066,8 +4066,12 @@ tbody.collapse.in {
 .navbar-default {
   background-color: transparent;
   border-color: transparent; }
+  .navbar-default .navbar-collapse {
+    border: none; }
   .navbar-default .search-form {
-    line-height: 30px; }
+    line-height: 30px;
+    background-color: #ff4200;
+    margin-left: 45%; }
     .navbar-default .search-form .form-text {
       background-color: transparent;
       border: none; }
@@ -4076,6 +4080,7 @@ tbody.collapse.in {
       border: transparent; }
   .navbar-default .navbar-brand {
     background-color: #FFF;
+    margin-right: 30px;
     color: #777; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
       color: #5e5e5e;
