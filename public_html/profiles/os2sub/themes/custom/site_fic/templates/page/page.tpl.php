@@ -1,5 +1,6 @@
 <header role="navigation" id="page-header" class="page-header-wrapper">
   <div class="header-container container">
+    <?php print render($page['header']); ?>
     <div class="logo-wrapper col-sm-5">
       <?php if ( $logo ): ?>
         <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -44,7 +45,6 @@
         <?php print $search_box; ?>
       </div>
     </nav>
-    <?php print render($page['header']); ?>
   </div>
 </header>
 
