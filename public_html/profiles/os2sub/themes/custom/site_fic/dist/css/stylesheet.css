@@ -9170,7 +9170,8 @@ footer.footer {
   .social-icon-list ul li {
     display: inline; }
     .social-icon-list ul li a.social-icon {
-      color: #FFF; }
+      color: #FFF;
+      font: normal normal normal 20px/1 FontAwesome; }
       .social-icon-list ul li a.social-icon.social-icon-linkedin {
         content: "\f0e1"; }
       .social-icon-list ul li a.social-icon.social-icon-instagram {
