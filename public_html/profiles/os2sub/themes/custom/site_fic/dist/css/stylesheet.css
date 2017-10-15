@@ -9165,6 +9165,19 @@ footer.footer {
     footer.footer .footer-dark h2.block-title, footer.footer .footer-dark .block-title.heading-h2 {
       color: #23527c; }
 
+.social-icon-list ul {
+  list-style: none; }
+  .social-icon-list ul li {
+    display: inline; }
+    .social-icon-list ul li a.social-icon {
+      color: #FFF; }
+      .social-icon-list ul li a.social-icon.social-icon-linkedin {
+        content: "\f0e1"; }
+      .social-icon-list ul li a.social-icon.social-icon-instagram {
+        content: "\f16d"; }
+      .social-icon-list ul li a.social-icon.social-icon-youtube {
+        content: "\f167"; }
+
 .btn:not(.form-submit), .banner .banner-wrapper a:not(.form-submit), .paragraphs-item-afsnit-m-link .row .field.field-name-field-knap-link a:not(.form-submit), .paragraphs-item-afsnit-m-link .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit), .activities-list-background .activities-list-container .paragraphs-item-afsnit-m-link .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit) {
   border: 5px solid #192124;
   font-family: "Lato", sans-serif;

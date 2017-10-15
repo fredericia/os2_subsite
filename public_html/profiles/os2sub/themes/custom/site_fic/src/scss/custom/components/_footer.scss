@@ -34,7 +34,26 @@ footer.footer {
     }
   }
 }
-
+.social-icon-list {
+  ul {
+    list-style: none;
+    li {
+      display: inline;
+      a.social-icon {
+        color: #FFF;
+        &.social-icon-linkedin {
+          content: "\f0e1";
+        }
+        &.social-icon-instagram {
+          content: "\f16d";
+        }
+        &.social-icon-youtube {
+          content: "\f167";
+        }
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Variants
