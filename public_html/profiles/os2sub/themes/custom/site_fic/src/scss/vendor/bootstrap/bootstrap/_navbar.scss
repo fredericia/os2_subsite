@@ -395,10 +395,22 @@
 
 // Default navbar
 .navbar-default {
-  background-color:#FFF;
-  border-color: #FFF;
+  background-color:transparent;
+  border-color: transparent;
+  .search-form {
+    line-height: 30px;
+    .form-text {
+      background-color: transparent;
+      border: none;
+    }
+    .btn.btn-primary {
+      background-color: transparent;
+      border: transparent;
+    }
+  }
 
   .navbar-brand {
+    background-color: #FFF;
     color: $navbar-default-brand-color;
     &:hover,
     &:focus {
@@ -415,8 +427,8 @@
     > li > a {
       color: $navbar-default-link-color;
       padding: 5px 5px;
-      line-height: 12px;
-      font-size: 20px;
+      line-height: 30px;
+      font-size: 15px;
       font-family: $headings-font-family;
 
       &:hover,

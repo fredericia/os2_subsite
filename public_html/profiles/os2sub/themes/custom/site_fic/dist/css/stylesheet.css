@@ -4064,9 +4064,18 @@ tbody.collapse.in {
       margin-right: 0; } }
 
 .navbar-default {
-  background-color: #FFF;
-  border-color: #FFF; }
+  background-color: transparent;
+  border-color: transparent; }
+  .navbar-default .search-form {
+    line-height: 30px; }
+    .navbar-default .search-form .form-text {
+      background-color: transparent;
+      border: none; }
+    .navbar-default .search-form .btn.btn-primary, .navbar-default .search-form .banner .banner-wrapper a, .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .paragraphs-item-afsnit-m-link .row .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-afsnit-m-link .row .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-afsnit-m-link .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-afsnit-m-link .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .activities-list-background .activities-list-container .paragraphs-item-afsnit-m-link .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .activities-list-background .activities-list-container .paragraphs-item-afsnit-m-link .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary {
+      background-color: transparent;
+      border: transparent; }
   .navbar-default .navbar-brand {
+    background-color: #FFF;
     color: #777; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
       color: #5e5e5e;
@@ -4076,8 +4085,8 @@ tbody.collapse.in {
   .navbar-default .navbar-nav > li > a {
     color: #777;
     padding: 5px 5px;
-    line-height: 12px;
-    font-size: 20px;
+    line-height: 30px;
+    font-size: 15px;
     font-family: inherit; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #333;
