@@ -9235,19 +9235,19 @@ footer.footer {
   padding-bottom: 10px; }
 
 .btn:not(.form-submit).btn-red, .banner .banner-wrapper a:not(.form-submit).btn-red, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-red, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit), .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit), .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit) {
-  background-color: #ff4200;
-  border-color: #ff4200;
+  background-color: #f24244;
+  border-color: #f24244;
   color: #ffffff; }
   .btn:not(.form-submit).btn-red:hover, .banner .banner-wrapper a:not(.form-submit).btn-red:hover, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-red:hover, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit):hover, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):hover, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):hover, .btn:not(.form-submit).btn-red:active, .banner .banner-wrapper a:not(.form-submit).btn-red:active, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-red:active, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit):active, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):active, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):active, .btn:not(.form-submit).btn-red:focus, .banner .banner-wrapper a:not(.form-submit).btn-red:focus, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-red:focus, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit):focus, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):focus, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):focus {
-    color: #ff4200;
+    color: #f24244;
     background-color: transparent; }
 
 .btn:not(.form-submit).btn-blue, .banner .banner-wrapper a:not(.form-submit).btn-blue, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue {
-  background-color: #01b5d5;
-  border-color: #01b5d5;
+  background-color: #01B5D5;
+  border-color: #01B5D5;
   color: #ffffff; }
   .btn:not(.form-submit).btn-blue:hover, .banner .banner-wrapper a:not(.form-submit).btn-blue:hover, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-blue:hover, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit).btn-blue:hover, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue:hover, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue:hover, .btn:not(.form-submit).btn-blue:active, .banner .banner-wrapper a:not(.form-submit).btn-blue:active, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-blue:active, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit).btn-blue:active, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue:active, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue:active, .btn:not(.form-submit).btn-blue:focus, .banner .banner-wrapper a:not(.form-submit).btn-blue:focus, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit).btn-blue:focus, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit).btn-blue:focus, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue:focus, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue:focus {
-    color: #01b5d5;
+    color: #01B5D5;
     background-color: transparent; }
 
 .btn:not(.form-submit).btn-black, .banner .banner-wrapper a:not(.form-submit).btn-black, .paragraphs-item-afsnit-m-link .paragraph-content .field.field-name-field-knap-link a:not(.form-submit), .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit).btn-black, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-black, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-black {
@@ -9288,7 +9288,7 @@ footer.footer {
   -ms-transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 66, 0, 0.75); }
+  background-color: rgba(242, 66, 68, 0.75); }
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content {
     text-align: center;
     position: relative;
@@ -9313,7 +9313,7 @@ footer.footer {
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a {
   text-transform: uppercase;
-  color: #01b5d5;
+  color: #01B5D5;
   font-weight: bold;
   text-decoration: none;
   font-size: 0.875em; }
@@ -9322,7 +9322,7 @@ footer.footer {
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field-name-field-os2web-kulturnaut-date {
   text-transform: uppercase;
-  color: #ff4200;
+  color: #f24244;
   margin-top: 30px;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
@@ -9409,7 +9409,7 @@ footer.footer {
     margin-bottom: 3px; }
   .node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
     font-size: 0.94em;
-    color: #01b5d5;
+    color: #01B5D5;
     font-weight: bold; }
   .node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue,
   .node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-sname,
@@ -9480,7 +9480,7 @@ footer.footer {
   -ms-transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 66, 0, 0.75); }
+  background-color: rgba(242, 66, 68, 0.75); }
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .overlay .overlay-content {
     text-align: center;
     position: relative;
@@ -9531,7 +9531,7 @@ footer.footer {
   margin-left: 5px; }
 
 .view-mode-os2sub_spotbox_list.node .link.show-more a {
-  color: #01b5d5;
+  color: #01B5D5;
   font-weight: bold;
   text-decoration: underline; }
 
@@ -9556,7 +9556,7 @@ footer.footer {
         .event-list-4-show-all .event-list-4-article .event-list-4 .event-list-4-bottom-part .event-list-4-text span.event-list-4-pluss {
           display: block;
           margin-bottom: 20px;
-          color: #01b5d5;
+          color: #01B5D5;
           font-weight: bold;
           font-size: 3.18em;
           line-height: 0.5em; }
@@ -9582,7 +9582,7 @@ footer.footer {
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date, .view-display-id-pane_activities_list_2_3
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
     font-size: 1em;
-    color: #ff4200;
+    color: #f24244;
     font-weight: normal;
     text-transform: lowercase; }
   .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_2_3
@@ -9595,7 +9595,7 @@ footer.footer {
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single, .view-display-id-pane_activities_list_5_load_more
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single {
     font-size: 1.125em;
-    color: #01b5d5;
+    color: #01B5D5;
     font-weight: normal;
     text-transform: lowercase;
     display: block; }
@@ -9721,7 +9721,7 @@ footer.footer {
   padding-bottom: 40px;
   padding-top: 40px;
   font-family: "RBNo21a-Medium", sans-serif;
-  background-color: #01b5d5; }
+  background-color: #01B5D5; }
   .paragraphs-item-afsnit-m-link .paragraph-content {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -9857,7 +9857,7 @@ footer.footer {
       margin-bottom: 30px; }
     .paragraphs-item-header-text-media .row .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-paragraph-header, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .field.field-name-field-paragraph-header {
       margin-bottom: 30px;
-      color: #ff4200;
+      color: #f24244;
       text-transform: uppercase;
       font-size: 2.368em;
       font-weight: normal;
