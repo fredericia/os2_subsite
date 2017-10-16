@@ -15,18 +15,16 @@
 // Styling
 // --------------------------------------------------
 .view-fic-header-banners {
-  height: 500px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+  .views-slideshow-cycle-main-frame {
+    height: auto !important;
+  }
 
-  .views_slideshow_cycle_main {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
+  .views-slideshow-cycle-main-frame-row {
+    position: static !important;
+  }
+
+  .views_slideshow_main {
+    height: 500px;
   }
 
   .views-slideshow-controls-bottom {
@@ -40,6 +38,54 @@
     }
     @media (min-width: $screen-lg-min) {
       width: $container-lg;
+    }
+  }
+
+  .taxonomy-term {
+    height: 400px;
+    text-align: center;
+    color: $color-white;
+    font-family: $font-rbn021a;
+    position: relative;
+
+    &-description {
+      font-size: 3.125em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: auto;
+    }
+  }
+
+  .views-slideshow-contrqwols-bottom {
+    text-align: center;
+
+    a {
+      font-family: $font-rbn021a;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 10px 20px 10px;
+      background: $color-white;
+      color: $color-black;
+      position: relative;
+      text-decoration: none;
+
+      &::after {
+        content: '>';
+        display: block;
+        height: 20px;
+        position: absolute;
+        right: 6px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+    }
+
+    .views-row-first {
+      display: none;
     }
   }
 }
