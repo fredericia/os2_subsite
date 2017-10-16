@@ -38,8 +38,10 @@
     .field-item {
       @include make-xs-column(6);
       @include make-sm-column(4);
-      border: #000 solid 4px;
       margin-bottom: ($grid-gutter-width /2 );
+      img {
+        border: #000 solid 4px;
+      }
     }   
   }
 }

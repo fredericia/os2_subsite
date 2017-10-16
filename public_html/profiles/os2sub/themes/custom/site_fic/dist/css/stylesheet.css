@@ -9042,12 +9042,13 @@ h1.pane-title,
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
-    border: #000 solid 4px;
     margin-bottom: 15px; }
     @media (min-width: 768px) {
       .paragraphs-item-afsnit-m-galleri .field-items .field-item {
         float: left;
         width: 33.3333333333%; } }
+    .paragraphs-item-afsnit-m-galleri .field-items .field-item img {
+      border: #000 solid 4px; }
 
 .pane-instagram-billeder .view-content {
   margin-left: -15px;
