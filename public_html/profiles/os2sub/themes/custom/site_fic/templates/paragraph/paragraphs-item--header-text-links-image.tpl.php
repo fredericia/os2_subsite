@@ -28,8 +28,31 @@
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <div class="container">
-      <div class="paragraph-content">
-          <?php print render($content); ?>
+      <div class="row">
+        <!--        Check if switch is in off position-->
+        <?php if ( !strcasecmp($content['field_paragraph_position'][0]['#markup'], 'off') ): ?>
+          <div class="col-md-12 col-lg-6">
+            <div class="aligner">
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
+              <?php print render($content['field_knap_link']); ?>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <?php print render($content['field_image']); ?>
+          </div>
+        <?php else: ?>
+          <div class="col-md-12 col-lg-6">
+            <?php print render($content['field_image']); ?>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <div class="aligner">
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
+              <?php print render($content['field_knap_link']); ?>
+            </div>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>

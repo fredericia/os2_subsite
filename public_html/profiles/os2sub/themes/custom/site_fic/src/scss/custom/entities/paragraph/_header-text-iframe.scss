@@ -14,36 +14,42 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-afsnit-m-link{
+.paragraphs-item-header-text-iframe{
   padding-bottom: 40px;
   padding-top: 40px;
-  font-family: $font-rbn021a;
-  background-color: $color-blue;
-  .paragraph-content{
-    justify-content: center;
+  background-color: $color-white;
+  .row{
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
 
     .field.field-name-field-paragraph-text{
-      flex-grow: unset;
-      color: $color-white;
-      font-size: 3.125em;
+      color: $color-black;
+      font-size: 1.25em;
       font-weight: normal;
+      font-family: $font-lato;
+      margin-bottom: 30px;
     }
-    .field.field-name-field-knap-link{
-      a{
-        @extend .btn;
-        @extend .btn-black;
-        font-size: 1.875em !important;
-        width: auto !important;
-        height: auto !important;
-        line-height: 0.9em !important;
-        font-family: $font-rbn021a !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        font-weight: normal !important;
+
+    .field.field-name-field-paragraph-header{
+      margin-bottom: 30px;
+      color: $color-red;
+      text-transform: uppercase;
+      font-size: 2.368em;
+      font-weight: normal;
+      font-family: $font-rbn021a;
+    }
+    .paragraph-video-container{
+      .paragraph-video{
+        margin-bottom: 15px;
+        border: 10px solid $color-black;
+        iframe{
+          width: 100% !important;
+          height: 300px !important;
+        }
       }
     }
+
     .field-label{
       display: none;
     }
@@ -72,7 +78,10 @@
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
-
+  .paragraphs-item-header-text-iframe{
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
 
 }
 
@@ -86,18 +95,7 @@
 // Desktop - and up
 @include media-breakpoint-up(md) {
 
-  .paragraphs-item-afsnit-m-link{
-    padding-bottom: 60px;
-    padding-top: 60px;
 
-    .paragraph-content{
-      display: flex;
-      justify-content: center;
-      .field.field-name-field-paragraph-text{
-        flex-grow: 1;
-      }
-    }
-  }
 
 
 }
