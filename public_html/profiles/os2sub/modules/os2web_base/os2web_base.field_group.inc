@@ -147,13 +147,13 @@ function os2web_base_field_group_info() {
     'label' => 'Indholdsside',
     'weight' => '2',
     'children' => array(
-      0 => 'group_os2web_base_group_3',
-      1 => 'group_os2web_base_group_extras',
-      2 => 'group_os2web_base_group_general',
-      3 => 'group_os2web_base_group_images',
-      4 => 'group_relationer',
-      5 => 'group_spotbokse',
-      6 => 'group_afsnit',
+      0 => 'group_afsnit',
+      1 => 'group_os2web_base_group_3',
+      2 => 'group_os2web_base_group_extras',
+      3 => 'group_os2web_base_group_general',
+      4 => 'group_os2web_base_group_images',
+      5 => 'group_relationer',
+      6 => 'group_spotbokse',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -176,7 +176,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Hentet fra kommunens sagssystem',
-    'weight' => '8',
+    'weight' => '10',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -187,7 +187,7 @@ function os2web_base_field_group_info() {
   $field_groups['group_os2web_base_group_document|node|os2web_base_contentpage|default'] = $field_group;
 
   $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->disabled = TRUE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
   $field_group->identifier = 'group_os2web_base_group_esdh|node|os2web_base_contentpage|form';
   $field_group->group_name = 'group_os2web_base_group_esdh';
@@ -285,7 +285,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Skjult',
-    'weight' => '15',
+    'weight' => '5',
     'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -432,10 +432,10 @@ function os2web_base_field_group_info() {
     'children' => array(
       0 => 'field_os2web_news_page_archive',
       1 => 'field_svendborg_hide_sidebar',
-      2 => 'field_os2web_base_field_contact',
-      3 => 'field_os2web_base_field_hidlinks',
-      4 => 'field_os2web_base_field_promote',
-      5 => 'field_baggrund',
+      2 => 'field_baggrund',
+      3 => 'field_os2web_base_field_contact',
+      4 => 'field_os2web_base_field_hidlinks',
+      5 => 'field_os2web_base_field_promote',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -555,7 +555,8 @@ function os2web_base_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_os2web_base_field_summary',
-      2 => 'title',
+      2 => 'field_sektion',
+      3 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
