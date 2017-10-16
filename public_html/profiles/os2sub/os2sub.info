@@ -21,6 +21,7 @@ dependencies[] = ckeditor
 dependencies[] = eu_cookie_compliance
 dependencies[] = extlink
 dependencies[] = honeypot
+dependencies[] = imagecache_token
 dependencies[] = module_filter
 dependencies[] = linkit
 dependencies[] = mimemail
