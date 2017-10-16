@@ -14,7 +14,7 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-header-text-iframe{
+.paragraphs-item-header-text-media{
   padding-bottom: 40px;
   padding-top: 40px;
   background-color: $color-white;
@@ -78,7 +78,7 @@
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
-  .paragraphs-item-header-text-iframe{
+  .paragraphs-item-header-text-media{
     padding-bottom: 60px;
     padding-top: 60px;
   }

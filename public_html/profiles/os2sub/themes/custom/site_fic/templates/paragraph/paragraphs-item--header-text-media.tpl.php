@@ -35,7 +35,7 @@
 <?php if ( !strcasecmp($content['field_paragraph_position'][0]['#markup'], 'off') ): ?>
           <div class="col-md-12 col-lg-6 paragraph-video-container">
             <div class="paragraph-video">
-          <?php print (html_entity_decode($content['field_os2web_base_field_iframe'][0]['#markup'])); ?>
+                <?php print render($content['field_image']); ?>
               </div>
           </div>
           <div class="col-md-12 col-lg-6">
@@ -53,7 +53,7 @@
           </div>
           <div class="col-md-12 col-lg-6 paragraph-video-container">
             <div class="paragraph-video">
-  <?php print (html_entity_decode($content['field_os2web_base_field_iframe'][0]['#markup'])); ?>
+                <?php print render($content['field_image']); ?>
               </div>
           </div>
 <?php endif; ?>
