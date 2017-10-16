@@ -1,10 +1,10 @@
 /* Main colors */
 
 /*rgb(255, 66, 0);*/
-$color-red: #ff4200;
+$color-red: @brand-secondary;
 
 /*rgb(1, 181, 213);*/
-$color-blue: #01b5d5;
+$color-blue: @brand-primary;
 
 /*rgb(42, 47, 54);*/
 $color-dark-gray: #2a2f36;
