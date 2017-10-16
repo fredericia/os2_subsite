@@ -9119,6 +9119,9 @@ h1.pane-title,
 .page-taxonomy-term #page-header {
   height: 940px; }
 
+.region-header {
+  clear: both; }
+
 .social-icons-list {
   padding: 0;
   margin-bottom: 5px;
@@ -9670,37 +9673,75 @@ footer.footer {
         padding-top: 5px;
         font-size: inherit; } }
 
-.view-fic-header-banners {
-  height: 500px;
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
-  .view-fic-header-banners .views_slideshow_cycle_main {
+.view-fic-header-banners .views-slideshow-cycle-main-frame {
+  height: auto !important; }
+
+.view-fic-header-banners .views-slideshow-cycle-main-frame-row {
+  position: static !important; }
+
+.view-fic-header-banners .views_slideshow_main {
+  height: 500px; }
+
+.view-fic-header-banners .views-slideshow-controls-bottom {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  .view-fic-header-banners .views-slideshow-controls-bottom:before, .view-fic-header-banners .views-slideshow-controls-bottom:after {
+    content: " ";
+    display: table; }
+  .view-fic-header-banners .views-slideshow-controls-bottom:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    .view-fic-header-banners .views-slideshow-controls-bottom {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    .view-fic-header-banners .views-slideshow-controls-bottom {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .view-fic-header-banners .views-slideshow-controls-bottom {
+      width: 1170px; } }
+
+.view-fic-header-banners .taxonomy-term {
+  height: 400px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "RBNo21a-Medium", sans-serif;
+  position: relative; }
+  .view-fic-header-banners .taxonomy-term-description {
+    font-size: 3.125em;
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%; }
-  .view-fic-header-banners .views-slideshow-controls-bottom {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px; }
-    .view-fic-header-banners .views-slideshow-controls-bottom:before, .view-fic-header-banners .views-slideshow-controls-bottom:after {
-      content: " ";
-      display: table; }
-    .view-fic-header-banners .views-slideshow-controls-bottom:after {
-      clear: both; }
-    @media (min-width: 768px) {
-      .view-fic-header-banners .views-slideshow-controls-bottom {
-        width: 750px; } }
-    @media (min-width: 992px) {
-      .view-fic-header-banners .views-slideshow-controls-bottom {
-        width: 970px; } }
-    @media (min-width: 1200px) {
-      .view-fic-header-banners .views-slideshow-controls-bottom {
-        width: 1170px; } }
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: auto; }
+
+.view-fic-header-banners .views-slideshow-contrqwols-bottom {
+  text-align: center; }
+  .view-fic-header-banners .views-slideshow-contrqwols-bottom a {
+    font-family: "RBNo21a-Medium", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 20px 10px;
+    background: #ffffff;
+    color: #192124;
+    position: relative;
+    text-decoration: none; }
+    .view-fic-header-banners .views-slideshow-contrqwols-bottom a::after {
+      content: '>';
+      display: block;
+      height: 20px;
+      position: absolute;
+      right: 6px;
+      top: 0;
+      bottom: 0;
+      margin: auto; }
+  .view-fic-header-banners .views-slideshow-contrqwols-bottom .views-row-first {
+    display: none; }
 
 /* General */
 .activities-list-background {
