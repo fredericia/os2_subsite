@@ -9719,9 +9719,9 @@ footer.footer {
             transform: translate(-50%, -50%);
     margin: auto; }
 
-.view-fic-header-banners .views-slideshow-contrqwols-bottom {
+.view-fic-header-banners .views-slideshow-controls-bottom {
   text-align: center; }
-  .view-fic-header-banners .views-slideshow-contrqwols-bottom a {
+  .view-fic-header-banners .views-slideshow-controls-bottom a {
     font-family: "RBNo21a-Medium", sans-serif;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -9731,7 +9731,7 @@ footer.footer {
     color: #192124;
     position: relative;
     text-decoration: none; }
-    .view-fic-header-banners .views-slideshow-contrqwols-bottom a::after {
+    .view-fic-header-banners .views-slideshow-controls-bottom a::after {
       content: '>';
       display: block;
       height: 20px;
@@ -9740,7 +9740,7 @@ footer.footer {
       top: 0;
       bottom: 0;
       margin: auto; }
-  .view-fic-header-banners .views-slideshow-contrqwols-bottom .views-row-first {
+  .view-fic-header-banners .views-slideshow-controls-bottom .views-row-first {
     display: none; }
 
 /* General */
