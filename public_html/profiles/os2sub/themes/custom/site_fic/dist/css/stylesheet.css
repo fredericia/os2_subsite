@@ -9941,6 +9941,10 @@ footer.footer {
     .paragraphs-item-header-text-media .row .field-label, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .field-label, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .field-label {
       display: none; }
 
+.page-node .paragraphs-item-header-text-media {
+  padding-bottom: 30px;
+  padding-top: 30px; }
+
 @media (min-width: 768px) {
   .paragraphs-item-header-text-media {
     padding-bottom: 60px;
