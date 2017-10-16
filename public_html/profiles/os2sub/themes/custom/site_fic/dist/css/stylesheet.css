@@ -1156,7 +1156,7 @@ hr {
 
 h1, .heading-h1, .banner .banner-wrapper .banner-headline, h2, .heading-h2, h3, .heading-h3, .kontaktblok .kontaktblok-headline, h4, .heading-h4, h5, .heading-h5, h6, .heading-h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "RBNo21a-Medium";
+  font-family: "RBNo21a-Medium", "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.1;
   color: inherit; }
@@ -4128,7 +4128,7 @@ tbody.collapse.in {
     padding: 5px 5px;
     line-height: 30px;
     font-size: 15px;
-    font-family: "RBNo21a-Medium"; }
+    font-family: "RBNo21a-Medium", "Lato", sans-serif; }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #333;
       background-color: transparent; }
@@ -9220,7 +9220,7 @@ h1.pane-title,
   .banner .banner-wrapper {
     padding: 30px 50px; }
     .banner .banner-wrapper .banner-headline {
-      font-family: "RBNo21a-Medium";
+      font-family: "RBNo21a-Medium", "Lato", sans-serif;
       font-weight: 700; }
     .banner .banner-wrapper .banner-text {
       font-size: 16px; }
@@ -9305,6 +9305,9 @@ footer.footer {
 
 .page-node h1.pane-title, .page-node .pane-title.heading-h1, .page-node .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .page-node .pane-title.banner-headline {
   color: #01B5D5; }
+
+.page-node .field-name-field-os2web-base-field-summary {
+  font-family: "RBNo21a-Medium", "Lato", sans-serif; }
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper {
   position: relative; }

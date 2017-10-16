@@ -23,7 +23,8 @@
     color: $brand-primary;
   }
   .field-name-field-os2web-base-field-summary {
-    @extend .lead; 
+    @extend .lead;
+    font-family: $headings-font-family;
   }
 }
 
