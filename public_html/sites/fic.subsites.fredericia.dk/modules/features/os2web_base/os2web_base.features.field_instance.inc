@@ -5013,11 +5013,8 @@ function os2web_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'paragraphs',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'paragraphs_view',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'fic_header' => array(
@@ -5361,6 +5358,16 @@ function os2web_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'os2web_cover',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'fic_header' => array(
+        'label' => 'hidden',
         'module' => 'backstretch',
         'settings' => array(
           'center_x' => 1,
@@ -5368,23 +5375,13 @@ function os2web_base_field_default_field_instances() {
           'delta' => '',
           'duration' => 5000,
           'element' => 'other',
-          'element_other' => '.bgimage',
+          'element_other' => '.page-header-wrapper',
           'fade' => 0,
           'field' => '',
           'image_style' => 'os2web_cover',
           'random' => FALSE,
         ),
         'type' => 'backstretch',
-        'weight' => 0,
-      ),
-      'fic_header' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'os2web_cover',
-        ),
-        'type' => 'image',
         'weight' => 0,
       ),
     ),

@@ -472,3 +472,4 @@ features_exclude[field][node-os2web_base_contentpage-field_os2web_base_field_doc
 features_exclude[field][node-os2web_base_news-field_os2web_base_field_media] = node-os2web_base_news-field_os2web_base_field_media
 features_exclude[field][node-os2web_base_news-field_os2web_base_field_case] = node-os2web_base_news-field_os2web_base_field_case
 features_exclude[field][node-os2web_base_news-field_os2web_base_field_doc] = node-os2web_base_news-field_os2web_base_field_doc
+project path = sites/fic.subsites.fredericia.dk/modules
