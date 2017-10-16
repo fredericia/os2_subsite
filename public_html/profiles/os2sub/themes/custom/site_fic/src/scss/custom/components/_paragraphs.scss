@@ -29,8 +29,16 @@
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
 }
-.paragraphs-container {
 
+.paragraphs-item-afsnit-m-galleri {
+  .field-items {
+    @include make-row(); 
+    .views-row {
+      @include make-xs-column(6);
+      @include make-sm-column(4);
+      border: #000 solid 4px;
+    }   
+  }
 }
 .pane-instagram-billeder {
   .view-content {

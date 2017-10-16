@@ -9021,6 +9021,31 @@ h1.pane-title,
   padding-top: 30px;
   padding-bottom: 30px; }
 
+.paragraphs-item-afsnit-m-galleri .field-items {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .paragraphs-item-afsnit-m-galleri .field-items:before, .paragraphs-item-afsnit-m-galleri .field-items:after {
+    content: " ";
+    display: table; }
+  .paragraphs-item-afsnit-m-galleri .field-items:after {
+    clear: both; }
+  .paragraphs-item-afsnit-m-galleri .field-items .views-row {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: #000 solid 4px; }
+    @media (min-width: 768px) {
+      .paragraphs-item-afsnit-m-galleri .field-items .views-row {
+        float: left;
+        width: 33.3333333333%; } }
+
 .pane-instagram-billeder .view-content {
   margin-left: -15px;
   margin-right: -15px;
