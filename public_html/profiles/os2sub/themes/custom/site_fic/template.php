@@ -76,6 +76,12 @@ function site_fic_preprocess_page(&$variables) {
       'path' => $section_logo_uri,
     ));
   }
+
+  if (drupal_is_front_page()) {
+    $backstretch_data = &drupal_static('backstretch_data');
+    drupal_add_js(drupal_get_path('module', 'backstretch') . '/js/jquery.backstretch.min.js');
+    drupal_add_js(array('ficBackstretch' => $backstretch_data), 'setting');
+  }
 }
 
 /**
@@ -91,6 +97,16 @@ function site_fic_preprocess_node(&$variables) {
   if (function_exists($function_node_type)) {
     $function_node_type($variables);
   }
+  if (function_exists($function_view_mode)) {
+    $function_view_mode($variables);
+  }
+}
+
+/**
+ * Implements template_preprocess_taxonomy_term.
+ */
+function site_fic_preprocess_taxonomy_term(&$variables) {
+  $function_view_mode = __FUNCTION__ . '__' . $variables['view_mode'];
   if (function_exists($function_view_mode)) {
     $function_view_mode($variables);
   }
@@ -186,4 +202,23 @@ function site_fic_menu_link(array $variables) {
 
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
   return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/**
+ * Custom preprocess function for fic_header view mode.
+ */
+function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
+  if (empty($vars['field_os2web_base_field_image'])) {
+    return;
+  }
+
+  $backstretch_data = &drupal_static('backstretch_data');
+  if (empty($backstretch_data)) {
+    $backstretch_data = array();
+  }
+
+  $backstretch_data[$vars['tid']] = image_style_url(
+    'os2web_cover',
+    $vars['field_os2web_base_field_image'][LANGUAGE_NONE][0]['uri']
+  );
 }
