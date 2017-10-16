@@ -29,7 +29,7 @@
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <div class="paragraph-container">
-      <div class="paragraph-row">
+      <div class="row">
         
         <!--        Check if switch is in off position-->
 <?php if ( !strcasecmp($content['field_paragraph_position'][0]['#markup'], 'off') ): ?>
