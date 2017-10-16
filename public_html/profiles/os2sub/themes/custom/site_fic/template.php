@@ -13,11 +13,11 @@ function site_fic_preprocess_html(&$variables) {
   $variables['path_css'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/css';
   $variables['path_font'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/fonts';
 
-//  // Add out fonts from Google Fonts API.
-//  drupal_add_css(
-//    'https://fonts.googleapis.com/css?family=Raleway:300,400,600,700',
-//    array('type' => 'external')
-//  );
+  // Add out fonts from Google Fonts API.
+  drupal_add_css(
+    'https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i',
+    array('type' => 'external')
+    );
 //
 //  // Live reload.
 //  if (variable_get('environment', FALSE) == 'local') {
