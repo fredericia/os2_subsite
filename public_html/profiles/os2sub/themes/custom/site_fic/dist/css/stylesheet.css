@@ -9303,6 +9303,9 @@ footer.footer {
 .node {
   font-size: 1.06em; }
 
+.page-node h1.pane-title, .page-node .pane-title.heading-h1, .page-node .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .page-node .pane-title.banner-headline {
+  color: #01B5D5; }
+
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper {
   position: relative; }
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper .field-type-image.field-name-field-os2web-kulturnaut-slidesho {
