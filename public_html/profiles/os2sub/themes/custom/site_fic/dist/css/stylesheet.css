@@ -1236,13 +1236,13 @@ h6, .heading-h6, .h6 {
 p {
   margin: 0 0 10px; }
 
-.lead {
+.lead, .page-node .field-name-field-os2web-base-field-summary {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.4; }
   @media (min-width: 768px) {
-    .lead {
+    .lead, .page-node .field-name-field-os2web-base-field-summary {
       font-size: 21px; } }
 
 small,
@@ -8836,7 +8836,8 @@ h5,
 .heading-h5, .heading-h5,
 h6,
 .heading-h6, .heading-h6,
-.lead {
+.lead,
+.page-node .field-name-field-os2web-base-field-summary {
   font-weight: 400; }
   h1.light, .light.heading-h1, .banner .banner-wrapper .light.banner-headline, .heading-h1.light, .banner .banner-wrapper .light.banner-headline,
   h2.light,
@@ -8850,7 +8851,8 @@ h6,
   .light.heading-h5, .heading-h5.light,
   h6.light,
   .light.heading-h6, .heading-h6.light,
-  .lead.light {
+  .lead.light,
+  .page-node .light.field-name-field-os2web-base-field-summary {
     font-weight: 400; }
   h1 strong, .heading-h1 strong, .banner .banner-wrapper .banner-headline strong, h1.bold, .bold.heading-h1, .banner .banner-wrapper .bold.banner-headline, .heading-h1 strong, .banner .banner-wrapper .banner-headline strong, .heading-h1.bold, .banner .banner-wrapper .bold.banner-headline,
   h2 strong, .heading-h2 strong,
@@ -8869,8 +8871,9 @@ h6,
   h6 strong, .heading-h6 strong,
   h6.bold,
   .bold.heading-h6, .heading-h6 strong, .heading-h6.bold,
-  .lead strong,
-  .lead.bold {
+  .lead strong, .page-node .field-name-field-os2web-base-field-summary strong,
+  .lead.bold,
+  .page-node .bold.field-name-field-os2web-base-field-summary {
     font-weight: 700; }
 
 body a,
@@ -8891,7 +8894,8 @@ h5,
 .heading-h5, .heading-h5,
 h6,
 .heading-h6, .heading-h6,
-.lead {
+.lead,
+.page-node .field-name-field-os2web-base-field-summary {
   letter-spacing: 0; }
 
 body a,
@@ -8912,7 +8916,8 @@ h5,
 .heading-h5, .heading-h5,
 h6,
 .heading-h6, .heading-h6,
-.lead {
+.lead,
+.page-node .field-name-field-os2web-base-field-summary {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -ms-font-smoothing: antialiased;
