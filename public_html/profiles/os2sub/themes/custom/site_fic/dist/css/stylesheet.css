@@ -1157,7 +1157,7 @@ hr {
 h1, .heading-h1, .banner .banner-wrapper .banner-headline, h2, .heading-h2, h3, .heading-h3, .kontaktblok .kontaktblok-headline, h4, .heading-h4, h5, .heading-h5, h6, .heading-h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "RBNo21a-Medium";
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.1;
   color: inherit; }
   h1 small, .heading-h1 small, .banner .banner-wrapper .banner-headline small,
@@ -8837,7 +8837,7 @@ h5,
 h6,
 .heading-h6, .heading-h6,
 .lead {
-  font-weight: 700; }
+  font-weight: 400; }
   h1.light, .light.heading-h1, .banner .banner-wrapper .light.banner-headline, .heading-h1.light, .banner .banner-wrapper .light.banner-headline,
   h2.light,
   .light.heading-h2, .heading-h2.light,
