@@ -38,6 +38,37 @@ function os2web_kulturnaut_events_views_api($module = NULL, $api = NULL) {
 function os2web_kulturnaut_events_image_default_styles() {
   $styles = array();
 
+  // Exported image style: os2sub_page_slideshow.
+  $styles['os2sub_page_slideshow'] = array(
+    'label' => 'Diasshow',
+    'effects' => array(
+      33 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => ' 1170',
+          'height' => 450,
+          'anchor' => 'center-center',
+          'disable_scale' => 1,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 1,
+          ),
+        ),
+        'weight' => -10,
+      ),
+      4 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1170,
+          'height' => 450,
+        ),
+        'weight' => -9,
+      ),
+    ),
+  );
+
   // Exported image style: os2sub_teaser_mini_image.
   $styles['os2sub_teaser_mini_image'] = array(
     'label' => 'Normal Mini',
