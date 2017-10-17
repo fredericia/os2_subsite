@@ -92,11 +92,11 @@ function os2web_base_image_default_styles() {
   $styles['os2sub_normal_imagesize'] = array(
     'label' => 'Normal billede',
     'effects' => array(
-      6 => array(
+      1 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 848,
-          'height' => 410,
+          'width' => 870,
+          'height' => 450,
           'anchor' => 'center-center',
           'disable_scale' => 0,
           'jcrop_settings' => array(
@@ -108,11 +108,11 @@ function os2web_base_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      7 => array(
+      2 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 848,
-          'height' => 410,
+          'width' => 870,
+          'height' => 450,
         ),
         'weight' => 2,
       ),

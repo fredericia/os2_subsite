@@ -884,7 +884,7 @@ function os2web_base_default_page_manager_handlers() {
       'slideshow_carousel_skin' => '',
     ),
     'context' => 'argument_entity_id:node_1',
-    'override_title' => 0,
+    'override_title' => 1,
     'override_title_text' => '',
     'override_title_heading' => 'h2',
   );

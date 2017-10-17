@@ -518,7 +518,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -578,7 +578,7 @@ function os2web_base_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'paragraphs_view',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -636,7 +636,7 @@ function os2web_base_field_default_field_instances() {
           'random' => 0,
         ),
         'type' => 'backstretch',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -960,15 +960,9 @@ function os2web_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'photoswipe',
-        'settings' => array(
-          'photoswipe_caption' => '',
-          'photoswipe_image_style' => '',
-          'photoswipe_node_style' => 'os2sub_normal_imagesize',
-          'photoswipe_view_mode' => '',
-        ),
-        'type' => 'photoswipe',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1149,7 +1143,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_table',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1462,7 +1456,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1520,7 +1514,7 @@ function os2web_base_field_default_field_instances() {
           'node_reference_view_mode' => 'full',
         ),
         'type' => 'node_reference_node',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'spotbox' => array(
         'label' => 'above',
