@@ -11,6 +11,7 @@ dependencies[] = views_content
 features[ctools][] = page_manager:pages_default:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
+features[image][] = os2sub_full_width
 features[image][] = os2sub_spotbox_image
 features[image][] = os2sub_spotbox_mini_image
 features[image][] = os2sub_spotbox_single_image

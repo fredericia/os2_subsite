@@ -1181,6 +1181,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'os2sub_220x130' => 0,
           'os2sub_300x175' => 0,
           'os2sub_banner' => 'os2sub_banner',
+          'os2sub_full_width' => 'os2sub_full_width',
           'os2sub_normal_imagesize' => 0,
           'os2sub_page_slideshow' => 0,
           'os2sub_spotbox_image' => 0,

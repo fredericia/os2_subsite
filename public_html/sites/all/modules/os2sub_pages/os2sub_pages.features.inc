@@ -26,6 +26,38 @@ function os2sub_pages_views_api($module = NULL, $api = NULL) {
 function os2sub_pages_image_default_styles() {
   $styles = array();
 
+  // Exported image style: os2sub_full_width.
+  $styles['os2sub_full_width'] = array(
+    'label' => 'OS2Sub Full width',
+    'effects' => array(
+      46 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => '',
+          'height' => 1920,
+          'anchor' => 'center-center',
+          'disable_scale' => 0,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 1,
+          ),
+        ),
+        'weight' => -10,
+      ),
+      28 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1920,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => -9,
+      ),
+    ),
+  );
+
   // Exported image style: os2sub_spotbox_image.
   $styles['os2sub_spotbox_image'] = array(
     'label' => 'OS2Sub spotbox image',
