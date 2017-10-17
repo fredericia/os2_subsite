@@ -34,9 +34,9 @@ function os2web_spotbox_image_default_styles() {
 
   // Exported image style: os2web_spotbox_image.
   $styles['os2web_spotbox_image'] = array(
-    'label' => 'os2web_spotbox_image',
+    'label' => 'Spotbillede alternativ',
     'effects' => array(
-      12 => array(
+      54 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 300,
