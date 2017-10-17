@@ -95,6 +95,7 @@ features[field_instance][] = taxonomy_term-os2web_kulturnaut_venue-field_os2web_
 features[field_instance][] = taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_image_lg
 features[field_instance][] = taxonomy_term-os2web_kulturnaut_venue-field_os2web_kult_venue_sbtext
 features[field_instance][] = taxonomy_term-os2web_kulturnaut_venue-field_os2web_kulturnaut_tema
+features[image][] = os2sub_page_slideshow
 features[image][] = os2sub_teaser_mini_image
 features[metatag][] = node:os2web_kulturnaut_knactivity
 features[metatag][] = taxonomy_term:os2web_kulturnaut_tema
