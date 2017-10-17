@@ -1,0 +1,10 @@
+.view-id-kalender {
+  &.view-display-id-page {
+    .pager--infinite-scroll {
+      margin-top: 0;
+      a {
+        @include load-more-btn-full-width;
+      }
+    }
+  }
+}

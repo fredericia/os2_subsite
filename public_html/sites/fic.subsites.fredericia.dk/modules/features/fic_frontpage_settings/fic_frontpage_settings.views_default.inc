@@ -265,11 +265,10 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
   /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
@@ -293,9 +292,24 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
+  /* Filter criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['default_date'] = 'now';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-xs-6 col-sm-4 col-md-3';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'fic-kommende-arrangementer';
 
   /* Display: Content pane */
@@ -473,13 +487,13 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Field: Afsnit (field_afsnit) */
+  /* Relationship: Field: Paragraph (field_afsnit) */
   $handler->display->display_options['relationships']['field_afsnit_value']['id'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['relationships']['field_afsnit_value']['field'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_afsnit_value']['delta'] = '-1';
-  /* Field: Field: Afsnit */
+  /* Field: Field: Paragraph */
   $handler->display->display_options['fields']['field_afsnit']['id'] = 'field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['field'] = 'field_afsnit';

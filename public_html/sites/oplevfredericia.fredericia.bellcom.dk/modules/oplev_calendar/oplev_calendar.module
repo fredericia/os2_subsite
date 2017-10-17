@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Oplev calendar feature.
+ */
+
+include_once 'oplev_calendar.features.inc';

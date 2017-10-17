@@ -17,28 +17,16 @@
 .paragraphs-item-header-text-media{
   padding-bottom: 40px;
   padding-top: 40px;
-  background-color: $color-white;
+
   .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 
-    .field.field-name-field-paragraph-text{
-      color: $color-black;
-      font-size: 1.25em;
-      font-weight: normal;
-      font-family: $font-lato;
-      margin-bottom: $grid-gutter-width;
+.field.field-name-field-paragraph-header{
+      color: $color-red;
     }
 
-    .field.field-name-field-paragraph-header{
-      margin-bottom: $grid-gutter-width;
-      color: $color-red;
-      text-transform: uppercase;
-      font-size: 2.368em;
-      font-weight: normal;
-      font-family: $font-rbn021a;
-    }
     .paragraph-video-container{
       .paragraph-video{
         margin-bottom: ($grid-gutter-width /2 );        
@@ -48,10 +36,6 @@
           border: 10px solid $color-black;
         }
       }
-    }
-
-    .field-label{
-      display: none;
     }
   }
 }

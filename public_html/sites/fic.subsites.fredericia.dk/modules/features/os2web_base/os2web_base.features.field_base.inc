@@ -1067,6 +1067,33 @@ function os2web_base_field_default_field_bases() {
     'type' => 'node_reference',
   );
 
+  // Exported field_base: 'field_paragraph_bg'.
+  $field_bases['field_paragraph_bg'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paragraph_bg',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'White' => 'bg-white',
+        'Dark' => 'bg-dark',
+        'Darker' => 'bg-darker',
+        'Alternative' => 'bg-alternative',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_paragraph_header'.
   $field_bases['field_paragraph_header'] = array(
     'active' => 1,

@@ -18,35 +18,30 @@
   padding-bottom: 40px;
   padding-top: 40px;
   font-family: $font-rbn021a;
-  background-color: $color-blue;
-  .paragraph-content{
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
 
-    .field.field-name-field-paragraph-text{
-      flex-grow: unset;
-      color: $color-white;
-      font-size: 3.125em;
-      font-weight: normal;
+  .field.field-name-field-paragraph-header{
+    font-size: 3.125em;
+    margin-bottom: 0px;
+  }
+  .field.field-name-field-knap-link{
+    a{
+      @extend .btn;
+      @extend .btn-black;
+      font-size: 1.875em !important;
+      width: auto !important;
+      height: auto !important;
+      line-height: 0.9em !important;
+      font-family: $font-rbn021a !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      font-weight: normal !important;
     }
-    .field.field-name-field-knap-link{
-      a{
-        @extend .btn;
-        @extend .btn-black;
-        font-size: 1.875em !important;
-        width: auto !important;
-        height: auto !important;
-        line-height: 0.9em !important;
-        font-family: $font-rbn021a !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        font-weight: normal !important;
-      }
-    }
-    .field-label{
-      display: none;
-    }
+  }
+  .aligner-left{
+    text-align: center;
+  }
+  .aligner-right{
+    text-align: center;
   }
 }
 
@@ -89,13 +84,11 @@
   .paragraphs-item-afsnit-m-link{
     padding-bottom: 60px;
     padding-top: 60px;
-
-    .paragraph-content{
-      display: flex;
-      justify-content: center;
-      .field.field-name-field-paragraph-text{
-        flex-grow: 1;
-      }
+    .aligner-left{
+      text-align: left;
+    }
+    .aligner-right{
+      text-align: right;
     }
   }
 
