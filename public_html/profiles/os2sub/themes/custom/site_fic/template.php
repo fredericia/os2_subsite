@@ -234,3 +234,29 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     $vars['field_os2web_base_field_image'][LANGUAGE_NONE][0]['uri']
   );
 }
+
+/**
+ * Custom theme function function for field_os2web_base_field_contact field.
+ */
+function site_fic_field__field_os2web_base_field_contact(&$vars) {
+  if (empty($vars['items']) ||
+    $vars['element']['#bundle'] != 'os2web_base_tax_site_structure') {
+    return;
+  }
+
+  $term = $vars['element']['#object'];
+
+  $field_value = field_get_items('taxonomy_term', $term, 'field_os2web_base_field_contact');
+  $nid = $field_value[0]['nid'];
+
+  $output = l(t('Contact'), 'node/' . $nid, array(
+    'attributes' => array(
+      'class' => array(
+        'modal-link',
+        'contact',
+      ),
+    ),
+  ));
+
+  return $output;
+}

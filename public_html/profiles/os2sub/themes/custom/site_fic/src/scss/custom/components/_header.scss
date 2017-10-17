@@ -13,13 +13,25 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.front #page-header,
-.page-taxonomy-term #page-header {
-  height: 940px;
-}
 
 .region-header {
-  clear: both;
+  @include make-row;
+}
+
+.scroll-down {
+  &-link {
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+
+    span {
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      border: 2px solid $color-white;
+    }
+  }
 }
 // --------------------------------------------------
 // Variants
