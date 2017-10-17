@@ -745,7 +745,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
-  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
@@ -858,6 +858,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
   $handler->display->display_options['displays'] = array(
     'pane_activities_list_2_3' => 'pane_activities_list_2_3',
     'default' => 0,
@@ -1524,6 +1530,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['relationships']['reverse_field_os2web_base_field_edi_tags_node']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['relationships']['reverse_field_os2web_base_field_edi_tags_node']['field'] = 'reverse_field_os2web_base_field_edi_tags_node';
   $handler->display->display_options['relationships']['reverse_field_os2web_base_field_edi_tags_node']['required'] = TRUE;
+  $handler->display->display_options['relationships']['reverse_field_os2web_base_field_edi_tags_node']['label'] = 'Content using Stikord';
   /* Field: Taxonomy term: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
@@ -1531,21 +1538,33 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['name']['label'] = '';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Sort criterion: COUNT(Content: Title) */
+  /* Sort criterion: COUNT(DISTINCT Content: Title) */
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['sorts']['title']['relationship'] = 'reverse_field_os2web_base_field_edi_tags_node';
-  $handler->display->display_options['sorts']['title']['group_type'] = 'count';
+  $handler->display->display_options['sorts']['title']['group_type'] = 'count_distinct';
   $handler->display->display_options['sorts']['title']['order'] = 'DESC';
-  /* Filter criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
-  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
-  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
-  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
-  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['relationship'] = 'reverse_field_os2web_base_field_edi_tags_node';
-  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['operator'] = '>';
-  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['default_date'] = 'now';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'OR',
+  );
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['relationship'] = 'reverse_field_os2web_base_field_edi_tags_node';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['group'] = 1;
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
+  /* Filter criterion: Content: Dato - end date (field_os2web_kulturnaut_date:value2) */
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2_1']['id'] = 'field_os2web_kulturnaut_date_value2_1';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2_1']['table'] = 'field_data_field_os2web_kulturnaut_date';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2_1']['field'] = 'field_os2web_kulturnaut_date_value2';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2_1']['relationship'] = 'reverse_field_os2web_base_field_edi_tags_node';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2_1']['operator'] = 'empty';
+  $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2_1']['group'] = 1;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -1558,7 +1577,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('field_os2web_base_field_edi_tags'),
+    t('Content using Stikord'),
     t('Block'),
   );
   $export['os2web_taxonomies_tax_editor_tag_list'] = $view;
