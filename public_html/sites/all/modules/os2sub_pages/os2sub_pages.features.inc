@@ -28,9 +28,9 @@ function os2sub_pages_image_default_styles() {
 
   // Exported image style: os2sub_full_width.
   $styles['os2sub_full_width'] = array(
-    'label' => 'OS2Sub Full width',
+    'label' => 'Fuld skærm',
     'effects' => array(
-      46 => array(
+      40 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => '',
@@ -46,7 +46,7 @@ function os2sub_pages_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      28 => array(
+      41 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1920,
@@ -60,7 +60,7 @@ function os2sub_pages_image_default_styles() {
 
   // Exported image style: os2sub_spotbox_image.
   $styles['os2sub_spotbox_image'] = array(
-    'label' => 'OS2Sub spotbox image',
+    'label' => 'Spotbillede',
     'effects' => array(
       42 => array(
         'name' => 'epsacrop_crop',
@@ -78,7 +78,7 @@ function os2sub_pages_image_default_styles() {
         ),
         'weight' => -9,
       ),
-      41 => array(
+      43 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 370,
@@ -91,9 +91,9 @@ function os2sub_pages_image_default_styles() {
 
   // Exported image style: os2sub_spotbox_mini_image.
   $styles['os2sub_spotbox_mini_image'] = array(
-    'label' => 'OS2sub Spotbox mini image',
+    'label' => 'Spotbillede Mini',
     'effects' => array(
-      43 => array(
+      44 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 720,
@@ -109,7 +109,7 @@ function os2sub_pages_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      31 => array(
+      45 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 720,
@@ -122,9 +122,9 @@ function os2sub_pages_image_default_styles() {
 
   // Exported image style: os2sub_spotbox_single_image.
   $styles['os2sub_spotbox_single_image'] = array(
-    'label' => 'OS2Sub spotbox single image',
+    'label' => 'Spotbillede Alternativ',
     'effects' => array(
-      38 => array(
+      46 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 720,
@@ -140,7 +140,7 @@ function os2sub_pages_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      30 => array(
+      47 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 720,
