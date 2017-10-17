@@ -28,11 +28,11 @@
       font-size: 1.25em;
       font-weight: normal;
       font-family: $font-lato;
-      margin-bottom: 30px;
+      margin-bottom: $grid-gutter-width;
     }
 
     .field.field-name-field-paragraph-header{
-      margin-bottom: 30px;
+      margin-bottom: $grid-gutter-width;
       color: $color-red;
       text-transform: uppercase;
       font-size: 2.368em;
@@ -41,11 +41,11 @@
     }
     .paragraph-video-container{
       .paragraph-video{
-        margin-bottom: 15px;
-        border: 10px solid $color-black;
+        margin-bottom: ($grid-gutter-width /2 );        
         iframe{
           width: 100% !important;
           height: 300px !important;
+          border: 10px solid $color-black;
         }
       }
     }
@@ -54,6 +54,10 @@
       display: none;
     }
   }
+}
+.page-node .paragraphs-item-header-text-media {
+  padding-bottom: $grid-gutter-width;
+  padding-top: $grid-gutter-width;
 }
 
 // --------------------------------------------------
