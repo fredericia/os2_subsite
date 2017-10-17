@@ -41,6 +41,11 @@ function fic_frontpage_settings_default_page_manager_handlers() {
           'context' => 'argument_term_1',
           'not' => FALSE,
         ),
+        1 => array(
+          'name' => 'front',
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
       ),
       'logic' => 'and',
     ),
@@ -126,6 +131,45 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $display->content['new-82c4f8e4-44b7-411f-ad2c-0725bbb82bcd'] = $pane;
   $display->panels['light_section_1'][0] = 'new-82c4f8e4-44b7-411f-ad2c-0725bbb82bcd';
   $pane = new stdClass();
+  $pane->pid = 'new-4c467a4b-c3a0-4f27-874a-c08640ea9a10';
+  $pane->panel = 'light_section_1';
+  $pane->type = 'views';
+  $pane->subtype = 'instagram_billeder';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '7',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'block',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'bg-darker',
+    'template_suggestion' => 'paragraphs',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '4c467a4b-c3a0-4f27-874a-c08640ea9a10';
+  $display->content['new-4c467a4b-c3a0-4f27-874a-c08640ea9a10'] = $pane;
+  $display->panels['light_section_1'][1] = 'new-4c467a4b-c3a0-4f27-874a-c08640ea9a10';
+  $pane = new stdClass();
   $pane->pid = 'new-afb36340-1601-4177-b9d1-b29593f74330';
   $pane->panel = 'light_section_1';
   $pane->type = 'entity_field';
@@ -156,11 +200,11 @@ function fic_frontpage_settings_default_page_manager_handlers() {
     'template_suggestion' => 'paragraphs',
   );
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 2;
   $pane->locks = array();
   $pane->uuid = 'afb36340-1601-4177-b9d1-b29593f74330';
   $display->content['new-afb36340-1601-4177-b9d1-b29593f74330'] = $pane;
-  $display->panels['light_section_1'][1] = 'new-afb36340-1601-4177-b9d1-b29593f74330';
+  $display->panels['light_section_1'][2] = 'new-afb36340-1601-4177-b9d1-b29593f74330';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -451,6 +451,66 @@ function fic_frontpage_settings_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Taxonomy term: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Taxonomy term: Term description */
+  $handler->display->display_options['fields']['description']['id'] = 'description';
+  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['description']['field'] = 'description';
+  $handler->display->display_options['fields']['description']['label'] = '';
+  $handler->display->display_options['fields']['description']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
+  /* Field: Field: Unikke eksterne links	 */
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['id'] = 'field_os2web_base_field_ext_link';
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['table'] = 'field_data_field_os2web_base_field_ext_link';
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['field'] = 'field_os2web_base_field_ext_link';
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['alter']['link_class'] = 'btn btn-primary';
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['element_default_classes'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['multi_type'] = 'ul';
+  /* Field: Field: Unikke relaterede links */
+  $handler->display->display_options['fields']['field_os2web_base_field_related']['id'] = 'field_os2web_base_field_related';
+  $handler->display->display_options['fields']['field_os2web_base_field_related']['table'] = 'field_data_field_os2web_base_field_related';
+  $handler->display->display_options['fields']['field_os2web_base_field_related']['field'] = 'field_os2web_base_field_related';
+  $handler->display->display_options['fields']['field_os2web_base_field_related']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_related']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_related']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_os2web_base_field_related']['multi_type'] = 'ul';
+  /* Field: Field: Billede */
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['id'] = 'field_os2web_base_field_image';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['table'] = 'field_data_field_os2web_base_field_image';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['field'] = 'field_os2web_base_field_image';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['type'] = 'backstretch';
+  $handler->display->display_options['fields']['field_os2web_base_field_image']['settings'] = array(
+    'image_style' => 'os2web_cover',
+    'element' => 'other',
+    'element_other' => '.page-header-wrapper',
+    'duration' => 5000,
+    'fade' => '0',
+    'center_x' => 1,
+    'center_y' => 1,
+    'random' => FALSE,
+  );
   $translatables['fic_sektion_header'] = array(
     t('Master'),
     t('more'),
@@ -462,6 +522,7 @@ function fic_frontpage_settings_views_default_views() {
     t('All'),
     t('Content pane'),
     t('View panes'),
+    t('Block'),
   );
   $export['fic_sektion_header'] = $view;
 

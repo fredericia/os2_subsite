@@ -50,20 +50,17 @@
     border-color: #FFF;
   }
 }
-
+.page-taxonomy .paragraphs-container,
+.front .paragraphs-container {
+  @include container-fixed($gutter: $grid-gutter-width);
+}
 .paragraphs-items{
-  .field.field-name-field-image{
-    border: 10px solid;
-  }
-  .field-label{
-    display: none;
-  }
   .field.field-name-field-paragraph-header{
     margin-bottom: $grid-gutter-width;
     text-transform: uppercase;
     font-size: 2.368em;
     font-weight: normal;
-    font-family: $font-rbn021a;
+    font-family: $headings-font-family;
   }
   .field.field-name-field-paragraph-text{
     font-size: 1.25em;

@@ -28,8 +28,8 @@
       display: inline-block;
       height: 60px;
       width: 60px;
-      border-radius: 50%;
-      border: 2px solid $color-white;
+      background-image: url('../img/lookdown.png');
+      background-repeat: no-repeat;
     }
   }
 }
@@ -39,7 +39,7 @@ form.search-form{
   input.form-control.form-text{
     height: 60px;
     font-size: 1.5em;
-    font-family: $font-rbn021a;
+    font-family: $headings-font-family;
     color: #fff;
     box-shadow: none;
     &::placeholder{
