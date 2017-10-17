@@ -4559,6 +4559,48 @@ function os2web_base_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_billede-field_paragraph_position'.
+  $field_instances['paragraphs_item-afsnit_m_billede-field_paragraph_position'] = array(
+    'bundle' => 'afsnit_m_billede',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_position',
+    'label' => 'Sides switch',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-afsnit_m_billede-field_paragraph_text'.
   $field_instances['paragraphs_item-afsnit_m_billede-field_paragraph_text'] = array(
     'bundle' => 'afsnit_m_billede',
@@ -4876,6 +4918,50 @@ function os2web_base_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_link-field_paragraph_bg'.
+  $field_instances['paragraphs_item-afsnit_m_link-field_paragraph_bg'] = array(
+    'bundle' => 'afsnit_m_link',
+    'default_value' => array(
+      0 => array(
+        'value' => 'White',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_bg',
+    'label' => 'Background',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-afsnit_m_link-field_paragraph_header'.
   $field_instances['paragraphs_item-afsnit_m_link-field_paragraph_header'] = array(
     'bundle' => 'afsnit_m_link',
@@ -4936,6 +5022,48 @@ function os2web_base_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_link-field_paragraph_position'.
+  $field_instances['paragraphs_item-afsnit_m_link-field_paragraph_position'] = array(
+    'bundle' => 'afsnit_m_link',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_position',
+    'label' => 'Sides switch',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
     ),
   );
 
@@ -5140,6 +5268,50 @@ function os2web_base_field_default_field_instances() {
       'settings' => array(),
       'type' => 'link_field',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-header_text_links_image-field_paragraph_bg'.
+  $field_instances['paragraphs_item-header_text_links_image-field_paragraph_bg'] = array(
+    'bundle' => 'header_text_links_image',
+    'default_value' => array(
+      0 => array(
+        'value' => 'White',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_bg',
+    'label' => 'Background',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 10,
     ),
   );
 
@@ -5385,6 +5557,50 @@ function os2web_base_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-header_text_media-field_paragraph_bg'.
+  $field_instances['paragraphs_item-header_text_media-field_paragraph_bg'] = array(
+    'bundle' => 'header_text_media',
+    'default_value' => array(
+      0 => array(
+        'value' => 'White',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_bg',
+    'label' => 'Background',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 10,
     ),
   );
 
@@ -6353,6 +6569,7 @@ function os2web_base_field_default_field_instances() {
   t('Afsnit');
   t('Afsnit overskrift');
   t('Alternativ visning');
+  t('Background');
   t('Baggrund');
   t('Banner');
   t('Billede');

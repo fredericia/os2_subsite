@@ -18,16 +18,59 @@
   background-color: #FFF;
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
+  .field{
+    color: $gray-darker;
+    border-color: $gray-darker;
+  }
 }
 .bg-darker {
   background-color: $gray-darker;
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
+  .field{
+    color: #FFF;    
+    border-color: #FFF;
+  }
 }
 .bg-dark {
   background-color: $gray-dark;
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
+  .field{
+    color: #FFF;    
+    border-color: #FFF;
+  }
+}
+.bg-alternative {
+  background-color: $brand-primary;
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
+  .field{
+    color: #FFF;    
+    border-color: #FFF;
+  }
+}
+
+.paragraphs-items{
+  .field.field-name-field-image{
+    border: 10px solid;
+  }
+  .field-label{
+    display: none;
+  }
+  .field.field-name-field-paragraph-header{
+    margin-bottom: $grid-gutter-width;
+    text-transform: uppercase;
+    font-size: 2.368em;
+    font-weight: normal;
+    font-family: $font-rbn021a;
+  }
+  .field.field-name-field-paragraph-text{
+    font-size: 1.25em;
+    font-weight: normal;
+    font-family: $font-lato;
+    margin-bottom: 30px;
+  }
 }
 
 .paragraphs-item-afsnit-m-galleri {
