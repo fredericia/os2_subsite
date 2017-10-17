@@ -156,6 +156,7 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm->name = 'node_options_os2web_kulturnaut_knactivity';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_os2web_kulturnaut_knactivity'] = $strongarm;
 
@@ -197,9 +198,86 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'publishcontent_os2web_kulturnaut_knactivity';
+  $strongarm->value = 1;
+  $export['publishcontent_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_os2web_kulturnaut_knactivity';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_expand_fieldset_os2web_kulturnaut_knactivity';
+  $strongarm->value = '0';
+  $export['scheduler_expand_fieldset_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_enable_os2web_kulturnaut_knactivity';
+  $strongarm->value = 1;
+  $export['scheduler_publish_enable_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_past_date_os2web_kulturnaut_knactivity';
+  $strongarm->value = 'error';
+  $export['scheduler_publish_past_date_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_required_os2web_kulturnaut_knactivity';
+  $strongarm->value = 0;
+  $export['scheduler_publish_required_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_revision_os2web_kulturnaut_knactivity';
+  $strongarm->value = 1;
+  $export['scheduler_publish_revision_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_publish_touch_os2web_kulturnaut_knactivity';
+  $strongarm->value = 0;
+  $export['scheduler_publish_touch_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_enable_os2web_kulturnaut_knactivity';
+  $strongarm->value = 1;
+  $export['scheduler_unpublish_enable_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_required_os2web_kulturnaut_knactivity';
+  $strongarm->value = 0;
+  $export['scheduler_unpublish_required_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_unpublish_revision_os2web_kulturnaut_knactivity';
+  $strongarm->value = 1;
+  $export['scheduler_unpublish_revision_os2web_kulturnaut_knactivity'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'scheduler_use_vertical_tabs_os2web_kulturnaut_knactivity';
+  $strongarm->value = '1';
+  $export['scheduler_use_vertical_tabs_os2web_kulturnaut_knactivity'] = $strongarm;
 
   return $export;
 }
