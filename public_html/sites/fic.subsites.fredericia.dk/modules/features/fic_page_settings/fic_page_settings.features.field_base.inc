@@ -32,6 +32,7 @@ function fic_page_settings_field_default_field_bases() {
           'depth' => '',
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'options_list_callback' => 'content_taxonomy_allowed_values',
     ),
     'translatable' => 0,

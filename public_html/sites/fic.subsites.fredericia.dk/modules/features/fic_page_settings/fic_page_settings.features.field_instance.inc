@@ -35,6 +35,7 @@ function fic_page_settings_field_default_field_instances() {
     'label' => 'Sektion',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -79,6 +80,7 @@ function fic_page_settings_field_default_field_instances() {
     'label' => 'Sektion',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -141,6 +143,7 @@ function fic_page_settings_field_default_field_instances() {
     'label' => 'Sektion',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(

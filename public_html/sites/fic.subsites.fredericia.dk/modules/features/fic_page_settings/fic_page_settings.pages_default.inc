@@ -41,11 +41,6 @@ function fic_page_settings_default_page_manager_handlers() {
           'context' => 'argument_term_1',
           'not' => FALSE,
         ),
-        1 => array(
-          'name' => 'front',
-          'settings' => NULL,
-          'not' => FALSE,
-        ),
       ),
       'logic' => 'and',
     ),
