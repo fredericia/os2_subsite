@@ -9185,12 +9185,25 @@ h1.pane-title,
       float: left;
       width: 50%; } }
 
-.front #page-header,
-.page-taxonomy-term #page-header {
-  height: 940px; }
-
 .region-header {
-  clear: both; }
+  margin-left: -15px;
+  margin-right: -15px; }
+  .region-header:before, .region-header:after {
+    content: " ";
+    display: table; }
+  .region-header:after {
+    clear: both; }
+
+.scroll-down-link {
+  text-align: center;
+  display: block;
+  margin: 20px 0; }
+  .scroll-down-link span {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #ffffff; }
 
 form.search-form {
   height: 60px; }
@@ -9946,75 +9959,115 @@ footer.footer {
         padding-top: 5px;
         font-size: inherit; } }
 
-.view-fic-header-banners .views-slideshow-cycle-main-frame {
-  height: auto !important; }
-
-.view-fic-header-banners .views-slideshow-cycle-main-frame-row {
-  position: static !important; }
-
-.view-fic-header-banners .views_slideshow_main {
-  height: 500px; }
-
-.view-fic-header-banners .views-slideshow-controls-bottom {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px; }
-  .view-fic-header-banners .views-slideshow-controls-bottom:before, .view-fic-header-banners .views-slideshow-controls-bottom:after {
-    content: " ";
-    display: table; }
-  .view-fic-header-banners .views-slideshow-controls-bottom:after {
-    clear: both; }
-  @media (min-width: 768px) {
-    .view-fic-header-banners .views-slideshow-controls-bottom {
-      width: 750px; } }
-  @media (min-width: 992px) {
-    .view-fic-header-banners .views-slideshow-controls-bottom {
-      width: 970px; } }
-  @media (min-width: 1230px) {
-    .view-fic-header-banners .views-slideshow-controls-bottom {
-      width: 1200px; } }
-
-.view-fic-header-banners .taxonomy-term {
-  height: 400px;
-  text-align: center;
-  color: #ffffff;
+.view-fic-header-banners {
   font-family: "RBNo21a-Medium", sans-serif;
   position: relative; }
+  .view-fic-header-banners .views-slideshow-cycle-main-frame {
+    height: auto !important;
+    position: static !important; }
+  .view-fic-header-banners .views-slideshow-cycle-main-frame-row {
+    position: static !important; }
+  .view-fic-header-banners .views_slideshow_main {
+    height: 372px;
+    overflow: hidden; }
   .view-fic-header-banners .taxonomy-term-description {
     font-size: 3.125em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-         -o-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    margin: auto; }
-
-.view-fic-header-banners .views-slideshow-controls-bottom {
-  text-align: center; }
-  .view-fic-header-banners .views-slideshow-controls-bottom a {
-    font-family: "RBNo21a-Medium", sans-serif;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 10px 20px 10px;
-    background: #ffffff;
-    color: #192124;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.75); }
+    .view-fic-header-banners .taxonomy-term-description-wrapper {
+      text-align: center;
+      color: #ffffff; }
+  .view-fic-header-banners .views-slideshow-controls-bottom {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     position: relative;
-    text-decoration: none; }
-    .view-fic-header-banners .views-slideshow-controls-bottom a::after {
-      content: '>';
+    padding-bottom: 100px; }
+    .view-fic-header-banners .views-slideshow-controls-bottom:before, .view-fic-header-banners .views-slideshow-controls-bottom:after {
+      content: " ";
+      display: table; }
+    .view-fic-header-banners .views-slideshow-controls-bottom:after {
+      clear: both; }
+    @media (min-width: 768px) {
+      .view-fic-header-banners .views-slideshow-controls-bottom {
+        width: 750px; } }
+    @media (min-width: 992px) {
+      .view-fic-header-banners .views-slideshow-controls-bottom {
+        width: 970px; } }
+    @media (min-width: 1230px) {
+      .view-fic-header-banners .views-slideshow-controls-bottom {
+        width: 1200px; } }
+    .view-fic-header-banners .views-slideshow-controls-bottom div {
+      display: inline-block; }
+    .view-fic-header-banners .views-slideshow-controls-bottom .views-content-name {
+      display: table; }
+    .view-fic-header-banners .views-slideshow-controls-bottom a {
+      font-size: 1.7em;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      display: table-cell;
+      padding: 10px 40px 10px 20px;
+      background: #ffffff;
+      color: #192124;
+      position: relative;
+      vertical-align: middle;
+      text-decoration: none;
+      height: 80px;
+      width: 170px; }
+      .view-fic-header-banners .views-slideshow-controls-bottom a::after {
+        content: '›';
+        display: block;
+        height: 31px;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 1.4em;
+        font-family: "sans-serif"; }
+    .view-fic-header-banners .views-slideshow-controls-bottom .views-row-first {
+      display: none; }
+    .view-fic-header-banners .views-slideshow-controls-bottom .views-slideshow-pager-field-item {
+      margin-right: 27px; }
+      .view-fic-header-banners .views-slideshow-controls-bottom .views-slideshow-pager-field-item.views-row-last {
+        margin-right: 0; }
+    .view-fic-header-banners .views-slideshow-controls-bottom .views-slideshow-pager-fields > div {
+      padding: 0; }
+  .view-fic-header-banners .slide-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    z-index: 1;
+    text-transform: uppercase; }
+    .view-fic-header-banners .slide-bottom .blue-block {
+      background-color: #01B5D5;
+      height: 60px;
+      width: 100%; }
+      .view-fic-header-banners .slide-bottom .blue-block .text {
+        color: #ffffff;
+        font-size: 2em;
+        padding: 10px 10px 10px 17px;
+        display: inline-block; }
+      .view-fic-header-banners .slide-bottom .blue-block .read-more {
+        color: #192124;
+        text-decoration: none;
+        float: right;
+        display: block;
+        padding: 17px;
+        font-size: 1.4em; }
+    .view-fic-header-banners .slide-bottom .contact.modal-link {
       display: block;
-      height: 20px;
-      position: absolute;
-      right: 6px;
-      top: 0;
-      bottom: 0;
-      margin: auto; }
-  .view-fic-header-banners .views-slideshow-controls-bottom .views-row-first {
-    display: none; }
+      width: 100%;
+      height: 100%;
+      background-color: #f24244;
+      color: #ffffff;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 2em; }
+      .view-fic-header-banners .slide-bottom .contact.modal-link:hover, .view-fic-header-banners .slide-bottom .contact.modal-link:focus {
+        text-decoration: none; }
 
 /* General */
 .activities-list-background {
