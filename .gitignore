@@ -58,3 +58,9 @@ scripts/.admin_password.txt
 scripts/config.sh
 public_html/sites/all/translations/*
 *.gz
+/public_html/profiles/os2sub/themes/custom/site_fic/package-lock.json
+/public_html/profiles/os2sub/themes/custom/site_fic/src/scss/stylesheet.css
+/public_html/sites/fic.subsites.fredericia.dk/modules/modules
+/public_html/sites/fic2/modules
+/public_html/sites/fic2/modulesf
+/public_html/sites/fic3/modules

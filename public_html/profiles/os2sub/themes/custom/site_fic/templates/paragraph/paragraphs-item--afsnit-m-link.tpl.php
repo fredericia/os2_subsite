@@ -25,11 +25,41 @@
  * @see template_process()
  */
 ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div class="<?php print $classes; ?> <?php print $content['field_paragraph_bg'][0]['#markup']; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <div class="container">
-      <div class="paragraph-content">
-          <?php print render($content); ?>
+      <div class="row">
+
+
+            <!--        Check if switch is in off position-->
+            <?php if ( !strcasecmp($content['field_paragraph_position'][0]['#markup'], 'off') ): ?>
+              <div class="col-xs-12 col-md-6">
+                <div class="aligner-left">
+                  <?php print render($content['field_paragraph_header']); ?>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <div class="aligner-right">
+                  <?php print render($content['field_knap_link']); ?>
+
+                </div>
+              </div>
+            <?php else: ?>
+              <div class="col-xs-12 col-md-6">
+                <div class="aligner-left">
+                  <?php print render($content['field_knap_link']); ?>
+
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <div class="aligner-right">
+                  <?php print render($content['field_paragraph_header']); ?>
+
+                </div>
+              </div>
+            <?php endif; ?>
+
+        </div>
       </div>
     </div>
   </div>

@@ -25,7 +25,7 @@
  * @see template_process()
  */
 ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div class="<?php print $classes; ?> <?php print $content['field_paragraph_bg'][0]['#markup']; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <div class="container">
       <div class="row">

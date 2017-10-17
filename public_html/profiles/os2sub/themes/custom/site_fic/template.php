@@ -1,13 +1,17 @@
 <?php
 
 /**
- * Implements theme_preprocess_html().
+ * @file
+ * This file contains the main theme functions hooks and overrides.
  */
 
+/**
+ * Implements theme_preprocess_html().
+ */
 function site_fic_preprocess_html(&$variables) {
   $current_theme = variable_get('theme_default', 'none');
 
-  // Paths
+  // Paths.
   $variables['path_js'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/js';
   $variables['path_img'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/img';
   $variables['path_css'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/css';
@@ -30,10 +34,10 @@ function site_fic_preprocess_html(&$variables) {
 //    );
 //  }
 
-  // Body classes
+  // Body classes.
   $variables['classes_array'][] = 'footer-attached';
 
-  // Load jQuery UI
+  // Load jQuery UI.
   drupal_add_library('system', 'ui');
 
   // Hook into color.module.
@@ -42,13 +46,14 @@ function site_fic_preprocess_html(&$variables) {
   }
 }
 
-/*
+/**
  * Implements hook_preprocess_page().
  */
 function site_fic_preprocess_page(&$variables) {
-  $search_box = drupal_render(drupal_get_form('search_form'));
+  $search_form = drupal_get_form('search_form');
+  $search_box = drupal_render($search_form);
   $variables['search_box'] = $search_box;
-  $current_theme = variable_get('theme_default','none');
+  $current_theme = variable_get('theme_default', 'none');
   $primary_navigation_name = variable_get('menu_main_links_source', 'main-menu');
   $secondary_navigation_name = variable_get('menu_secondary_links_source', 'user-menu');
 
@@ -58,11 +63,10 @@ function site_fic_preprocess_page(&$variables) {
   unset($variables['tabs_primary']['#secondary']);
   unset($variables['tabs_secondary']['#primary']);
 
-
-  // Tabbed navigation
+  // Tabbed navigation.
   $variables['tabbed_navigation'] = _bellcom_generate_menu($primary_navigation_name, 'tabbed', 1);
 
-  // Color
+  // Color.
   if (module_exists('color')) {
     _color_page_alter($variables);
   }
@@ -112,25 +116,34 @@ function site_fic_preprocess_taxonomy_term(&$variables) {
   }
 }
 
+/**
+ * Implements template_preprocess_block.
+ */
 function site_fic_preprocess_block(&$variables) {
   $variables['theme_hook_suggestions'][] = 'block__' . $variables['block']->region;
   $variables['theme_hook_suggestions'][] = 'block__' . $variables['block']->module;
   $variables['theme_hook_suggestions'][] = 'block__' . $variables['block']->delta;
-  // Add block description as template suggestion
+  // Add block description as template suggestion.
   $block = block_custom_block_get($variables['block']->delta);
-  // Transform block description to a valid machine name
+  // Transform block description to a valid machine name.
   if (!empty($block['info'])) {
-    setlocale(LC_ALL, 'en_US'); // required for iconv()
+    // Required for iconv().
+    setlocale(LC_ALL, 'en_US');
     $variables['theme_hook_suggestions'][] = 'block__' . str_replace(' ', '_', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $block['info'])));
   }
 }
 
 /**
- * overriding base theme menu_local_tasks. Base theme - Bellcom
+ * Implements theme_menu_local_tasks().
+ *
+ * Overriding base theme menu_local_tasks. Base theme - Bellcom
  * overriding with bootstrap original
  *
- * @param $variables
+ * @param array $variables
+ *   Input variables array.
+ *
  * @return string
+ *   The constructed HTML.
  */
 function site_fic_menu_local_tasks(&$variables) {
   $output = '';
@@ -168,7 +181,6 @@ function site_fic_menu_local_tasks(&$variables) {
  */
 function site_fic_menu_link(array $variables) {
   $element = $variables['element'];
-  //dpm($element);
   $sub_menu = '';
 
   if ($element['#below']) {
