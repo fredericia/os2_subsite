@@ -1175,7 +1175,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
-      'default_image' => 0,
+      'default_image' => 1080,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,

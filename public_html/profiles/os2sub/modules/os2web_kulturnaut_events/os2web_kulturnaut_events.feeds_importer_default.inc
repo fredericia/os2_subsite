@@ -33,7 +33,7 @@ function os2web_kulturnaut_events_feeds_importer_default() {
       'config' => array(
         'sources' => array(
           'xpathparser:2' => 'beskrivelse',
-          'xpathparser:4' => 'concat(\'http://www.djurslive.dk\', substring-after(url,\'.dk\'))',
+          'xpathparser:4' => 'concat(\'http://www.kultunaut.dk\', substring-after(url,\'.dk\'))',
           'xpathparser:7' => 'sted',
           'xpathparser:13' => 'startdato',
           'xpathparser:14' => 'slutdato',

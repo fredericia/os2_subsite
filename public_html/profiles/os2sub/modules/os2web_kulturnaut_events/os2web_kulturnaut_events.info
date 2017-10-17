@@ -16,6 +16,7 @@ dependencies[] = image
 dependencies[] = list
 dependencies[] = media
 dependencies[] = metatag
+dependencies[] = node
 dependencies[] = node_reference
 dependencies[] = options
 dependencies[] = os2sub_frontpage
