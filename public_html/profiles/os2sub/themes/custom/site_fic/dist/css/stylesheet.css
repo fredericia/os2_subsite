@@ -9192,6 +9192,28 @@ h1.pane-title,
 .region-header {
   clear: both; }
 
+form.search-form {
+  height: 60px; }
+  form.search-form input.form-control.form-text {
+    height: 60px;
+    font-size: 1.5em;
+    font-family: "RBNo21a-Medium", sans-serif;
+    color: #fff; }
+    form.search-form input.form-control.form-text::-webkit-input-placeholder {
+      color: #fff; }
+    form.search-form input.form-control.form-text::-moz-placeholder {
+      color: #fff; }
+    form.search-form input.form-control.form-text:-ms-input-placeholder {
+      color: #fff; }
+    form.search-form input.form-control.form-text::placeholder {
+      color: #fff; }
+  form.search-form button {
+    padding: 10px !important;
+    width: 60px !important; }
+    form.search-form button span {
+      font-size: 20px;
+      font-family: 'Glyphicons Halflings'; }
+
 nav.navbar-default ul.navbar-nav > li a {
   padding: 15px;
   font-family: "RBNo21a-Medium", sans-serif;
