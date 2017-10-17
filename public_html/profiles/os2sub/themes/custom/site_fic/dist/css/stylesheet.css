@@ -9198,7 +9198,9 @@ form.search-form {
     height: 60px;
     font-size: 1.5em;
     font-family: "RBNo21a-Medium", sans-serif;
-    color: #fff; }
+    color: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
     form.search-form input.form-control.form-text::-webkit-input-placeholder {
       color: #fff; }
     form.search-form input.form-control.form-text::-moz-placeholder {
@@ -9208,8 +9210,12 @@ form.search-form {
     form.search-form input.form-control.form-text::placeholder {
       color: #fff; }
   form.search-form button {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     padding: 10px !important;
     width: 60px !important; }
+    form.search-form button:active, form.search-form button:hover, form.search-form button:focus {
+      color: #333333; }
     form.search-form button span {
       font-size: 20px;
       font-family: 'Glyphicons Halflings'; }
