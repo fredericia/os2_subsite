@@ -12,7 +12,7 @@
 
 $navigation-wrapper-bg-color: $body-bg-secondary;
 
-$navigation-top-padding-top-bottom: 20px;
+$navigation-top-padding-top-bottom: 15px;
 
 $navigation-bottom-border-width: 4px;
 $navigation-bottom-border-color: #fff;
@@ -22,7 +22,74 @@ $navigation-bottom-border-color: #fff;
 // --------------------------------------------------
 
 // Navigation
+nav.navbar-default{
+  ul.navbar-nav{
+    > li {
+      a{
+        padding: $navigation-top-padding-top-bottom;
+        font-family: $font-rbn021a;
+        font-size: 1.25em;
+      }
+      > a {
 
+        &.active, &.active-trail{
+          background-color: $brand-primary;
+          color: #fff;
+          &:active, &:hover, &:focus{
+            background-color: $brand-primary;
+            color: #fff;
+          }
+        }
+      }
+
+      a, &.open a{
+
+        color: $gray-dark;
+        background-color: #fff;
+        &:active, &:hover, &:focus{
+          background-color: $brand-primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  ul.dropdown-menu{
+    border: none;
+    padding: 0;
+    li{
+      a{
+        &:active, &:hover, &:focus{
+          color: $brand-primary;
+        }
+      }
+      a.active{
+        color: $brand-primary;
+        &>:active, &>:hover, &>:focus{
+          background-color: $brand-primary;
+        }
+      }
+    }
+    li:nth-child(even){
+      a{
+        background-color: #fff;
+        &:active, &:hover, &:focus{
+          color: $brand-primary;
+          background-color: #fff;
+        }
+      }
+    }
+    li:nth-child(odd){
+      a{
+        background-color: lightgray;
+        &:active, &:hover, &:focus{
+          color: $brand-primary;
+          background-color: lightgray;
+        }
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Variants

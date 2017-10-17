@@ -9192,6 +9192,45 @@ h1.pane-title,
 .region-header {
   clear: both; }
 
+nav.navbar-default ul.navbar-nav > li a {
+  padding: 15px;
+  font-family: "RBNo21a-Medium", sans-serif;
+  font-size: 1.25em; }
+
+nav.navbar-default ul.navbar-nav > li > a.active, nav.navbar-default ul.navbar-nav > li > a.active-trail {
+  background-color: #01B5D5;
+  color: #fff; }
+  nav.navbar-default ul.navbar-nav > li > a.active:active, nav.navbar-default ul.navbar-nav > li > a.active:hover, nav.navbar-default ul.navbar-nav > li > a.active:focus, nav.navbar-default ul.navbar-nav > li > a.active-trail:active, nav.navbar-default ul.navbar-nav > li > a.active-trail:hover, nav.navbar-default ul.navbar-nav > li > a.active-trail:focus {
+    background-color: #01B5D5;
+    color: #fff; }
+
+nav.navbar-default ul.navbar-nav > li a, nav.navbar-default ul.navbar-nav > li.open a {
+  color: #333333;
+  background-color: #fff; }
+  nav.navbar-default ul.navbar-nav > li a:active, nav.navbar-default ul.navbar-nav > li a:hover, nav.navbar-default ul.navbar-nav > li a:focus, nav.navbar-default ul.navbar-nav > li.open a:active, nav.navbar-default ul.navbar-nav > li.open a:hover, nav.navbar-default ul.navbar-nav > li.open a:focus {
+    background-color: #01B5D5;
+    color: #fff; }
+
+nav.navbar-default ul.dropdown-menu {
+  border: none;
+  padding: 0; }
+  nav.navbar-default ul.dropdown-menu li a:active, nav.navbar-default ul.dropdown-menu li a:hover, nav.navbar-default ul.dropdown-menu li a:focus {
+    color: #01B5D5; }
+  nav.navbar-default ul.dropdown-menu li a.active {
+    color: #01B5D5; }
+    nav.navbar-default ul.dropdown-menu li a.active > :active, nav.navbar-default ul.dropdown-menu li a.active > :hover, nav.navbar-default ul.dropdown-menu li a.active > :focus {
+      background-color: #01B5D5; }
+  nav.navbar-default ul.dropdown-menu li:nth-child(even) a {
+    background-color: #fff; }
+    nav.navbar-default ul.dropdown-menu li:nth-child(even) a:active, nav.navbar-default ul.dropdown-menu li:nth-child(even) a:hover, nav.navbar-default ul.dropdown-menu li:nth-child(even) a:focus {
+      color: #01B5D5;
+      background-color: #fff; }
+  nav.navbar-default ul.dropdown-menu li:nth-child(odd) a {
+    background-color: lightgray; }
+    nav.navbar-default ul.dropdown-menu li:nth-child(odd) a:active, nav.navbar-default ul.dropdown-menu li:nth-child(odd) a:hover, nav.navbar-default ul.dropdown-menu li:nth-child(odd) a:focus {
+      color: #01B5D5;
+      background-color: lightgray; }
+
 .social-icons-list {
   padding: 0;
   margin-bottom: 5px;
