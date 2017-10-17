@@ -52,7 +52,9 @@
 }
 .page-taxonomy .paragraphs-container,
 .front .paragraphs-container {
-  @extend .container;
+  .entity-paragraphs-item .content {
+    @extend .container;
+  }
 }
 .paragraphs-items{
   .field.field-name-field-paragraph-header{

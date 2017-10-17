@@ -1471,31 +1471,31 @@ address {
   font-style: normal;
   line-height: 1.428571429; }
 
-.container, .page-taxonomy .paragraphs-container,
-.front .paragraphs-container {
+.container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
+.front .paragraphs-container .entity-paragraphs-item .content {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .page-taxonomy .paragraphs-container:before,
-  .front .paragraphs-container:before, .container:after, .page-taxonomy .paragraphs-container:after,
-  .front .paragraphs-container:after {
+  .container:before, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content:before,
+  .front .paragraphs-container .entity-paragraphs-item .content:before, .container:after, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content:after,
+  .front .paragraphs-container .entity-paragraphs-item .content:after {
     content: " ";
     display: table; }
-  .container:after, .page-taxonomy .paragraphs-container:after,
-  .front .paragraphs-container:after {
+  .container:after, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content:after,
+  .front .paragraphs-container .entity-paragraphs-item .content:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, .page-taxonomy .paragraphs-container,
-    .front .paragraphs-container {
+    .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
+    .front .paragraphs-container .entity-paragraphs-item .content {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, .page-taxonomy .paragraphs-container,
-    .front .paragraphs-container {
+    .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
+    .front .paragraphs-container .entity-paragraphs-item .content {
       width: 970px; } }
   @media (min-width: 1230px) {
-    .container, .page-taxonomy .paragraphs-container,
-    .front .paragraphs-container {
+    .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
+    .front .paragraphs-container .entity-paragraphs-item .content {
       width: 1200px; } }
 
 .container-fluid {
@@ -3889,19 +3889,19 @@ tbody.collapse.in {
     .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header, .page-taxonomy .paragraphs-container > .navbar-header,
-.front .paragraphs-container > .navbar-header,
-.container > .navbar-collapse, .page-taxonomy .paragraphs-container > .navbar-collapse,
-.front .paragraphs-container > .navbar-collapse,
+.container > .navbar-header, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-header,
+.front .paragraphs-container .entity-paragraphs-item .content > .navbar-header,
+.container > .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse,
+.front .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, .page-taxonomy .paragraphs-container > .navbar-header,
-    .front .paragraphs-container > .navbar-header,
-    .container > .navbar-collapse, .page-taxonomy .paragraphs-container > .navbar-collapse,
-    .front .paragraphs-container > .navbar-collapse,
+    .container > .navbar-header, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-header,
+    .front .paragraphs-container .entity-paragraphs-item .content > .navbar-header,
+    .container > .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse,
+    .front .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse,
     .container-fluid > .navbar-header,
     .container-fluid > .navbar-collapse {
       margin-right: 0;
@@ -3945,8 +3945,8 @@ tbody.collapse.in {
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .page-taxonomy .navbar > .paragraphs-container .navbar-brand,
-    .front .navbar > .paragraphs-container .navbar-brand,
+    .navbar > .container .navbar-brand, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar > .content .navbar-brand,
+    .front .paragraphs-container .entity-paragraphs-item .navbar > .content .navbar-brand,
     .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
@@ -4497,22 +4497,22 @@ a.badge:hover, a.badge:focus {
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .page-taxonomy .paragraphs-container .jumbotron,
-  .front .paragraphs-container .jumbotron,
+  .container .jumbotron, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content .jumbotron,
+  .front .paragraphs-container .entity-paragraphs-item .content .jumbotron,
   .container-fluid .jumbotron {
     border-radius: 6px;
     padding-left: 15px;
     padding-right: 15px; }
-  .jumbotron .container, .jumbotron .page-taxonomy .paragraphs-container, .page-taxonomy .jumbotron .paragraphs-container, .jumbotron
-  .front .paragraphs-container,
-  .front .jumbotron .paragraphs-container {
+  .jumbotron .container, .jumbotron .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .jumbotron .content, .jumbotron
+  .front .paragraphs-container .entity-paragraphs-item .content,
+  .front .paragraphs-container .entity-paragraphs-item .jumbotron .content {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding-top: 48px;
       padding-bottom: 48px; }
-      .container .jumbotron, .page-taxonomy .paragraphs-container .jumbotron,
-      .front .paragraphs-container .jumbotron,
+      .container .jumbotron, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content .jumbotron,
+      .front .paragraphs-container .entity-paragraphs-item .content .jumbotron,
       .container-fluid .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
