@@ -30,9 +30,9 @@ function os2web_base_image_default_styles() {
 
   // Exported image style: os2sub_220x130.
   $styles['os2sub_220x130'] = array(
-    'label' => 'Forside nyhed 4 spalter',
+    'label' => 'Nyhed Mini',
     'effects' => array(
-      3 => array(
+      48 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 220,
@@ -47,7 +47,7 @@ function os2web_base_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      4 => array(
+      49 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 220,
@@ -60,9 +60,9 @@ function os2web_base_image_default_styles() {
 
   // Exported image style: os2sub_300x175.
   $styles['os2sub_300x175'] = array(
-    'label' => 'Forside nyhed 2 og 3 spalter',
+    'label' => 'Nyhed Lille',
     'effects' => array(
-      1 => array(
+      50 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 300,
@@ -77,7 +77,7 @@ function os2web_base_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      2 => array(
+      51 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 300,
