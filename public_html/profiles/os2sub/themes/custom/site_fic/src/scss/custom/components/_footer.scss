@@ -30,7 +30,24 @@ footer.footer {
       text-decoration: underline;
     }
     h2.block-title {
-      color: #23527c;
+      color: $brand-primary;
+    }
+  }
+  ul.menu.nav{
+    columns: 2;
+    li{
+      a{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-decoration: none;
+        font-size: 1em;
+        &:active, &:hover, &:focus{
+        background: none;
+        color: $brand-primary;
+        }
+      }
     }
   }
 }

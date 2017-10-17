@@ -9338,7 +9338,21 @@ footer.footer {
       color: #fff;
       text-decoration: underline; }
     footer.footer .footer-dark h2.block-title, footer.footer .footer-dark .block-title.heading-h2 {
-      color: #23527c; }
+      color: #01B5D5; }
+  footer.footer ul.menu.nav {
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2; }
+    footer.footer ul.menu.nav li a {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-decoration: none;
+      font-size: 1em; }
+      footer.footer ul.menu.nav li a:active, footer.footer ul.menu.nav li a:hover, footer.footer ul.menu.nav li a:focus {
+        background: none;
+        color: #01B5D5; }
 
 .social-icon-list ul {
   list-style: none; }
