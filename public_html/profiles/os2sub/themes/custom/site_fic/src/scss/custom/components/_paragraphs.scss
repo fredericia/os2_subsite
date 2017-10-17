@@ -52,7 +52,7 @@
 }
 .page-taxonomy .paragraphs-container,
 .front .paragraphs-container {
-  @include container-fixed($gutter: $grid-gutter-width);
+  @extend .container;
 }
 .paragraphs-items{
   .field.field-name-field-paragraph-header{
