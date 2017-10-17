@@ -167,7 +167,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['effect'] = 'none';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['transition_advanced'] = 1;
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '5000';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '0';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['pause'] = 0;
@@ -177,6 +177,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 1;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 1;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['advanced_options'] = '{"before":"var $termId = $(nextSlideElement).find(\'.taxonomy-term\').attr(\'id\').replace(\'taxonomy-term-\', \'\');\\nif (typeof Drupal.behaviors.ficBackstretch !== \\"undefined\\") { \\n    Drupal.behaviors.ficBackstretch.show($termId);\\n}"}';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Field: Taxonomy term: Name */
