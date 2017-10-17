@@ -96,42 +96,6 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $display->content['new-cb60b7b3-93f2-4014-9c55-9b41070764d7'] = $pane;
   $display->panels['dark_section_1'][0] = 'new-cb60b7b3-93f2-4014-9c55-9b41070764d7';
   $pane = new stdClass();
-  $pane->pid = 'new-afb36340-1601-4177-b9d1-b29593f74330';
-  $pane->panel = 'dark_section_2';
-  $pane->type = 'entity_field';
-  $pane->subtype = 'taxonomy_term:field_afsnit';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'label' => 'title',
-    'formatter' => 'paragraphs_view',
-    'delta_limit' => '0',
-    'delta_offset' => '0',
-    'delta_reversed' => 0,
-    'formatter_settings' => array(
-      'view_mode' => 'full',
-    ),
-    'context' => 'argument_term_1',
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-    'template_suggestion' => 'paragraphs',
-  );
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = 'afb36340-1601-4177-b9d1-b29593f74330';
-  $display->content['new-afb36340-1601-4177-b9d1-b29593f74330'] = $pane;
-  $display->panels['dark_section_2'][0] = 'new-afb36340-1601-4177-b9d1-b29593f74330';
-  $pane = new stdClass();
   $pane->pid = 'new-82c4f8e4-44b7-411f-ad2c-0725bbb82bcd';
   $pane->panel = 'light_section_1';
   $pane->type = 'views_panes';
@@ -161,6 +125,42 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $pane->uuid = '82c4f8e4-44b7-411f-ad2c-0725bbb82bcd';
   $display->content['new-82c4f8e4-44b7-411f-ad2c-0725bbb82bcd'] = $pane;
   $display->panels['light_section_1'][0] = 'new-82c4f8e4-44b7-411f-ad2c-0725bbb82bcd';
+  $pane = new stdClass();
+  $pane->pid = 'new-afb36340-1601-4177-b9d1-b29593f74330';
+  $pane->panel = 'light_section_1';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'taxonomy_term:field_afsnit';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'title',
+    'formatter' => 'paragraphs_view',
+    'delta_limit' => '0',
+    'delta_offset' => '0',
+    'delta_reversed' => 0,
+    'formatter_settings' => array(
+      'view_mode' => 'full',
+    ),
+    'context' => 'argument_term_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'paragraphs',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = 'afb36340-1601-4177-b9d1-b29593f74330';
+  $display->content['new-afb36340-1601-4177-b9d1-b29593f74330'] = $pane;
+  $display->panels['light_section_1'][1] = 'new-afb36340-1601-4177-b9d1-b29593f74330';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
