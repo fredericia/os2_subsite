@@ -58,6 +58,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -114,6 +115,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Nedarv højrespalte',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -170,6 +172,7 @@ function os2web_base_field_default_field_instances() {
       'alt_field' => 0,
       'alt_field_required' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -247,6 +250,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'jpg jpeg mp3 pdf',
       'max_filesize' => '',
@@ -316,6 +320,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Forældre-menupunkt',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -368,6 +373,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Source ID',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -420,6 +426,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Overordnet placering',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -477,6 +484,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -540,6 +548,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -591,6 +600,7 @@ function os2web_base_field_default_field_instances() {
         'afsnit_m_billede' => 2,
       ),
       'default_edit_mode' => 'open',
+      'entity_translation_sync' => FALSE,
       'title' => 'Afsnit',
       'title_multiple' => 'Afsnit',
       'user_register_form' => FALSE,
@@ -642,6 +652,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -714,6 +725,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Banner',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -761,6 +773,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Kontaktblok',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -810,6 +823,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Stikord',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -863,6 +877,7 @@ function os2web_base_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -922,6 +937,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Skjul automatisk relaterede links',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -974,6 +990,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'afsnit_stort_billede' => 0,
@@ -1054,6 +1071,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'KL Emneord',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1103,6 +1121,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Egennavne/stednavne',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1157,6 +1176,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'PDF',
       'file_extensions' => 'pdf swf doc docx xlsx xls ppt pptx',
       'max_filesize' => '50 MB',
@@ -1225,6 +1245,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Organistation',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1274,6 +1295,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Politik',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1315,6 +1337,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Unikke relaterede links',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1362,6 +1385,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Selvbetjening',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1409,6 +1433,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Spotboxe',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1464,6 +1489,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1508,6 +1534,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Webform',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1553,6 +1580,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Skjul kontaktblok',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1622,6 +1650,7 @@ function os2web_base_field_default_field_instances() {
         ),
       ),
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Søg',
         'enable' => 0,
@@ -1682,6 +1711,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Stikord',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1742,6 +1772,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -1820,6 +1851,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -1875,6 +1907,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Stikord',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1932,6 +1965,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'iFrame URL',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1986,6 +2020,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'KL Emneord',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2042,6 +2077,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Egenavne / stednavne',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2097,6 +2133,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Organisation',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2152,6 +2189,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Politik',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2205,6 +2243,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Source ID',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -2259,6 +2298,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Intro',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2341,6 +2381,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
@@ -2400,6 +2441,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -2490,6 +2532,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Kontaktblok',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2556,6 +2599,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Stikord',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2627,6 +2671,7 @@ function os2web_base_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -2698,6 +2743,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Skjul automatisk relaterede links',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2761,6 +2807,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'KL Emneord',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2904,6 +2951,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 'os2sub_220x130',
@@ -2999,6 +3047,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Egenavne / stednavne',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3061,6 +3110,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'PDF',
       'file_extensions' => 'pdf swf doc docx xlsx xls ppt pptx',
       'max_filesize' => '',
@@ -3148,6 +3198,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Organistation',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3215,6 +3266,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Politik',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3280,6 +3332,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Forfrem til',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3347,6 +3400,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Unikke relaterede links',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3406,6 +3460,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Spotboxe',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3486,6 +3541,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3556,6 +3612,7 @@ function os2web_base_field_default_field_instances() {
       'alt_field' => 0,
       'alt_field_required' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2web_spotbox_image' => 0,
@@ -3649,6 +3706,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3703,6 +3761,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Forfrem til',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3759,6 +3818,7 @@ function os2web_base_field_default_field_instances() {
       'alt_field' => 0,
       'alt_field_required' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -3860,6 +3920,7 @@ function os2web_base_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'title' => 'optional',
       'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
@@ -3926,6 +3987,7 @@ function os2web_base_field_default_field_instances() {
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3983,6 +4045,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Overordnet placering',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4035,6 +4098,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Kilde',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -4105,6 +4169,7 @@ function os2web_base_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Søg',
         'enable' => 1,
@@ -4182,6 +4247,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4245,6 +4311,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -4322,6 +4389,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Banner',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4373,6 +4441,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -4448,6 +4517,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -4491,6 +4561,114 @@ function os2web_base_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_billede-field_image_align'.
+  $field_instances['paragraphs_item-afsnit_m_billede-field_image_align'] = array(
+    'bundle' => 'afsnit_m_billede',
+    'default_value' => array(
+      0 => array(
+        'value' => 'center',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_image_align',
+    'label' => 'Placering',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_billede-field_knap_link'.
+  $field_instances['paragraphs_item-afsnit_m_billede-field_knap_link'] = array(
+    'bundle' => 'afsnit_m_billede',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_knap_link',
+    'label' => 'Knap / link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 3,
     ),
   );
 
@@ -4539,6 +4717,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4589,6 +4768,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Sides switch',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4645,6 +4825,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4708,6 +4889,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4724,6 +4906,47 @@ function os2web_base_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_citat-field_image_align'.
+  $field_instances['paragraphs_item-afsnit_m_citat-field_image_align'] = array(
+    'bundle' => 'afsnit_m_citat',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_image_align',
+    'label' => 'Placering',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
     ),
   );
 
@@ -4772,6 +4995,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4836,6 +5060,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -4852,6 +5077,226 @@ function os2web_base_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_galleri-field_paragraph_gallery'.
+  $field_instances['paragraphs_item-afsnit_m_galleri-field_paragraph_gallery'] = array(
+    'bundle' => 'afsnit_m_galleri',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'photoswipe',
+        'settings' => array(
+          'photoswipe_caption' => 'title',
+          'photoswipe_image_style' => '',
+          'photoswipe_node_style' => 'os2sub_small_imagesize',
+          'photoswipe_view_mode' => 'default',
+        ),
+        'type' => 'photoswipe',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_gallery',
+    'label' => 'Billeder',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'epsacrop' => array(
+        'styles' => array(
+          'os2sub_220x130' => 0,
+          'os2sub_300x175' => 0,
+          'os2sub_banner' => 0,
+          'os2sub_normal_imagesize' => 'os2sub_normal_imagesize',
+          'os2sub_teaser_mini_image' => 0,
+          'os2web_spotbox_image' => 0,
+        ),
+      ),
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'instagram' => 0,
+          'oembed' => 'oembed',
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'instagram' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_galleri-field_paragraph_header'.
+  $field_instances['paragraphs_item-afsnit_m_galleri-field_paragraph_header'] = array(
+    'bundle' => 'afsnit_m_galleri',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_header',
+    'label' => 'Afsnit overskrift',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_galleri-field_paragraph_media_gallery'.
+  $field_instances['paragraphs_item-afsnit_m_galleri-field_paragraph_media_gallery'] = array(
+    'bundle' => 'afsnit_m_galleri',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'teaser',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_media_gallery',
+    'label' => 'Media',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'entity_translation_sync' => FALSE,
+      'epsacrop' => array(
+        'styles' => array(
+          'os2sub_220x130' => 0,
+          'os2sub_300x175' => 0,
+          'os2sub_banner' => 0,
+          'os2sub_normal_imagesize' => 'os2sub_normal_imagesize',
+          'os2sub_teaser_mini_image' => 0,
+          'os2web_spotbox_image' => 0,
+        ),
+      ),
+      'file_directory' => '',
+      'file_extensions' => 'png jpg',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'instagram' => 0,
+          'oembed' => 'oembed',
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'instagram' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
     ),
   );
 
@@ -4894,6 +5339,7 @@ function os2web_base_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 0,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Søg',
         'enable' => 1,
@@ -4948,6 +5394,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Background',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5006,6 +5453,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5056,6 +5504,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Sides switch',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5112,6 +5561,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5162,6 +5612,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -5248,6 +5699,7 @@ function os2web_base_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5302,6 +5754,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Background',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5360,6 +5813,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5410,6 +5864,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Sides switch',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5466,6 +5921,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5514,6 +5970,7 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2sub_220x130' => 0,
@@ -5591,6 +6048,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Background',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5649,6 +6107,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5699,6 +6158,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Sides switch',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5755,6 +6215,7 @@ function os2web_base_field_default_field_instances() {
           ),
         ),
       ),
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -5771,6 +6232,52 @@ function os2web_base_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-os2web_base_tax_site_structure-description_field'.
+  $field_instances['taxonomy_term-os2web_base_tax_site_structure-description_field'] = array(
+    'bundle' => 'os2web_base_tax_site_structure',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'description_field',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => 0,
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => -5,
     ),
   );
 
@@ -5812,6 +6319,7 @@ function os2web_base_field_default_field_instances() {
         'afsnit_m_link' => 4,
       ),
       'default_edit_mode' => 'open',
+      'entity_translation_sync' => FALSE,
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
       'user_register_form' => FALSE,
@@ -5851,6 +6359,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Alternativ visning',
     'required' => FALSE,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5893,6 +6402,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Vis på portalside',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5934,6 +6444,7 @@ function os2web_base_field_default_field_instances() {
       'alt_field' => 0,
       'alt_field_required' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'subsite/banner',
       'file_extensions' => 'png gif jpg jpeg',
       'focus' => 0,
@@ -6001,6 +6512,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Kontaktblok',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6054,6 +6566,7 @@ function os2web_base_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -6107,6 +6620,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Skjul automatisk relaterede links',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6139,21 +6653,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'fic_header' => array(
         'label' => 'hidden',
-        'module' => 'backstretch',
-        'settings' => array(
-          'center_x' => 1,
-          'center_y' => 1,
-          'delta' => '',
-          'duration' => 5000,
-          'element' => 'other',
-          'element_other' => '.page-header-wrapper',
-          'fade' => 0,
-          'field' => '',
-          'image_style' => 'os2web_cover',
-          'random' => FALSE,
-        ),
-        'type' => 'backstretch',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -6164,6 +6666,7 @@ function os2web_base_field_default_field_instances() {
       'alt_field' => 0,
       'alt_field_required' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2web_spotbox_image' => 0,
@@ -6241,6 +6744,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'KL Emneord',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6283,6 +6787,7 @@ function os2web_base_field_default_field_instances() {
       'alt_field' => 1,
       'alt_field_required' => 1,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
           'os2web_spotbox_image' => 0,
@@ -6361,6 +6866,7 @@ function os2web_base_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'description_field' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => 'PDF',
       'file_extensions' => 'pdf swf doc docx xlsx xls ppt pptx',
       'max_filesize' => '50 MB',
@@ -6424,6 +6930,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Unikke relaterede links',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6465,6 +6972,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Selvbetjeningslinks',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6506,6 +7014,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Spotboxe',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6551,6 +7060,7 @@ function os2web_base_field_default_field_instances() {
     'label' => 'Skjul højre sidebar',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -6561,6 +7071,50 @@ function os2web_base_field_default_field_instances() {
       ),
       'type' => 'options_onoff',
       'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-os2web_base_tax_site_structure-name_field'.
+  $field_instances['taxonomy_term-os2web_base_tax_site_structure-name_field'] = array(
+    'bundle' => 'os2web_base_tax_site_structure',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'name_field',
+    'label' => 'Name',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -5,
     ),
   );
 
@@ -6575,6 +7129,7 @@ function os2web_base_field_default_field_instances() {
   t('Billede');
   t('Billeder');
   t('Citat');
+  t('Description');
   t('Det der vises med sort');
   t('Egenavne / stednavne');
   t('Egennavne/stednavne');
@@ -6591,6 +7146,8 @@ function os2web_base_field_default_field_instances() {
   t('Kontaktblok');
   t('Link');
   t('Logo');
+  t('Media');
+  t('Name');
   t('Nedarv højrespalte');
   t('Opmærk dit indhold med KLs Emneord.
 <br>Se fuld oversigt på <a target="_blank" href="http://www.kle-online.dk">KLE-Online</a>.
@@ -6613,6 +7170,7 @@ function os2web_base_field_default_field_instances() {
   t('PDF Filer');
   t('PDF filer');
   t('Paragraph');
+  t('Placering');
   t('Politik');
   t('Primære billede');
   t('Resume (maks 2 linier!)');

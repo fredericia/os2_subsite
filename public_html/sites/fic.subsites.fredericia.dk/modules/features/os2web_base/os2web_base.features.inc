@@ -349,6 +349,11 @@ function os2web_base_paragraphs_info() {
       'bundle' => 'afsnit_m_citat',
       'locked' => '1',
     ),
+    'afsnit_m_galleri' => array(
+      'name' => 'Afsnit m galleri',
+      'bundle' => 'afsnit_m_galleri',
+      'locked' => '1',
+    ),
     'afsnit_m_link' => array(
       'name' => 'Afsnit m link',
       'bundle' => 'afsnit_m_link',

@@ -49,7 +49,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Billeder og filer',
-    'weight' => '14',
+    'weight' => '-4',
     'children' => array(
       0 => 'field_os2web_base_field_banner',
       1 => 'field_os2web_base_field_image',
@@ -73,6 +73,35 @@ function os2web_base_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_imagewrap|paragraphs_item|afsnit_m_billede|form';
+  $field_group->group_name = 'group_imagewrap';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'afsnit_m_billede';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Billede',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_image',
+      1 => 'field_image_align',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-imagewrap field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_imagewrap|paragraphs_item|afsnit_m_billede|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_indstillinger|taxonomy_term|os2web_base_tax_site_structure|form';
   $field_group->group_name = 'group_indstillinger';
   $field_group->entity_type = 'taxonomy_term';
@@ -81,7 +110,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Indstillinger',
-    'weight' => '18',
+    'weight' => '-1',
     'children' => array(
       0 => 'field_alternative_display',
       1 => 'field_list_as_spotboks',
@@ -634,6 +663,35 @@ function os2web_base_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_quote_wrap|paragraphs_item|afsnit_m_citat|form';
+  $field_group->group_name = 'group_quote_wrap';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'afsnit_m_citat';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Citat',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_citat',
+      1 => 'field_image_align',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-quote-wrap field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_quote_wrap|paragraphs_item|afsnit_m_citat|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_relationer|node|os2web_base_contentpage|form';
   $field_group->group_name = 'group_relationer';
   $field_group->entity_type = 'node';
@@ -701,7 +759,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Selvbetjeningslinks',
-    'weight' => '16',
+    'weight' => '-2',
     'children' => array(
       0 => 'field_os2web_base_field_selfserv',
     ),
@@ -787,7 +845,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Spotbokse',
-    'weight' => '15',
+    'weight' => '-3',
     'children' => array(
       0 => 'field_os2web_base_field_spotbox',
     ),
@@ -817,10 +875,11 @@ function os2web_base_field_group_info() {
     'label' => 'Term',
     'weight' => '1',
     'children' => array(
-      0 => 'group_billeder',
-      1 => 'group_indstillinger',
-      2 => 'group_selvbetjening',
-      3 => 'group_spotbokse',
+      0 => 'description_field',
+      1 => 'group_billeder',
+      2 => 'group_indstillinger',
+      3 => 'group_selvbetjening',
+      4 => 'group_spotbokse',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -837,6 +896,7 @@ function os2web_base_field_group_info() {
   t('Afsnit');
   t('Billede');
   t('Billeder og filer');
+  t('Citat');
   t('Emneord');
   t('Hentet fra kommunens sagssystem');
   t('Indholdsside');
