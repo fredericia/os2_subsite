@@ -28,6 +28,7 @@ function os2web_kulturnaut_events_preprocess_taxonomy_term(&$variables) {
       ->entityCondition('bundle', 'os2web_kulturnaut_knactivity')
       ->propertyCondition('status', NODE_PUBLISHED)
       ->fieldCondition('field_os2web_kulturnaut_venue', 'tid', $term->tid)
+      ->fieldCondition('field_os2web_kulturnaut_date', 'value2', date("Y-m-d H:i:s"), '>=')
       ->count()
       ->execute();
 
