@@ -10186,7 +10186,7 @@ footer.footer {
     .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video {
       margin-bottom: 15px; }
       .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe {
-        width: 100% !important;
+        max-width: 100% !important;
         height: 300px !important;
         border: 10px solid #192124; }
 

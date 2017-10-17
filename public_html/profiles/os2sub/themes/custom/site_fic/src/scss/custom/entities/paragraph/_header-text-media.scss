@@ -31,7 +31,7 @@
       .paragraph-video{
         margin-bottom: ($grid-gutter-width /2 );        
         iframe{
-          width: 100% !important;
+          max-width: 100% !important;
           height: 300px !important;
           border: 10px solid $color-black;
         }
