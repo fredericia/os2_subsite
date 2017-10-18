@@ -66,7 +66,6 @@ section.block-locale{
     border: none;
     background: none;
     text-size: 0.75em;
-
     &:after{
       content:'';
       color: $brand-primary;
@@ -77,7 +76,8 @@ section.block-locale{
   .dropdown-menu{
     min-width: auto;
     border: none;
-    border-radius: unset;
+    border-radius: unset; 
+    top: auto;
     ul.language-switcher-locale-url{
       padding: 0px 10px;
       li{
