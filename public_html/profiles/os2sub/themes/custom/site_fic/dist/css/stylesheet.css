@@ -9243,6 +9243,34 @@ form.search-form {
       font-size: 20px;
       font-family: 'Glyphicons Halflings'; }
 
+section.block-locale button.lang-buton {
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  text-size: 0.75em; }
+  section.block-locale button.lang-buton:after {
+    content: '';
+    color: #01B5D5;
+    font: normal normal normal 14px/1 FontAwesome;
+    border: none; }
+
+section.block-locale .dropdown-menu {
+  min-width: auto;
+  border: none;
+  border-radius: unset; }
+  section.block-locale .dropdown-menu ul.language-switcher-locale-url {
+    padding: 0px 10px; }
+    section.block-locale .dropdown-menu ul.language-switcher-locale-url li {
+      list-style: none; }
+      section.block-locale .dropdown-menu ul.language-switcher-locale-url li a {
+        text-size: 0.75em;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: #fff;
+        color: #222222; }
+        section.block-locale .dropdown-menu ul.language-switcher-locale-url li a:active, section.block-locale .dropdown-menu ul.language-switcher-locale-url li a:hover, section.block-locale .dropdown-menu ul.language-switcher-locale-url li a:focus {
+          color: #01B5D5; }
+
 nav.navbar-default ul.navbar-nav > li a {
   padding: 15px;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
