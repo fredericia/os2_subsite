@@ -9247,7 +9247,8 @@ section.block-locale button.lang-buton {
   text-transform: uppercase;
   border: none;
   background: none;
-  text-size: 0.75em; }
+  text-size: 0.75em;
+  color: #fff; }
   section.block-locale button.lang-buton:after {
     content: '';
     color: #01B5D5;
