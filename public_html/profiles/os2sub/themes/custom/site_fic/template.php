@@ -231,9 +231,12 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
 
   $image = $vars['content']['field_os2web_base_field_image'][0];
   hide($vars['content']);
-  $backstretch_data[$vars['tid']] = image_style_url(
-    $image['#image_style'],
-    $image['#item']['uri']
+  $backstretch_data[] = array(
+    'tid' => $vars['tid'],
+    'url' => image_style_url(
+      $image['#image_style'],
+      $image['#item']['uri']
+    ),
   );
 }
 
