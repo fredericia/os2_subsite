@@ -253,11 +253,12 @@ function site_fic_field__field_os2web_base_field_contact(&$vars) {
 
   $field_value = field_get_items('taxonomy_term', $term, 'field_os2web_base_field_contact');
   $nid = $field_value[0]['nid'];
-
-  $output = l(t('Contact'), 'node/' . $nid, array(
+  $output = l(t('Contact'), 'modal/node/' . $nid . '/nojs', array(
     'attributes' => array(
       'class' => array(
         'modal-link',
+        'ctools-modal-contact-modal-style',
+        'ctools-use-modal',
         'contact',
       ),
     ),
