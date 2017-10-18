@@ -9510,7 +9510,8 @@ div.ctools-modal-content {
   display: none; }
 
 .page-node .content-sidebar {
-  border-left: 2px solid #ddd; }
+  border-left: 2px solid #ddd;
+  padding-bottom: 60px; }
   .page-node .content-sidebar .panel-pane {
     padding-left: 15px; }
   .page-node .content-sidebar h2, .page-node .content-sidebar .heading-h2 {
@@ -9526,7 +9527,7 @@ div.ctools-modal-content {
 .page-node .field-name-field-os2web-base-field-summary {
   font-family: "RBNo21a-Medium", "Lato", sans-serif; }
 
-.page-node .os2-section.os2-section-light {
+.page-node .os2-section.os2-section-light .pane-fic-kommende-arrangementer-panel-pane-1 {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 2px solid #ddd; }

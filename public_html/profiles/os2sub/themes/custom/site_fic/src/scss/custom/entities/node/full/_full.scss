@@ -24,6 +24,7 @@
   }
   .content-sidebar {
     border-left: 2px solid #ddd;
+    padding-bottom: ($grid-gutter-width * 2);
     .panel-pane {
       padding-left: ($grid-gutter-width/2);
     }
@@ -43,9 +44,11 @@
     font-family: $headings-font-family;
   }
   .os2-section.os2-section-light {
-    margin-top: $grid-gutter-width;
-    padding-top: $grid-gutter-width;
-    border-top: 2px solid #ddd;
+    .pane-fic-kommende-arrangementer-panel-pane-1 {
+      margin-top: $grid-gutter-width;
+      padding-top: $grid-gutter-width;
+      border-top: 2px solid #ddd;
+    }
   }
 }
 
