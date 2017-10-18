@@ -98,7 +98,11 @@ function fic_common_block_view($delta = '') {
  * @return string
  *     The HTML, parsed by Drupal to show the login form.
  */
-function fic_common_node_modal_page($node, $js = 'nojs') {
+function fic_common_node_modal_page($node, $js) {
+  if (!$js) {
+    drupal_goto('node/' . $node->nid);
+  }
+
   ctools_include('modal');
   ctools_include('ajax');
   $contents = render(node_view($node));
