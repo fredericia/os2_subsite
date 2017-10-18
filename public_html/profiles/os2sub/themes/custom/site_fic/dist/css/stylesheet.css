@@ -9257,7 +9257,8 @@ section.block-locale button.lang-buton {
 section.block-locale .dropdown-menu {
   min-width: auto;
   border: none;
-  border-radius: unset; }
+  border-radius: unset;
+  top: auto; }
   section.block-locale .dropdown-menu ul.language-switcher-locale-url {
     padding: 0px 10px; }
     section.block-locale .dropdown-menu ul.language-switcher-locale-url li {
