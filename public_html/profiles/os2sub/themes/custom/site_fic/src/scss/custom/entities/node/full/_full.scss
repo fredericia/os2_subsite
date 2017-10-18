@@ -22,6 +22,12 @@
   .scroll-down-wrapper {
     display: none;
   }
+  .content-sidebar {
+    border-left: 2px solid #ddd;
+    h2 {
+      color: $brand-secondary;
+    }
+  }
   .page-header-wrapper {
     background-image: url('../img/topbg.png');
     background-repeat: repeat-x;
@@ -32,6 +38,11 @@
   .field-name-field-os2web-base-field-summary {
     @extend .lead;
     font-family: $headings-font-family;
+  }
+  .os2-section os2-section-light {
+    margin-top: $grid-gutter-width;
+    padding-top: $grid-gutter-width;
+    border-top: 2px solid #ddd;
   }
 }
 
