@@ -13,7 +13,9 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.view-fic-header-banners {
+.view-fic-header-banners,
+.term-fic-header {
+  @include container-fixed();
   font-family: $font-rbn021a;
   position: relative;
 
@@ -31,10 +33,6 @@
     overflow: hidden;
   }
 
-  .views-slideshow-controls-bottom {
-
-  }
-
   .taxonomy-term {
     &-description-wrapper {
       text-align: center;
@@ -44,27 +42,19 @@
     }
   }
 
-  .views-slideshow-controls-bottom {
-    @include container-fixed;
-    position: relative;
+  .views-slideshow-controls-bottom,
+  .views-field-field-os2web-base-field-related {
     padding-bottom: 100px;
 
-    @media (min-width: $screen-sm-min) {
-      width: $container-sm;
-    }
-    @media (min-width: $screen-md-min) {
-      width: $container-md;
-    }
-    @media (min-width: $screen-lg-min) {
-      width: $container-lg;
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
     }
 
-    div {
+    div,
+    li {
       display: inline-block;
-    }
-
-    .views-content-name {
-      display: table;
     }
 
     a {
@@ -79,7 +69,7 @@
       vertical-align: middle;
       text-decoration: none;
       height: 80px;
-      width: 170px;
+      width: 270px;
 
       &::after {
         content: '›';
@@ -95,10 +85,15 @@
       }
     }
 
-    .views-slideshow-pager-field-item {
+    .views-slideshow-pager-field-item,
+    ul > li {
       margin-right: 27px;
 
-      &.views-row-last {
+      &.views-row-first {
+        display: none;
+      }
+
+      &:last-child {
         margin-right: 0;
       }
     }
@@ -152,6 +147,14 @@
       &:hover, &:focus {
         text-decoration: none;
       }
+    }
+  }
+}
+
+.term-fic-header-front {
+  .views-slideshow-controls-bottom {
+    a {
+      width: 170px;
     }
   }
 }
