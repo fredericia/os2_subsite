@@ -1,0 +1,6 @@
+name = FIC Common module for custom functionality
+core = 7.x
+package = FIC
+project = fic_common
+
+dependencies[] = fic_frontpage_settings
