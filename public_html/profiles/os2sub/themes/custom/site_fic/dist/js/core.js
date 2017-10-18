@@ -23,8 +23,8 @@ var header = (function ($) {
 
        var $images = [],
          $backstretchWrapper = $('.page-header-wrapper');
-       for (var $termId in settings.ficBackstretch) {
-         $images.push(settings.ficBackstretch[$termId]);
+       for (var i = 0; i < settings.ficBackstretch.length; i++) {
+         $images.push(settings.ficBackstretch[i].url);
        }
        $backstretchWrapper.backstretch($images, {
          // Slides should be never changed automaticly.
@@ -41,8 +41,8 @@ var header = (function ($) {
          return;
        }
 
-       for (var $searchTermId in Drupal.settings.ficBackstretch) {
-         if ($termId == $searchTermId) {
+       for (var i = 0; i < Drupal.settings.ficBackstretch.length; i++) {
+           if ($termId == Drupal.settings.ficBackstretch[i].tid) {
            $backstretch.show($i);
            break;
          }
