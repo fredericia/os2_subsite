@@ -141,6 +141,7 @@ function fic_page_settings_default_page_manager_handlers() {
   $pane->configuration = array(
     'arguments' => array(
       'field_sektion_tid' => '%term:tid',
+      'nid' => '1',
     ),
     'override_title' => 1,
     'override_title_text' => '',

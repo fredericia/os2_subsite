@@ -75,6 +75,16 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['field_sektion_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_sektion_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_sektion_tid']['summary_options']['items_per_page'] = '25';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid']['not'] = TRUE;
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -92,6 +102,14 @@ function fic_frontpage_settings_views_default_views() {
       'panel' => '0',
       'fixed' => '',
       'label' => 'Content: Sektion (field_sektion)',
+    ),
+    'nid' => array(
+      'type' => 'user',
+      'context' => 'entity:node.nid',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
     ),
   );
   $translatables['fic_artikler'] = array(

@@ -237,7 +237,16 @@ function os2web_base_default_page_manager_handlers() {
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
-    'relationships' => array(),
+    'relationships' => array(
+      0 => array(
+        'identifier' => 'Taxonomy term from Node (on Node: Sektion [field_sektion])',
+        'keyword' => 'taxonomy_term',
+        'name' => 'entity_from_field:field_sektion-node-taxonomy_term',
+        'delta' => 0,
+        'context' => 'argument_entity_id:node_1',
+        'id' => 1,
+      ),
+    ),
     'name' => 'nyhed',
     'access' => array(
       'plugins' => array(
@@ -318,17 +327,25 @@ function os2web_base_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'arguments' => array(
-      'field_sektion_tid' => '',
+      'field_sektion_tid' => '%taxonomy_term:tid',
+      'nid' => '%node:nid',
     ),
     'override_title' => 1,
     'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'context' => array(
+      1 => 'argument_entity_id:node_1',
+    ),
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'bg-dark',
+    'template_suggestion' => 'paragraphs',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
