@@ -9509,6 +9509,9 @@ div.ctools-modal-content {
 .page-node .scroll-down-wrapper {
   display: none; }
 
+.page-node .pane-node-field-os2web-kulturnaut-slidesho img {
+  border: solid 10px #192124; }
+
 .page-node .content-sidebar {
   border-left: 2px solid #ddd;
   padding-bottom: 60px; }

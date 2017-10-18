@@ -22,6 +22,11 @@
   .scroll-down-wrapper {
     display: none;
   }
+  .pane-node-field-os2web-kulturnaut-slidesho {
+    img {
+      border: solid 10px $color-black;
+    }
+  }
   .content-sidebar {
     border-left: 2px solid #ddd;
     padding-bottom: ($grid-gutter-width * 2);
