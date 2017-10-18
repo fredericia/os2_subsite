@@ -9473,6 +9473,36 @@ ul.social-icon-list {
   padding-left: 0;
   padding-right: 0; }
 
+#modalContent {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100%;
+  overflow-y: scroll;
+  bottom: 0;
+  right: 0; }
+
+div.ctools-modal-content {
+  margin: 10% auto;
+  background: transparent;
+  border: 0;
+  width: 970px; }
+  div.ctools-modal-content .modal-content {
+    border-radius: 0;
+    padding: 20px 50px 50px; }
+  div.ctools-modal-content .popups-close {
+    display: block;
+    height: 70px; }
+    div.ctools-modal-content .popups-close .close {
+      height: 70px;
+      width: 70px;
+      display: block;
+      background: #01B5D5;
+      padding: 10px 0;
+      text-align: center;
+      font-size: 3em;
+      opacity: 1; }
+
 .node {
   font-size: 1.06em; }
 
