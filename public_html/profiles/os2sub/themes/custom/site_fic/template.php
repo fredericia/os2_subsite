@@ -81,8 +81,8 @@ function site_fic_preprocess_page(&$variables) {
     ));
   }
 
-  if (drupal_is_front_page()) {
-    $backstretch_data = &drupal_static('backstretch_data');
+  $backstretch_data = &drupal_static('backstretch_data');
+  if (!empty($backstretch_data)) {
     drupal_add_js(drupal_get_path('module', 'backstretch') . '/js/jquery.backstretch.min.js');
     drupal_add_js(array('ficBackstretch' => $backstretch_data), 'setting');
   }

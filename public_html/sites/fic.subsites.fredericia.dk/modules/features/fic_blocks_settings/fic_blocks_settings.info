@@ -1,0 +1,11 @@
+name = FIC Blocks settings
+core = 7.x
+package = FIC
+dependencies[] = fe_block
+dependencies[] = fic_common
+dependencies[] = locale
+dependencies[] = menu
+features[fe_block_settings][] = fic_common-fic_header_term_view
+features[fe_block_settings][] = locale-language_content
+features[fe_block_settings][] = menu-menu-genveje
+features[features_api][] = api:2
