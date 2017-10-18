@@ -6,6 +6,28 @@
  */
 
 /**
+ * Implements hook_menu().
+ */
+function fic_common_menu() {
+  $items = array();
+  $items['modal/node/%node/%ctools_js'] = array(
+    'title' => 'Modal load route',
+    'page arguments' => array(2, 3),
+    'page callback' => 'fic_common_node_modal_page',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_menu_alter().
+ */
+function fic_common_menu_alter(&$items) {
+  $i = 1;
+}
+
+/**
  * Implements hook_block_info().
  */
 function fic_common_block_info() {
@@ -35,6 +57,50 @@ function fic_common_block_view($delta = '') {
     $fic_header_block =  module_invoke('views', 'block_view', $block_view_machine_name);
   }
 
+  // Required includes for ctools to work for modal contact link.
+  ctools_include('ajax');
+  ctools_include('modal');
+  ctools_modal_add_js();
+
+  $contact_modal_style = array(
+    'contact-modal-style' => array(
+      'modalSize' => array(
+        'type' => 'fixed',
+      ),
+      'modalOptions' => array(
+        'opacity' => .8,
+        'background-color' => '#000',
+      ),
+      'animation' => 'fadeIn',
+      'modalTheme' => 'fic_modal',
+      // Customize the AJAX throbber like so:
+      // This function assumes the images are inside the module directory's "images"
+      // directory:
+      // ctools_image_path($image, $module = 'ctools', $dir = 'images')
+      //'throbber' => theme('image', array('path' => ctools_image_path('ajax-loader.gif', 'happy'), 'alt' => t('Loading...'), 'title' => t('Loading'))),
+      //'closeImage' => theme('image', array('path' => ctools_image_path('modal-close.png', 'happy'), 'alt' => t('Close window'), 'title' => t('Close window'))),
+    ),
+  );
+  drupal_add_js($contact_modal_style, 'setting');
+
   $block['content'] = render($fic_header_block);
   return $block;
+}
+
+/**
+ * A modal static node page callback.
+ *
+ * @param int $node
+ *    Define id of loaded entity.
+ * @param string $js
+ *    Determines if JS is enabled at user's browser end or not.
+ *
+ * @return string
+ *     The HTML, parsed by Drupal to show the login form.
+ */
+function fic_common_node_modal_page($node, $js = 'nojs') {
+  ctools_include('modal');
+  ctools_include('ajax');
+  $contents = render(node_view($node));
+  return ctools_modal_render($node->title, $contents) ;
 }
