@@ -39,7 +39,7 @@
     @extend .lead;
     font-family: $headings-font-family;
   }
-  .os2-section os2-section-light {
+  .os2-section.os2-section-light {
     margin-top: $grid-gutter-width;
     padding-top: $grid-gutter-width;
     border-top: 2px solid #ddd;

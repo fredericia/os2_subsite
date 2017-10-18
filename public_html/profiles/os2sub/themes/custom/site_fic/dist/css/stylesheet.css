@@ -9524,7 +9524,7 @@ div.ctools-modal-content {
 .page-node .field-name-field-os2web-base-field-summary {
   font-family: "RBNo21a-Medium", "Lato", sans-serif; }
 
-.page-node .os2-section os2-section-light {
+.page-node .os2-section.os2-section-light {
   margin-top: 30px;
   padding-top: 30px;
   border-top: 2px solid #ddd; }
