@@ -43,7 +43,7 @@ form.search-form{
     color: #fff;
     box-shadow: none;
     &::placeholder{
-          color: #fff;
+      color: #fff;
     }
   }
   button{
@@ -51,11 +51,49 @@ form.search-form{
     padding: 10px !important;
     width: 60px !important;
     &:active, &:hover, &:focus{
-    color: $gray-dark;
+      color: $gray-dark;
     }
     span{
       font-size: 20px;
       font-family: 'Glyphicons Halflings';
+    }
+  }
+}
+
+section.block-locale{
+  button.lang-buton{
+    text-transform: uppercase;
+    border: none;
+    background: none;
+    text-size: 0.75em;
+    color: #fff;
+    &:after{
+      content:'';
+      color: $brand-primary;
+      font: normal normal normal 14px/1 FontAwesome;
+      border: none;
+    }
+  }
+  .dropdown-menu{
+    min-width: auto;
+    border: none;
+    border-radius: unset; 
+    top: auto;
+    ul.language-switcher-locale-url{
+      padding: 0px 10px;
+      li{
+        list-style: none;
+        a{
+          text-size: 0.75em;
+          text-transform: uppercase;
+          text-decoration: none;
+          background-color: #fff;
+          color: $gray-darker;
+          &:active, &:hover, &:focus{
+            color: $brand-primary;
+          }
+        }
+      }
     }
   }
 }
