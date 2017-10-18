@@ -24,6 +24,9 @@
   }
   .content-sidebar {
     border-left: 2px solid #ddd;
+    .panel-pane {
+      padding-left: ($grid-gutter-width/2);
+    }
     h2 {
       color: $brand-secondary;
     }

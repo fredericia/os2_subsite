@@ -9511,6 +9511,8 @@ div.ctools-modal-content {
 
 .page-node .content-sidebar {
   border-left: 2px solid #ddd; }
+  .page-node .content-sidebar .panel-pane {
+    padding-left: 15px; }
   .page-node .content-sidebar h2, .page-node .content-sidebar .heading-h2 {
     color: #f24244; }
 
