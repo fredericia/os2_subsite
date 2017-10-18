@@ -9506,13 +9506,18 @@ div.ctools-modal-content {
 .node {
   font-size: 1.06em; }
 
-.page-node {
+.page-node .scroll-down-wrapper {
+  display: none; }
+
+.page-node .page-header-wrapper {
   background-image: url("../img/topbg.png");
   background-repeat: repeat-x; }
-  .page-node h1.pane-title, .page-node .pane-title.heading-h1, .page-node .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .page-node .pane-title.banner-headline {
-    color: #01B5D5; }
-  .page-node .field-name-field-os2web-base-field-summary {
-    font-family: "RBNo21a-Medium", "Lato", sans-serif; }
+
+.page-node h1.pane-title, .page-node .pane-title.heading-h1, .page-node .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .page-node .pane-title.banner-headline {
+  color: #01B5D5; }
+
+.page-node .field-name-field-os2web-base-field-summary {
+  font-family: "RBNo21a-Medium", "Lato", sans-serif; }
 
 .node-os2web-kulturnaut-knactivity {
   position: relative;
