@@ -59,6 +59,8 @@
   .os2-section.full-width {
     .paragraphs-container {
       @extend .container;
+      padding-top: $grid-gutter-width;
+      padding-bottom: $grid-gutter-width;
       .view-content {
         @extend .row;
         .views-row {

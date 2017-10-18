@@ -9659,21 +9659,24 @@ div.ctools-modal-content {
   padding-top: 30px;
   border-top: 2px solid #ddd; }
 
-.page-node .os2-section.full-width .paragraphs-container .view-content .views-row {
-  position: relative;
-  float: left;
-  width: 50%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px; }
-  @media (min-width: 768px) {
-    .page-node .os2-section.full-width .paragraphs-container .view-content .views-row {
-      float: left;
-      width: 33.3333333333%; } }
+.page-node .os2-section.full-width .paragraphs-container {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .page-node .os2-section.full-width .paragraphs-container .view-content .views-row {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .page-node .os2-section.full-width .paragraphs-container .view-content .views-row {
+        float: left;
+        width: 33.3333333333%; } }
 
 .node-os2web-kulturnaut-knactivity {
   position: relative;
