@@ -69,14 +69,10 @@
 
   <?php if ($content['dark_section_1']): ?>
     <!-- Begin - dark section no. 1 -->
-    <div class="os2-section os2-section-dark">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12 content-dark-section-1">
+    <div class="os2-section os2-section-dark full-width">
+
               <?php echo $content['dark_section_1']; ?>
-          </div>
-        </div>
-      </div>
+
     </div>
     <!-- End - dark section no. 1 -->
   <?php endif; ?>
