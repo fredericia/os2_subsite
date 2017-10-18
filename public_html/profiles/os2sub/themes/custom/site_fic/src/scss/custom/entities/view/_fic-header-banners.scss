@@ -10,7 +10,6 @@
 // Variables
 // --------------------------------------------------
 
-
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
@@ -37,15 +36,11 @@
   }
 
   .taxonomy-term {
-    &-description {
+    &-description-wrapper {
+      text-align: center;
+      color: $color-white;
       font-size: 3.125em;
       text-shadow: 1px 1px rgba(0, 0, 0, .75);
-
-      &-wrapper {
-        text-align: center;
-        color: $color-white;
-      }
-
     }
   }
 
@@ -98,10 +93,6 @@
         font-size: 1.4em;
         font-family: "sans-serif";
       }
-    }
-
-    .views-row-first {
-      display: none;
     }
 
     .views-slideshow-pager-field-item {

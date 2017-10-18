@@ -9,7 +9,7 @@
 ?>
 <div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
   <div class="taxonomy-term-description-wrapper">
-    <?php print render($content['description']); ?>
+    <?php print render($content['description_field']); ?>
   </div>
   <div class="slide-bottom">
     <div class="col-sm-8 ">

@@ -220,7 +220,7 @@ function site_fic_menu_link(array $variables) {
  * Custom preprocess function for fic_header view mode.
  */
 function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
-  if (empty($vars['field_os2web_base_field_image'])) {
+  if (empty($vars['content']['field_os2web_base_field_image'][0])) {
     return;
   }
 
@@ -229,9 +229,11 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     $backstretch_data = array();
   }
 
+  $image = $vars['content']['field_os2web_base_field_image'][0];
+  hide($vars['content']);
   $backstretch_data[$vars['tid']] = image_style_url(
-    'os2web_cover',
-    $vars['field_os2web_base_field_image'][LANGUAGE_NONE][0]['uri']
+    $image['#image_style'],
+    $image['#item']['uri']
   );
 }
 
