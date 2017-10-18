@@ -23,6 +23,7 @@
     display: none;
   }
   .pane-node-field-os2web-kulturnaut-slidesho {
+    margin-bottom: $grid-gutter-width;
     img {
       border: solid 10px $color-black;
     }
@@ -53,6 +54,18 @@
       margin-top: $grid-gutter-width;
       padding-top: $grid-gutter-width;
       border-top: 2px solid #ddd;
+    }
+  }
+  .os2-section.full-width {
+    .paragraphs-container {
+      @extend .container;
+      .view-content {
+        @extend .row;
+        .views-row {
+          @include make-xs-column(6);
+          @include make-sm-column(4);
+        }
+      }
     }
   }
 }
