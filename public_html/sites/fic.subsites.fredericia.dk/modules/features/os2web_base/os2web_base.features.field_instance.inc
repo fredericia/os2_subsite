@@ -2329,9 +2329,8 @@ function os2web_base_field_default_field_instances() {
       ),
       'os2sub_teaser_mini' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
       'related_block' => array(
@@ -2424,21 +2423,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'os2sub_teaser_mini' => array(
         'label' => 'hidden',
-        'module' => 'backstretch',
-        'settings' => array(
-          'center_x' => 1,
-          'center_y' => 1,
-          'delta' => '',
-          'duration' => 5000,
-          'element' => 'other',
-          'element_other' => '.content',
-          'fade' => 0,
-          'field' => '',
-          'image_style' => 'os2web_cover',
-          'random' => 0,
-        ),
-        'type' => 'backstretch',
-        'weight' => 5,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -2590,10 +2577,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'os2sub_teaser_mini' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -3150,10 +3136,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'os2sub_teaser_mini' => array(
         'label' => 'hidden',
-        'module' => 'file',
         'settings' => array(),
-        'type' => 'file_table',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 4,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -3601,9 +3586,8 @@ function os2web_base_field_default_field_instances() {
       ),
       'os2sub_teaser_mini' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'related_block' => array(
