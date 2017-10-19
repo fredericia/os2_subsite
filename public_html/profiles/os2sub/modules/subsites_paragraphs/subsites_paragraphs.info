@@ -1,0 +1,6 @@
+name = Subsites Paragraphs
+description = Set background css class and sides switcher boolean to paragraphs
+core = 7.x
+version = 7.x-1.0
+project = subsites_paragraphs
+project path = profiles/os2sub/modules
