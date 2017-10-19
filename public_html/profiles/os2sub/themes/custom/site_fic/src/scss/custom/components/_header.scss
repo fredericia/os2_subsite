@@ -65,7 +65,7 @@ section.block-locale{
     text-transform: uppercase;
     border: none;
     background: none;
-    text-size: 0.75em;
+    font-size: 0.75em;
     color: #fff;
     &:after{
       content:'';
@@ -84,7 +84,7 @@ section.block-locale{
       li{
         list-style: none;
         a{
-          text-size: 0.75em;
+          font-size: 0.75em;
           text-transform: uppercase;
           text-decoration: none;
           background-color: #fff;

@@ -97,49 +97,43 @@ $image-border: 10px;
     }
   }
 }
-
-
-
-// --------------------------------------------------
-// Variants
-// --------------------------------------------------
-.views-row-first{
-  .node--os2web_base_news--os2sub_teaser_mini {
-    .upper-part{
-      a{
-        font-size: 1.125em;
-        padding: 15px;
-      }
-    }
-    .bottom-part{
-
-      & header{
-        & h2{
-          font-size: 3.125em;
-        }
-      }
-    }
-    & .overlay{
-
-      .overlay-content {
-        padding: 10px;
-        .field-type-text-with-summary{
-          font-size: 1.75em;
-        }
-        a{
-          padding: 10px 15px;
-          font-size: 1.5em;
-          height: auto;
-          width: auto;
-          margin-top: 65px;
-        }
-      }
+.se-flere{
+  position: relative;
+  .se-flere-content{
+    color: #fff;
+    font-family: $headings-font-family;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+    p.se-flere-icon{
+      color: $brand-primary;
+      font-size: 3.75em;
+      font-family: $font-lato;
+      line-height: 80px;
+      font-weight: 700;
+      margin-bottom: 0px;
     }
   }
 }
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
 .view-display-id-panel_pane_1{
   .views-row{
     margin-bottom: $grid-gutter-width;
+  }
+}
+.se-flere{
+  border: $image-border dashed $gray-darker;
+  &:hover{
+    border-color: #fff;
   }
 }
 // --------------------------------------------------
@@ -174,70 +168,35 @@ $image-border: 10px;
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-
-  .view-mode-spotbox.node,
-  .view-mode-os2sub_spotbox_single.node,
-  .view-mode-os2sub_spotbox_mini.node {
-    &.node-os2web-kulturnaut-knactivity {
-      .view-display-id-pane_activities_list_4 & {
-        .field-name-field-os2web-kulturnaut-date {
-          span.date-display-single{
-            font-size: 0.9em;
-          }
-        }
-        header h2 {
-          font-size: 1.56em;
-        }
-        .field-name-field-os2web-kulturnaut-venue {
-          display: block;
-        }
-      }
-
-      .view-display-id-pane_activities_list_2_3 & {
-        .field-name-field-os2web-kulturnaut-date {
-          font-size: 1em;
-          color: $color-black;
-          font-weight: normal;
-          text-transform: lowercase;
-        }
-        header h2 {
-          font-size: 1.75em;
-        }
-      }
-
-      .view-display-id-pane_activities_list_5_load_more & {
-        .field-name-field-os2web-kulturnaut-date {
-          span.date-display-single{
-            font-size: 1.125em;
-            color: $color-white;
-            font-weight: normal;
-            text-transform: lowercase;
-            display: block;
-          }
-          span.date-display-single:first-letter{
-            text-transform: uppercase;
-          }
-        }
-        header h2 {
-          font-size: 1.75em;
-        }
-        .field-name-field-os2web-kulturnaut-venue{
+  .views-row-first{
+    .node--os2web_base_news--os2sub_teaser_mini {
+      .upper-part{
+        a{
           font-size: 1.125em;
-          font-weight: bold;
-          display: block;
+          padding: 15px;
         }
       }
-      .field-name-field-os2web-base-field-edi-tags {
-        font-size: 1.125em;
-        font-weight: 900;
-      }
-    }
+      .bottom-part{
 
-  }
-  .view-mode-os2sub_spotbox_single.node{
-    &.node-os2web-kulturnaut-knactivity {
-      .field-name-field-os2web-kulturnaut-slidesho {
-        max-height: none;
+        & header{
+          & h2{
+            font-size: 3.125em;
+          }
+        }
+      }
+      & .overlay{
+
+        .overlay-content {
+          padding: 10px;
+          .field-type-text-with-summary{
+            font-size: 1.75em;
+          }
+          a{
+            padding: 10px 15px;
+            font-size: 1.5em;
+            margin-top: 65px;
+          }
+        }
       }
     }
   }
