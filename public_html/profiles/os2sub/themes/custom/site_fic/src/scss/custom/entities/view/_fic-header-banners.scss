@@ -43,7 +43,9 @@
 
   .views-slideshow-controls-bottom,
   .views-field-field-os2web-base-field-related {
-    padding-bottom: 100px;
+    .widget_pager_bottom {
+      padding-bottom: 100px;
+    }
 
     ul,
     li {
@@ -128,8 +130,10 @@
         text-decoration: none;
         float: right;
         display: block;
-        padding: 17px;
-        font-size: 1.4em;
+        padding: 20px;
+        font-size: 1em;
+        font-family: sans-serif;
+        font-weight: bold;
       }
     }
 
