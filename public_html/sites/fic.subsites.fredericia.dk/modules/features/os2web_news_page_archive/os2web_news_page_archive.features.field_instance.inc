@@ -23,6 +23,12 @@ function os2web_news_page_archive_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'os2sub_teaser_mini' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
       'search_index' => array(
         'label' => 'above',
         'module' => 'date',
