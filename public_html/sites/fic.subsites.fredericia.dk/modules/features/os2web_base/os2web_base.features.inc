@@ -453,6 +453,11 @@ function os2web_base_paragraphs_info() {
       'bundle' => 'header_text_media',
       'locked' => '1',
     ),
+    'webform' => array(
+      'name' => 'Afsnit med Webform',
+      'bundle' => 'webform',
+      'locked' => '1',
+    ),
   );
   return $items;
 }
