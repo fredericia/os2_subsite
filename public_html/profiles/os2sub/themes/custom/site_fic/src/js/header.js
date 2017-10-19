@@ -52,7 +52,30 @@ var header = (function ($) {
    }
   };
 
-  Drupal.theme.prototype.fic_modal = function () {
+  /**
+   * Custom headerRegion behavior.
+   */
+  Drupal.behaviors.headerRegion = {
+    attach: function (context, settings) {
+      if (!$('.term-fic-header').length) {
+        return;
+      }
+
+      var $wH = $(window).height(),
+        // All static value defiden accordingly with design.
+        $brandigH = 165 + 20,
+        $navigationH = 170 + 20,
+        $scrollDownH = 160,
+        $descrH = $wH - $brandigH - $navigationH - $scrollDownH,
+        $minH = 300,
+        $maxH = 700;
+
+      $descrH = $descrH < $minH ? $minH : ($descrH > $maxH ? $maxH : $descrH);
+      $('.term-fic-header .views_slideshow_main, .term-fic-header .views-field-rendered-entity').height($descrH);
+    }
+  };
+
+      Drupal.theme.prototype.fic_modal = function () {
     var html = '';
     html += '<div id="ctools-modal" class="popups-box my-first-popup">';
     html += ' <div class="ctools-modal-content my-popup ">';

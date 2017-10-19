@@ -8,8 +8,9 @@
  */
 ?>
 <div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
-  <div class="taxonomy-term-description-wrapper">
+  <div class="slide-content-wrapper">
     <?php print render($content['description_field']); ?>
+    <?php print render($content['field_os2web_base_field_ext_link']); ?>
   </div>
   <div class="slide-bottom">
     <div class="col-sm-8 ">

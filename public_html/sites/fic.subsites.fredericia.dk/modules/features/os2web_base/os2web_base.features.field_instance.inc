@@ -6789,7 +6789,7 @@ function os2web_base_field_default_field_instances() {
         'weight' => 5,
       ),
       'fic_header' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',

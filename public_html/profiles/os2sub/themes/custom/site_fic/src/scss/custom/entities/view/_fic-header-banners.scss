@@ -19,12 +19,13 @@
   position: relative;
 
   .views-slideshow-cycle-main-frame {
-    height: auto !important;
+    height: 100% !important;
     position: static !important;
   }
 
   .views-slideshow-cycle-main-frame-row {
     position: static !important;
+    height: 100% !important;
   }
 
   .views_slideshow_main {
@@ -32,18 +33,57 @@
     overflow: hidden;
   }
 
-  .taxonomy-term {
-    &-description-wrapper {
-      text-align: center;
+  .views-row {
+    height: 100%;
+  }
+
+  .view-mode-fic_header {
+    height: 100%;
+    display: table;
+    width: 100%;
+  }
+
+  .slide-content-wrapper {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+
+    .field-name-description-field {
       color: $color-white;
       font-size: 3.125em;
       text-shadow: 1px 1px rgba(0, 0, 0, .75);
+    }
+
+    .field-name-field-os2web-base-field-ext-link {
+      .field-item {
+        display: inline-block;
+        margin: 20px 10px;
+
+        a {
+          padding: 10px;
+          display: block;
+          font-size: 1em;
+          font-family: sans-serif;
+          font-weight: bold;
+          text-transform: uppercase;
+          color: $color-white;
+          background-color: $color-blue;
+          min-width: 185px;
+
+          &:hover, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
     }
   }
 
   .views-slideshow-controls-bottom,
   .views-field-field-os2web-base-field-related {
-    padding-bottom: 100px;
+    .widget_pager_bottom,
+    .field-content {
+      padding-bottom: 100px;
+    }
 
     ul,
     li {
@@ -128,8 +168,10 @@
         text-decoration: none;
         float: right;
         display: block;
-        padding: 17px;
-        font-size: 1.4em;
+        padding: 20px;
+        font-size: 1em;
+        font-family: sans-serif;
+        font-weight: bold;
       }
     }
 

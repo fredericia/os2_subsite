@@ -73,12 +73,6 @@ function fic_common_block_view($delta = '') {
       ),
       'animation' => 'fadeIn',
       'modalTheme' => 'fic_modal',
-      // Customize the AJAX throbber like so:
-      // This function assumes the images are inside the module directory's "images"
-      // directory:
-      // ctools_image_path($image, $module = 'ctools', $dir = 'images')
-      //'throbber' => theme('image', array('path' => ctools_image_path('ajax-loader.gif', 'happy'), 'alt' => t('Loading...'), 'title' => t('Loading'))),
-      //'closeImage' => theme('image', array('path' => ctools_image_path('modal-close.png', 'happy'), 'alt' => t('Close window'), 'title' => t('Close window'))),
     ),
   );
   drupal_add_js($contact_modal_style, 'setting');

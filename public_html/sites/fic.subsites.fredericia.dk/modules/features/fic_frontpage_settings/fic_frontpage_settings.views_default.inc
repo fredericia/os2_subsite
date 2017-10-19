@@ -485,18 +485,6 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'fic_header';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-  /* Field: Field: Unikke eksterne links	 */
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['id'] = 'field_os2web_base_field_ext_link';
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['table'] = 'field_data_field_os2web_base_field_ext_link';
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['field'] = 'field_os2web_base_field_ext_link';
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['label'] = '';
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['alter']['link_class'] = 'btn btn-primary';
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_os2web_base_field_ext_link']['multi_type'] = 'ul';
   /* Field: Field: Unikke relaterede links */
   $handler->display->display_options['fields']['field_os2web_base_field_related']['id'] = 'field_os2web_base_field_related';
   $handler->display->display_options['fields']['field_os2web_base_field_related']['table'] = 'field_data_field_os2web_base_field_related';
