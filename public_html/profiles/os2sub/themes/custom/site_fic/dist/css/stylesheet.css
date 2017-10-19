@@ -9165,11 +9165,11 @@ h1.pane-title,
     color: #FFF;
     border-color: #FFF; }
 
-.bg-dark {
+.bg-dark, .page-nyheder .main-container {
   background-color: #333333;
   padding-top: 30px;
   padding-bottom: 30px; }
-  .bg-dark .field {
+  .bg-dark .field, .page-nyheder .main-container .field {
     color: #FFF;
     border-color: #FFF; }
 
