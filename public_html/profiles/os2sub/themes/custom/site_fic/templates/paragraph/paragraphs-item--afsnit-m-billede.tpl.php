@@ -24,44 +24,19 @@
  * @see template_preprocess_entity()
  * @see template_process()
  */
-
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <div class="container">
       <div class="row">
-
-            <!--        Check if sides switch is in off position-->
-            <?php if ( !$field_paragraph_position ): ?>
-            
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-left">
-                  <?php print render($content['field_paragraph_header']); ?>
-                </div>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-right">
-                  <?php print render($content['field_knap_link']); ?>
-
-                </div>
-              </div>
-            <?php else: ?>
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-left">
-                  <?php print render($content['field_knap_link']); ?>
-
-                </div>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-right">
-                  <?php print render($content['field_paragraph_header']); ?>
-
-                </div>
-              </div>
-            <?php endif; ?>
-
+        <div class="col-xs-12">
+          <div class="aligner-center">
+            <?php print render($content['field_paragraph_header']); ?>
+            <?php print render($content['field_paragraph_text']); ?>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>

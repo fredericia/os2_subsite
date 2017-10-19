@@ -19,12 +19,56 @@
   font-size: 1.06em;
 }
 .page-node {
+  .scroll-down-wrapper {
+    display: none;
+  }
+  .pane-node-field-os2web-kulturnaut-slidesho {
+    margin-bottom: $grid-gutter-width;
+    img {
+      border: solid 10px $color-black;
+    }
+  }
+  .content-sidebar {
+    border-left: 2px solid #ddd;
+    padding-bottom: ($grid-gutter-width * 2);
+    .panel-pane {
+      padding-left: ($grid-gutter-width/2);
+    }
+    h2 {
+      color: $brand-secondary;
+    }
+  }
+  .page-header-wrapper {
+    background-image: url('../img/topbg.png');
+    background-repeat: repeat-x;
+  }
   h1.pane-title {
     color: $brand-primary;
   }
   .field-name-field-os2web-base-field-summary {
     @extend .lead;
     font-family: $headings-font-family;
+  }
+  .os2-section.os2-section-light {
+    .pane-fic-kommende-arrangementer-panel-pane-1 {
+      margin-top: $grid-gutter-width;
+      padding-top: $grid-gutter-width;
+      border-top: 2px solid #ddd;
+    }
+  }
+  .os2-section.full-width {
+    .paragraphs-container {
+      @extend .container;
+      padding-top: $grid-gutter-width;
+      padding-bottom: $grid-gutter-width;
+      .view-content {
+        @extend .row;
+        .views-row {
+          @include make-xs-column(6);
+          @include make-sm-column(4);
+        }
+      }
+    }
   }
 }
 

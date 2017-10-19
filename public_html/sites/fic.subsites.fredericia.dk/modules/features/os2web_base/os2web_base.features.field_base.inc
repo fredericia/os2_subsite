@@ -1195,10 +1195,10 @@ function os2web_base_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'White' => 'bg-white',
-        'Dark' => 'bg-dark',
-        'Darker' => 'bg-darker',
-        'Alternative' => 'bg-alternative',
+        'bg-white' => 'White',
+        'bg-dark' => 'Dark',
+        '|bg-darker' => 'Darker',
+        'bg-alternative' => 'Alternative',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,

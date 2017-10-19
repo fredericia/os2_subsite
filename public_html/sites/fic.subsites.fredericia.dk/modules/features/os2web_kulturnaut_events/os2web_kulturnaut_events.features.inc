@@ -42,7 +42,7 @@ function os2web_kulturnaut_events_image_default_styles() {
   $styles['os2sub_teaser_mini_image'] = array(
     'label' => 'OS2Sub teaser mini image',
     'effects' => array(
-      45 => array(
+      3 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
           'width' => 370,
@@ -58,7 +58,7 @@ function os2web_kulturnaut_events_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      44 => array(
+      4 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 370,

@@ -24,39 +24,38 @@
  * @see template_preprocess_entity()
  * @see template_process()
  */
-
 ?>
-<div class="<?php print $classes; ?> <?php print $content['field_paragraph_bg'][0]['#markup']; ?>"<?php print $attributes; ?>>
+<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
     <div class="paragraph-container">
       <div class="row">
-        
-        <!--        Check if switch is in off position-->
-<?php if ( !strcasecmp($content['field_paragraph_position'][0]['#markup'], 'off') ): ?>
+
+        <!--        Check if sides switch is in off position-->
+        <?php if ( !$field_paragraph_position ): ?>
           <div class="col-md-12 col-lg-6 paragraph-video-container">
             <div class="paragraph-video">
-                <?php print render($content['field_image']); ?>
-              </div>
+              <?php print render($content['field_image']); ?>
+            </div>
           </div>
           <div class="col-md-12 col-lg-6">
             <div class="aligner">
-  <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_header']); ?>
               <?php print render($content['field_paragraph_text']); ?>
             </div>
           </div>
-<?php else: ?>        <!--        Switch is in on position-->
+        <?php else: ?>        <!--        Switch is in on position-->
           <div class="col-md-12 col-lg-6">
             <div class="aligner">
-  <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_header']); ?>
               <?php print render($content['field_paragraph_text']); ?>
             </div>
           </div>
           <div class="col-md-12 col-lg-6 paragraph-video-container">
             <div class="paragraph-video">
-                <?php print render($content['field_image']); ?>
-              </div>
+              <?php print render($content['field_image']); ?>
+            </div>
           </div>
-<?php endif; ?>
+        <?php endif; ?>
       </div>
     </div>
   </div>

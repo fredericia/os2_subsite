@@ -51,21 +51,6 @@ function os2web_kulturnaut_events_metatag_export_default() {
         'value' => 5,
         'period' => 'day',
       ),
-      'og:type' => array(
-        'value' => 'article',
-      ),
-      'og:image' => array(
-        'value' => '[node:field_os2web_kulturnaut_slidesho:os2sub_page_slideshow]',
-      ),
-      'og:image:url' => array(
-        'value' => '',
-      ),
-      'og:image:width' => array(
-        'value' => '[node:field_os2web_kulturnaut_slidesho:os2sub_page_slideshow:width]',
-      ),
-      'og:image:height' => array(
-        'value' => '[node:field_os2web_kulturnaut_slidesho:os2sub_page_slideshow:height]',
-      ),
       'og:street_address' => array(
         'value' => '[node:field_os2web_kulturnaut_saddress]',
       ),
