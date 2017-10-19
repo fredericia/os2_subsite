@@ -604,13 +604,17 @@ function os2web_base_strongarm() {
         'custom_settings' => FALSE,
       ),
       'os2sub_teaser_mini' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(
       'display' => array(
         'language' => array(
           'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'os2sub_teaser_mini' => array(
             'weight' => '0',
             'visible' => FALSE,
           ),

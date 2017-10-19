@@ -28,6 +28,90 @@ function os2web_base_ctools_plugin_api($module = NULL, $api = NULL) {
 function os2web_base_image_default_styles() {
   $styles = array();
 
+  // Exported image style: fic_square.
+  $styles['fic_square'] = array(
+    'label' => 'Firkantet',
+    'effects' => array(
+      7 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 670,
+          'height' => 670,
+          'anchor' => 'center-center',
+          'disable_scale' => 1,
+          'jcrop_settings' => array(
+            'aspect_ratio' => 1,
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 1,
+          ),
+        ),
+        'weight' => 1,
+      ),
+      8 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 670,
+          'height' => 670,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: fic_square_small.
+  $styles['fic_square_small'] = array(
+    'label' => 'Lille firkant',
+    'effects' => array(
+      9 => array(
+        'name' => 'epsacrop_crop_reuse',
+        'data' => array(
+          'jcrop_reuse' => 'fic_square',
+        ),
+        'weight' => 1,
+      ),
+      10 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 230,
+          'height' => 230,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: fic_wide.
+  $styles['fic_wide'] = array(
+    'label' => 'Bredt billede',
+    'effects' => array(
+      5 => array(
+        'name' => 'epsacrop_crop',
+        'data' => array(
+          'width' => 1170,
+          'height' => 450,
+          'anchor' => 'center-center',
+          'disable_scale' => 1,
+          'jcrop_settings' => array(
+            'aspect_ratio' => '',
+            'bgcolor' => 'black',
+            'bgopacity' => 0.6,
+            'fallback' => 1,
+          ),
+        ),
+        'weight' => 1,
+      ),
+      6 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 1170,
+          'height' => 450,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
   // Exported image style: os2sub_220x130.
   $styles['os2sub_220x130'] = array(
     'label' => 'Forside nyhed 4 spalter',
