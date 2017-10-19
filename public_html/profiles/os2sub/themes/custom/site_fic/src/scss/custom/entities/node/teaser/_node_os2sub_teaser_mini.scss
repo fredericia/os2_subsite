@@ -9,101 +9,21 @@
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
-
+$image-border: 10px;
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
 // Teaser
-/*.node-os2web-kulturnaut-knactivity {
+
+
+.node--os2web_base_news--os2sub_teaser_mini {
+  border: $image-border solid #fff;
   position: relative;
-  margin-bottom: 30px;
-  header h2 {
-    font-size: 1.56em;
-    color: white;
-    margin-bottom: 3px;
-  }
-  .field-name-field-os2web-kulturnaut-date {
-    font-size: 0.94em;
-    color: $color-blue;
-    font-weight: bold;
-  }
-  .field-name-field-os2web-kulturnaut-venue,
-  .field-name-field-os2web-kulturnaut-sname,
-  .field-name-field-os2web-base-field-edi-tags {
-    font-size: 0.70em;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  .field-name-field-os2web-base-field-edi-tags {
+  .field.field-name-field-os2web-base-field-lead-img.field-type-image{
 
-  }
+    & img{
 
-  .upper-part {
-    padding: 15px;
-    position: absolute;
-    top: 0;
-  }
-
-  .bottom-part {
-    border-bottom: 10px solid $color-white;
-    border-left: 10px solid $color-white;
-    border-right: 10px solid $color-white;
-    padding: 15px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    @include  gradient-vertical(rgba($color-black,0), rgba($color-black,0.9), 20%, 80%);
-  }
-
-  .view-display-id-pane_activities_list_4 & {
-    .field-name-field-os2web-kulturnaut-date {
-      span.date-display-single{
-        font-size: 0.8em;
-        font-weight: bold;
-        text-transform: lowercase;
-        display: block;
-      }
-      span.date-display-single:first-letter{
-        text-transform: uppercase;
-      }
-    }
-    header h2 {
-      font-size: 0.9em;
-    }
-    .field-name-field-os2web-kulturnaut-venue {
-      font-size: 1em;
-      display: none;
-    }
-  }
-  .one-left & {
-    .field-name-field-os2web-kulturnaut-date.field-type-datetime {
-      span.date-display-single{ 
-        font-size: 1.32em;
-        font-weight: bold;
-        text-transform: lowercase;
-        display: block;
-      }
-      span.date-display-single:first-letter{
-        text-transform: uppercase;
-      }
-    }
-    .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference{
-      font-weight: normal;
-    }
-  }
-}*/
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
-  .overlay-wrapper {
-    position: relative;
-    & .field-type-image.field-name-field-os2web-kulturnaut-slidesho{
-      max-width: 395px;
-      max-height: 240px;
-      img{
-        border: 7px solid $color-black;
-      }
     }
   }
   & .overlay{
@@ -125,19 +45,16 @@
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       padding: 20px;
-
-
-    }
-    & .field.field-name-field-os2web-kulturnaut-url{
-      & a.btn{
-        color: $color-white;
-        background-color: $color-white;
-        border-color: $color-white;
-        &:hover, &:active, &:focus {
-          color: $color-white;
-          background: none;
-          border-color: $color-white;
-        }
+      .field-type-text-with-summary{
+        font-size: 1.2em;
+        font-family: $font-rbn021a;
+      }
+      a{
+        padding: 5px 10px;
+        font-size: 0.875em;
+        height: auto;
+        width: auto;
+        margin-top: 30px;
       }
     }
   }
@@ -146,47 +63,38 @@
       opacity: 1;
     }
   }
-  & .link.show-more{
+
+  .upper-part{
+    position: absolute;
+    top: 0;
+    right: 0;
     a{
-      text-transform: uppercase;
-      color: $color-blue;
+      display: block;
+      background-color: $brand-secondary;
+      color: #fff;
+      font-size: 0.8em;
       font-weight: bold;
-      text-decoration: none;
-      font-size: 0.875em;
+      padding: 10px;
       &:active, &:hover, &:focus{
-        text-decoration: underline;
+        text-decoration: none;
+        color: $gray-dark;
       }
     }
   }
-
-  & .field-name-field-os2web-kulturnaut-date{
-
-    text-transform: uppercase;
-    color: $color-red;
-    margin-top: 30px;
-    font-weight: bold;
-    font-family: $font-open-sans;
-    font-size: 0.875em;
-  }
-  & header{
-    & h3{
-      margin-top: 0px;
-      a{
+  .bottom-part{
+    position: absolute;
+    bottom: 0;
+    margin-left: 20px;
+    & header{
+      & h2{
+        margin-top: 0px;
         text-transform: uppercase;
         margin-top: 0px;
-        font-size: 0.875em;
+        font-size: 1.75em;
         font-family: $headings-font-family;
-        color: $color-black;
+        color: #fff;
       }
     }
-  }
-  & .field-name-field-os2web-kulturnaut-descrip{
-    & .field-items{
-      :after{
-        content: '...';
-      }
-    }
-
   }
 }
 
@@ -195,8 +103,45 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+.views-row-first{
+  .node--os2web_base_news--os2sub_teaser_mini {
+    .upper-part{
+      a{
+        font-size: 1.125em;
+        padding: 15px;
+      }
+    }
+    .bottom-part{
 
+      & header{
+        & h2{
+          font-size: 3.125em;
+        }
+      }
+    }
+    & .overlay{
 
+      .overlay-content {
+        padding: 10px;
+        .field-type-text-with-summary{
+          font-size: 1.75em;
+        }
+        a{
+          padding: 10px 15px;
+          font-size: 1.5em;
+          height: auto;
+          width: auto;
+          margin-top: 65px;
+        }
+      }
+    }
+  }
+}
+.view-display-id-panel_pane_1{
+  .views-row{
+    margin-bottom: $grid-gutter-width;
+  }
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

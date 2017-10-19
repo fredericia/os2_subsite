@@ -9794,158 +9794,91 @@ div.ctools-modal-content {
   .one-left .node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference {
     font-weight: normal; }
 
-/*.node-os2web-kulturnaut-knactivity {
-  position: relative;
-  margin-bottom: 30px;
-  header h2 {
-    font-size: 1.56em;
-    color: white;
-    margin-bottom: 3px;
-  }
-  .field-name-field-os2web-kulturnaut-date {
-    font-size: 0.94em;
-    color: $color-blue;
-    font-weight: bold;
-  }
-  .field-name-field-os2web-kulturnaut-venue,
-  .field-name-field-os2web-kulturnaut-sname,
-  .field-name-field-os2web-base-field-edi-tags {
-    font-size: 0.70em;
-    color: white;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  .field-name-field-os2web-base-field-edi-tags {
-
-  }
-
-  .upper-part {
-    padding: 15px;
-    position: absolute;
-    top: 0;
-  }
-
-  .bottom-part {
-    border-bottom: 10px solid $color-white;
-    border-left: 10px solid $color-white;
-    border-right: 10px solid $color-white;
-    padding: 15px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    @include  gradient-vertical(rgba($color-black,0), rgba($color-black,0.9), 20%, 80%);
-  }
-
-  .view-display-id-pane_activities_list_4 & {
-    .field-name-field-os2web-kulturnaut-date {
-      span.date-display-single{
-        font-size: 0.8em;
-        font-weight: bold;
-        text-transform: lowercase;
-        display: block;
-      }
-      span.date-display-single:first-letter{
-        text-transform: uppercase;
-      }
-    }
-    header h2 {
-      font-size: 0.9em;
-    }
-    .field-name-field-os2web-kulturnaut-venue {
-      font-size: 1em;
-      display: none;
-    }
-  }
-  .one-left & {
-    .field-name-field-os2web-kulturnaut-date.field-type-datetime {
-      span.date-display-single{ 
-        font-size: 1.32em;
-        font-weight: bold;
-        text-transform: lowercase;
-        display: block;
-      }
-      span.date-display-single:first-letter{
-        text-transform: uppercase;
-      }
-    }
-    .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference{
-      font-weight: normal;
-    }
-  }
-}*/
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper {
+.node--os2web_base_news--os2sub_teaser_mini {
+  border: 10px solid #fff;
   position: relative; }
-  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper .field-type-image.field-name-field-os2web-kulturnaut-slidesho {
-    max-width: 395px;
-    max-height: 240px; }
-    .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper .field-type-image.field-name-field-os2web-kulturnaut-slidesho img {
-      border: 7px solid #192124; }
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay {
-  -webkit-transition: .5s ease;
-       -o-transition: .5s ease;
-          transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background-color: rgba(242, 66, 68, 0.75); }
-  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content {
-    text-align: center;
-    position: relative;
+  .node--os2web_base_news--os2sub_teaser_mini .overlay {
+    -webkit-transition: .5s ease;
+         -o-transition: .5s ease;
+            transition: .5s ease;
+    opacity: 0;
+    position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
          -o-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    padding: 20px; }
-  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a.btn, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .banner .banner-wrapper a, .banner .banner-wrapper .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a {
-    color: #ffffff;
-    background-color: #ffffff;
-    border-color: #ffffff; }
-    .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a.btn:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .banner .banner-wrapper a:hover, .banner .banner-wrapper .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:hover, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:hover, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:hover, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:hover, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:hover, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:hover, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a.btn:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .banner .banner-wrapper a:active, .banner .banner-wrapper .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:active, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:active, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:active, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:active, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:active, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:active, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a.btn:focus, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .banner .banner-wrapper a:focus, .banner .banner-wrapper .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:focus, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:focus, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:focus, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:focus, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:focus, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:focus, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:focus, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:focus, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:focus, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:focus, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:focus, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:focus, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .field.field-name-field-os2web-kulturnaut-url a:focus {
-      color: #ffffff;
-      background: none;
-      border-color: #ffffff; }
+    width: 100%;
+    height: 100%;
+    background-color: rgba(242, 66, 68, 0.75); }
+    .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+           -o-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      padding: 20px; }
+      .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
+        font-size: 1.2em;
+        font-family: "RBNo21a-Medium", sans-serif; }
+      .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
+        padding: 5px 10px;
+        font-size: 0.875em;
+        height: auto;
+        width: auto;
+        margin-top: 30px; }
+  .node--os2web_base_news--os2sub_teaser_mini:hover .overlay {
+    opacity: 1; }
+  .node--os2web_base_news--os2sub_teaser_mini .upper-part {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
+      display: block;
+      background-color: #f24244;
+      color: #fff;
+      font-size: 0.8em;
+      font-weight: bold;
+      padding: 10px; }
+      .node--os2web_base_news--os2sub_teaser_mini .upper-part a:active, .node--os2web_base_news--os2sub_teaser_mini .upper-part a:hover, .node--os2web_base_news--os2sub_teaser_mini .upper-part a:focus {
+        text-decoration: none;
+        color: #333333; }
+  .node--os2web_base_news--os2sub_teaser_mini .bottom-part {
+    position: absolute;
+    bottom: 0;
+    margin-left: 20px; }
+    .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2, .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2 {
+      margin-top: 0px;
+      text-transform: uppercase;
+      margin-top: 0px;
+      font-size: 1.75em;
+      font-family: "RBNo21a-Medium", "Lato", sans-serif;
+      color: #fff; }
 
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini:hover .overlay {
-  opacity: 1; }
+.views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
+  font-size: 1.125em;
+  padding: 15px; }
 
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a {
-  text-transform: uppercase;
-  color: #01B5D5;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 0.875em; }
-  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:focus {
-    text-decoration: underline; }
+.views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2, .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2 {
+  font-size: 3.125em; }
 
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field-name-field-os2web-kulturnaut-date {
-  text-transform: uppercase;
-  color: #f24244;
-  margin-top: 30px;
-  font-weight: bold;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.875em; }
+.views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
+  padding: 10px; }
+  .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
+    font-size: 1.75em; }
+  .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
+    padding: 10px 15px;
+    font-size: 1.5em;
+    height: auto;
+    width: auto;
+    margin-top: 65px; }
 
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline {
-  margin-top: 0px; }
-  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3 a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3 a, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline a, .kontaktblok .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline a {
-    text-transform: uppercase;
-    margin-top: 0px;
-    font-size: 0.875em;
-    font-family: "RBNo21a-Medium", "Lato", sans-serif;
-    color: #192124; }
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field-name-field-os2web-kulturnaut-descrip .field-items :after {
-  content: '...'; }
+.view-display-id-panel_pane_1 .views-row {
+  margin-bottom: 30px; }
 
 @media (min-width: 992px) {
   .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single, .view-display-id-pane_activities_list_4
