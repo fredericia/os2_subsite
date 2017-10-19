@@ -86,6 +86,30 @@ function site_fic_preprocess_page(&$variables) {
     drupal_add_js(drupal_get_path('module', 'backstretch') . '/js/jquery.backstretch.min.js');
     drupal_add_js(array('ficBackstretch' => $backstretch_data), 'setting');
   }
+
+  $book_node_reference = variable_get('book_node_reference', FALSE);
+  if ($book_node_reference) {
+    $node = node_load($book_node_reference);
+    $nid = $node->nid;
+    if (module_exists('i18n_node')) {
+      global $language;
+      $lang = $language->language;
+      $translations = translation_node_get_translations($node->tnid);
+      if (isset($translations[$lang])) {
+        $nid = $translations[$lang]->nid;
+      }
+    }
+
+    $variables['page']['navigation']['book_link'] = array(
+      '#type' => 'container',
+      '#attributes' => array('class' => array('book-link')),
+      array(
+        '#theme' => 'link',
+        '#text' => t('Book'),
+        '#path' => 'node/' . $nid,
+      )
+    );
+  }
 }
 
 /**

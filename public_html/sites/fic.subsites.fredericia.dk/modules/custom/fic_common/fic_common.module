@@ -17,8 +17,16 @@ function fic_common_menu() {
     'access callback' => TRUE,
     'type' => MENU_NORMAL_ITEM,
   );
+  $items['admin/config/fic'] = array(
+    'title' => 'FIC Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('fic_settings'),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
   return $items;
 }
+
 
 /**
  * Implements hook_block_info().
@@ -30,6 +38,23 @@ function fic_common_block_info() {
   );
 
   return $blocks;
+}
+
+/**
+ * FIC setting form definition.
+ *
+ * @param $form
+ * @param $form_state
+ *
+ * @return mixed
+ */
+function fic_settings($form, &$form_state) {
+  $form['book_node_reference'] = array(
+    '#type' => 'textfield',
+    '#title' => t('The book page node id '),
+    '#default_value' => variable_get('book_node_reference'),
+  );
+  return system_settings_form($form);
 }
 
 /**
