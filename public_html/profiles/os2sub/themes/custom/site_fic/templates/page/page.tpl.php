@@ -14,11 +14,11 @@
         <?php endif; ?>
       </div>
       <nav role="navigation" id="topnav" class="topnav-wrapper user-nav col-sm-7">
-        <?php if ( !empty($page['navigation']) ): ?>
-          <?php print render($page['navigation']); ?>
-        <?php endif; ?>
         <?php if ( !empty($secondary_nav) ): ?>
           <?php print render($secondary_nav); ?>
+        <?php endif; ?>
+        <?php if ( !empty($page['navigation']) ): ?>
+          <?php print render($page['navigation']); ?>
         <?php endif; ?>
       </nav>
       <nav id="navbar" role="banner" class="col-sm-7 <?php print $navbar_classes; ?>">
