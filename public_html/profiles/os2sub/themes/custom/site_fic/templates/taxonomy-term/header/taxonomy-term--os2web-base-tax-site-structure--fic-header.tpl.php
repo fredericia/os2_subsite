@@ -9,8 +9,7 @@
 ?>
 <div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
   <div class="slide-content-wrapper">
-    <?php print render($content['description_field']); ?>
-    <?php print render($content['field_os2web_base_field_ext_link']); ?>
+    <?php print render($content); ?>
   </div>
   <div class="slide-bottom">
     <div class="col-sm-8 ">
@@ -20,8 +19,13 @@
         ?></a>
       </div>
     </div>
-    <div class="col-sm-4">
-      <?php print render($content['field_os2web_base_field_contact']); ?>
-    </div>
+    <?php if (!empty($contact_link)) : ?>
+      <div class="col-sm-4">
+        <?php print $contact_link; ?>
+      </div>
+    <?php endif; ?>
   </div>
 </div>
+<?php if (!empty($related_links)) : ?>
+  <?php print render($related_links); ?>
+<?php endif; ?>

@@ -12,7 +12,6 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.view-fic-header-banners,
 .term-fic-header {
   @include container-fixed();
   font-family: $font-rbn021a;
@@ -39,14 +38,11 @@
 
   .view-mode-fic_header {
     height: 100%;
-    display: table;
     width: 100%;
   }
 
   .slide-content-wrapper {
     text-align: center;
-    vertical-align: middle;
-    display: table-cell;
 
     .field-name-description-field {
       color: $color-white;
@@ -79,16 +75,9 @@
   }
 
   .views-slideshow-controls-bottom,
-  .views-field-field-os2web-base-field-related {
-    .widget_pager_bottom,
-    .field-content {
+  .field-name-field-os2web-base-field-related {
+    > div {
       padding-bottom: 100px;
-    }
-
-    ul,
-    li {
-      padding: 0;
-      margin: 0;
     }
 
     div,
@@ -125,7 +114,7 @@
     }
 
     .views-slideshow-pager-field-item,
-    ul > li {
+    .field-item {
       margin-right: 27px;
 
       &.views-row-first {
@@ -192,7 +181,18 @@
   }
 }
 
-.term-fic-header-front {
+.page-taxonomy {
+  .view-mode-fic_header {
+    display: table;
+  }
+
+  .slide-content-wrapper {
+    vertical-align: middle;
+    display: table-cell;
+  }
+}
+
+.front .term-fic-header {
   .views-slideshow-controls-bottom {
     a {
       width: 170px;

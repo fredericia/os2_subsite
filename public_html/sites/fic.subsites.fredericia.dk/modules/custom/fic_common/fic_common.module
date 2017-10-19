@@ -21,13 +21,6 @@ function fic_common_menu() {
 }
 
 /**
- * Implements hook_menu_alter().
- */
-function fic_common_menu_alter(&$items) {
-  $i = 1;
-}
-
-/**
  * Implements hook_block_info().
  */
 function fic_common_block_info() {
@@ -48,13 +41,33 @@ function fic_common_block_view($delta = '') {
     return;
   }
 
-  $term = menu_get_object('taxonomy_term', 2);
-  if (!empty($term)) {
-    $block_view_machine_name = 'fic_sektion_header-block_1';
-    if (drupal_is_front_page()) {
-      $block_view_machine_name = 'fic_header_banners-block_1';
+  // Fetch term from menu active trail.
+  $term = fic_common_load_term_by_menutrail();
+
+  $node = menu_get_object();
+  // If page is node.
+  if (!empty($node) && empty($term)) {
+    if (!empty($node->field_sektion)) {
+      $field_sektion = field_get_items('node', $node, 'field_sektion');
+      $term = taxonomy_term_load($field_sektion[0]['tid']);
     }
-    $fic_header_block =  module_invoke('views', 'block_view', $block_view_machine_name);
+  }
+
+  if (empty($term) || $term->vocabulary_machine_name != 'os2web_base_tax_site_structure') {
+    return;
+  }
+
+  $fic_header_block = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('term-fic-header'),
+    ),
+  );
+
+  if (drupal_is_front_page()) {
+    $fic_header_block[] = module_invoke('views', 'block_view', 'fic_header_banners-block_1');
+  } else {
+    $fic_header_block[] = taxonomy_term_view($term, 'fic_header');
   }
 
   // Required includes for ctools to work for modal contact link.
@@ -101,4 +114,33 @@ function fic_common_node_modal_page($node, $js) {
   ctools_include('ajax');
   $contents = render(node_view($node));
   return ctools_modal_render($node->title, $contents) ;
+}
+
+/**
+ * Helper function to get term from menu trail.
+ *
+ * @param array | NULL $active_trail
+ *
+ * @return mixed
+ */
+function fic_common_load_term_by_menutrail($active_trail = NULL) {
+  // Load active trail and setup pointer to end of trail.
+  if (!isset($active_trail)) {
+    $active_trail = menu_get_active_trail();
+    end($active_trail);
+  }
+
+  // Load term from current item.
+  $menu_item = current($active_trail);
+  if ($term = menu_get_object('taxonomy_term', 2, $menu_item['href'])) {
+    return $term;
+  }
+
+  // If we have parent items go up.
+  if (prev($active_trail)) {
+    return fic_common_load_term_by_menutrail($active_trail);
+  }
+
+  // Term is not found in menu trail.
+  return FALSE;
 }

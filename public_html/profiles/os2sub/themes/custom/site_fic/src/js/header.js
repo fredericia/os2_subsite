@@ -71,7 +71,7 @@ var header = (function ($) {
         $maxH = 700;
 
       $descrH = $descrH < $minH ? $minH : ($descrH > $maxH ? $maxH : $descrH);
-      $('.term-fic-header .views_slideshow_main, .term-fic-header .views-field-rendered-entity').height($descrH);
+      $('.front .term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term').height($descrH);
     }
   };
 

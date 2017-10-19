@@ -230,7 +230,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   }
 
   $image = $vars['content']['field_os2web_base_field_image'][0];
-  hide($vars['content']);
+  hide($vars['content']['field_os2web_base_field_image']);
   $backstretch_data[] = array(
     'tid' => $vars['tid'],
     'url' => image_style_url(
@@ -238,6 +238,30 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
       $image['#item']['uri']
     ),
   );
+
+  $field_contact_value = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_contact');
+  if (!empty($field_contact_value)) {
+    $vars['contact_link'] = l(t('Contact'), 'modal/node/' . $field_contact_value[0]['nid'] . '/nojs', array(
+      'attributes' => array(
+        'class' => array(
+          'modal-link',
+          'ctools-modal-contact-modal-style',
+          'ctools-use-modal',
+          'contact',
+        ),
+      ),
+    ));
+    hide($vars['content']['field_os2web_base_field_contact']);
+  }
+
+  if (current_path() == 'taxonomy/term/' . $vars['tid']) {
+    $related_links_view = field_view_field('taxonomy_term',$vars['term'], 'field_os2web_base_field_related');
+    $related_links_view['#label_display'] = 'hidden';
+    $related_links_view['#weight'] = 2;
+    $vars['related_links'] = $related_links_view;
+  } elseif (!drupal_is_front_page()) {
+    hide($vars['content']['field_os2web_base_field_ext_link']);
+  }
 }
 
 /**
