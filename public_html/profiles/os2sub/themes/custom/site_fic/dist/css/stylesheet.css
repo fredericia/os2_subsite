@@ -9337,6 +9337,12 @@ h1.pane-title,
     background-image: url("../img/lookdown.png");
     background-repeat: no-repeat; }
 
+.topnav-wrapper .region-navigation,
+.topnav-wrapper ul.menu.nav.navbar-nav {
+  position: relative;
+  float: none;
+  display: inline-block; }
+
 form.search-form {
   height: 60px; }
   form.search-form input.form-control.form-text {
