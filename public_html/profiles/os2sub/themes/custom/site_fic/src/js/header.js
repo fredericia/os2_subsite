@@ -17,7 +17,8 @@ var header = (function ($) {
   */
   Drupal.behaviors.ficBackstretch = {
    attach: function (context, settings) {
-     if (typeof settings.ficBackstretch === 'undefined') {
+     if (typeof settings.ficBackstretch === 'undefined'
+       || $('.backstretch').length > 0) {
        return;
      }
 
