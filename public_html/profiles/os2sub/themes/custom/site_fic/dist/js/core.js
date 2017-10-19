@@ -29,7 +29,7 @@ var header = (function ($) {
      }
      $backstretchWrapper.backstretch($images, {
        // Slides should be never changed automaticly.
-       duration : 1000000
+       duration : 1000000, fade: 750, paused: true
      });
    },
 
