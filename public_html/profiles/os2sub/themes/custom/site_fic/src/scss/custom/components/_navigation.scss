@@ -12,7 +12,8 @@
 
 $navigation-wrapper-bg-color: $body-bg-secondary;
 
-$navigation-top-padding-top-bottom: 15px;
+$navigation-top-padding-top-bottom: 20px;
+$navigation-left-padding-right-bottom: 15px;
 
 $navigation-bottom-border-width: 4px;
 $navigation-bottom-border-color: #fff;
@@ -126,9 +127,9 @@ $navigation-bottom-border-color: #fff;
       ul.navbar-nav{
         > li {
           a{
-            padding: $navigation-top-padding-top-bottom;
+            padding: $navigation-top-padding-top-bottom $navigation-left-padding-right-bottom;
             font-family: $headings-font-family;
-            font-size: 1.25em;
+            font-size: 1.4em;
           }
           > a {
 
