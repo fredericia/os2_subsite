@@ -41,6 +41,33 @@ function os2web_base_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_afsnit|taxonomy_term|os2web_base_tax_site_structure|form';
+  $field_group->group_name = 'group_afsnit';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'os2web_base_tax_site_structure';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_term';
+  $field_group->data = array(
+    'label' => 'Afsnit',
+    'weight' => '13',
+    'children' => array(
+      0 => 'field_afsnit',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-afsnit field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_afsnit|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_billeder|taxonomy_term|os2web_base_tax_site_structure|form';
   $field_group->group_name = 'group_billeder';
   $field_group->entity_type = 'taxonomy_term';
@@ -49,7 +76,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Billeder og filer',
-    'weight' => '-4',
+    'weight' => '9',
     'children' => array(
       0 => 'field_os2web_base_field_banner',
       1 => 'field_os2web_base_field_image',
@@ -110,7 +137,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Indstillinger',
-    'weight' => '-1',
+    'weight' => '12',
     'children' => array(
       0 => 'field_alternative_display',
       1 => 'field_list_as_spotboks',
@@ -759,7 +786,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Selvbetjeningslinks',
-    'weight' => '-2',
+    'weight' => '11',
     'children' => array(
       0 => 'field_os2web_base_field_selfserv',
     ),
@@ -845,7 +872,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_term';
   $field_group->data = array(
     'label' => 'Spotbokse',
-    'weight' => '-3',
+    'weight' => '10',
     'children' => array(
       0 => 'field_os2web_base_field_spotbox',
     ),
@@ -865,6 +892,33 @@ function os2web_base_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_tekst|taxonomy_term|os2web_base_tax_site_structure|form';
+  $field_group->group_name = 'group_tekst';
+  $field_group->entity_type = 'taxonomy_term';
+  $field_group->bundle = 'os2web_base_tax_site_structure';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_term';
+  $field_group->data = array(
+    'label' => 'Tekst',
+    'weight' => '7',
+    'children' => array(
+      0 => 'description_field',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-tekst field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_tekst|taxonomy_term|os2web_base_tax_site_structure|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_term|taxonomy_term|os2web_base_tax_site_structure|form';
   $field_group->group_name = 'group_term';
   $field_group->entity_type = 'taxonomy_term';
@@ -875,11 +929,12 @@ function os2web_base_field_group_info() {
     'label' => 'Term',
     'weight' => '1',
     'children' => array(
-      0 => 'description_field',
-      1 => 'group_billeder',
-      2 => 'group_indstillinger',
-      3 => 'group_selvbetjening',
-      4 => 'group_spotbokse',
+      0 => 'group_billeder',
+      1 => 'group_indstillinger',
+      2 => 'group_selvbetjening',
+      3 => 'group_spotbokse',
+      4 => 'group_tekst',
+      5 => 'group_afsnit',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

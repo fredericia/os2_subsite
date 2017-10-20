@@ -957,10 +957,10 @@ function os2web_base_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '4',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '3',
         ),
       ),
       'display' => array(
@@ -1137,6 +1137,7 @@ function os2web_base_strongarm() {
   $strongarm->name = 'menu_options_os2web_base_contentpage';
   $strongarm->value = array(
     0 => 'main-menu',
+    1 => 'user-menu',
   );
   $export['menu_options_os2web_base_contentpage'] = $strongarm;
 

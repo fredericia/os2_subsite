@@ -175,7 +175,7 @@ function fic_page_settings_default_page_manager_handlers() {
  */
 function fic_page_settings_default_page_manager_pages() {
   $page = new stdClass();
-  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
+  $page->disabled = TRUE; /* Edit this to true to make a default page disabled initially */
   $page->api_version = 1;
   $page->name = 'fic_frontpage';
   $page->task = 'page';

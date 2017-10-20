@@ -9,6 +9,7 @@ dependencies[] = ds
 dependencies[] = features
 dependencies[] = image
 dependencies[] = media
+dependencies[] = node
 dependencies[] = os2web_base
 dependencies[] = os2web_kulturnaut_events
 dependencies[] = page_manager
