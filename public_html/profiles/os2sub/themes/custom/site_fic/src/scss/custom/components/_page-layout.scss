@@ -73,6 +73,10 @@ h3.pane-title {
 .panel-separator{
   display: none;
 }
+
+.page-nyheder .main-container {
+  @extend .bg-dark;
+}
 /*Some flex panel tweaks stop*/
 // --------------------------------------------------
 // Variants
