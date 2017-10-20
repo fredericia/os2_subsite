@@ -72,7 +72,7 @@ function fic_common_block_view($delta = '') {
   $node = menu_get_object();
   // If page is node.
   if (!empty($node) && empty($term)) {
-    if (!empty($node->field_sektion)) {
+    if (!empty($node->field_sektion) && $node->type == 'os2web_base_contentpage') {
       $field_sektion = field_get_items('node', $node, 'field_sektion');
       $term = taxonomy_term_load($field_sektion[0]['tid']);
     }
