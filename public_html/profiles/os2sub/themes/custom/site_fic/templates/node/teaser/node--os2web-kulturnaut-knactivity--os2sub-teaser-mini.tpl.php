@@ -80,8 +80,8 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> "<?php print $attributes; ?>>
-
-  <div class="overlay-wrapper">
+<a href="<?php print $node_url; ?>">
+<div class="overlay-wrapper">
     <?php
     // Hide comments, tags, and links now so that we can render them later.
     hide($content['comments']);
@@ -90,17 +90,18 @@
 
     print render($content['field_os2web_kulturnaut_slidesho']);
     ?>
+  
+    <div class="overlay">
+    <div class="overlay-content">
 
-    <?php if ( !empty($content['field_os2web_kulturnaut_slidesho']) ): ?>
-      <div class="overlay">
-        <div class="overlay-content">
-          <?php print render($content['field_os2web_kulturnaut_url']); ?>
-          <a class="btn btn-black btn-full-width" href="<?php print $node_url; ?>"><?php print t('Read more') ; ?></a>
-        </div>
-      </div>
-    <?php endif; ?>
+    </div>
   </div>
-
+</div>
+  
+  </a>
+  
+  
+  
    <?php
   print render($content['field_os2web_kulturnaut_date']);
   ?>
@@ -109,7 +110,7 @@
     <header>
       <?php print render($title_prefix); ?>
       <?php if ( !$page && !empty($title) ): ?>
-        <h3 <?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+        <h3 <?php print $title_attributes; ?>><?php print $title; ?></h3>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php if ( $display_submitted ): ?>

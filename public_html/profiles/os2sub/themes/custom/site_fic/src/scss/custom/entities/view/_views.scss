@@ -3,7 +3,7 @@
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | - .view-os2web-kulturnaut-tema-list
+// | -
 // |
 
 // --------------------------------------------------
@@ -14,7 +14,24 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.view.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_1{  
+  .more-link{
+    float: right;
+    a{
+      @extend .btn;
+      @extend .btn-blue;
+      font-size: 1.75em;
+      display: flex !important;
+      align-items: center;
+      font-family: $headings-font-family;
+      &:before{
+        content:'+';
+        font-size: 2em;
 
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Variants
