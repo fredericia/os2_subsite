@@ -23,12 +23,29 @@ $navigation-bottom-border-color: #fff;
 
 // Navigation
 nav.navbar-default{
+  .navbar-brand {
+    background-color: #FFF;
+    margin-right: 30px;
+    color: $navbar-default-brand-color;
+    &:hover,
+    &:focus {
+      color: $navbar-default-brand-hover-color;
+      background-color: $navbar-default-brand-hover-bg;
+    }
+  }
+
   ul.navbar-nav{
+    float: right;
+    margin-right: 50px;
+    padding: 5px 5px;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: $headings-font-family;
+
     > li {
       a{
         padding: $navigation-top-padding-top-bottom;
-        font-family: $headings-font-family;
-        font-size: 1.25em;
+        font-size: 1.4em;
       }
       > a {
 
