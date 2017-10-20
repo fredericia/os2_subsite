@@ -95,7 +95,7 @@
       <div class="overlay">
         <div class="overlay-content">
           <?php print render($content['field_os2web_kulturnaut_url']); ?>
-          <a class="btn btn-black btn-full-width" href="<?php print $node_url; ?>"><?php print t('Læs mere') ; ?></a>
+          <a class="btn btn-black btn-full-width" href="<?php print $node_url; ?>"><?php print t('Read more') ; ?></a>
         </div>
       </div>
     <?php endif; ?>
@@ -127,7 +127,7 @@
   ?>
 
   <div class="link show-more">
-    <a href="<?php print $node_url; ?>"><?php print t('Læs mere') ?></a>
+    <a href="<?php print $node_url; ?>"><?php print t('Read more') ?></a>
   </div>
   <?php if ( !empty($content['field_tags']) || !empty($content['links']) ): ?>
     <footer>

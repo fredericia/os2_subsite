@@ -130,7 +130,7 @@
     <div class="overlay-content">
       
       <?php print render($content['field_os2web_kulturnaut_descrip']); ?>
-      <a class="btn btn-black" href="<?php print $node_url; ?>"><?php print t('Læs mere') . '...'; ?></a>
+      <a class="btn btn-black" href="<?php print $node_url; ?>"><?php print t('Read more') . '...'; ?></a>
     </div>
   </div>
 
