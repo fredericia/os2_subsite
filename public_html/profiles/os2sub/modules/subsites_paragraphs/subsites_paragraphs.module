@@ -11,13 +11,13 @@ function subsites_paragraphs_preprocess_entity(&$variables) {
   if ($variables['entity_type'] == 'paragraphs_item') {
     //get hidden field field_paragraph_bg
     $field_paragraph_bg = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_bg');
-    if ($field_paragraph_bg && $field_paragraph_bg[0]['value']) {
+    if ($field_paragraph_bg) {
       $variables['classes_array'][] = $field_paragraph_bg[0]['value'];
     }
     
     //get hidden field field_paragraph_position 
     $field_paragraph_position = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_position');
-    if ($field_paragraph_position && $field_paragraph_position[0]['value']) {
+    if ($field_paragraph_position) {
       $variables['field_paragraph_position']= $field_paragraph_position[0]['value'];
     }
   }
