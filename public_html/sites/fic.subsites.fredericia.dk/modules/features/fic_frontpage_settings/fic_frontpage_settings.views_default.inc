@@ -166,7 +166,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'name' => 0,
+    'name_field_et' => 0,
     'rendered_entity' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
@@ -176,7 +176,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'name' => 'name',
+    'name_field_et' => 'name_field_et',
     'rendered_entity' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_hover'] = 1;
@@ -198,16 +198,19 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['advanced_options'] = '{"before":"var $termId = $(nextSlideElement).find(\'.taxonomy-term\').attr(\'id\').replace(\'taxonomy-term-\', \'\');\\nif (typeof Drupal.behaviors.ficBackstretch !== \\"undefined\\") { \\n    Drupal.behaviors.ficBackstretch.show($termId);\\n}"}';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Field: Entity translation: Name: translated */
+  $handler->display->display_options['fields']['name_field_et']['id'] = 'name_field_et';
+  $handler->display->display_options['fields']['name_field_et']['table'] = 'field_data_name_field';
+  $handler->display->display_options['fields']['name_field_et']['field'] = 'name_field_et';
+  $handler->display->display_options['fields']['name_field_et']['label'] = '';
+  $handler->display->display_options['fields']['name_field_et']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name_field_et']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['name_field_et']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['name_field_et']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
   /* Field: Taxonomy term: Rendered Taxonomy term */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
@@ -228,6 +231,13 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
+  );
+  /* Filter criterion: Taxonomy term: Name (name_field:language) */
+  $handler->display->display_options['filters']['language']['id'] = 'language';
+  $handler->display->display_options['filters']['language']['table'] = 'field_data_name_field';
+  $handler->display->display_options['filters']['language']['field'] = 'language';
+  $handler->display->display_options['filters']['language']['value'] = array(
+    '***DEFAULT_LANGUAGE***' => '***DEFAULT_LANGUAGE***',
   );
 
   /* Display: Block */
@@ -385,127 +395,6 @@ function fic_frontpage_settings_views_default_views() {
     t('View panes'),
   );
   $export['fic_kommende_arrangementer'] = $view;
-
-  $view = new view();
-  $view->name = 'fic_sektion_header';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'taxonomy_term_data';
-  $view->human_name = 'FIC Sektion Header';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Taxonomy term: Name */
-  $handler->display->display_options['fields']['name']['id'] = 'name';
-  $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['name']['field'] = 'name';
-  $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
-  /* Field: Taxonomy term: Term description */
-  $handler->display->display_options['fields']['description']['id'] = 'description';
-  $handler->display->display_options['fields']['description']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['fields']['description']['field'] = 'description';
-  $handler->display->display_options['fields']['description']['label'] = '';
-  $handler->display->display_options['fields']['description']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['description']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['description']['element_default_classes'] = FALSE;
-  /* Field: Field: Unikke relaterede links */
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['id'] = 'field_os2web_base_field_related';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['table'] = 'field_data_field_os2web_base_field_related';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['field'] = 'field_os2web_base_field_related';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['label'] = '';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['multi_type'] = 'ul';
-  /* Field: Field: Billede */
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['id'] = 'field_os2web_base_field_image';
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['table'] = 'field_data_field_os2web_base_field_image';
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['field'] = 'field_os2web_base_field_image';
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['type'] = 'backstretch';
-  $handler->display->display_options['fields']['field_os2web_base_field_image']['settings'] = array(
-    'image_style' => 'os2web_cover',
-    'element' => 'other',
-    'element_other' => '.bgimage',
-    'duration' => 5000,
-    'fade' => '0',
-    'center_x' => 1,
-    'center_y' => 1,
-    'random' => FALSE,
-  );
-  /* Contextual filter: Taxonomy term: Term ID */
-  $handler->display->display_options['arguments']['tid']['id'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['arguments']['tid']['field'] = 'tid';
-  $handler->display->display_options['arguments']['tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Taxonomy vocabulary: Machine name */
-  $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
-  $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
-  $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
-  $handler->display->display_options['filters']['machine_name']['value'] = array(
-    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
-  );
-
-  /* Display: Content pane */
-  $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
-
-  /* Display: Block */
-  $handler = $view->new_display('block', 'Block', 'block_1');
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Taxonomy term: Rendered Taxonomy term */
-  $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
-  $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
-  $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
-  $handler->display->display_options['fields']['rendered_entity']['label'] = '';
-  $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
-  $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
-  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'fic_header';
-  $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-  /* Field: Field: Unikke relaterede links */
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['id'] = 'field_os2web_base_field_related';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['table'] = 'field_data_field_os2web_base_field_related';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['field'] = 'field_os2web_base_field_related';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['label'] = '';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['delta_first_last'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_base_field_related']['multi_type'] = 'ul';
-  $translatables['fic_sektion_header'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('All'),
-    t('Content pane'),
-    t('View panes'),
-    t('Block'),
-  );
-  $export['fic_sektion_header'] = $view;
 
   $view = new view();
   $view->name = 'fic_term_paragraphs';

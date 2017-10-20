@@ -21,7 +21,6 @@ features[page_manager_handlers][] = term_view__frontpage-term
 features[views_view][] = fic_artikler
 features[views_view][] = fic_header_banners
 features[views_view][] = fic_kommende_arrangementer
-features[views_view][] = fic_sektion_header
 features[views_view][] = fic_term_paragraphs
 features[views_view][] = instagram_billeder
 features_exclude[dependencies][ctools] = ctools
