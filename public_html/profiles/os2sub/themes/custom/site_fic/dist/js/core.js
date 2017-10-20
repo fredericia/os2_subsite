@@ -63,9 +63,9 @@ var header = (function ($) {
 
       var $wH = $(window).height(),
         // All static value defiden accordingly with design.
-        $brandigH = 165 + 20,
-        $navigationH = 170 + 20,
-        $scrollDownH = 160,
+        $brandigH = 178 + 20,
+        $navigationH = 150 + 20,
+        $scrollDownH = 174,
         $descrH = $wH - $brandigH - $navigationH - $scrollDownH,
         $minH = 300,
         $maxH = 700;

@@ -4219,81 +4219,70 @@ tbody.collapse.in {
     .navbar-right ~ .navbar-right {
       margin-right: 0; } }
 
-.navbar-default {
-  background-color: transparent;
-  border-color: transparent; }
-  .navbar-default .navbar-collapse {
-    border: none; }
-  .navbar-default .search-form {
-    line-height: 30px;
-    background-color: #ff4200;
-    margin-left: 45%; }
-    .navbar-default .search-form .form-text {
-      background-color: transparent;
-      border: none; }
-    .navbar-default .search-form .btn.btn-primary, .navbar-default .search-form .topnav-wrapper.user-nav .region.region-navigation .book-link a.btn-primary, .topnav-wrapper.user-nav .region.region-navigation .book-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .topnav-wrapper.user-nav .region.region-navigation .book-link .banner .banner-wrapper a, .topnav-wrapper.user-nav .region.region-navigation .book-link .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper .topnav-wrapper.user-nav .region.region-navigation .book-link a, .banner .banner-wrapper .topnav-wrapper.user-nav .region.region-navigation .book-link .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper a, .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a.btn-primary, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .banner .banner-wrapper a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .banner .banner-wrapper .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .navbar-default .search-form a, .navbar-default .search-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .banner .banner-wrapper a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .banner .banner-wrapper .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .navbar-default .search-form a {
-      background-color: transparent;
-      border: transparent; }
-  .navbar-default .navbar-brand {
-    background-color: #FFF;
-    margin-right: 30px;
+.navbar-default .navbar-brand {
+  color: #777; }
+  .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent; }
+
+.navbar-default .navbar-text {
+  color: #777; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #777; }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent; }
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #555;
+  background-color: #e7e7e7; }
+
+.navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent; }
+
+.navbar-default .navbar-toggle {
+  border-color: #ddd; }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #ddd; }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #888; }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #e7e7e7; }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #e7e7e7;
+  color: #555; }
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
     color: #777; }
-    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-      color: #5e5e5e;
-      background-color: transparent; }
-  .navbar-default .navbar-text {
-    color: #777; }
-  .navbar-default .navbar-nav > li > a {
-    color: #777;
-    padding: 5px 5px;
-    line-height: 30px;
-    font-size: 15px;
-    font-family: "RBNo21a-Medium", "Lato", sans-serif; }
-    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
       color: #333;
       background-color: transparent; }
-  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555;
     background-color: #e7e7e7; }
-  .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
+  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #ccc;
-    background-color: transparent; }
-  .navbar-default .navbar-toggle {
-    border-color: #ddd; }
-    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-      background-color: #ddd; }
-    .navbar-default .navbar-toggle .icon-bar {
-      background-color: #888; }
-  .navbar-default .navbar-collapse,
-  .navbar-default .navbar-form {
-    border-color: #e7e7e7; }
-  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-    background-color: #e7e7e7;
-    color: #555; }
-  @media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-      color: #777; }
-      .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-        color: #333;
-        background-color: transparent; }
-    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-      color: #555;
-      background-color: #e7e7e7; }
-    .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-      color: #ccc;
-      background-color: transparent; } }
-  .navbar-default .navbar-link {
-    color: #777; }
-    .navbar-default .navbar-link:hover {
-      color: #333; }
-  .navbar-default .btn-link {
-    color: #777; }
-    .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
-      color: #333; }
-    .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus,
-    fieldset[disabled] .navbar-default .btn-link:hover,
-    fieldset[disabled] .navbar-default .btn-link:focus {
-      color: #ccc; }
+    background-color: transparent; } }
+
+.navbar-default .navbar-link {
+  color: #777; }
+  .navbar-default .navbar-link:hover {
+    color: #333; }
+
+.navbar-default .btn-link {
+  color: #777; }
+  .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
+    color: #333; }
+  .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus,
+  fieldset[disabled] .navbar-default .btn-link:hover,
+  fieldset[disabled] .navbar-default .btn-link:focus {
+    color: #ccc; }
 
 .navbar-inverse {
   background-color: #222;
@@ -8661,8 +8650,8 @@ button.close {
     background-color: transparent; }
 
 .card-secondary {
-  background-color: #f24244;
-  border-color: #f24244; }
+  background-color: #ff4200;
+  border-color: #ff4200; }
   .card-secondary .card-header,
   .card-secondary .card-footer {
     background-color: transparent; }
@@ -8708,7 +8697,7 @@ button.close {
 
 .card-outline-secondary {
   background-color: transparent;
-  border-color: #f24244; }
+  border-color: #ff4200; }
 
 .card-outline-tertiary {
   background-color: transparent;
@@ -8743,28 +8732,28 @@ button.close {
 
 .btn-secondary {
   color: #fff;
-  background-color: #f24244;
-  border-color: #f02a2c; }
+  background-color: #ff4200;
+  border-color: #e63b00; }
   .btn-secondary:focus, .btn-secondary.focus {
     color: #fff;
-    background-color: #ef1215;
-    border-color: #910a0c; }
+    background-color: #cc3500;
+    border-color: #661a00; }
   .btn-secondary:hover {
     color: #fff;
-    background-color: #ef1215;
-    border-color: #cf0e10; }
+    background-color: #cc3500;
+    border-color: #a82c00; }
   .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #ef1215;
-    border-color: #cf0e10; }
+    background-color: #cc3500;
+    border-color: #a82c00; }
     .btn-secondary:active:hover, .btn-secondary:active:focus, .btn-secondary:active.focus, .btn-secondary.active:hover, .btn-secondary.active:focus, .btn-secondary.active.focus,
     .open > .btn-secondary.dropdown-toggle:hover,
     .open > .btn-secondary.dropdown-toggle:focus,
     .open > .btn-secondary.dropdown-toggle.focus {
       color: #fff;
-      background-color: #cf0e10;
-      border-color: #910a0c; }
+      background-color: #a82c00;
+      border-color: #661a00; }
   .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
     background-image: none; }
@@ -8772,10 +8761,10 @@ button.close {
   fieldset[disabled] .btn-secondary:hover,
   fieldset[disabled] .btn-secondary:focus,
   fieldset[disabled] .btn-secondary.focus {
-    background-color: #f24244;
-    border-color: #f02a2c; }
+    background-color: #ff4200;
+    border-color: #e63b00; }
   .btn-secondary .badge {
-    color: #f24244;
+    color: #ff4200;
     background-color: #fff; }
 
 .btn-tertiary {
@@ -8816,9 +8805,9 @@ button.close {
     background-color: #fff; }
 
 .label-secondary {
-  background-color: #f24244; }
+  background-color: #ff4200; }
   .label-secondary[href]:hover, .label-secondary[href]:focus {
-    background-color: #ef1215; }
+    background-color: #cc3500; }
 
 .label-tertiary {
   background-color: #89bd2a; }
@@ -8826,18 +8815,18 @@ button.close {
     background-color: #6b9321; }
 
 .panel-secondary {
-  border-color: #f24244; }
+  border-color: #ff4200; }
   .panel-secondary > .panel-heading {
     color: #fff;
-    background-color: #f24244;
-    border-color: #f24244; }
+    background-color: #ff4200;
+    border-color: #ff4200; }
     .panel-secondary > .panel-heading + .panel-collapse > .panel-body {
-      border-top-color: #f24244; }
+      border-top-color: #ff4200; }
     .panel-secondary > .panel-heading .badge {
-      color: #f24244;
+      color: #ff4200;
       background-color: #fff; }
   .panel-secondary > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #f24244; }
+    border-bottom-color: #ff4200; }
 
 .panel-tertiary {
   border-color: #89bd2a; }
@@ -9761,11 +9750,11 @@ ul.social-icon-list {
   padding-bottom: 10px; }
 
 .btn:not(.form-submit).btn-red, .topnav-wrapper.user-nav .region.region-navigation .book-link a:not(.form-submit).btn-red, .banner .banner-wrapper a:not(.form-submit).btn-red, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:not(.form-submit).btn-red, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit), .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:not(.form-submit), .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:not(.form-submit), .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit), .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit) {
-  background-color: #f24244;
-  border-color: #f24244;
+  background-color: #ff4200;
+  border-color: #ff4200;
   color: #ffffff; }
   .btn:not(.form-submit).btn-red:hover, .topnav-wrapper.user-nav .region.region-navigation .book-link a:not(.form-submit).btn-red:hover, .banner .banner-wrapper a:not(.form-submit).btn-red:hover, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:not(.form-submit).btn-red:hover, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit):hover, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:not(.form-submit):hover, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:not(.form-submit):hover, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):hover, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):hover, .btn:not(.form-submit).btn-red:active, .topnav-wrapper.user-nav .region.region-navigation .book-link a:not(.form-submit).btn-red:active, .banner .banner-wrapper a:not(.form-submit).btn-red:active, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:not(.form-submit).btn-red:active, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit):active, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:not(.form-submit):active, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:not(.form-submit):active, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):active, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):active, .btn:not(.form-submit).btn-red:focus, .topnav-wrapper.user-nav .region.region-navigation .book-link a:not(.form-submit).btn-red:focus, .banner .banner-wrapper a:not(.form-submit).btn-red:focus, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:not(.form-submit).btn-red:focus, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit):focus, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:not(.form-submit):focus, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:not(.form-submit):focus, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):focus, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit):focus {
-    color: #f24244;
+    color: #ff4200;
     background-color: transparent; }
 
 .btn:not(.form-submit).btn-blue, .topnav-wrapper.user-nav .region.region-navigation .book-link a:not(.form-submit), .banner .banner-wrapper a:not(.form-submit).btn-blue, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:not(.form-submit).btn-blue {
@@ -9819,6 +9808,25 @@ div.ctools-modal-content {
       font-size: 3em;
       opacity: 1; }
 
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent; }
+  .navbar-default .navbar-collapse {
+    border: none; }
+  .navbar-default .search-form {
+    line-height: 30px;
+    background-color: #ff4200;
+    width: 300px; }
+    .navbar-default .search-form .form-text {
+      background-color: transparent;
+      border: none; }
+    .navbar-default .search-form .btn.btn-primary, .navbar-default .search-form .topnav-wrapper.user-nav .region.region-navigation .book-link a.btn-primary, .topnav-wrapper.user-nav .region.region-navigation .book-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .topnav-wrapper.user-nav .region.region-navigation .book-link .banner .banner-wrapper a, .topnav-wrapper.user-nav .region.region-navigation .book-link .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper .topnav-wrapper.user-nav .region.region-navigation .book-link a, .banner .banner-wrapper .topnav-wrapper.user-nav .region.region-navigation .book-link .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper a, .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a.btn-primary, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default .search-form a.btn-primary, .navbar-default .search-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .banner .banner-wrapper a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .banner .banner-wrapper .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .navbar-default .search-form a, .navbar-default .search-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .banner .banner-wrapper a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .banner .banner-wrapper .navbar-default .search-form a, .navbar-default .search-form .banner .banner-wrapper .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .banner .banner-wrapper .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .navbar-default .search-form a {
+      background-color: transparent;
+      border: transparent; }
+  .navbar-default .navbar-brand {
+    background-color: #ffffff;
+    margin-right: 30px; }
+
 .node {
   font-size: 1.06em; }
 
@@ -9836,7 +9844,7 @@ div.ctools-modal-content {
   .page-node .content-sidebar .panel-pane {
     padding-left: 15px; }
   .page-node .content-sidebar h2, .page-node .content-sidebar .heading-h2 {
-    color: #f24244; }
+    color: #ff4200; }
 
 .page-node .page-header-wrapper {
   background-image: url("../img/topbg.png");
@@ -10005,7 +10013,7 @@ div.ctools-modal-content {
     -ms-transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: rgba(242, 66, 68, 0.75); }
+    background-color: rgba(255, 66, 0, 0.75); }
     .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
       text-align: center;
       position: relative;
@@ -10033,7 +10041,7 @@ div.ctools-modal-content {
     right: 0; }
     .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
       display: block;
-      background-color: #f24244;
+      background-color: #ff4200;
       color: #fff;
       font-size: 0.8em;
       font-weight: bold;
@@ -10129,7 +10137,7 @@ div.ctools-modal-content {
   -ms-transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background-color: rgba(242, 66, 68, 0.75); }
+  background-color: rgba(255, 66, 0, 0.75); }
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .overlay .overlay-content {
     text-align: center;
     position: relative;
@@ -10231,7 +10239,7 @@ div.ctools-modal-content {
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date, .view-display-id-pane_activities_list_2_3
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
     font-size: 1em;
-    color: #f24244;
+    color: #ff4200;
     font-weight: normal;
     text-transform: lowercase; }
   .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_2_3 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_2_3
@@ -10349,7 +10357,7 @@ div.ctools-modal-content {
     text-align: center; }
     .term-fic-header .slide-content-wrapper .field-name-description-field {
       color: #ffffff;
-      font-size: 3.125em;
+      font-size: 4em;
       text-shadow: 1px 1px rgba(0, 0, 0, 0.75); }
     .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-ext-link .field-item {
       display: inline-block;
@@ -10368,7 +10376,7 @@ div.ctools-modal-content {
           text-decoration: none; }
   .term-fic-header .views-slideshow-controls-bottom > div,
   .term-fic-header .field-name-field-os2web-base-field-related > div {
-    padding-bottom: 100px; }
+    padding-bottom: 80px; }
   .term-fic-header .views-slideshow-controls-bottom div,
   .term-fic-header .views-slideshow-controls-bottom li,
   .term-fic-header .field-name-field-os2web-base-field-related div,
@@ -10422,7 +10430,7 @@ div.ctools-modal-content {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 80px;
+    height: 60px;
     width: 100%;
     z-index: 1;
     text-transform: uppercase; }
@@ -10448,7 +10456,7 @@ div.ctools-modal-content {
       display: block;
       width: 100%;
       height: 100%;
-      background-color: #f24244;
+      background-color: #ff4200;
       color: #ffffff;
       padding: 10px 0;
       text-align: center;
@@ -10569,7 +10577,7 @@ div.ctools-modal-content {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
     .paragraphs-item-header-text-media .row .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-paragraph-header, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-paragraph-header, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .field.field-name-field-paragraph-header {
-      color: #f24244; }
+      color: #ff4200; }
     .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video {
       margin-bottom: 15px; }
       .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video iframe, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe {
