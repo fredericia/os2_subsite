@@ -20,7 +20,7 @@
 <?php endforeach; ?>
 <div class="views-row views-row views-row-se-flere">
 
-  <a href='#'>
+  <a href='/nyheder' title="<?php print t('Read more articles'); ?>">
     <article class="se-flere">
       <div class="field field-name-field-os2web-base-field-lead-img field-type-image field-label-hidden">
         <img class="img-responsive" src="/profiles/os2sub/themes/custom/site_fic/dist/img/1px_transparent.png" width="670" height="670">
