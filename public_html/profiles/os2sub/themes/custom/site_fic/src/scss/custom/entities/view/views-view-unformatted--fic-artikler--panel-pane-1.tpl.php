@@ -28,7 +28,7 @@
       <div class='se-flere-content'>
         <span>
           <p class='se-flere-icon'>+</p>
-          <p><?php print t('se flere'); ?></p>
+          <p><?php print t('See more'); ?></p>
         </span>
       </div>
     </article>
