@@ -31,6 +31,8 @@ footer.footer {
     }
     h2.block-title {
       color: $brand-primary;
+      font-size: 2em;
+      letter-spacing: 0.019em;
     }
   }
   ul.menu.nav{
@@ -80,6 +82,18 @@ padding-left: 0px;
     }
   }
 }
+
+.footer5 {
+  margin-top: 63px;
+  line-height: 1.6em;
+
+  .block-os2web-logo {
+    float: right;
+    margin-top: 40px;
+    min-width: 160px;
+  }
+}
+
 
 // --------------------------------------------------
 // Variants

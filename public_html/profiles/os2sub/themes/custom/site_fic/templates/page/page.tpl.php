@@ -233,14 +233,14 @@
           </ul>	
         </div>
         <?php if (!empty($page['footer4'])) : ?>
-          <div class="col-sm-5">
+          <div class="col-sm-4">
             <div class="footer4">
               <?php print render($page['footer4']); ?>
             </div>
           </div>
         <?php endif; ?>
         <?php if (!empty($page['footer5'])) : ?>
-          <div class="col-sm-3">
+          <div class="col-sm-4">
             <div class="footer5">
               <div class="custom-text">
                 <?php print render($page['footer5']); ?>
@@ -248,7 +248,7 @@
             </div>
           </div>
         <?php endif; ?>
-        <div class="social-links col-sm-3 col-sm-push-9">
+        <div class="social-links col-sm-4 col-sm-push-12">
           <?php print render($page['footer3']); ?> 
         </div>
       </div>
