@@ -9,84 +9,105 @@
  */
 
 /**
- * Implements hook_menu().
+ * Implements hook_block_info().
  */
-function os2web_logo_menu() {
-  $items['admin/appearance/logo'] = array(
-    'title' => 'Section logo',
-    'description' => 'Define paths and terms of Site structure volabulary.',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('os2web_logo_config'),
-    'access arguments' => array('administer themes'),
+function os2web_logo_block_info() {
+  $blocks['os2web_logo'] = array(
+    'info' => t('OS2Web Logo'),
+    'cache' => DRUPAL_CACHE_PER_PAGE,
   );
-  return $items;
+
+  return $blocks;
 }
 
 /**
- * Define os2web_logo_config form.
+ * Implements hook_block_configure().
  */
-function os2web_logo_config($form, &$form_state) {
-  $os2web_logo_config = variable_get('os2web_logo_paths', array());
-  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_base_tax_site_structure');
-  $terms = entity_load('taxonomy_term', FALSE, array('vid' => $vocabulary->vid));
-  $form['#tree'] = TRUE;
-  $options = array('' => t('All'));
-  foreach ($terms as $term) {
-    $options[$term->tid] = $term->name;
-    $form['os2web_logo_paths'][$term->tid] = array(
-      '#type' => 'fieldset',
-      '#title' => $term->name,
-      '#collapsible' => TRUE,
-      '#collapsed' => empty($os2web_logo_config[$term->tid]),
-      'paths' => array(
-        '#type' => 'textarea',
-        '#title' => t('Specify paths set for section'),
-        '#default_value' => !empty($os2web_logo_config[$term->tid]) ? $os2web_logo_config[$term->tid] : '',
-      ),
-    );
+function os2web_logo_block_configure($delta = '') {
+  $form = array();
+  if ($delta == 'os2web_logo') {
+    $os2web_logo_config = variable_get('os2web_logo_paths', []);
+    $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_base_tax_site_structure');
+    $terms = entity_load('taxonomy_term', FALSE, ['vid' => $vocabulary->vid]);
+    $options = ['' => t('All')];
+    foreach ($terms as $term) {
+      $options[$term->tid] = $term->name;
+      $form['os2web_logo_paths' . $term->tid] = array(
+        '#type' => 'fieldset',
+        '#title' => $term->name,
+        '#collapsible' => TRUE,
+        '#collapsed' => empty($os2web_logo_config[$term->tid]),
+        'term-' . $term->tid => array(
+          '#type' => 'textarea',
+          '#title' => t('Specify paths set for section'),
+          '#default_value' => !empty($os2web_logo_config[$term->tid]) ? $os2web_logo_config[$term->tid] : '',
+        )
+      );
+    }
+
+    $form['os2web_logo_default_tid'] = [
+      '#type' => 'select',
+      '#title' => t('Select default term for section logo'),
+      '#options' => $options,
+      '#default_value' => variable_get('os2web_logo_default_tid'),
+    ];
+
+    $form['os2web_logo_imagestyle'] = [
+      '#type' => 'textfield',
+      '#required' => TRUE,
+      '#title' => t('Machine name of imagestyle'),
+      '#default_value' => variable_get('os2web_logo_imagestyle'),
+    ];
   }
-
-  $form['os2web_logo_default_tid'] = array(
-    '#type' => 'select',
-    '#title' => t('Select default term for section logo'),
-    '#options' => $options,
-    '#default_value' => variable_get('os2web_logo_default_term'),
-  );
-
-  $form['actions'] = array(
-    '#type' => 'actions',
-  );
-
-  $form['actions']['submit'] = array(
-    '#type' => 'submit',
-    '#value' => t('Save configuration'),
-  );
   return $form;
 }
 
 /**
- * Submit callback for os2web_logo_config form.
+ * Implements hook_block_save().
  */
-function os2web_logo_config_submit($form, &$form_state) {
-  $os2web_logo_config = array();
-  foreach ($form_state['values']['os2web_logo_paths'] as $tid => $value) {
-    $os2web_logo_config[$tid] = $value['paths'];
-  }
-  variable_set('os2web_logo_paths', $os2web_logo_config);
+function os2web_logo_block_save($delta = '', $edit = array()) {
 
-  if (isset($form_state['values']['os2web_logo_default_tid'])) {
-    variable_set('os2web_logo_default_tid', $form_state['values']['os2web_logo_default_tid']);
+  if ($delta == 'os2web_logo') {
+    $os2web_logo_config = [];
+    foreach ($edit as $key => $value) {
+      $key_parts = explode('-', $key);
+      if ($key_parts[0] == 'term') {
+        $os2web_logo_config[$key_parts[1]] = $value;
+      }
+    }
+    variable_set('os2web_logo_paths', $os2web_logo_config);
+    variable_set('os2web_logo_default_tid', $edit['os2web_logo_default_tid']);
+    variable_set('os2web_logo_imagestyle', $edit['os2web_logo_imagestyle']);
   }
 }
 
 /**
- * Implements hook_preprocess_HOOK().
+ * Implements hook_block_view().
  */
-function os2web_logo_preprocess_page(&$vars) {
+function os2web_logo_block_view($delta = '') {
+  $block = array();
+  if ($delta != 'os2web_logo') {
+    return;
+  }
+
+  $section_logo_image = os2web_logo_get_path();
+  $section_logo_imagestyle = variable_get('os2web_logo_imagestyle');
+  // Render section logo image.
+  if (!empty($section_logo_image['uri']) && !empty($section_logo_imagestyle)) {
+    $block['content'] = theme('image_style', array(
+      'style_name' => $section_logo_imagestyle,
+      'path' => $section_logo_image['uri'],
+    ));
+  }
+
+  return $block;
+}
+
+function os2web_logo_get_path() {
   $section_logo_tid = variable_get('os2web_logo_default_tid');
   $os2web_logo_paths = variable_get('os2web_logo_paths', array());
   if (empty($os2web_logo_paths)) {
-    return;
+    return FALSE;
   }
 
   foreach ($os2web_logo_paths as $tid => $paths) {
@@ -114,12 +135,14 @@ function os2web_logo_preprocess_page(&$vars) {
   }
 
   if (empty($section_logo_tid)) {
-    return;
+    return FALSE;
   }
 
   $term = taxonomy_term_load($section_logo_tid);
   $logo_field_value = field_get_items('taxonomy_term', $term, 'field_os2web_base_field_logo');
-  if (isset($logo_field_value[0])) {
-    $vars['section_logo_image'] = $logo_field_value[0];
+  if (empty($logo_field_value[0])) {
+    return FALSE;
   }
+
+  return $logo_field_value[0];
 }

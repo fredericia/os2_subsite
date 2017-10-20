@@ -234,9 +234,9 @@
         </div>
         <?php if (!empty($page['footer4'])) : ?>
           <div class="col-sm-5">
-  	        <div class="footer4">
-    	        <?php print render($page['footer4']); ?>
-    	      </div>
+            <div class="footer4">
+              <?php print render($page['footer4']); ?>
+            </div>
           </div>
         <?php endif; ?>
         <?php if (!empty($page['footer5'])) : ?>
@@ -257,12 +257,6 @@
       <div class="container footer-container footer6-container">
         <?php print render($page['footer6']); ?>
       </div>
-    <?php else: ?> 	            
-      <?php if (!empty($section_logo)) : ?>
-        <div class="section-logo">
-          <?php print $section_logo; ?>
-        </div>
-      <?php endif; ?>
-    <?php endif; ?>	
+    <?php endif; ?>
   </div>
 </footer>
