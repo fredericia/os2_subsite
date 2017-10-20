@@ -226,11 +226,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['advanced_options'] = '{"before":"var $termId = $(nextSlideElement).find(\'.taxonomy-term\').attr(\'id\').replace(\'taxonomy-term-\', \'\');\\nif (typeof Drupal.behaviors.ficBackstretch !== \\"undefined\\") { \\n    Drupal.behaviors.ficBackstretch.show($termId);\\n}"}';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-<<<<<<< HEAD
-  /* Field: Entity translation: Name: translated */
-=======
   /* Felt: Entity translation: Name: translated */
->>>>>>> ups from live
   $handler->display->display_options['fields']['name_field_et']['id'] = 'name_field_et';
   $handler->display->display_options['fields']['name_field_et']['table'] = 'field_data_name_field';
   $handler->display->display_options['fields']['name_field_et']['field'] = 'name_field_et';
@@ -243,11 +239,7 @@ function fic_frontpage_settings_views_default_views() {
     'title_link' => 'content',
     'title_class' => '',
   );
-<<<<<<< HEAD
-  /* Field: Taxonomy term: Rendered Taxonomy term */
-=======
   /* Felt: Ord i ordforråd: Rendered Ord i ordforråd */
->>>>>>> ups from live
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -268,11 +260,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
-<<<<<<< HEAD
-  /* Filter criterion: Taxonomy term: Name (name_field:language) */
-=======
   /* Filterkriterie: Ord i ordforråd: Name (name_field:language) */
->>>>>>> ups from live
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'field_data_name_field';
   $handler->display->display_options['filters']['language']['field'] = 'language';
