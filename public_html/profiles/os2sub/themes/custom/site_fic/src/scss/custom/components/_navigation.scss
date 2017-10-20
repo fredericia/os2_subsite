@@ -22,33 +22,136 @@ $navigation-bottom-border-color: #fff;
 // --------------------------------------------------
 
 // Navigation
-nav.navbar-default{
-  ul.navbar-nav{
-    > li {
-      a{
-        padding: $navigation-top-padding-top-bottom;
-        font-family: $headings-font-family;
-        font-size: 1.25em;
-      }
-      > a {
+/*
+.topnav-wrapper {
+  a{
+    font-size: 0.75em;
+  }
+  .region-navigation,
+  ul.menu.nav.navbar-nav  {
+    position: relative;
+    float: none;
+    display: inline-block;
+  }
+  .user-nav{
+    display: flex;
+  }
+}*/
 
-        &.active, &.active-trail{
-          background-color: $brand-primary;
-          color: #fff;
-          &:active, &:hover, &:focus{
-            background-color: $brand-primary;
-            color: #fff;
+
+
+.topnav-wrapper.user-nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+  a{
+    font-size: 0.75em !important;
+    color: #fff;
+    &:active, &:hover, &:focus{
+      background: none !important;
+      color: $brand-primary !important;
+    }
+  }
+  ul.menu.nav.navbar-nav.secondary{
+    float: unset;
+    a{
+      font-size: 12px !important;
+      font-weight: 800;
+    }
+  }
+  .region.region-navigation{
+    display: flex;
+    position: relative;
+    align-items: center;
+    section.block.block-locale.contextual-links-region.block-locale{
+
+
+      button.lang-buton{
+        text-transform: uppercase;
+        border: none;
+        background: none;
+        &:after{
+          content:'';
+          color: $brand-primary;
+          font: normal normal normal 14px/1 FontAwesome;
+          border: none;
+        }
+        &:active, &:hover, &:focus{
+        color: $brand-primary;
+        }
+      }
+      .dropdown-menu{
+        min-width: auto;
+        border: none;
+        border-radius: unset; 
+        top: auto;
+        ul.language-switcher-locale-url{
+          padding: 0px 10px;
+          li{
+            list-style: none;
+            a{
+              text-transform: uppercase;
+              text-decoration: none;
+              color: $gray-darker;
+              &:active, &:hover, &:focus{
+                color: $brand-primary;
+              }
+            }
           }
         }
       }
+    }
+    .book-link{
+      margin-right: 60px;
+      margin-left: 20px;
 
-      a, &.open a{
+      a{
+        @extend .btn;
+        @extend .btn-blue;
+        padding: 5px 25px !important;
+       
+      }
+    }
+  }
+}
+.navbar.container.navbar-default{
+  margin-top: 0;
+  .headerwrapper-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    .navbar-collapse{
+      margin-right: 60px;
+      padding: 0;
+      ul.navbar-nav{
+        > li {
+          a{
+            padding: $navigation-top-padding-top-bottom;
+            font-family: $headings-font-family;
+            font-size: 1.25em;
+          }
+          > a {
 
-        color: $gray-dark;
-        background-color: #fff;
-        &:active, &:hover, &:focus{
-          background-color: $brand-primary;
-          color: #fff;
+            &.active, &.active-trail{
+              background-color: $brand-primary;
+              color: #fff;
+              &:active, &:hover, &:focus{
+                background-color: $brand-primary;
+                color: #fff;
+              }
+            }
+          }
+
+          a, &.open a{
+
+            color: $gray-dark;
+            background-color: #fff;
+            &:active, &:hover, &:focus{
+              background-color: $brand-primary;
+              color: #fff;
+            }
+          }
         }
       }
     }
@@ -90,7 +193,6 @@ nav.navbar-default{
     }
   }
 }
-
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
