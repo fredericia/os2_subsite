@@ -24,42 +24,10 @@ $md-page-layout-content-inner-padding-bottom: 60px;
 // --------------------------------------------------
 
 // Page layout
-body {
-  font-family: $font-lato;
-  font-weight: normal;
-  color: $color-black;
-}
-
-h1.page-header,
-h1.pane-title {
-  font-family: $font-roboto-slab;
-  font-weight: bold;
-  font-size: 2.5em;
-  color: $color-black;
-  border: 0;
-}
-
-h2.pane-title {
-  font-family: $font-roboto-slab;
-  font-weight: lighter;
-  font-size: 2.125em;
-  color: $color-black;
-  //margin-bottom: 30px;
-}
-
-h3.pane-title {
-  font-weight: bold;
-  font-size: 1.25em;
-  text-transform: uppercase;
-  color: $color-black;
-}
 
 .breadcrumb {
   background: none;
   padding-left: 0;
-}
-
-.panel-pane {
 }
 
 .search-and-title{

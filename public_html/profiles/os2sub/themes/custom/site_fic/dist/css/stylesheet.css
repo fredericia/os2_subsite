@@ -9199,33 +9199,6 @@ h6,
   src: url("../../dist/fonts/webfonts/34D611_0_0.eot");
   src: url("../../dist/fonts/webfonts/34D611_0_0.eot?#iefix") format("embedded-opentype"), url("../../dist/fonts/webfonts/34D611_0_0.woff2") format("woff2"), url("../../dist/fonts/webfonts/34D611_0_0.woff") format("woff"), url("../../dist/fonts/webfonts/34D611_0_0.ttf") format("truetype"); }
 
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: normal;
-  color: #192124; }
-
-h1.page-header, .page-header.heading-h1, .banner .banner-wrapper .page-header.banner-headline,
-h1.pane-title,
-.pane-title.heading-h1,
-.banner .banner-wrapper .pane-title.banner-headline {
-  font-family: "Roboto Slab", serif;
-  font-weight: bold;
-  font-size: 2.5em;
-  color: #192124;
-  border: 0; }
-
-h2.pane-title, .pane-title.heading-h2 {
-  font-family: "Roboto Slab", serif;
-  font-weight: lighter;
-  font-size: 2.125em;
-  color: #192124; }
-
-h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-headline {
-  font-weight: bold;
-  font-size: 1.25em;
-  text-transform: uppercase;
-  color: #192124; }
-
 .breadcrumb {
   background: none;
   padding-left: 0; }
@@ -9291,6 +9264,11 @@ h1.pane-title,
   .bg-alternative .field {
     color: #FFF;
     border-color: #FFF; }
+
+.top-border .views-container-inner {
+  border-top: 2px solid #ccc;
+  padding-top: 30px;
+  margin-top: 30px; }
 
 .paragraphs-items .field.field-name-field-paragraph-header {
   margin-bottom: 30px;

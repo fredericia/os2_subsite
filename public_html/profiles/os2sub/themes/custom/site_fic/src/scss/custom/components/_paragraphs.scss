@@ -50,6 +50,13 @@
     border-color: #FFF;
   }
 }
+.top-border {
+  .views-container-inner {
+    border-top: 2px solid #ccc;
+    padding-top: $grid-gutter-width;
+    margin-top: $grid-gutter-width;
+  }
+}
 .page-taxonomy .paragraphs-container,
 .front .paragraphs-container {
   .entity-paragraphs-item .content {
