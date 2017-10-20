@@ -53,7 +53,7 @@
 .top-border.bg-white {
   .views-container-inner-inner {
     border-top: 2px solid #ccc;
-    padding-top: ($grid-gutter-width * 2);
+    padding-top: floor($grid-gutter-width * 1.5);
   }
 }
 .page-taxonomy .paragraphs-container,
