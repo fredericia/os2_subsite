@@ -1009,9 +1009,10 @@ function os2web_base_default_page_manager_handlers() {
     'more_link' => 1,
     'arguments' => array(
       'term_node_tid_depth' => '%taxonomy_term_sektion:tid',
+      'nid' => '',
     ),
-    'override_title' => 1,
-    'override_title_text' => '',
+    'override_title' => 0,
+    'override_title_text' => 'Upcoming events',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
@@ -1020,7 +1021,7 @@ function os2web_base_default_page_manager_handlers() {
   );
   $pane->css = array(
     'css_id' => '',
-    'css_class' => '',
+    'css_class' => 'bg-white top-border',
     'template_suggestion' => 'fw-views',
   );
   $pane->extras = array();

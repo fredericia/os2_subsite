@@ -1,0 +1,103 @@
+<?php
+/**
+ * @file
+ * Code for the OS2web News Page feature.
+ */
+
+include_once 'os2web_news_page.features.inc';
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function os2web_news_page_form_os2web_base_news_node_form_alter(&$form, $form_state, $form_id) {
+  $node = $form_state['node'];
+
+  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_news_page_newstypes');
+  $terms = taxonomy_get_tree($vocabulary->vid, 0, 1);
+  $first_term = reset($terms);
+  $options = array();
+
+  if ((!isset($node->nid) || isset($node->is_new)) && user_access('administer all news type')) {
+    // Get first item in vocabulary and set selects default value..
+    $form['field_os2web_news_page_type']['und']['#default_value'][] = $first_term->tid;
+  }
+  elseif (!user_access('administer all news type')) {
+    foreach ($terms as $tid => $term) {
+      if (user_access('administer news type-' . $term->tid)) {
+        $options[$term->tid] = $term->name;
+      }
+    }
+    $form['field_os2web_news_page_type']['und']['#options'] = $options;
+    $options_first = reset($options);
+    $form['field_os2web_news_page_type']['und']['#default_value'][] = key($options_first);
+  }
+
+  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_base_tax_promoteto');
+  $terms = taxonomy_get_tree($vocabulary->vid, 0, 1);
+  $first_term = reset($terms);
+  $options = array();
+
+  if (!user_access('promote to all the place')) {
+    foreach ($terms as $tid => $term) {
+      if (user_access('promote to-' . $term->tid)) {
+        $options[$term->tid] = $term->name;
+      }
+    }
+    $form['field_os2web_base_field_promote']['und']['#options'] = $options;
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function os2web_news_page_permission() {
+  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_news_page_newstypes');
+  $terms = taxonomy_get_tree($vocabulary->vid, 0, 1);
+
+  // A news all types administration permission.
+  $permissions['administer all news type'] = array('title' => t('Administer alle nyhedstyper'));
+
+  // Foreach news type term, there is a permission.
+  foreach ($terms as $tid => $term) {
+    $permissions['administer news type-' . $term->tid] = array(
+      'title' => t('Administer ') . $term->name . t(' nyhedstype'),
+    );
+  }
+  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_base_tax_promoteto');
+  $terms = taxonomy_get_tree($vocabulary->vid, 0, 1);
+
+  // A admin permission to promote news to all the place.
+  $permissions['promote to all the place'] = array('title' => t('Forfrem til alle sted'));
+
+  // Foreach promoting place, there is a permission.
+  foreach ($terms as $tid => $term) {
+    $permissions['promote to-' . $term->tid] = array(
+      'title' => t('Forfrem til ') . $term->name,
+    );
+  }
+  return $permissions;
+}
+
+function os2web_news_page_menu() {
+  $items['aktulet_news/ajax/view/%/%'] = array(
+    'page callback' => 'os2web_news_page_ajax_view',
+    'access arguments' => array('access content'),
+    'page arguments' => array(3, 4),
+  );
+  return $items;
+}
+
+function os2web_news_page_ajax_view($term_id, $item = 5) {
+  print '
+      <div class="row ' . $term_id. '">';
+
+  $view = views_get_view('svendborg_news_view');
+  $view->set_display('block');
+  $view->set_arguments(array('nyhed', $term_id));
+  if ($item) {
+    $view->set_items_per_page($item);
+  }
+  $view->execute();
+  print $view->render('block');
+  print '</div>';
+}

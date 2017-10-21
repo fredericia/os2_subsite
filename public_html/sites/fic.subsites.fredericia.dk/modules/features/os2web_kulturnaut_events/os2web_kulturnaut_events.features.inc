@@ -45,8 +45,8 @@ function os2web_kulturnaut_events_image_default_styles() {
       3 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 370,
-          'height' => 97,
+          'width' => 745,
+          'height' => 375,
           'anchor' => 'center-center',
           'disable_scale' => 0,
           'jcrop_settings' => array(
@@ -61,8 +61,8 @@ function os2web_kulturnaut_events_image_default_styles() {
       4 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 370,
-          'height' => 97,
+          'width' => 745,
+          'height' => 375,
         ),
         'weight' => -9,
       ),

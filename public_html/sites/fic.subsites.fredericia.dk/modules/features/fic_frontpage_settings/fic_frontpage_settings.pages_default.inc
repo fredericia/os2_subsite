@@ -161,7 +161,7 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $pane->css = array(
     'css_id' => '',
     'css_class' => 'bg-darker',
-    'template_suggestion' => 'paragraphs',
+    'template_suggestion' => 'fw-views',
   );
   $pane->extras = array();
   $pane->position = 1;

@@ -27,9 +27,8 @@ function fic_theme_settings_strongarm() {
     'default_logo' => 1,
     'logo_path' => '',
     'logo_upload' => '',
-    'default_favicon' => 1,
-    'favicon_path' => '',
-    'favicon_upload' => '',
+    'default_favicon' => 0,
+    'favicon_path' => 'public://ficlogou.png',
     'bootstrap__active_tab' => 'edit-general',
     'bootstrap_fluid_container' => 0,
     'bootstrap_button_size' => '',
@@ -183,7 +182,7 @@ function fic_theme_settings_strongarm() {
           ),
         ),
         '' => array(
-          'title' => 'Custom',
+          'title' => 'Tilpasset',
           'colors' => array(),
         ),
       ),
@@ -197,6 +196,7 @@ function fic_theme_settings_strongarm() {
       'base_image' => 'color/base.png',
     ),
     'jquery_update_jquery_version' => '2.1',
+    'favicon_mimetype' => 'image/png',
   );
   $export['theme_site_fic_settings'] = $strongarm;
 
