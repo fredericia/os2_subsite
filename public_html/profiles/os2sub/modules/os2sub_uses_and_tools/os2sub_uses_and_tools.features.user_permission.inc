@@ -193,16 +193,6 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'module' => 'ckeditor',
   );
 
-  // Exported permission: 'administer event status'.
-  $permissions['administer event status'] = array(
-    'name' => 'administer event status',
-    'roles' => array(
-      'Editor' => 'Editor',
-      'subsiteadmin' => 'subsiteadmin',
-    ),
-    'module' => 'event_calendar',
-  );
-
   // Exported permission: 'administer file types'.
   $permissions['administer file types'] = array(
     'name' => 'administer file types',
