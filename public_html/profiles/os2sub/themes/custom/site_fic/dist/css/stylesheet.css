@@ -9818,10 +9818,13 @@ div.ctools-modal-content {
   margin: 10% auto;
   background: transparent;
   border: 0;
-  width: 970px; }
+  width: 80%; }
   div.ctools-modal-content .modal-content {
     border-radius: 0;
-    padding: 20px 50px 50px; }
+    padding: 20px 50px 50px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border: 0; }
   div.ctools-modal-content .popups-close {
     display: block;
     height: 70px; }
@@ -9834,6 +9837,10 @@ div.ctools-modal-content {
       text-align: center;
       font-size: 3em;
       opacity: 1; }
+
+@media (min-width: 992px) {
+  div.ctools-modal-content {
+    width: 970px; } }
 
 .navbar-default {
   background-color: transparent;
