@@ -409,6 +409,15 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['row_class'] = 'col-xs-6 col-sm-4 col-md-3';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'node';
+  $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
+  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Har taksonomiterm ID (med dybde) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
