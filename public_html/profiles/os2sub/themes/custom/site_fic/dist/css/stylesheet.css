@@ -10089,6 +10089,27 @@ div.ctools-modal-content {
             left: 24px;
             margin-top: 12px;
             margin-bottom: 12px; }
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager {
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+      right: 0;
+      margin-right: 24px;
+      margin-bottom: 30px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a {
+        border-style: solid;
+        border-width: 5px;
+        border-color: rgba(255, 255, 255, 0.5);
+        width: 24px;
+        height: 24px;
+        font-size: 0;
+        margin-left: 6px;
+        margin-right: 6px;
+        display: block; }
 
 .page-node .content-sidebar {
   border-left: 2px solid #ddd;
