@@ -188,6 +188,26 @@
   }
 }
 
+.scroll-down {
+  &-link {
+    text-align: center;
+    display: none;
+    padding: 50px 0;
+
+    .page-taxonomy-term & {
+      display: block;
+    }
+
+    span {
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      background-image: url('../img/lookdown.png');
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 .page-taxonomy {
   .view-mode-fic_header {
     display: table;

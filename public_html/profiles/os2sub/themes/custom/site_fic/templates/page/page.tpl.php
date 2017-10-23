@@ -48,11 +48,6 @@
     </div>
     <?php print render($page['header']); ?>
   </div>
-  <div class="scroll-down-wrapper">
-    <a href="#block-system-main" class="scroll-down-link">
-      <span><i></i></span>
-    </a>
-  </div>
 </header>
 
 <div class="main-container">
