@@ -15,8 +15,9 @@
     <div class="col-sm-8 ">
       <div class="blue-block">
         <span class="text"><?php print t('Get an overview of all opening hours'); ?></span>
-        <a href="#" class="read-more"><?php print t('See all opening hours');
-        ?></a>
+        <?php if (!empty($opening_hours_link)) : ?>
+          <?php print $opening_hours_link; ?>
+        <?php endif; ?>
       </div>
     </div>
     <?php if (!empty($contact_link)) : ?>

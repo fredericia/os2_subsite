@@ -80,15 +80,7 @@ function site_fic_preprocess_page(&$variables) {
   $book_node_reference = variable_get('book_node_reference', FALSE);
   if ($book_node_reference) {
     $node = node_load($book_node_reference);
-    $nid = $node->nid;
-    if (module_exists('i18n_node')) {
-      global $language;
-      $lang = $language->language;
-      $translations = translation_node_get_translations($node->tnid);
-      if (isset($translations[$lang])) {
-        $nid = $translations[$lang]->nid;
-      }
-    }
+    _site_fic_get_node_translation($node);
 
     $variables['page']['navigation']['book_link'] = array(
       '#type' => 'container',
@@ -96,7 +88,7 @@ function site_fic_preprocess_page(&$variables) {
       array(
         '#theme' => 'link',
         '#text' => t('Book'),
-        '#path' => 'node/' . $nid,
+        '#path' => 'node/' . $node->nid,
       )
     );
   }
@@ -276,6 +268,25 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   } elseif (!drupal_is_front_page()) {
     hide($vars['content']['field_os2web_base_field_ext_link']);
   }
+
+  $opening_hours_node_reference = variable_get('opening_hours_node_reference', FALSE);
+  $opening_hours_link = &drupal_static('opening_hours_link');
+  if ($opening_hours_node_reference && empty($opening_hours_link)) {
+    $node = node_load($opening_hours_node_reference);
+    if (!empty($node)) {
+      _site_fic_get_node_translation($node);
+      $opening_hours_link = l(t('See all opening hours'), 'modal/node/' . $node->nid . '/nojs', array(
+        'attributes' => array(
+          'class' => array(
+            'read-more',
+            'ctools-modal-contact-modal-style',
+            'ctools-use-modal',
+          ),
+        ),
+      ));
+    }
+  }
+  $vars['opening_hours_link'] = $opening_hours_link;
 }
 
 /**
@@ -303,4 +314,21 @@ function site_fic_field__field_os2web_base_field_contact(&$vars) {
   ));
 
   return $output;
+}
+
+
+/**
+ * Helper function to get right translation nid by given nid.
+ */
+function _site_fic_get_node_translation(&$node) {
+  if (!module_exists('translation') || empty($node)) {
+    return;
+  }
+
+  global $language;
+  $lang = $language->language;
+  $translations = translation_node_get_translations($node->tnid);
+  if (isset($translations[$lang])) {
+    $node = $translations[$lang];
+  }
 }

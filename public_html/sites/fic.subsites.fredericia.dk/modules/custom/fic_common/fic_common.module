@@ -51,8 +51,13 @@ function fic_common_block_info() {
 function fic_settings($form, &$form_state) {
   $form['book_node_reference'] = array(
     '#type' => 'textfield',
-    '#title' => t('The book page node id '),
+    '#title' => t('The book page node id'),
     '#default_value' => variable_get('book_node_reference'),
+  );
+  $form['opening_hours_link'] = array(
+    '#type' => 'textfield',
+    '#title' => t('The opening hours page node id'),
+    '#default_value' => variable_get('opening_hours_link'),
   );
   return system_settings_form($form);
 }
