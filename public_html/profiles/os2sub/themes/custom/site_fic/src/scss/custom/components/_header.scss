@@ -21,21 +21,6 @@
   background-image: url('../img/topbg.png');
   background-repeat: repeat-x;
 }
-.scroll-down {
-  &-link {
-    text-align: center;
-    display: block;
-    padding: 50px 0;
-
-    span {
-      display: inline-block;
-      height: 60px;
-      width: 60px;
-      background-image: url('../img/lookdown.png');
-      background-repeat: no-repeat;
-    }
-  }
-}
 
 form.search-form{
   height: 60px;
