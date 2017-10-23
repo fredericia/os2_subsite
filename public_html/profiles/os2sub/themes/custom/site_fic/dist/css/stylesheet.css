@@ -10360,21 +10360,6 @@ div.ctools-modal-content {
   .se-flere:hover {
     border-color: #fff; }
 
-@media (min-width: 992px) {
-  .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
-    font-size: 1.125em;
-    padding: 15px; }
-  .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2, .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2 {
-    font-size: 3.125em; }
-  .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
-    padding: 10px; }
-    .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
-      font-size: 1.75em; }
-    .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
-      padding: 10px 15px;
-      font-size: 1.5em;
-      margin-top: 65px; } }
-
 .view-mode-os2sub_spotbox_single.node .overlay-wrapper {
   position: relative; }
 
@@ -10604,6 +10589,21 @@ div.ctools-modal-content {
     .view.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_1 .more-link a:before {
       content: '+';
       font-size: 2em; }
+
+@media (min-width: 992px) {
+  .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
+    font-size: 1.125em;
+    padding: 15px; }
+  .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2, .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2 {
+    font-size: 3.125em; }
+  .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
+    padding: 10px; }
+    .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
+      font-size: 1.75em; }
+    .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
+      padding: 10px 15px;
+      font-size: 1.5em;
+      margin-top: 65px; } }
 
 .activities-list-background {
   background-color: #2a2f36;

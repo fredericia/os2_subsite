@@ -211,40 +211,8 @@ $image-border: 10px;
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-  .views-row-first{
-    .node--os2web_base_news--os2sub_teaser_mini {
-      .upper-part{
-        a{
-          font-size: 1.125em;
-          padding: 15px;
-        }
-      }
-      .bottom-part{
 
-        & header{
-          & h2{
-            font-size: 3.125em;
-          }
-        }
-      }
-      & .overlay{
-
-        .overlay-content {
-          padding: 10px;
-          .field-type-text-with-summary{
-            font-size: 1.75em;
-          }
-          a{
-            padding: 10px 15px;
-            font-size: 1.5em;
-            margin-top: 65px;
-          }
-        }
-      }
-    }
-  }
-
-
+  
 }
 // Desktop - only
 @include media-breakpoint-only(md) {
