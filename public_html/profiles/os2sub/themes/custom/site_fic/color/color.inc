@@ -9,7 +9,6 @@ $info['css'] = array('dist/css/stylesheet.css');
 $info['fields'] = array(
   'brand_primary' => t('Primary brand color'),
   'brand_secondary' => t('Secondary brand color'),
-  'brand_tertiary' => t('Tertiary brand color'),
 );
 
 // Color schemes for the site.
@@ -23,23 +22,21 @@ $info['schemes'] = array(
 
     // Scheme colors
     'colors' => array(
-      'brand_primary' => '#00406f',
-      'brand_secondary' => '#f24244',
-      'brand_tertiary' => '#89bd2a',
+      'brand_primary' => '#ff4200',
+      'brand_secondary' => '#01B5D5',
     ),
   ),
 
   // Define the default scheme.
-  'something' => array(
+  'madsbyparken' => array(
 
     // Scheme title.
-    'title' => t('Default colouring'),
+    'title' => t('Madsbyparken'),
 
     // Scheme colors
     'colors' => array(
-      'brand_primary' => '#00406f',
-      'brand_secondary' => '#f24244',
-      'brand_tertiary' => '#89bd2a',
+      'brand_primary' => '#ba00af',
+      'brand_secondary' => '#2cc500',
     ),
   ),
 );
