@@ -207,18 +207,18 @@ function os2web_base_image_default_styles() {
   $styles['os2sub_small_imagesize'] = array(
     'label' => 'Lille billede',
     'effects' => array(
-      3 => array(
+      11 => array(
         'name' => 'epsacrop_crop_reuse',
         'data' => array(
           'jcrop_reuse' => 'os2sub_normal_imagesize',
         ),
         'weight' => 1,
       ),
-      4 => array(
+      12 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => 285,
-          'height' => 194,
+          'width' => 570,
+          'height' => 320,
         ),
         'weight' => 2,
       ),
