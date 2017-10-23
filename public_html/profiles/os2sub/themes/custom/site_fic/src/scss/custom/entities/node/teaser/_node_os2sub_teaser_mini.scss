@@ -127,27 +127,40 @@ $image-border: 10px;
     }
   }
 }
-.se-flere{
+
+.big-plus-wrapper{
+
   position: relative;
-  .se-flere-content{
-    color: #fff;
-    font-family: $headings-font-family;
+  width: 100%;
+  padding-top: 100%;
+
+
+
+  a.big-plus-link{
     position: absolute;
     top: 0;
     width: 100%;
-    text-align: center;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 10px $gray-darker dashed;
+    color: #fff;
+    font-family: $headings-font-family;
     font-size: 1.75em;
-    p.se-flere-icon{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: uppercase;
+
+    span.link.fa.fa-plus{
       color: $brand-primary;
-      font-size: 3.75em;
-      font-family: $font-lato;
+      font-size: 2.75em;
       line-height: 80px;
-      font-weight: 700;
       margin-bottom: 0px;
+      color: $brand-primary;
+    }
+    &:hover{
+      border-color: #fff;
     }
   }
 }

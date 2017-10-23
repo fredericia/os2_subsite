@@ -5,7 +5,14 @@
  *
  * @ingroup views_templates
  */
+global $language;
 ?>
+<?php if ( language_default()->language == $language->language ): ?>
+  <?php $read_more_url = '/' . 'nyheder' ?>
+<?php else: ?>
+  <?php $read_more_url = '/' . $language->language . '/nyheder' ?>
+<?php endif; ?>
+
 <?php if ( !empty($title) ): ?>
   <h3><?php print $title; ?></h3>
 <?php endif; ?>
@@ -15,22 +22,14 @@
     print ' class="' . $classes_array[$id] . '"';
   }
   ?>>
-      <?php print $row; ?>
+    <?php print $row; ?>
   </div>
 <?php endforeach; ?>
 <div class="views-row views-row views-row-se-flere">
-
-  <a href='/nyheder' title="<?php print t('Read more articles'); ?>">
-    <article class="se-flere">
-      <div class="field field-name-field-os2web-base-field-lead-img field-type-image field-label-hidden">
-        <img class="img-responsive" src="/profiles/os2sub/themes/custom/site_fic/dist/img/1px_transparent.png" width="670" height="670">
-      </div>
-      <div class='se-flere-content'>
-        <span>
-          <p class='se-flere-icon'>+</p>
-          <p><?php print t('See more'); ?></p>
-        </span>
-      </div>
-    </article>
-  </a>
+  <div class="big-plus-wrapper">
+    <a href="<?php print $read_more_url; ?>" class="big-plus-link" title="<?php print t('Read more articles'); ?>">
+      <span class="link fa fa-plus" aria-hidden="true"></span>
+      <?php print t('See more'); ?>
+    </a>
+  </div>
 </div>
