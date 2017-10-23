@@ -28,11 +28,13 @@ div.ctools-modal-content {
   margin: 10% auto;
   background: transparent;
   border: 0;
-  width: 970px;
+  width: 80%;
 
   .modal-content {
     border-radius: 0;
     padding: 20px 50px 50px;
+    box-shadow: none;
+    border: 0;
   }
 
   .popups-close {
@@ -67,9 +69,6 @@ div.ctools-modal-content {
 // Mobile - only
 @include media-breakpoint-only(xs) {
 
-  // Header
-  .header {
-  }
 }
 
 // Tablet - and up
@@ -80,14 +79,15 @@ div.ctools-modal-content {
 // Tablet - only
 @include media-breakpoint-only(sm) {
 
-  // Header
-  .header {
-  }
 }
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
   //trick to mane menu clickable on the front page because of background slideshow
+
+  div.ctools-modal-content {
+    width: 970px;
+  }
 
 }
 
@@ -99,33 +99,21 @@ div.ctools-modal-content {
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
 
-  // Header
-  .header {
-  }
 }
 
 // Print
 @media print {
 
-  // Header
-  .header {
-  }
 }
 
 // Touch
 .touchevents {
 
-  // Header
-  .header {
-  }
 }
 
 // No touch
 .no-touchevents {
 
-  // Header
-  .header {
-  }
 }
 
 // --------------------------------------------------
