@@ -9192,6 +9192,7 @@ h6,
 /*rgb(255, 66, 0);*/
 /*rgb(1, 181, 213);*/
 /*rgb(42, 47, 54);*/
+/*rgb(233, 231, 232);*/
 /*rgb(25, 33, 36);*/
 /*rgb(255, 255, 255);*/
 @font-face {
@@ -9418,17 +9419,6 @@ h1.pane-title,
   background-image: url("../img/topbg.png");
   background-repeat: repeat-x; }
 
-.scroll-down-link {
-  text-align: center;
-  display: block;
-  padding: 50px 0; }
-  .scroll-down-link span {
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    background-image: url("../img/lookdown.png");
-    background-repeat: no-repeat; }
-
 form.search-form {
   height: 60px; }
   form.search-form input.form-control.form-text {
@@ -9519,7 +9509,7 @@ section.block-locale {
   height: 60px; }
   .topnav-wrapper.user-nav a {
     font-size: 0.75em !important;
-    color: #fff; }
+    color: #ffffff; }
     .topnav-wrapper.user-nav a:active, .topnav-wrapper.user-nav a:hover, .topnav-wrapper.user-nav a:focus {
       background: none !important;
       color: #01B5D5 !important; }
@@ -9569,10 +9559,14 @@ section.block-locale {
       margin-left: 20px; }
       .topnav-wrapper.user-nav .region.region-navigation .book-link a {
         padding: 5px 25px !important; }
+        .topnav-wrapper.user-nav .region.region-navigation .book-link a:hover, .topnav-wrapper.user-nav .region.region-navigation .book-link a:active, .topnav-wrapper.user-nav .region.region-navigation .book-link a:focus {
+          background-color: #01B5D5 !important;
+          color: #ffffff !important; }
 
 .navbar.container.navbar-default, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content,
 .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container {
-  margin-top: 0; }
+  margin-top: 0;
+  border: 0; }
   .navbar.container.navbar-default .headerwrapper-inner, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner,
   .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner {
     display: -webkit-box;
@@ -9595,11 +9589,14 @@ section.block-locale {
         padding: 20px 15px;
         font-family: "RBNo21a-Medium", "Lato", sans-serif;
         font-size: 1.4em; }
+        .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret,
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret {
+          display: none; }
       .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active,
       .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail,
       .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail {
         background-color: #01B5D5;
-        color: #fff; }
+        color: #ffffff; }
         .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus,
@@ -9608,12 +9605,12 @@ section.block-locale {
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus {
           background-color: #01B5D5;
-          color: #fff; }
+          color: #ffffff; }
       .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a,
       .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a,
       .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a {
         color: #333333;
-        background-color: #fff; }
+        background-color: #ffffff; }
         .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus,
@@ -9622,42 +9619,19 @@ section.block-locale {
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus {
           background-color: #01B5D5;
-          color: #fff; }
+          color: #ffffff; }
+      .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a,
+      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a {
+        background-color: #E9E7E8; }
+        .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active,
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover,
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus,
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus {
+          background-color: #01B5D5; }
   .navbar.container.navbar-default ul.dropdown-menu, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu,
   .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu {
     border: none;
     padding: 0; }
-    .navbar.container.navbar-default ul.dropdown-menu li a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a:active,
-    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li a:active, .navbar.container.navbar-default ul.dropdown-menu li a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a:hover,
-    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li a:hover, .navbar.container.navbar-default ul.dropdown-menu li a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a:focus,
-    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li a:focus {
-      color: #01B5D5; }
-    .navbar.container.navbar-default ul.dropdown-menu li a.active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active,
-    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li a.active {
-      color: #01B5D5; }
-      .navbar.container.navbar-default ul.dropdown-menu li a.active > :active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active > :active,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active > :active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li a.active > :active, .navbar.container.navbar-default ul.dropdown-menu li a.active > :hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active > :hover,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active > :hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li a.active > :hover, .navbar.container.navbar-default ul.dropdown-menu li a.active > :focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active > :focus,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li a.active > :focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li a.active > :focus {
-        background-color: #01B5D5; }
-    .navbar.container.navbar-default ul.dropdown-menu li:nth-child(even) a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a,
-    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(even) a {
-      background-color: #fff; }
-      .navbar.container.navbar-default ul.dropdown-menu li:nth-child(even) a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a:active,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(even) a:active, .navbar.container.navbar-default ul.dropdown-menu li:nth-child(even) a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a:hover,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(even) a:hover, .navbar.container.navbar-default ul.dropdown-menu li:nth-child(even) a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a:focus,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(even) a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(even) a:focus {
-        color: #01B5D5;
-        background-color: #fff; }
-    .navbar.container.navbar-default ul.dropdown-menu li:nth-child(odd) a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a,
-    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(odd) a {
-      background-color: lightgray; }
-      .navbar.container.navbar-default ul.dropdown-menu li:nth-child(odd) a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a:active,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(odd) a:active, .navbar.container.navbar-default ul.dropdown-menu li:nth-child(odd) a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a:hover,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(odd) a:hover, .navbar.container.navbar-default ul.dropdown-menu li:nth-child(odd) a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a:focus,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu li:nth-child(odd) a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu li:nth-child(odd) a:focus {
-        color: #01B5D5;
-        background-color: lightgray; }
 
 .social-icons-list {
   padding: 0;
@@ -10023,6 +9997,19 @@ div.ctools-modal-content {
       .term-fic-header .slide-bottom .contact.modal-link:hover, .term-fic-header .slide-bottom .contact.modal-link:focus {
         text-decoration: none; }
 
+.scroll-down-link {
+  text-align: center;
+  display: none;
+  padding: 50px 0; }
+  .page-taxonomy-term .scroll-down-link {
+    display: block; }
+  .scroll-down-link span {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-image: url("../img/lookdown.png");
+    background-repeat: no-repeat; }
+
 .page-taxonomy .view-mode-fic_header {
   display: table; }
 
@@ -10044,9 +10031,6 @@ div.ctools-modal-content {
 
 .node {
   font-size: 1.06em; }
-
-.page-node .scroll-down-wrapper {
-  display: none; }
 
 .page-node .pane-node-field-os2web-kulturnaut-slidesho {
   margin-bottom: 30px; }
