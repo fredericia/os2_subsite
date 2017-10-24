@@ -14,25 +14,46 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-paragrph-address{
+.paragraphs-item-paragraph-departments{
   padding-bottom: 40px;
   padding-top: 40px;
 
-  .field.field-name-field-knap-link{
-    a{
-      @extend .btn;
-      @extend .btn-blue;
-      margin-bottom: $grid-gutter-width;
+  .field.field-name-field-paragraph-text{
+    p{
+      margin-bottom: 0.875em;
     }
-  }
 
-  .field.field-name-field-paragraph-map{
-    margin-bottom: ($grid-gutter-width /2 );        
-    iframe{
-      max-width: 100% !important;
-      height: 200px !important;
-      border: 6px solid $color-black;
+    ul{
+      font-size: 0.875em;
+
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+
+
+      li {
+        position: relative;
+
+        p{
+          padding-left: 0.875em;
+margin-bottom: 0.3em;
+        }
+        
+      }
+
+      li:before {
+        font: normal normal normal 0.875em FontAwesome;
+        content: "";
+        padding-right: 5px;
+        color: #01B5D5;
+        position: absolute;
+        margin-top: 0.35em;
+      }
     }
+    p + ul{
+      margin-top: -0.575em;
+    }
+
   }
 }
 
@@ -61,19 +82,6 @@
   .paragraphs-item-paragrph-address{
     padding-bottom: 60px;
     padding-top: 60px;
-    .field.field-name-field-paragraph-map{
-
-      iframe{
-
-        height: 400px !important;
-
-      }
-    }
-    .field.field-name-field-knap-link{
-      a{
-        margin-bottom: 0;
-      }
-    }
   }
 
 }

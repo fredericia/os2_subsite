@@ -14,25 +14,46 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-paragrph-address{
-  padding-bottom: 40px;
-  padding-top: 40px;
 
-  .field.field-name-field-knap-link{
-    a{
+.paragraphs-item-webform{
+  fieldset{
+    border:none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+  input, select, textarea{
+    background-color: #e6e9ec !important;
+    border: none;
+    border-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 4px;
+  }
+  .form-actions{
+    text-align: right;
+    margin-top: 15px;
+    .webform-submit.form-submit{
       @extend .btn;
       @extend .btn-blue;
-      margin-bottom: $grid-gutter-width;
     }
   }
-
-  .field.field-name-field-paragraph-map{
-    margin-bottom: ($grid-gutter-width /2 );        
-    iframe{
-      max-width: 100% !important;
-      height: 200px !important;
-      border: 6px solid $color-black;
+  div{
+    margin: 0px 2px;
+    padding: 0;
+  }
+  .webform-component--row--kolonne-1{
+    div{
+    margin-right: 5px;
     }
+  }
+    .webform-component--row--kolonne-2{
+      div{
+    margin-left: 5px;
+      }
+  }
+  .field.field-name-field-paragraph-header{
+  text-align: left;
   }
 }
 
@@ -58,23 +79,6 @@
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
-  .paragraphs-item-paragrph-address{
-    padding-bottom: 60px;
-    padding-top: 60px;
-    .field.field-name-field-paragraph-map{
-
-      iframe{
-
-        height: 400px !important;
-
-      }
-    }
-    .field.field-name-field-knap-link{
-      a{
-        margin-bottom: 0;
-      }
-    }
-  }
 
 }
 

@@ -820,7 +820,7 @@ function os2web_base_field_default_field_bases() {
         'view_name' => '',
       ),
     ),
-    'translatable' => 1,
+    'translatable' => 0,
     'type' => 'node_reference',
   );
 

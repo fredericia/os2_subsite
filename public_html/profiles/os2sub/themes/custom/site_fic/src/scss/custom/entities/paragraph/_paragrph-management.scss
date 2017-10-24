@@ -14,25 +14,48 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-paragrph-address{
-  padding-bottom: 40px;
-  padding-top: 40px;
+.paragraphs-item-personale{
+  font-family: $headings-font-family;
 
-  .field.field-name-field-knap-link{
-    a{
-      @extend .btn;
-      @extend .btn-blue;
-      margin-bottom: $grid-gutter-width;
+  .field-items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .field-item{
+
+      text-align: center;
+      position: relative;
+
+      .field.field-name-field-personale-billede{
+        img{
+          border: 6px solid #e6e9ec !important;
+        }
+      }
+      .field.field-name-field-personale-jobtitel{
+        color: #999;
+        font-size: 1.375em;
+      }
+      .field.field-name-field-personale-telefon, 
+      .field.field-name-field-personale-telefon-disp{
+        font-size: 1.375em;
+        color: $brand-secondary;
+        a{
+          color: $brand-secondary;
+        }
+      }
+      .field.field-name-field-personale-email{
+        font-size: 1.375em;
+      }
+    } 
+    h2{
+      a{
+        color: $gray-darker;
+        font-size: 1.375em;
+      }
     }
   }
-
-  .field.field-name-field-paragraph-map{
-    margin-bottom: ($grid-gutter-width /2 );        
-    iframe{
-      max-width: 100% !important;
-      height: 200px !important;
-      border: 6px solid $color-black;
-    }
+  article{
+    margin-bottom: 60px;
   }
 }
 
@@ -57,24 +80,6 @@
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-
-  .paragraphs-item-paragrph-address{
-    padding-bottom: 60px;
-    padding-top: 60px;
-    .field.field-name-field-paragraph-map{
-
-      iframe{
-
-        height: 400px !important;
-
-      }
-    }
-    .field.field-name-field-knap-link{
-      a{
-        margin-bottom: 0;
-      }
-    }
-  }
 
 }
 
