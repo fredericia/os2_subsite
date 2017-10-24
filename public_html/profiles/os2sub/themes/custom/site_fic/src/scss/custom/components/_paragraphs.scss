@@ -155,9 +155,6 @@
     }
 
   }
-  .field.field-name-field-paragraph-header{
-    text-align: center;
-  }
 }
 
 .paragraphs-item-paragrph-address,
@@ -168,6 +165,7 @@
     text-align: center;
     color: $brand-primary;
     font-size: 3.125em;
+    text-transform: capitalize;
   }
 }
 .field.field-name-field-afsnit{
