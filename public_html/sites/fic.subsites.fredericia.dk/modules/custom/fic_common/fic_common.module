@@ -75,7 +75,7 @@ function fic_common_block_view($delta = '') {
   $term = fic_common_load_term_by_menutrail();
 
   $node = menu_get_object();
-  // If page is node.
+  // When page is node.
   if (!empty($node) && empty($term)) {
     if (!empty($node->field_sektion) && $node->type == 'os2web_base_contentpage') {
       $field_sektion = field_get_items('node', $node, 'field_sektion');
@@ -83,7 +83,9 @@ function fic_common_block_view($delta = '') {
     }
   }
 
-  if (empty($term) || $term->vocabulary_machine_name != 'os2web_base_tax_site_structure') {
+  // Check available terms and nodes for FIC header.
+  if ((empty($term) || $term->vocabulary_machine_name != 'os2web_base_tax_site_structure')
+    && (empty($node) || $node->type != 'os2web_base_contentpage')) {
     return;
   }
 
@@ -96,8 +98,10 @@ function fic_common_block_view($delta = '') {
 
   if (drupal_is_front_page()) {
     $fic_header_block[] = module_invoke('views', 'block_view', 'fic_header_banners-block_1');
-  } else {
+  } elseif (!empty($term)) {
     $fic_header_block[] = taxonomy_term_view($term, 'fic_header');
+  } else {
+    $fic_header_block[] = node_view($node, 'fic_header');
   }
 
   // Required includes for ctools to work for modal contact link.

@@ -225,6 +225,30 @@ function site_fic_menu_link(array $variables) {
 /**
  * Custom preprocess function for fic_header view mode.
  */
+function site_fic_preprocess_node__fic_header(&$vars) {
+  if (empty($vars['content']['field_baggrund'][0])) {
+    return;
+  }
+
+  $backstretch_data = &drupal_static('backstretch_data');
+  if (empty($backstretch_data)) {
+    $backstretch_data = array();
+  }
+
+  $image = $vars['content']['field_baggrund'][0];
+  hide($vars['content']['field_baggrund']);
+  $backstretch_data[] = array(
+    'id' => $vars['nid'],
+    'url' => image_style_url(
+      $image['#image_style'],
+      $image['#item']['uri']
+    ),
+  );
+}
+
+/**
+ * Custom preprocess function for fic_header view mode.
+ */
 function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   if (empty($vars['content']['field_os2web_base_field_image'][0])) {
     return;
@@ -238,7 +262,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   $image = $vars['content']['field_os2web_base_field_image'][0];
   hide($vars['content']['field_os2web_base_field_image']);
   $backstretch_data[] = array(
-    'tid' => $vars['tid'],
+    'id' => $vars['tid'],
     'url' => image_style_url(
       $image['#image_style'],
       $image['#item']['uri']
