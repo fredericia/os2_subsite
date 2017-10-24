@@ -110,15 +110,15 @@
   }
 }
 .panel-pane.views-container.full-width .views-container-inner {
-  @include container-fixed($gutter: $grid-gutter-width); 
+  @include container-fixed($gutter: $grid-gutter-width);
   @media (min-width: $screen-sm-min) {
     width: $container-sm;
   }
   @media (min-width: $screen-md-min) {
-      width: $container-md;
+    width: $container-md;
   }
   @media (min-width: $screen-lg-min) {
-      width: $container-lg;
+    width: $container-lg;
   }
   .view-content {
     @include make-row();
@@ -136,7 +136,50 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+.paragraphs-item-paragrph-address,
+.paragraphs-item-paragraph-departments{
 
+  .field.field-name-field-paragraph-text{
+    font-family: $headings-font-family;
+    font-size: 1.875em;
+    span{
+      display: block;
+      &.phone{
+        color: $brand-primary;
+      }
+      &.email{
+        a{
+          color: $brand-secondary;
+        }
+      }
+    }
+
+  }
+  .field.field-name-field-paragraph-header{
+    text-align: center;
+  }
+}
+
+.paragraphs-item-paragrph-address,
+.paragraphs-item-paragraph-departments,
+.paragraphs-item-personale,
+.paragraphs-item-webform{
+  .field.field-name-field-paragraph-header{
+    text-align: center;
+    color: $brand-primary;
+    font-size: 3.125em;
+  }
+}
+.field.field-name-field-afsnit{
+  & > .field-items{
+    & > .field-item{
+      border-bottom: 2px solid #ccc;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
