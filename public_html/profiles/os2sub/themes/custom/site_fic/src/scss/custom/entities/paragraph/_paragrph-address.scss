@@ -1,0 +1,134 @@
+// |--------------------------------------------------------------------------
+// | 
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | 
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+.paragraphs-item-paragrph-address{
+  padding-bottom: 40px;
+  padding-top: 40px;
+  font-family: $headings-font-family;
+
+  .field.field-name-field-paragraph-text{
+    font-size: 1.875em;
+    span.phone{
+      color: $brand-primary;
+    }
+    span.mail{
+      a{
+        color: $brand-secondary;
+      }
+    }
+  }
+
+  .field.field-name-field-knap-link{
+    a{
+      @extend .btn;
+      @extend .btn-blue;
+    }
+  }
+
+  .field.field-name-field-paragraph-map{
+    margin-bottom: ($grid-gutter-width /2 );        
+    iframe{
+      max-width: 100% !important;
+      height: 200px !important;
+      border: 6px solid $color-black;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+}
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+
+  .paragraphs-item-paragrph-address{
+    padding-bottom: 60px;
+    padding-top: 60px;
+    .field.field-name-field-paragraph-map{
+
+      iframe{
+
+        height: 400px !important;
+
+      }
+    }
+  }
+
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+  .social-icons {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+
+
+
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+

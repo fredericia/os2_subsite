@@ -453,6 +453,11 @@ function os2web_base_paragraphs_info() {
       'bundle' => 'header_text_media',
       'locked' => '1',
     ),
+    'paragrph_address' => array(
+      'name' => 'Afsnit address',
+      'bundle' => 'paragrph_address',
+      'locked' => '1',
+    ),
     'webform' => array(
       'name' => 'Afsnit med Webform',
       'bundle' => 'webform',

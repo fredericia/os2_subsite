@@ -1197,7 +1197,7 @@ function os2web_base_field_default_field_bases() {
       'allowed_values' => array(
         'bg-white' => 'White',
         'bg-dark' => 'Dark',
-        '|bg-darker' => 'Darker',
+        'bg-darker' => 'Darker',
         'bg-alternative' => 'Alternative',
       ),
       'allowed_values_function' => '',
@@ -1239,6 +1239,28 @@ function os2web_base_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_paragraph_header',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_paragraph_map'.
+  $field_bases['field_paragraph_map'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paragraph_map',
     'indexes' => array(
       'format' => array(
         0 => 'format',
