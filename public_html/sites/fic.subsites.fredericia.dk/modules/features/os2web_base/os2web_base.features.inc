@@ -453,6 +453,11 @@ function os2web_base_paragraphs_info() {
       'bundle' => 'header_text_media',
       'locked' => '1',
     ),
+    'paragraph_departments' => array(
+      'name' => 'Departments',
+      'bundle' => 'paragraph_departments',
+      'locked' => '1',
+    ),
     'paragrph_address' => array(
       'name' => 'Afsnit address',
       'bundle' => 'paragrph_address',
