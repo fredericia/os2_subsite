@@ -9950,7 +9950,8 @@ div.ctools-modal-content {
     width: 100%; }
   .term-fic-header .slide-content-wrapper {
     text-align: center; }
-    .term-fic-header .slide-content-wrapper .field-name-description-field {
+    .term-fic-header .slide-content-wrapper .field-name-description-field,
+    .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-summary {
       color: #ffffff;
       font-size: 4em;
       line-height: 1.15em;

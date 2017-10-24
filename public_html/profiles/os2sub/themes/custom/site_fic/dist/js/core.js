@@ -33,7 +33,7 @@ var header = (function ($) {
      });
    },
 
-   show : function($termId) {
+   show : function($id) {
      var $i = 0,
        $backstretch = $('.page-header-wrapper').data('backstretch');
 
@@ -43,7 +43,7 @@ var header = (function ($) {
      }
 
      for (var i = 0; i < Drupal.settings.ficBackstretch.length; i++) {
-         if ($termId == Drupal.settings.ficBackstretch[i].tid) {
+         if ($id == Drupal.settings.ficBackstretch[i].id) {
          $backstretch.show($i);
          break;
        }
