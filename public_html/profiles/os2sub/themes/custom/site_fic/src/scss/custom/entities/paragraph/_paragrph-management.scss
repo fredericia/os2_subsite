@@ -14,46 +14,48 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.paragraphs-item-personale{
+  font-family: $headings-font-family;
 
-.paragraphs-item-webform{
-  fieldset{
-    border:none;
-    box-shadow: none;
-    margin: 0;
-    padding: 0;
-  }
-  input, select, textarea{
-    background-color: #e6e9ec !important;
-    border: none;
-    border-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 4px;
-  }
-  .form-actions{
-    text-align: right;
-    margin-top: 15px;
-    .webform-submit.form-submit{
-      @extend .btn;
-      @extend .btn-blue;
-    }
-  }
-  div{
-    margin: 0px 2px;
-    padding: 0;
-  }
-  .webform-component--row--kolonne-1{
-    div{
-    margin-right: 5px;
-    }
-  }
-    .webform-component--row--kolonne-2{
-      div{
-    margin-left: 5px;
+  .field-items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .field-item{
+
+      text-align: center;
+      position: relative;
+
+      .field.field-name-field-personale-billede{
+        img{
+          border: 6px solid #e6e9ec !important;
+        }
       }
+      .field.field-name-field-personale-jobtitel{
+        color: #999;
+        font-size: 1.375em;
+      }
+      .field.field-name-field-personale-telefon, 
+      .field.field-name-field-personale-telefon-disp{
+        font-size: 1.375em;
+        color: $brand-secondary;
+        a{
+          color: $brand-secondary;
+        }
+      }
+      .field.field-name-field-personale-email{
+        font-size: 1.375em;
+      }
+    } 
+    h2{
+      a{
+        color: $gray-darker;
+        font-size: 1.375em;
+      }
+    }
   }
-  .field.field-name-field-paragraph-header{
-  text-align: left;
+  article{
+    margin-bottom: 60px;
   }
 }
 
@@ -78,7 +80,6 @@
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-
 
 }
 
