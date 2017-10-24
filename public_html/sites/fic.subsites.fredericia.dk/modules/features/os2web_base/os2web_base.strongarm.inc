@@ -403,6 +403,9 @@ function os2web_base_strongarm() {
       'os2sub_teaser_mini' => array(
         'custom_settings' => FALSE,
       ),
+      'fic_header' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'display' => array(
@@ -411,9 +414,17 @@ function os2web_base_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'fic_header' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
         ),
         'language' => array(
           'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'fic_header' => array(
             'weight' => '0',
             'visible' => FALSE,
           ),

@@ -520,6 +520,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'fic_header' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
       'related_block' => array(
         'label' => 'above',
         'settings' => array(),
@@ -580,6 +586,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'paragraphs_view',
         'weight' => 4,
       ),
+      'fic_header' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
       'spotbox' => array(
         'label' => 'above',
         'settings' => array(),
@@ -622,20 +634,18 @@ function os2web_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'backstretch',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'fic_header' => array(
+        'label' => 'hidden',
+        'module' => 'image',
         'settings' => array(
-          'center_x' => 1,
-          'center_y' => 1,
-          'delta' => '',
-          'duration' => 5000,
-          'element' => 'other',
-          'element_other' => '.content',
-          'fade' => 0,
-          'field' => '',
+          'image_link' => '',
           'image_style' => 'os2web_cover',
-          'random' => 0,
         ),
-        'type' => 'backstretch',
+        'type' => 'image',
         'weight' => 5,
       ),
       'spotbox' => array(
@@ -713,6 +723,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'spotbox' => array(
         'label' => 'above',
         'settings' => array(),
@@ -750,6 +766,12 @@ function os2web_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
+      'fic_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -805,6 +827,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 20,
       ),
+      'fic_header' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'related_block' => array(
         'label' => 'above',
         'settings' => array(),
@@ -848,6 +876,12 @@ function os2web_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
+      'fic_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -919,6 +953,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 14,
       ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'related_block' => array(
         'label' => 'above',
         'settings' => array(),
@@ -959,6 +999,12 @@ function os2web_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'fic_header' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -1047,6 +1093,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 19,
       ),
+      'fic_header' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'related_block' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1092,6 +1144,12 @@ function os2web_base_field_default_field_instances() {
 <br>Adskil flere opmærkninger med komma.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
+      'fic_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1143,6 +1201,12 @@ function os2web_base_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_table',
+        'weight' => 3,
+      ),
+      'fic_header' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'related_block' => array(
@@ -1221,6 +1285,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'related_block' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1266,6 +1336,12 @@ function os2web_base_field_default_field_instances() {
 <br>Adskil flere opmærkninger med komma.',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'fic_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1319,6 +1395,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'spotbox' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1356,6 +1438,12 @@ function os2web_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
+      'fic_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1409,6 +1497,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 17,
       ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'related_block' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1452,6 +1546,13 @@ function os2web_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'fic_header' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -1516,6 +1617,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'node_reference_node',
         'weight' => 2,
       ),
+      'fic_header' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'spotbox' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1557,6 +1664,12 @@ function os2web_base_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'fic_header' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
