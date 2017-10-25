@@ -28,13 +28,13 @@ function os2sub_pages_image_default_styles() {
 
   // Exported image style: os2sub_full_width.
   $styles['os2sub_full_width'] = array(
-    'label' => 'Fuld skærm',
+    'label' => 'Forside top',
     'effects' => array(
-      40 => array(
+      33 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => '',
-          'height' => 1920,
+          'width' => 1920,
+          'height' => 540,
           'anchor' => 'center-center',
           'disable_scale' => 0,
           'jcrop_settings' => array(
@@ -46,7 +46,7 @@ function os2sub_pages_image_default_styles() {
         ),
         'weight' => -10,
       ),
-      41 => array(
+      34 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1920,
