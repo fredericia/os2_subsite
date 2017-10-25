@@ -10,7 +10,30 @@ var header = (function ($) {
   /**
   * Instantiate
   */
-  pub.init = function () {};
+  pub.init = function () {
+        registerBootEventHandlers();
+        registerEventHandlers();
+  };
+
+  /**
+   * Register boot event handlers.
+   */
+  function registerBootEventHandlers() {}
+
+  /**
+   * Register event handlers.
+   */
+  function registerEventHandlers() {
+    // Add submenu open/close behavior.
+    $('.headerwrapper-inner .navbar-nav > li.expanded').hover(
+      function() { $(this).addClass('open').children('a').attr('aria-expanded', 'true');},
+      function() { $(this).removeClass('open').children('a').attr('aria-expanded', 'false');}
+    ).click(function(event) {
+      // Disable other event listeners.
+      event.stopPropagation();
+      // Restore default link behaviour.
+    });
+  }
 
   /**
   * Custom backstretch behavior.
