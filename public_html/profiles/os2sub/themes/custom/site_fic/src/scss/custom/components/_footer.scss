@@ -22,11 +22,15 @@ footer.footer {
   border-top: none;
   .footer-dark {
     background-color: $gray-darker;
-    padding-top: $grid-gutter-width;
-    padding-bottom: $grid-gutter-width;
-    color: #FFF;
+    color: $color-white;
+
+    .container {
+      padding-top: $grid-gutter-width;
+      padding-bottom: $grid-gutter-width;
+    }
+
     a { 
-      color: #fff;
+      color: $color-white;
       text-decoration: underline;
     }
     h2.block-title {
@@ -39,10 +43,7 @@ footer.footer {
     columns: 2;
     li{
       a{
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 5px 0;
         text-decoration: none;
         font-size: 1em;
         &:active, &:hover, &:focus{
@@ -53,26 +54,37 @@ footer.footer {
     }
   }
 }
+
 ul.social-icon-list {
-padding-left: 0px;
+  padding-left: 0;
   list-style: none;
+  margin: $grid-gutter-width 0;
+
   li {
     display: inline;
+
     a.social-icon {
       text-decoration: none;
-      color: #FFF;
-      font: normal normal normal 20px/1 FontAwesome;
-      font-size: 2em;
+      color: $color-black;
+      background-color: $color-white;
+      font: normal normal normal 2.4em/1 FontAwesome;
+      border-radius: 50% 50%;
+      padding: 10px 12px;
+      margin-right: 10px;
+      display: inline-block;
+
       &.social-icon-linkedin {
         &:before{
           content: "\f0e1";
         }
       }
+
       &.social-icon-instagram {
         &:before{
           content: "\f16d";
         }
       }
+
       &.social-icon-youtube {
         &:before{
           content: "\f167";
@@ -83,13 +95,13 @@ padding-left: 0px;
   }
 }
 
-.footer5 {
-  margin-top: 63px;
+.footer4 {
+  margin: $grid-gutter-width 0;
   line-height: 1.6em;
 }
+
 .block-os2web-logo {
-  float: right;
-  margin-top: 40px;
+  display: inline-block;
   min-width: 160px;
 }
 
@@ -117,7 +129,23 @@ padding-left: 0px;
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
+  // Footer
+  .footer {
+    .footer5 {
+      position: relative;
+      text-align: right;
 
+      ul.social-icon-list {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .block-os2web-logo {
+      margin-left: 200px;
+    }
+  }
 }
 
 // Tablet - only
@@ -149,6 +177,10 @@ padding-left: 0px;
 
   // Footer
   .footer {
+    .footer4 {
+      margin-top: 63px;
+      text-align: left;
+    }
   }
 }
 
