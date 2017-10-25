@@ -9942,11 +9942,14 @@ footer.footer {
   border-top: none; }
   footer.footer .footer-dark {
     background-color: #222222;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    color: #FFF; }
+    color: #ffffff; }
+    footer.footer .footer-dark .container, footer.footer .footer-dark .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item footer.footer .footer-dark .content, footer.footer .footer-dark
+    .front .paragraphs-container .entity-paragraphs-item .content,
+    .front .paragraphs-container .entity-paragraphs-item footer.footer .footer-dark .content, footer.footer .footer-dark .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width footer.footer .footer-dark .paragraphs-container {
+      padding-top: 30px;
+      padding-bottom: 30px; }
     footer.footer .footer-dark a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: underline; }
     footer.footer .footer-dark h2.block-title, footer.footer .footer-dark .block-title.heading-h2 {
       color: #01B5D5;
@@ -9957,10 +9960,7 @@ footer.footer {
        -moz-columns: 2;
             columns: 2; }
     footer.footer ul.menu.nav li a {
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      padding: 5px 0;
       text-decoration: none;
       font-size: 1em; }
       footer.footer ul.menu.nav li a:active, footer.footer ul.menu.nav li a:hover, footer.footer ul.menu.nav li a:focus {
@@ -9968,15 +9968,20 @@ footer.footer {
         color: #01B5D5; }
 
 ul.social-icon-list {
-  padding-left: 0px;
-  list-style: none; }
+  padding-left: 0;
+  list-style: none;
+  margin: 30px 0; }
   ul.social-icon-list li {
     display: inline; }
     ul.social-icon-list li a.social-icon {
       text-decoration: none;
-      color: #FFF;
-      font: normal normal normal 20px/1 FontAwesome;
-      font-size: 2em; }
+      color: #192124;
+      background-color: #ffffff;
+      font: normal normal normal 2.4em/1 FontAwesome;
+      border-radius: 50% 50%;
+      padding: 10px 12px;
+      margin-right: 10px;
+      display: inline-block; }
       ul.social-icon-list li a.social-icon.social-icon-linkedin:before {
         content: "\f0e1"; }
       ul.social-icon-list li a.social-icon.social-icon-instagram:before {
@@ -9984,14 +9989,29 @@ ul.social-icon-list {
       ul.social-icon-list li a.social-icon.social-icon-youtube:before {
         content: "\f167"; }
 
-.footer5 {
-  margin-top: 63px;
+.footer4 {
+  margin: 30px 0;
   line-height: 1.6em; }
 
 .block-os2web-logo {
-  float: right;
-  margin-top: 40px;
+  display: inline-block;
   min-width: 160px; }
+
+@media (min-width: 768px) {
+  .footer .footer5 {
+    position: relative;
+    text-align: right; }
+    .footer .footer5 ul.social-icon-list {
+      margin: 0;
+      position: absolute;
+      bottom: 0; }
+  .footer .block-os2web-logo {
+    margin-left: 200px; } }
+
+@media (min-width: 1230px) {
+  .footer .footer4 {
+    margin-top: 63px;
+    text-align: left; } }
 
 .btn, .topnav-wrapper.user-nav .region.region-navigation .book-link a, .banner .banner-wrapper a, body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, .view.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_1 .more-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-webform .form-actions .webform-submit.form-submit {
   border: 5px solid #192124;
