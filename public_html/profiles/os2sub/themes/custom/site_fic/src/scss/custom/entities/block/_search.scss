@@ -15,6 +15,13 @@ body.page-search.page-search-content{
         width: 60px !important;
         height: 60px !important;
       }
+
+      input{
+        color:  $gray-dark;
+        &::placeholder{
+          color: $gray-dark;
+        }
+      }
     }
   }
 

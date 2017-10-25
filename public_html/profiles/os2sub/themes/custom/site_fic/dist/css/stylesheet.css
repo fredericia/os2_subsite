@@ -10877,6 +10877,17 @@ body.page-search.page-search-content section.block.block-system.block-system > f
   width: 60px !important;
   height: 60px !important; }
 
+body.page-search.page-search-content section.block.block-system.block-system > form input {
+  color: #333333; }
+  body.page-search.page-search-content section.block.block-system.block-system > form input::-webkit-input-placeholder {
+    color: #333333; }
+  body.page-search.page-search-content section.block.block-system.block-system > form input::-moz-placeholder {
+    color: #333333; }
+  body.page-search.page-search-content section.block.block-system.block-system > form input:-ms-input-placeholder {
+    color: #333333; }
+  body.page-search.page-search-content section.block.block-system.block-system > form input::placeholder {
+    color: #333333; }
+
 body.page-search.page-search-content .field.field-name-field-os2web-kulturnaut-date {
   color: #a18f81; }
   body.page-search.page-search-content .field.field-name-field-os2web-kulturnaut-date span {
