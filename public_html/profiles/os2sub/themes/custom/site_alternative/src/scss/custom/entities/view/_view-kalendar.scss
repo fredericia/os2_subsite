@@ -4,6 +4,8 @@
       margin-top: 0;
       a {
         @include load-more-btn-full-width;
+        font-size: 2em;
+        line-height: 2em;
       }
     }
   }
