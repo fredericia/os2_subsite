@@ -153,7 +153,7 @@
         <div class="col-xs-6">
           <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
         </div>
-        <div class="col-xs-6">
+        <div class="col-xs-12 col-md-6">
           <?php
             $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
             print render($block['content']);
