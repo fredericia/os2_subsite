@@ -13,8 +13,16 @@
   }
 }
 .pane-os2web-kulturnaut-events-lists-pane-activities-list-2-3{
-& .overlay-content{
+  & .overlay-content{
     //padding: 32px !important;
+  }
+}
+
+.pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini{
+  .node.node-os2web-kulturnaut-knactivity.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
+    .field.field-name-field-os2web-kulturnaut-slidesho{
+      border: 6px solid #fff;
+    }
   }
 }
 // --------------------------------------------------
