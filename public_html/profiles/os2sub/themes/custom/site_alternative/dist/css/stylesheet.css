@@ -9799,6 +9799,11 @@ footer.footer a.block-image-links__link {
 .pane-node-field-os2web-kulturnaut-url {
   margin-top: 30px; }
 
+.node.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-kulturnaut-longdesc {
+  font-weight: bold; }
+  .node.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-kulturnaut-longdesc + .field.field-name-field-os2web-kulturnaut-descrip {
+    margin-top: 1em; }
+
 @media (max-width: 767px) {
   .node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-date {
     display: none; } }
