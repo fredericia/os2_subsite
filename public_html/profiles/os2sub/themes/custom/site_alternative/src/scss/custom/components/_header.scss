@@ -48,9 +48,9 @@ header.navbar {
           -o-transition: none;
           transition:  none;
 
-/*          -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
-          -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
-          transition:  border-color 300ms ease-in-out, background-color 300ms ease-in-out;*/
+          /*          -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+                    -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+                    transition:  border-color 300ms ease-in-out, background-color 300ms ease-in-out;*/
 
 
         }
@@ -66,14 +66,14 @@ header.navbar {
           margin-bottom:-1px;
         }
         &.active  {
-        font-weight: 900;
+          font-weight: 900;
         }
       }
       .dropdown-menu {
         background-color: white;
         margin-top: 9px;
         margin-left: 15px;
-        
+
         a {
           margin-bottom: 0;
           color: $color-primary; 
@@ -90,6 +90,10 @@ header.navbar {
         max-height: 29px;
       }
     }
+  }
+  .navbar-nav > .active > a{
+    background: none !important;
+    border-bottom: 6px solid $color-focus;
   }
 }
 
@@ -116,50 +120,50 @@ header.navbar {
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-.container.headerwrapper {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
-  background: transparent; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* Standard syntax (must be last) */
+  .container.headerwrapper {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(15, 40, 70, 0.9), transparent); /* Standard syntax (must be last) */
   }
 
   header.navbar {
-  .container {
-    .menu.nav li {
-      &.open {
+    .container {
+      .menu.nav li {
+        &.open {
+          > a {
+            border-bottom: 6px solid $color-focus;
+            font-weight: 900;
+          }
+        }
         > a {
-          border-bottom: 6px solid $color-focus;
-          font-weight: 900;
-        }
-      }
-      > a {
-        font-weight: lighter;
-          font-weight: normal;
-        &.active, &:hover  {
           font-weight: lighter;
+          font-weight: normal;
+          &.active, &:hover  {
+            font-weight: lighter;
             font-weight: normal;
-          border-bottom: 6px solid $color-focus;
-          //font-weight: 900;
+            border-bottom: 6px solid $color-focus;
+            //font-weight: 900;
 
-/*          -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
-          -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
-          transition:  border-color 300ms ease-in-out, background-color 300ms ease-in-out;*/
-        }
-        //The idea is to reserve space for bolded (or any :hover state styles) content in :after pseudo element and using title tag as a source for content.
-        &:after {
-          font-weight:900;
-        }
-        &.active  {
-        font-weight: 900;
+            /*          -webkit-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+                      -o-transition: border-color 300ms ease-in-out, background-color 300ms ease-in-out;
+                      transition:  border-color 300ms ease-in-out, background-color 300ms ease-in-out;*/
+          }
+          //The idea is to reserve space for bolded (or any :hover state styles) content in :after pseudo element and using title tag as a source for content.
+          &:after {
+            font-weight:900;
+          }
+          &.active  {
+            font-weight: 900;
+          }
         }
       }
     }
   }
-}
 
 
 
@@ -170,7 +174,7 @@ header.navbar {
     -webkit-background-size: cover;
     -o-background-size: cover;
     -moz-background-size:cover;
-    
+
     .container {
       .navbar-header {
         .logo {
