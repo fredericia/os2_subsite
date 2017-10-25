@@ -62,28 +62,6 @@ section.block-locale{
       border: none;
     }
   }
-  .dropdown-menu{
-    min-width: auto;
-    border: none;
-    border-radius: unset; 
-    top: auto;
-    ul.language-switcher-locale-url{
-      padding: 0px 10px;
-      li{
-        list-style: none;
-        a{
-          font-size: 0.75em;
-          text-transform: uppercase;
-          text-decoration: none;
-          background-color: #fff;
-          color: $gray-darker;
-          &:active, &:hover, &:focus{
-            color: $brand-primary;
-          }
-        }
-      }
-    }
-  }
 }
 
 // --------------------------------------------------

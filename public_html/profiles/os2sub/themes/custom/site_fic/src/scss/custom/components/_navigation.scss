@@ -13,7 +13,7 @@
 $navigation-wrapper-bg-color: $body-bg-secondary;
 
 $navigation-top-padding-top-bottom: 20px;
-$navigation-left-padding-right-bottom: 15px;
+$navigation-left-padding-right-bottom: 9px;
 
 $navigation-bottom-border-width: 4px;
 $navigation-bottom-border-color: $color-white;
@@ -41,13 +41,12 @@ $navigation-bottom-border-color: $color-white;
 }*/
 
 .topnav-wrapper.user-nav{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  display: block;
   height: 60px;
   a{
     font-size: 0.75em !important;
     color: $color-white;
+    padding: 0 5px;
     &:active, &:hover, &:focus{
       background: none !important;
       color: $brand-primary !important;
@@ -56,14 +55,13 @@ $navigation-bottom-border-color: $color-white;
   ul.menu.nav.navbar-nav.secondary{
     float: unset;
     a{
-      font-size: 12px !important;
-      font-weight: 800;
+      font-size: 0.9em !important;
+      font-weight: bold;
     }
   }
   .region.region-navigation{
-    display: flex;
     position: relative;
-    align-items: center;
+
     section.block.block-locale.contextual-links-region.block-locale{
 
 
@@ -71,6 +69,11 @@ $navigation-bottom-border-color: $color-white;
         text-transform: uppercase;
         border: none;
         background: none;
+        width: 44px;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 0.9em !important;
+        padding: 0;
         &:after{
           content:'';
           color: $brand-primary;
@@ -87,13 +90,16 @@ $navigation-bottom-border-color: $color-white;
         border-radius: unset; 
         top: auto;
         ul.language-switcher-locale-url{
-          padding: 0px 10px;
+          padding: 0 10px;
+          margin: 0;
           li{
             list-style: none;
             a{
               text-transform: uppercase;
               text-decoration: none;
               color: $gray-darker;
+              font-weight: bold;
+              font-size: 0.9em !important;
               &:active, &:hover, &:focus{
                 color: $brand-primary;
               }
@@ -209,8 +215,6 @@ $navigation-bottom-border-color: $color-white;
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
-  // Navigation
-  .navigation-wrapper {}
 }
 
 // Tablet - only
@@ -222,9 +226,16 @@ $navigation-bottom-border-color: $color-white;
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
+  .topnav-wrapper.user-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
-  // Navigation
-  .navigation-wrapper {}
+    .region.region-navigation {
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 // Desktop - only
@@ -236,9 +247,19 @@ $navigation-bottom-border-color: $color-white;
 
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
-
-  // Navigation
-  .navigation-wrapper {}
+  .navbar.container.navbar-default {
+    .headerwrapper-inner {
+      .navbar-collapse {
+        ul.navbar-nav {
+          > li {
+            a {
+              padding: $navigation-top-padding-top-bottom $navigation-left-padding-right-bottom + 6;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Print
