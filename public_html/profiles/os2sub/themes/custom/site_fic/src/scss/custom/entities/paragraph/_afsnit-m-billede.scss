@@ -18,18 +18,24 @@
   padding-bottom: 40px;
   padding-top: 40px;
   text-align: center;
-  input{
-    vertical-align: baseline;
-    text-transform: uppercase;
-    font-family: $headings-font-family;
-    font-size: 1.875em;
-    margin-left: ($grid-gutter-width / 2);
-    margin-right: ($grid-gutter-width / 2);
-    &.btn{
-      padding: 0px 10px;
-      font-size: 1.6em;
-      height: auto;
-      width: auto;
+  form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    input{
+      vertical-align: baseline;
+      text-transform: uppercase;
+      font-family: $headings-font-family;
+      font-size: 1.875em;
+      margin-left: ($grid-gutter-width / 2);
+      margin-right: ($grid-gutter-width / 2);
+      margin-bottom: ($grid-gutter-width / 2);
+      &.btn{
+        padding: 0px 10px;
+        font-size: 1.6em;
+        height: auto;
+        width: auto;
+      }
     }
   }
   .field.field-name-field-paragraph-header{
@@ -64,6 +70,9 @@
   .paragraphs-item-afsnit-m-billede{
     padding-bottom: 60px;
     padding-top: 60px;
+    form{
+      justify-content: center;
+    }
   }
 
 }

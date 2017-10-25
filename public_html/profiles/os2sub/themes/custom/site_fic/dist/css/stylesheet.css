@@ -10969,25 +10969,43 @@ div.ctools-modal-content {
   padding-bottom: 40px;
   padding-top: 40px;
   text-align: center; }
-  .paragraphs-item-afsnit-m-billede input {
-    vertical-align: baseline;
-    text-transform: uppercase;
-    font-family: "RBNo21a-Medium", "Lato", sans-serif;
-    font-size: 1.875em;
-    margin-left: 15px;
-    margin-right: 15px; }
-    .paragraphs-item-afsnit-m-billede input.btn, .paragraphs-item-afsnit-m-billede .paragraphs-item-webform .form-actions input.webform-submit.form-submit, .paragraphs-item-webform .form-actions .paragraphs-item-afsnit-m-billede input.webform-submit.form-submit {
-      padding: 0px 10px;
-      font-size: 1.6em;
-      height: auto;
-      width: auto; }
+  .paragraphs-item-afsnit-m-billede form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .paragraphs-item-afsnit-m-billede form input {
+      vertical-align: baseline;
+      text-transform: uppercase;
+      font-family: "RBNo21a-Medium", "Lato", sans-serif;
+      font-size: 1.875em;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px; }
+      .paragraphs-item-afsnit-m-billede form input.btn, .paragraphs-item-afsnit-m-billede form .paragraphs-item-webform .form-actions input.webform-submit.form-submit, .paragraphs-item-webform .form-actions .paragraphs-item-afsnit-m-billede form input.webform-submit.form-submit {
+        padding: 0px 10px;
+        font-size: 1.6em;
+        height: auto;
+        width: auto; }
   .paragraphs-item-afsnit-m-billede .field.field-name-field-paragraph-header {
     font-size: 3.125em; }
 
 @media (min-width: 768px) {
   .paragraphs-item-afsnit-m-billede {
     padding-bottom: 60px;
-    padding-top: 60px; } }
+    padding-top: 60px; }
+    .paragraphs-item-afsnit-m-billede form {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
 
 .paragraphs-item-paragrph-address {
   padding-bottom: 40px;
