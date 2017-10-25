@@ -187,9 +187,12 @@ span.caret{
   border: none !important;
 }
 
+.field.field-name-field-os2web-kult-venue-sbtext,
 .field.field-name-field-os2web-base-field-edi-tags,
 .field.field-name-field-os2web-kulturnaut-venue{
-  font-weight: bold;
+  a{
+    font-weight: bold;
+  }
 }
 // --------------------------------------------------
 // Responsive

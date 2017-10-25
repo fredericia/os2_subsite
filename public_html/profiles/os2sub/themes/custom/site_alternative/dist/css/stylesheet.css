@@ -9304,8 +9304,9 @@ span.caret {
   background-position: center center;
   border: none !important; }
 
-.field.field-name-field-os2web-base-field-edi-tags,
-.field.field-name-field-os2web-kulturnaut-venue {
+.field.field-name-field-os2web-kult-venue-sbtext a,
+.field.field-name-field-os2web-base-field-edi-tags a,
+.field.field-name-field-os2web-kulturnaut-venue a {
   font-weight: bold; }
 
 .content-inner {
