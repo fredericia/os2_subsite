@@ -10453,7 +10453,10 @@ footer.footer a.block-image-links__link {
 .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-title {
   font-family: "Roboto Slab", serif;
   font-size: 1.375em;
-  color: #205692; }
+  color: #205692;
+  line-height: 1em;
+  margin-top: 0.1875em;
+  margin-bottom: 0.1875em; }
 
 .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-field-os2web-kulturnaut-date, .view-os2web-kulturnaut-events-lists.view-display-id-attachment_activities_list_3_2 .views-field-view-node {
   font-size: 1em;
