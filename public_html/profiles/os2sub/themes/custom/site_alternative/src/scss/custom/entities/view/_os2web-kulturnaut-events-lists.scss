@@ -23,7 +23,7 @@ $header-size: 112px;
 .addthisevent .data 					{display:none!important;}
 
 /* The button */
-.addthisevent-drop 						{display:inline-block;position:relative;z-index:999998;color:#333;text-decoration:none;cursor:pointer;}
+.addthisevent-drop 						{display:inline-block;position:relative;z-index:999998;color:#333;text-decoration:none;cursor:pointer;width:100%;margin-top:10px;}
 .addthisevent-drop:hover 				{color:#555;text-decoration:underline;}
 
 /* The drop down */

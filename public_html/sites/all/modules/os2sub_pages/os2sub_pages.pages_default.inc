@@ -146,29 +146,6 @@ function os2sub_pages_default_page_manager_handlers() {
   $display->content['new-d96676a7-bad2-4314-88cb-5ca49834683c'] = $pane;
   $display->panels['content'][0] = 'new-d96676a7-bad2-4314-88cb-5ca49834683c';
   $pane = new stdClass();
-  $pane->pid = 'new-3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f';
-  $pane->panel = 'content';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'add_to_calendar-panel_pane_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'context' => array(
-      0 => 'argument_entity_id:node_1',
-    ),
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
-  $pane->uuid = '3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f';
-  $display->content['new-3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f'] = $pane;
-  $display->panels['content'][1] = 'new-3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f';
-  $pane = new stdClass();
   $pane->pid = 'new-d3e1a56f-6dbc-4a9e-a75e-f6768cd95e86';
   $pane->panel = 'footer';
   $pane->type = 'custom';
@@ -382,6 +359,29 @@ function os2sub_pages_default_page_manager_handlers() {
   $pane->uuid = '29ac8730-64ec-4ffc-b589-65d002685781';
   $display->content['new-29ac8730-64ec-4ffc-b589-65d002685781'] = $pane;
   $display->panels['sidebar-right'][3] = 'new-29ac8730-64ec-4ffc-b589-65d002685781';
+  $pane = new stdClass();
+  $pane->pid = 'new-3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f';
+  $pane->panel = 'sidebar-right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'add_to_calendar-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => array(
+      0 => 'argument_entity_id:node_1',
+    ),
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $pane->uuid = '3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f';
+  $display->content['new-3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f'] = $pane;
+  $display->panels['sidebar-right'][4] = 'new-3e11d5f0-6f15-4ad5-a19b-2f462e7dbf8f';
   $pane = new stdClass();
   $pane->pid = 'new-9be16197-abe9-4813-aaa9-8e754ba9de4e';
   $pane->panel = 'sidebar-right-xs-collapsible';
