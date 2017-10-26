@@ -9809,6 +9809,9 @@ footer.footer a.block-image-links__link {
   margin-top: 30px;
   margin-bottom: 30px; }
 
+body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .search-and-title {
+  padding-bottom: 10px; }
+
 @media (max-width: 767px) {
   .node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-date {
     display: none; } }
@@ -9816,6 +9819,10 @@ footer.footer a.block-image-links__link {
 @media (min-width: 768px) and (max-width: 991px) {
   .node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-date {
     display: none; } }
+
+@media (min-width: 992px) {
+  body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .search-and-title {
+    padding-bottom: 30px; } }
 
 .node-os2web-kulturnaut-knactivity,
 .contextual-links-region,
