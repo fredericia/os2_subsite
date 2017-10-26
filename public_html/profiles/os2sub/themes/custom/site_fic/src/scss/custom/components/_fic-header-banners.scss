@@ -287,7 +287,15 @@
 // Desktop - only
 @include media-breakpoint-only(md) {
 
-
+  .front .term-fic-header {
+    .views-slideshow-controls-bottom {
+      a {
+        width: 132px;
+        font-size: 1.2em;
+        padding: 0 12px 0 20px;
+      }
+    }
+  }
 }
 
 // Large desktop - and up
