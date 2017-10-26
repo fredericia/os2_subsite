@@ -9709,6 +9709,10 @@ section.block-locale {
           section.block-locale .dropdown-menu ul.language-switcher-locale-url li a:active, section.block-locale .dropdown-menu ul.language-switcher-locale-url li a:hover, section.block-locale .dropdown-menu ul.language-switcher-locale-url li a:focus {
             color: #01B5D5; }
 
+.logo-wrapper .logo img {
+  max-width: 100%;
+  height: auto; }
+
 /*
 .topnav-wrapper {
   a{
