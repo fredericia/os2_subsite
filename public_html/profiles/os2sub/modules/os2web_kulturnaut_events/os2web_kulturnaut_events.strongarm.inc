@@ -27,6 +27,13 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_long_span';
+  $strongarm->value = 'l, d F, Y - <\\s\\p\\a\\n \\c\\l\\a\\s\\s="\\t\\i\\m\\e">H:i</\\s\\p\\a\\n>';
+  $export['date_format_long_span'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_os2sub_full';
   $strongarm->value = 'l j. F \\k\\l. G:i';
   $export['date_format_os2sub_full'] = $strongarm;
