@@ -52,11 +52,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
-      'search_result' => array(
+      'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 10,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -101,17 +107,9 @@ function os2web_kulturnaut_events_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'short_teaser_mini_',
-          'fromto' => 'value',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => 0,
-        ),
-        'type' => 'date_default',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
@@ -175,6 +173,20 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'short_teaser_mini_',
+          'fromto' => 'value',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
       'search_result' => array(
         'label' => 'hidden',
         'module' => 'date',
@@ -187,7 +199,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'spotbox' => array(
         'label' => 'hidden',
@@ -242,7 +254,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_select',
+      'type' => 'date_popup',
       'weight' => 2,
     ),
   );
@@ -260,7 +272,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
@@ -298,14 +310,18 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'search_result' => array(
+      'search_index' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_trimmed',
-        'weight' => 4,
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -386,11 +402,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 26,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -469,11 +491,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 27,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -521,7 +549,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'hidden',
@@ -553,14 +581,18 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'search_result' => array(
+      'search_index' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_trimmed',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -641,11 +673,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 28,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -718,11 +756,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
-      'search_result' => array(
+      'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 9,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -802,11 +846,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 29,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -885,11 +935,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 25,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -968,11 +1024,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 30,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1051,11 +1113,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 24,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1147,13 +1215,24 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'single_image',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'module' => 'single_image',
+        'settings' => array(
+          'image_link' => 'content',
+          'image_style' => 'os2sub_small_imagesize',
+          'single_image_delta' => 1,
+        ),
+        'type' => 'single_image',
+        'weight' => 0,
+      ),
       'search_result' => array(
         'label' => 'hidden',
         'module' => 'single_image',
         'settings' => array(
-          'image_link' => '',
-          'image_style' => 'os2sub_teaser_image',
-          'single_image_delta' => '',
+          'image_link' => 'content',
+          'image_style' => 'os2sub_teaser_mini_image',
+          'single_image_delta' => 1,
         ),
         'type' => 'single_image',
         'weight' => 0,
@@ -1277,11 +1356,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
       'search_result' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 18,
       ),
       'spotbox' => array(
         'label' => 'hidden',
@@ -1359,11 +1444,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 16,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1439,11 +1530,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 22,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1522,11 +1619,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 23,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1599,11 +1702,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 3,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 17,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1681,11 +1790,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1766,11 +1881,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'search_result' => array(
+      'search_index' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 8,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1845,12 +1966,17 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'search_result' => array(
         'label' => 'hidden',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 12,
       ),
       'spotbox' => array(
         'label' => 'hidden',

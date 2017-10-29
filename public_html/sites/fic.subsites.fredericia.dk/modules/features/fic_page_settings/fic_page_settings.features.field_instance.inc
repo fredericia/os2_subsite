@@ -23,6 +23,24 @@ function fic_page_settings_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'spotbox' => array(
         'label' => 'above',
         'settings' => array(),
@@ -44,7 +62,7 @@ function fic_page_settings_field_default_field_instances() {
       'settings' => array(
         'content_taxonomy_opt_groups' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 1,
     ),
   );
@@ -96,7 +114,7 @@ function fic_page_settings_field_default_field_instances() {
       'settings' => array(
         'content_taxonomy_opt_groups' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 2,
     ),
   );
@@ -126,11 +144,18 @@ function fic_page_settings_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'search_result' => array(
+      'search_index' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 2,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -159,7 +184,7 @@ function fic_page_settings_field_default_field_instances() {
       'settings' => array(
         'content_taxonomy_opt_groups' => 0,
       ),
-      'type' => 'options_select',
+      'type' => 'options_buttons',
       'weight' => 1,
     ),
   );

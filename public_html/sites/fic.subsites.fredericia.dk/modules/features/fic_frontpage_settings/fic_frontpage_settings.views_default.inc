@@ -35,7 +35,10 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Antal elementer';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
@@ -520,13 +523,13 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Forbindelse: Felt: Afsnit (field_afsnit) */
+  /* Forbindelse: Felt: Paragraph (field_afsnit) */
   $handler->display->display_options['relationships']['field_afsnit_value']['id'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['relationships']['field_afsnit_value']['field'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_afsnit_value']['delta'] = '-1';
-  /* Felt: Felt: Afsnit */
+  /* Felt: Felt: Paragraph */
   $handler->display->display_options['fields']['field_afsnit']['id'] = 'field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['field'] = 'field_afsnit';

@@ -29,6 +29,7 @@ function fic_theme_settings_strongarm() {
     'logo_upload' => '',
     'default_favicon' => 0,
     'favicon_path' => 'public://ficlogou.png',
+    'favicon_upload' => '',
     'bootstrap__active_tab' => 'edit-general',
     'bootstrap_fluid_container' => 0,
     'bootstrap_button_size' => '',
@@ -150,9 +151,8 @@ function fic_theme_settings_strongarm() {
     'options__active_tab' => 'edit-layout',
     'scheme' => 'default',
     'palette' => array(
-      'brand_primary' => '#00406f',
-      'brand_secondary' => '#f24244',
-      'brand_tertiary' => '#89bd2a',
+      'brand_primary' => '#ba00af',
+      'brand_secondary' => '#2cc500',
     ),
     'theme' => 'site_fic',
     'info' => array(
@@ -162,23 +162,20 @@ function fic_theme_settings_strongarm() {
       'fields' => array(
         'brand_primary' => 'Primary brand color',
         'brand_secondary' => 'Secondary brand color',
-        'brand_tertiary' => 'Tertiary brand color',
       ),
       'schemes' => array(
         'default' => array(
           'title' => 'Default colouring',
           'colors' => array(
-            'brand_primary' => '#00406f',
-            'brand_secondary' => '#f24244',
-            'brand_tertiary' => '#89bd2a',
+            'brand_primary' => '#ff4200',
+            'brand_secondary' => '#01B5D5',
           ),
         ),
-        'something' => array(
-          'title' => 'Default colouring',
+        'madsbyparken' => array(
+          'title' => 'Madsbyparken',
           'colors' => array(
-            'brand_primary' => '#00406f',
-            'brand_secondary' => '#f24244',
-            'brand_tertiary' => '#89bd2a',
+            'brand_primary' => '#ba00af',
+            'brand_secondary' => '#2cc500',
           ),
         ),
         '' => array(

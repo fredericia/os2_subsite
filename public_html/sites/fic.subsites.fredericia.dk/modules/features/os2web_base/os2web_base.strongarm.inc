@@ -301,21 +301,21 @@ function os2web_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_medium';
-  $strongarm->value = 'D, m/d/Y - H:i';
+  $strongarm->value = 'D, d/m/Y - H:i';
   $export['date_format_medium'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_os2web_base_date_only';
-  $strongarm->value = 'Y-m-d';
+  $strongarm->value = 'd/m-Y';
   $export['date_format_os2web_base_date_only'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_short';
-  $strongarm->value = 'd.m.Y - H:i';
+  $strongarm->value = 'd/m/Y - H:i';
   $export['date_format_short'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -371,7 +371,7 @@ function os2web_base_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_index' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_result' => array(
         'custom_settings' => FALSE,
@@ -418,6 +418,14 @@ function os2web_base_strongarm() {
             'weight' => '7',
             'visible' => TRUE,
           ),
+          'search_result' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
+          'search_index' => array(
+            'weight' => '7',
+            'visible' => TRUE,
+          ),
         ),
         'language' => array(
           'default' => array(
@@ -425,6 +433,14 @@ function os2web_base_strongarm() {
             'visible' => FALSE,
           ),
           'fic_header' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'search_result' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'search_index' => array(
             'weight' => '0',
             'visible' => FALSE,
           ),
@@ -748,6 +764,18 @@ function os2web_base_strongarm() {
       ),
       'spotbox' => array(
         'custom_settings' => TRUE,
+      ),
+      'fic_header' => array(
+        'custom_settings' => FALSE,
+      ),
+      'os2sub_spotbox_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'os2sub_teaser_mini' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
+        'custom_settings' => FALSE,
       ),
     ),
     'extra_fields' => array(
@@ -1268,7 +1296,7 @@ function os2web_base_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_admin_theme';
-  $strongarm->value = '1';
+  $strongarm->value = 1;
   $export['node_admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();

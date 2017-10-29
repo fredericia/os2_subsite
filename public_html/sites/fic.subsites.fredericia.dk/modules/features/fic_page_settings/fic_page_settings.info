@@ -58,5 +58,6 @@ features[variable][] = menu_parent_personale
 features[variable][] = node_options_personale
 features[variable][] = node_preview_personale
 features[variable][] = node_submitted_personale
+features[variable][] = pathauto_node_personale_pattern
 features_exclude[dependencies][image] = image
 project path = sites/fic.subsites.fredericia.dk/modules/features

@@ -196,7 +196,7 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
       'slideshow_controls_position' => 'after',
       'slideshow_pause' => 0,
       'slideshow_start_on_hover' => 0,
-      'slideshow_pager' => '',
+      'slideshow_pager' => 'number',
       'slideshow_pager_position' => 'after',
       'slideshow_pager_image_style' => '',
       'slideshow_carousel_image_style' => '',
@@ -224,6 +224,34 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->uuid = '8b3fe2c5-ba5c-4ba8-a8f6-c2fbe80c291d';
   $display->content['new-8b3fe2c5-ba5c-4ba8-a8f6-c2fbe80c291d'] = $pane;
   $display->panels['light_section_0'][0] = 'new-8b3fe2c5-ba5c-4ba8-a8f6-c2fbe80c291d';
+  $pane = new stdClass();
+  $pane->pid = 'new-d5fcec00-1e49-49da-9728-c8d1ccd434ad';
+  $pane->panel = 'light_section_1';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'fic_kommende_arrangementer-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'more_link' => 0,
+    'arguments' => array(
+      'term_node_tid_depth' => '',
+      'nid' => '',
+    ),
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = 'd5fcec00-1e49-49da-9728-c8d1ccd434ad';
+  $display->content['new-d5fcec00-1e49-49da-9728-c8d1ccd434ad'] = $pane;
+  $display->panels['light_section_1'][0] = 'new-d5fcec00-1e49-49da-9728-c8d1ccd434ad';
   $pane = new stdClass();
   $pane->pid = 'new-902e99d1-fbe8-49d2-a0ca-d6b8331497e9';
   $pane->panel = 'sidebar';
@@ -516,6 +544,29 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->uuid = '491d03a7-8c76-46af-b6f3-c5dbb52bcfae';
   $display->content['new-491d03a7-8c76-46af-b6f3-c5dbb52bcfae'] = $pane;
   $display->panels['sidebar'][8] = 'new-491d03a7-8c76-46af-b6f3-c5dbb52bcfae';
+  $pane = new stdClass();
+  $pane->pid = 'new-6286e3b1-2010-4fa7-89bd-cd8c25dee868';
+  $pane->panel = 'sidebar';
+  $pane->type = 'block';
+  $pane->subtype = 'os2sub_social_share-os2sub_social_share';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 9;
+  $pane->locks = array();
+  $pane->uuid = '6286e3b1-2010-4fa7-89bd-cd8c25dee868';
+  $display->content['new-6286e3b1-2010-4fa7-89bd-cd8c25dee868'] = $pane;
+  $display->panels['sidebar'][9] = 'new-6286e3b1-2010-4fa7-89bd-cd8c25dee868';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -85,7 +85,7 @@ function os2web_kulturnaut_events_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_index' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'search_result' => array(
         'custom_settings' => TRUE,
@@ -176,9 +176,30 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_os2web_kulturnaut_knactivity_da_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_os2web_kulturnaut_knactivity_da_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_os2web_kulturnaut_knactivity_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_os2web_kulturnaut_knactivity_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_os2web_kulturnaut_knactivity_pattern';
   $strongarm->value = '';
   $export['pathauto_node_os2web_kulturnaut_knactivity_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_os2web_kulturnaut_knactivity_und_pattern';
+  $strongarm->value = 'fic-kommende-arrangementer/[node:title]';
+  $export['pathauto_node_os2web_kulturnaut_knactivity_und_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */

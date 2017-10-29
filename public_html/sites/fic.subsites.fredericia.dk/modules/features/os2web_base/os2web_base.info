@@ -53,6 +53,7 @@ dependencies[] = subsites_urls
 dependencies[] = svendborg_hide_sidebar
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = title
 dependencies[] = workbench
 features[ctools][] = field_group:field_group:1
 features[ctools][] = page_manager:pages_default:1
