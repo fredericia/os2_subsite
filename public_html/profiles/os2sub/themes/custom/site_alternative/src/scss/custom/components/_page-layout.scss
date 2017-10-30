@@ -159,9 +159,9 @@ h3.pane-title {
 }
 
 h2.pane-title--lifted {
-  top: -65px;
+  top: -15px;
   position: relative;
-  margin-bottom: -50px;
+  margin-bottom: -20px;
   padding-bottom: 15px;
 }
 
@@ -240,6 +240,14 @@ span.caret{
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
+  
+  h2.pane-title--lifted {
+  top: -65px;
+  position: relative;
+  margin-bottom: -50px;
+  padding-bottom: 15px;
+}
+
 
   // Page layout
   .content-inner {
