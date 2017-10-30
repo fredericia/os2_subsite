@@ -44,6 +44,12 @@ function os2sub_pages_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Kalender
+%node:title',
+    'panels_breadcrumbs_paths' => '/kalender
+<none>',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'os2web-3col-2-6-4-stacked';
@@ -950,6 +956,12 @@ function os2sub_pages_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'Steder
+%term:name',
+    'panels_breadcrumbs_paths' => '/steder
+<none>',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'os2web-3col-2-6-4-stacked';
