@@ -9281,9 +9281,9 @@ h3.pane-title, .pane-title.heading-h3, .kontaktblok .pane-title.kontaktblok-head
   margin-bottom: 0px; }
 
 h2.pane-title--lifted, .pane-title--lifted.heading-h2 {
-  top: -65px;
+  top: -15px;
   position: relative;
-  margin-bottom: -50px;
+  margin-bottom: -20px;
   padding-bottom: 15px; }
 
 .simple-gmap-static-map {
@@ -9326,6 +9326,11 @@ h1.pane-title,
     padding-bottom: 40px; } }
 
 @media (min-width: 992px) {
+  h2.pane-title--lifted, .pane-title--lifted.heading-h2 {
+    top: -65px;
+    position: relative;
+    margin-bottom: -50px;
+    padding-bottom: 15px; }
   .content-inner {
     padding-top: 40px;
     padding-bottom: 60px; }
@@ -10087,6 +10092,18 @@ body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .collapse .field
   color: #ff0060;
   font-weight: bold;
   text-decoration: underline; }
+
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_mini.node--os2web_kulturnaut_knactivity--os2sub_spotbox_mini:hover .upper-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_mini.node--os2web_kulturnaut_knactivity--os2sub_spotbox_mini:hover .bottom-part, .node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_mini.node--os2web_kulturnaut_knactivity--os2sub_spotbox_mini:active .upper-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_mini.node--os2web_kulturnaut_knactivity--os2sub_spotbox_mini:active .bottom-part, .node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_mini.node--os2web_kulturnaut_knactivity--os2sub_spotbox_mini:focus .upper-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_mini.node--os2web_kulturnaut_knactivity--os2sub_spotbox_mini:focus .bottom-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_single.node--os2web_kulturnaut_knactivity--os2sub_spotbox_single:hover .upper-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_single.node--os2web_kulturnaut_knactivity--os2sub_spotbox_single:hover .bottom-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_single.node--os2web_kulturnaut_knactivity--os2sub_spotbox_single:active .upper-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_single.node--os2web_kulturnaut_knactivity--os2sub_spotbox_single:active .bottom-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_single.node--os2web_kulturnaut_knactivity--os2sub_spotbox_single:focus .upper-part,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_single.node--os2web_kulturnaut_knactivity--os2sub_spotbox_single:focus .bottom-part {
+  visibility: hidden; }
 
 @media (min-width: 992px) {
   .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date span.date-display-single, .view-display-id-pane_activities_list_4

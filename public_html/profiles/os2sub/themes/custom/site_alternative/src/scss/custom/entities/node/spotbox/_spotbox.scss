@@ -241,8 +241,15 @@
   }
 
 }
-
-
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_mini.node--os2web_kulturnaut_knactivity--os2sub_spotbox_mini,
+.node.node-os2web-kulturnaut-knactivity.view-mode-os2sub_spotbox_single.node--os2web_kulturnaut_knactivity--os2sub_spotbox_single{
+  &:hover, &:active, &:focus {
+    & .upper-part,
+    & .bottom-part{
+      visibility: hidden;
+    }
+  }
+}
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
