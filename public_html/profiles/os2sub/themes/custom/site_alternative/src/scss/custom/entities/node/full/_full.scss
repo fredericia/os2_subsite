@@ -54,16 +54,25 @@
 }
 
 .bottom-separator{
-    border-top: 1px solid #eee;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  border-top: 1px solid #eee;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+body.not-front.page-node.node-type-os2web-kulturnaut-knactivity{
+  .search-and-title{
+    padding-bottom: 10px;
   }
-  
-  body.not-front.page-node.node-type-os2web-kulturnaut-knactivity{
-    .search-and-title{
-      padding-bottom: 10px;
+
+  .node.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full,
+  .collapse{
+    .field{
+      font-size: 16.5px;
     }
   }
+}
+
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -109,7 +118,7 @@
 @include media-breakpoint-up(md) {
 
   // Banner
-body.not-front.page-node.node-type-os2web-kulturnaut-knactivity{
+  body.not-front.page-node.node-type-os2web-kulturnaut-knactivity{
     .search-and-title{
       padding-bottom: 30px;
     }
