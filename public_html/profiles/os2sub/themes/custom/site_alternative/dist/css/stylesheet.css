@@ -10221,7 +10221,7 @@ body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .collapse .field
       display: inline-block;
       border-radius: 10px; }
   .view-mode-os2sub_spotbox_list.vocabulary-os2web-kulturnaut-venue .bottom-part {
-    word-break: break-all;
+    word-break: break-word;
     padding: 15px;
     position: absolute;
     width: 100%;
