@@ -10202,7 +10202,8 @@ body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .collapse .field
   .view-mode-os2sub_spotbox_list.vocabulary-os2web-kulturnaut-venue header h2, .view-mode-os2sub_spotbox_list.vocabulary-os2web-kulturnaut-venue header .heading-h2 {
     font-size: 1.56em;
     color: white;
-    margin-bottom: 3px; }
+    margin-bottom: 3px;
+    font-family: "Roboto Slab", serif; }
   .view-mode-os2sub_spotbox_list.vocabulary-os2web-kulturnaut-venue .field-name-field-os2web-kult-venue-address {
     font-size: 0.94em;
     color: #00beff;
