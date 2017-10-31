@@ -23,7 +23,7 @@ $info['schemes'] = array(
     // Scheme colors
     'colors' => array(
       'brand_primary' => '#ff4200',
-      'brand_secondary' => '#01B5D5',
+      'brand_secondary' => '#01b5d5',
     ),
   ),
 
