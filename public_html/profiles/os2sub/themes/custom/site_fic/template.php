@@ -39,7 +39,12 @@ function site_fic_preprocess_html(&$variables) {
 
   // Load jQuery UI.
   drupal_add_library('system', 'ui');
+}
 
+/**
+ * Override or insert variables into the page template for HTML output.
+ */
+function site_fic_process_html(&$variables) {
   // Hook into color.module.
   if (module_exists('color')) {
     _color_html_alter($variables);
