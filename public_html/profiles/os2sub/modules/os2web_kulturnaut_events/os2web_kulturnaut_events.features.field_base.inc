@@ -392,7 +392,7 @@ function os2web_kulturnaut_events_field_default_field_bases() {
     'locked' => 0,
     'module' => 'image',
     'settings' => array(
-      'default_image' => 0,
+      'default_image' => 1275,
       'uri_scheme' => 'public',
     ),
     'translatable' => 0,
