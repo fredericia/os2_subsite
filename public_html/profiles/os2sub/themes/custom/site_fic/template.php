@@ -340,7 +340,6 @@ function site_fic_field__field_os2web_base_field_contact(&$vars) {
   return $output;
 }
 
-
 /**
  * Helper function to get right translation nid by given nid.
  */
@@ -354,5 +353,20 @@ function _site_fic_get_node_translation(&$node) {
   $translations = translation_node_get_translations($node->tnid);
   if (isset($translations[$lang])) {
     $node = $translations[$lang];
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function site_fic_preprocess_views_view(&$vars) {
+  switch($vars['name']) {
+    case 'fic_header_banners':
+      switch($vars['display_id']) {
+        case 'block_1':
+          $vars['classes_array'][] = 'num-slides-' . count($vars['view']->result);
+          break;
+      }
+      break;
   }
 }

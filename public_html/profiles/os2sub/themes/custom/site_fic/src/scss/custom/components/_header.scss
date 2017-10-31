@@ -17,6 +17,9 @@
 .region-header {
   @include make-row;
 }
+.page-header-wrapper {
+  z-index: 1 !important;
+}
 .not-front .page-header-wrapper {
   background-image: url('../img/topbg.png');
   background-repeat: repeat-x;

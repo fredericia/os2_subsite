@@ -220,10 +220,18 @@
   }
 }
 
-.front .term-fic-header {
-  .views-slideshow-controls-bottom {
-    a {
-      width: 170px;
+.term-fic-header .num-slides {
+  &-7 .views-slideshow-controls-bottom a {
+    width: 170px;
+  }
+
+  &-6 {
+    .views-slideshow-controls-bottom a {
+      width: 209px;
+    }
+
+    .views-slideshow-pager-field-item {
+      margin-right: 29px;
     }
   }
 }
