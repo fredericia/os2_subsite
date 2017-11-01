@@ -19,66 +19,20 @@ function os2sub_feed_data_parsing_node_presave($node) {
       if (strlen($time_string_safe) == 2) {
         $time_string_safe = $time_string_safe . ':00';
       }
-      // Now $time_string_safe is correct time
       //dsm('Need parsing ' . $time_string_safe );
-    } else {
+    }else {
       // nothing to do. Date is correct
     }
 //dsm('2017-09-06 ' . $time_string_safe . ':00');
-//Combine date field with time 
+//Combine date field with time
     if (true == strtotime('2017-09-06 ' . $time_string_safe . ':00')) {
       //adding time from feed to date
       $node->field_os2web_kulturnaut_date['und'][0]['value'] = mb_substr($node->field_os2web_kulturnaut_date['und'][0]['value'], 0, -8);
       $node->field_os2web_kulturnaut_date['und'][0]['value'] = $node->field_os2web_kulturnaut_date['und'][0]['value'] . $time_string_safe . ':00';
       $node->field_os2web_kulturnaut_date['und'][0]['value2'] = $node->field_os2web_kulturnaut_date['und'][0]['value'];
       //dsm($node->field_os2web_kulturnaut_date['und'][0]);
-    } else {
+    }else {
       //Parsint time fail, nothing to add
     }
-
-// Adding image from feed to node
-
-    $feed_img_url = $node->field_os2web_kulturnaut_url['und'][0]['value'];
-    $feed_img_filename = pathinfo($feed_img_url)['filename'];
-    $feed_img_basename = pathinfo($feed_img_url)['basename'];
-    $feed_img_extension = pathinfo($feed_img_url)['extension'];
-
-    $node->field_os2web_kulturnaut_url['und'][0]['value'] = '';
-    
-//dsm($path_info = pathinfo($feed_img_url));
-    $local_filename = $feed_img_filename;
-
-    //If filename already exists, adding counter to the filename
-    $counter = NULL;
-    while (TRUE == is_file(drupal_realpath('public://' . $local_filename . $counter . '.' . $feed_img_extension))) {
-      $counter = $counter + 1;
-    }
-    
-    $local_filename = $local_filename . $counter;
-    $local_basename = $local_filename . '.' . $feed_img_extension;
-
-    //If we can copy file, then adding file to the node
-    if ( @copy($feed_img_url, drupal_realpath('public://' . $local_basename))) {
-      $uri = 'public://' . $local_basename;
-//Creating new file object
-      $file = new stdClass();
-      $file->uri = $uri;
-      $file->display = 1;
-      $file->titel[LANGUAGE_NONE][]['value'] = mb_substr($file_meta['title'], 0, 254);
-      $file->filename = drupal_basename($file->uri);
-      $file->filemime = file_get_mimetype($file->uri);
-      $file->uid = 1;
-      $file->status = FILE_STATUS_PERMANENT;
-      $file = file_save($file);
-//Adding file to the node
-      $node->field_os2web_kulturnaut_slidesho['und'][] = (array) $file;
-
-      //dsm('save: ' . drupal_realpath('public://' . $local_basename) . ' url: ' . $feed_img_url);
-    } else {
-      //Image not saved
-      //dsm('no: '  . drupal_realpath('public://' . $local_basename) .  ' url: ' . $feed_img_url);
-    }
-  }else{
-    //node is not 'os2web_kulturnaut_knactivity' or node added not from feed
   }
 }
