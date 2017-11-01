@@ -634,7 +634,7 @@ function os2sub_pages_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'image',
+    'formatter' => 'slideshow',
     'delta_limit' => '0',
     'delta_offset' => '0',
     'delta_reversed' => 0,
