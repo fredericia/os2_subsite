@@ -10586,6 +10586,8 @@ div.ctools-modal-content {
       font-family: "RBNo21a-Medium", sans-serif; }
     .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content a,
     .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
+      background-color: #ff4200;
+      border: 0;
       padding: 5px 10px;
       font-size: 0.875em;
       height: auto;
