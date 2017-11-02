@@ -178,6 +178,32 @@
     }
   }
 }
+
+.node{
+  .field.field-name-field-afsnit.field-type-paragraphs{
+    & > .field-items {
+      margin-top: 60px;
+    }
+  }
+  .field.field-name-field-afsnit.field-type-paragraphs{
+    .field-item{
+
+      .paragraphs-item-afsnit-m-billede,
+      .paragraphs-item-afsnit-m-link,
+      .paragraphs-item-header-text-media,
+      .paragraphs-item-header-text-links-image{
+        .container{
+          width: inherit;
+        }
+      }
+      .paragraphs-item-header-text-media{
+        iframe{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

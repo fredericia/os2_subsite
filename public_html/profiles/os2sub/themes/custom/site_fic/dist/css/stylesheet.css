@@ -9637,6 +9637,44 @@ h1.pane-title,
   .field.field-name-field-afsnit > .field-items > .field-item:last-child {
     border-bottom: none; }
 
+.node .field.field-name-field-afsnit.field-type-paragraphs > .field-items {
+  margin-top: 60px; }
+
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede
+.front .paragraphs-container .entity-paragraphs-item .content,
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .paragraphs-container,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .container,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link
+.front .paragraphs-container .entity-paragraphs-item .content,
+.front .paragraphs-container .entity-paragraphs-item
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .paragraphs-container,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .container,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media
+.front .paragraphs-container .entity-paragraphs-item .content,
+.front .paragraphs-container .entity-paragraphs-item
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .paragraphs-container,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .container,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image
+.front .paragraphs-container .entity-paragraphs-item .content,
+.front .paragraphs-container .entity-paragraphs-item
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content,
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .paragraphs-container {
+  width: inherit; }
+
+.node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media iframe {
+  width: 100%; }
+
 .region-header {
   margin-left: -15px;
   margin-right: -15px; }
@@ -11120,6 +11158,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
         max-width: 100% !important;
         height: 300px !important;
         border: 10px solid #192124; }
+      .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video .content, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video .content, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video .content {
+        padding-left: 0;
+        padding-right: 0; }
 
 .page-node .paragraphs-item-header-text-media {
   padding-bottom: 30px;
@@ -11228,7 +11269,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   -webkit-box-shadow: none;
           box-shadow: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: transparent; }
 
 .paragraphs-item-webform input, .paragraphs-item-webform select, .paragraphs-item-webform textarea {
   background-color: #e6e9ec !important;

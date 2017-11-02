@@ -23,7 +23,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-.field.field-name-field-paragraph-header{
+    .field.field-name-field-paragraph-header{
       color: $color-red;
     }
 
@@ -35,7 +35,12 @@
           height: 300px !important;
           border: 10px solid $color-black;
         }
+        .content{
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
+
     }
   }
 }

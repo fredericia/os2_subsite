@@ -27,7 +27,7 @@
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
-    <div class="paragraph-container">
+    <div class="container">
       <div class="row">
 
         <!--        Check if sides switch is in off position-->
