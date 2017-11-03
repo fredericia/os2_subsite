@@ -1,0 +1,6 @@
+name = Subsites Files
+description = Fix filenames to allow adding of instagram files with non-utf8 symbols in filename
+core = 7.x
+version = 7.x-1.0
+project = subsites_files
+project path = profiles/os2sub/modules
