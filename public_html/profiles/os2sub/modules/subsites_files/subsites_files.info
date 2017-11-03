@@ -1,5 +1,5 @@
 name = Subsites Files
-description = Fix filenames to allow adding of instagram files with non-utf8 symbols in filename
+description = This module remove emoji from the file names. Need when add instagram files
 core = 7.x
 version = 7.x-1.0
 project = subsites_files
