@@ -417,7 +417,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 26,
+      'weight' => 35,
     ),
   );
 
@@ -499,7 +499,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 25,
+      'weight' => 34,
     ),
   );
 
@@ -828,7 +828,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 27,
     ),
   );
 
@@ -910,7 +910,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => 28,
     ),
   );
 
@@ -992,7 +992,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => 29,
     ),
   );
 
@@ -1074,7 +1074,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 23,
+      'weight' => 32,
     ),
   );
 
@@ -1304,7 +1304,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 22,
+      'weight' => 31,
     ),
   );
 
@@ -1372,7 +1372,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_os2web_kulturnaut_source',
     'label' => 'Data source',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1463,7 +1463,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 21,
+      'weight' => 30,
     ),
   );
 
@@ -1702,7 +1702,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 24,
+      'weight' => 33,
     ),
   );
 

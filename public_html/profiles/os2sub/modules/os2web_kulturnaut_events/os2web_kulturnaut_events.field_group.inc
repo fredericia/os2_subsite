@@ -31,8 +31,9 @@ function os2web_kulturnaut_events_field_group_info() {
       5 => 'field_os2web_kulturnaut_sname',
       6 => 'field_os2web_kulturnaut_szip',
       7 => 'field_os2web_kulturnaut_time',
-      8 => 'field_os2web_kulturnaut_genre',
-      9 => 'metatags',
+      8 => 'field_os2web_kulturnaut_source',
+      9 => 'field_os2web_kulturnaut_genre',
+      10 => 'metatags',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

@@ -122,7 +122,7 @@ function os2web_kulturnaut_events_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '17',
+          'weight' => '26',
         ),
         'title' => array(
           'weight' => '0',
