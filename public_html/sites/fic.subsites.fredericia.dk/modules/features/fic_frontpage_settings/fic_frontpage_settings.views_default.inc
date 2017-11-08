@@ -523,13 +523,13 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Forbindelse: Felt: Paragraph (field_afsnit) */
+  /* Forbindelse: Felt: Afsnit (field_afsnit) */
   $handler->display->display_options['relationships']['field_afsnit_value']['id'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['relationships']['field_afsnit_value']['field'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_afsnit_value']['delta'] = '-1';
-  /* Felt: Felt: Paragraph */
+  /* Felt: Felt: Afsnit */
   $handler->display->display_options['fields']['field_afsnit']['id'] = 'field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['field'] = 'field_afsnit';

@@ -52,7 +52,7 @@ function fic_blocks_settings_default_fe_block_settings() {
         'weight' => -27,
       ),
     ),
-    'title' => '',
+    'title' => 12,
     'visibility' => 0,
   );
 
