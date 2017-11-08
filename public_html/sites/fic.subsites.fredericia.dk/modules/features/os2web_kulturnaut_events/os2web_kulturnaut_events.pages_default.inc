@@ -197,7 +197,7 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
       'slideshow_controls_pause' => 0,
       'slideshow_controls_position' => 'after',
       'slideshow_pause' => 0,
-      'slideshow_start_on_hover' => 0,
+      'slideshow_start_on_hover' => 1,
       'slideshow_pager' => 'number',
       'slideshow_pager_position' => 'after',
       'slideshow_pager_image_style' => '',

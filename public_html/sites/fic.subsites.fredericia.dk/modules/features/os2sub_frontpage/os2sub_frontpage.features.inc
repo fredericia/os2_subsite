@@ -36,7 +36,7 @@ function os2sub_frontpage_image_default_styles() {
   $styles['os2web_cover'] = array(
     'label' => 'os2web cover',
     'effects' => array(
-      5 => array(
+      11 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1920,
@@ -44,6 +44,17 @@ function os2sub_frontpage_image_default_styles() {
           'upscale' => 0,
         ),
         'weight' => 1,
+      ),
+      15 => array(
+        'name' => 'canvasactions_file2canvas',
+        'data' => array(
+          'xpos' => 0,
+          'ypos' => 0,
+          'alpha' => 100,
+          'scale' => '',
+          'path' => 'profiles/os2sub/themes/custom/site_fic/dist/img/fic-header-overlay.png',
+        ),
+        'weight' => 3,
       ),
     ),
   );
