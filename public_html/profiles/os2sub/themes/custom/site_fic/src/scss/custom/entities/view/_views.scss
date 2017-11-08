@@ -14,7 +14,13 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.view.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_1{  
+.pane-fic-kommende-arrangementer-panel-pane-1 {  
+  .pane-title a {
+    color: #333;
+  }
+  .view-content {
+    @extend .row;
+  }
   .more-link{
     float: right;
     a{
