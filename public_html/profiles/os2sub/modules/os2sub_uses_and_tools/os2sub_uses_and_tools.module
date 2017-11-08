@@ -5,6 +5,24 @@
  */
 
 include_once 'os2sub_uses_and_tools.features.inc';
+
+/**
+ * Implements hook_filter_info().
+ */
+function os2sub_uses_and_tools_filter_info() {
+  $filters = array();
+
+  $filters['kill_nbsp'] = array(
+    'title' => t('Kill Non-Breaking Spaces'),
+    'description' => t('Remove non-breaking spaces.'),
+    'process callback' => '_os2sub_uses_and_tools_filters_kill_nbsp',
+    'tips callback' => '_os2sub_uses_and_tools_filters_kill_nbsp_tips',
+  );
+
+  return $filters;
+}
+
+
 /**
  * Filter callbacks.
  */
