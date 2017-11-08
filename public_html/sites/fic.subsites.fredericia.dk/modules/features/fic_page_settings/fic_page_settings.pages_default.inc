@@ -58,7 +58,7 @@ function fic_page_settings_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%term:tid';
   $display->uuid = '63f29836-972d-4b91-8d1a-77aef61b78ed';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'term_view__panel_context_38e272dc-4fcb-429b-bfab-07fa049970f0';
@@ -69,7 +69,7 @@ function fic_page_settings_default_page_manager_handlers() {
   $pane->panel = 'dark_section_1';
   $pane->type = 'views_panes';
   $pane->subtype = 'fic_kommende_arrangementer-panel_pane_1';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'more_link' => 1,
@@ -95,6 +95,38 @@ function fic_page_settings_default_page_manager_handlers() {
   $pane->uuid = 'cb60b7b3-93f2-4014-9c55-9b41070764d7';
   $display->content['new-cb60b7b3-93f2-4014-9c55-9b41070764d7'] = $pane;
   $display->panels['dark_section_1'][0] = 'new-cb60b7b3-93f2-4014-9c55-9b41070764d7';
+  $pane = new stdClass();
+  $pane->pid = 'new-1278f53b-8c90-4d1e-a462-28e3b365af9e';
+  $pane->panel = 'dark_section_1';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'fic_kommende_arrangementer-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'more_link' => 1,
+    'path' => 'fic-kommende-arrangementer',
+    'arguments' => array(
+      'term_node_tid_depth' => '%term:tid',
+    ),
+    'override_title' => 1,
+    'override_title_text' => 'Kommende arrangementer',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'bg-white',
+    'template_suggestion' => 'fw-views',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '1278f53b-8c90-4d1e-a462-28e3b365af9e';
+  $display->content['new-1278f53b-8c90-4d1e-a462-28e3b365af9e'] = $pane;
+  $display->panels['dark_section_1'][1] = 'new-1278f53b-8c90-4d1e-a462-28e3b365af9e';
   $pane = new stdClass();
   $pane->pid = 'new-afb36340-1601-4177-b9d1-b29593f74330';
   $pane->panel = 'dark_section_2';

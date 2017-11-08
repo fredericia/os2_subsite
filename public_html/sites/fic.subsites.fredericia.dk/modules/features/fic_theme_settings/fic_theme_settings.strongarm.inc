@@ -30,7 +30,7 @@ function fic_theme_settings_strongarm() {
     'default_favicon' => 0,
     'favicon_path' => 'public://ficlogou.png',
     'favicon_upload' => '',
-    'bootstrap__active_tab' => 'edit-general',
+    'bootstrap__active_tab' => 'edit-components',
     'bootstrap_fluid_container' => 0,
     'bootstrap_button_size' => '',
     'bootstrap_button_colorize' => 1,
@@ -151,8 +151,8 @@ function fic_theme_settings_strongarm() {
     'options__active_tab' => 'edit-layout',
     'scheme' => 'default',
     'palette' => array(
-      'brand_primary' => '#ba00af',
-      'brand_secondary' => '#2cc500',
+      'brand_primary' => '#ff4200',
+      'brand_secondary' => '#01b5d5',
     ),
     'theme' => 'site_fic',
     'info' => array(
@@ -168,7 +168,7 @@ function fic_theme_settings_strongarm() {
           'title' => 'Default colouring',
           'colors' => array(
             'brand_primary' => '#ff4200',
-            'brand_secondary' => '#01B5D5',
+            'brand_secondary' => '#01b5d5',
           ),
         ),
         'madsbyparken' => array(

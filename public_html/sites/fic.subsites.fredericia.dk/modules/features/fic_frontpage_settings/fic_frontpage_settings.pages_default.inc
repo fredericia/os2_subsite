@@ -70,19 +70,17 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-cb60b7b3-93f2-4014-9c55-9b41070764d7';
+  $pane->pid = 'new-b0bc286e-7250-4e11-a4c6-4df3e51a824a';
   $pane->panel = 'dark_section_1';
   $pane->type = 'views_panes';
-  $pane->subtype = 'fic_kommende_arrangementer-panel_pane_1';
+  $pane->subtype = 'fic_kommende_arrangementer-panel_pane_3';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
     'more_link' => 1,
-    'arguments' => array(
-      'term_node_tid_depth' => '',
-    ),
+    'path' => 'fic-kommende-arrangementer',
     'override_title' => 1,
-    'override_title_text' => '',
+    'override_title_text' => 'Kommende arrangementer',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
@@ -97,9 +95,9 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'cb60b7b3-93f2-4014-9c55-9b41070764d7';
-  $display->content['new-cb60b7b3-93f2-4014-9c55-9b41070764d7'] = $pane;
-  $display->panels['dark_section_1'][0] = 'new-cb60b7b3-93f2-4014-9c55-9b41070764d7';
+  $pane->uuid = 'b0bc286e-7250-4e11-a4c6-4df3e51a824a';
+  $display->content['new-b0bc286e-7250-4e11-a4c6-4df3e51a824a'] = $pane;
+  $display->panels['dark_section_1'][0] = 'new-b0bc286e-7250-4e11-a4c6-4df3e51a824a';
   $pane = new stdClass();
   $pane->pid = 'new-82c4f8e4-44b7-411f-ad2c-0725bbb82bcd';
   $pane->panel = 'light_section_1';

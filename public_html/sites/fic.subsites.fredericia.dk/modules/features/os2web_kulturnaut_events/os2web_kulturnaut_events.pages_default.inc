@@ -143,16 +143,18 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->panel = 'dark_section_1';
   $pane->type = 'views_panes';
   $pane->subtype = 'fic_kommende_arrangementer-panel_pane_1';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'more_link' => 1,
     'arguments' => array(
       'term_node_tid_depth' => '%taxonomy_term_sektion:tid',
+      'nid' => '%node:nid',
     ),
     'override_title' => 1,
     'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'path' => 'fic-kommende-arrangementer',
   );
   $pane->cache = array();
   $pane->style = array(
@@ -232,14 +234,15 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'more_link' => 0,
+    'more_link' => 1,
     'arguments' => array(
-      'term_node_tid_depth' => '',
-      'nid' => '',
+      'term_node_tid_depth' => '%taxonomy_term_sektion:tid',
+      'nid' => '%node:nid',
     ),
-    'override_title' => 0,
-    'override_title_text' => '',
+    'override_title' => 1,
+    'override_title_text' => 'Kommende arrangementer',
     'override_title_heading' => 'h2',
+    'path' => 'fic-kommende-arrangementer',
   );
   $pane->cache = array();
   $pane->style = array(
