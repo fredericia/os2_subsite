@@ -9831,7 +9831,6 @@ section.block-locale {
             .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu ul.language-switcher-locale-url li a:active, .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu ul.language-switcher-locale-url li a:hover, .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu ul.language-switcher-locale-url li a:focus {
               color: #01B5D5; }
     .topnav-wrapper.user-nav .region.region-navigation .book-link {
-      margin-right: 60px;
       margin-left: 20px; }
       .topnav-wrapper.user-nav .region.region-navigation .book-link a {
         padding: 5px 25px !important; }
@@ -9858,7 +9857,6 @@ section.block-locale {
             justify-content: flex-end; }
     .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
     .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse {
-      margin-right: 60px;
       padding: 0;
       width: 100%; }
       .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav,
@@ -9912,6 +9910,12 @@ section.block-locale {
   .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu {
     border: none;
     padding: 0; }
+
+@media (min-width: 992px) {
+  .headerwrapper-inner .navbar-collapse {
+    margin-right: 60px; }
+  .topnav-wrapper.user-nav .region.region-navigation .book-link {
+    margin-right: 60px; } }
 
 .social-icons-list {
   padding: 0;

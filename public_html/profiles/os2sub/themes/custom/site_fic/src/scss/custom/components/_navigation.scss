@@ -103,9 +103,7 @@ $navigation-bottom-border-color: $color-white;
       }
     }
     .book-link{
-      margin-right: 60px;
       margin-left: 20px;
-
       a {
         @extend .btn;
         @extend .btn-blue;
@@ -128,7 +126,6 @@ $navigation-bottom-border-color: $color-white;
     flex-wrap: wrap;
     justify-content: flex-end;
     .navbar-collapse{
-      margin-right: 60px;
       padding: 0;
       width: 100%;
       ul.navbar-nav{
@@ -226,7 +223,19 @@ $navigation-bottom-border-color: $color-white;
 @include media-breakpoint-up(md) {
 
   // Navigation
-  .navigation-wrapper {}
+
+  .headerwrapper-inner {
+    .navbar-collapse {
+      margin-right: 60px;
+    }
+  }
+  .topnav-wrapper.user-nav{
+    .region.region-navigation{
+      .book-link{
+        margin-right: 60px;
+      }
+    }
+  }
 }
 
 // Desktop - only
