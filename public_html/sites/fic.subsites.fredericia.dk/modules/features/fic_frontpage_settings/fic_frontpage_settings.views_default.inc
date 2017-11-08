@@ -107,6 +107,40 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'os2web_base_news' => 'os2web_base_news',
+  );
+  /* Filter criterion: Content: Promoted to front page */
+  $handler->display->display_options['filters']['promote']['id'] = 'promote';
+  $handler->display->display_options['filters']['promote']['table'] = 'node';
+  $handler->display->display_options['filters']['promote']['field'] = 'promote';
+  $handler->display->display_options['filters']['promote']['value'] = 'All';
+  $handler->display->display_options['filters']['promote']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['promote']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['promote']['expose']['label'] = 'Promoted to front page';
+  $handler->display->display_options['filters']['promote']['expose']['operator'] = 'promote_op';
+  $handler->display->display_options['filters']['promote']['expose']['identifier'] = 'promote';
+  $handler->display->display_options['filters']['promote']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    6 => 0,
+    4 => 0,
+    5 => 0,
+    3 => 0,
+  );
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -114,7 +148,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['allow']['more_link'] = 0;
   $handler->display->display_options['allow']['path_override'] = 0;
   $handler->display->display_options['allow']['title_override'] = 'title_override';
-  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 0;
   $handler->display->display_options['argument_input'] = array(
     'field_sektion_tid' => array(
@@ -151,8 +185,10 @@ function fic_frontpage_settings_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Page'),
+    t('more'),
     t('Content pane'),
     t('Alle'),
+    t('Promoted to front page'),
     t('View panes'),
   );
   $export['fic_artikler'] = $view;
@@ -293,6 +329,7 @@ function fic_frontpage_settings_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Block'),
+    t('more'),
   );
   $export['fic_header_banners'] = $view;
 
@@ -648,6 +685,7 @@ function fic_frontpage_settings_views_default_views() {
     t('sidste »'),
     t('Alle'),
     t('Page'),
+    t('more'),
     t('Content pane'),
     t('Kommende arrangementer'),
     t('Se flere'),
@@ -717,7 +755,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
-  /* Filterkriterie: Ordforråd: Internt navn */
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
@@ -761,6 +799,7 @@ function fic_frontpage_settings_views_default_views() {
     t('Paragraph item from field_afsnit'),
     t('Alle'),
     t('Block'),
+    t('more'),
     t('Content pane'),
     t('View panes'),
   );
@@ -812,7 +851,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-  /* Filterkriterie: Fil: Type */
+  /* Filter criterion: File: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'file_managed';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -832,6 +871,7 @@ function fic_frontpage_settings_views_default_views() {
     t('Stigende'),
     t('Faldende'),
     t('Block'),
+    t('more'),
   );
   $export['instagram_billeder'] = $view;
 

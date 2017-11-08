@@ -108,10 +108,14 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $pane->configuration = array(
     'arguments' => array(
       'field_sektion_tid' => '',
+      'nid' => '',
     ),
     'override_title' => 1,
     'override_title_text' => '',
     'override_title_heading' => 'h2',
+    'exposed' => array(
+      'promote' => '1',
+    ),
   );
   $pane->cache = array();
   $pane->style = array(
