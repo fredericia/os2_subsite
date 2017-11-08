@@ -1133,6 +1133,25 @@ function os2web_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_default';
+  $strongarm->value = (object) array(
+    'language' => 'da',
+    'name' => 'Dk',
+    'native' => 'Dk',
+    'direction' => '0',
+    'enabled' => 1,
+    'plurals' => '2',
+    'formula' => '($n!=1)',
+    'domain' => '',
+    'prefix' => '',
+    'weight' => '0',
+    'javascript' => '3HYmiHswLkT0pJLKNsxYfuXxeIMcpDdEmNM33jW-hKw',
+  );
+  $export['language_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_negotiation_language_url';
   $strongarm->value = array(
     'locale-url' => array(
@@ -1151,6 +1170,13 @@ function os2web_base_strongarm() {
     ),
   );
   $export['language_negotiation_language_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'locale_language_negotiation_url_part';
+  $strongarm->value = '0';
+  $export['locale_language_negotiation_url_part'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
