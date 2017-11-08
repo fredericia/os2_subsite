@@ -26,6 +26,7 @@ dependencies[] = media_internet
 dependencies[] = menu
 dependencies[] = metatag
 dependencies[] = node
+dependencies[] = os2sub_uses_and_tools
 dependencies[] = os2web_news_page
 dependencies[] = panels
 dependencies[] = panels_mini

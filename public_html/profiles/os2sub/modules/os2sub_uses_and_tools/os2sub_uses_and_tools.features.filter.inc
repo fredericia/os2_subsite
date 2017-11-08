@@ -25,6 +25,11 @@ function os2sub_uses_and_tools_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
+      'kill_nbsp' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'filter_autop' => array(
         'weight' => 1,
         'status' => 1,
