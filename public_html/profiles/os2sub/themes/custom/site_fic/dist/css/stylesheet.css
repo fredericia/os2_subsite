@@ -9911,7 +9911,7 @@ section.block-locale {
     border: none;
     padding: 0; }
 
-@media (min-width: 992px) {
+@media (min-width: 1230px) {
   .headerwrapper-inner .navbar-collapse {
     margin-right: 60px; }
   .topnav-wrapper.user-nav .region.region-navigation .book-link {

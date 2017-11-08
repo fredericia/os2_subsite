@@ -224,6 +224,17 @@ $navigation-bottom-border-color: $color-white;
 
   // Navigation
 
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Navigation
+  .navigation-wrapper {}
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
   .headerwrapper-inner {
     .navbar-collapse {
       margin-right: 60px;
@@ -236,18 +247,6 @@ $navigation-bottom-border-color: $color-white;
       }
     }
   }
-}
-
-// Desktop - only
-@include media-breakpoint-only(md) {
-
-  // Navigation
-  .navigation-wrapper {}
-}
-
-// Large desktop - and up
-@include media-breakpoint-up(lg) {
-
   // Navigation
   .navigation-wrapper {}
 }
