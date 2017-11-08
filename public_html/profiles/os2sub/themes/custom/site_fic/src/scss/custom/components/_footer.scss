@@ -98,6 +98,7 @@ ul.social-icon-list {
 .footer4 {
   margin: $grid-gutter-width 0;
   line-height: 1.6em;
+  margin-top: 0;
 }
 
 .block-os2web-logo {
@@ -180,6 +181,9 @@ ul.social-icon-list {
     .footer4 {
       margin-top: 63px;
       text-align: left;
+      h2{
+        margin-top: -43px;
+      }
     }
   }
 }

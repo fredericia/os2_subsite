@@ -10166,7 +10166,8 @@ ul.social-icon-list {
 
 .footer4 {
   margin: 30px 0;
-  line-height: 1.6em; }
+  line-height: 1.6em;
+  margin-top: 0; }
 
 .block-os2web-logo {
   display: inline-block;
@@ -10186,7 +10187,9 @@ ul.social-icon-list {
 @media (min-width: 1230px) {
   .footer .footer4 {
     margin-top: 63px;
-    text-align: left; } }
+    text-align: left; }
+    .footer .footer4 h2, .footer .footer4 .heading-h2 {
+      margin-top: -43px; } }
 
 .btn, .topnav-wrapper.user-nav .region.region-navigation .book-link a, .banner .banner-wrapper a, body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, .pane-fic-kommende-arrangementer-panel-pane-1 .more-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .field.field-name-field-knap-link a, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-webform .form-actions .webform-submit.form-submit {
   border: 5px solid #192124;
