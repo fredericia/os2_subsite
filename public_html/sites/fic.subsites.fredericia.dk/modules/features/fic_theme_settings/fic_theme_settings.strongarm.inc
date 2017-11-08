@@ -47,7 +47,7 @@ function fic_theme_settings_strongarm() {
     'bootstrap_table_striped' => 1,
     'bootstrap_table_responsive' => 1,
     'bootstrap_breadcrumb' => '1',
-    'bootstrap_breadcrumb_home' => 0,
+    'bootstrap_breadcrumb_home' => 1,
     'bootstrap_breadcrumb_title' => 1,
     'bootstrap_navbar_position' => '',
     'bootstrap_navbar_inverse' => 0,
