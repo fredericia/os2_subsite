@@ -264,15 +264,37 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     $backstretch_data = array();
   }
 
-  $image = $vars['content']['field_os2web_base_field_image'][0];
-  hide($vars['content']['field_os2web_base_field_image']);
-  $backstretch_data[] = array(
-    'id' => $vars['tid'],
-    'url' => image_style_url(
-      $image['#image_style'],
-      $image['#item']['uri']
-    ),
+  $backtretch_field_name = 'field_os2web_base_field_image';
+  $node = menu_get_object();
+  // When page is node use another field for backstretch image.
+  if (!empty($node) && empty($term)) {
+    if (!empty($node->field_sektion) && $node->type == 'os2web_base_contentpage') {
+      $backtretch_field_name = 'field_os2web_base_field_banner';
+    }
+  }
+  if (!empty($vars['content'][$backtretch_field_name])) {
+    $image = $vars['content'][$backtretch_field_name][0];
+    $backstretch_data[] = array(
+      'id' => $vars['tid'],
+      'url' => image_style_url(
+        $image['#image_style'],
+        $image['#item']['uri']
+      ),
+    );
+  } else {
+    hide($vars['content']['description_field']);
+  }
+
+  // Hide field from render b/c they should be rendered by backstretch.
+  $to_hide = array(
+    'field_os2web_base_field_image',
+    'field_os2web_base_field_banner',
   );
+  foreach ($to_hide as $field_name) {
+    if (!empty($vars['content'][$field_name])) {
+      hide($vars['content'][$field_name]);
+    }
+  }
 
   $field_contact_value = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_contact');
   if (!empty($field_contact_value)) {
