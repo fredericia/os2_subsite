@@ -360,6 +360,35 @@ function site_fic_field__field_os2web_base_field_contact(&$vars) {
 }
 
 /**
+ * Custom fields preprocess function.
+ */
+function site_fic_preprocess_field(&$vars) {
+  if ($vars['element']['#field_name'] != 'field_os2web_base_field_related') {
+    return;
+  }
+
+  // Add counter class to have ability customize styles.
+  $vars['classes_array'][] = 'num-items-' . count($vars['items']);
+  foreach ($vars['items'] as &$item) {
+    $item['#title'] = '<span>' . $item['#title'] . '</span>';
+    $item['#options']['html'] = TRUE;
+  }
+}
+
+/**
+ * Override Views Slideshow: pager field item field.
+ */
+function site_fic_preprocess_views_slideshow_pager_field_field(&$vars) {
+  $view = $vars['view'];
+  if ($view->name != 'fic_header_banners') {
+    return;
+  }
+  $tid = $view->result[$vars['count']]->tid;
+  $link_text = $view->result[$vars['count']]->field_name_field_et[0]['raw']['safe_value'];
+  $vars['field_rendered'] = "<a href='" . url('taxonomy/term/' . $tid) . "'><span>$link_text</span></a>";
+}
+
+/**
  * Helper function to get right translation nid by given nid.
  */
 function _site_fic_get_node_translation(&$node) {
