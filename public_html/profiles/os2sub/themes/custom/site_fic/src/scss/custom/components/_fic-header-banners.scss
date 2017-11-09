@@ -153,6 +153,10 @@
       height: 60px;
       width: 100%;
 
+      a {
+        display: block;
+      }
+
       .text {
         color: $color-white;
         font-size: 2em;

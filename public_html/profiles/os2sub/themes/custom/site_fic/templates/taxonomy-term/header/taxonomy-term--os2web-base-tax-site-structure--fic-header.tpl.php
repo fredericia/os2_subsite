@@ -14,9 +14,11 @@
   <div class="slide-bottom">
     <div class="col-sm-8 ">
       <div class="blue-block">
-        <span class="text"><?php print t('Get an overview of all opening hours'); ?></span>
-        <?php if (!empty($opening_hours_link)) : ?>
-          <?php print $opening_hours_link; ?>
+        <?php if (!empty($opening_hours_url)) : ?>
+          <a href="<?php print $opening_hours_url; ?>" class="ctools-modal-contact-modal-style ctools-use-modal">
+            <span class="text"><?php print t('Get an overview of all opening hours'); ?></span>
+            <span class="read-more"><?php print t('See all opening hours'); ?></span>
+          </a>
         <?php endif; ?>
       </div>
     </div>
