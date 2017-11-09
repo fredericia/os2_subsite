@@ -10415,6 +10415,8 @@ div.ctools-modal-content {
       background-color: #01B5D5;
       height: 60px;
       width: 100%; }
+      .term-fic-header .slide-bottom .blue-block a {
+        display: block; }
       .term-fic-header .slide-bottom .blue-block .text {
         color: #ffffff;
         font-size: 2em;
