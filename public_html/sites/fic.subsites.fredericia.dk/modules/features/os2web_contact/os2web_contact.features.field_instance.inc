@@ -369,6 +369,57 @@ function os2web_contact_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-os2web_contact_contact-field_paragraph_personale'.
+  $field_instances['node-os2web_contact_contact-field_paragraph_personale'] = array(
+    'bundle' => 'os2web_contact_contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'node_reference',
+        'settings' => array(
+          'node_reference_view_mode' => 'spotbox',
+        ),
+        'type' => 'node_reference_node',
+        'weight' => 9,
+      ),
+      'spotbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_paragraph_personale',
+    'label' => 'Viste personer',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'node_reference',
+      'settings' => array(
+        'autocomplete_match' => 'contains',
+        'autocomplete_path' => 'node_reference/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'node_reference_autocomplete',
+      'weight' => 13,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Adresse');
@@ -377,6 +428,7 @@ function os2web_contact_field_default_field_instances() {
   t('Overskrift på kontaktblok');
   t('Postnummer');
   t('Telefon');
+  t('Viste personer');
 
   return $field_instances;
 }

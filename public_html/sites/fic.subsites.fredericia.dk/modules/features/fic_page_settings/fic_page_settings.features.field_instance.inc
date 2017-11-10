@@ -209,7 +209,7 @@ function fic_page_settings_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -295,10 +295,11 @@ function fic_page_settings_field_default_field_instances() {
         'weight' => 3,
       ),
       'spotbox' => array(
-        'label' => 'above',
+        'label' => 'inline',
+        'module' => 'email',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'email_default',
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -342,9 +343,14 @@ function fic_page_settings_field_default_field_instances() {
         'weight' => 1,
       ),
       'spotbox' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
       'teaser' => array(
@@ -416,10 +422,13 @@ function fic_page_settings_field_default_field_instances() {
         'weight' => 4,
       ),
       'spotbox' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'telephone',
+        'settings' => array(
+          'title' => '',
+        ),
+        'type' => 'telephone_link',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -465,10 +474,15 @@ function fic_page_settings_field_default_field_instances() {
         'weight' => 2,
       ),
       'spotbox' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'inline',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'hidden',
