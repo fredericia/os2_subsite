@@ -524,7 +524,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 4,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -604,7 +604,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 7,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -690,13 +690,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'fic_header' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'os2web_cover',
-        ),
-        'type' => 'image',
-        'weight' => 5,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -849,7 +845,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -917,7 +913,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 19,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -983,7 +979,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1067,7 +1063,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 13,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1130,7 +1126,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1231,7 +1227,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 18,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1299,7 +1295,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 20,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1365,7 +1361,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1461,7 +1457,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 21,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1529,7 +1525,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1595,7 +1591,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -1655,7 +1651,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1721,7 +1717,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -1867,7 +1863,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -1937,7 +1933,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -7564,12 +7560,8 @@ function os2web_base_field_default_field_instances() {
       ),
       'fic_header' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'os2web_cover',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
     ),
@@ -7639,9 +7631,8 @@ function os2web_base_field_default_field_instances() {
       ),
       'fic_header' => array(
         'label' => 'hidden',
-        'module' => 'node_reference',
         'settings' => array(),
-        'type' => 'node_reference_default',
+        'type' => 'hidden',
         'weight' => 4,
       ),
     ),
@@ -7792,12 +7783,8 @@ function os2web_base_field_default_field_instances() {
       ),
       'fic_header' => array(
         'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'os2web_cover',
-        ),
-        'type' => 'image',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
