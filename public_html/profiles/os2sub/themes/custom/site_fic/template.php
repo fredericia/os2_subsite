@@ -231,71 +231,15 @@ function site_fic_menu_link(array $variables) {
  * Custom preprocess function for fic_header view mode.
  */
 function site_fic_preprocess_node__fic_header(&$vars) {
-  if (empty($vars['content']['field_baggrund'][0])) {
-    return;
-  }
-
-  $backstretch_data = &drupal_static('backstretch_data');
-  if (empty($backstretch_data)) {
-    $backstretch_data = array();
-  }
-
-  $image = $vars['content']['field_baggrund'][0];
-  hide($vars['content']['field_baggrund']);
-  $backstretch_data[] = array(
-    'id' => $vars['nid'],
-    'url' => image_style_url(
-      $image['#image_style'],
-      $image['#item']['uri']
-    ),
-  );
+  $field_baggrund = field_get_items('node', $vars['node'], 'field_baggrund');
+  _site_fic_set_backstretch_background($vars['nid'], $field_baggrund);
 }
 
 /**
  * Custom preprocess function for fic_header view mode.
  */
 function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
-  if (empty($vars['content']['field_os2web_base_field_image'][0])) {
-    return;
-  }
-
-  $backstretch_data = &drupal_static('backstretch_data');
-  if (empty($backstretch_data)) {
-    $backstretch_data = array();
-  }
-
-  $backtretch_field_name = 'field_os2web_base_field_image';
-  $node = menu_get_object();
-  // When page is node use another field for backstretch image.
-  if (!empty($node) && empty($term)) {
-    if (!empty($node->field_sektion) && $node->type == 'os2web_base_contentpage') {
-      $backtretch_field_name = 'field_os2web_base_field_banner';
-    }
-  }
-  if (!empty($vars['content'][$backtretch_field_name])) {
-    $image = $vars['content'][$backtretch_field_name][0];
-    $backstretch_data[] = array(
-      'id' => $vars['tid'],
-      'url' => image_style_url(
-        $image['#image_style'],
-        $image['#item']['uri']
-      ),
-    );
-  } else {
-    hide($vars['content']['description_field']);
-  }
-
-  // Hide field from render b/c they should be rendered by backstretch.
-  $to_hide = array(
-    'field_os2web_base_field_image',
-    'field_os2web_base_field_banner',
-  );
-  foreach ($to_hide as $field_name) {
-    if (!empty($vars['content'][$field_name])) {
-      hide($vars['content'][$field_name]);
-    }
-  }
-
+  // Processing modal contact field.
   $field_contact_value = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_contact');
   if (!empty($field_contact_value)) {
     $vars['contact_link'] = l(t('Contact'), 'modal/node/' . $field_contact_value[0]['nid'] . '/nojs', array(
@@ -308,28 +252,123 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
         ),
       ),
     ));
-    hide($vars['content']['field_os2web_base_field_contact']);
   }
 
-  if (current_path() == 'taxonomy/term/' . $vars['tid']) {
-    $related_links_view = field_view_field('taxonomy_term',$vars['term'], 'field_os2web_base_field_related');
-    $related_links_view['#label_display'] = 'hidden';
-    $related_links_view['#weight'] = 2;
-    $vars['related_links'] = $related_links_view;
-  } elseif (!drupal_is_front_page()) {
-    hide($vars['content']['field_os2web_base_field_ext_link']);
-  }
-
+  // Opening hours processing.
   $opening_hours_node_reference = variable_get('opening_hours_node_reference', FALSE);
   $opening_hours_url = &drupal_static('opening_hours_url');
   if ($opening_hours_node_reference && empty($opening_hours_url)) {
-    $node = node_load($opening_hours_node_reference);
-    if (!empty($node)) {
-      _site_fic_get_node_translation($node);
-      $opening_hours_url = url('modal/node/' . $node->nid . '/nojs');
+    $opening_hours_node = node_load($opening_hours_node_reference);
+    if (!empty($opening_hours_node)) {
+      _site_fic_get_node_translation($opening_hours_node);
+      $opening_hours_url = url('modal/node/' . $opening_hours_node->nid . '/nojs');
     }
   }
   $vars['opening_hours_url'] = $opening_hours_url;
+
+  $field_os2web_base_field_image = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_image');
+
+  // On frontpage we need just put term image to background.
+  // Another things will be done on FIC Header view side.
+  if (drupal_is_front_page()) {
+    _site_fic_set_backstretch_background($vars['tid'], $field_os2web_base_field_image);
+    return;
+  }
+
+  // For taxonomy page we need to render full slideshow markup.
+  if (current_path() == 'taxonomy/term/' . $vars['tid']) {
+    // Prepare term default slide.
+    $slide_id = 'term-' . $vars['tid'];
+    $slideshow = array(
+      $slide_id => _site_fic_cycle_slideshow_slide(
+        $slide_id,
+        'Term name',
+        'taxonomy/term/' . $vars['tid'],
+        $vars['content'],
+        $field_os2web_base_field_image
+      ),
+    );
+
+    // Prepare related node slides.
+    $field_os2web_base_field_related = field_get_items('taxonomy_term',$vars['term'], 'field_os2web_base_field_related');
+    if (!empty($field_os2web_base_field_related)) {
+      foreach ($field_os2web_base_field_related as $value) {
+        $related_node = $value['node'];
+        $content = node_view($related_node, 'fic_header');
+        $slide_content = array();
+        foreach (element_children($content) as $element) {
+          $slide_content[] = $content[$element];
+        }
+        $field_baggrund = field_get_items('node', $related_node, 'field_baggrund');
+        $slide_id = 'node-' . $related_node->nid;
+        $slideshow[$slide_id] = _site_fic_cycle_slideshow_slide(
+          $slide_id,
+          $related_node->title,
+          'node/' . $related_node->nid,
+          $slide_content,
+          $field_baggrund
+        );
+      }
+    }
+
+    // Description field already rendered in default slide.
+    hide($vars['content']['description_field']);
+
+    // Load jQuery Cycle.
+    if ($cycle_path = _views_slideshow_cycle_library_path()) {
+      drupal_add_js($cycle_path);
+    }
+
+    return $vars['slideshow'] = theme(
+      'cycle_slideshow',
+      array('cycle_slideshow' => $slideshow)
+    );
+  }
+
+  // When page is section content node just show background image.
+  $node = menu_get_object();
+  if (empty($node->field_sektion) || $node->type != 'os2web_base_contentpage') {
+    return;
+  }
+
+  $field_os2web_base_field_banner = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_banner');
+  if (!empty($field_os2web_base_field_banner)) {
+    _site_fic_set_backstretch_background($vars['tid'], $field_os2web_base_field_banner);
+  } else {
+    // Hide description from rendering if background image is empty.
+    hide($vars['content']['description_field']);
+  }
+
+  // Hide readmore link for node pages FIC header.
+  if (!empty($vars['content']['field_os2web_base_field_ext_link'])) {
+    hide($vars['content']['field_os2web_base_field_ext_link']);
+  }
+}
+
+/**
+ * Put image to backstretch background.
+ */
+function _site_fic_set_backstretch_background($id ,$image) {
+  if (isset($image[0]['uri'])) {
+    $image = reset($image);
+  }
+
+  if (empty($image['uri'])) {
+    return;
+  }
+
+  $backstretch_data = &drupal_static('backstretch_data');
+  if (empty($backstretch_data)) {
+    $backstretch_data = array();
+  }
+
+  $backstretch_data[] = array(
+    'id' => $id,
+    'url' => image_style_url(
+      'os2web_cover',
+      $image['uri']
+    ),
+  );
 }
 
 /**
@@ -417,4 +456,52 @@ function site_fic_preprocess_views_view(&$vars) {
       }
       break;
   }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function site_fic_theme() {
+  return array(
+    'cycle_slideshow' => array(
+      'slides' => '',
+      'template' => 'templates/custom/cycle-slideshow',
+    ),
+    'cycle_slide' => array(
+      'variables' => array(),
+      'template' => 'templates/custom/cycle-slide',
+    ),
+  );
+}
+
+/**
+ * Preprocess function for cycle slideshow implementation.
+ */
+function site_fic_preprocess_cycle_slideshow(&$vars) {
+  $vars['slideshow'] = $vars['pager'] = array();
+  if (!empty($vars['cycle_slideshow'])) {
+    foreach ($vars['cycle_slideshow'] as $slide) {
+      $vars['slideshow'][] = theme('cycle_slide', array(
+        'slide' => drupal_render($slide['content']),
+        'name' => $slide['pager']['name'],
+        'url' => $slide['pager']['url'],
+        'id' => $slide['pager']['id'],
+      ));
+    }
+  }
+}
+
+/**
+ * Cycle slide definition().
+ */
+function _site_fic_cycle_slideshow_slide($slide_id, $name, $url, $content, $background) {
+  _site_fic_set_backstretch_background($slide_id, $background);
+  return array(
+    'content' => $content,
+    'pager' => array(
+      'name' => $name,
+      'url' => $url,
+      'id' => $slide_id,
+    ),
+  );
 }

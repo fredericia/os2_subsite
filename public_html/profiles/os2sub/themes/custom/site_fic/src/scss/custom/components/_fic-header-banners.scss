@@ -43,11 +43,6 @@ $desktop-margin-default: 30px;
     height: 100%;
   }
 
-  .view-mode-fic_header {
-    height: 100%;
-    width: 100%;
-  }
-
   .slide-content-wrapper {
     text-align: center;
 
@@ -84,15 +79,15 @@ $desktop-margin-default: 30px;
   }
 
   .views-slideshow-controls-bottom,
-  .field-name-field-os2web-base-field-related {
+  .field-name-field-os2web-base-field-related,
+  .cycle-pager {
     > div {
       margin-bottom: 80px;
       height: 80px;
       overflow: hidden;
     }
 
-    div,
-    li {
+    div {
       display: inline-block;
     }
 
@@ -140,7 +135,8 @@ $desktop-margin-default: 30px;
     .field-item {
       margin-right: $desktop-margin-default;
 
-      &.views-row-first {
+      &.views-row-first,
+      &:first-child{
         display: none;
       }
 
@@ -238,7 +234,12 @@ $desktop-margin-default: 30px;
 
 .page-taxonomy {
   .view-mode-fic_header {
-    display: table;
+    &, & .cycle-slide {
+      display: table !important;
+      height: 100%;
+      width: 100%;
+      background-color: transparent !important;
+    }
   }
 
   .slide-content-wrapper {
@@ -271,23 +272,23 @@ $desktop-margin-default: 30px;
   }
 
   .num-items {
-    &-2 a {
+    &-3 a {
       width: $desktop-width-2buttons;
     }
 
-    &-3 a {
+    &-4 a {
       width: $desktop-width-3buttons;
     }
 
-    &-4 a {
+    &-5 a {
       width: $desktop-width-4buttons;
     }
 
-    &-5 a {
+    &-6 a {
       width: $desktop-width-5buttons;
     }
 
-    &-6 a {
+    &-7 a {
       width: $desktop-width-6buttons;
     }
   }

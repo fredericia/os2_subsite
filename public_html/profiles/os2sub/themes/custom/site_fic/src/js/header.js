@@ -94,11 +94,11 @@ var header = (function ($) {
         $maxH = 700;
 
       $descrH = $descrH < $minH ? $minH : ($descrH > $maxH ? $maxH : $descrH);
-      $('.front .term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term').height($descrH);
+      $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').height($descrH);
     }
   };
 
-      Drupal.theme.prototype.fic_modal = function () {
+  Drupal.theme.prototype.fic_modal = function () {
     var html = '';
     html += '<div id="ctools-modal" class="popups-box my-first-popup">';
     html += ' <div class="ctools-modal-content my-popup ">';
@@ -107,6 +107,40 @@ var header = (function ($) {
     html += ' </div>';
     html += '</div>';
     return html;
+  };
+
+  /**
+   * Custom ficHeaderCycleSlideshow behavior.
+   */
+  Drupal.behaviors.ficHeaderCycleSlideshow = {
+    attach: function (context, settings) {
+      var $slideShow = $('.cycle-slideshow');
+      if (!$slideShow.once().length) {
+        return;
+      }
+
+      $slideShow.cycle({
+        speed: 700,
+        timeout: 0,
+        pager: '#cycle-nav',
+        before: function(currSlideElement, nextSlideElement, options, forwardFlag) {
+          var $termId = $(nextSlideElement).data('id');
+          if (typeof Drupal.behaviors.ficBackstretch !== "undefined") {
+            Drupal.behaviors.ficBackstretch.show($termId);
+          }
+        },
+        pagerAnchorBuilder: function(idx, slide) {
+          var $slide = $(slide);
+          return '<div class="field-item"><a href="' + $slide.data('url') + '"><span>' + $slide.data('name') + '</span></a></div>';
+        },
+        pagerEvent: 'mouseover',
+        pauseOnPagerHover: true
+      });
+
+      $('.cycle-pager a').on('click', function(e){
+        e.stopPropagation();
+      });
+    }
   };
 
   return pub;
