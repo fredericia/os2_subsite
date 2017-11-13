@@ -9660,15 +9660,12 @@ h1.pane-title,
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  margin-bottom: 30px; }
   @media (min-width: 768px) {
     .pane-instagram-billeder .views-row {
       float: left;
       width: 25%; } }
-
-@media (min-width: 768px) {
-  .pane-instagram-billeder .views-row-first {
-    left: 25%; } }
 
 .panel-pane.views-container.full-width .views-container-inner {
   margin-right: auto;
@@ -9796,6 +9793,10 @@ h1.pane-title,
 
 .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media iframe {
   width: 100%; }
+
+@media (min-width: 992px) and (min-width: 768px) {
+  .pane-instagram-billeder .views-row-first {
+    left: 25%; } }
 
 .region-header {
   margin-left: -15px;
@@ -11255,6 +11256,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     .pane-fic-kommende-arrangementer-panel-pane-1 .more-link a:before {
       content: '+';
       font-size: 2em; }
+
+.view.view-instagram-billeder.view-id-instagram_billeder.view-display-id-block .file.file-instagram.file-text-instagram img {
+  border: 10px solid #fff; }
 
 @media (min-width: 992px) {
   .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {

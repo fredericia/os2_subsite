@@ -861,6 +861,35 @@ function fic_frontpage_settings_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['uses_fields'] = TRUE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['inline'] = array(
+    'rendered_entity' => 'rendered_entity',
+    'download' => 'download',
+  );
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: File: Rendered File */
+  $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_file';
+  $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['label'] = '';
+  $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
+  $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
+  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
+  $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+  /* Field: File: Download link */
+  $handler->display->display_options['fields']['download']['id'] = 'download';
+  $handler->display->display_options['fields']['download']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['download']['field'] = 'download';
+  $handler->display->display_options['fields']['download']['label'] = '';
+  $handler->display->display_options['fields']['download']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['download']['element_label_colon'] = FALSE;
   $translatables['instagram_billeder'] = array(
     t('Master'),
     t('Instagram billeder'),

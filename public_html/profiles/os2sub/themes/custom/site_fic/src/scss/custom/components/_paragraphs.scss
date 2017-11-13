@@ -104,9 +104,8 @@
   .views-row {
     @include make-xs-column(6);
     @include make-sm-column(3);
-  }
-  .views-row-first {
-    @include make-sm-column-push(3);
+    margin-bottom: $grid-gutter-width;
+
   }
 }
 .panel-pane.views-container.full-width .views-container-inner {
@@ -236,7 +235,11 @@
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-  //trick to mane menu clickable on the front page because of background slideshow
+  .pane-instagram-billeder {
+    .views-row-first {
+      @include make-sm-column-push(3);
+    }
+  }
 
 }
 
