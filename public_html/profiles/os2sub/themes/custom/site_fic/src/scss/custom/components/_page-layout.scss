@@ -53,6 +53,19 @@ h2.pane-title {
     color: $color-dark-gray;
   }
 }
+
+.page-nyheder {
+  .page-header-wrapper {
+    background-color: #000;
+  }
+  h1 {
+    color: $brand-primary;
+    font-size: 50px;
+  }
+  .view-os2sub-nyheder .view-content {
+    @extend .row;
+  }
+}
 /*Some flex panel tweaks stop*/
 // --------------------------------------------------
 // Variants
