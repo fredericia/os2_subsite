@@ -9671,7 +9671,8 @@ h2.pane-title, .pane-title.heading-h2 {
   background-color: #000; }
 
 .page-nyheder h1, .page-nyheder .heading-h1, .page-nyheder .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .page-nyheder .banner-headline {
-  color: #01B5D5; }
+  color: #01B5D5;
+  font-size: 50px; }
 
 /*Some flex panel tweaks stop*/
 .content-inner {
@@ -10789,6 +10790,8 @@ div.ctools-modal-content {
     border-top: 2px solid #ccc;
     padding-top: 30px;
     padding-bottom: 30px; }
+    .node.node-os2web-contact-contact.node--os2web_contact_contact--full .field.field-name-field-paragraph-personale > .field-items > .field-item:first-child {
+      margin-top: 30px; }
     .node.node-os2web-contact-contact.node--os2web_contact_contact--full .field.field-name-field-paragraph-personale > .field-items > .field-item:last-child {
       border-bottom: 2px solid #ccc; }
   .node.node-os2web-contact-contact.node--os2web_contact_contact--full h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .heading-h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner-headline {
