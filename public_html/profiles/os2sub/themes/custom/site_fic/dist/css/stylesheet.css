@@ -9539,6 +9539,12 @@ h6,
 .panel-separator {
   display: none; }
 
+h2.pane-title, .pane-title.heading-h2 {
+  font-size: 50px;
+  color: #2a2f36; }
+  h2.pane-title a, .pane-title.heading-h2 a {
+    color: #2a2f36; }
+
 /*Some flex panel tweaks stop*/
 .content-inner {
   padding-top: 20px;
@@ -11379,6 +11385,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
+    .paragraphs-item-header-text-media .row:after, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content:after, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content:after, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content:after, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content:after, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside:after, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside:after, .paragraphs-item-header-text-media .row:before, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content:before, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content:before, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content:before, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content:before, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside:before, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside:before {
+      content: normal; }
     .paragraphs-item-header-text-media .row .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-paragraph-header, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .field.field-name-field-paragraph-header, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-paragraph-header, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .field.field-name-field-paragraph-header {
       color: #ff4200; }
     .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .paragraph-video-container .paragraph-video, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video {
