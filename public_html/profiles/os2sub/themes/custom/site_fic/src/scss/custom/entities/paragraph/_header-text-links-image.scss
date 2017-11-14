@@ -23,7 +23,11 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
+    // Fixes Safari issue (https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap)
+    &:after,
+    &:before {
+      content: normal; // IE doesn't support `initial`
+    }
     .field.field-name-field-knap-link{
 
       a{
