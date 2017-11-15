@@ -293,7 +293,11 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     $field_os2web_base_field_related = field_get_items('taxonomy_term',$vars['term'], 'field_os2web_base_field_related');
     if (!empty($field_os2web_base_field_related)) {
       foreach ($field_os2web_base_field_related as $value) {
+        if (empty($value['nid'])) {
+          continue;
+        }
         $related_node = node_load($value['nid']);
+        _site_fic_get_node_translation($related_node);
         $content = node_view($related_node, 'fic_header');
         $slide_content = array();
         foreach (element_children($content) as $element) {
@@ -304,7 +308,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
         $slideshow[$slide_id] = _site_fic_cycle_slideshow_slide(
           $slide_id,
           $related_node->title,
-          'node/' . $related_node->nid,
+          url('node/' . $related_node->nid),
           $slide_content,
           $field_baggrund
         );
