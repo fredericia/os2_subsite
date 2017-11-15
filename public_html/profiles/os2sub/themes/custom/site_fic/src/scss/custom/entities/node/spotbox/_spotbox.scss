@@ -15,7 +15,37 @@
 // --------------------------------------------------
 
 // Teaser
-
+.node.node-personale.view-mode-spotbox.node--personale--spotbox{
+  
+  .person{
+    display: flex;
+    flex-wrap: wrap;
+    .field-label{
+      width: 150px;
+      font-weight: normal;
+    }
+    .left{
+      width: 100%;
+    }
+    .right{
+      width: 100%;
+    }
+    .field.field-name-field-personale-jobtitel{
+      margin-bottom: 20px;
+      color: #999;
+      &:before{
+        content: '/\00a0';
+        float: left;
+      }
+    }
+    .field.field-name-field-personale-telefon-disp, .field.field-name-field-personale-telefon{
+      color: $brand-secondary;
+    }
+    .field.field-name-field-personale-email{
+      color: $brand-primary;
+    }
+  }
+}
 
 
 // --------------------------------------------------
@@ -43,8 +73,19 @@
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-
-
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox{
+    .person{
+      .left{
+        width: 40%;
+      }
+      .right{
+        width: 60%;
+      }
+      .field.field-name-field-personale-jobtitel{
+        margin-bottom: 0px;
+      }
+    }
+  }
 }
 
 // Tablet - only

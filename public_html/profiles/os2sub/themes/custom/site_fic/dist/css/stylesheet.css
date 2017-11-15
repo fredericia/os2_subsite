@@ -9660,15 +9660,12 @@ h1.pane-title,
   position: relative;
   min-height: 1px;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  margin-bottom: 30px; }
   @media (min-width: 768px) {
     .pane-instagram-billeder .views-row {
       float: left;
       width: 25%; } }
-
-@media (min-width: 768px) {
-  .pane-instagram-billeder .views-row-first {
-    left: 25%; } }
 
 .panel-pane.views-container.full-width .views-container-inner {
   margin-right: auto;
@@ -9796,6 +9793,10 @@ h1.pane-title,
 
 .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media iframe {
   width: 100%; }
+
+@media (min-width: 992px) and (min-width: 768px) {
+  .pane-instagram-billeder .views-row-first {
+    left: 25%; } }
 
 .region-header {
   margin-left: -15px;
@@ -10638,6 +10639,28 @@ div.ctools-modal-content {
 .page-node .panel-pane.pane-entity-field.pane-node-field-os2web-kulturnaut-saddress img {
   border: solid 6px #192124; }
 
+.node.node-os2web-contact-contact.node--os2web_contact_contact--full {
+  font-size: 1.875em;
+  font-family: "RBNo21a-Medium", "Lato", sans-serif;
+  color: #222222; }
+  .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts {
+    margin-top: 55px;
+    text-align: right; }
+    .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a.btn, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .topnav-wrapper.user-nav .region.region-navigation .book-link a, .topnav-wrapper.user-nav .region.region-navigation .book-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .banner .banner-wrapper a, .banner .banner-wrapper .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .pane-fic-kommende-arrangementer-panel-pane-1 .more-link a, .pane-fic-kommende-arrangementer-panel-pane-1 .more-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .paragraphs-item-header-text-links-image .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .paragraphs-item-webform .form-actions a.webform-submit.form-submit, .paragraphs-item-webform .form-actions .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts a.webform-submit.form-submit {
+      font-family: "RBNo21a-Medium", "Lato", sans-serif;
+      font-size: 1em;
+      margin-left: 30px;
+      font-weight: normal; }
+  .node.node-os2web-contact-contact.node--os2web_contact_contact--full .field.field-name-field-paragraph-personale > .field-items > .field-item {
+    border-top: 2px solid #ccc;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .node.node-os2web-contact-contact.node--os2web_contact_contact--full .field.field-name-field-paragraph-personale > .field-items > .field-item:last-child {
+      border-bottom: 2px solid #ccc; }
+  .node.node-os2web-contact-contact.node--os2web_contact_contact--full h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .heading-h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner-headline {
+    font-size: 2em;
+    color: #01B5D5; }
+
 .os2-section.os2-section-light .pane-node-field-os2web-kulturnaut-slidesho img {
   border: solid 6px #192124; }
 
@@ -10912,6 +10935,40 @@ div.ctools-modal-content {
   border: 10px dashed #222222; }
   .se-flere:hover {
     border-color: #fff; }
+
+.node.node-personale.view-mode-spotbox.node--personale--spotbox .person {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .field-label {
+    width: 150px;
+    font-weight: normal; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .left {
+    width: 100%; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .right {
+    width: 100%; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .field.field-name-field-personale-jobtitel {
+    margin-bottom: 20px;
+    color: #999; }
+    .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .field.field-name-field-personale-jobtitel:before {
+      content: '/\00a0';
+      float: left; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .field.field-name-field-personale-telefon-disp, .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .field.field-name-field-personale-telefon {
+    color: #ff4200; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .field.field-name-field-personale-email {
+    color: #01B5D5; }
+
+@media (min-width: 768px) {
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .left {
+    width: 40%; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .right {
+    width: 60%; }
+  .node.node-personale.view-mode-spotbox.node--personale--spotbox .person .field.field-name-field-personale-jobtitel {
+    margin-bottom: 0px; } }
 
 .view-mode-os2sub_spotbox_single.node .overlay-wrapper {
   position: relative; }
@@ -11199,6 +11256,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     .pane-fic-kommende-arrangementer-panel-pane-1 .more-link a:before {
       content: '+';
       font-size: 2em; }
+
+.view.view-instagram-billeder.view-id-instagram_billeder.view-display-id-block .file.file-instagram.file-text-instagram img {
+  border: 10px solid #fff; }
 
 @media (min-width: 992px) {
   .views-container.full-width.contextual-links-region.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
