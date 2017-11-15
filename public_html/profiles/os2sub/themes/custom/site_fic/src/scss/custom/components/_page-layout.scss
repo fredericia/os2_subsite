@@ -45,6 +45,27 @@ $md-page-layout-content-inner-padding-bottom: 60px;
 .page-nyheder .main-container {
   @extend .bg-dark;
 }
+
+h2.pane-title {
+  font-size: 50px;
+  color: $color-dark-gray;
+  a {
+    color: $color-dark-gray;
+  }
+}
+
+.page-nyheder {
+  .page-header-wrapper {
+    background-color: #000;
+  }
+  h1 {
+    color: $brand-primary;
+    font-size: 50px;
+  }
+  .view-os2sub-nyheder .view-content {
+    @extend .row;
+  }
+}
 /*Some flex panel tweaks stop*/
 // --------------------------------------------------
 // Variants

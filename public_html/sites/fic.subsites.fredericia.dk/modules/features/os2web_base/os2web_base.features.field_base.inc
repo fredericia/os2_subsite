@@ -797,21 +797,18 @@ function os2web_base_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'referenceable_types' => array(
-        'kontaktblok' => 0,
-        'kulturkalender' => 0,
+        'banner' => 0,
+        'event_calendar' => 0,
         'media' => 'media',
-        'os2bootstrap_carousel' => 0,
         'os2web_base_contentpage' => 'os2web_base_contentpage',
         'os2web_base_gallery' => 0,
-        'os2web_base_iframe' => 0,
         'os2web_base_news' => 'os2web_base_news',
-        'os2web_base_rotating_image' => 0,
         'os2web_base_selfservice_link' => 0,
-        'os2web_borger_dk_article' => 'os2web_borger_dk_article',
         'os2web_contact_contact' => 0,
+        'os2web_kulturnaut_knactivity' => 0,
         'os2web_spotbox_box' => 0,
-        'panel' => 0,
-        'spotbokse2' => 0,
+        'personale' => 0,
+        'velkomst' => 0,
         'webform' => 'webform',
       ),
       'view' => array(
@@ -820,7 +817,7 @@ function os2web_base_field_default_field_bases() {
         'view_name' => '',
       ),
     ),
-    'translatable' => 0,
+    'translatable' => 1,
     'type' => 'node_reference',
   );
 

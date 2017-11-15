@@ -464,7 +464,7 @@ function fic_page_settings_field_default_field_instances() {
     'bundle' => 'personale',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'F.eks "72 10 12 61"',
+    'description' => 'Dette er den pæne visning. F.eks "72 10 12 61"',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -498,7 +498,7 @@ function fic_page_settings_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_personale_telefon_disp',
-    'label' => 'Telefon pænt',
+    'label' => 'Telefon',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -738,13 +738,12 @@ function fic_page_settings_field_default_field_instances() {
   t('Antal pr række ');
   t('Baggrund');
   t('Billede');
+  t('Dette er den pæne visning. F.eks "72 10 12 61"');
   t('Email');
-  t('F.eks "72 10 12 61"');
   t('Inkl. +45 - f.eks "+4572101213"');
   t('Jobtitel');
   t('Sektion');
   t('Telefon');
-  t('Telefon pænt');
   t('Viste personer');
 
   return $field_instances;
