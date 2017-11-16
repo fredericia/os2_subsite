@@ -63,7 +63,7 @@ function os2sub_pages_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'path_breadcrumbs_home_link_title';
-  $strongarm->value = 'Forside';
+  $strongarm->value = 'Hjem';
   $export['path_breadcrumbs_home_link_title'] = $strongarm;
 
   $strongarm = new stdClass();

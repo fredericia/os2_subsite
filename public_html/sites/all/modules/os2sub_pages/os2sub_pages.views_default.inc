@@ -23,18 +23,31 @@ function os2sub_pages_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Antal elementer';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« første';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ forrige';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'næste ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'sidste »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Content: Venue (field_os2web_kulturnaut_venue) */
+  /* Forbindelse: Indhold: Venue (field_os2web_kulturnaut_venue) */
   $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['id'] = 'field_os2web_kulturnaut_venue_tid';
   $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['table'] = 'field_data_field_os2web_kulturnaut_venue';
   $handler->display->display_options['relationships']['field_os2web_kulturnaut_venue_tid']['field'] = 'field_os2web_kulturnaut_venue_tid';
-  /* Field: Content: Title */
+  /* Felt: Indhold: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -44,13 +57,13 @@ function os2sub_pages_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Content: Beskrivelse */
+  /* Felt: Indhold: Beskrivelse */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_descrip']['id'] = 'field_os2web_kulturnaut_descrip';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_descrip']['table'] = 'field_data_field_os2web_kulturnaut_descrip';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_descrip']['field'] = 'field_os2web_kulturnaut_descrip';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_descrip']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_descrip']['alter']['strip_tags'] = TRUE;
-  /* Field: Content: Dato */
+  /* Felt: Indhold: Dato */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['id'] = 'field_os2web_kulturnaut_date';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['field'] = 'field_os2web_kulturnaut_date';
@@ -67,7 +80,7 @@ function os2sub_pages_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Slutdato */
+  /* Felt: Slutdato */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date_1']['id'] = 'field_os2web_kulturnaut_date_1';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date_1']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date_1']['field'] = 'field_os2web_kulturnaut_date';
@@ -86,19 +99,19 @@ function os2sub_pages_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  /* Field: Content: Lang Beskrivelse */
+  /* Felt: Indhold: Lang Beskrivelse */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['id'] = 'field_os2web_kulturnaut_longdesc';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['table'] = 'field_data_field_os2web_kulturnaut_longdesc';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['field'] = 'field_os2web_kulturnaut_longdesc';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_longdesc']['element_label_colon'] = FALSE;
-  /* Field: Content: Sted homepage */
+  /* Felt: Indhold: Sted homepage */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['id'] = 'field_os2web_kulturnaut_shomepag';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['table'] = 'field_data_field_os2web_kulturnaut_shomepag';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['field'] = 'field_os2web_kulturnaut_shomepag';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_shomepag']['exclude'] = TRUE;
-  /* Field: Taxonomy term: Address */
+  /* Felt: Ord i ordforråd: Address */
   $handler->display->display_options['fields']['field_os2web_kult_venue_address']['id'] = 'field_os2web_kult_venue_address';
   $handler->display->display_options['fields']['field_os2web_kult_venue_address']['table'] = 'field_data_field_os2web_kult_venue_address';
   $handler->display->display_options['fields']['field_os2web_kult_venue_address']['field'] = 'field_os2web_kult_venue_address';
@@ -106,7 +119,7 @@ function os2sub_pages_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kult_venue_address']['label'] = '';
   $handler->display->display_options['fields']['field_os2web_kult_venue_address']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_os2web_kult_venue_address']['element_label_colon'] = FALSE;
-  /* Field: Content: Sted Adresse */
+  /* Felt: Indhold: Sted Adresse */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['id'] = 'field_os2web_kulturnaut_saddress';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['table'] = 'field_data_field_os2web_kulturnaut_saddress';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['field'] = 'field_os2web_kulturnaut_saddress';
@@ -114,28 +127,29 @@ function os2sub_pages_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_saddress']['empty'] = '[field_os2web_kult_venue_address]';
-  /* Field: Content: Sted arrang */
+  /* Felt: Indhold: Sted arrang */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['id'] = 'field_os2web_kulturnaut_sarrang';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['table'] = 'field_data_field_os2web_kulturnaut_sarrang';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['field'] = 'field_os2web_kulturnaut_sarrang';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sarrang']['exclude'] = TRUE;
-  /* Field: Content: Sted navn */
+  /* Felt: Indhold: Sted navn */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['id'] = 'field_os2web_kulturnaut_sname';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['table'] = 'field_data_field_os2web_kulturnaut_sname';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['field'] = 'field_os2web_kulturnaut_sname';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['exclude'] = TRUE;
-  /* Field: Content: Sted Postby */
+  /* Felt: Indhold: Sted Postby */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_scity']['id'] = 'field_os2web_kulturnaut_scity';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_scity']['table'] = 'field_data_field_os2web_kulturnaut_scity';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_scity']['field'] = 'field_os2web_kulturnaut_scity';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_scity']['exclude'] = TRUE;
-  /* Field: Content: Venue */
+  /* Felt: Indhold: Venue */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['id'] = 'field_os2web_kulturnaut_venue';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['table'] = 'field_data_field_os2web_kulturnaut_venue';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['field'] = 'field_os2web_kulturnaut_venue';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['label'] = 'Sted';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['type'] = 'taxonomy_term_reference_plain';
-  /* Field: Global: Custom text */
+  /* Felt: Global: Tilpasset tekst */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
@@ -153,12 +167,12 @@ function os2sub_pages_views_default_views() {
 	    <span class="all_day_event">false</span>
 	</div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Sort criterion: Content: Post date */
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Contextual filter: Content: Nid */
+  /* Kontekstuelt filter: Indhold: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -168,14 +182,14 @@ function os2sub_pages_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Content: Published */
+  /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
+  /* Filterkriterie: Indhold: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -197,20 +211,20 @@ function os2sub_pages_views_default_views() {
   );
   $translatables['add_to_calendar'] = array(
     t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('term from field_os2web_kulturnaut_venue'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('Antal elementer'),
+    t('- Alle -'),
+    t('Forskydning'),
+    t('« første'),
+    t('‹ forrige'),
+    t('næste ›'),
+    t('sidste »'),
+    t('term fra field_os2web_kulturnaut_venue'),
     t('Beskrivelse'),
     t('Dato'),
     t('[field_os2web_kulturnaut_date-value]'),
@@ -220,7 +234,7 @@ function os2sub_pages_views_default_views() {
     t('Sted arrang'),
     t('Sted navn'),
     t('Sted Postby'),
-    t('Venue'),
+    t('Sted'),
     t('<div title="Tilføj til kalender" class="addthisevent addtocalendar atc-style-blue btn btn-default">
 	    Tilføj til kalender
 	    <span class="start">[field_os2web_kulturnaut_date]</span>

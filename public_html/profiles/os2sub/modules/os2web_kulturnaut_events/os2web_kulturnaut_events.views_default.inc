@@ -262,6 +262,11 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   /* Sorteringskriterie: Indhold: Dato - slutdato (field_os2web_kulturnaut_date:value2) */
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value2']['id'] = 'field_os2web_kulturnaut_date_value2';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value2']['table'] = 'field_data_field_os2web_kulturnaut_date';
@@ -601,6 +606,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
+  /* Filterkriterie: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '1';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -672,6 +683,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['operator'] = 'field_os2web_kulturnaut_date_value2_op';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['expose']['identifier'] = 'field_os2web_kulturnaut_date_value2';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
+  /* Filterkriterie: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '1';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
@@ -723,11 +740,11 @@ function os2web_kulturnaut_events_views_default_views() {
     'os2sub_calendar_right' => 0,
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sorteringskriterie: Nodequeue: In queue */
-  $handler->display->display_options['sorts']['in_queue']['id'] = 'in_queue';
-  $handler->display->display_options['sorts']['in_queue']['table'] = 'nodequeue_nodes';
-  $handler->display->display_options['sorts']['in_queue']['field'] = 'in_queue';
-  $handler->display->display_options['sorts']['in_queue']['relationship'] = 'nodequeue_rel';
+  /* Sorteringskriterie: Nodequeue: Placering */
+  $handler->display->display_options['sorts']['position']['id'] = 'position';
+  $handler->display->display_options['sorts']['position']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['sorts']['position']['field'] = 'position';
+  $handler->display->display_options['sorts']['position']['relationship'] = 'nodequeue_rel';
   /* Sorteringskriterie: Indhold: Dato -  startdato (field_os2web_kulturnaut_date) */
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
@@ -755,6 +772,12 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['field'] = 'field_os2web_kulturnaut_date_value2';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value2']['default_date'] = 'now';
+  /* Filterkriterie: Nodequeue: In queue */
+  $handler->display->display_options['filters']['in_queue']['id'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['table'] = 'nodequeue_nodes';
+  $handler->display->display_options['filters']['in_queue']['field'] = 'in_queue';
+  $handler->display->display_options['filters']['in_queue']['relationship'] = 'nodequeue_rel';
+  $handler->display->display_options['filters']['in_queue']['value'] = '1';
   $handler->display->display_options['allow']['use_pager'] = 0;
   $handler->display->display_options['allow']['items_per_page'] = 0;
   $handler->display->display_options['allow']['offset'] = 0;
