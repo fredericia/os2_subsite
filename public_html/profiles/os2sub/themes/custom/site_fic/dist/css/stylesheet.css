@@ -9675,6 +9675,31 @@ h2.pane-title, .pane-title.heading-h2 {
   font-size: 50px; }
 
 /*Some flex panel tweaks stop*/
+.flexbox .row--equal-height-columns:not(.view),
+.flexbox .row--equal-height-columns > .view-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .flexbox .row--equal-height-columns:not(.view) > [class*='col-'],
+  .flexbox .row--equal-height-columns > .view-content > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .flexbox .row--equal-height-columns:not(.view):after, .flexbox .row--equal-height-columns:not(.view):before,
+  .flexbox .row--equal-height-columns > .view-content:after,
+  .flexbox .row--equal-height-columns > .view-content:before {
+    content: normal; }
+
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
