@@ -129,8 +129,10 @@
     }
   }
   .panel-pane.pane-entity-field.pane-node-field-os2web-kulturnaut-saddress{
-    img{
+    iframe{
       border: solid 6px $color-black;
+      max-width: 100%;
+      margin: 20px 0;
     }
   }
 }

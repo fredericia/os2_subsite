@@ -10787,8 +10787,10 @@ div.ctools-modal-content {
         float: left;
         width: 33.3333333333%; } }
 
-.page-node .panel-pane.pane-entity-field.pane-node-field-os2web-kulturnaut-saddress img {
-  border: solid 6px #192124; }
+.page-node .panel-pane.pane-entity-field.pane-node-field-os2web-kulturnaut-saddress iframe {
+  border: solid 6px #192124;
+  max-width: 100%;
+  margin: 20px 0; }
 
 .node.node-os2web-contact-contact.node--os2web_contact_contact--full {
   font-size: 1.875em;
