@@ -9888,6 +9888,22 @@ h1.pane-title,
       float: left;
       width: 50%; } }
 
+.node-type-os2web-base-contentpage .entity-paragraphs-item .container, .node-type-os2web-base-contentpage .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .node-type-os2web-base-contentpage .entity-paragraphs-item .content, .node-type-os2web-base-contentpage
+.front .paragraphs-container .entity-paragraphs-item .content,
+.front .paragraphs-container .node-type-os2web-base-contentpage .entity-paragraphs-item .content, .node-type-os2web-base-contentpage .entity-paragraphs-item .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node-type-os2web-base-contentpage .entity-paragraphs-item .paragraphs-container {
+  width: 100% !important;
+  padding-left: 0;
+  padding-right: 0; }
+
+.node-type-os2web-base-contentpage .entity-paragraphs-item .paragraphs-item-header-text-media {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .node-type-os2web-base-contentpage .entity-paragraphs-item .paragraphs-item-header-text-media:before, .node-type-os2web-base-contentpage .entity-paragraphs-item .paragraphs-item-header-text-media:after {
+    content: " ";
+    display: table; }
+  .node-type-os2web-base-contentpage .entity-paragraphs-item .paragraphs-item-header-text-media:after {
+    clear: both; }
+
 .paragraphs-item-paragrph-address .field.field-name-field-paragraph-text,
 .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text {
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
