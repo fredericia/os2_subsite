@@ -33,10 +33,13 @@
 
     .paragraph-video-container{
       .paragraph-video{
-        margin-bottom: ($grid-gutter-width /2 );        
+        margin-bottom: ($grid-gutter-width /2 );
+        @extend .embed-responsive;
+        @extend .embed-responsive-16by9;
+        border: 10px solid $color-black;
         iframe{
-          max-width: 100% !important;
-          border: 10px solid $color-black;
+          @extend .embed-responsive-item;
+
         }
         .content{
           padding-left: 0;
