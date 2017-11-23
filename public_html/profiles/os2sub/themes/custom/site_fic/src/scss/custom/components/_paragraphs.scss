@@ -141,6 +141,13 @@
     }
     .paragraphs-item-header-text-media {
       @include make-row();
+      .paragraph-video-container{
+        .paragraph-video{
+          iframe{
+            height: 460px !important;
+          }
+        }
+      }
     }
   }
 }

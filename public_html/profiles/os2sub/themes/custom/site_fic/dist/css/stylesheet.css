@@ -9903,6 +9903,8 @@ h1.pane-title,
     display: table; }
   .node-type-os2web-base-contentpage .entity-paragraphs-item .paragraphs-item-header-text-media:after {
     clear: both; }
+  .node-type-os2web-base-contentpage .entity-paragraphs-item .paragraphs-item-header-text-media .paragraph-video-container .paragraph-video iframe {
+    height: 460px !important; }
 
 .paragraphs-item-paragrph-address .field.field-name-field-paragraph-text,
 .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text {
