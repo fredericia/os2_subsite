@@ -62,7 +62,7 @@
           </div>
         </div>
         <div class="col-md-12 paragraph-video-container">
-          <div class="paragraph-video embed-responsive embed-responsive-16by9">
+          <div class="paragraph-video full-width">
             <?php print render($content['field_image']); ?>
           </div>
         </div>
