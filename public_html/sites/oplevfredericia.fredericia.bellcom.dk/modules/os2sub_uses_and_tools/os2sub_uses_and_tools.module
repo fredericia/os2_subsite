@@ -1,0 +1,45 @@
+<?php
+/**
+ * @file
+ * Code for the OS2sub Uses and Tools feature.
+ */
+
+include_once 'os2sub_uses_and_tools.features.inc';
+
+/**
+ * Implements hook_filter_info().
+ */
+function os2sub_uses_and_tools_filter_info() {
+  $filters = array();
+
+  $filters['kill_nbsp'] = array(
+    'title' => t('Kill Non-Breaking Spaces'),
+    'description' => t('Remove non-breaking spaces.'),
+    'process callback' => '_os2sub_uses_and_tools_filters_kill_nbsp',
+    'tips callback' => '_os2sub_uses_and_tools_filters_kill_nbsp_tips',
+  );
+
+  return $filters;
+}
+
+
+/**
+ * Filter callbacks.
+ */
+function _os2sub_uses_and_tools_filters_kill_nbsp($text, $filter) {
+  return preg_replace('/&nbsp;/', ' ', $text);
+}
+
+/**
+ * Filter tips.
+ */
+function _os2sub_uses_and_tools_filters_kill_nbsp_tips($filter, $format, $long = FALSE) {
+  if (!$long) {
+    // This string will be shown in the content add/edit form.
+    return t('Don\'t use non-breaking spaces.  Ever.');
+  }
+  else {
+    // And this one on the "Filter Tips" page.
+    return t('Non-breaking spaces are evil and will be eradicated.');
+  }
+}

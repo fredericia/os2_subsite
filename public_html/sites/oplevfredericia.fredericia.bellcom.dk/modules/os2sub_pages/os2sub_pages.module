@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OS2Sub Pages feature.
+ */
+
+include_once 'os2sub_pages.features.inc';

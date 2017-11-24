@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Code for the Kulturnaut events feature.
+ */
+
+include_once('os2web_kulturnaut_events.features.inc');
+
+/**
+ * Implements hook_os2web_help().
+ */
+function os2web_kulturnaut_events_os2web_help($sections) {
+
+  // Content types.
+  $sections['contenttype'] = t('<p><b>Kulturnaut Events:</b> Kulturnaut events are imported from the website kulturnaut.dk. An kulturnaut event is an event of some kind related to your site. <i><a href="#os2web_kulturnaut_events">See more about the importer.</a></i></p>');
+
+  // Importers.
+  $sections['import'] = t('<p><b id=="os2web_kulturnaut_events">Kulturnaut Events:</b> Initialize the importer for Kulturnaut events at <a href="@url">the import page.</a></p>', array('@url' => 'import/os2web_kulturnaut_feeds_import'));
+
+  return $sections;
+}
+
+function os2web_kulturnaut_events_preprocess_taxonomy_term(&$variables) {
+  $term = $variables['term'];
+  if ($term->vocabulary_machine_name == 'os2web_kulturnaut_venue') {
+    $query = new EntityFieldQuery();
+    $count = $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'os2web_kulturnaut_knactivity')
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->fieldCondition('field_os2web_kulturnaut_venue', 'tid', $term->tid)
+      ->fieldCondition('field_os2web_kulturnaut_date', 'value2', date("Y-m-d H:i:s"), '>=')
+      ->count()
+      ->execute();
+
+    $variables['related_activities'] = $count;
+  }
+}
+
+
