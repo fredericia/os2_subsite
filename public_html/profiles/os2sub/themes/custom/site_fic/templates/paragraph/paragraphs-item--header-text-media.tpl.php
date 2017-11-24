@@ -29,7 +29,7 @@
   <div class="container">
     <div class="row">
 
-      <!--        Check if sides switch is in off position-->
+      <!--        Check if position switch set image to left  -->
       <?php if (( $field_paragraph_pos ) == 0 ): ?>
         <div class="col-md-12 col-lg-6 paragraph-video-container">
           <div class="paragraph-video">
@@ -42,7 +42,8 @@
             <?php print render($content['field_paragraph_text']); ?>
           </div>
         </div>
-      <?php elseif (( $field_paragraph_pos ) == 1 ) : ?>        <!--        Switch is in on position-->
+      <!--         Check if position switch set image to right  -->
+      <?php elseif (( $field_paragraph_pos ) == 1 ) : ?>        
         <div class="col-md-12 col-lg-6">
           <div class="aligner">
             <?php print render($content['field_paragraph_header']); ?>
@@ -54,7 +55,8 @@
             <?php print render($content['field_image']); ?>
           </div>
         </div>
-      <?php else : ?>        <!--        Switch is in on position-->
+      <!--         Check if position switch set image to center  -->
+      <?php else : ?>
         <div class="col-md-12">
           <div class="aligner">
             <?php print render($content['field_paragraph_header']); ?>

@@ -223,6 +223,16 @@
     }
   }
 }
+
+.page-taxonomy{
+  .paragraphs-item-header-text-media{
+    .paragraph-video.full-width{
+      iframe{
+        width: 100%;
+      }
+    }
+  }
+}
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

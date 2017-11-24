@@ -20,5 +20,11 @@ function subsites_paragraphs_preprocess_entity(&$variables) {
     if ($field_paragraph_position) {
       $variables['field_paragraph_position']= $field_paragraph_position[0]['value'];
     }
+    
+    //get hidden field field_paragraph_pos 
+    $field_paragraph_pos = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_pos');
+    if ($field_paragraph_pos) {
+      $variables['field_paragraph_pos']= $field_paragraph_pos[0]['value'];
+    }
   }
 }
