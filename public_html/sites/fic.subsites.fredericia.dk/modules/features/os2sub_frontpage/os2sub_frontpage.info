@@ -9,6 +9,7 @@ dependencies[] = ds
 dependencies[] = features
 dependencies[] = image
 dependencies[] = media
+dependencies[] = node
 dependencies[] = os2web_base
 dependencies[] = page_manager
 dependencies[] = strongarm

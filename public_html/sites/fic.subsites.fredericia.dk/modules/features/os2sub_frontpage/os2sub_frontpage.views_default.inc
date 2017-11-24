@@ -120,7 +120,7 @@ function os2sub_frontpage_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Artikler';
+  $handler->display->display_options['title'] = 'Artikeloversigt';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -229,7 +229,7 @@ function os2sub_frontpage_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['os2sub_nyheder'] = array(
     t('Master'),
-    t('Artikler'),
+    t('Artikeloversigt'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
