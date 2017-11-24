@@ -1273,30 +1273,31 @@ function os2web_base_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_paragraph_media_gallery'.
-  $field_bases['field_paragraph_media_gallery'] = array(
+  // Exported field_base: 'field_paragraph_pos'.
+  $field_bases['field_paragraph_pos'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_paragraph_media_gallery',
+    'field_name' => 'field_paragraph_pos',
     'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
-    'module' => 'file',
+    'module' => 'list',
     'settings' => array(
-      'display_default' => 1,
-      'display_field' => 1,
-      'entity_translation_sync' => array(
-        0 => 'fid',
+      'allowed_values' => array(
+        0 => 'Venstre',
+        1 => 'Højre',
+        2 => 'Fuld bredde',
       ),
-      'uri_scheme' => 'public',
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
-    'type' => 'file',
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_paragraph_position'.
@@ -1315,8 +1316,8 @@ function os2web_base_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => 'Off',
-        1 => 'On',
+        0 => 'Venstre',
+        1 => 'Højre',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,

@@ -5724,80 +5724,6 @@ function os2web_base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'paragraphs_item-afsnit_m_galleri-field_paragraph_media_gallery'.
-  $field_instances['paragraphs_item-afsnit_m_galleri-field_paragraph_media_gallery'] = array(
-    'bundle' => 'afsnit_m_galleri',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'teaser',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 1,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_paragraph_media_gallery',
-    'label' => 'Media',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 1,
-      'entity_translation_sync' => FALSE,
-      'epsacrop' => array(
-        'styles' => array(
-          'os2sub_220x130' => 0,
-          'os2sub_300x175' => 0,
-          'os2sub_banner' => 0,
-          'os2sub_normal_imagesize' => 'os2sub_normal_imagesize',
-          'os2sub_teaser_mini_image' => 0,
-          'os2web_spotbox_image' => 0,
-        ),
-      ),
-      'file_directory' => '',
-      'file_extensions' => 'png jpg',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'instagram' => 0,
-          'oembed' => 'oembed',
-          'public' => 'public',
-          'youtube' => 0,
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'instagram' => 0,
-          'video' => 'video',
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
-          'media_internet' => 0,
-          'upload' => 0,
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'paragraphs_item-afsnit_m_link-field_knap_link'.
   $field_instances['paragraphs_item-afsnit_m_link-field_knap_link'] = array(
     'bundle' => 'afsnit_m_link',
@@ -6460,7 +6386,7 @@ function os2web_base_field_default_field_instances() {
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_image',
-    'label' => 'Billede',
+    'label' => 'Media',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
@@ -6468,6 +6394,8 @@ function os2web_base_field_default_field_instances() {
       'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
+          'fic_square' => 0,
+          'fic_wide' => 0,
           'os2sub_220x130' => 0,
           'os2sub_300x175' => 0,
           'os2sub_banner' => 0,
@@ -6489,7 +6417,8 @@ function os2web_base_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
-          'instagram' => 0,
+          'instagram' => 'instagram',
+          'oembed' => 'oembed',
           'public' => 'public',
           'youtube' => 'youtube',
         ),
@@ -6622,6 +6551,47 @@ function os2web_base_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-header_text_media-field_paragraph_pos'.
+  $field_instances['paragraphs_item-header_text_media-field_paragraph_pos'] = array(
+    'bundle' => 'header_text_media',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_pos',
+    'label' => 'Vis media ',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-header_text_media-field_paragraph_position'.
   $field_instances['paragraphs_item-header_text_media-field_paragraph_position'] = array(
     'bundle' => 'header_text_media',
@@ -6648,7 +6618,7 @@ function os2web_base_field_default_field_instances() {
     ),
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_paragraph_position',
-    'label' => 'Sides switch',
+    'label' => 'Skift side',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -8309,6 +8279,7 @@ function os2web_base_field_default_field_instances() {
   t('Selvbetjening');
   t('Selvbetjeningslinks');
   t('Sides switch');
+  t('Skift side');
   t('Skjul automatisk relaterede links');
   t('Skjul højre sidebar');
   t('Skjul kontaktblok');
@@ -8321,6 +8292,7 @@ function os2web_base_field_default_field_instances() {
   t('Unikke eksterne links	');
   t('Unikke relaterede links');
   t('Video');
+  t('Vis media ');
   t('Vis på portalside');
   t('Vises før indholdet af iframe');
   t('Vist navn');

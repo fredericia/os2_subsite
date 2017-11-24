@@ -1139,13 +1139,13 @@ function os2web_base_strongarm() {
     'name' => 'Dk',
     'native' => 'Dk',
     'direction' => '0',
-    'enabled' => 1,
+    'enabled' => '1',
     'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => '',
     'weight' => '0',
-    'javascript' => '3HYmiHswLkT0pJLKNsxYfuXxeIMcpDdEmNM33jW-hKw',
+    'javascript' => 'pqGRZCY3cOD_eAyfwXLrzKUh9fhnbwls_aFyrFXxJkI',
   );
   $export['language_default'] = $strongarm;
 

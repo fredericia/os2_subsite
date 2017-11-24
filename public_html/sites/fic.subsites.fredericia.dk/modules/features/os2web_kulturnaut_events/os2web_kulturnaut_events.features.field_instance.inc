@@ -1207,7 +1207,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'single_image',
         'settings' => array(
-          'image_link' => '',
+          'image_link' => 'content',
           'image_style' => 'os2sub_teaser_mini_image',
           'single_image_delta' => '',
         ),
