@@ -27,13 +27,7 @@
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div class="content"<?php print $content_attributes; ?>>
-    
-
-        <?php print render($content['field_paragraph_header']); ?>
-
-      <div class="row">
-        <?php print render($content['field_paragraph_text']); ?>
-      </div>
-    
+    <?php print render($content['field_paragraph_header']); ?>
+    <?php print render($content['field_paragraph_text']); ?>
   </div>
 </div>
