@@ -14,6 +14,9 @@ function subsites_paragraphs_preprocess_entity(&$variables) {
     if ($field_paragraph_bg) {
       $variables['classes_array'][] = $field_paragraph_bg[0]['value'];
     }
+    else{
+      $variables['classes_array'][] = 'bg-white';
+    }
     
     //get hidden field field_paragraph_position 
     $field_paragraph_position = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_position');

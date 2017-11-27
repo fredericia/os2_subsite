@@ -13,11 +13,13 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-
-.bg-white {
-  background-color: #FFF;
+.bg-undefined {
   padding-top: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
+}
+.bg-white {
+  @extend .bg-undefined;
+  background-color: #FFF;
   .field{
     color: $gray-darker;
     border-color: $gray-darker;
@@ -25,8 +27,7 @@
 }
 .bg-darker {
   background-color: $gray-darker;
-  padding-top: $grid-gutter-width;
-  padding-bottom: $grid-gutter-width;
+  @extend .bg-undefined;
   .field{
     color: #FFF;    
     border-color: #FFF;
@@ -34,8 +35,7 @@
 }
 .bg-dark {
   background-color: $gray-dark;
-  padding-top: $grid-gutter-width;
-  padding-bottom: $grid-gutter-width;
+  @extend .bg-undefined;
   .field{
     color: #FFF;    
     border-color: #FFF;
@@ -43,8 +43,7 @@
 }
 .bg-alternative {
   background-color: $brand-primary;
-  padding-top: $grid-gutter-width;
-  padding-bottom: $grid-gutter-width;
+  @extend .bg-undefined;
   .field{
     color: #FFF;    
     border-color: #FFF;
@@ -233,6 +232,9 @@
     }
   }
 }
+
+
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

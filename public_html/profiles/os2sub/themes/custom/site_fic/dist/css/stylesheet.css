@@ -9719,34 +9719,30 @@ h1.pane-title,
     padding-top: 30px;
     padding-bottom: 40px; } }
 
-.bg-white {
-  background-color: #FFF;
+.bg-undefined, .bg-white, .bg-darker, .bg-dark, .page-nyheder .main-container, .bg-alternative {
   padding-top: 30px;
   padding-bottom: 30px; }
+
+.bg-white {
+  background-color: #FFF; }
   .bg-white .field {
     color: #222222;
     border-color: #222222; }
 
 .bg-darker {
-  background-color: #222222;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  background-color: #222222; }
   .bg-darker .field {
     color: #FFF;
     border-color: #FFF; }
 
 .bg-dark, .page-nyheder .main-container {
-  background-color: #333333;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  background-color: #333333; }
   .bg-dark .field, .page-nyheder .main-container .field {
     color: #FFF;
     border-color: #FFF; }
 
 .bg-alternative {
-  background-color: #01B5D5;
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  background-color: #01B5D5; }
   .bg-alternative .field {
     color: #FFF;
     border-color: #FFF; }
@@ -11586,15 +11582,13 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
       content: normal; }
     .paragraphs-item-header-text-media .row .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-paragraph-header, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-media .view-content .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-paragraph-header, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .field.field-name-field-paragraph-header, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .field.field-name-field-paragraph-header, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-paragraph-header, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .field.field-name-field-paragraph-header {
       color: #ff4200; }
-    .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .page-nyheder .view-os2sub-nyheder .view-content .paragraph-video-container .paragraph-video, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .paragraph-video-container .paragraph-video, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video {
-      margin-bottom: 15px; }
-      .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .page-nyheder .view-os2sub-nyheder .view-content .paragraph-video-container .paragraph-video iframe, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video iframe, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .paragraph-video-container .paragraph-video iframe, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe {
-        max-width: 100% !important;
-        height: 300px !important;
-        border: 10px solid #192124; }
-      .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .page-nyheder .view-os2sub-nyheder .view-content .paragraph-video-container .paragraph-video .content, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video .content, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .paragraph-video-container .paragraph-video .content, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video .content, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video .content {
-        padding-left: 0;
-        padding-right: 0; }
+    .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .page-nyheder .view-os2sub-nyheder .view-content .paragraph-video-container .paragraph-video iframe, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video iframe, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .paragraph-video-container .paragraph-video iframe, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video iframe, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video iframe {
+      max-width: 100% !important;
+      height: 300px !important;
+      border: 10px solid #192124; }
+    .paragraphs-item-header-text-media .row .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .page-nyheder .view-os2sub-nyheder .view-content .paragraph-video-container .paragraph-video .content, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container .view-content .paragraph-video-container .paragraph-video .content, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .pane-fic-kommende-arrangementer-panel-pane-1 .view-content .paragraph-video-container .paragraph-video .content, .pane-fic-kommende-arrangementer-panel-pane-1 .paragraphs-item-header-text-media .view-content .paragraph-video-container .paragraph-video .content, .paragraphs-item-header-text-media .activities-list-background .activities-list-container .panels-flexible-region-inside .paragraph-video-container .paragraph-video .content, .activities-list-background .activities-list-container .paragraphs-item-header-text-media .panels-flexible-region-inside .paragraph-video-container .paragraph-video .content {
+      padding-left: 0;
+      padding-right: 0; }
 
 .page-node .paragraphs-item-header-text-media {
   padding-bottom: 30px;
