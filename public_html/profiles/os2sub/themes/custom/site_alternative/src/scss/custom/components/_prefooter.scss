@@ -67,18 +67,18 @@
   }
 }
 
-.page-node
-& .prefooter {
-  background-color: $color-background-secondary;
-  margin-top: 20px;
-  .view-os2web-taxonomies-tax-editor-tag-list .item-list {
-    ul {
-      a {
-        background-color: white;
+.page-node {
+  & .prefooter {
+    background-color: $color-background-secondary;
+    margin-top: 20px;
+    .view-os2web-taxonomies-tax-editor-tag-list .item-list {
+      ul {
+        a {
+          background-color: white;
+        }
       }
     }
   }
-}
 
 // --------------------------------------------------
 // Variants
