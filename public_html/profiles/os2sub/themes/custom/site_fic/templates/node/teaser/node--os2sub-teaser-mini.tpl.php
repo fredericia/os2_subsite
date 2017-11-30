@@ -84,6 +84,8 @@
   <?php
   print render($content['field_os2web_base_field_lead_img']);
   ?>
+  <div class="text-contraster">
+    </div>
   <div class="bottom-part">
     <?php if ( (!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted ): ?>
       <header>
