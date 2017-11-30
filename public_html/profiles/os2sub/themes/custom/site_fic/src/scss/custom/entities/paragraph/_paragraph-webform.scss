@@ -15,46 +15,50 @@
 // Styling
 // --------------------------------------------------
 
-.paragraphs-item-webform{
-  fieldset{
-    border:none;
+.paragraphs-item-webform {
+
+  .panel-body {
+    padding: 0;
+  }
+
+  fieldset {
+    border: none;
     box-shadow: none;
     margin: 0;
     padding: 0;
     background-color: transparent;
   }
-  input, select, textarea{
-    background-color: #e6e9ec !important;
-    border: none;
-    border-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    margin-bottom: 4px;
+
+  .form-control {
+    border-width: 0;
   }
-  .form-actions{
+
+  .form-actions {
     text-align: right;
     margin-top: 15px;
-    .webform-submit.form-submit{
+
+    .webform-submit.form-submit {
       @extend .btn;
       @extend .btn-blue;
     }
   }
-  div{
-    margin: 0;
-    padding: 0;
+
+  .form-group:last-child {
+    margin-bottom: $form-group-margin-bottom;
   }
-  .webform-component--row--kolonne-1{
-    div{
-    margin-right: 5px;
+
+  .webform-component--row--kolonne-1 {
+    div {
+      margin-right: 5px;
     }
   }
-    .webform-component--row--kolonne-2{
-      div{
-    margin-left: 5px;
-      }
+  .webform-component--row--kolonne-2 {
+    div {
+      margin-left: 5px;
+    }
   }
-  .field.field-name-field-paragraph-header{
-  text-align: left;
+  .field.field-name-field-paragraph-header {
+    text-align: left;
   }
 }
 

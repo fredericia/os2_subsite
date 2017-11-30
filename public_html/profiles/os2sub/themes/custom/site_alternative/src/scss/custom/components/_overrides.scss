@@ -1,0 +1,9 @@
+.form-control {
+  // Remove inline shadow on iOS (https://stackoverflow.com/questions/23211656/remove-ios-input-shadow)
+  appearance: none;
+
+  &,
+  &:focus {
+    @include box-shadow(none);
+  }
+}

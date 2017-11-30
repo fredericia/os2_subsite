@@ -1,4 +1,8 @@
 @import "mixins/loader";
 @import "variables/loader";
 @import "vendor/loader";
+
+// Drupal 7 specific overrides (load from Bootstrap theme in themes/contrib/bootstrap)
+@import "../../../../contrib/bootstrap/starterkits/sass/scss/overrides";
+
 @import "custom/loader";
