@@ -231,12 +231,7 @@ $header-size: 112px;
     padding-bottom: 10px;
     text-shadow: 3px 3px 4px #000;
   }
-  .white {
-    .views-field-title {
-    color: #333;
-    text-shadow: 3px 3px 4px #fff;
-    }
-  }
+
 
   .views-field-field-os2web-kulturnaut-sname,
   .views-field-field-os2web-kulturnaut-date,
@@ -244,6 +239,19 @@ $header-size: 112px;
     color: white;
     font-size: 1.31em;
   }
+
+  .white {
+    .views-field-title {
+    color: #333;
+    text-shadow: 3px 3px 4px #fff;
+    }
+    .views-field-field-os2web-kulturnaut-sname,
+    .views-field-field-os2web-kulturnaut-date,
+    .views-field-field-os2web-base-field-edi-tags {
+      color: #333;
+    }
+  }
+
   .views-field-field-os2web-kulturnaut-date,{
     text-transform: lowercase;
   }

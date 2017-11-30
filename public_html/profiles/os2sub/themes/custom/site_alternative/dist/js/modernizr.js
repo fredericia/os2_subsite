@@ -1,5 +1,5 @@
 /*!
- * modernizr v3.5.0
+ * modernizr vhttps://registry.npmjs.org/modernizr/-/modernizr-3.5.0.tgz
  * Build https://modernizr.com/download?-animation-arrow-contains-svg-target-template-time-touchevents-setclasses-dontmin
  *
  * Copyright (c)
@@ -36,7 +36,7 @@
 
   var ModernizrProto = {
     // The current version, dummy
-    _version: '3.5.0',
+    _version: 'https://registry.npmjs.org/modernizr/-/modernizr-3.5.0.tgz',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
