@@ -64,6 +64,9 @@ section.block-locale{
       font: normal normal normal 14px/1 FontAwesome;
       border: none;
     }
+    &:focus {
+  outline: none;
+}
   }
   .dropdown-menu{
     min-width: auto;
