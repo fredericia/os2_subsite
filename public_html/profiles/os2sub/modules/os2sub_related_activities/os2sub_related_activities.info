@@ -2,3 +2,4 @@ name = Oplev module for related articles reordering
 core = 7.x
 package = Oplev
 project = os2sub_related_activities
+description = View 'os2web_kulturnaut_events_lists/pane_related_articles' Reordering and limit to 4 items.

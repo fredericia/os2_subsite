@@ -314,10 +314,7 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Relaterede begivenheder';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'infinite_scroll';
-  $handler->display->display_options['pager']['options']['manual_load'] = 1;
-  $handler->display->display_options['pager']['options']['text'] = 'Indlæs flere';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
@@ -1560,7 +1557,6 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Block - contentpage'),
     t('Content pane - related activities'),
     t('Relaterede begivenheder'),
-    t('Indlæs flere'),
     t('View panes'),
     t('Block - activities slideshow'),
     t('Block - Activities Slideshow'),
@@ -1572,6 +1568,7 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Content pane - Activities list (4)'),
     t('Activities list (4)'),
     t('Content pane - activities list (5+load more)'),
+    t('Indlæs flere'),
     t('Dato - slutdato (field_os2web_kulturnaut_date:value2)'),
     t('Content pane - activities list (2+3)'),
     t('Attachment activities 3 (skip 2)'),
