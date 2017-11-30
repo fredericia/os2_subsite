@@ -18,16 +18,21 @@
   padding-bottom: 40px;
   padding-top: 40px;
 
-  .field.field-name-field-knap-link{
-    a{
+  .field.field-name-field-knap-link {
+
+    a {
       @extend .btn;
       @extend .btn-blue;
       margin-bottom: $grid-gutter-width;
+
+      font-family: $headings-font-family;
+      font-size: 1.75em;
     }
   }
 
-  .field.field-name-field-paragraph-map{
-    margin-bottom: ($grid-gutter-width /2 );        
+  .field.field-name-field-paragraph-map {
+    margin-bottom: ($grid-gutter-width /2 );
+
     iframe{
       max-width: 100% !important;
       height: 200px !important;

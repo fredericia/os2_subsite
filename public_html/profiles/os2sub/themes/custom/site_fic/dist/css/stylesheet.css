@@ -9667,6 +9667,9 @@ h2.pane-title, .pane-title.heading-h2 {
   h2.pane-title a, .pane-title.heading-h2 a {
     color: #2a2f36; }
 
+.page-node-31 .modal-link.ctools-modal-contact-modal-style {
+  display: none !important; }
+
 .page-nyheder .page-header-wrapper {
   background-color: #000; }
 
@@ -9905,7 +9908,7 @@ h1.pane-title,
 .paragraphs-item-paragrph-address .field.field-name-field-paragraph-text,
 .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text {
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
-  font-size: 1.875em; }
+  font-size: 1.700em; }
   .paragraphs-item-paragrph-address .field.field-name-field-paragraph-text span,
   .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text span {
     display: block; }
@@ -9932,6 +9935,8 @@ h1.pane-title,
 
 .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items {
   margin-top: 60px; }
+  .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items:first-child {
+    margin-top: 0; }
 
 .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede
 .front .paragraphs-container .entity-paragraphs-item .content,
@@ -11645,7 +11650,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding-bottom: 40px;
   padding-top: 40px; }
   .paragraphs-item-paragrph-address .field.field-name-field-knap-link a {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    font-family: "RBNo21a-Medium", "Lato", sans-serif;
+    font-size: 1.75em; }
   .paragraphs-item-paragrph-address .field.field-name-field-paragraph-map {
     margin-bottom: 15px; }
     .paragraphs-item-paragrph-address .field.field-name-field-paragraph-map iframe {

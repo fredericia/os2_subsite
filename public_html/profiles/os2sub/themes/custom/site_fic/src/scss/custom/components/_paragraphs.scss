@@ -159,19 +159,22 @@
 
   .field.field-name-field-paragraph-text{
     font-family: $headings-font-family;
-    font-size: 1.875em;
+    font-size: 1.700em;
+
     span{
       display: block;
+
       &.phone{
         color: $brand-primary;
       }
+
       &.email{
+
         a{
           color: $brand-secondary;
         }
       }
     }
-
   }
 }
 
@@ -201,6 +204,10 @@
   .field.field-name-field-afsnit.field-type-paragraphs{
     & > .field-items {
       margin-top: 60px;
+
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
   .field.field-name-field-afsnit.field-type-paragraphs{

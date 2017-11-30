@@ -54,6 +54,18 @@ h2.pane-title {
   }
 }
 
+// The contact page (/generelle-kontaktoplysninger)
+.page-node-31 {
+
+  .modal-link {
+
+    &.ctools-modal-contact-modal-style {
+      display: none !important; // Should ONLY be hidden on this page which is why i can reason for a !important.
+    }
+  }
+}
+
+
 .page-nyheder {
   .page-header-wrapper {
     background-color: #000;
