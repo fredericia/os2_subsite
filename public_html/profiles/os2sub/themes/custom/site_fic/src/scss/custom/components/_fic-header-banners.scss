@@ -81,9 +81,9 @@ $desktop-margin-default: 30px;
   .views-slideshow-controls-bottom,
   .field-name-field-os2web-base-field-related,
   .cycle-pager {
+
     > div {
       margin-bottom: 80px;
-      height: 80px;
       overflow: hidden;
     }
 
@@ -213,6 +213,7 @@ $desktop-margin-default: 30px;
 }
 
 .scroll-down {
+
   &-link {
     text-align: center;
     display: none;
@@ -356,8 +357,7 @@ $desktop-margin-default: 30px;
   .front .term-fic-header {
     .views-slideshow-controls-bottom {
       a {
-        width: 132px;
-        font-size: 1.2em;
+        font-size: 1.4em;
         padding: 0 12px 0 20px;
       }
     }

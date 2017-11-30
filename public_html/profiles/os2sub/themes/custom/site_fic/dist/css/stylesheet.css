@@ -10530,7 +10530,6 @@ div.ctools-modal-content {
   .term-fic-header .field-name-field-os2web-base-field-related > div,
   .term-fic-header .cycle-pager > div {
     margin-bottom: 80px;
-    height: 80px;
     overflow: hidden; }
   .term-fic-header .views-slideshow-controls-bottom div,
   .term-fic-header .field-name-field-os2web-base-field-related div,
@@ -10717,8 +10716,7 @@ div.ctools-modal-content {
 
 @media (min-width: 992px) and (max-width: 1229px) {
   .front .term-fic-header .views-slideshow-controls-bottom a {
-    width: 132px;
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding: 0 12px 0 20px; } }
 
 .node {
