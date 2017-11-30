@@ -1,0 +1,4 @@
+name = Oplev module for related articles reordering
+core = 7.x
+package = Oplev
+project = os2sub_related_activities

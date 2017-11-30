@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Code for the OS2sub Banner feature.
+ */
+function os2sub_related_activities_views_pre_render(&$view) {
+// Check if this is the view and display you want to manipulate
+  if ('os2web_kulturnaut_events_lists' == $view->name && 'pane_related_articles' == $view->current_display) {
+//Get current node id
+    if ($node = menu_get_object()) {
+      $nid = $node->nid;
+    }
+    $current_date = new DateTime('now');
+    $output = array();
+// Precessing with backend related nodes
+    if (!empty($node->field_os2web_kulturnaut_rel_acti['und'])) {
+
+
+      $rel_nodes_array = $node->field_os2web_kulturnaut_rel_acti['und'];
+      foreach ($rel_nodes_array as $rel_node_id) {
+        $rel_node = node_load($rel_node_id['nid']);
+        $rel_node_end_date = DateTime::createFromFormat('Y-m-d H:i:s', $rel_node->field_os2web_kulturnaut_date['und'][0]['value2']);
+        if ($current_date < $rel_node_end_date) {
+          $output[] = (int) $rel_node_id['nid'];
+        }
+      }
+      asort($output);
+    }
+
+//We need exactly 4 nodes in this view output
+    $limit = 4 - count($output);
+//If related articals count is more than 4
+    if ($limit <= 0) {
+//we use only 4 first
+      $output = array_slice($output, 0, 4);
+    }
+    else { //we need to add some other articles
+//Firstly we add articles with the same venue
+      $type = 'os2web_kulturnaut_knactivity';
+
+      $query = new \EntityFieldQuery();
+      $result = $query->entityCondition('entity_type', 'node')
+          ->entityCondition('bundle', $type)
+          ->entityCondition('entity_id', array_merge($output, array($nid)), 'NOT IN')
+          ->propertyCondition('status', NODE_PUBLISHED)
+          ->fieldCondition('field_os2web_kulturnaut_date', 'value2', date("Y-m-d"), '>')
+          //->fieldCondition('field_os2web_kulturnaut_date', 'value', $node->field_os2web_kulturnaut_date['und'][0]['value'], '<')
+          ->fieldCondition('field_os2web_kulturnaut_venue', 'tid', $node->field_os2web_kulturnaut_venue['und'][0]['tid'], '=')
+          ->fieldOrderBy('field_os2web_kulturnaut_date', 'value', 'ASC')
+          ->range(0, $limit)
+          ->execute();
+      if (!empty($result['node'])) {
+        $nids = array_keys($result['node']);
+
+        $output = array_merge($output, $nids);
+//Check if we still need more articles
+        $limit = 4 - count($output);
+        if ($limit > 0) {
+//We add more articles
+          $query = new \EntityFieldQuery();
+          $result = $query->entityCondition('entity_type', 'node')
+              ->entityCondition('bundle', $type)
+              ->entityCondition('entity_id', array_merge($output, array($nid)), 'NOT IN')
+              ->propertyCondition('status', NODE_PUBLISHED)
+              ->fieldCondition('field_os2web_kulturnaut_date', 'value2', date("Y-m-d"), '>')
+              ->fieldOrderBy('field_os2web_kulturnaut_date', 'value', 'ASC')
+              ->range(0, $limit)
+              ->execute();
+          if (!empty($result['node'])) {
+            $nids = array_keys($result['node']);
+            $output = array_merge($output, $nids);
+          }
+          else {
+//No more articles, tottaly we have less than 4.
+          }
+        }
+      }
+      else {
+//No articles with the same venue, tottaly we have less than 4.
+      }
+//Set output results to the view
+      foreach ($output as $key => $value) {
+        $view->result[$key]->nid = $value;
+      }
+      $view->result = array_slice($view->result, 0, 4);
+    }
+  }
+}
