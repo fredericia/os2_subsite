@@ -14,6 +14,7 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1,
 .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_2{
   .more-link{
     a{
@@ -34,30 +35,6 @@
   }
 }
 
-.pane-fic-kommende-arrangementer-panel-pane-1 {  
-  .pane-title a {
-    color: #333;
-  }
-  .view-content {
-    @extend .row;
-  }
-  .more-link{
-    float: right;
-    a{
-      @extend .btn;
-      @extend .btn-blue;
-      font-size: 1.75em;
-      display: flex !important;
-      align-items: center;
-      font-family: $headings-font-family;
-      &:before{
-        content:'+';
-        font-size: 2em;
-
-      }
-    }
-  }
-}
 .view.view-instagram-billeder.view-id-instagram_billeder.view-display-id-block{
   .file.file-instagram.file-text-instagram{
     img{
