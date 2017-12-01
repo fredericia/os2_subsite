@@ -25,7 +25,7 @@ function os2sub_related_activities_views_pre_render(&$view) {
           $output[] = (int) $rel_node_id['nid'];
         }
       }
-      asort($output);
+      //asort($output);
     }
 
 //We need exactly 4 nodes in this view output
@@ -79,11 +79,11 @@ function os2sub_related_activities_views_pre_render(&$view) {
       else {
 //No articles with the same venue, tottaly we have less than 4.
       }
-//Set output results to the view
-      foreach ($output as $key => $value) {
-        $view->result[$key]->nid = $value;
-      }
-      $view->result = array_slice($view->result, 0, 4);
     }
+    //Set output results to the view
+    foreach ($output as $key => $value) {
+      $view->result[$key]->nid = $value;
+    }
+    $view->result = array_slice($view->result, 0, 4);
   }
 }
