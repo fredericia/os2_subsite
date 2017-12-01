@@ -14,6 +14,26 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+.view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_2{
+  .more-link{
+    a{
+      @extend .btn;
+      @extend .btn-blue;
+      font-size: 1.75em;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      font-family: $headings-font-family;
+      &:before{
+        content:'+\00a0';
+        font-size: 2em;
+        line-height: 0.8em;
+
+      }
+    }
+  }
+}
+
 .pane-fic-kommende-arrangementer-panel-pane-1 {  
   .pane-title a {
     color: #333;
