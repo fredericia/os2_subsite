@@ -34,7 +34,7 @@
   }
 }
 .bg-dark {
-  background-color: #2a2f36;
+  background-color: $color-dark-gray;
   @extend .bg-undefined;
   .field{
     color: #FFF;    
