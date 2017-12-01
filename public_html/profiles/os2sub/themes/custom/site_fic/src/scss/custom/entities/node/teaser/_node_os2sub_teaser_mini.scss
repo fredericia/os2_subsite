@@ -62,7 +62,7 @@ $image-border: 10px;
     }
   }
   .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
-    font-size: 0.875em;
+    font-size: 0.9em;
     color: $brand-secondary;
     text-transform: uppercase;
   }
@@ -70,7 +70,7 @@ $image-border: 10px;
     h2, h3{
       margin-top: 0px;
       text-transform: uppercase;
-      font-size: 1.75em;
+      font-size: 1.92em;
       font-family: $headings-font-family;
     }
   }
@@ -92,6 +92,7 @@ $image-border: 10px;
     }
   }
   .link.show-more{
+    margin-top: 1em;
     a{
       text-transform: uppercase;
       font-weight: bold;
