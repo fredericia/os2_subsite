@@ -27,7 +27,7 @@
 
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="content"<?php print $content_attributes; ?>>
+  <div <?php print $content_attributes; ?>>
     <div class="container">
       <div class="row">
 
