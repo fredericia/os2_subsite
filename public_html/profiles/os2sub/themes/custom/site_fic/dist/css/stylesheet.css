@@ -10405,7 +10405,7 @@ h1.pane-title,
     border-color: #FFF; }
 
 .bg-dark, .page-nyheder .main-container {
-  background-color: #333333; }
+  background-color: #2a2f36; }
   .bg-dark .field, .page-nyheder .main-container .field {
     color: #FFF;
     border-color: #FFF; }
@@ -10685,7 +10685,7 @@ form.search-form {
     padding: 10px !important;
     width: 60px !important; }
     form.search-form button:active, form.search-form button:hover, form.search-form button:focus {
-      color: #333333; }
+      color: #2a2f36; }
     form.search-form button span {
       font-size: 20px;
       font-family: 'Glyphicons Halflings'; }
@@ -10860,7 +10860,7 @@ section.block-locale {
         .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a,
         .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a {
-          color: #333333;
+          color: #2a2f36;
           background-color: #ffffff; }
           .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active,
           .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover,
@@ -11747,7 +11747,7 @@ div.ctools-modal-content {
   font-weight: bold; }
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:active, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:hover, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:focus {
     text-decoration: none;
-    color: #333333; }
+    color: #2a2f36; }
 
 .node--os2web_base_news--os2sub_teaser_mini {
   border: 10px solid #fff;
@@ -11760,12 +11760,14 @@ div.ctools-modal-content {
       display: block;
       background-color: #ff4200;
       color: #fff;
-      font-size: 0.8em;
-      font-weight: bold;
+      font-size: 0.875em;
+      line-height: 0.875;
+      font-weight: 800;
+      text-transform: uppercase;
       padding: 10px; }
       .node--os2web_base_news--os2sub_teaser_mini .upper-part a:active, .node--os2web_base_news--os2sub_teaser_mini .upper-part a:hover, .node--os2web_base_news--os2sub_teaser_mini .upper-part a:focus {
         text-decoration: none;
-        color: #333333; }
+        color: #2a2f36; }
   .node--os2web_base_news--os2sub_teaser_mini .bottom-part {
     position: absolute;
     bottom: 0;
@@ -12079,15 +12081,15 @@ body.page-search.page-search-content section.block.block-system.block-system > f
   height: 60px !important; }
 
 body.page-search.page-search-content section.block.block-system.block-system > form input {
-  color: #333333; }
+  color: #2a2f36; }
   body.page-search.page-search-content section.block.block-system.block-system > form input::-webkit-input-placeholder {
-    color: #333333; }
+    color: #2a2f36; }
   body.page-search.page-search-content section.block.block-system.block-system > form input::-moz-placeholder {
-    color: #333333; }
+    color: #2a2f36; }
   body.page-search.page-search-content section.block.block-system.block-system > form input:-ms-input-placeholder {
-    color: #333333; }
+    color: #2a2f36; }
   body.page-search.page-search-content section.block.block-system.block-system > form input::placeholder {
-    color: #333333; }
+    color: #2a2f36; }
 
 body.page-search.page-search-content .field.field-name-field-os2web-kulturnaut-date {
   color: #a18f81; }
