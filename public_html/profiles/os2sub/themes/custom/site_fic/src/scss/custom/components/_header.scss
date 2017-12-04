@@ -95,7 +95,19 @@ section.block-locale{
   max-width: 100%;
   height: auto;
 }
-
+.front{
+  header.page-header-wrapper{
+    .backstretch{
+      &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to bottom, black, transparent);
+      }
+    }
+  }
+}
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
