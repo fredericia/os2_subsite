@@ -10618,6 +10618,10 @@ a.icon-after .glyphicon {
 .breadcrumb {
   background: none;
   padding-left: 0; }
+  .breadcrumb a {
+    color: #777777; }
+  .breadcrumb .active {
+    color: #ff4200; }
 
 .search-and-title {
   padding-top: 0px; }
@@ -10667,6 +10671,19 @@ h2.pane-title, .pane-title.heading-h2 {
   .flexbox .row--equal-height-columns > .view-content:after,
   .flexbox .row--equal-height-columns > .view-content:before {
     content: normal; }
+
+.menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2 li a {
+  color: #192124;
+  font-family: "RBNo21a-Medium", "Lato", sans-serif;
+  font-size: 1.75em;
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2 li.active a {
+  color: #ff4200; }
+
+.os2-sectiont .col-sm-9 {
+  border-left: solid 1px #ccc; }
 
 .content-inner {
   padding-top: 20px;
@@ -11006,7 +11023,7 @@ section.block-locale {
   max-width: 100%;
   height: auto; }
 
-.front header.page-header-wrapper .backstretch:before {
+header.page-header-wrapper .backstretch:before {
   content: '';
   position: absolute;
   width: 100%;
@@ -12579,6 +12596,44 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   text-transform: uppercase;
   font-weight: bold; }
 
+.os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
+.os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary {
+  color: #192124; }
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h2.h2,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2 {
+    color: #022846; }
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary p,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h3,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .heading-h3,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .kontaktblok-headline,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h4,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .heading-h4 {
+    color: #192124; }
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li {
+    padding-left: 1em;
+    text-indent: -1em; }
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li::before {
+    content: "•\00a0\00a0";
+    color: #ff4200;
+    /* or whatever color you prefer */ }
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary a {
+    color: #ff4200; }
+
+.os2-sectiont .field-slideshow.field-slideshow-1 {
+  border: solid 6px #192124; }
+
 /* General */
 .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
 .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_2 .more-link a {
@@ -12629,6 +12684,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding-bottom: 120px !important; }
   .activities-list-background .activities-list-container {
     float: unset; }
+
+.panel-pane.pane-node-title .os2-box .os2-box-body.pane-content h1.pane-title, .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .pane-title.heading-h1, .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .pane-title.banner-headline {
+  font-size: 3.375em; }
 
 .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner h2.pane-title, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner .pane-title.heading-h2 {
   margin-bottom: 32px; }
