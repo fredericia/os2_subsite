@@ -26,7 +26,7 @@
   }
 }
 .bg-darker {
-  background-color: $gray-darker;
+  background-color: $color-black;
   @extend .bg-undefined;
   .field{
     color: #FFF;    
@@ -93,18 +93,13 @@
   }
 }
 .pane-instagram-billeder {
-  .view-content {
-    @include make-row();
-    background-image: url('../img/bg-instagram.png');
-    background-repeat: no-repeat;
-    background-position-x: 20px;
-    background-position-y: 20px;
+  .views-row.views-row-0{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
   }
   .views-row {
-    @include make-xs-column(6);
-    @include make-sm-column(3);
     margin-bottom: $grid-gutter-width;
-
   }
 }
 .panel-pane.views-container.full-width .views-container-inner {
@@ -274,11 +269,6 @@
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-  .pane-instagram-billeder {
-    .views-row-first {
-      @include make-sm-column-push(3);
-    }
-  }
 
 }
 
