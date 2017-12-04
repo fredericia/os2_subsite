@@ -47,9 +47,11 @@ $image-border: 10px;
       }
       a{
         background-color: $color-red;
+        font-family: $font-rbn021a;
+        font-weight: normal;
         border: 0;
         padding: 5px 10px;
-        font-size: 0.875em;
+        font-size: 1.5em;
         height: auto;
         width: auto;
         margin-top: 30px;
