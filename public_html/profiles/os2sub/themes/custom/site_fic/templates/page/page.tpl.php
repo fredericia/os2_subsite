@@ -1,6 +1,6 @@
 <header role="navigation" id="page-header" class="page-header-wrapper">
   <div class="header-container container">
-    <div class="row">
+    <div class="row hidden-xs">
       <div class="logo-wrapper col-sm-4 col-md-3 col-lg-4">
         <?php if ( $logo ): ?>
           <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -13,6 +13,7 @@
              title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
         <?php endif; ?>
       </div>
+
       <nav role="navigation" id="topnav" class="topnav-wrapper user-nav col-sm-8 col-md-9 col-lg-8">
         <?php if ( !empty($secondary_nav) ): ?>
           <?php print render($secondary_nav); ?>
@@ -21,6 +22,7 @@
           <?php print render($page['navigation']); ?>
         <?php endif; ?>
       </nav>
+
       <nav id="navbar" role="banner" class="col-sm-12 col-sm-8 col-md-9 col-lg-8 <?php print $navbar_classes; ?>">
         <div class="headerwrapper-inner">
           <div class="navbar-header">
@@ -46,7 +48,9 @@
         </div>
       </nav>
     </div>
+
     <?php print render($page['header']); ?>
+
   </div>
 </header>
 

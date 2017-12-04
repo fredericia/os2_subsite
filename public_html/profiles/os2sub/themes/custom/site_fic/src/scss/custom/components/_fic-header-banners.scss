@@ -8,6 +8,7 @@
 // --------------------------------------------------
 // Variables
 // --------------------------------------------------
+
 $desktop-width-2buttons: 570px;
 $desktop-width-3buttons: 370px;
 $desktop-width-4buttons: 270px;
@@ -19,6 +20,7 @@ $desktop-margin-default: 30px;
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+
 .term-fic-header {
   @include container-fixed();
   font-family: $font-rbn021a;
@@ -136,7 +138,7 @@ $desktop-margin-default: 30px;
       margin-right: $desktop-margin-default;
 
       &.views-row-first,
-      &:first-child{
+      &:first-child {
         display: none;
       }
 
@@ -162,14 +164,14 @@ $desktop-margin-default: 30px;
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 60px;
+    min-height: 60px;
     width: 100%;
     z-index: 1;
     text-transform: uppercase;
 
     .blue-block {
       background-color: $color-blue;
-      height: 60px;
+      min-height: 60px;
       width: 100%;
 
       a {
@@ -234,8 +236,11 @@ $desktop-margin-default: 30px;
 }
 
 .page-taxonomy {
+
   .view-mode-fic_header {
-    &, & .cycle-slide {
+
+    &,
+    & .cycle-slide {
       display: table !important;
       height: 100%;
       width: 100%;
@@ -250,7 +255,9 @@ $desktop-margin-default: 30px;
 }
 
 .term-fic-header {
+
   .num-slides {
+
     &-3 .views-slideshow-controls-bottom a {
       width: $desktop-width-2buttons;
     }
@@ -273,6 +280,7 @@ $desktop-margin-default: 30px;
   }
 
   .num-items {
+
     &-3 a {
       width: $desktop-width-2buttons;
     }
@@ -296,11 +304,13 @@ $desktop-margin-default: 30px;
 }
 
 .node-type-os2web-base-contentpage {
+
   .page-header-wrapper {
     margin-bottom: 30px;
   }
 
   .term-fic-header {
+
     .slide-bottom {
       bottom: -30px;
     }
@@ -311,7 +321,6 @@ $desktop-margin-default: 30px;
   }
 }
 
-
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -321,74 +330,135 @@ $desktop-margin-default: 30px;
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-up(xs) {}
 
-
-}
 // Mobile - only
 @include media-breakpoint-only(xs) {
 
+  .term-fic-header {
 
-}
+    .slide-content-wrapper {
 
-// Tablet - and up
-@include media-breakpoint-up(sm) {
+      .field-name-description-field,
+      .field-name-field-os2web-base-field-summary {
+        font-size: 2.5em;
+        line-height: 1em;
 
-
-
-}
-
-// Tablet - only
-@include media-breakpoint-only(sm) {
-
-
-  .social-icons {}
-}
-
-// Desktop - and up
-@include media-breakpoint-up(md) {
-
-
-}
-
-// Desktop - only
-@include media-breakpoint-only(md) {
-
-  .front .term-fic-header {
-    .views-slideshow-controls-bottom {
-      a {
-        font-size: 1.4em;
-        padding: 0 12px 0 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
       }
+    }
+
+    .views_slideshow_main {
+      height: auto !important;
+    }
+
+    .views-slideshow-controls-bottom,
+    .field-name-field-os2web-base-field-related,
+    .cycle-pager {
+
+      > div {
+        margin-bottom: 0;
+      }
+
+      .views-slideshow-pager-field-item,
+      .field-item {
+        margin-right: 5px;
+
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .slide-bottom {
+      top: 100%;
+      bottom: auto;
+
+      .blue-block {
+        min-height: auto;
+      }
+
+      div {
+
+        &:nth-child(even) {
+          padding-left: 2.5px;
+        }
+
+        &:nth-child(odd) {
+          padding-right: 2.5px;
+        }
+      }
+
+      .text {
+        font-size: 1.7em;
+        line-height: 1em;
+      }
+    }
+
+    .contact.modal-link {
+      font-size: 1.7em;
+      line-height: 1em;
+    }
+
+    .num-slides {
+
+      &-3 .views-slideshow-controls-bottom a,
+      &-4 .views-slideshow-controls-bottom a,
+      &-5 .views-slideshow-controls-bottom a,
+      &-6 .views-slideshow-controls-bottom a,
+      &-7 .views-slideshow-controls-bottom a {
+        width: 170px
+      }
+    }
+
+    .num-items {
+
+      &-3 a,
+      &-4 a,
+      &-5 a,
+      &-6 a,
+      &-7 a {
+        width: 170px;
+      }
+    }
+  }
+
+  .scroll-down-wrapper {
+    height: 90px;
+
+    margin: 0;
+
+    .scroll-down-link {
+      display: none;
     }
   }
 }
 
+// Tablet - and up
+@include media-breakpoint-up(sm) {}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md) {}
+
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Social icons
-  .social-icons {}
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-}
+.no-touchevents {}
 
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------
-
