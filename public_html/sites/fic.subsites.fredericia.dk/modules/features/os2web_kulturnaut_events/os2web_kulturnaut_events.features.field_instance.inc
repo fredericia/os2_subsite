@@ -1209,7 +1209,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'settings' => array(
           'image_link' => 'content',
           'image_style' => 'os2sub_teaser_mini_image',
-          'single_image_delta' => '',
+          'single_image_delta' => 1,
         ),
         'type' => 'single_image',
         'weight' => 0,
