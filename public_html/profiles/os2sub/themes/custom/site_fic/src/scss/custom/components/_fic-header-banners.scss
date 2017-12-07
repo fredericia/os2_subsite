@@ -229,6 +229,10 @@ $desktop-margin-default: 30px;
       width: 60px;
       background-image: url('../img/lookdown.png');
       background-repeat: no-repeat;
+      transition: opacity 0.3s;
+    }
+    span:hover {
+      opacity: 0.5;
     }
   }
 }

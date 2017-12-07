@@ -11797,7 +11797,12 @@ div.ctools-modal-content {
     height: 60px;
     width: 60px;
     background-image: url("../img/lookdown.png");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    -webkit-transition: opacity 0.3s;
+         -o-transition: opacity 0.3s;
+            transition: opacity 0.3s; }
+  .scroll-down-link span:hover {
+    opacity: 0.5; }
 
 .page-taxonomy .view-mode-fic_header, .page-taxonomy .view-mode-fic_header .cycle-slide {
   display: table !important;

@@ -16,7 +16,7 @@
 </section>
 <div class="scroll-down-wrapper" aria-hidden="TRUE">
   <span class="scroll-down-link">
-    <a href="#main-content">
+    <a id="scroll-down-link" href="#main-content">
       <span></span>
     </a>
   </span>
