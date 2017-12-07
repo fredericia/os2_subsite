@@ -10,8 +10,8 @@
 function single_image_field_formatter_info() {
   $formatters = array(
     'single_image' => array(
-      'label' => t('Single Image'),
-      'field types' => array('image'),
+      'label' => t('Single Image'), 
+      'field types' => array('image'), 
       'settings' => array(
         'image_style' => '',
         'image_link' => '',
@@ -27,7 +27,7 @@ function single_image_field_formatter_info() {
  * Implements hook_field_formatter_settings_form().
  */
 function single_image_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
-  // Get default
+  // Get default 
   $element = image_field_formatter_settings_form($field, $instance, $view_mode, $form, $form_state);
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
@@ -38,7 +38,7 @@ function single_image_field_formatter_settings_form($field, $instance, $view_mod
     '#type' => 'textfield',
     '#default_value' => $settings['single_image_delta'],
     '#empty_option' => t('Random'),
-    //'#element_validate' => array('element_validate_integer_positive'),
+    '#element_validate' => array('element_validate_integer_positive'),
   );
 
   return $element;
