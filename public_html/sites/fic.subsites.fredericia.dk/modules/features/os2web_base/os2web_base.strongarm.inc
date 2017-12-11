@@ -625,7 +625,7 @@ function os2web_base_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
@@ -654,6 +654,9 @@ function os2web_base_strongarm() {
       'os2sub_teaser_mini' => array(
         'custom_settings' => TRUE,
       ),
+      'fic_header' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'display' => array(
@@ -663,6 +666,10 @@ function os2web_base_strongarm() {
             'visible' => FALSE,
           ),
           'os2sub_teaser_mini' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'search_result' => array(
             'weight' => '0',
             'visible' => FALSE,
           ),
@@ -1143,9 +1150,9 @@ function os2web_base_strongarm() {
     'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
-    'prefix' => '',
+    'prefix' => 'da',
     'weight' => '0',
-    'javascript' => 'pqGRZCY3cOD_eAyfwXLrzKUh9fhnbwls_aFyrFXxJkI',
+    'javascript' => 'BYk13XCG_av2Lj3Nksdrd37BwvpaO01Wn7tGJYXE268',
   );
   $export['language_default'] = $strongarm;
 
