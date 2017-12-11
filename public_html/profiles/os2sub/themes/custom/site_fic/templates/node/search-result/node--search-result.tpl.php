@@ -81,23 +81,18 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-
-
   <div class='row'>
-
     <div class='col-xs-12 col-sm-4 col-md-3'>
       <?php print render($content['field_os2web_base_field_lead_img']); ?>
       <?php print render($content['field_os2web_base_field_photo']); ?>
       <?php print render($content['field_os2web_base_field_image']); ?>
       <?php print render($content['field_os2web_kulturnaut_slidesho']); ?>
-      
-      
     </div>
-
     <div class='col-xs-12 col-sm-8 col-md-9'>
-      <?php print render($content['field_os2web_kulturnaut_date']); ?>
-      <?php print render($content['field_sektion']); ?>
-
+      <div class='top-part'>
+        <?php print render($content['field_os2web_kulturnaut_date']); ?>
+        <?php print render($content['field_sektion']); ?>
+      </div>
       <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
         <header>
           <?php print render($title_prefix); ?>
@@ -124,17 +119,14 @@
       hide($content['links']);
       hide($content['field_tags']);
 
-      if(!empty($content['field_os2web_kulturnaut_descrip'] )){
+      if (!empty($content['field_os2web_kulturnaut_descrip'])) {
         hide($content['field_os2web_kulturnaut_longdesc']);
       }
-      
+
       print render($content);
       ?>
-      <a href="<?php print $node_url; ?>"><?php print t('Read more'); ?></a>
+      <a class='read-more' href="<?php print $node_url; ?>"><?php print t('Read more'); ?></a>
     </div>
-
-
-
 
     <?php
     // Only display the wrapper div if there are tags or links.

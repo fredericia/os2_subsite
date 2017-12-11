@@ -12671,6 +12671,51 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   border: solid 6px #192124; }
 
 /* General */
+.view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row {
+  margin-top: 35px;
+  margin-bottom: 35px; }
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .taxonomy-term .field.field-name-field-os2web-base-field-image.field-type-image,
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .taxonomy-term .field.field-name-field-os2web-base-field-photo.field-type-image,
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .taxonomy-term .field.field-name-field-os2web-kulturnaut-slidesho.field-type-image,
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .taxonomy-term .field.field-name-field-os2web-base-field-lead-img.field-type-image,
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row article .field.field-name-field-os2web-base-field-image.field-type-image,
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row article .field.field-name-field-os2web-base-field-photo.field-type-image,
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row article .field.field-name-field-os2web-kulturnaut-slidesho.field-type-image,
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row article .field.field-name-field-os2web-base-field-lead-img.field-type-image {
+    border: solid 6px #192124; }
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * h2, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * .heading-h2, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header h2, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header .heading-h2 {
+    margin-top: 0; }
+    .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * .heading-h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header .heading-h2 a {
+      color: #192124;
+      font-size: 2.375em;
+      font-family: "RBNo21a-Medium", "Lato", sans-serif;
+      text-transform: uppercase;
+      font-weight: normal; }
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .field.field-name-field-sektion.field-type-taxonomy-term-reference a {
+    color: #ff4200;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold; }
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .field.field-name-field-os2web-kulturnaut-date.field-type-datetime {
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: #a18f81; }
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row a.read-more {
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 1em; }
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .top-part {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .top-part span {
+      display: block; }
+      .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .top-part span:after {
+        content: '\00a0|\00a0'; }
+
 .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
 .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer.view-display-id-panel_pane_2 .more-link a {
   font-size: 1.75em;

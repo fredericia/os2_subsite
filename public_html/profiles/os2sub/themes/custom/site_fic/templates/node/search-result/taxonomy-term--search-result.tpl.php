@@ -41,30 +41,21 @@
  */
 ?>
 <div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
-
-
   <div class='row'>
-
     <div class='col-xs-12 col-sm-4 col-md-3'>
       <?php print render($content['field_os2web_base_field_image']); ?>
     </div>
-
     <div class='col-xs-12 col-sm-8 col-md-9'>
-
       <?php if (!$page): ?>
         <h2><a href="<?php print $term_url; ?>"><?php print $term_name; ?></a></h2>
       <?php endif; ?>
-
-
-
       <div class="content">
-        <?php 
+        <?php
         hide($content['field_os2web_base_field_image']);
-        print render($content); 
+        print render($content);
         ?>
-        <a href="<?php print $term_url; ?>"><?php print t('Read more'); ?></a>
+        <a class='read-more' href="<?php print $term_url; ?>"><?php print t('Read more'); ?></a>
       </div>
-
     </div>
   </div>
 </div>
