@@ -86,46 +86,52 @@
   <div class='row'>
 
     <div class='col-xs-12 col-sm-4 col-md-3'>
-     <?php print render($content['field_os2web_base_field_lead_img']); ?>
+      <?php print render($content['field_os2web_base_field_lead_img']); ?>
     </div>
 
     <div class='col-xs-12 col-sm-8 col-md-9'>
       <?php print render($content['field_sektion']); ?>
-      
+
       <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
-    <header>
-      <?php print render($title_prefix); ?>
-      <?php if (!$page && !empty($title)): ?>
-        <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+        <header>
+          <?php print render($title_prefix); ?>
+          <?php if (!$page && !empty($title)): ?>
+            <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php if ($display_submitted): ?>
+            <span class="submitted">
+              <?php print $user_picture; ?>
+              <?php print $submitted; ?>
+            </span>
+          <?php endif; ?>
+        </header>
       <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php if ($display_submitted): ?>
-        <span class="submitted">
-          <?php print $user_picture; ?>
-          <?php print $submitted; ?>
-        </span>
-      <?php endif; ?>
-    </header>
-  <?php endif; ?>
-      
-      <?php print render($content['body']); ?>
+      <?php
+      hide($content['field_os2web_base_field_lead_img']);
+      hide($content['field_sektion']);
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['field_tags']);
+      print render($content);
+      ?>
     </div>
 
-  
 
- 
-  <?php
-  // Only display the wrapper div if there are tags or links.
-  $field_tags = render($content['field_tags']);
-  $links = render($content['links']);
-  if ($field_tags || $links):
-    ?>
-    <footer>
-    <?php print $field_tags; ?>
-      <?php print $links; ?>
-    </footer>
+
+
+    <?php
+    // Only display the wrapper div if there are tags or links.
+    $field_tags = render($content['field_tags']);
+    $links = render($content['links']);
+    if ($field_tags || $links):
+      ?>
+      <footer>
+        <?php print $field_tags; ?>
+        <?php print $links; ?>
+      </footer>
     <?php endif; ?>
-  <?php print render($content['comments']); ?>
+    <?php print render($content['comments']); ?>
 
   </div>
 </article>
