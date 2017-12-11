@@ -10688,6 +10688,22 @@ h2.pane-title, .pane-title.heading-h2 {
 .modal-content.popups-body {
   background-color: #fff; }
 
+blockquote.bq-fic {
+  border: 0;
+  text-align: center;
+  font-size: 2em;
+  font-family: "RBNo21a-Medium", sans-serif;
+  line-height: 1.05em;
+  width: 90%;
+  margin: auto; }
+  blockquote.bq-fic *, blockquote.bq-fic:before, blockquote.bq-fic:after {
+    color: #01B5D5 !important;
+    display: inline; }
+  blockquote.bq-fic:before {
+    content: '“'; }
+  blockquote.bq-fic:after {
+    content: '”'; }
+
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
