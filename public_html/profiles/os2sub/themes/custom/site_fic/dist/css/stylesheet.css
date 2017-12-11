@@ -10704,6 +10704,9 @@ blockquote.bq-fic {
   blockquote.bq-fic:after {
     content: '”'; }
 
+.img-bordered {
+  border: 5px solid #192124; }
+
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
