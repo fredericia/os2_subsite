@@ -89,10 +89,13 @@
       <?php print render($content['field_os2web_base_field_lead_img']); ?>
       <?php print render($content['field_os2web_base_field_photo']); ?>
       <?php print render($content['field_os2web_base_field_image']); ?>
+      <?php print render($content['field_os2web_kulturnaut_slidesho']); ?>
+      
       
     </div>
 
     <div class='col-xs-12 col-sm-8 col-md-9'>
+      <?php print render($content['field_os2web_kulturnaut_date']); ?>
       <?php print render($content['field_sektion']); ?>
 
       <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
@@ -114,12 +117,20 @@
       hide($content['field_os2web_base_field_lead_img']);
       hide($content['field_os2web_base_field_photo']);
       hide($content['field_os2web_base_field_image']);
+      hide($content['field_os2web_kulturnaut_date']);
+      hide($content['field_os2web_kulturnaut_slidesho']);
       hide($content['field_sektion']);
       hide($content['comments']);
       hide($content['links']);
       hide($content['field_tags']);
+
+      if(!empty($content['field_os2web_kulturnaut_descrip'] )){
+        hide($content['field_os2web_kulturnaut_longdesc']);
+      }
+      
       print render($content);
       ?>
+      <a href="<?php print $node_url; ?>"><?php print t('Read more'); ?></a>
     </div>
 
 

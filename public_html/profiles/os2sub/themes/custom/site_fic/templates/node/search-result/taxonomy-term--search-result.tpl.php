@@ -61,8 +61,8 @@
         <?php 
         hide($content['field_os2web_base_field_image']);
         print render($content); 
-        
         ?>
+        <a href="<?php print $term_url; ?>"><?php print t('Read more'); ?></a>
       </div>
 
     </div>
