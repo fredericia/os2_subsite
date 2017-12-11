@@ -1992,6 +1992,15 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 200,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 1,
+      ),
       'spotbox' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2072,6 +2081,12 @@ function os2web_base_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
       'spotbox' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2129,6 +2144,17 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'hidden',
+        'module' => 'single_image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+          'single_image_delta' => 1,
+        ),
+        'type' => 'single_image',
         'weight' => 0,
       ),
       'spotbox' => array(

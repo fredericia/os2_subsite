@@ -87,6 +87,7 @@
 
     <div class='col-xs-12 col-sm-4 col-md-3'>
       <?php print render($content['field_os2web_base_field_lead_img']); ?>
+      <?php print render($content['field_os2web_base_field_photo']); ?>
     </div>
 
     <div class='col-xs-12 col-sm-8 col-md-9'>
@@ -109,6 +110,7 @@
       <?php endif; ?>
       <?php
       hide($content['field_os2web_base_field_lead_img']);
+      hide($content['field_os2web_base_field_photo']);
       hide($content['field_sektion']);
       hide($content['comments']);
       hide($content['links']);
