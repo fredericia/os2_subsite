@@ -542,9 +542,11 @@ function os2web_base_field_default_field_instances() {
       'search_result' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 1,
+        'settings' => array(
+          'trim_length' => 200,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 2,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -617,11 +619,8 @@ function os2web_base_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
-        'module' => 'paragraphs',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'paragraphs_view',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 4,
       ),
       'spotbox' => array(
@@ -704,7 +703,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -863,7 +862,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -931,7 +930,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 19,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -991,7 +990,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 11,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1081,7 +1080,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 13,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1142,9 +1141,14 @@ function os2web_base_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
+        'module' => 'single_image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+          'single_image_delta' => 1,
+        ),
+        'type' => 'single_image',
+        'weight' => 0,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1245,7 +1249,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 18,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1313,7 +1317,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 20,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1378,10 +1382,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
-        'module' => 'file',
         'settings' => array(),
-        'type' => 'file_table',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1475,7 +1478,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 21,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1543,7 +1546,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1603,7 +1606,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 12,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1669,7 +1672,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1735,7 +1738,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1802,10 +1805,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1876,12 +1878,9 @@ function os2web_base_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
-        'module' => 'node_reference',
-        'settings' => array(
-          'node_reference_view_mode' => 'full',
-        ),
-        'type' => 'node_reference_node',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1945,7 +1944,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'spotbox' => array(
         'label' => 'above',
