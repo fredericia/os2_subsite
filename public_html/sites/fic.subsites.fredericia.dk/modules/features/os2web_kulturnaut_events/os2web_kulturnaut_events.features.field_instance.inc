@@ -192,7 +192,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'module' => 'date',
         'settings' => array(
           'format_type' => 'short_teaser_mini_',
-          'fromto' => 'both',
+          'fromto' => 'value',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
@@ -1234,7 +1234,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'module' => 'single_image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'os2sub_teaser_mini_image',
+          'image_style' => 'os2sub_search',
           'single_image_delta' => 1,
         ),
         'type' => 'single_image',

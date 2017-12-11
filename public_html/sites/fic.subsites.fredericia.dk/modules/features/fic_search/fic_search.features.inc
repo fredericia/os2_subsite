@@ -12,6 +12,30 @@ function fic_search_views_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function fic_search_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: os2sub_search.
+  $styles['os2sub_search'] = array(
+    'label' => 'OS2Sub search (810 x 405)',
+    'effects' => array(
+      17 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 810,
+          'height' => 405,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_default_search_api_index().
  */
 function fic_search_default_search_api_index() {
@@ -144,21 +168,7 @@ function fic_search_default_search_api_server() {
       "database" : "default:default",
       "min_chars" : "3",
       "partial_matches" : 0,
-      "indexes" : {
-        "fic_node_index" : {
-          "title" : {
-            "table" : "search_api_db_fic_node_index_text",
-            "type" : "text",
-            "boost" : "1.0"
-          },
-          "search_api_language" : {
-            "table" : "search_api_db_fic_node_index",
-            "column" : "search_api_language",
-            "type" : "string",
-            "boost" : "1.0"
-          }
-        },
-        "fic_node_and_term_index" : {
+      "indexes" : { "fic_node_and_term_index" : {
           "search_api_language" : {
             "table" : "search_api_db_fic_node_and_term_index",
             "column" : "search_api_language",

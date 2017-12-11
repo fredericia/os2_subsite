@@ -57,7 +57,7 @@ function fic_search_views_default_views() {
   $handler->display->display_options['fields']['taxonomy_term']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['taxonomy_term']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['taxonomy_term']['display'] = 'view';
-  $handler->display->display_options['fields']['taxonomy_term']['view_mode'] = 'os2sub_spotbox_list';
+  $handler->display->display_options['fields']['taxonomy_term']['view_mode'] = 'search_result';
   $handler->display->display_options['fields']['taxonomy_term']['bypass_access'] = 0;
   /* Sort criterion: Search: Relevance */
   $handler->display->display_options['sorts']['search_api_relevance']['id'] = 'search_api_relevance';
