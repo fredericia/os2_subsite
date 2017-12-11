@@ -116,6 +116,13 @@ if(typeof(CKEDITOR) !== 'undefined') {
                 'class' : 'pull-right'
             }
         },
-
+        {
+            name : 'Citat',
+            element : 'blockquote',
+            attributes :
+            {
+                'class' : 'bq-fic'
+            }
+        }
     ]);
 }

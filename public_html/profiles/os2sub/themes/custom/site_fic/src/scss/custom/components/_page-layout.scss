@@ -133,6 +133,29 @@ h2.pane-title {
 .modal-content.popups-body{
   background-color: #fff;
 }
+
+blockquote.bq-fic {
+  border: 0;
+  text-align: center;
+  font-size: 2em;
+  font-family: $font-rbn021a;
+  line-height: 1.05em;
+  width: 90%;
+  margin: auto;
+
+  *, &:before, &:after {
+    color: $brand-primary !important;
+    display: inline;
+  }
+
+  &:before {
+    content: '“';
+  }
+
+  &:after {
+    content: '”';
+  }
+}
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
