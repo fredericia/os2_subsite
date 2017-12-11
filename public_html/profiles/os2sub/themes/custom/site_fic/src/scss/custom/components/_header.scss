@@ -24,7 +24,7 @@
   background-image: url('../img/topbg.png');
   background-repeat: repeat-x;
 }
-
+#views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
 form.search-form{
   height: 60px;
   input.form-control.form-text{
@@ -37,16 +37,32 @@ form.search-form{
       color: #fff;
     }
   }
-  button{
-    box-shadow: none;
-    padding: 10px !important;
-    width: 60px !important;
-    &:active, &:hover, &:focus{
-      color: $gray-dark;
+  .views-exposed-widgets{
+    position: relative;
+    .views-exposed-widget.views-widget-filter-search_api_views_fulltext{
+      padding: 0;
+      width: 241px;
     }
-    span{
-      font-size: 20px;
-      font-family: 'Glyphicons Halflings';
+    .views-exposed-widget.views-submit-button{
+      position: absolute;
+      right: 0;
+      font-size: 0;
+      top: 6px;
+      & button{
+        box-shadow: none;
+        padding: 10px !important;
+        width: 60px !important;
+        outline: none;
+        &:active, &:hover, &:focus{
+          color: $gray-dark;
+        }
+        &:after{
+          content: "\e003";
+          font-size: 20px;
+          font-family: 'Glyphicons Halflings';
+
+        }
+      }
     }
   }
 }
@@ -65,13 +81,13 @@ section.block-locale{
       border: none;
     }
     &:focus {
-  outline: none;
-}
+      outline: none;
+    }
   }
   .dropdown-menu{
     min-width: auto;
     border: none;
-    border-radius: unset; 
+    border-radius: unset;
     top: auto;
     ul.language-switcher-locale-url{
       padding: 0px 10px;
@@ -95,17 +111,17 @@ section.block-locale{
   max-width: 100%;
   height: auto;
 }
-  header.page-header-wrapper{
-    .backstretch{
-      &:before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(to bottom, black, transparent);
-      }
+header.page-header-wrapper{
+  .backstretch{
+    &:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom, black, transparent);
     }
   }
+}
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------

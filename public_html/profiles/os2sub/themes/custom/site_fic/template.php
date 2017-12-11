@@ -55,9 +55,7 @@ function site_fic_process_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function site_fic_preprocess_page(&$variables) {
-  $search_form = drupal_get_form('search_form');
-  $search_box = drupal_render($search_form);
-  $variables['search_box'] = $search_box;
+  
   $current_theme = variable_get('theme_default', 'none');
   $primary_navigation_name = variable_get('menu_main_links_source', 'main-menu');
   $secondary_navigation_name = variable_get('menu_secondary_links_source', 'user-menu');
