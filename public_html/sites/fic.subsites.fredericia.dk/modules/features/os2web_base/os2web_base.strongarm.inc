@@ -999,6 +999,9 @@ function os2web_base_strongarm() {
       'fic_header' => array(
         'custom_settings' => TRUE,
       ),
+      'search_result' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1017,6 +1020,10 @@ function os2web_base_strongarm() {
           ),
           'fic_header' => array(
             'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'search_result' => array(
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
