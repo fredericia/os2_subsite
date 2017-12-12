@@ -62,13 +62,13 @@ function os2web_contact_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '7',
+          'weight' => '1',
         ),
         'workbench_access' => array(
           'weight' => '8',
         ),
         'metatags' => array(
-          'weight' => '8',
+          'weight' => '2',
         ),
       ),
       'display' => array(),
