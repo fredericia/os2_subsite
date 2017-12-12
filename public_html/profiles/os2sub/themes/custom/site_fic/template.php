@@ -242,7 +242,9 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   // Processing modal contact field.
   $field_contact_value = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_contact');
   if (!empty($field_contact_value)) {
-    $vars['contact_link'] = l(t('Contact'), 'modal/node/' . $field_contact_value[0]['nid'] . '/nojs', array(
+    $contact_node = node_load($field_contact_value[0]['nid']);
+    _site_fic_get_node_translation($contact_node);
+    $vars['contact_link'] = l(t('Contact'), 'modal/node/' . $contact_node->nid . '/nojs', array(
       'attributes' => array(
         'class' => array(
           'modal-link',

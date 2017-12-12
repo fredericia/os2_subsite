@@ -172,6 +172,13 @@
     font-size: 2em;
     color: $brand-primary; 
   }
+  .all-contacts {
+    .field,
+    .field-items,
+    .field-item {
+      display: inline;
+    }
+  }
 }
 
 // --------------------------------------------------
