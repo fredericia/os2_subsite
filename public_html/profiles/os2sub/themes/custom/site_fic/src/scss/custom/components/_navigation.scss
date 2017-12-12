@@ -128,6 +128,7 @@ $navigation-bottom-border-color: $color-white;
     .navbar-collapse{
       padding: 0;
       width: 100%;
+      z-index: 7;
       ul.navbar-nav{
         float: right;
         > li {

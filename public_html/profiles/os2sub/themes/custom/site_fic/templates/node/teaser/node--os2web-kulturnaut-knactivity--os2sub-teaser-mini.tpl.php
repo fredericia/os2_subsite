@@ -80,40 +80,38 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> "<?php print $attributes; ?>>
-<a href="<?php print $node_url; ?>">
-<div class="overlay-wrapper">
-    <?php
-    // Hide comments, tags, and links now so that we can render them later.
-    hide($content['comments']);
-    hide($content['links']);
-    hide($content['field_tags']);
+    <div class="overlay-wrapper">
+         <?php
+      // Hide comments, tags, and links now so that we can render them later.
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['field_tags']);
 
-    print render($content['field_os2web_kulturnaut_slidesho']);
-    ?>
-  
-    <div class="overlay">
-    <div class="overlay-content">
+      print render($content['field_os2web_kulturnaut_slidesho']);
+        ?>
+      <div class="overlay">
+        <div class="overlay-content">
+          </a>
+          <div class="link-show-more">
+            <a class="btn btn-black" href="<?php print $node_url; ?>"><?php print t('Read more') ?></a>
+          </div>
 
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-  
-  </a>
-  
-  
-  
-   <?php
+
+
+  <?php
   print render($content['field_os2web_kulturnaut_date']);
   ?>
-  
-  <?php if ( (!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted ): ?>
+  <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
     <header>
       <?php print render($title_prefix); ?>
-      <?php if ( !$page && !empty($title) ): ?>
+      <?php if (!$page && !empty($title)): ?>
         <h3 <?php print $title_attributes; ?>><?php print $title; ?></h3>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-      <?php if ( $display_submitted ): ?>
+      <?php if ($display_submitted): ?>
         <span class="submitted">
           <?php print $user_picture; ?>
           <?php print $submitted; ?>
@@ -123,14 +121,12 @@
   <?php endif; ?>
 
   <?php
-
   print render($content['field_os2web_kulturnaut_descrip']);
   ?>
-
   <div class="link show-more">
     <a href="<?php print $node_url; ?>"><?php print t('Read more') ?></a>
   </div>
-  <?php if ( !empty($content['field_tags']) || !empty($content['links']) ): ?>
+  <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
     <footer>
       <?php print render($content['field_tags']); ?>
     </footer>

@@ -2699,6 +2699,15 @@ var header = (function ($) {
       event.stopPropagation();
       // Restore default link behaviour.
     });
+
+    //Smooth scroll to #main-content
+    $("#scroll-down-link").on('click', function (e) {
+      e.preventDefault();
+      $('html, body').animate({
+        scrollTop: $("#main-content").offset().top
+      }, 500);
+    });
+
   }
 
   /**

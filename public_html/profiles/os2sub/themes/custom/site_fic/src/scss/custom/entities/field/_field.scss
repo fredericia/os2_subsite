@@ -1,0 +1,69 @@
+// |--------------------------------------------------------------------------
+// | Slideshow
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .field-type-image
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Banner mixin
+
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+.os2-sectiont{
+  article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full{
+    .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
+    .field.field-name-body.field-type-text-with-summary{
+      color: #192124;
+      h2.h2{
+        color: #022846;
+      }
+      p, li, h3, h4{
+        color: #192124;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        padding-left: 1em; 
+        text-indent: -1em;
+      }
+
+      li::before {
+        content: "•\00a0\00a0";
+        color: $brand-secondary; /* or whatever color you prefer */
+      }
+      a{
+        color: $brand-secondary;
+      }
+    }
+
+  }
+  .field-slideshow.field-slideshow-1{
+      border: solid 6px #192124;
+  }
+}
+
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}

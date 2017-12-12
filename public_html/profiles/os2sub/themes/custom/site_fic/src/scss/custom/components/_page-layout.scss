@@ -26,8 +26,14 @@ $md-page-layout-content-inner-padding-bottom: 60px;
 // Page layout
 
 .breadcrumb {
+  a{
+    color: $gray-light;
+  }
   background: none;
   padding-left: 0;
+  .active{
+    color: $brand-secondary;
+  }
 }
 
 .search-and-title{
@@ -84,7 +90,7 @@ h2.pane-title {
   .row--equal-height-columns {
 
     &:not(.view),
-    > .view-content {
+      > .view-content {
       display: flex;
 
       flex-wrap: wrap;
@@ -97,11 +103,62 @@ h2.pane-title {
 
       // Fixes Safari issue (https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap)
       &:after,
-      &:before {
+        &:before {
         content: normal; // IE doesn't support `initial`
       }
     }
   }
+}
+.menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2{
+  li{
+    a{
+      color: $color-black;
+      font-family: $headings-font-family;
+      font-size: 1.75em;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+  li.active{
+    a{
+      color: $brand-secondary;
+    }
+  }
+}
+.os2-sectiont{
+  .col-sm-9{
+    border-left: solid 1px #ccc;
+  }
+}
+.modal-content.popups-body{
+  background-color: #fff;
+}
+
+blockquote.bq-fic {
+  border: 0;
+  text-align: center;
+  font-size: 2em;
+  font-family: $font-rbn021a;
+  line-height: 1.05em;
+  width: 90%;
+  margin: auto;
+
+  *, &:before, &:after {
+    color: $brand-primary !important;
+    display: inline;
+  }
+
+  &:before {
+    content: '“';
+  }
+
+  &:after {
+    content: '”';
+  }
+}
+
+.img-bordered {
+  border: 5px solid $color-black;
 }
 
 // --------------------------------------------------
@@ -162,7 +219,7 @@ h2.pane-title {
 @include media-breakpoint-up(md) {
 
   // Page layout
- 
+
 }
 
 // Desktop - only

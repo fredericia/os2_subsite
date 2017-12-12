@@ -102,13 +102,14 @@
         & .overlay{
 
           .overlay-content {
-            padding: 10px;
+            padding-left: 65px;
+            padding-right: 65px;
             .field-type-text-with-summary{
               font-size: 1.75em;
             }
             a{
               padding: 10px 15px;
-              font-size: 1.5em;
+              font-size: 2em;
               margin-top: 65px;
             }
           }

@@ -99,23 +99,21 @@ if(typeof(CKEDITOR) !== 'undefined') {
                 'class' : 'img-circle'
             }
         },
-
         {
-            name : 'Billede - flyder t venstre',
+            name : 'Billede - med ramme',
             element : 'img',
             attributes :
             {
-                'class' : 'pull-left'
+                'class' : 'img-bordered'
             }
         },
         {
-            name : 'Billede - flyder t højre',
-            element : 'img',
+            name : 'Citat',
+            element : 'blockquote',
             attributes :
             {
-                'class' : 'pull-right'
+                'class' : 'bq-fic'
             }
-        },
-
+        }
     ]);
 }
