@@ -338,3 +338,51 @@ function bellcom_preprocess_views_view_table(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_menu_breadcrumb_alter().
+ */
+function bellcom_menu_breadcrumb_alter(&$active_trail, $item) {
+  // Do changes only for search page.
+  if (!in_array($item['path'], array('search/content', 'search/content/%'))) {
+    return;
+  }
+
+  // Remove duplicated breadcrumb trail.
+  foreach($active_trail as $k => $val) {
+    if (isset($val['router_path']) && $val['router_path'] == 'search/content') {
+      unset($active_trail[$k]);
+    }
+  }
+}
+
+/**
+ * Preprocesses for the "breadcrumb" theme hook.
+ */
+function bellcom_preprocess_breadcrumb(&$variables) {
+  // Do not modify breadcrumbs if the Path Breadcrumbs module should be used.
+  if (_bootstrap_use_path_breadcrumbs()) {
+    return;
+  }
+
+  $item = menu_get_item();
+  $breadcrumb = &$variables['breadcrumb'];
+  $args = arg();
+  // Do changes only for search page, not empty search request
+  // and added breadcrumbs active page title.
+  if (!in_array($item['path'], array('search/content', 'search/content/%'))
+    || empty($breadcrumb)
+    || !bootstrap_setting('breadcrumb_title')) {
+    return;
+  }
+
+  // Get last key.
+  $key = count($breadcrumb) - 1;
+  if (empty($args[2])) {
+    // Unset last breadcrumb link.
+    unset($breadcrumb[$key]);
+  } else {
+    // Change link title to value from search request.
+    $breadcrumb[$key]['data'] = substr($args[2], 0, 20);
+  }
+}
