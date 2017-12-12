@@ -72,6 +72,9 @@ ul.social-icon-list {
       padding: 10px 12px;
       margin-right: 10px;
       display: inline-block;
+      width: 54px;
+      height: 54px;
+      text-align: center;
 
       &.social-icon-linkedin {
         &:before{
@@ -88,6 +91,12 @@ ul.social-icon-list {
       &.social-icon-youtube {
         &:before{
           content: "\f167";
+        }
+      }
+
+      &.social-icon-facebook {
+        &:before{
+          content: $fa-var-facebook;
         }
       }
 
