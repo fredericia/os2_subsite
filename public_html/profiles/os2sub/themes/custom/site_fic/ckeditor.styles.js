@@ -116,4 +116,23 @@ if(typeof(CKEDITOR) !== 'undefined') {
             }
         }
     ]);
+
+    CKEDITOR.on('dialogDefinition', function(ev) {
+        // Take the dialog name and its definition from the event data.
+        var dialogName = ev.data.name;
+        var dialogDefinition = ev.data.definition;
+
+        // Check if the definition is from the dialog window you are
+        // interested in (the "Image" dialog window).
+        if ( dialogName == 'image' ) {
+            // Get a reference to the "Advanced" tab.
+            var advancedTab = dialogDefinition.getContents('advanced');
+            console.log(advancedTab);
+
+            // Set the default value for the Class field.
+            var imgClass = advancedTab.get('txtGenClass');
+            // Add the same class like we add in styles above.
+            imgClass['default'] = 'img-bordered';
+        }
+    });
 }
