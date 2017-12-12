@@ -14,7 +14,6 @@
 // Styling
 // --------------------------------------------------
 .btn{
-  
   border: 5px solid $color-black;
   font-family: $font-lato;
   font-weight: 900;
@@ -27,12 +26,19 @@
   border-radius: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
+
+
+  word-break: break-all;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 // --------------------------------------------------
 // Variants
 // ----
+
 .btn{
+
   &.btn-red {
     background-color: $color-red;
     border-color: $color-red;
@@ -63,7 +69,6 @@
     }
   }
 
- 
   &.btn-full-width {
     width: 100%;
     padding-left: 0;

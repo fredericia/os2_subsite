@@ -357,6 +357,10 @@ $desktop-margin-default: 30px;
       height: auto !important;
     }
 
+    .views_slideshow_cycle_slide {
+      width: 100% !important;
+    }
+
     .views-slideshow-controls-bottom,
     .field-name-field-os2web-base-field-related,
     .cycle-pager {
@@ -412,7 +416,7 @@ $desktop-margin-default: 30px;
       &-5 .views-slideshow-controls-bottom a,
       &-6 .views-slideshow-controls-bottom a,
       &-7 .views-slideshow-controls-bottom a {
-        width: 170px
+        width: 142px
       }
     }
 
@@ -423,7 +427,7 @@ $desktop-margin-default: 30px;
       &-5 a,
       &-6 a,
       &-7 a {
-        width: 170px;
+        width: 142px;
       }
     }
   }
