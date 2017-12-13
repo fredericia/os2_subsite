@@ -12057,6 +12057,10 @@ div.ctools-modal-content {
   .node.node-os2web-contact-contact.node--os2web_contact_contact--full h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .heading-h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner-headline {
     font-size: 2em;
     color: #01B5D5; }
+  .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .field,
+  .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .field-items,
+  .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .field-item {
+    display: inline; }
 
 .os2-section.os2-section-light .pane-node-field-os2web-kulturnaut-slidesho img {
   border: solid 6px #192124; }

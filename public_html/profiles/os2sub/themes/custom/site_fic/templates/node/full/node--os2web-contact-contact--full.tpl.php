@@ -79,12 +79,6 @@
  * @ingroup templates
  */
 ?>
-<?php global $language; ?>
-<?php if ( language_default()->language == $language->language ): ?>
-  <?php $contact_url = '/' . 'contact-0' ?>
-<?php else: ?>
-  <?php $contact_url = '/' . $language->language . '/contact-0' ?>
-<?php endif; ?>
 
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
@@ -95,12 +89,14 @@
     hide($content['comments']);
     hide($content['links']);
     hide($content['field_tags']);
+    hide($content['field_os2web_contact_field_ldesc']);
+    hide($content['field_os2web_contact_field_link']);
     print render($content);
   ?>
   <div class="all-contacts">
-  <?php print t('See all contact persons')?>
- <a href="<?php print $contact_url ?>" class="btn btn-red"><?php print t('here'); ?></a>
- </div>
+    <?php print render($content['field_os2web_contact_field_ldesc']);?>
+    <?php print render($content['field_os2web_contact_field_link']);?>
+   </div>
  <?php
     // Only display the wrapper div if there are tags or links.
     $field_tags = render($content['field_tags']);
