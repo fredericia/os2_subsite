@@ -333,7 +333,7 @@ function bellcom_menu_link__slinky(array $variables) {
 
   // If this is a parent link, slinky require is to just link to a #
   if ($element['#below']) {
-    unset($element['#href']);
+    $element['#href'] = '';
 
     $element['#localized_options']['fragment'] = 'content';
     $element['#localized_options']['external'] = TRUE;
