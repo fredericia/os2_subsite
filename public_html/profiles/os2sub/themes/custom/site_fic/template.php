@@ -10,6 +10,7 @@
  */
 function site_fic_preprocess_html(&$variables) {
   $current_theme = variable_get('theme_default', 'none');
+  $theme_path = path_to_theme();
 
   // Paths.
   $variables['path_js'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/js';
@@ -18,21 +19,18 @@ function site_fic_preprocess_html(&$variables) {
   $variables['path_font'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/fonts';
 
   // Add out fonts from Google Fonts API.
-  drupal_add_css(
-    'https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i',
-    array('type' => 'external')
-    );
-//
-//  // Live reload.
-//  if (variable_get('environment', FALSE) == 'local') {
-//    $live_reload_file = 'http://127.0.0.1:35729/livereload.js';
-//    drupal_add_js(
-//      $live_reload_file,
-//      array(
-//        'group' => JS_LIBRARY,
-//      )
-//    );
-//  }
+  drupal_add_css('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i', array('type' => 'external'));
+
+  drupal_add_js($theme_path . '/dist/js/modernizr.js', [
+    'type' => 'file',
+    'scope' => 'footer',
+    'group' => JS_LIBRARY,
+  ]);
+  drupal_add_js($theme_path . '/dist/js/core.js', [
+    'type' => 'file',
+    'scope' => 'footer',
+    'group' => JS_THEME,
+  ]);
 
   // Body classes.
   $variables['classes_array'][] = 'footer-attached';
