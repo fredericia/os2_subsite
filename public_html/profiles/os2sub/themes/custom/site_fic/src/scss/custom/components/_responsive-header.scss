@@ -29,7 +29,8 @@
   // We are in a hurry, why everything has been !important'ed.
   // i made this decisions, because it would take a long time to
   // avoid using it, because of the specificity used elsewhere.
-  .search-form {
+  .search-form,
+  .views-exposed-form {
 
     .form-control {
       border: 0;
@@ -52,14 +53,18 @@
       background-color: #fff;
 
       padding: $padding-base-vertical $padding-base-horizontal !important;
-      font-size: $font-size-base !important;
+      font-size: 0 !important;
       line-height: $line-height-base !important;
 
-      .icon {
-        font-size: inherit !important;
+      &:after {
+        font-size: $font-size-base !important;
         color: #ff4200;
       }
     }
+  }
+
+  .views-exposed-widget.views-submit-button {
+    top: 0 !important;
   }
 }
 
