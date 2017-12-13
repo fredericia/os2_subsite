@@ -96,9 +96,9 @@
      <?php print render($content['field_personale_jobtitel']); ?>
     </div>
     <div class='right'>
-      <?php if ($content['field_personale_telefon']): ?>
+      <?php if (!empty($content['field_personale_telefon'])): ?>
     <?php print render($content['field_personale_telefon']); ?>
-  <?php elseif ($content['field_personale_telefon_disp']): ?>
+  <?php elseif (!empty($content['field_personale_telefon_disp'])): ?>
     <?php print render($content['field_personale_telefon_disp']); ?>
   <?php endif; ?>
     <?php print render($content['field_personale_email']); ?>
