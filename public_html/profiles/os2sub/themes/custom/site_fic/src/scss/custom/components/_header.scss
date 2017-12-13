@@ -131,30 +131,16 @@ header.page-header-wrapper{
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
-
-}
+@include media-breakpoint-up(xs) {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
-
-  // Header
-  .header {
-  }
-}
+@include media-breakpoint-only(xs) {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
-
-}
+@include media-breakpoint-up(sm) {}
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-  // Header
-  .header {
-  }
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
@@ -163,41 +149,19 @@ header.page-header-wrapper{
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
-
-}
+@include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-  // Header
-  .header {
-  }
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-  // Header
-  .header {
-  }
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Header
-  .header {
-  }
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-  // Header
-  .header {
-  }
-}
+.no-touchevents {}
 
 // --------------------------------------------------
 // Mixins

@@ -1,0 +1,77 @@
+.responsive-header {
+  margin-bottom: 10px;
+
+  .logo {
+
+    img {
+      max-height: 70px;
+      //margin-left: 0 - floor( ( $grid-gutter-width / 2 ) );
+    }
+  }
+
+  .flexy-spacer {
+    flex-grow: 1;
+  }
+
+  .sidr__toggle {
+    padding: 20px 0; // Fat finger proof
+
+    background-color: transparent;
+    border-color: transparent;
+
+    .icon {
+      font-size: 24px;
+
+      color: #fff;
+    }
+  }
+
+  // We are in a hurry, why everything has been !important'ed.
+  // i made this decisions, because it would take a long time to
+  // avoid using it, because of the specificity used elsewhere.
+  .search-form {
+
+    .form-control {
+      border: 0;
+
+      height: $input-height-base !important; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+      padding: $padding-base-vertical $padding-base-horizontal !important;
+      font-size: $font-size-large !important;
+      line-height: $line-height-base !important;
+      color: $text-color !important;
+      background-color: #fff;
+      border-color: #fff;
+
+      @include placeholder(#ff4200 !important);
+    }
+
+    .btn {
+      width: auto !important;
+
+      border: 1px solid #fff;
+      background-color: #fff;
+
+      padding: $padding-base-vertical $padding-base-horizontal !important;
+      font-size: $font-size-base !important;
+      line-height: $line-height-base !important;
+
+      .icon {
+        font-size: inherit !important;
+        color: #ff4200;
+      }
+    }
+  }
+}
+
+.responsive-header__row {
+
+  + .responsive-header__row {
+    margin-top: 10px;
+  }
+}
+
+.responsive-header__row--first {
+  display: flex;
+
+  align-content: center;
+}

@@ -18,6 +18,12 @@
     "grunt-sass": "^2.0.0",
     "grunt-scss-lint": "^0.5.0",
     "grunt-shell": "^2.1.0",
-    "cross-env": "^5.1.0"
+    "cross-env": "^5.1.0",
+    "content-transitions": "^1.0.4",
+    "readable-bootstrap-breakpoints": "^1.0.2",
+    "sidr": "^2.2.1",
+    "sidr-bootstrap-theme": "^1.0.1",
+    "slinky-bootstrap-theme": "^1.0.2",
+    "jquery-slinky": "^3.0.0"
   }
 }

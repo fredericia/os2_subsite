@@ -1,61 +1,113 @@
-<header role="navigation" id="page-header" class="page-header-wrapper">
-  <div class="header-container container">
-    <div class="row hidden-xs">
-      <div class="logo-wrapper col-sm-4 col-md-3 col-lg-4">
-        <?php if ( $logo ): ?>
-          <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-            <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
-          </a>
-        <?php endif; ?>
+<!-- Begin - sidr source provider -->
+<aside class="sidr-source-provider">
 
-        <?php if ( !empty($site_name) ): ?>
-          <a class="name navbar-brand" href="<?php print $front_page; ?>"
-             title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-        <?php endif; ?>
-      </div>
+  <?php if ( $logo ): ?>
+      <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+      </a>
+  <?php endif; ?>
 
-      <nav role="navigation" id="topnav" class="topnav-wrapper user-nav col-sm-8 col-md-9 col-lg-8">
-        <?php if ( !empty($secondary_nav) ): ?>
-          <?php print render($secondary_nav); ?>
-        <?php endif; ?>
-        <?php if ( !empty($page['navigation']) ): ?>
-          <?php print render($page['navigation']); ?>
-        <?php endif; ?>
-      </nav>
+    <!-- Begin - navigation -->
+    <div class="slinky-menu">
 
-      <nav id="navbar" role="banner" class="col-sm-12 col-sm-8 col-md-9 col-lg-8 <?php print $navbar_classes; ?>">
-        <div class="headerwrapper-inner">
-          <div class="navbar-header">
-            <?php if ( !empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation']) ): ?>
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            <?php endif; ?>
-          </div>
-          <?php if ( !empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation']) ): ?>
-            <div class="navbar-collapse collapse">
-              <nav role="navigation">
-                <?php if ( !empty($primary_nav) ): ?>
-                  <?php print render($primary_nav); ?>
-                <?php endif; ?>
-              </nav>
-            </div>
-          <?php endif; ?>
-          <?php
-            $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
-            print render($block['content']);
-          ?>
-        </div>
-      </nav>
+      <?php if ( !empty($menu_slinky__primary) ): ?>
+        <?php print render($menu_slinky__primary); ?>
+      <?php endif; ?>
+
     </div>
+    <!-- End - navigation -->
 
-    <?php print render($page['header']); ?>
+</aside>
+<!-- End - sidr source provider -->
 
-  </div>
+<!-- Begin - header -->
+<header role="navigation" id="page-header" class="page-header-wrapper">
+
+    <div class="header-container container">
+
+        <!-- Begin - desktop header -->
+        <div class="row hidden-xs">
+            <div class="logo-wrapper col-sm-4 col-md-3 col-lg-4">
+              <?php if ( $logo ): ?>
+                  <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+                  </a>
+              <?php endif; ?>
+
+              <?php if ( !empty($site_name) ): ?>
+                  <a class="name navbar-brand" href="<?php print $front_page; ?>"
+                     title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+              <?php endif; ?>
+            </div>
+
+            <nav role="navigation" id="topnav" class="topnav-wrapper user-nav col-sm-8 col-md-9 col-lg-8">
+              <?php if ( !empty($secondary_nav) ): ?>
+                <?php print render($secondary_nav); ?>
+              <?php endif; ?>
+              <?php if ( !empty($page['navigation']) ): ?>
+                <?php print render($page['navigation']); ?>
+              <?php endif; ?>
+            </nav>
+
+            <nav id="navbar" role="banner" class="col-sm-12 col-sm-8 col-md-9 col-lg-8 <?php print $navbar_classes; ?>">
+                <div class="headerwrapper-inner">
+
+                    <div class="navbar-header">
+                      <?php if ( !empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation']) ): ?>
+                          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                              <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                      <?php endif; ?>
+                    </div>
+
+                  <?php if ( !empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation']) ): ?>
+                      <div class="navbar-collapse collapse">
+                          <nav role="navigation">
+                            <?php if ( !empty($primary_nav) ): ?>
+                              <?php print render($primary_nav); ?>
+                            <?php endif; ?>
+                          </nav>
+                      </div>
+                  <?php endif; ?>
+
+                  <?php print $search_box; ?>
+                </div>
+            </nav>
+        </div>
+        <!-- End - desktop header -->
+
+        <!-- Begin - responsive header -->
+        <div class="responsive-header visible-xs">
+            <div class="responsive-header__row responsive-header__row--first">
+
+              <?php if ( $logo ): ?>
+                  <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                      <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+                  </a>
+              <?php endif; ?>
+
+                <div class="flexy-spacer"></div>
+
+                <button class="sidr__toggle">
+                    <span class="icon fa fa-bars"></span>
+                </button>
+
+            </div>
+
+            <div class="responsive-header__row responsive-header__row--second">
+              <?php print $search_box; ?>
+            </div>
+        </div>
+        <!-- End - responsive header -->
+
+      <?php print render($page['header']); ?>
+
+    </div>
 </header>
+<!-- End - header -->
 
 <div class="main-container">
   <div class="row search-and-title">
@@ -75,7 +127,7 @@
             <?php if ( !empty($breadcrumb) ): print $breadcrumb; endif; ?>
           </div>
         </div>
-  
+
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
         <?php print render($title_suffix); ?>
@@ -108,7 +160,7 @@
       <?php print render($page['sidebar_second']); ?>
     </aside>  <!-- /#sidebar-second -->
   <?php endif; ?>
-</div>  
+</div>
 <div class="upper-footer">
   <?php if (!empty($page['footer'])) : ?>
     <div class="container footer-container">
@@ -136,49 +188,49 @@
             <?php if (!empty($theme_settings['contact_information']['business_startup_year']) ) : ?>
               <?php print t('Siden ').$theme_settings['contact_information']['business_startup_year']; ?><br/>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['address']) ) : ?>
               <?php print $theme_settings['contact_information']['address']; ?><br/>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['zipcode']) ) : ?>
               <?php print $theme_settings['contact_information']['zipcode']; ?><br/>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['city']) ) : ?>
               <?php print $theme_settings['contact_information']['city']; ?><br/>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['phone_system']) ) : ?>
               <?php print '<a title="Ring til '.$theme_settings['contact_information']['phone_readable'].'" 
                 href="tel:'.$theme_settings['contact_information']['phone_system'].'">'; ?>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['phone_readable']) ) : ?>
               <?php print $theme_settings['contact_information']['phone_readable']; ?></br>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['phone_system']) ) : ?>
               <?php print '</a>'; ?><br/>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['email']) ) : ?>
               <?php print '<a href="mailto:'.$theme_settings['contact_information']['email'].' 
                 Title="Send email">'.$theme_settings['contact_information']['email'].'</a>'; ?><br/>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['working_hours']) ) : ?>
               <?php print $theme_settings['contact_information']['working_hours']; ?></br>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['cvr_nr']) ) : ?>
               <br/><?php print $theme_settings['contact_information']['cvr_nr']; ?></br>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['giro_nr']) ) : ?>
               <?php print $theme_settings['contact_information']['giro_nr']; ?></br>
             <?php endif; ?>
-  
+
             <?php if (!empty($theme_settings['contact_information']['ean']) ) : ?>
               <?php print $theme_settings['contact_information']['ean']; ?></br>
             <?php endif; ?>
