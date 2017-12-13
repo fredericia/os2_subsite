@@ -374,7 +374,7 @@ function os2web_base_strongarm() {
         'custom_settings' => TRUE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
@@ -510,7 +510,7 @@ function os2web_base_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
@@ -522,6 +522,18 @@ function os2web_base_strongarm() {
         'custom_settings' => TRUE,
       ),
       'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'fic_header' => array(
+        'custom_settings' => FALSE,
+      ),
+      'os2sub_spotbox_list' => array(
+        'custom_settings' => FALSE,
+      ),
+      'os2sub_teaser_mini' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
     ),
@@ -543,6 +555,10 @@ function os2web_base_strongarm() {
       'display' => array(
         'language' => array(
           'default' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'search_result' => array(
             'weight' => '0',
             'visible' => FALSE,
           ),
@@ -625,7 +641,7 @@ function os2web_base_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'print' => array(
         'custom_settings' => FALSE,
@@ -654,6 +670,9 @@ function os2web_base_strongarm() {
       'os2sub_teaser_mini' => array(
         'custom_settings' => TRUE,
       ),
+      'fic_header' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'display' => array(
@@ -663,6 +682,10 @@ function os2web_base_strongarm() {
             'visible' => FALSE,
           ),
           'os2sub_teaser_mini' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'search_result' => array(
             'weight' => '0',
             'visible' => FALSE,
           ),
@@ -992,6 +1015,9 @@ function os2web_base_strongarm() {
       'fic_header' => array(
         'custom_settings' => TRUE,
       ),
+      'search_result' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -1010,6 +1036,10 @@ function os2web_base_strongarm() {
           ),
           'fic_header' => array(
             'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'search_result' => array(
+            'weight' => '1',
             'visible' => TRUE,
           ),
         ),
@@ -1143,9 +1173,9 @@ function os2web_base_strongarm() {
     'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
-    'prefix' => '',
+    'prefix' => 'da',
     'weight' => '0',
-    'javascript' => 'pqGRZCY3cOD_eAyfwXLrzKUh9fhnbwls_aFyrFXxJkI',
+    'javascript' => 'BYk13XCG_av2Lj3Nksdrd37BwvpaO01Wn7tGJYXE268',
   );
   $export['language_default'] = $strongarm;
 

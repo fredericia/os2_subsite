@@ -26,6 +26,11 @@ Drupal.views.ajaxView = function(settings) {
   var selector = '.view-dom-id-' + settings.view_dom_id;
   this.$view = $(selector);
 
+  // If view is not present return to prevent errors.
+  if (!this.$view.lenght) {
+    return;
+  }
+
   // Retrieve the path to use for views' ajax.
   var ajax_path = Drupal.settings.views.ajax_path;
 

@@ -13,7 +13,67 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+h2.pane-title{
+  color: $brand-primary;
+}
 
+.view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search{
+  .views-row{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    .taxonomy-term, 
+    article{
+      .field.field-name-field-os2web-base-field-image.field-type-image,
+      .field.field-name-field-os2web-base-field-photo.field-type-image,
+      .field.field-name-field-os2web-kulturnaut-slidesho.field-type-image,
+      .field.field-name-field-os2web-base-field-lead-img.field-type-image{
+        border: solid 6px $color-black;
+      }
+    }
+    & *, header{
+      h2{
+        margin-top: 0;
+        a{
+          color: $color-black;
+          font-size: 2.375em;
+          font-family: $headings-font-family;
+          text-transform: uppercase;
+          font-weight: normal;
+        }
+      }
+    }
+    .field.field-name-field-sektion.field-type-taxonomy-term-reference{
+      a{
+        color: $brand-secondary;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-family: $font-open-sans;
+        font-weight: bold;
+      }
+    }
+    .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
+      text-transform: uppercase;
+      font-family: $font-open-sans;
+      font-weight: bold;
+      color: #a18f81;
+    }
+    a.read-more{
+      text-transform: uppercase;
+      font-family: $font-lato;
+      font-size: 1em;
+    }
+    .top-part{
+      display: flex;
+
+      span{
+        display: block;
+        &:after{
+          content: '\00a0|\00a0';
+        }
+      }
+    }
+  }
+}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
