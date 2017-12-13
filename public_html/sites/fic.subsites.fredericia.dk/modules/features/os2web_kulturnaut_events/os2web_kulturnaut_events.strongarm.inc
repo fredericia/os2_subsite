@@ -194,7 +194,7 @@ function os2web_kulturnaut_events_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_os2web_kulturnaut_knactivity_pattern';
-  $strongarm->value = '';
+  $strongarm->value = 'fic-kommende-arrangementer/[node:title]';
   $export['pathauto_node_os2web_kulturnaut_knactivity_pattern'] = $strongarm;
 
   $strongarm = new stdClass();
