@@ -12671,6 +12671,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   border: solid 6px #192124; }
 
 /* General */
+h2.pane-title, .pane-title.heading-h2 {
+  color: #01B5D5; }
+
 .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row {
   margin-top: 35px;
   margin-bottom: 35px; }

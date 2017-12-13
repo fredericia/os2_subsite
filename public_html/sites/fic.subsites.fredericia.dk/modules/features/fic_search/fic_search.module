@@ -14,7 +14,7 @@ include_once 'fic_search.features.inc';
  * @param $form_state
  * @param $form_id
  */
-function os2sub_frontpage_form_alter(&$form, &$form_state, $form_id) {
+function fic_search_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-os2sub-kulturnaut-search-pane-activities-search') {
     $form['#action'] = 	base_path() . 'soeg';
     $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search');
@@ -25,3 +25,16 @@ function os2sub_frontpage_form_alter(&$form, &$form_state, $form_id) {
     $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search');
   }
 }
+
+function fic_search_preprocess_views_view(&$variables) {
+
+  $input = $variables['view']->exposed_raw_input;
+  $title = t("Search results for \"@text\"", array('@text'=> array_shift($input)));
+
+  $view = $variables['view'];
+  if ($view->name == 'os2sub_kulturnaut_multi_search' && $view->current_display == 'pane_activities_multi_search') {
+    $view->set_title($title);
+    drupal_set_title($title);
+  }
+}
+
