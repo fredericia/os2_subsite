@@ -39,6 +39,13 @@ function fic_search_views_default_views() {
   $handler->display->display_options['header']['result']['id'] = 'result';
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = 'No results';
+  $handler->display->display_options['empty']['area']['format'] = 'full_html';
   /* Field: Indexed Multiple types: Node */
   $handler->display->display_options['fields']['node']['id'] = 'node';
   $handler->display->display_options['fields']['node']['table'] = 'search_api_index_fic_node_and_term_index';
@@ -137,6 +144,15 @@ function fic_search_views_default_views() {
   /* Display: FIC search */
   $handler = $view->new_display('panel_pane', 'FIC search', 'pane_activities_multi_search');
   $handler->display->display_options['exposed_block'] = TRUE;
+  $handler->display->display_options['allow']['use_pager'] = 0;
+  $handler->display->display_options['allow']['items_per_page'] = 0;
+  $handler->display->display_options['allow']['offset'] = 0;
+  $handler->display->display_options['allow']['link_to_view'] = 0;
+  $handler->display->display_options['allow']['more_link'] = 0;
+  $handler->display->display_options['allow']['path_override'] = 0;
+  $handler->display->display_options['allow']['title_override'] = 0;
+  $handler->display->display_options['allow']['exposed_form'] = 0;
+  $handler->display->display_options['allow']['fields_override'] = 0;
   $translatables['os2sub_kulturnaut_multi_search'] = array(
     t('Master'),
     t('more'),
@@ -147,6 +163,7 @@ function fic_search_views_default_views() {
     t('Desc'),
     t('Show More'),
     t('Displaying @start - @end of @total'),
+    t('No results'),
     t('Fulltext search'),
     t('FIC search'),
     t('View panes'),
