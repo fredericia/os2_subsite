@@ -191,15 +191,15 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'date_only',
-          'fromto' => 'both',
+          'format_type' => 'short_teaser_mini_',
+          'fromto' => 'value',
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'spotbox' => array(
         'label' => 'hidden',
@@ -318,9 +318,10 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -589,9 +590,12 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 200,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 3,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -1230,7 +1234,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'module' => 'single_image',
         'settings' => array(
           'image_link' => 'content',
-          'image_style' => 'os2sub_teaser_mini_image',
+          'image_style' => 'os2sub_search',
           'single_image_delta' => 1,
         ),
         'type' => 'single_image',
@@ -1975,7 +1979,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'spotbox' => array(
         'label' => 'hidden',
