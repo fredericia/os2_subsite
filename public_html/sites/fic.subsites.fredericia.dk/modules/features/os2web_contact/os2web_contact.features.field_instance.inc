@@ -23,7 +23,7 @@ function os2web_contact_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'related_block' => array(
         'label' => 'above',
@@ -207,6 +207,147 @@ function os2web_contact_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'node-os2web_contact_contact-field_os2web_contact_field_ldesc'.
+  $field_instances['node-os2web_contact_contact-field_os2web_contact_field_ldesc'] = array(
+    'bundle' => 'os2web_contact_contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 7,
+      ),
+      'spotbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_contact_field_ldesc',
+    'label' => 'Link description',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Søg',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-os2web_contact_contact-field_os2web_contact_field_link'.
+  $field_instances['node-os2web_contact_contact-field_os2web_contact_field_link'] = array(
+    'bundle' => 'os2web_contact_contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'link',
+        'settings' => array(),
+        'type' => 'link_default',
+        'weight' => 8,
+      ),
+      'spotbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_os2web_contact_field_link',
+    'label' => 'Link',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => 'btn btn-red',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => '_blank',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Søg',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'optional',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
   // 'node-os2web_contact_contact-field_os2web_contact_field_mail'.
   $field_instances['node-os2web_contact_contact-field_os2web_contact_field_mail'] = array(
     'bundle' => 'os2web_contact_contact',
@@ -219,7 +360,7 @@ function os2web_contact_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'spotbox' => array(
         'label' => 'hidden',
@@ -270,7 +411,7 @@ function os2web_contact_field_default_field_instances() {
           'title' => '',
         ),
         'type' => 'telephone_link',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'spotbox' => array(
         'label' => 'hidden',
@@ -328,7 +469,7 @@ function os2web_contact_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'spotbox' => array(
         'label' => 'hidden',
@@ -386,7 +527,7 @@ function os2web_contact_field_default_field_instances() {
           'node_reference_view_mode' => 'spotbox',
         ),
         'type' => 'node_reference_node',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -418,7 +559,7 @@ function os2web_contact_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'node_reference_autocomplete',
-      'weight' => 13,
+      'weight' => 3,
     ),
   );
 
@@ -427,6 +568,8 @@ function os2web_contact_field_default_field_instances() {
   t('Adresse');
   t('E-mail');
   t('Eget indhold');
+  t('Link');
+  t('Link description');
   t('Overskrift på kontaktblok');
   t('Postnummer');
   t('Telefon');

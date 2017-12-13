@@ -53,9 +53,7 @@ function site_fic_process_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function site_fic_preprocess_page(&$variables) {
-  $search_form = drupal_get_form('search_form');
-  $search_box = drupal_render($search_form);
-  $variables['search_box'] = $search_box;
+  
   $current_theme = variable_get('theme_default', 'none');
   $primary_navigation_name = variable_get('menu_main_links_source', 'main-menu');
   $secondary_navigation_name = variable_get('menu_secondary_links_source', 'user-menu');
@@ -240,7 +238,9 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   // Processing modal contact field.
   $field_contact_value = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_contact');
   if (!empty($field_contact_value)) {
-    $vars['contact_link'] = l(t('Contact'), 'modal/node/' . $field_contact_value[0]['nid'] . '/nojs', array(
+    $contact_node = node_load($field_contact_value[0]['nid']);
+    _site_fic_get_node_translation($contact_node);
+    $vars['contact_link'] = l(t('Contact'), 'modal/node/' . $contact_node->nid . '/nojs', array(
       'attributes' => array(
         'class' => array(
           'modal-link',

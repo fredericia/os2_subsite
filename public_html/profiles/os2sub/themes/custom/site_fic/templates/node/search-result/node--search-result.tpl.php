@@ -79,43 +79,67 @@
  * @ingroup templates
  */
 ?>
-
-
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  
-  <?php
-  // Hide comments, tags, and links now so that we can render them later.
-  hide($content['comments']);
-  hide($content['links']);
-  hide($content['field_tags']);
-?>
-  
-  <div class='person'>
-    <div class='left'>
-      <?php print $title; ?>
-     <?php print render($content['field_personale_jobtitel']); ?>
+
+  <div class='row'>
+    <div class='col-xs-12 col-sm-4 col-md-3'>
+      <?php print render($content['field_os2web_base_field_lead_img']); ?>
+      <?php print render($content['field_os2web_base_field_photo']); ?>
+      <?php print render($content['field_os2web_base_field_image']); ?>
+      <?php print render($content['field_os2web_kulturnaut_slidesho']); ?>
     </div>
-    <div class='right'>
-      <?php if (!empty($content['field_personale_telefon'])): ?>
-    <?php print render($content['field_personale_telefon']); ?>
-  <?php elseif (!empty($content['field_personale_telefon_disp'])): ?>
-    <?php print render($content['field_personale_telefon_disp']); ?>
-  <?php endif; ?>
-    <?php print render($content['field_personale_email']); ?>
+    <div class='col-xs-12 col-sm-8 col-md-9'>
+      <div class='top-part'>
+        <?php print render($content['field_os2web_kulturnaut_date']); ?>
+        <?php print render($content['field_sektion']); ?>
+      </div>
+      <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
+        <header>
+          <?php print render($title_prefix); ?>
+          <?php if (!$page && !empty($title)): ?>
+            <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+          <?php endif; ?>
+          <?php print render($title_suffix); ?>
+          <?php if ($display_submitted): ?>
+            <span class="submitted">
+              <?php print $user_picture; ?>
+              <?php print $submitted; ?>
+            </span>
+          <?php endif; ?>
+        </header>
+      <?php endif; ?>
+      <?php
+      hide($content['field_os2web_base_field_lead_img']);
+      hide($content['field_os2web_base_field_photo']);
+      hide($content['field_os2web_base_field_image']);
+      hide($content['field_os2web_kulturnaut_date']);
+      hide($content['field_os2web_kulturnaut_slidesho']);
+      hide($content['field_sektion']);
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['field_tags']);
+
+      if (!empty($content['field_os2web_kulturnaut_descrip'])) {
+        hide($content['field_os2web_kulturnaut_longdesc']);
+      }
+
+      print render($content);
+      ?>
+      <a class='read-more' href="<?php print $node_url; ?>"><?php print t('Read more'); ?></a>
     </div>
+
+    <?php
+    // Only display the wrapper div if there are tags or links.
+    $field_tags = render($content['field_tags']);
+    $links = render($content['links']);
+    if ($field_tags || $links):
+      ?>
+      <footer>
+        <?php print $field_tags; ?>
+        <?php print $links; ?>
+      </footer>
+    <?php endif; ?>
+    <?php print render($content['comments']); ?>
+
   </div>
-
-
-  <?php
-  // Only display the wrapper div if there are tags or links.
-  $field_tags = render($content['field_tags']);
-  $links = render($content['links']);
-  if ($field_tags || $links):
-    ?>
-    <footer>
-      <?php print $field_tags; ?>
-      <?php print $links; ?>
-    </footer>
-  <?php endif; ?>
-  <?php print render($content['comments']); ?>
 </article>
