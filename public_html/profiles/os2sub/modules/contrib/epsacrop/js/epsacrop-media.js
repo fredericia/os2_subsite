@@ -21,12 +21,13 @@ Drupal.behaviors.EPSACropMediaElement = {
       }
 
       // When someone clicks the link to manage EPSA crops
-      epsaButton.bind('click', function (e) {
+      epsaButton.once('epsaButton').bind('click', function (e) {
         e.preventDefault();
         var epsaId = $(this).attr('data-epsaid');
         epsaId = epsaId.split(" ")[0];
         var fileInfo = epsaDialogSettings[epsaId];
-        var fid = fidField.val();
+        // Fetch fid value from related input.fid form element.
+        var fid = $(this).parents('tr:first').find('.fid').val();
         if(!fileInfo.fid || fileInfo.fid != fid) {
           //if no file info or file has been replaced, get if via ajax using the fid
           $.get(Drupal.settings.basePath +'?q=crop/ajaxinfo/' + fid, function(data) {
