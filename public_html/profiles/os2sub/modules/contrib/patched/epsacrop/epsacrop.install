@@ -36,7 +36,7 @@ function epsacrop_schema() {
 
 /**
  * Implementation of hook_requirements.
- *
+ * 
  * @access public
  * @param string $phase
  * @return array
@@ -61,7 +61,7 @@ function epsacrop_requirements($phase) {
       $requirements['epsacrop_jcrop']['value'] = 'Jcrop version : ' . $version;
       $requirements['epsacrop_jcrop']['severity'] = REQUIREMENT_OK;
     }
-
+    
     if (_epsacrop_is_json2_exists(FALSE)) {
       $requirements['epsacrop_json2']['value'] = 'JSON file (json2.js) OK';
       $requirements['epsacrop_json2']['severity'] = REQUIREMENT_OK;
