@@ -10747,12 +10747,13 @@ a.icon-after .glyphicon {
   background: none;
   padding-left: 0; }
   .breadcrumb a {
-    color: #777777; }
+    color: #777777;
+    text-decoration: none; }
   .breadcrumb .active {
     color: #ff4200; }
 
 .search-and-title {
-  padding-top: 0px; }
+  padding-top: 0; }
 
 /*Some flex panel tweaks start*/
 .panels-flexible-region-1-center {
@@ -11208,6 +11209,16 @@ header.page-header-wrapper .backstretch:before {
   background: -webkit-linear-gradient(top, black, transparent);
   background: -o-linear-gradient(top, black, transparent);
   background: linear-gradient(to bottom, black, transparent); }
+
+.page-nyheder .header-container .row .breadcrumb-wrapper, .page-nyheder .header-container .view-os2sub-nyheder .view-content .breadcrumb-wrapper, .page-nyheder .view-os2sub-nyheder .header-container .view-content .breadcrumb-wrapper, .page-nyheder .header-container .page-node .os2-section.full-width .paragraphs-container .view-content .breadcrumb-wrapper, .page-node .os2-section.full-width .paragraphs-container .page-nyheder .header-container .view-content .breadcrumb-wrapper, .page-nyheder .header-container .activities-list-background .activities-list-container .panels-flexible-region-inside .breadcrumb-wrapper, .activities-list-background .activities-list-container .page-nyheder .header-container .panels-flexible-region-inside .breadcrumb-wrapper {
+  margin-top: -70px; }
+
+.page-nyheder .header-container h1, .page-nyheder .header-container .heading-h1, .page-nyheder .header-container .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .page-nyheder .header-container .banner-headline {
+  margin-top: 0;
+  border: 0; }
+
+.page-nyheder .header-container .search-and-title {
+  margin-bottom: 30px; }
 
 /*
 .topnav-wrapper {

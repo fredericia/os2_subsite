@@ -28,6 +28,7 @@ $md-page-layout-content-inner-padding-bottom: 60px;
 .breadcrumb {
   a{
     color: $gray-light;
+    text-decoration: none;
   }
   background: none;
   padding-left: 0;
@@ -37,7 +38,7 @@ $md-page-layout-content-inner-padding-bottom: 60px;
 }
 
 .search-and-title{
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 /*Some flex panel tweaks start*/
