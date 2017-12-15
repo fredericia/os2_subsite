@@ -50,6 +50,10 @@ h2.pane-title{
         font-family: $font-open-sans;
         font-weight: bold;
       }
+      .field-item{
+        display: inline;
+        margin-right: 5px;
+      }
     }
     .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
       text-transform: uppercase;
