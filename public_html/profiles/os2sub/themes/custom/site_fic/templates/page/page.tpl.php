@@ -112,7 +112,6 @@
         <!-- End - responsive header -->
 
       <?php print render($page['header']); ?>
-
     </div>
 </header>
 <!-- End - header -->
@@ -130,15 +129,14 @@
         <?php if ( !empty($page['highlighted']) ): ?>
           <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>
-        <div class="row">
-          <div class="col-xs-6">
-            <?php if ( !empty($breadcrumb) ): print $breadcrumb; endif; ?>
+        <?php if (!empty($breadcrumb)): ?>
+          <div class="row">
+            <div class="col-xs-6 breadcrumb-wrapper">
+              <?php print $breadcrumb;?>
+            </div>
           </div>
-        </div>
-
+        <?php endif; ?>
         <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
-        <?php print render($title_suffix); ?>
         <?php print $messages; ?>
         <?php if ( !empty($tabs) ): ?>
           <?php print render($tabs); ?>

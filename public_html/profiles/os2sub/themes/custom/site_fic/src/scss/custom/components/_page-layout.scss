@@ -36,6 +36,13 @@ $md-page-layout-content-inner-padding-bottom: 60px;
     color: $brand-secondary;
   }
 }
+.breadcrumb-wrapper {
+  margin-top: -70px;
+
+  .backstretched & {
+    margin-top: 0;
+  }
+}
 
 .search-and-title{
   padding-top: 0;

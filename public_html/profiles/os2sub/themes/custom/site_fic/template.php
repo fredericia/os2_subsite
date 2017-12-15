@@ -37,6 +37,13 @@ function site_fic_preprocess_html(&$variables) {
 
   // Load jQuery UI.
   drupal_add_library('system', 'ui');
+
+  $backstretch_data = &drupal_static('backstretch_data');
+  if (!empty($backstretch_data)) {
+    drupal_add_js(drupal_get_path('module', 'backstretch') . '/js/jquery.backstretch.min.js');
+    drupal_add_js(array('ficBackstretch' => $backstretch_data), 'setting');
+    $variables['classes_array'][] = 'backstretched';
+  }
 }
 
 /**
@@ -71,12 +78,6 @@ function site_fic_preprocess_page(&$variables) {
   // Color.
   if (module_exists('color')) {
     _color_page_alter($variables);
-  }
-
-  $backstretch_data = &drupal_static('backstretch_data');
-  if (!empty($backstretch_data)) {
-    drupal_add_js(drupal_get_path('module', 'backstretch') . '/js/jquery.backstretch.min.js');
-    drupal_add_js(array('ficBackstretch' => $backstretch_data), 'setting');
   }
 
   $book_node_reference = variable_get('book_node_reference', FALSE);

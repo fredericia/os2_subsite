@@ -10752,6 +10752,11 @@ a.icon-after .glyphicon {
   .breadcrumb .active {
     color: #ff4200; }
 
+.breadcrumb-wrapper {
+  margin-top: -70px; }
+  .backstretched .breadcrumb-wrapper {
+    margin-top: 0; }
+
 .search-and-title {
   padding-top: 0; }
 
