@@ -39,6 +39,7 @@ function fic_search_views_default_views() {
   $handler->display->display_options['header']['result']['id'] = 'result';
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
+  $handler->display->display_options['header']['result']['content'] = '@start - @end results of @total';
   /* No results behavior: Global: Text area */
   $handler->display->display_options['empty']['area']['id'] = 'area';
   $handler->display->display_options['empty']['area']['table'] = 'views';
@@ -162,7 +163,7 @@ function fic_search_views_default_views() {
     t('Asc'),
     t('Desc'),
     t('Show More'),
-    t('Displaying @start - @end of @total'),
+    t('@start - @end results of @total'),
     t('No results'),
     t('Fulltext search'),
     t('FIC search'),
