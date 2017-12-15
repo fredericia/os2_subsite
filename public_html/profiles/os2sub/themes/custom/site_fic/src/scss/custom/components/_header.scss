@@ -139,6 +139,37 @@ header.page-header-wrapper{
     margin-bottom: 30px;
   }
 }
+// Sticky menu styles.
+.sticky {
+  @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 50%);
+  @include container-fixed();
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1100;
+
+  .sidr-open & {
+    position: absolute;
+  }
+  .row {
+    margin: auto;
+  }
+}
+.backstretched {
+  .region-header {
+    margin-top: 140px;
+  }
+  .header-container {
+    padding-bottom: 0;
+  }
+}
+.region-header {
+  margin-top: 0;
+}
+.header-container {
+  padding-bottom: 140px;
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
@@ -150,7 +181,19 @@ header.page-header-wrapper{
 @include media-breakpoint-only(xs) {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+  .sticky .row{
+    width: 750px;
+  }
+  .backstretched {
+    .region-header {
+      margin-top: 250px;
+    }
+  }
+  .header-container {
+    padding-bottom: 250px;
+  }
+}
 
 // Tablet - only
 @include media-breakpoint-only(sm) {}
@@ -158,14 +201,28 @@ header.page-header-wrapper{
 // Desktop - and up
 @include media-breakpoint-up(md) {
   //trick to mane menu clickable on the front page because of background slideshow
-
+  .sticky .row{
+    width: 970px;
+  }
+  .backstretched {
+    .region-header {
+      margin-top: 200px;
+    }
+  }
+  .header-container {
+    padding-bottom: 200px;
+  }
 }
 
 // Desktop - only
 @include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+  .sticky .row{
+    width: 1200px;
+  }
+}
 
 // Print
 @media print {}

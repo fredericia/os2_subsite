@@ -65,6 +65,7 @@ h2.pane-title{
       text-transform: uppercase;
       font-family: $font-lato;
       font-size: 1em;
+      font-weight: bold;
     }
     .top-part{
       display: flex;
@@ -74,6 +75,23 @@ h2.pane-title{
         &:after{
           content: '\00a0|\00a0';
         }
+      }
+    }
+  }
+
+  .pager--infinite-scroll {
+    a {
+      @extend .btn;
+      @extend .btn-blue;
+      font-size: 1.75em;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      font-family: $headings-font-family;
+      &:before{
+        content:'+\00a0';
+        font-size: 2em;
+        line-height: 0.8em;
       }
     }
   }

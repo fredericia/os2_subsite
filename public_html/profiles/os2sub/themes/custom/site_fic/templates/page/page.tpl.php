@@ -24,7 +24,7 @@
 <header role="navigation" id="page-header" class="page-header-wrapper">
 
     <div class="header-container container">
-
+      <div class="sticky">
         <!-- Begin - desktop header -->
         <div class="row hidden-xs">
             <div class="logo-wrapper col-sm-4 col-md-3 col-lg-4">
@@ -110,7 +110,7 @@
             </div>
         </div>
         <!-- End - responsive header -->
-
+      </div>
       <?php print render($page['header']); ?>
     </div>
 </header>
