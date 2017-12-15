@@ -106,15 +106,15 @@
       </header>
     <?php endif; ?>
   </div>
+  <div class="upper-part">
+    <?php print render($content['field_sektion']); ?>
+  </div>
   <div class="overlay">
     <div class="overlay-content">
 
       <?php print render($content['body']); ?>
       <a class="btn btn-black" href="<?php print $node_url; ?>"><?php print t('Read more'); ?></a>
     </div>
-  </div> 
-<div class="upper-part">
-    <?php print render($content['field_sektion']); ?>
   </div>
 
   <?php if ( !empty($content['field_tags']) || !empty($content['links']) ): ?>
