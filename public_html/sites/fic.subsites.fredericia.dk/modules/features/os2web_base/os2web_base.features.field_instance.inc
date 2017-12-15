@@ -637,10 +637,10 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
-        'afsnit_m_billede' => 'afsnit_m_billede',
-        'afsnit_m_citat' => 'afsnit_m_citat',
+        'afsnit_m_billede' => -1,
+        'afsnit_m_citat' => -1,
         'afsnit_m_galleri' => 'afsnit_m_galleri',
-        'afsnit_m_link' => -1,
+        'afsnit_m_link' => 'afsnit_m_link',
         'header_text_links_image' => 'header_text_links_image',
         'header_text_media' => 'header_text_media',
         'paragraph_departments' => 'paragraph_departments',
@@ -1384,7 +1384,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -5591,7 +5591,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'photoswipe',
         'settings' => array(
           'photoswipe_caption' => 'title',
-          'photoswipe_image_style' => '',
+          'photoswipe_image_style' => 'os2sub_small_imagesize',
           'photoswipe_node_style' => 'os2sub_small_imagesize',
           'photoswipe_view_mode' => 'default',
         ),
@@ -6561,10 +6561,9 @@ function os2web_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 3,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -7351,11 +7350,9 @@ function os2web_base_field_default_field_instances() {
       'fic_header' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'trim_length' => 200,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
       ),
       'search_result' => array(
         'label' => 'hidden',
@@ -7428,12 +7425,26 @@ function os2web_base_field_default_field_instances() {
       'allowed_bundles' => array(
         'afsnit_m_billede' => -1,
         'afsnit_m_citat' => -1,
-        'afsnit_m_link' => -1,
+        'afsnit_m_galleri' => 'afsnit_m_galleri',
+        'afsnit_m_link' => 'afsnit_m_link',
+        'header_text_links_image' => 'header_text_links_image',
+        'header_text_media' => 'header_text_media',
+        'paragraph_departments' => 'paragraph_departments',
+        'paragrph_address' => 'paragrph_address',
+        'personale' => 'personale',
+        'webform' => 'webform',
       ),
       'bundle_weights' => array(
         'afsnit_m_billede' => 2,
         'afsnit_m_citat' => 3,
+        'afsnit_m_galleri' => 8,
         'afsnit_m_link' => 4,
+        'header_text_links_image' => 10,
+        'header_text_media' => 11,
+        'paragraph_departments' => 12,
+        'paragrph_address' => 13,
+        'personale' => 14,
+        'webform' => 15,
       ),
       'default_edit_mode' => 'open',
       'entity_translation_sync' => FALSE,
@@ -7685,9 +7696,10 @@ function os2web_base_field_default_field_instances() {
       ),
       'fic_header' => array(
         'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 2,
+        'type' => 'link_default',
+        'weight' => 3,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -7806,14 +7818,8 @@ function os2web_base_field_default_field_instances() {
       ),
       'fic_header' => array(
         'label' => 'hidden',
-        'module' => 'single_image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-          'single_image_delta' => 1,
-        ),
-        'type' => 'single_image',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
       ),
       'search_result' => array(
         'label' => 'hidden',
@@ -8396,7 +8402,6 @@ function os2web_base_field_default_field_instances() {
   t('Selvbetjening');
   t('Selvbetjeningslinks');
   t('Sides switch');
-  t('Skift side');
   t('Skjul automatisk relaterede links');
   t('Skjul højre sidebar');
   t('Skjul kontaktblok');

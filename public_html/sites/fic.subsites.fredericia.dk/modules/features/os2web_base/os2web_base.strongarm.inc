@@ -1173,9 +1173,9 @@ function os2web_base_strongarm() {
     'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
-    'prefix' => 'da',
+    'prefix' => '',
     'weight' => '0',
-    'javascript' => 'BYk13XCG_av2Lj3Nksdrd37BwvpaO01Wn7tGJYXE268',
+    'javascript' => 'odEKhrnWowl7UpMiTC4c2N-b5bPvsL4hUQ840gQG_i8',
   );
   $export['language_default'] = $strongarm;
 
