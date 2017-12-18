@@ -81,9 +81,10 @@ h2.pane-title {
 
 
 .page-nyheder {
-  h1 {
+  h1.page-header {
     color: $brand-primary;
     font-size: 50px;
+    margin-top: 0;
   }
   .view-os2sub-nyheder .view-content {
     @extend .row;

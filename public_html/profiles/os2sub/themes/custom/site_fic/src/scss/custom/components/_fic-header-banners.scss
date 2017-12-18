@@ -25,6 +25,13 @@ $desktop-margin-default: 30px;
   @include container-fixed();
   font-family: $font-rbn021a;
   position: relative;
+  // Hide empty FIC header.
+  display: none;
+
+  // Show FIC header only for pages with backstreched image.
+  .backstretched & {
+    display: block;
+  }
 
   .views-slideshow-cycle-main-frame {
     height: 100% !important;
@@ -309,7 +316,7 @@ $desktop-margin-default: 30px;
 
 .node-type-os2web-base-contentpage {
 
-  .page-header-wrapper {
+  .backstretched & .page-header-wrapper {
     margin-bottom: 30px;
   }
 

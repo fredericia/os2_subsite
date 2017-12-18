@@ -138,6 +138,12 @@
       margin: 20px 0;
     }
   }
+
+  // Fix bottom content offset. See: .bg-undefined
+  &.node-type-os2web-base-contentpage .os2-sectiont,
+  &.node-type-os2web-base-news .pane-node-content{
+    margin-bottom: 30px;
+  }
 }
 .node.node-os2web-contact-contact.node--os2web_contact_contact--full{
   font-size: 1.875em;
