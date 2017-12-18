@@ -11317,14 +11317,6 @@ header.page-header-wrapper .backstretch:before {
     display: table; }
   .sticky:after {
     clear: both; }
-  .backstretched .sticky {
-    background-image: -webkit-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 50%);
-    background-image: -o-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 50%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), color-stop(50%, rgba(25, 33, 36, 0)));
-    background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 50%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
-    background-position: 0 0; }
   .sidr-open .sticky {
     position: absolute; }
   .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
