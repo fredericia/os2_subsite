@@ -24,7 +24,7 @@
 <header role="navigation" id="page-header" class="page-header-wrapper">
 
     <div class="header-container container">
-
+      <div class="sticky">
         <!-- Begin - desktop header -->
         <div class="row hidden-xs">
             <div class="logo-wrapper col-sm-4 col-md-3 col-lg-4">
@@ -80,11 +80,6 @@
 
                 </div>
             </nav>
-            <?php if (!empty($breadcrumb)): ?>
-              <div class="col-sm-6 breadcrumb-wrapper">
-                <?php print $breadcrumb;?>
-              </div>
-            <?php endif; ?>
         </div>
         <!-- End - desktop header -->
 
@@ -111,41 +106,44 @@
               $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
               print render($block['content']);
               ?>
-
             </div>
-            <?php if (!empty($breadcrumb)): ?>
-              <div class="breadcrumb-wrapper">
-                <?php print $breadcrumb;?>
-              </div>
-            <?php endif; ?>
         </div>
         <!-- End - responsive header -->
-
-      <?php print render($page['header']); ?>
-      <div class="row search-and-title">
-        <section<?php print $content_column_class; ?>>
-          <?php if ( !empty($page['highlighted']) ): ?>
-            <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-          <?php endif; ?>
-          <a id="main-content"></a>
-          <?php print render($title_prefix); ?>
-          <?php if (!empty($title)): ?>
-            <h1 class="page-header"><?php print $title; ?></h1>
-          <?php endif; ?>
-          <?php print render($title_suffix); ?>
-          <?php print $messages; ?>
-          <?php if ( !empty($tabs) ): ?>
-            <?php print render($tabs); ?>
-          <?php endif; ?>
-          <?php if ( !empty($page['help']) ): ?>
-            <?php print render($page['help']); ?>
-          <?php endif; ?>
-          <?php if ( !empty($action_links) ): ?>
-            <ul class="action-links"><?php print render($action_links); ?></ul>
-          <?php endif; ?>
-        </section>
       </div>
+      <?php print render($page['header']); ?>
     </div>
+  <div class="container">
+    <div class="row search-and-title">
+      <section<?php print $content_column_class; ?>>
+        <?php if ( !empty($page['highlighted']) ): ?>
+          <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+        <?php endif; ?>
+        <?php if (!empty($breadcrumb)): ?>
+          <div class="row">
+            <div class="col-xs-6 breadcrumb-wrapper">
+              <?php print $breadcrumb;?>
+            </div>
+          </div>
+        <?php endif; ?>
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if (!empty($title)): ?>
+          <h1 class="page-header"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
+        <?php if ( !empty($tabs) ): ?>
+          <?php print render($tabs); ?>
+        <?php endif; ?>
+        <?php if ( !empty($page['help']) ): ?>
+          <?php print render($page['help']); ?>
+        <?php endif; ?>
+        <?php if ( !empty($action_links) ): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+      </section>
+    </div>
+  </div>
 </header>
 <!-- End - header -->
 
