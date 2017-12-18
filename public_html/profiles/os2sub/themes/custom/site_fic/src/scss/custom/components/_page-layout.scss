@@ -42,6 +42,10 @@ $md-page-layout-content-inner-padding-bottom: 60px;
   .backstretched & {
     margin-top: 0;
   }
+
+  .page-node.backstretched & {
+    margin-top: 30px;
+  }
 }
 
 .search-and-title{

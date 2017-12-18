@@ -10833,6 +10833,8 @@ a.icon-after .glyphicon {
   margin-top: -70px; }
   .backstretched .breadcrumb-wrapper {
     margin-top: 0; }
+  .page-node.backstretched .breadcrumb-wrapper {
+    margin-top: 30px; }
 
 .search-and-title {
   padding-top: 0; }
