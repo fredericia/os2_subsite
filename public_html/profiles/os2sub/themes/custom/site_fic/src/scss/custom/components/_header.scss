@@ -141,12 +141,17 @@ header.page-header-wrapper{
 }
 // Sticky menu styles.
 .sticky {
-  @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 50%);
   @include container-fixed();
+  background: url("../img/topbg.png") repeat-x center -60px;
   position: fixed;
   width: 100%;
   left: 0;
   z-index: 1100;
+
+  .backstretched & {
+    @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 50%);
+    background-position: 0 0;
+  }
 
   .sidr-open & {
     position: absolute;
