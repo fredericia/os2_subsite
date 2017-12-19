@@ -178,3 +178,15 @@ function fic_common_load_term_by_menutrail($active_trail = NULL) {
   // Term is not found in menu trail.
   return FALSE;
 }
+
+/**
+ * Implements hook_url_outbound_alter().
+ */
+function fic_common_url_outbound_alter(&$path, &$options, $original_path) {
+  // Remove ajax destination from modal popups.
+  if (arg(3) == 'ajax' && arg(0) == 'modal'
+    && !empty($options['query']['destination'])
+    && strpos($options['query']['destination'], 'ajax')) {
+    unset($options['query']['destination']);
+  }
+}
