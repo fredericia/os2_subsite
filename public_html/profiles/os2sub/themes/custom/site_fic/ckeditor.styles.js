@@ -20,6 +20,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
         { name : 'Overskrift 4'        , element : 'h4', attributes: { 'class': 'h4' } },
         { name : 'Overskrift 5'        , element : 'h5', attributes: { 'class': 'h5' } },
         { name : 'Overskrift 6'        , element : 'h6', attributes: { 'class': 'h6' } },
+        { name : 'Lightbox'        , element : 'a', attributes: { 'rel': 'lightbox' } },
 
         { name : 'Fremhævet tekst'        , element : 'span', attributes: { 'class': 'primary-highlighted' } },
         { name : 'Fremhævet tekst alt'    , element : 'span', attributes: { 'class': 'secondary-highlighted' } },

@@ -10051,6 +10051,9 @@ input[type="submit"] {
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
+.sidr-main-open {
+  position: fixed !important; }
+
 .slinky-menu {
   overflow: hidden;
   -webkit-transform: translateZ(0);
