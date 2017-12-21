@@ -12463,6 +12463,12 @@ div.ctools-modal-content {
       display: none; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .term-fic-header .slide-bottom .blue-block .text,
+  .term-fic-header .slide-bottom .contact.modal-link {
+    font-size: 1.3em; }
+  .term-fic-header .slide-bottom .blue-block .read-more {
+    font-size: 0.75em;
+    padding: 12px; }
   .term-fic-header .slide-content-wrapper .field-name-description-field,
   .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-summary {
     font-size: 2.5em;
@@ -12521,6 +12527,12 @@ div.ctools-modal-content {
       display: none; } }
 
 @media (min-width: 992px) and (max-width: 1229px) {
+  .term-fic-header .slide-bottom .blue-block .text,
+  .term-fic-header .slide-bottom .contact.modal-link {
+    font-size: 1.7em; }
+  .term-fic-header .slide-bottom .blue-block .read-more {
+    font-size: 0.75em;
+    padding: 12px; }
   .term-fic-header .slide-content-wrapper .field-name-description-field,
   .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-summary {
     font-size: 2.5em;

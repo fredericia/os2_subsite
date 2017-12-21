@@ -455,7 +455,13 @@ $desktop-margin-default: 30px;
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
+  .term-fic-header .slide-bottom .blue-block .text,
+  .term-fic-header .slide-bottom .contact.modal-link {
+    font-size: 1.3em; }
+  .term-fic-header .slide-bottom .blue-block .read-more {
+    font-size: 0.75em;
+    padding: 12px;
+  }
   .term-fic-header {
 
     .slide-content-wrapper {
@@ -555,6 +561,13 @@ $desktop-margin-default: 30px;
 
 // Desktop - only
 @include media-breakpoint-only(md) {
+  .term-fic-header .slide-bottom .blue-block .text,
+  .term-fic-header .slide-bottom .contact.modal-link  {
+    font-size: 1.7em; }
+  .term-fic-header .slide-bottom .blue-block .read-more {
+    font-size: 0.75em;
+    padding: 12px;
+  }
   .term-fic-header {
 
     .slide-content-wrapper {
