@@ -14,8 +14,8 @@
 // Styling
 // --------------------------------------------------
 .bg-undefined {
-  padding-top: $grid-gutter-width;
-  padding-bottom: $grid-gutter-width;
+  padding-top: (2* $grid-gutter-width);
+  padding-bottom: (2* $grid-gutter-width);
 }
 .bg-white {
   @extend .bg-undefined;
@@ -27,17 +27,19 @@
 }
 .bg-darker {
   background-color: $color-black;
-  @extend .bg-undefined;
+  padding-top: (3* $grid-gutter-width);
+  padding-bottom: (3* $grid-gutter-width);
   .field{
-    color: #FFF;    
+    color: #FFF;
     border-color: #FFF;
   }
 }
 .bg-dark {
   background-color: $color-dark-gray;
-  @extend .bg-undefined;
+  padding-top: (3* $grid-gutter-width);
+  padding-bottom: (3* $grid-gutter-width);
   .field{
-    color: #FFF;    
+    color: #FFF;
     border-color: #FFF;
   }
 }
@@ -45,7 +47,7 @@
   background-color: $brand-primary;
   @extend .bg-undefined;
   .field{
-    color: #FFF;    
+    color: #FFF;
     border-color: #FFF;
   }
 }
@@ -89,7 +91,7 @@
       img {
         border: #000 solid 10px;
       }
-    }   
+    }
   }
 }
 .pane-instagram-billeder {

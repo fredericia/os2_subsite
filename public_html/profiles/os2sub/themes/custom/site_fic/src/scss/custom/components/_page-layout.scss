@@ -138,6 +138,12 @@ h2.pane-title {
     }
   }
 }
+.bg-white {
+  h2.pane-title {
+    padding-bottom: 20px;
+  }
+}
+
 .os2-sectiont{
   .col-sm-9{
     border-left: solid 1px #ccc;
@@ -145,6 +151,10 @@ h2.pane-title {
 }
 .modal-content.popups-body{
   background-color: #fff;
+  header h2 a {
+    color: #333;
+    font-size: 2gruntem;
+  }
 }
 
 blockquote.bq-fic {

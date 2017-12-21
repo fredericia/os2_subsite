@@ -13,7 +13,7 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-h2.pane-title{
+.page-soeg h2.pane-title{
   color: $brand-primary;
 }
 
@@ -21,7 +21,7 @@ h2.pane-title{
   .views-row{
     margin-top: 35px;
     margin-bottom: 35px;
-    .taxonomy-term, 
+    .taxonomy-term,
     article{
       .field.field-name-field-os2web-base-field-image.field-type-image,
       .field.field-name-field-os2web-base-field-photo.field-type-image,

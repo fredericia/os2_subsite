@@ -80,7 +80,7 @@
   }
   .one-left & {
     .field-name-field-os2web-kulturnaut-date.field-type-datetime {
-      span.date-display-single{ 
+      span.date-display-single{
         font-size: 1.32em;
         font-weight: bold;
         text-transform: lowercase;
@@ -94,11 +94,10 @@
       font-weight: normal;
     }
   }
-}.node-os2web-kulturnaut-knactivity {
-  position: relative;
-  margin-bottom: 70px;
+}
+.node-os2web-kulturnaut-knactivity {
+
   header h2 {
-    font-size: 1.56em;
     color: white;
     margin-bottom: 3px;
   }
@@ -158,7 +157,7 @@
   }
   .one-left & {
     .field-name-field-os2web-kulturnaut-date.field-type-datetime {
-      span.date-display-single{ 
+      span.date-display-single{
         font-size: 1.32em;
         font-weight: bold;
         text-transform: lowercase;
@@ -215,7 +214,7 @@
 @include media-breakpoint-up(md) {
 
   // Teaser
-  
+
 }
 
 // Desktop - only

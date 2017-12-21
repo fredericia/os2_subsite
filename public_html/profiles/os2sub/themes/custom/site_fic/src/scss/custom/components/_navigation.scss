@@ -84,7 +84,7 @@ $navigation-bottom-border-color: $color-white;
       .dropdown-menu{
         min-width: auto;
         border: none;
-        border-radius: unset; 
+        border-radius: unset;
         top: auto;
         ul.language-switcher-locale-url{
           padding: 0px 10px;
@@ -107,7 +107,7 @@ $navigation-bottom-border-color: $color-white;
       a {
         @extend .btn;
         @extend .btn-blue;
-        padding: 5px 25px !important;
+        padding: 2px 15px !important;
 
         &:hover, &:active, &:focus {
           background-color: $color-blue !important;
