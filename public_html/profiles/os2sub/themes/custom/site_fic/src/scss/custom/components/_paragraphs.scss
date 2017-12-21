@@ -68,11 +68,17 @@
 }
 .paragraphs-items{
   .field.field-name-field-paragraph-header{
-    margin-bottom: $grid-gutter-width;
+    margin-bottom: ($grid-gutter-width /2);
     text-transform: uppercase;
     font-size: 2.368em;
     font-weight: normal;
     font-family: $headings-font-family;
+    line-height: 1.1em;
+  }
+  .aligner {
+    .field.field-name-field-paragraph-header{
+    margin-top: $grid-gutter-width;
+    }
   }
   .field.field-name-field-paragraph-text{
     font-size: 1.25em;

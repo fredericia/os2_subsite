@@ -10909,7 +10909,7 @@ h2.pane-title, .pane-title.heading-h2 {
   background-color: #fff; }
   .modal-content.popups-body header h2 a, .modal-content.popups-body header .heading-h2 a {
     color: #333;
-    font-size: 2gruntem; }
+    font-size: 2em; }
 
 blockquote.bq-fic {
   border: 0;
@@ -10988,11 +10988,15 @@ h1.pane-title,
   padding-top: 45px; }
 
 .paragraphs-items .field.field-name-field-paragraph-header {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   font-size: 2.368em;
   font-weight: normal;
-  font-family: "RBNo21a-Medium", "Lato", sans-serif; }
+  font-family: "RBNo21a-Medium", "Lato", sans-serif;
+  line-height: 1.1em; }
+
+.paragraphs-items .aligner .field.field-name-field-paragraph-header {
+  margin-top: 30px; }
 
 .paragraphs-items .field.field-name-field-paragraph-text {
   font-size: 1.25em;
