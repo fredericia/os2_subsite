@@ -206,7 +206,27 @@ header.page-header-wrapper{
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(sm) {
+
+    .sticky {
+  background: url("../img/topbg.png") repeat-x center -79px;
+  }
+  .navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .topnav-wrapper.user-nav {
+    height: 42px !important;
+  }
+  .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse {
+    margin-top: 0;
+  }
+  .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
+    display: none;
+  }
+}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
@@ -225,7 +245,22 @@ header.page-header-wrapper{
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(md) {
+
+  .sticky {
+  background: url("../img/topbg.png") repeat-x center -74px;
+  }
+  .navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .topnav-wrapper.user-nav {
+    height: 46px !important;
+  }
+  .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
+    display: none;
+  }
+}
 
 // Large desktop - and up
 @include media-breakpoint-up(lg) {

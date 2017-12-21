@@ -27,7 +27,7 @@
       <div class="sticky">
         <!-- Begin - desktop header -->
         <div class="row hidden-xs">
-            <div class="logo-wrapper col-sm-4 col-md-3 col-lg-4">
+            <div class="logo-wrapper col-sm-2 col-md-3 col-lg-4">
               <?php if ( $logo ): ?>
                   <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
                       <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
@@ -40,7 +40,7 @@
               <?php endif; ?>
             </div>
 
-            <nav role="navigation" id="topnav" class="topnav-wrapper user-nav col-sm-8 col-md-9 col-lg-8">
+            <nav role="navigation" id="topnav" class="topnav-wrapper user-nav col-sm-10 col-md-9 col-lg-8">
               <?php if ( !empty($secondary_nav) ): ?>
                 <?php print render($secondary_nav); ?>
               <?php endif; ?>
@@ -208,7 +208,7 @@
             <?php endif; ?>
 
             <?php if (!empty($theme_settings['contact_information']['phone_system']) ) : ?>
-              <?php print '<a title="Ring til '.$theme_settings['contact_information']['phone_readable'].'" 
+              <?php print '<a title="Ring til '.$theme_settings['contact_information']['phone_readable'].'"
                 href="tel:'.$theme_settings['contact_information']['phone_system'].'">'; ?>
             <?php endif; ?>
 
@@ -221,7 +221,7 @@
             <?php endif; ?>
 
             <?php if (!empty($theme_settings['contact_information']['email']) ) : ?>
-              <?php print '<a href="mailto:'.$theme_settings['contact_information']['email'].' 
+              <?php print '<a href="mailto:'.$theme_settings['contact_information']['email'].'
                 Title="Send email">'.$theme_settings['contact_information']['email'].'</a>'; ?><br/>
             <?php endif; ?>
 

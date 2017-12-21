@@ -237,8 +237,17 @@ $image-border: 10px;
 // Desktop - only
 @include media-breakpoint-only(md) {
 
-
-
+.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini,
+.node--os2web_base_news--os2sub_teaser_mini {
+  & .overlay{
+    .overlay-content {
+      padding: 10px;
+      .field-type-text-with-summary{
+        font-size: 0.8em;
+        }
+      }
+    }
+  }
 }
 
 // Large desktop - and up
