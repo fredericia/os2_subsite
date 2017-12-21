@@ -11622,7 +11622,9 @@ footer.footer {
   padding-top: 0;
   padding-bottom: 0;
   margin-top: 0;
-  border-top: none; }
+  border-top: none;
+  font-weight: 300;
+  font-size: 15px; }
   footer.footer .footer-dark {
     background-color: #222222;
     color: #ffffff; }
@@ -11643,9 +11645,9 @@ footer.footer {
        -moz-columns: 2;
             columns: 2; }
     footer.footer ul.menu.nav li a {
-      padding: 5px 0;
+      padding: 0 0 5px 0;
       text-decoration: none;
-      font-size: 1em; }
+      font-weight: 300; }
       footer.footer ul.menu.nav li a:active, footer.footer ul.menu.nav li a:hover, footer.footer ul.menu.nav li a:focus {
         background: none;
         color: #01B5D5; }
