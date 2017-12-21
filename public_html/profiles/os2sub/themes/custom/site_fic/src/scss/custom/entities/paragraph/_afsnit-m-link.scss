@@ -1,9 +1,9 @@
 // |--------------------------------------------------------------------------
-// | 
+// |
 // |--------------------------------------------------------------------------
 // |
 // | This file contains styles for the following:
-// | 
+// |
 // |
 
 // --------------------------------------------------
@@ -15,8 +15,8 @@
 // Styling
 // --------------------------------------------------
 .paragraphs-item-afsnit-m-link{
-  padding-bottom: 40px;
-  padding-top: 40px;
+  padding-bottom: floor(1.5*$grid-gutter-width);
+  padding-top: floor(1.5*$grid-gutter-width);
   font-family: $headings-font-family;
 
   .field.field-name-field-paragraph-header{

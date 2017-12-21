@@ -28,7 +28,7 @@
 .bg-darker {
   background-color: $color-black;
   padding-top: (3* $grid-gutter-width);
-  padding-bottom: (3* $grid-gutter-width);
+  padding-bottom: (2* $grid-gutter-width);
   .field{
     color: #FFF;
     border-color: #FFF;
@@ -37,7 +37,7 @@
 .bg-dark {
   background-color: $color-dark-gray;
   padding-top: (3* $grid-gutter-width);
-  padding-bottom: (3* $grid-gutter-width);
+  padding-bottom: (2* $grid-gutter-width);
   .field{
     color: #FFF;
     border-color: #FFF;

@@ -10962,7 +10962,7 @@ h1.pane-title,
 .bg-darker {
   background-color: #192124;
   padding-top: 90px;
-  padding-bottom: 90px; }
+  padding-bottom: 60px; }
   .bg-darker .field {
     color: #FFF;
     border-color: #FFF; }
@@ -10970,7 +10970,7 @@ h1.pane-title,
 .bg-dark, .page-nyheder .main-container {
   background-color: #2a2f36;
   padding-top: 90px;
-  padding-bottom: 90px; }
+  padding-bottom: 60px; }
   .bg-dark .field, .page-nyheder .main-container .field {
     color: #FFF;
     border-color: #FFF; }
@@ -13366,8 +13366,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     margin-top: 45px; }
 
 .paragraphs-item-afsnit-m-link {
-  padding-bottom: 40px;
-  padding-top: 40px;
+  padding-bottom: 45px;
+  padding-top: 45px;
   font-family: "RBNo21a-Medium", "Lato", sans-serif; }
   .paragraphs-item-afsnit-m-link .field.field-name-field-paragraph-header {
     font-size: 3.125em;
