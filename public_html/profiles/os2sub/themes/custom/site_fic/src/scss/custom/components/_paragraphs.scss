@@ -24,6 +24,9 @@
     color: $gray-darker;
     border-color: $gray-darker;
   }
+  &.paragraphs-item-afsnit-m-billede {
+    padding-bottom: $grid-gutter-width;
+  }
 }
 .bg-darker {
   background-color: $color-black;
@@ -82,7 +85,6 @@
 .paragraphs-item-afsnit-m-galleri {
   .field-items {
     @include make-row();
-    margin-bottom: ($grid-gutter-width /2 );
     margin-top: $grid-gutter-width;
     .field-item {
       @include make-xs-column(6);
@@ -186,7 +188,7 @@
     text-transform: capitalize;
   }
 }
-.field.field-name-field-afsnit{
+.node .field.field-name-field-afsnit{
   & > .field-items{
     & > .field-item{
       border-bottom: 2px solid #ccc;

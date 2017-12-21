@@ -10958,6 +10958,8 @@ h1.pane-title,
   .bg-white .field {
     color: #222222;
     border-color: #222222; }
+  .bg-white.paragraphs-item-afsnit-m-billede {
+    padding-bottom: 30px; }
 
 .bg-darker {
   background-color: #192124;
@@ -11001,7 +11003,6 @@ h1.pane-title,
 .paragraphs-item-afsnit-m-galleri .field-items {
   margin-left: -15px;
   margin-right: -15px;
-  margin-bottom: 15px;
   margin-top: 30px; }
   .paragraphs-item-afsnit-m-galleri .field-items:before, .paragraphs-item-afsnit-m-galleri .field-items:after {
     content: " ";
@@ -11143,9 +11144,9 @@ h1.pane-title,
   font-size: 3.125em;
   text-transform: capitalize; }
 
-.field.field-name-field-afsnit > .field-items > .field-item {
+.node .field.field-name-field-afsnit > .field-items > .field-item {
   border-bottom: 2px solid #ccc; }
-  .field.field-name-field-afsnit > .field-items > .field-item:last-child {
+  .node .field.field-name-field-afsnit > .field-items > .field-item:last-child {
     border-bottom: none; }
 
 .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items {
@@ -13380,7 +13381,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     font-family: "RBNo21a-Medium", "Lato", sans-serif !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
-    font-weight: normal !important; }
+    font-weight: normal !important;
+    margin-top: 3px; }
   .paragraphs-item-afsnit-m-link .aligner-left {
     text-align: center; }
   .paragraphs-item-afsnit-m-link .aligner-right {
