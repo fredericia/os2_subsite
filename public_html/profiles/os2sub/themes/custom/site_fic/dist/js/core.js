@@ -3467,7 +3467,7 @@ var header = (function ($) {
     Drupal.behaviors.ctools_backdrop_close = {
         attach: function(context, settings){
             $('#modalBackdrop, #modalContent').once('ctools_backdrop_close', function() {
-                $('.ctools-modal-content').click(function(event) {
+                $('.popups-body').click(function(event) {
                     event.stopPropagation();
                 });
 
