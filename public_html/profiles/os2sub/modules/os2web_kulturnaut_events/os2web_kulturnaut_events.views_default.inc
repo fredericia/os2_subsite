@@ -465,16 +465,10 @@ function os2web_kulturnaut_events_views_default_views() {
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['table'] = 'field_data_field_os2web_kulturnaut_venue';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['field'] = 'field_os2web_kulturnaut_venue';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['label'] = '';
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['element_type'] = 'span';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_venue']['type'] = 'taxonomy_term_reference_plain';
-  /* Felt: Indhold: Sted navn */
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['id'] = 'field_os2web_kulturnaut_sname';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['table'] = 'field_data_field_os2web_kulturnaut_sname';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['field'] = 'field_os2web_kulturnaut_sname';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['label'] = '';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['alter']['text'] = '[field_os2web_kulturnaut_venue]';
-  $handler->display->display_options['fields']['field_os2web_kulturnaut_sname']['element_label_colon'] = FALSE;
   /* Felt: Indhold: Dato */
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['id'] = 'field_os2web_kulturnaut_date';
   $handler->display->display_options['fields']['field_os2web_kulturnaut_date']['table'] = 'field_data_field_os2web_kulturnaut_date';
@@ -1586,7 +1580,6 @@ function os2web_kulturnaut_events_views_default_views() {
     t('Block - activities slideshow'),
     t('Block - Activities Slideshow'),
     t('queue'),
-    t('[field_os2web_kulturnaut_venue]'),
     t('- [field_os2web_kulturnaut_date] '),
     t('#[field_os2web_base_field_edi_tags]'),
     t('Læs mere'),
