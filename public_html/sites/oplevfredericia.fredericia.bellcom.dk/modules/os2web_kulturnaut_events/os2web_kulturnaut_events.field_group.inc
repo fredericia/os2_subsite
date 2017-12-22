@@ -21,7 +21,7 @@ function os2web_kulturnaut_events_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Ikke brugte',
-    'weight' => '28',
+    'weight' => '14',
     'children' => array(
       0 => 'field_os2web_kulturnaut_homepage',
       1 => 'field_os2web_kulturnaut_saddress',
@@ -45,7 +45,7 @@ function os2web_kulturnaut_events_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_hidden|node|os2web_kulturnaut_knactivity|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.

@@ -128,7 +128,7 @@ function os2web_kulturnaut_events_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '16',
+          'weight' => '7',
         ),
       ),
       'display' => array(),
