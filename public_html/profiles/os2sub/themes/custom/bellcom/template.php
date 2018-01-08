@@ -28,6 +28,8 @@ function bellcom_preprocess_page(&$variables) {
   $variables['navigation_list_secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'navigation-list', false);
   $variables['sidebar_primary'] = _bellcom_generate_menu($primary_navigation_name, 'sidebar', false);
   $variables['sidebar_secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'sidebar', false);
+  $variables['sidr_primary'] = _bellcom_generate_menu($primary_navigation_name, 'sidr', false);
+  $variables['sidr_secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'sidr', false);
 
   // Paths
   $variables['path_js']   = base_path() . drupal_get_path('theme', $current_theme) . '/dist/js';
