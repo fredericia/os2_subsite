@@ -10,6 +10,93 @@
 function fic_page_settings_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance:
+  // 'node-os2web_base_contentpage-field_afsnit_full_width'.
+  $field_instances['node-os2web_base_contentpage-field_afsnit_full_width'] = array(
+    'bundle' => 'os2web_base_contentpage',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 23,
+      ),
+      'fic_header' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_index' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'spotbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_afsnit_full_width',
+    'label' => 'Paragraphs',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'afsnit_m_billede' => -1,
+        'afsnit_m_citat' => 'afsnit_m_citat',
+        'afsnit_m_galleri' => -1,
+        'afsnit_m_link' => 'afsnit_m_link',
+        'header_text_links_image' => 'header_text_links_image',
+        'header_text_media' => 'header_text_media',
+        'paragraph_departments' => 'paragraph_departments',
+        'paragrph_address' => -1,
+        'personale' => 'personale',
+        'webform' => -1,
+      ),
+      'bundle_weights' => array(
+        'afsnit_m_billede' => 2,
+        'afsnit_m_citat' => 3,
+        'afsnit_m_galleri' => 4,
+        'afsnit_m_link' => 5,
+        'header_text_links_image' => 6,
+        'header_text_media' => 7,
+        'paragraph_departments' => 8,
+        'paragrph_address' => 9,
+        'personale' => 10,
+        'webform' => 11,
+      ),
+      'default_edit_mode' => 'preview',
+      'entity_translation_sync' => FALSE,
+      'title' => 'Afsnit',
+      'title_multiple' => 'Afsnit',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 49,
+    ),
+  );
+
   // Exported field_instance: 'node-os2web_base_contentpage-field_sektion'.
   $field_instances['node-os2web_base_contentpage-field_sektion'] = array(
     'bundle' => 'os2web_base_contentpage',
@@ -36,10 +123,11 @@ function fic_page_settings_field_default_field_instances() {
         'weight' => 7,
       ),
       'search_result' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -81,6 +169,13 @@ function fic_page_settings_field_default_field_instances() {
         'weight' => 6,
       ),
       'os2sub_teaser_mini' => array(
+        'label' => 'hidden',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'search_result' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
@@ -154,7 +249,7 @@ function fic_page_settings_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_plain',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
       ),
       'spotbox' => array(
@@ -742,6 +837,7 @@ function fic_page_settings_field_default_field_instances() {
   t('Email');
   t('Inkl. +45 - f.eks "+4572101213"');
   t('Jobtitel');
+  t('Paragraphs');
   t('Sektion');
   t('Telefon');
   t('Viste personer');
