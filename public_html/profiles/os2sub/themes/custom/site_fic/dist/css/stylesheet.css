@@ -10898,7 +10898,7 @@ h2.pane-title, .pane-title.heading-h2 {
   padding-bottom: 20px; }
 
 .os2-sectiont .col-sm-9 {
-  border-left: solid 1px #ccc; }
+  border-left: solid 2px #ccc; }
 
 .modal-content.popups-body {
   background-color: #fff; }
@@ -10978,9 +10978,11 @@ h1.pane-title,
     color: #FFF;
     border-color: #FFF; }
 
-.top-border.bg-white .views-container-inner-inner {
-  border-top: 2px solid #ccc;
-  padding-top: 45px; }
+.top-border.bg-white {
+  padding-top: 30px; }
+  .top-border.bg-white .views-container-inner-inner {
+    border-top: 2px solid #ccc;
+    padding-top: 45px; }
 
 .paragraphs-items .field.field-name-field-paragraph-header {
   margin-bottom: 15px;
