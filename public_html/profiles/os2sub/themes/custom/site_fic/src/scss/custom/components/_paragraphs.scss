@@ -55,6 +55,8 @@
   }
 }
 .top-border.bg-white {
+  padding-top: ($grid-gutter-width);
+
   .views-container-inner-inner {
     border-top: 2px solid #ccc;
     padding-top: floor($grid-gutter-width * 1.5);
