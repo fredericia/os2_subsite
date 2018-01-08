@@ -1,4 +1,6 @@
 .form-control {
+  font-size: $font-size-large;
+
   // Remove inline shadow on iOS (https://stackoverflow.com/questions/23211656/remove-ios-input-shadow)
   appearance: none;
 
@@ -7,3 +9,5 @@
     @include box-shadow(none);
   }
 }
+
+
