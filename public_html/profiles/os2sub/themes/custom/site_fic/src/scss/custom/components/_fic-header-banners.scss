@@ -348,6 +348,37 @@ $desktop-margin-default: 30px;
 
   .term-fic-header {
 
+    .views-slideshow-pager-fields {
+      display: block !important;
+
+      div {
+        display: block;
+      }
+
+      > div {
+        display: inline-block;
+
+        margin: 0 0 10px 0 !important;
+        padding: 0;
+
+        width: 50%;
+
+        &:nth-child(even) {
+
+          > div {
+            margin-right: 2.5px;
+          }
+        }
+
+        &:nth-child(odd) {
+
+          > div {
+            margin-left: 2.5px;
+          }
+        }
+      }
+    }
+
     .slide-content-wrapper {
 
       .field-name-description-field,
@@ -374,15 +405,6 @@ $desktop-margin-default: 30px;
 
       > div {
         margin-bottom: 0;
-      }
-
-      .views-slideshow-pager-field-item,
-      .field-item {
-        margin-right: 5px;
-
-        &:nth-child(odd) {
-          margin-right: 0;
-        }
       }
     }
 
@@ -423,7 +445,7 @@ $desktop-margin-default: 30px;
       &-5 .views-slideshow-controls-bottom a,
       &-6 .views-slideshow-controls-bottom a,
       &-7 .views-slideshow-controls-bottom a {
-        width: 142px
+        width: 100%;
       }
     }
 
@@ -434,7 +456,7 @@ $desktop-margin-default: 30px;
       &-5 a,
       &-6 a,
       &-7 a {
-        width: 142px;
+        width: 100%;
       }
     }
   }

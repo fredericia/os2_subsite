@@ -12398,6 +12398,19 @@ div.ctools-modal-content {
   margin: 30px 0 110px; }
 
 @media (max-width: 767px) {
+  .term-fic-header .views-slideshow-pager-fields {
+    display: block !important; }
+    .term-fic-header .views-slideshow-pager-fields div {
+      display: block; }
+    .term-fic-header .views-slideshow-pager-fields > div {
+      display: inline-block;
+      margin: 0 0 10px 0 !important;
+      padding: 0;
+      width: 50%; }
+      .term-fic-header .views-slideshow-pager-fields > div:nth-child(even) > div {
+        margin-right: 2.5px; }
+      .term-fic-header .views-slideshow-pager-fields > div:nth-child(odd) > div {
+        margin-left: 2.5px; }
   .term-fic-header .slide-content-wrapper .field-name-description-field,
   .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-summary {
     font-size: 2.5em;
@@ -12412,20 +12425,6 @@ div.ctools-modal-content {
   .term-fic-header .field-name-field-os2web-base-field-related > div,
   .term-fic-header .cycle-pager > div {
     margin-bottom: 0; }
-  .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item,
-  .term-fic-header .views-slideshow-controls-bottom .field-item,
-  .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item,
-  .term-fic-header .field-name-field-os2web-base-field-related .field-item,
-  .term-fic-header .cycle-pager .views-slideshow-pager-field-item,
-  .term-fic-header .cycle-pager .field-item {
-    margin-right: 5px; }
-    .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item:nth-child(odd),
-    .term-fic-header .views-slideshow-controls-bottom .field-item:nth-child(odd),
-    .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item:nth-child(odd),
-    .term-fic-header .field-name-field-os2web-base-field-related .field-item:nth-child(odd),
-    .term-fic-header .cycle-pager .views-slideshow-pager-field-item:nth-child(odd),
-    .term-fic-header .cycle-pager .field-item:nth-child(odd) {
-      margin-right: 0; }
   .term-fic-header .slide-bottom {
     top: 100%;
     bottom: auto; }
@@ -12446,13 +12445,13 @@ div.ctools-modal-content {
   .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a,
   .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a,
   .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-    width: 142px; }
+    width: 100%; }
   .term-fic-header .num-items-3 a,
   .term-fic-header .num-items-4 a,
   .term-fic-header .num-items-5 a,
   .term-fic-header .num-items-6 a,
   .term-fic-header .num-items-7 a {
-    width: 142px; }
+    width: 100%; }
   .scroll-down-wrapper {
     height: 90px;
     margin: 0; }
