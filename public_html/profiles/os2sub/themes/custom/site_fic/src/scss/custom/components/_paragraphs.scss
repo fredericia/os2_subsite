@@ -139,12 +139,9 @@
 }
 
 .node-type-os2web-base-contentpage {
+
   .entity-paragraphs-item {
-    .container {
-      width: 100% !important;
-      padding-left: 0;
-      padding-right: 0;
-    }
+
     .paragraphs-item-header-text-media {
       @include make-row();
       .paragraph-video-container{
