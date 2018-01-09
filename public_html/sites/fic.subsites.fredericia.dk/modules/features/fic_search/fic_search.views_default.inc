@@ -141,6 +141,13 @@ function fic_search_views_default_views() {
   $handler->display->display_options['filters']['node_status_1']['operator'] = 'empty';
   $handler->display->display_options['filters']['node_status_1']['value'] = array();
   $handler->display->display_options['filters']['node_status_1']['group'] = 3;
+  /* Filter criterion: Indexed Multiple types: Item language */
+  $handler->display->display_options['filters']['search_api_language']['id'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['table'] = 'search_api_index_fic_node_and_term_index';
+  $handler->display->display_options['filters']['search_api_language']['field'] = 'search_api_language';
+  $handler->display->display_options['filters']['search_api_language']['value'] = array(
+    'current' => 'current',
+  );
 
   /* Display: FIC search */
   $handler = $view->new_display('panel_pane', 'FIC search', 'pane_activities_multi_search');
