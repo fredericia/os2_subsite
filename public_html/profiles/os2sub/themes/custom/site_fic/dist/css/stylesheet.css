@@ -12592,6 +12592,9 @@ div.ctools-modal-content {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
+.sidr-main-open {
+  position: absolute !important; }
+
 .node {
   font-size: 1.06em; }
 
