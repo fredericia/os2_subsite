@@ -15,13 +15,15 @@ include_once 'fic_search.features.inc';
  * @param $form_id
  */
 function fic_search_form_alter(&$form, &$form_state, $form_id) {
+  global $language;
+
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-os2sub-kulturnaut-search-pane-activities-search') {
-    $form['#action'] = 	base_path() . 'soeg';
+    $form['#action'] = url('soeg', array('language', $language));
     $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search');
   }
 
   if ($form_id == 'views_exposed_form' && $form['#id'] == 'views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search') {
-    $form['#action'] = 	base_path() . 'soeg';
+    $form['#action'] = url('soeg', array('language', $language));
     $form['search_api_views_fulltext']['#attributes']['placeholder'] = t('Search');
   }
 }
