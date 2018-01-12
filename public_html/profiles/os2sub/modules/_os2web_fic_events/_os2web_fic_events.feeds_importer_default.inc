@@ -32,7 +32,7 @@ function _os2web_fic_events_feeds_importer_default() {
       'plugin_key' => 'FeedsXPathParserXML',
       'config' => array(
         'sources' => array(
-          'xpathparser:0' => 'Title',
+          'xpathparser:0' => 'Titel',
           'xpathparser:1' => 'Beskrivelse',
           'xpathparser:2' => 'Billeturl',
           'xpathparser:3' => 'startdato',
@@ -116,7 +116,7 @@ function _os2web_fic_events_feeds_importer_default() {
             'xpathparser:27' => 0,
           ),
         ),
-        'allow_override' => 1,
+        'allow_override' => 0,
       ),
     ),
     'processor' => array(
