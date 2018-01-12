@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the  OS2web FIC events feature.
+ */
+
+include_once '_os2web_fic_events.features.inc';
