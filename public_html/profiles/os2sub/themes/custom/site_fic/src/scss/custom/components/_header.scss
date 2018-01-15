@@ -90,7 +90,7 @@ section.block-locale{
     border-radius: unset;
     top: auto;
     ul.language-switcher-locale-url{
-      padding: 0px 10px;
+      padding: 0 10px;
       li{
         list-style: none;
         a{
@@ -121,6 +121,11 @@ header.page-header-wrapper{
       background: linear-gradient(to bottom, black, transparent);
     }
   }
+}
+
+.headerwrapper-inner {
+  height: 60px;
+  margin-bottom: 0;
 }
 // --------------------------------------------------
 // Variants
@@ -201,7 +206,7 @@ header.page-header-wrapper{
     }
   }
   .header-container {
-    padding-bottom: 250px;
+    padding-bottom: 180px;
   }
 }
 
@@ -240,7 +245,7 @@ header.page-header-wrapper{
     }
   }
   .header-container {
-    padding-bottom: 200px;
+    padding-bottom: 130px;
   }
 }
 

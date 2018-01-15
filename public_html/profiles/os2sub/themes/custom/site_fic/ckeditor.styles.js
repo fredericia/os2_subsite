@@ -107,14 +107,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             {
                 'class' : 'img-bordered'
             }
-        },
-        {
-            name : 'Citat',
-            element : 'blockquote',
-            attributes :
-            {
-                'class' : 'bq-fic'
-            }
         }
     ]);
 

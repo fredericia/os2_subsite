@@ -58,7 +58,7 @@
   padding-top: ($grid-gutter-width);
 
   .views-container-inner-inner {
-    border-top: 2px solid #ccc;
+    border-top: 2px solid $color-light-gray;
     padding-top: floor($grid-gutter-width * 1.5);
   }
 }
@@ -196,7 +196,7 @@
 .node .field.field-name-field-afsnit{
   & > .field-items{
     & > .field-item{
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid $color-light-gray;
       &:last-child{
         border-bottom: none;
       }

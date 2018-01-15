@@ -30,11 +30,19 @@ div.ctools-modal-content {
   border: 0;
   width: 80%;
 
+  h1 {
+    font-size: 3.5em;
+  }
+
   .modal-content {
     border-radius: 0;
     padding: 20px 50px 50px;
     box-shadow: none;
     border: 0;
+
+    .field-name-body {
+      font-weight: bold;
+    }
   }
 
   .popups-close {

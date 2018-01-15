@@ -162,14 +162,14 @@
   .field.field-name-field-paragraph-personale{
     & > .field-items{
       & > .field-item{
-        border-top: 2px solid #ccc;
+        border-top: 2px solid $color-light-gray;
         padding-top: 30px;
         padding-bottom: 30px;
         &:first-child{
           margin-top: 30px;
         }
         &:last-child{
-          border-bottom: 2px solid #ccc;
+          border-bottom: 2px solid $color-light-gray;
         }
       }
     }

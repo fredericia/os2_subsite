@@ -37,12 +37,6 @@ $md-page-layout-content-inner-padding-bottom: 60px;
   }
 }
 .breadcrumb-wrapper {
-  margin-top: -70px;
-
-  .backstretched & {
-    margin-top: 0;
-  }
-
   .page-node.backstretched & {
     margin-top: 30px;
   }
@@ -146,7 +140,7 @@ h2.pane-title {
 
 .os2-sectiont{
   .col-sm-9{
-    border-left: solid 2px #ccc;
+    border-left: solid 2px $color-light-gray;
   }
 }
 .modal-content.popups-body{
@@ -157,7 +151,7 @@ h2.pane-title {
   }
 }
 
-blockquote.bq-fic {
+blockquote {
   border: 0;
   text-align: center;
   font-size: 2em;
@@ -180,6 +174,9 @@ blockquote.bq-fic {
   }
 }
 
+hr {
+  border-top: 2px solid $color-light-gray;
+}
 .img-bordered {
   border: 5px solid $color-black;
 }
