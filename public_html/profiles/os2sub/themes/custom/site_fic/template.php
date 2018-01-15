@@ -234,6 +234,16 @@ function site_fic_preprocess_node__fic_header(&$vars) {
 }
 
 /**
+ * Custom preprocess function for os2web_base_contentpage CT.
+ */
+function site_fic_preprocess_node__os2web_base_contentpage(&$vars) {
+  // Remove ajax destination from modal popups.
+  if (arg(3) == 'ajax' && arg(0) == 'modal') {
+    $vars['theme_hook_suggestions'][] = 'node__os2web_base_contentpage__modal';
+  }
+}
+
+/**
  * Custom preprocess function for fic_header view mode.
  */
 function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
