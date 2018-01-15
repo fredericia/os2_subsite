@@ -18,7 +18,7 @@
   @include make-row;
 }
 .page-header-wrapper {
-  z-index: 1 !important;
+  z-index: 100 !important;
 }
 .not-front .page-header-wrapper {
   background-image: url('../img/topbg.png');
