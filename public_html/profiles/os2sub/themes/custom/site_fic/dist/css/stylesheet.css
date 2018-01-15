@@ -10811,6 +10811,7 @@ a.icon-after .glyphicon {
 /*rgb(1, 181, 213);*/
 /*rgb(42, 47, 54);*/
 /*rgb(233, 231, 232);*/
+/*rgb(204, 204, 204);*/
 /*rgb(25, 33, 36);*/
 /*rgb(255, 255, 255);*/
 @font-face {
@@ -10827,12 +10828,8 @@ a.icon-after .glyphicon {
   .breadcrumb .active {
     color: #ff4200; }
 
-.breadcrumb-wrapper {
-  margin-top: -70px; }
-  .backstretched .breadcrumb-wrapper {
-    margin-top: 0; }
-  .page-node.backstretched .breadcrumb-wrapper {
-    margin-top: 30px; }
+.page-node.backstretched .breadcrumb-wrapper {
+  margin-top: 30px; }
 
 .search-and-title {
   padding-top: 0; }
@@ -10898,7 +10895,7 @@ h2.pane-title, .pane-title.heading-h2 {
   padding-bottom: 20px; }
 
 .os2-sectiont .col-sm-9 {
-  border-left: solid 2px #ccc; }
+  border-left: solid 2px #CCCCCC; }
 
 .modal-content.popups-body {
   background-color: #fff; }
@@ -10906,7 +10903,7 @@ h2.pane-title, .pane-title.heading-h2 {
     color: #333;
     font-size: 2em; }
 
-blockquote.bq-fic {
+blockquote {
   border: 0;
   text-align: center;
   font-size: 2em;
@@ -10914,13 +10911,16 @@ blockquote.bq-fic {
   line-height: 1.05em;
   width: 90%;
   margin: auto; }
-  blockquote.bq-fic *, blockquote.bq-fic:before, blockquote.bq-fic:after {
+  blockquote *, blockquote:before, blockquote:after {
     color: #01B5D5 !important;
     display: inline; }
-  blockquote.bq-fic:before {
+  blockquote:before {
     content: '“'; }
-  blockquote.bq-fic:after {
+  blockquote:after {
     content: '”'; }
+
+hr {
+  border-top: 2px solid #CCCCCC; }
 
 .img-bordered {
   border: 5px solid #192124; }
@@ -10981,7 +10981,7 @@ h1.pane-title,
 .top-border.bg-white {
   padding-top: 30px; }
   .top-border.bg-white .views-container-inner-inner {
-    border-top: 2px solid #ccc;
+    border-top: 2px solid #CCCCCC;
     padding-top: 45px; }
 
 .paragraphs-items .field.field-name-field-paragraph-header {
@@ -11139,7 +11139,7 @@ h1.pane-title,
   text-transform: capitalize; }
 
 .node .field.field-name-field-afsnit > .field-items > .field-item {
-  border-bottom: 2px solid #ccc; }
+  border-bottom: 2px solid #CCCCCC; }
   .node .field.field-name-field-afsnit > .field-items > .field-item:last-child {
     border-bottom: none; }
 
@@ -11283,7 +11283,7 @@ section.block-locale {
     border-radius: unset;
     top: auto; }
     section.block-locale .dropdown-menu ul.language-switcher-locale-url {
-      padding: 0px 10px; }
+      padding: 0 10px; }
       section.block-locale .dropdown-menu ul.language-switcher-locale-url li {
         list-style: none; }
         section.block-locale .dropdown-menu ul.language-switcher-locale-url li a {
@@ -11308,6 +11308,10 @@ header.page-header-wrapper .backstretch:before {
   background: -webkit-linear-gradient(top, black, transparent);
   background: -o-linear-gradient(top, black, transparent);
   background: linear-gradient(to bottom, black, transparent); }
+
+.headerwrapper-inner {
+  height: 60px;
+  margin-bottom: 0; }
 
 .page-nyheder .header-container .row .breadcrumb-wrapper, .page-nyheder .header-container .view-os2sub-nyheder .view-content .breadcrumb-wrapper, .page-nyheder .view-os2sub-nyheder .header-container .view-content .breadcrumb-wrapper, .page-nyheder .header-container .page-node .os2-section.full-width .paragraphs-container .view-content .breadcrumb-wrapper, .page-node .os2-section.full-width .paragraphs-container .page-nyheder .header-container .view-content .breadcrumb-wrapper, .page-nyheder .header-container .activities-list-background .activities-list-container .panels-flexible-region-inside .breadcrumb-wrapper, .activities-list-background .activities-list-container .page-nyheder .header-container .panels-flexible-region-inside .breadcrumb-wrapper {
   margin-top: -70px; }
@@ -11365,7 +11369,7 @@ header.page-header-wrapper .backstretch:before {
   .backstretched .region-header {
     margin-top: 250px; }
   .header-container {
-    padding-bottom: 250px; } }
+    padding-bottom: 180px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .sticky {
@@ -11389,7 +11393,7 @@ header.page-header-wrapper .backstretch:before {
   .backstretched .region-header {
     margin-top: 200px; }
   .header-container {
-    padding-bottom: 200px; } }
+    padding-bottom: 130px; } }
 
 @media (min-width: 992px) and (max-width: 1229px) {
   .sticky {
@@ -11936,12 +11940,16 @@ div.ctools-modal-content {
   background: transparent;
   border: 0;
   width: 80%; }
+  div.ctools-modal-content h1, div.ctools-modal-content .heading-h1, div.ctools-modal-content .banner .banner-wrapper .banner-headline, .banner .banner-wrapper div.ctools-modal-content .banner-headline {
+    font-size: 3.5em; }
   div.ctools-modal-content .modal-content {
     border-radius: 0;
     padding: 20px 50px 50px;
     -webkit-box-shadow: none;
             box-shadow: none;
     border: 0; }
+    div.ctools-modal-content .modal-content .field-name-body {
+      font-weight: bold; }
   div.ctools-modal-content .popups-close {
     display: block;
     height: 70px; }
@@ -12733,13 +12741,13 @@ div.ctools-modal-content {
       margin-left: 30px;
       font-weight: normal; }
   .node.node-os2web-contact-contact.node--os2web_contact_contact--full .field.field-name-field-paragraph-personale > .field-items > .field-item {
-    border-top: 2px solid #ccc;
+    border-top: 2px solid #CCCCCC;
     padding-top: 30px;
     padding-bottom: 30px; }
     .node.node-os2web-contact-contact.node--os2web_contact_contact--full .field.field-name-field-paragraph-personale > .field-items > .field-item:first-child {
       margin-top: 30px; }
     .node.node-os2web-contact-contact.node--os2web_contact_contact--full .field.field-name-field-paragraph-personale > .field-items > .field-item:last-child {
-      border-bottom: 2px solid #ccc; }
+      border-bottom: 2px solid #CCCCCC; }
   .node.node-os2web-contact-contact.node--os2web_contact_contact--full h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .heading-h1, .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .node.node-os2web-contact-contact.node--os2web_contact_contact--full .banner-headline {
     font-size: 2em;
     color: #01B5D5; }
