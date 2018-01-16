@@ -42,9 +42,17 @@
       margin: 15px 0;
 
       h2 {
-        font-size: 1.5em;
+        font-size: 2em;
         font-weight: normal;
         color: $color-black;
+        margin: 0;
+      }
+
+      p {
+        font-size: 1.1em;
+        line-height: 1.2em;
+        font-weight: normal;
+        margin: 0;
       }
     }
 
@@ -55,7 +63,7 @@
         @extend .btn;
         @extend .btn-small;
         font-family: $font-rbn021a;
-        font-size: 1.3em;
+        font-size: 1.4em;
         font-weight: normal;
         text-shadow: none;
         box-shadow: none;
