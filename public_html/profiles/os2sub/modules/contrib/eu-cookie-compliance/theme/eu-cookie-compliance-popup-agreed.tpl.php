@@ -18,14 +18,12 @@
 ?>
 <div>
   <div class ="popup-content agreed">
-    <div class="row">
-      <div id="popup-text">
-        <?php print $message ?>
-      </div>
-      <div id="popup-buttons">
-        <button type="button" class="hide-popup-button"><?php print $hide_button; ?></button>
-        <button type="button" class="find-more-button" ><?php print $find_more_button; ?></button>
-      </div>
+    <div id="popup-text">
+      <?php print $message ?>
+    </div>
+    <div id="popup-buttons">
+      <button type="button" class="hide-popup-button"><?php print $hide_button; ?></button>
+      <button type="button" class="find-more-button" ><?php print $find_more_button; ?></button>
     </div>
   </div>
 </div>
