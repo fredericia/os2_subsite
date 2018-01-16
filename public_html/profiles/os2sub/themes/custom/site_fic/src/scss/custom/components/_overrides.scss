@@ -44,7 +44,7 @@
       h2 {
         font-size: 2em;
         font-weight: normal;
-        color: $color-black;
+        color: $color-black !important;
         margin: 0;
       }
 
@@ -52,6 +52,7 @@
         font-size: 1.1em;
         line-height: 1.2em;
         font-weight: normal;
+        color: $color-white !important;
         margin: 0;
       }
     }
