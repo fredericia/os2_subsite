@@ -12735,12 +12735,13 @@ div.ctools-modal-content {
     .html #sliding-popup .popup-content #popup-text h2, .html #sliding-popup .popup-content #popup-text .heading-h2 {
       font-size: 2em;
       font-weight: normal;
-      color: #192124;
+      color: #192124 !important;
       margin: 0; }
     .html #sliding-popup .popup-content #popup-text p {
       font-size: 1.1em;
       line-height: 1.2em;
       font-weight: normal;
+      color: #ffffff !important;
       margin: 0; }
   .html #sliding-popup .popup-content #popup-buttons {
     float: left; }
