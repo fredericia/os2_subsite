@@ -47,18 +47,23 @@
     margin-bottom: $form-group-margin-bottom;
   }
 
-  .webform-component--row--kolonne-1 {
-    div {
-      margin-right: 5px;
-    }
-  }
-  .webform-component--row--kolonne-2 {
-    div {
-      margin-left: 5px;
-    }
-  }
   .field.field-name-field-paragraph-header {
     text-align: left;
+  }
+
+  .webform-component-select {
+    position: relative;
+    &:after {
+      position: absolute;
+      display: block;
+      right: 5px;
+      top: 4px;
+      content: "";
+      width: 30px;
+      height: 30px;
+      background: $color-white url("../img/arrows-up-down.png") center center no-repeat;
+      pointer-events: none;
+    }
   }
 }
 
@@ -83,8 +88,19 @@
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
+  .paragraphs-item-webform {
+    .webform-component--row--kolonne-2 {
+      div {
+        margin-left: 5px;
+      }
+    }
 
-
+    .webform-component--row--kolonne-1 {
+      div {
+        margin-right: 5px;
+      }
+    }
+  }
 }
 
 // Tablet - only

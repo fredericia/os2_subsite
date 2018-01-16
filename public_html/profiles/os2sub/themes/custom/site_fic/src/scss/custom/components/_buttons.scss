@@ -13,7 +13,7 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.btn{
+.btn {
   border: 5px solid $color-black;
   font-family: $font-lato;
   font-weight: 900;
@@ -26,7 +26,7 @@
   border-radius: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
-
+  outline: none;
 
   word-break: break-all;
   word-break: break-word;
@@ -39,12 +39,32 @@
 
 .btn{
 
+  &-small {
+    border-width: 3px;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
   &.btn-red {
     background-color: $color-red;
     border-color: $color-red;
     color: $color-white;
     &:hover, &:active, &:focus {
       color: $color-red;
+      background-color: transparent;
+    }
+  }
+
+  &.btn-white {
+    background-color: $color-white;
+    border-color: $color-white;
+    color: $color-blue;
+    &:hover, &:active, &:focus {
+      color: $color-white;
       background-color: transparent;
     }
   }

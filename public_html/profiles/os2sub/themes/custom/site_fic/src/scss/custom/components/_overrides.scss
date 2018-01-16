@@ -13,3 +13,63 @@
 .sidr-main-open {
   position: absolute !important;
 }
+
+.html #sliding-popup {
+  .popup-content,
+  #popup-text,
+  #popup-buttons {
+    max-width: none;
+  }
+
+  &.sliding-popup-bottom {
+    background: $color-blue;
+  }
+
+  .popup-content {
+    @include container-fixed;
+
+    @media (min-width: $screen-sm-min) {
+      width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+      width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+      width: $container-lg;
+    }
+
+    #popup-text {
+      margin: 15px 0;
+
+      h2 {
+        font-size: 1.5em;
+        font-weight: normal;
+        color: $color-black;
+      }
+    }
+
+    #popup-buttons {
+      float: left;
+
+      button {
+        @extend .btn;
+        @extend .btn-small;
+        font-family: $font-rbn021a;
+        font-size: 1.3em;
+        font-weight: normal;
+        text-shadow: none;
+        box-shadow: none;
+        margin-top: 1.5em;
+        min-width: 45%;
+
+        &.agree-button {
+          @extend .btn-white;
+        }
+
+        &.find-more-button {
+          @extend .btn-black;
+        }
+      }
+    }
+  }
+}
