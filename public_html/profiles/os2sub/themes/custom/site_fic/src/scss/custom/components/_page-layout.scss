@@ -159,6 +159,7 @@ blockquote {
   line-height: 1.05em;
   width: 90%;
   margin: auto;
+  color: $brand-primary;
 
   *, &:before, &:after {
     color: $brand-primary !important;

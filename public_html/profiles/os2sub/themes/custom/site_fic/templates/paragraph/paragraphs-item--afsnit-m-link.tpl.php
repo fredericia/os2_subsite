@@ -36,6 +36,7 @@
           <div class="col-xs-12 col-md-6">
             <div class="aligner-left">
               <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
@@ -54,7 +55,7 @@
           <div class="col-xs-12 col-md-6">
             <div class="aligner-right">
               <?php print render($content['field_paragraph_header']); ?>
-
+              <?php print render($content['field_paragraph_text']); ?>
             </div>
           </div>
         <?php endif; ?>

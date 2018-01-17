@@ -413,6 +413,19 @@ function site_fic_field__field_os2web_base_field_contact(&$vars) {
 }
 
 /**
+ * Custom theme function function for field_citat field.
+ */
+function site_fic_field__field_citat(&$vars) {
+  $entity = $vars['element']['#object'];
+
+  $field_value = field_get_items('paragraphs_item', $entity, 'field_citat');
+  $output = field_view_value('paragraphs_item', $entity, 'field_citat', $field_value[0]);
+  $output['#prefix'] = '<blockquote>';
+  $output['#suffix'] = '</blockquote>';
+  return render($output);
+}
+
+/**
  * Custom fields preprocess function.
  */
 function site_fic_preprocess_field(&$vars) {
