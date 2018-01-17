@@ -855,9 +855,9 @@ function os2web_base_default_page_manager_handlers() {
   $pane->configuration = array(
     'label' => 'title',
     'formatter' => 'slideshow',
-    'delta_limit' => 0,
+    'delta_limit' => '0',
     'delta_offset' => '0',
-    'delta_reversed' => FALSE,
+    'delta_reversed' => 0,
     'formatter_settings' => array(
       'slideshow_image_style' => 'os2sub_normal_imagesize',
       'slideshow_link' => '',
@@ -867,7 +867,7 @@ function os2web_base_default_page_manager_handlers() {
       'slideshow_speed' => '1000',
       'slideshow_timeout' => '4000',
       'slideshow_order' => '',
-      'slideshow_controls' => 0,
+      'slideshow_controls' => 1,
       'slideshow_controls_pause' => 0,
       'slideshow_controls_position' => 'after',
       'slideshow_pause' => 0,
