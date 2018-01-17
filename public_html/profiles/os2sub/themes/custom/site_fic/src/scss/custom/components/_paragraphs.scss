@@ -216,18 +216,18 @@
   }
   .field.field-name-field-afsnit.field-type-paragraphs{
     .field-item{
-
-      .paragraphs-item-afsnit-m-billede,
-      .paragraphs-item-afsnit-m-link,
-      .paragraphs-item-header-text-media,
-      .paragraphs-item-header-text-links-image{
-        .container{
-          width: inherit;
-        }
-      }
-      .paragraphs-item-header-text-media{
-        iframe{
-          width: 100%;
+      .paragraphs-item {
+        &-afsnit-m-billede,
+        &-afsnit-m-link,
+        &-header-text-media,
+        &-header-text-links-image,
+        &-paragrph-address,
+        &-paragraph-departments,
+        &-webform {
+          .container {
+            width: inherit;
+            padding: 0;
+          }
         }
       }
     }

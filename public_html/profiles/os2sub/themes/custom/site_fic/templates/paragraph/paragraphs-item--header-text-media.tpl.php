@@ -26,50 +26,50 @@
  */
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="container">
-    <div class="row">
-
-      <!--        Check if position switch set image to left  -->
-      <?php if (( $field_paragraph_pos ) == 0 ): ?>
-        <div class="col-md-12 col-lg-6 paragraph-video-container">
-          <div class="paragraph-video">
-            <?php print render($content['field_image']); ?>
+  <div<?php print $content_attributes; ?>>
+    <div class="container">
+      <div class="row">
+        <!--        Check if position switch set image to left  -->
+        <?php if (($field_paragraph_pos) == 0): ?>
+          <div class="col-xs-12 col-lg-6 paragraph-video-container">
+            <div class="paragraph-video">
+              <?php print render($content['field_image']); ?>
+            </div>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-6">
-          <div class="aligner">
-            <?php print render($content['field_paragraph_header']); ?>
-            <?php print render($content['field_paragraph_text']); ?>
+          <div class="col-xs-12 col-lg-6">
+            <div class="aligner">
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
+            </div>
           </div>
-        </div>
-      <!--         Check if position switch set image to right  -->
-      <?php elseif (( $field_paragraph_pos ) == 1 ) : ?>        
-        <div class="col-md-12 col-lg-6">
-          <div class="aligner">
-            <?php print render($content['field_paragraph_header']); ?>
-            <?php print render($content['field_paragraph_text']); ?>
+        <!--         Check if position switch set image to right  -->
+        <?php elseif (($field_paragraph_pos) == 1) : ?>
+          <div class="col-xs-12 col-lg-6">
+            <div class="aligner">
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
+            </div>
           </div>
-        </div>
-        <div class="col-md-12 col-lg-6 paragraph-video-container">
-          <div class="paragraph-video">
-            <?php print render($content['field_image']); ?>
+          <div class="col-xs-12 col-lg-6 paragraph-video-container">
+            <div class="paragraph-video">
+              <?php print render($content['field_image']); ?>
+            </div>
           </div>
-        </div>
-      <!--         Check if position switch set image to center  -->
-      <?php else : ?>
-        <div class="col-md-12">
-          <div class="aligner">
-            <?php print render($content['field_paragraph_header']); ?>
-            <?php print render($content['field_paragraph_text']); ?>
+        <!--         Check if position switch set image to center  -->
+        <?php else : ?>
+          <div class="col-xs-12">
+            <div class="aligner">
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
+            </div>
           </div>
-        </div>
-        <div class="col-md-12 paragraph-video-container">
-          <div class="paragraph-video full-width">
-            <?php print render($content['field_image']); ?>
+          <div class="col-xs-12 paragraph-video-container">
+            <div class="paragraph-video full-width">
+              <?php print render($content['field_image']); ?>
+            </div>
           </div>
-        </div>
-      <?php endif; ?>
+        <?php endif; ?>
+      </div>
     </div>
   </div>
 </div>
- 

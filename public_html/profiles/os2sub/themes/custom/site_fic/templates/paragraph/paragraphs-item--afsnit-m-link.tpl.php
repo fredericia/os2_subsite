@@ -27,39 +27,38 @@
 
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div <?php print $content_attributes; ?>>
+  <div<?php print $content_attributes; ?>>
     <div class="container">
       <div class="row">
+        <!--        Check if sides switch is in off position-->
+        <?php if ( !$field_paragraph_position ): ?>
 
-            <!--        Check if sides switch is in off position-->
-            <?php if ( !$field_paragraph_position ): ?>
-            
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-left">
-                  <?php print render($content['field_paragraph_header']); ?>
-                </div>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-right">
-                  <?php print render($content['field_knap_link']); ?>
+          <div class="col-xs-12 col-md-6">
+            <div class="aligner-left">
+              <?php print render($content['field_paragraph_header']); ?>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="aligner-right">
+              <?php print render($content['field_knap_link']); ?>
 
-                </div>
-              </div>
-            <?php else: ?>
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-left">
-                  <?php print render($content['field_knap_link']); ?>
+            </div>
+          </div>
+        <?php else: ?>
+          <div class="col-xs-12 col-md-6">
+            <div class="aligner-left">
+              <?php print render($content['field_knap_link']); ?>
 
-                </div>
-              </div>
-              <div class="col-xs-12 col-md-6">
-                <div class="aligner-right">
-                  <?php print render($content['field_paragraph_header']); ?>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="aligner-right">
+              <?php print render($content['field_paragraph_header']); ?>
 
-                </div>
-              </div>
-            <?php endif; ?>
-        </div>
+            </div>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
+</div>

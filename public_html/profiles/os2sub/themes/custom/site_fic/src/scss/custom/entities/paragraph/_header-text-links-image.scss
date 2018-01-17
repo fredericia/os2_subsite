@@ -19,10 +19,13 @@
   padding-bottom: 40px;
   padding-top: 40px;
 
-  .row{
+  .row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+
     // Fixes Safari issue (https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap)
     &:after,
     &:before {

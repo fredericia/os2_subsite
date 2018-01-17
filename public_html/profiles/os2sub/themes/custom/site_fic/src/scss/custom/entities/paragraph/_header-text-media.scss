@@ -32,15 +32,22 @@
     }
 
     .paragraph-video-container{
-      .paragraph-video{       
+      .paragraph-video {
         iframe{
-          max-width: 100% !important;
-          height: 300px !important;
-          border: 10px solid $color-black;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
         }
         .content{
+          position: relative;
           padding-left: 0;
           padding-right: 0;
+          padding-bottom: 56.25%; /* 16:9 */
+          padding-top: 25px;
+          height: 0;
+          width: 100%;
         }
       }
 

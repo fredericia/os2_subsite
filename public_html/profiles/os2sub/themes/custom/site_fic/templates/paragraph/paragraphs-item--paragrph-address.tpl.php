@@ -26,15 +26,14 @@
  */
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="content"<?php print $content_attributes; ?>>
-   
+  <div<?php print $content_attributes; ?>>
+    <div class="container">
       <div class="row">
         <?php print render($content['field_paragraph_header']); ?>
-        </div>
-        <div class="row">
+      </div>
+      <div class="row">
         <div class="col-md-12 col-lg-5">
           <div class="aligner">
-
             <?php print render($content['field_paragraph_text']); ?>
             <?php print render($content['field_knap_link']); ?>
           </div>
@@ -43,6 +42,6 @@
           <?php print render($content['field_paragraph_map']); ?>
         </div>
       </div>
-    
+    </div>
   </div>
 </div>

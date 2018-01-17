@@ -26,10 +26,12 @@
  */
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="content"<?php print $content_attributes; ?>>
-    <div class="row">
-      <div class="col-lg-8 col-lg-push-2 col-md-12">
-        <?php print render($content); ?>
+  <div<?php print $content_attributes; ?>>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-push-2 col-md-12">
+          <?php print render($content); ?>
+        </div>
       </div>
     </div>
   </div>
