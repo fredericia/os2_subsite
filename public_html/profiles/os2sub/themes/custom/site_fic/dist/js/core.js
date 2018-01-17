@@ -3313,19 +3313,26 @@ var header = (function ($) {
 
    show : function($id) {
      var $i = 0,
-       $backstretch = $('.page-header-wrapper').data('backstretch');
+       $backstretch = $('.page-header-wrapper').data('backstretch'),
+       $default = true;
 
      if (typeof Drupal.settings.ficBackstretch === 'undefined'
       || typeof $backstretch === 'undefined') {
        return;
      }
 
+
      for (var i = 0; i < Drupal.settings.ficBackstretch.length; i++) {
          if ($id == Drupal.settings.ficBackstretch[i].id) {
          $backstretch.show($i);
+         $default = false;
          break;
        }
        $i++;
+     }
+
+     if ($default) {
+       $backstretch.show(0);
      }
    }
   };
