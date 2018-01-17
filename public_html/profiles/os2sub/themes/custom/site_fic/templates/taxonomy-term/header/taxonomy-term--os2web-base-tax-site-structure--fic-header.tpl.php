@@ -29,9 +29,12 @@
                 <?php endif; ?>
             </div>
         </div>
-        <?php if (! empty($contact_link)) : ?>
+        <?php if (!empty($contact_link_url)) : ?>
             <div class="col-xs-6 col-sm-4">
-                <?php print $contact_link; ?>
+              <a href="<?php print $contact_link_url; ?>"
+                 class="modal-link ctools-modal-contact-modal-style ctools-use-modal contact">
+                <?php print t('Contact'); ?>
+              </a>
             </div>
         <?php endif; ?>
     </div>

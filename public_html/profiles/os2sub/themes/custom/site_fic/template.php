@@ -248,21 +248,16 @@ function site_fic_preprocess_node__os2web_base_contentpage(&$vars) {
  */
 function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   // Processing modal contact field.
-  $field_contact_value = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_contact');
-  if (!empty($field_contact_value)) {
-    $contact_node = node_load($field_contact_value[0]['nid']);
-    _site_fic_get_node_translation($contact_node);
-    $vars['contact_link'] = l(t('Contact'), 'modal/node/' . $contact_node->nid . '/nojs', array(
-      'attributes' => array(
-        'class' => array(
-          'modal-link',
-          'ctools-modal-contact-modal-style',
-          'ctools-use-modal',
-          'contact',
-        ),
-      ),
-    ));
+  $contact_link_url = &drupal_static('contact_link_url');
+  if (empty($contact_link_url)) {
+    $field_contact_value = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_contact');
+    if (!empty($field_contact_value)) {
+      $contact_node_reference = node_load($field_contact_value[0]['nid']);
+      _site_fic_get_node_translation($contact_node_reference);
+      $contact_link_url = url('modal/node/' . $contact_node_reference->nid . '/nojs');
+    }
   }
+  $vars['contact_link_url'] = $contact_link_url;
 
   // Opening hours processing.
   $opening_hours_node_reference = variable_get('opening_hours_node_reference', FALSE);
@@ -300,7 +295,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     );
 
     // Prepare related node slides.
-    $field_os2web_base_field_related = field_get_items('taxonomy_term',$vars['term'], 'field_os2web_base_field_related');
+    $field_os2web_base_field_related = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_related');
     if (!empty($field_os2web_base_field_related)) {
       foreach ($field_os2web_base_field_related as $value) {
         if (empty($value['nid'])) {
@@ -345,10 +340,19 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     return;
   }
 
-  $field_os2web_base_field_banner = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_banner');
-  if (!empty($field_os2web_base_field_banner)) {
-    _site_fic_set_backstretch_background($vars['tid'], $field_os2web_base_field_banner);
-  } else {
+  // By default for content section node render image
+  // from term field field_os2web_base_field_banner.
+  $fic_header_image = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_banner');
+
+  // But it's possible to override it from  content section node.
+  if (!empty($node->field_baggrund)) {
+    $fic_header_image = field_get_items('node', $node, 'field_baggrund');
+  }
+
+  if (!empty($fic_header_image)) {
+    _site_fic_set_backstretch_background($vars['tid'], $fic_header_image);
+  }
+  else {
     // Hide description from rendering if background image is empty.
     hide($vars['content']['description_field']);
   }
