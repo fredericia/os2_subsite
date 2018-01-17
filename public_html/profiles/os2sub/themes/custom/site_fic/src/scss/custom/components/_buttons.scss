@@ -55,7 +55,7 @@
     color: $color-white;
     &:hover, &:active, &:focus {
       color: $color-red;
-      background-color: transparent;
+      background-color: $color-white;
     }
   }
 
@@ -65,7 +65,7 @@
     color: $color-blue;
     &:hover, &:active, &:focus {
       color: $color-white;
-      background-color: transparent;
+      background-color: $color-blue;
     }
   }
 
@@ -75,7 +75,7 @@
     color: $color-white;
     &:hover, &:active, &:focus {
       color: $color-blue;
-      background-color: transparent;
+      background-color: $color-white;
     }
   }
 
@@ -85,7 +85,7 @@
     color: $color-white;
     &:hover, &:active, &:focus {
       color: $color-black;
-      background-color: transparent;
+      background-color: $color-white;
     }
   }
 

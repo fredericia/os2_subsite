@@ -17,8 +17,59 @@
 // Node
 .node {
   font-size: 1.06em;
+  line-height: 1.58em;
 }
 .page-node {
+  &.node-type-os2web-base-contentpage {
+    h1 {
+      font-size: 3.8em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2em;
+    }
+
+    table {
+      caption {
+        font-size: 2em;
+        font-family: $font-rbn021a;
+        color: $color-black;
+        margin-top: 20px;
+      }
+
+      tbody > tr > td ,
+      thead > tr > th {
+        border: 0;
+
+      }
+
+      th {
+        font-size: 1.1em;
+        padding: 15px 8px;
+      }
+
+      tbody > tr {
+        > td {
+          padding: 5px 15px;
+          border-right: 2px solid $color-white;
+
+          &:last-child {
+            border: 0;
+          }
+        }
+
+        &:last-child {
+          border-bottom: 2px solid $color-gray;
+        }
+      }
+
+      &.table-striped > tbody > tr:nth-of-type(odd) {
+        background: $color-gray;
+      }
+    }
+  }
+
   .pane-node-field-os2web-kulturnaut-slidesho {
     margin-bottom: $grid-gutter-width;
     .os2-box{
@@ -93,6 +144,7 @@
       }
     }
   }
+
   .content-sidebar {
     border-left: 2px solid #ddd;
     padding-bottom: ($grid-gutter-width * 2);
