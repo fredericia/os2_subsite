@@ -511,7 +511,7 @@ function fic_frontpage_settings_views_default_views() {
       'label' => 'Indhold: Nid',
     ),
   );
-  $handler->display->display_options['link_to_view'] = '1';
+  $handler->display->display_options['link_to_view'] = '0';
 
   /* Display: Term page events */
   $handler = $view->new_display('panel_pane', 'Term page events', 'panel_pane_2');
@@ -577,7 +577,7 @@ function fic_frontpage_settings_views_default_views() {
       'label' => 'Indhold: Nid',
     ),
   );
-  $handler->display->display_options['link_to_view'] = '1';
+  $handler->display->display_options['link_to_view'] = '0';
 
   /* Display: Front page events */
   $handler = $view->new_display('panel_pane', 'Front page events', 'panel_pane_3');
@@ -849,6 +849,10 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+  /* Sorteringskriterie: Global: Tilfældig */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
   /* Filterkriterie: Fil: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'file_managed';
