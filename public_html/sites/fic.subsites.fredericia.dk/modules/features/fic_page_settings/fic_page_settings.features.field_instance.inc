@@ -20,12 +20,9 @@ function fic_page_settings_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'paragraphs',
-        'settings' => array(
-          'view_mode' => 'full',
-        ),
-        'type' => 'paragraphs_view',
-        'weight' => 23,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -108,7 +105,7 @@ function fic_page_settings_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'fic_header' => array(
         'label' => 'above',
