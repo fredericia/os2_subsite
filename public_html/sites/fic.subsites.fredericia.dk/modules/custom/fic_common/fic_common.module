@@ -190,3 +190,12 @@ function fic_common_url_outbound_alter(&$path, &$options, $original_path) {
     unset($options['query']['destination']);
   }
 }
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function fic_common_ctools_plugin_directory($module, $plugin) {
+  if (($module == 'ctools') && ($plugin == 'content_types')) {
+    return 'plugins/content_types';
+  }
+}
