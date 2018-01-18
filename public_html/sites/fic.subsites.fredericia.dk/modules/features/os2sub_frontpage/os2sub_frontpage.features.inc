@@ -52,7 +52,7 @@ function os2sub_frontpage_image_default_styles() {
           'ypos' => 0,
           'alpha' => 100,
           'scale' => '',
-          'path' => 'profiles/os2sub/themes/custom/site_fic/dist/img/fic-header-overlay.png',
+          'path' => 'profiles/os2sub/themes/custom/site_fic/dist/img/fic-header-overlay-darken.png',
         ),
         'weight' => 3,
       ),
