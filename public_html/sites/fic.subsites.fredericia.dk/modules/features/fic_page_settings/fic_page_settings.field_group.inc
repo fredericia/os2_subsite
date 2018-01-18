@@ -24,6 +24,7 @@ function fic_page_settings_field_group_info() {
     'weight' => '7',
     'children' => array(
       0 => 'field_afsnit_full_width',
+      1 => 'field_hide_section_afsnits',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

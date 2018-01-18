@@ -20,20 +20,20 @@ function os2web_base_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_os2web_base_group_content';
   $field_group->data = array(
-    'label' => 'Afsnit',
+    'label' => 'Afsnit (indhold)',
     'weight' => '6',
     'children' => array(
       0 => 'field_afsnit',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Afsnit (indhold)',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-afsnit field-group-htab',
         'required_fields' => 1,
-        'id' => '',
+        'classes' => 'group-afsnit field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_afsnit|node|os2web_base_contentpage|form'] = $field_group;
@@ -171,7 +171,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_group_content';
   $field_group->data = array(
     'label' => 'Indstillinger',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(
       0 => 'field_svendborg_hide_sidebar',
       1 => 'field_os2web_base_field_contact',
@@ -210,6 +210,7 @@ function os2web_base_field_group_info() {
       4 => 'group_os2web_base_group_images',
       5 => 'group_relationer',
       6 => 'group_spotbokse',
+      7 => 'group_fwparagraphs',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -232,7 +233,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Hentet fra kommunens sagssystem',
-    'weight' => '10',
+    'weight' => '11',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -282,7 +283,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_group_content';
   $field_group->data = array(
     'label' => 'Emneord',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_os2web_base_field_edi_tags',
       1 => 'field_os2web_base_field_loca_ref',
@@ -727,7 +728,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_group_content';
   $field_group->data = array(
     'label' => 'Relationer',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_os2web_base_field_ext_link',
       1 => 'field_os2web_base_field_related',
@@ -814,7 +815,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_group_content';
   $field_group->data = array(
     'label' => 'Spotbokse / Webform',
-    'weight' => '8',
+    'weight' => '9',
     'children' => array(
       0 => 'field_os2web_base_field_spotbox',
       1 => 'field_os2web_base_field_webform',
@@ -949,6 +950,7 @@ function os2web_base_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Afsnit');
+  t('Afsnit (indhold)');
   t('Billede');
   t('Billeder og filer');
   t('Citat');
