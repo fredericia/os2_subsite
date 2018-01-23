@@ -11214,11 +11214,6 @@ h1.pane-title,
   font-size: 3.125em;
   text-transform: capitalize; }
 
-.node .field.field-name-field-afsnit > .field-items > .field-item {
-  border-bottom: 2px solid #CCCCCC; }
-  .node .field.field-name-field-afsnit > .field-items > .field-item:last-child {
-    border-bottom: none; }
-
 .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items {
   margin-top: 60px; }
   .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items:first-child {
@@ -12008,7 +12003,8 @@ ul.social-icon-list {
   width: 100%;
   overflow-y: scroll;
   bottom: 0;
-  right: 0; }
+  right: 0;
+  overflow-scrolling: touch; }
 
 div.ctools-modal-content {
   margin: 10% auto;
