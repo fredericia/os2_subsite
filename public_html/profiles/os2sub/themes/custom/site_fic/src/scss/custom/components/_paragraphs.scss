@@ -193,16 +193,6 @@
     text-transform: capitalize;
   }
 }
-.node .field.field-name-field-afsnit{
-  & > .field-items{
-    & > .field-item{
-      border-bottom: 2px solid $color-light-gray;
-      &:last-child{
-        border-bottom: none;
-      }
-    }
-  }
-}
 
 .node{
   .field.field-name-field-afsnit.field-type-paragraphs{
@@ -213,8 +203,7 @@
         margin-top: 0;
       }
     }
-  }
-  .field.field-name-field-afsnit.field-type-paragraphs{
+
     .field-item{
       .paragraphs-item {
         &-afsnit-m-billede,
