@@ -15,8 +15,6 @@
     "core": [
       "src/vendor/bootstrap-sass/assets/javascripts/bootstrap.js",
       "src/vendor/jquery-sticky/jquery.sticky.js",
-      "src/js/page-layout.js",
-      "src/js/header.js",
       "src/js/init.js"
     ]
   }
