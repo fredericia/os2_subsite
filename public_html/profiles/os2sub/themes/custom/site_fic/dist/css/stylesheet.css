@@ -12004,7 +12004,7 @@ ul.social-icon-list {
   overflow-y: scroll;
   bottom: 0;
   right: 0;
-  overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch; }
 
 div.ctools-modal-content {
   margin: 10% auto;
