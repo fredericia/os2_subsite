@@ -146,8 +146,12 @@ var header = (function ($) {
           }
         },
         pagerAnchorBuilder: function(idx, slide) {
-          var $slide = $(slide);
-          return '<div class="field-item"><a href="' + $slide.data('url') + '"><span>' + $slide.data('name') + '</span></a></div>';
+          var $slide = $(slide),
+            $target = '';
+          if (typeof $slide.data('target') !== 'undefined') {
+            $target = ' target="' + $slide.data('target') + '"';
+          }
+          return '<div class="field-item"><a href="' + $slide.data('url') + '"' + $target + '><span>' + $slide.data('name') + '</span></a></div>';
         },
         pagerEvent: 'mouseover',
         pauseOnPagerHover: true
