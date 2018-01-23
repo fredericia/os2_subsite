@@ -120,12 +120,24 @@ if(typeof(CKEDITOR) !== 'undefined') {
         if ( dialogName == 'image' ) {
             // Get a reference to the "Advanced" tab.
             var advancedTab = dialogDefinition.getContents('advanced');
-            console.log(advancedTab);
 
             // Set the default value for the Class field.
             var imgClass = advancedTab.get('txtGenClass');
             // Add the same class like we add in styles above.
             imgClass['default'] = 'img-bordered';
+        }
+
+        // Check if the definition is from the dialog window you are
+        // interested in (the "Table" dialog window).
+        if ( dialogName == 'table' ) {
+            // Get a reference to the "Advanced" tab.
+            var advancedTab = dialogDefinition.getContents('advanced');
+            console.log(advancedTab);
+
+            // Set the default value for the Class field.
+            var classes = advancedTab.get('advCSSClasses');
+            // Add the same class like we add in styles above.
+            classes['default'] = 'table';
         }
     });
 }
