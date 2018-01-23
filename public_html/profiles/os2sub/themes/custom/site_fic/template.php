@@ -289,6 +289,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
         $slide_id,
         'Term name',
         'taxonomy/term/' . $vars['tid'],
+        NULL,
         $vars['content'],
         $field_os2web_base_field_image
       ),
@@ -314,8 +315,22 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
           $slide_id,
           $related_node->title,
           url('node/' . $related_node->nid),
+          NULL,
           $slide_content,
           $field_baggrund
+        );
+      }
+    }
+    // Prepare related node slides.
+    $field_os2web_base_field_ext_link = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_ext_link');
+    if (!empty($field_os2web_base_field_ext_link)) {
+      foreach ($field_os2web_base_field_ext_link as $value) {
+        $slide_id = 'ext-link-' . count($slideshow);
+        $slideshow[$slide_id] = _site_fic_cycle_slideshow_slide(
+          $slide_id,
+          $value['title'],
+          $value['url'],
+          isset($value['attributes']['target']) ? $value['attributes']['target'] : NULL
         );
       }
     }
@@ -355,11 +370,6 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
   else {
     // Hide description from rendering if background image is empty.
     hide($vars['content']['description_field']);
-  }
-
-  // Hide readmore link for node pages FIC header.
-  if (!empty($vars['content']['field_os2web_base_field_ext_link'])) {
-    hide($vars['content']['field_os2web_base_field_ext_link']);
   }
 }
 
@@ -517,6 +527,7 @@ function site_fic_preprocess_cycle_slideshow(&$vars) {
         'name' => $slide['pager']['name'],
         'url' => $slide['pager']['url'],
         'id' => $slide['pager']['id'],
+        'target' => $slide['pager']['target'],
       ));
     }
   }
@@ -525,7 +536,7 @@ function site_fic_preprocess_cycle_slideshow(&$vars) {
 /**
  * Cycle slide definition().
  */
-function _site_fic_cycle_slideshow_slide($slide_id, $name, $url, $content, $background) {
+function _site_fic_cycle_slideshow_slide($slide_id, $name, $url, $target = NULL, $content = array(), $background = FALSE) {
   _site_fic_set_backstretch_background($slide_id, $background);
   return array(
     'content' => $content,
@@ -533,6 +544,7 @@ function _site_fic_cycle_slideshow_slide($slide_id, $name, $url, $content, $back
       'name' => $name,
       'url' => $url,
       'id' => $slide_id,
+      'target' => $target,
     ),
   );
 }
