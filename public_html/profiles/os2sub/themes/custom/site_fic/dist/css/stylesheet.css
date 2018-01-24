@@ -11304,7 +11304,7 @@ form.search-form {
     #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-widget-filter-search_api_views_fulltext,
     form.search-form .views-exposed-widgets .views-exposed-widget.views-widget-filter-search_api_views_fulltext {
       padding: 0;
-      width: 241px; }
+      width: 100%; }
     #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button,
     form.search-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
       position: absolute;
