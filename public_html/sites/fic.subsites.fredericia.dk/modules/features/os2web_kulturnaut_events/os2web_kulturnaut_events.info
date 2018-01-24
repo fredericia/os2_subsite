@@ -70,6 +70,7 @@ features[field_base][] = field_os2web_kulturnaut_url
 features[field_base][] = field_os2web_kulturnaut_venue
 features[field_group][] = group_hidden|node|os2web_kulturnaut_knactivity|form
 features[field_instance][] = node-os2web_kulturnaut_knactivity-field_os2web_base_field_edi_tags
+features[field_instance][] = node-os2web_kulturnaut_knactivity-field_os2web_base_field_promote
 features[field_instance][] = node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_date
 features[field_instance][] = node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_descrip
 features[field_instance][] = node-os2web_kulturnaut_knactivity-field_os2web_kulturnaut_genre

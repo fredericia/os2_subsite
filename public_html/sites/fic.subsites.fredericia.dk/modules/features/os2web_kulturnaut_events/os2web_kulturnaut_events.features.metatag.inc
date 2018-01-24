@@ -21,9 +21,6 @@ function os2web_kulturnaut_events_metatag_export_default() {
       'abstract' => array(
         'value' => '[node:summary]',
       ),
-      'keywords' => array(
-        'value' => '[node:field_os2web_base_field_edi_tags]',
-      ),
       'robots' => array(
         'value' => array(
           'index' => 'index',
