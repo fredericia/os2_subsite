@@ -3475,6 +3475,15 @@ var header = (function ($) {
         label: ''
     });
 
+    $('select').change(function() {
+        var $this = $(this);
+        if ($this.val() == '') {
+            $this.addClass('empty');
+        } else {
+            $this.removeClass('empty');
+        }
+    }).change();
+
     // Close CTools modal on backdrop click
     Drupal.behaviors.ctools_backdrop_close = {
         attach: function(context, settings){
