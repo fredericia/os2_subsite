@@ -12245,11 +12245,12 @@ div.ctools-modal-content {
     content: "";
     color: #2a2f36; }
 
-.sidr .logo img {
-  max-height: 80px; }
-
-.sidr .logo + .slinky-menu {
-  margin-top: 15px; }
+.sidr {
+  z-index: 2000; }
+  .sidr .logo img {
+    max-height: 80px; }
+  .sidr .logo + .slinky-menu {
+    margin-top: 15px; }
 
 .term-fic-header {
   margin-right: auto;

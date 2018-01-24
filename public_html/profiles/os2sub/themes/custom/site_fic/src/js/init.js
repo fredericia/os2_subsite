@@ -48,7 +48,8 @@
 
     $('.sidr__toggle').sidr({
         name: 'sidr-main',
-        side: 'right',
+        side: 'left',
+        displace: false,
         renaming: false,
         source: '.sidr-source-provider'
     });
