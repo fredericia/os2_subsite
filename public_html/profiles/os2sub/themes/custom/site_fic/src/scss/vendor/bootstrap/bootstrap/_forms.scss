@@ -158,6 +158,14 @@ output {
   // [converter] extracted textarea& to textarea.form-control
 }
 
+select.empty {
+  color: $input-color-placeholder !important;
+
+  option {
+    color: $input-color;
+  }
+}
+
 // Reset height for `textarea`s
 textarea.form-control {
   height: auto;
