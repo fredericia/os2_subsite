@@ -12252,6 +12252,10 @@ div.ctools-modal-content {
   .sidr .logo + .slinky-menu {
     margin-top: 15px; }
 
+.layout__wrapper {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
+
 .term-fic-header {
   margin-right: auto;
   margin-left: auto;
@@ -12689,9 +12693,6 @@ div.ctools-modal-content {
   .form-control, .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none; }
-
-.sidr-main-open {
-  position: absolute !important; }
 
 .html #sliding-popup .popup-content,
 .html #sliding-popup #popup-text,

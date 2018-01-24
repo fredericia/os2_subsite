@@ -35,6 +35,10 @@
   }
 }
 
+.layout__wrapper {
+  box-shadow: none !important; // Reset from sidr bootstrap theme
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
