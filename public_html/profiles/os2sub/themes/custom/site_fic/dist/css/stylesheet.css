@@ -11256,6 +11256,25 @@ h1.pane-title,
   background-image: url("../img/topbg.png");
   background-repeat: repeat-x; }
 
+.header-container {
+  position: relative; }
+  .header-container .header-search-form {
+    position: absolute;
+    right: 0;
+    top: 120px; }
+    .header-container .header-search-form form {
+      line-height: 30px;
+      background-color: #ff4200;
+      width: 300px; }
+      .header-container .header-search-form form .form-text {
+        background-color: transparent;
+        border: none; }
+      .header-container .header-search-form form .btn.btn-primary, .header-container .header-search-form form .topnav-wrapper.user-nav .region.region-navigation .book-link a.btn-primary, .topnav-wrapper.user-nav .region.region-navigation .book-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .topnav-wrapper.user-nav .region.region-navigation .book-link .banner .banner-wrapper a, .topnav-wrapper.user-nav .region.region-navigation .book-link .banner .banner-wrapper .header-container .header-search-form form a, .header-container .header-search-form form .banner .banner-wrapper .topnav-wrapper.user-nav .region.region-navigation .book-link a, .banner .banner-wrapper .topnav-wrapper.user-nav .region.region-navigation .book-link .header-container .header-search-form form a, .header-container .header-search-form form .banner .banner-wrapper a, .banner .banner-wrapper .header-container .header-search-form form a, .header-container .header-search-form form .html #sliding-popup .popup-content #popup-buttons button.btn-primary, .html #sliding-popup .popup-content #popup-buttons .header-container .header-search-form form button.btn-primary, .header-container .header-search-form body.page-search.page-search-content section.block.block-system.block-system > form button.btn-primary.btn, body.page-search.page-search-content .header-container .header-search-form section.block.block-system.block-system > form button.btn-primary.btn, .header-container .header-search-form form .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a.btn-primary, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a.btn-primary, .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form
+      .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a.btn-primary,
+      .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a.btn-primary, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a.btn-primary, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .banner .banner-wrapper a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .banner .banner-wrapper .header-container .header-search-form form a, .header-container .header-search-form form .banner .banner-wrapper .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .banner .banner-wrapper .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .header-container .header-search-form form a, .header-container .header-search-form form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .banner .banner-wrapper a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .banner .banner-wrapper .header-container .header-search-form form a, .header-container .header-search-form form .banner .banner-wrapper .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .banner .banner-wrapper .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .header-container .header-search-form form a, .header-container .header-search-form form .paragraphs-item-paragrph-address .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .header-container .header-search-form form a.btn-primary, .header-container .header-search-form form .paragraphs-item-webform .form-actions .btn-primary.webform-submit.form-submit, .paragraphs-item-webform .form-actions .header-container .header-search-form form .btn-primary.webform-submit.form-submit {
+        background-color: transparent;
+        border: transparent; }
+
 #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
 form.search-form {
   height: 60px; }
@@ -11372,11 +11391,16 @@ header.page-header-wrapper .backstretch:before {
   margin-bottom: 30px; }
 
 .sticky {
+  background-image: -webkit-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
+  background-image: -o-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
+  background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  background: url("../img/topbg.png") repeat-x center -60px;
   position: fixed;
   width: 100%;
   left: 0;
@@ -11420,8 +11444,6 @@ header.page-header-wrapper .backstretch:before {
     padding-bottom: 180px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .sticky {
-    background: url("../img/topbg.png") repeat-x center -79px; }
   .navbar-nav > li > a {
     padding-top: 0;
     padding-bottom: 0;
@@ -11433,7 +11455,9 @@ header.page-header-wrapper .backstretch:before {
   .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
     margin-top: 0; }
   .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
-    display: none; } }
+    display: none; }
+  .header-container .header-search-form {
+    top: 112px; } }
 
 @media (min-width: 992px) {
   .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
@@ -11444,15 +11468,15 @@ header.page-header-wrapper .backstretch:before {
     padding-bottom: 130px; } }
 
 @media (min-width: 992px) and (max-width: 1229px) {
-  .sticky {
-    background: url("../img/topbg.png") repeat-x center -74px; }
   .navbar-nav > li > a {
     padding-top: 0;
     padding-bottom: 0; }
   .topnav-wrapper.user-nav {
     height: 46px !important; }
   .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
-    display: none; } }
+    display: none; }
+  .header-container .header-search-form {
+    top: 106px; } }
 
 @media (min-width: 1230px) {
   .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
@@ -12194,18 +12218,6 @@ div.ctools-modal-content {
   border-color: transparent; }
   .navbar-default .navbar-collapse {
     border: none; }
-  .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search {
-    line-height: 30px;
-    background-color: #ff4200;
-    width: 300px; }
-    .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .form-text {
-      background-color: transparent;
-      border: none; }
-    .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .btn.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .topnav-wrapper.user-nav .region.region-navigation .book-link a.btn-primary, .topnav-wrapper.user-nav .region.region-navigation .book-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .banner .banner-wrapper a, .banner .banner-wrapper .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .html #sliding-popup .popup-content #popup-buttons button.btn-primary, .html #sliding-popup .popup-content #popup-buttons .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search button.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a.btn-primary, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a.btn-primary, .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search
-    .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a.btn-primary,
-    .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a.btn-primary, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a.btn-primary, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a.btn-primary, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .paragraphs-item-paragrph-address .field.field-name-field-knap-link a.btn-primary, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search a.btn-primary, .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .paragraphs-item-webform .form-actions .btn-primary.webform-submit.form-submit, .paragraphs-item-webform .form-actions .navbar-default #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .btn-primary.webform-submit.form-submit {
-      background-color: transparent;
-      border: transparent; }
   .navbar-default .navbar-brand {
     background-color: #ffffff;
     margin-right: 30px; }
