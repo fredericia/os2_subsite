@@ -173,8 +173,8 @@ header.page-header-wrapper{
 }
 // Sticky menu styles.
 .sticky {
-  @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);
   @include container-fixed();
+  background: url("../img/topbg.png") repeat-x center -60px;
   position: fixed;
   width: 100%;
   left: 0;
@@ -263,9 +263,15 @@ header.page-header-wrapper{
 // Desktop - and up
 @include media-breakpoint-up(md) {
   //trick to mane menu clickable on the front page because of background slideshow
-  .sticky .row{
-    width: 970px;
+  .sticky {
+    @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);
+    background-position: 0;
+
+    .row{
+      width: 970px;
+    }
   }
+
   .backstretched {
     .region-header {
       margin-top: 200px;
