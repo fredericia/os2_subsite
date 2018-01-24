@@ -28,17 +28,23 @@
       .field.field-name-field-os2web-kulturnaut-slidesho.field-type-image,
       .field.field-name-field-os2web-base-field-lead-img.field-type-image{
         border: solid 6px $color-black;
+        margin-top: 6px;
       }
     }
     & *, header{
       h2{
-        margin-top: 0;
+        margin: 0;
+
         a{
-          color: $color-black;
+          color: $color-dark-gray;
           font-size: 2.375em;
           font-family: $headings-font-family;
           text-transform: uppercase;
           font-weight: normal;
+
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }
