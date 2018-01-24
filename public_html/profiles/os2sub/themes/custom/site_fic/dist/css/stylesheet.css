@@ -11391,16 +11391,11 @@ header.page-header-wrapper .backstretch:before {
   margin-bottom: 30px; }
 
 .sticky {
-  background-image: -webkit-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
-  background-image: -o-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
-  background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  background: url("../img/topbg.png") repeat-x center -60px;
   position: fixed;
   width: 100%;
   left: 0;
@@ -11460,8 +11455,16 @@ header.page-header-wrapper .backstretch:before {
     top: 112px; } }
 
 @media (min-width: 992px) {
-  .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
-    width: 970px; }
+  .sticky {
+    background-image: -webkit-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
+    background-image: -o-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
+    background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
+    background-position: 0; }
+    .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
+      width: 970px; }
   .backstretched .region-header {
     margin-top: 200px; }
   .header-container {
