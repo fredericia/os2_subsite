@@ -11397,8 +11397,8 @@ header.page-header-wrapper .backstretch:before {
   padding-right: 15px;
   background: url("../img/topbg.png") repeat-x center -60px;
   position: fixed;
-  width: 100%;
   left: 0;
+  right: 0;
   z-index: 1100; }
   .sticky:before, .sticky:after {
     content: " ";
@@ -11425,6 +11425,14 @@ header.page-header-wrapper .backstretch:before {
 .pane-fic-artikler-panel-pane-1 .pane-content.paragraphs-container {
   margin-right: auto !important;
   margin-left: auto !important; }
+
+.sidr-open .sidr__toggle .fa-bars {
+  display: none; }
+
+.sidr__toggle .fa-times {
+  display: none; }
+  .sidr-open .sidr__toggle .fa-times {
+    display: inline-block; }
 
 @media (max-width: 767px) {
   .sticky {
@@ -12693,6 +12701,12 @@ div.ctools-modal-content {
   .form-control, .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none; }
+
+.sidr-main-open {
+  position: absolute !important; }
+
+.img-responsive {
+  width: auto; }
 
 .html #sliding-popup .popup-content,
 .html #sliding-popup #popup-text,

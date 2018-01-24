@@ -176,13 +176,15 @@ header.page-header-wrapper{
   @include container-fixed();
   background: url("../img/topbg.png") repeat-x center -60px;
   position: fixed;
-  width: 100%;
+  //width: 100%;
   left: 0;
+  right: 0;
   z-index: 1100;
 
   .sidr-open & {
     position: absolute;
   }
+
   .row {
     margin: auto;
   }
@@ -208,6 +210,25 @@ header.page-header-wrapper{
     margin-left: auto !important;
   }
 }
+
+.sidr__toggle {
+
+  .fa-bars {
+
+    .sidr-open & {
+      display: none;
+    }
+  }
+
+  .fa-times {
+    display: none;
+
+    .sidr-open & {
+      display: inline-block;
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

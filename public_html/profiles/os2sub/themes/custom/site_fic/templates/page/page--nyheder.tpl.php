@@ -97,6 +97,7 @@
 
                 <button class="sidr__toggle">
                     <span class="icon fa fa-bars"></span>
+                    <span class="icon fa fa-times"></span>
                 </button>
 
             </div>

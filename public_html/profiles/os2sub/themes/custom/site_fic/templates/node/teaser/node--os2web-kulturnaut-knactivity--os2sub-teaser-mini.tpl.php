@@ -81,25 +81,22 @@
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> "<?php print $attributes; ?>>
     <div class="overlay-wrapper">
-         <?php
+      <?php
       // Hide comments, tags, and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
       hide($content['field_tags']);
 
       print render($content['field_os2web_kulturnaut_slidesho']);
-        ?>
+      ?>
       <div class="overlay">
         <div class="overlay-content">
-          </a>
           <div class="link-show-more">
             <a class="btn btn-black" href="<?php print $node_url; ?>"><?php print t('Read more') ?></a>
           </div>
-
         </div>
       </div>
     </div>
-
 
   <?php
   print render($content['field_os2web_kulturnaut_date']);
