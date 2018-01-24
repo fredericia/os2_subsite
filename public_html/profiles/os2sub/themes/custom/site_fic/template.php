@@ -95,6 +95,9 @@ function site_fic_preprocess_page(&$variables) {
       )
     );
   }
+
+  $search_block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
+  $variables['search_block'] = render($search_block['content']);
 }
 
 /**

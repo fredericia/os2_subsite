@@ -24,6 +24,33 @@
   background-image: url('../img/topbg.png');
   background-repeat: repeat-x;
 }
+
+.header-container {
+  position: relative;
+
+  .header-search-form {
+    position: absolute;
+    right: 0;
+    top: 120px;
+
+    form {
+      line-height: 30px;
+      background-color: $color-red;
+      width: 300px;
+
+      .form-text {
+        background-color: transparent;
+        border: none;
+      }
+
+      .btn.btn-primary {
+        background-color: transparent;
+        border: transparent;
+      }
+    }
+  }
+}
+
 #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
 form.search-form{
   height: 60px;
@@ -146,8 +173,8 @@ header.page-header-wrapper{
 }
 // Sticky menu styles.
 .sticky {
+  @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);
   @include container-fixed();
-  background: url("../img/topbg.png") repeat-x center -60px;
   position: fixed;
   width: 100%;
   left: 0;
@@ -212,10 +239,6 @@ header.page-header-wrapper{
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
-    .sticky {
-  background: url("../img/topbg.png") repeat-x center -79px;
-  }
   .navbar-nav > li > a {
     padding-top: 0;
     padding-bottom: 0;
@@ -230,6 +253,10 @@ header.page-header-wrapper{
   }
   .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
     display: none;
+  }
+
+  .header-container .header-search-form {
+    top: 112px;
   }
 }
 
@@ -251,10 +278,6 @@ header.page-header-wrapper{
 
 // Desktop - only
 @include media-breakpoint-only(md) {
-
-  .sticky {
-  background: url("../img/topbg.png") repeat-x center -74px;
-  }
   .navbar-nav > li > a {
     padding-top: 0;
     padding-bottom: 0;
@@ -264,6 +287,10 @@ header.page-header-wrapper{
   }
   .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
     display: none;
+  }
+
+  .header-container .header-search-form {
+    top: 106px;
   }
 }
 
