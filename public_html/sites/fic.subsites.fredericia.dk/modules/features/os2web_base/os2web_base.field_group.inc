@@ -146,6 +146,9 @@ function os2web_base_field_group_info() {
       4 => 'field_os2web_base_field_hidlinks',
       5 => 'field_os2web_base_field_related',
       6 => 'field_svendborg_hide_sidebar',
+      7 => 'field_os2web_base_opening_text',
+      8 => 'field_os2web_base_opening_sub',
+      9 => 'field_os2web_base_opening_nid',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -233,7 +236,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Hentet fra kommunens sagssystem',
-    'weight' => '11',
+    'weight' => '12',
     'children' => array(),
     'format_type' => 'hidden',
     'format_settings' => array(
@@ -930,12 +933,12 @@ function os2web_base_field_group_info() {
     'label' => 'Term',
     'weight' => '1',
     'children' => array(
-      0 => 'group_billeder',
-      1 => 'group_indstillinger',
-      2 => 'group_selvbetjening',
-      3 => 'group_spotbokse',
-      4 => 'group_tekst',
-      5 => 'group_afsnit',
+      0 => 'group_afsnit',
+      1 => 'group_billeder',
+      2 => 'group_indstillinger',
+      3 => 'group_selvbetjening',
+      4 => 'group_spotbokse',
+      5 => 'group_tekst',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
