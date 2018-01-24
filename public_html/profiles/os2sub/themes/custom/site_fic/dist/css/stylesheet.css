@@ -13632,15 +13632,18 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row article .field.field-name-field-os2web-base-field-photo.field-type-image,
   .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row article .field.field-name-field-os2web-kulturnaut-slidesho.field-type-image,
   .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row article .field.field-name-field-os2web-base-field-lead-img.field-type-image {
-    border: solid 6px #192124; }
+    border: solid 6px #192124;
+    margin-top: 6px; }
   .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * h2, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * .heading-h2, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header h2, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header .heading-h2 {
-    margin-top: 0; }
+    margin: 0; }
     .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * .heading-h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header .heading-h2 a {
-      color: #192124;
+      color: #2a2f36;
       font-size: 2.375em;
       font-family: "RBNo21a-Medium", "Lato", sans-serif;
       text-transform: uppercase;
       font-weight: normal; }
+      .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * h2 a:hover, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * .heading-h2 a:hover, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header h2 a:hover, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header .heading-h2 a:hover {
+        text-decoration: none; }
   .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .field.field-name-field-sektion.field-type-taxonomy-term-reference a {
     color: #ff4200;
     text-transform: uppercase;
