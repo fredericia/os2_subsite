@@ -174,16 +174,17 @@ header.page-header-wrapper{
 // Sticky menu styles.
 .sticky {
   @include container-fixed();
-  background: url("../img/topbg.png") repeat-x center -60px;
+
+  background-color: transparent;
+  background-image: linear-gradient(
+                  rgba(0, 0, 0, .6),
+                  transparent 60%
+  );
+
   position: fixed;
-  //width: 100%;
   left: 0;
   right: 0;
   z-index: 1100;
-
-  .sidr-open & {
-    position: absolute;
-  }
 
   .row {
     margin: auto;

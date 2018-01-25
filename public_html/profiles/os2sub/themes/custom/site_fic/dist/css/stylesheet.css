@@ -11400,7 +11400,11 @@ header.page-header-wrapper .backstretch:before {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  background: url("../img/topbg.png") repeat-x center -60px;
+  background-color: transparent;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), color-stop(60%, transparent));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6), transparent 60%);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6), transparent 60%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), transparent 60%);
   position: fixed;
   left: 0;
   right: 0;
@@ -11410,8 +11414,6 @@ header.page-header-wrapper .backstretch:before {
     display: table; }
   .sticky:after {
     clear: both; }
-  .sidr-open .sticky {
-    position: absolute; }
   .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
     margin: auto; }
 
