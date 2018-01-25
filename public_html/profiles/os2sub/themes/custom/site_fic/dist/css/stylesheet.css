@@ -12132,6 +12132,11 @@ div.ctools-modal-content {
   width: 80%; }
   div.ctools-modal-content h1, div.ctools-modal-content .heading-h1, div.ctools-modal-content .banner .banner-wrapper .banner-headline, .banner .banner-wrapper div.ctools-modal-content .banner-headline {
     font-size: 3.5em; }
+    div.ctools-modal-content h1 a, div.ctools-modal-content .heading-h1 a, div.ctools-modal-content .banner .banner-wrapper .banner-headline a, .banner .banner-wrapper div.ctools-modal-content .banner-headline a {
+      cursor: text;
+      color: #192124;
+      text-decoration: none;
+      outline: none; }
   div.ctools-modal-content .modal-content {
     border-radius: 0;
     padding: 20px 50px 50px;
