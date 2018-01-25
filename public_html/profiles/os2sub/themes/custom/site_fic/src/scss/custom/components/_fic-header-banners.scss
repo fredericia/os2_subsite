@@ -119,6 +119,7 @@ $desktop-margin-default: 30px;
         top: 50%;
         transform: translateY(-50%);
         padding: 0 40px 0 10px;
+        display: block;
       }
 
       &:hover {
@@ -164,6 +165,10 @@ $desktop-margin-default: 30px;
 
     .views-slideshow-pager-field-item {
       font-size: 14px;
+
+      span {
+        width: 130px;
+      }
     }
   }
 
@@ -640,6 +645,15 @@ $desktop-margin-default: 30px;
         margin-right: 5px;
       }
     }
+
+    .views-slideshow-controls-bottom {
+      .views-slideshow-pager-field-item {
+        span {
+          width: auto;
+        }
+      }
+    }
+
 
     .slide-bottom {
       top: 100%;
