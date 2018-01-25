@@ -12069,6 +12069,15 @@ div.ctools-modal-content {
       font-size: 3em;
       opacity: 1; }
 
+@media (max-width: 767px) {
+  div.ctools-modal-content {
+    margin: 10px auto;
+    width: 90%; }
+    div.ctools-modal-content h1, div.ctools-modal-content .heading-h1, div.ctools-modal-content .banner .banner-wrapper .banner-headline, .banner .banner-wrapper div.ctools-modal-content .banner-headline {
+      font-size: 24px !important; }
+    div.ctools-modal-content .modal-content {
+      padding: 10px 20px; } }
+
 @media (min-width: 992px) {
   div.ctools-modal-content {
     width: 970px; } }

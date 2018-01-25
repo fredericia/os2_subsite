@@ -75,9 +75,24 @@ div.ctools-modal-content {
 
 }
 
+
+
+
 // Mobile - only
 @include media-breakpoint-only(xs) {
 
+  div.ctools-modal-content {
+    margin: 10px auto;
+    width: 90%;
+
+    h1 {
+      font-size: 24px !important;
+    }
+
+    .modal-content {
+      padding: 10px 20px;
+    }
+  }
 }
 
 // Tablet - and up
