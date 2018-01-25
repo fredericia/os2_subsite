@@ -12450,7 +12450,8 @@ div.ctools-modal-content {
           -ms-transform: translateY(-50%);
            -o-transform: translateY(-50%);
               transform: translateY(-50%);
-      padding: 0 40px 0 10px; }
+      padding: 0 40px 0 10px;
+      display: block; }
     .term-fic-header .views-slideshow-controls-bottom a:hover,
     .term-fic-header .field-name-field-os2web-base-field-related a:hover,
     .term-fic-header .cycle-pager a:hover {
@@ -12503,6 +12504,8 @@ div.ctools-modal-content {
     font-size: 0; }
     .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item {
       font-size: 14px; }
+      .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item span {
+        width: 130px; }
   .term-fic-header .slide-bottom {
     position: absolute;
     bottom: 0;
@@ -12800,6 +12803,8 @@ div.ctools-modal-content {
   .term-fic-header .cycle-pager .views-slideshow-pager-field-item,
   .term-fic-header .cycle-pager .field-item {
     margin-right: 5px; }
+  .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item span {
+    width: auto; }
   .term-fic-header .slide-bottom {
     top: 100%;
     bottom: auto; }
@@ -13809,6 +13814,18 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
       .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.next:before {
         border-left: 20px solid #ffffff;
         right: 0; }
+
+.node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 h2.pane-title, .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .pane-title.heading-h2 {
+  margin-bottom: 52px; }
+
+.node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .view-content {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .view-content:before, .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .view-content:after {
+    content: " ";
+    display: table; }
+  .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .view-content:after {
+    clear: both; }
 
 /* General */
 .page-soeg h2.pane-title, .page-soeg .pane-title.heading-h2 {
