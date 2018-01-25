@@ -75,9 +75,6 @@ div.ctools-modal-content {
 
 }
 
-
-
-
 // Mobile - only
 @include media-breakpoint-only(xs) {
 
@@ -86,11 +83,15 @@ div.ctools-modal-content {
     width: 90%;
 
     h1 {
-      font-size: 24px !important;
+      font-size: 32px !important;
     }
 
     .modal-content {
       padding: 10px 20px;
+    }
+
+    .node.node-os2web-contact-contact.node--os2web_contact_contact--full {
+      font-size: 18px;
     }
   }
 }
