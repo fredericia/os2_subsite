@@ -239,7 +239,7 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
       'term_node_tid_depth' => '%taxonomy_term_sektion:tid',
       'nid' => '%node:nid',
     ),
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => 'Kommende arrangementer',
     'override_title_heading' => 'h2',
     'path' => 'fic-kommende-arrangementer',
@@ -248,7 +248,11 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'bg-white',
+    'template_suggestion' => 'views_panes',
+  );
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();

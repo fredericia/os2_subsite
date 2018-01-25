@@ -439,7 +439,7 @@ function fic_frontpage_settings_views_default_views() {
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Kommende arrangementer';
+  $handler->display->display_options['title'] = 'Relaterede arrangementer';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -686,10 +686,11 @@ function fic_frontpage_settings_views_default_views() {
     t('Alle'),
     t('Page'),
     t('Content pane'),
-    t('Kommende arrangementer'),
+    t('Relaterede arrangementer'),
     t('Se flere'),
     t('View panes'),
     t('Term page events'),
+    t('Kommende arrangementer'),
     t('Front page events'),
   );
   $export['fic_kommende_arrangementer'] = $view;

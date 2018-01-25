@@ -15,6 +15,16 @@
 // Styling
 // --------------------------------------------------
 
+.node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 {
+  h2.pane-title{
+    margin-bottom: 52px;
+  }
+
+  .view-content {
+    @include make-row();
+  }
+}
+
 // Add to calendar
 
 /* General */
