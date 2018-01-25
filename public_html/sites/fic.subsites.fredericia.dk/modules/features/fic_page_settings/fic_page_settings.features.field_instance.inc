@@ -22,7 +22,7 @@ function fic_page_settings_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -40,7 +40,7 @@ function fic_page_settings_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -105,7 +105,7 @@ function fic_page_settings_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -222,7 +222,7 @@ function fic_page_settings_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'os2sub_spotbox_list' => array(
         'label' => 'above',
@@ -247,7 +247,7 @@ function fic_page_settings_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -631,6 +631,117 @@ function fic_page_settings_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'paragraphs_item-kolonner-field_afsnit'.
+  $field_instances['paragraphs_item-kolonner-field_afsnit'] = array(
+    'bundle' => 'kolonner',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paragraphs',
+        'settings' => array(
+          'view_mode' => 'full',
+        ),
+        'type' => 'paragraphs_view',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_afsnit',
+    'label' => 'Paragraph',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'afsnit_m_billede' => 'afsnit_m_billede',
+        'afsnit_m_citat' => -1,
+        'afsnit_m_galleri' => -1,
+        'afsnit_m_link' => -1,
+        'header_text_links_image' => -1,
+        'header_text_media' => -1,
+        'kolonner' => -1,
+        'paragraph_departments' => -1,
+        'paragrph_address' => -1,
+        'personale' => -1,
+        'webform' => -1,
+      ),
+      'bundle_weights' => array(
+        'afsnit_m_billede' => 2,
+        'afsnit_m_citat' => 3,
+        'afsnit_m_galleri' => 4,
+        'afsnit_m_link' => 5,
+        'header_text_links_image' => 6,
+        'header_text_media' => 7,
+        'kolonner' => 8,
+        'paragraph_departments' => 9,
+        'paragrph_address' => 10,
+        'personale' => 11,
+        'webform' => 12,
+      ),
+      'default_edit_mode' => 'open',
+      'entity_translation_sync' => FALSE,
+      'title' => 'Paragraph',
+      'title_multiple' => 'Paragraphs',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-kolonner-field_paragraph_personale_numrow'.
+  $field_instances['paragraphs_item-kolonner-field_paragraph_personale_numrow'] = array(
+    'bundle' => 'kolonner',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_personale_numrow',
+    'label' => 'Antal pr række ',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-personale-field_paragraph_bg'.
   $field_instances['paragraphs_item-personale-field_paragraph_bg'] = array(
     'bundle' => 'personale',
@@ -786,7 +897,7 @@ function fic_page_settings_field_default_field_instances() {
     'bundle' => 'personale',
     'default_value' => array(
       0 => array(
-        'value' => 3,
+        'value' => 4,
       ),
     ),
     'deleted' => 0,
@@ -834,6 +945,7 @@ function fic_page_settings_field_default_field_instances() {
   t('Email');
   t('Inkl. +45 - f.eks "+4572101213"');
   t('Jobtitel');
+  t('Paragraph');
   t('Paragraphs');
   t('Sektion');
   t('Telefon');

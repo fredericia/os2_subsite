@@ -42,6 +42,11 @@ function fic_page_settings_node_info() {
  */
 function fic_page_settings_paragraphs_info() {
   $items = array(
+    'kolonner' => array(
+      'name' => 'Kolonner',
+      'bundle' => 'kolonner',
+      'locked' => '1',
+    ),
     'personale' => array(
       'name' => 'Afsnit med personale',
       'bundle' => 'personale',

@@ -84,10 +84,12 @@ function fic_page_settings_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        0 => 'Default',
         1 => 1,
         2 => 2,
         3 => 3,
         4 => 4,
+        6 => 6,
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
