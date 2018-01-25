@@ -36,7 +36,7 @@
       </div>
       <?php $col_num = 0;
         foreach (element_children($content['field_paragraph_personale']) as $col) : ?>
-        <?php if (empty($col_num)): ?> <div class="row"> <?php endif;?>
+        <?php if (empty($col_num)): ?> <div class="row row--equal-height-columns"> <?php endif;?>
         <div <?php if (!empty($col_class)): print 'class="' . $col_class . '"'; endif;?>>
           <?php print render($content['field_paragraph_personale'][$col]); ?>
         </div>
