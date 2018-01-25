@@ -12708,7 +12708,7 @@ div.ctools-modal-content {
     box-shadow: none; }
 
 .sidr-main-open {
-  position: absolute !important; }
+  position: static !important; }
 
 .img-responsive {
   width: auto; }
