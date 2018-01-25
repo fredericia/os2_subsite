@@ -12531,17 +12531,22 @@ div.ctools-modal-content {
   margin: 30px 0 110px; }
 
 @media (max-width: 767px) {
+  .term-fic-header .cycle-pager,
   .term-fic-header .views-slideshow-pager-fields {
     display: block !important; }
+    .term-fic-header .cycle-pager div,
     .term-fic-header .views-slideshow-pager-fields div {
       display: block; }
+    .term-fic-header .cycle-pager > div,
     .term-fic-header .views-slideshow-pager-fields > div {
       display: inline-block;
       margin: 0 0 10px 0 !important;
       padding: 0;
       width: 50%; }
+      .term-fic-header .cycle-pager > div:nth-child(even) > div,
       .term-fic-header .views-slideshow-pager-fields > div:nth-child(even) > div {
         margin-right: 2.5px; }
+      .term-fic-header .cycle-pager > div:nth-child(odd) > div,
       .term-fic-header .views-slideshow-pager-fields > div:nth-child(odd) > div {
         margin-left: 2.5px; }
   .term-fic-header .slide-content-wrapper .field-name-description-field,
