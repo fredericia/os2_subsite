@@ -370,8 +370,15 @@ $desktop-margin-default: 30px;
 
         width: 50%;
 
+        > a {
+          display: block;
+
+          width: auto !important;
+        }
+
         &:nth-child(even) {
 
+          > a,
           > div {
             margin-right: 2.5px;
           }
@@ -379,6 +386,7 @@ $desktop-margin-default: 30px;
 
         &:nth-child(odd) {
 
+          > a,
           > div {
             margin-left: 2.5px;
           }
