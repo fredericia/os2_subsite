@@ -47,7 +47,10 @@ $desktop-margin-default: 30px;
     height: 372px;
     overflow: hidden;
   }
-
+  .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed{
+    min-height: 321px !important;
+    height: inherit !important;
+  }
   .views-row {
     height: inherit;
   }
