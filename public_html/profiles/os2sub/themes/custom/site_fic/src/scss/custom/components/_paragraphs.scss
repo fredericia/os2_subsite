@@ -194,6 +194,12 @@
   }
 }
 
+.paragraphs-item-personale {
+  h2 {
+    text-align: center;
+  }
+}
+
 .node{
   .field.field-name-field-afsnit.field-type-paragraphs{
     & > .field-items {
@@ -212,6 +218,8 @@
         &-header-text-links-image,
         &-paragrph-address,
         &-paragraph-departments,
+        &-personale,
+        &-kolonner,
         &-webform {
           .container {
             width: inherit;
