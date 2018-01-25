@@ -1,0 +1,35 @@
+
+
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {
+
+  .page-node .content-sidebar .panel-pane {
+    padding-left: 0 !important;
+  }
+
+  .pane-node-field-os2web-kulturnaut-date,
+  .pane-node-field-os2web-kulturnaut-sname,
+  .pane-node-field-os2web-kulturnaut-price,
+  .pane-node-field-os2web-kulturnaut-sarrang {
+
+    .os2-box {
+      display: flex;
+
+      padding: 4px 0;
+    }
+
+    .os2-box-heading {
+      flex-basis: 100px;
+      flex-shrink: 0;
+
+      h2 {
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+    .os2-box-body {
+      flex-grow: 1;
+    }
+  }
+}
