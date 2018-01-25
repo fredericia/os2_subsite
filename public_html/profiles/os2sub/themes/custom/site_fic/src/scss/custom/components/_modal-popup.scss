@@ -33,6 +33,13 @@ div.ctools-modal-content {
 
   h1 {
     font-size: 3.5em;
+
+    a {
+      cursor: text;
+      color: $color-black;
+      text-decoration: none;
+      outline: none;
+    }
   }
 
   .modal-content {
