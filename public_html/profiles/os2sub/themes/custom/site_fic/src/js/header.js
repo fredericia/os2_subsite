@@ -158,7 +158,12 @@ var header = (function ($) {
                     }
                     return '<div class="field-item"><a href="' + $slide.data('url') + '"' + $target + '><span>' + $slide.data('name') + '</span></a></div>';
                 },
-                pagerEvent: 'click'
+                pagerEvent: 'mouseover',
+                pauseOnPagerHover: true
+            });
+
+            $('.cycle-pager a').on('click', function (e) {
+                e.stopPropagation();
             });
         }
     };
