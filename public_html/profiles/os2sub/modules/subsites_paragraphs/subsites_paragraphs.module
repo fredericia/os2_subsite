@@ -9,26 +9,60 @@
 
 function subsites_paragraphs_preprocess_entity(&$variables) {
   if ($variables['entity_type'] == 'paragraphs_item') {
-    //get hidden field field_paragraph_bg
+    // Get hidden field field_paragraph_bg.
     $field_paragraph_bg = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_bg');
     if ($field_paragraph_bg) {
       $variables['classes_array'][] = $field_paragraph_bg[0]['value'];
     }
-    else{
+    else {
       $variables['classes_array'][] = 'bg-white';
     }
-    
-    //get hidden field field_paragraph_position 
+
+    // Get hidden field field_paragraph_position.
     $field_paragraph_position = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_position');
     if ($field_paragraph_position) {
-      $variables['field_paragraph_position']= $field_paragraph_position[0]['value'];
+      $variables['field_paragraph_position'] = $field_paragraph_position[0]['value'];
     }
     
-    //get hidden field field_paragraph_pos 
+    // Get hidden field field_paragraph_pos.
     $field_paragraph_pos = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_pos');
     $variables['field_paragraph_pos'] = FALSE;
     if ($field_paragraph_pos) {
       $variables['field_paragraph_pos'] = $field_paragraph_pos[0]['value'];
+    }
+
+    // Get define class per row for paragraphs.
+    $field_paragraph_personale_numrow = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_personale_numrow');
+    if (!empty($field_paragraph_personale_numrow)) {
+      $field_paragraph_personale_numrow = reset($field_paragraph_personale_numrow);
+      $col_class = 'col-md-12';
+      switch ($field_paragraph_personale_numrow['value']) {
+        case 2:
+          $col_class = 'col-md-6';
+          break;
+
+        case 3:
+          $col_class = 'col-md-4';
+          break;
+
+        case 4:
+          $col_class = 'col-md-3';
+          break;
+
+        case 6:
+          $col_class = 'col-md-2';
+          break;
+      }
+      $variables['col_amount'] = $field_paragraph_personale_numrow['value'];
+      $variables['col_class'] = $col_class;
+
+    }
+    $entity = $variables['paragraphs_item'];
+
+    // Add new template suggestions for paragraph item inside  paragraph.
+    if ($entity->hostEntityType() == 'paragraphs_item') {
+      $variables['theme_hook_suggestions'][] = 'paragraphs_item__' . $entity->hostEntityBundle() . '__' . $entity->bundle;
+      $variables['theme_hook_suggestions'][] = 'paragraphs_item__' . $entity->hostEntityBundle() . '__' . $entity->bundle . '__' . $variables['view_mode'];
     }
   }
 }
