@@ -11,11 +11,7 @@
 }
 
 .sidr-main-open {
-  position: absolute !important;
-}
-
-.img-responsive {
-  width: auto; // This fixes FKDK-944 - responsive menu slideout.
+  position: static !important;
 }
 
 .html #sliding-popup {
