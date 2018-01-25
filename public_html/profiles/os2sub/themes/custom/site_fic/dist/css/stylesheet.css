@@ -10899,6 +10899,9 @@ a.icon-after .glyphicon {
   src: url("../../dist/fonts/webfonts/34D611_0_0.eot");
   src: url("../../dist/fonts/webfonts/34D611_0_0.eot?#iefix") format("embedded-opentype"), url("../../dist/fonts/webfonts/34D611_0_0.woff2") format("woff2"), url("../../dist/fonts/webfonts/34D611_0_0.woff") format("woff"), url("../../dist/fonts/webfonts/34D611_0_0.ttf") format("truetype"); }
 
+.backstretch {
+  overflow: hidden !important; }
+
 .breadcrumb {
   background: none;
   padding-left: 0; }
@@ -12286,7 +12289,7 @@ div.ctools-modal-content {
     height: 372px;
     overflow: hidden; }
   .term-fic-header .views-row {
-    height: 100%; }
+    height: inherit; }
   .term-fic-header .slide-content-wrapper {
     text-align: center; }
     .term-fic-header .slide-content-wrapper .field-name-description-field,
@@ -12454,16 +12457,39 @@ div.ctools-modal-content {
   .scroll-down-link span:hover {
     opacity: 0.5; }
 
-.page-taxonomy .view-mode-fic_header,
-.page-taxonomy .view-mode-fic_header .cycle-slide {
-  display: table !important;
-  height: 100%;
-  width: 100%;
-  background-color: transparent !important; }
+.page-taxonomy .view-mode-fic_header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .page-taxonomy .view-mode-fic_header,
+  .page-taxonomy .view-mode-fic_header .cycle-slide {
+    height: inherit;
+    width: 100%;
+    background-color: transparent !important; }
 
 .page-taxonomy .slide-content-wrapper {
-  vertical-align: middle;
-  display: table-cell; }
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
 
 .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a {
   width: 570px; }

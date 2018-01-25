@@ -82,6 +82,15 @@
                 });
             });
         }
+    };
+
+    function _set_height_on_page_wrapper() {
+        var $header = $('.page-header-wrapper'),
+            $backstretch = $('.backstretch'),
+            height = $backstretch.outerHeight(true);
+
+        $header.css('height', height);
     }
+    _set_height_on_page_wrapper(); // Load upon boot
 
 })(jQuery);

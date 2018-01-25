@@ -49,7 +49,7 @@ $desktop-margin-default: 30px;
   }
 
   .views-row {
-    height: 100%;
+    height: inherit;
   }
 
   .slide-content-wrapper {
@@ -249,19 +249,25 @@ $desktop-margin-default: 30px;
 .page-taxonomy {
 
   .view-mode-fic_header {
+    display: flex;
+
+    flex-direction: column;
 
     &,
     & .cycle-slide {
-      display: table !important;
-      height: 100%;
+      height: inherit;
       width: 100%;
       background-color: transparent !important;
     }
   }
 
   .slide-content-wrapper {
-    vertical-align: middle;
-    display: table-cell;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
   }
 }
 
