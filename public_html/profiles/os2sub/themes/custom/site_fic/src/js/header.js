@@ -68,6 +68,21 @@ var header = (function ($) {
                 // Slides should be never changed automaticly.
                 duration: 1000000, fade: 750, paused: true
             });
+
+            // Reset backstrech slide on timeout after mouseleave.
+            var pager_links_selector = '.cycle-pager a, .widget_pager_bottom a';
+            $(document).on({
+                'mouseleave': function() {
+                    var $pager = $(this).parents('.views-slideshow-pager-field-item:first, .field-item:first');
+                    if ($pager.length) {
+                      setTimeout(function() {
+                          if ($pager.hasClass('active')) {
+                              $(pager_links_selector).filter(':first').mouseover();
+                          }
+                      }, 2000);
+                    }
+                }
+            }, pager_links_selector);
         },
 
         show: function ($id) {
@@ -143,6 +158,7 @@ var header = (function ($) {
             $slideShow.cycle({
                 speed: 700,
                 timeout: 0,
+                activePagerClass: 'active',
                 pager: '#cycle-nav',
                 before: function (currSlideElement, nextSlideElement, options, forwardFlag) {
                     var $termId = $(nextSlideElement).data('id');
