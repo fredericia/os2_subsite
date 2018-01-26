@@ -48,10 +48,11 @@ $desktop-margin-default: 30px;
     overflow: hidden;
   }
   .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed{
-    display: table;
+    display: flex;
+    align-items: center;
   }
   .views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section{
-    display: table-cell;
+    display: flex;
     vertical-align: middle;
 }
   .views-row {
