@@ -12390,11 +12390,8 @@ div.ctools-modal-content {
     position: static !important;
     height: 100% !important; }
   .term-fic-header .views_slideshow_main {
-    height: 372px;
+    min-height: 372px;
     overflow: hidden; }
-  .term-fic-header .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed {
-    min-height: 321px !important;
-    height: inherit !important; }
   .term-fic-header .views-row {
     height: inherit; }
   .term-fic-header .slide-content-wrapper {

@@ -115,7 +115,7 @@ var header = (function ($) {
                 $maxH = 700;
 
             $descrH = $descrH < $minH ? $minH : ($descrH > $maxH ? $maxH : $descrH);
-            $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').height($descrH);
+            $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('min-height', $descrH+'px');
         }
     };
 
