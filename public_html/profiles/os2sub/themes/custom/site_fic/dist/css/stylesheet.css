@@ -13080,7 +13080,8 @@ div.ctools-modal-content {
         margin-left: 6px;
         margin-right: 6px;
         display: block; }
-      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.activeSlide {
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.activeSlide,
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.active {
         border-color: rgba(255, 255, 255, 0.9); }
 
 .page-node .content-sidebar {
