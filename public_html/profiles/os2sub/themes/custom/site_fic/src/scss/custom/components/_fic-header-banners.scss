@@ -47,7 +47,13 @@ $desktop-margin-default: 30px;
     min-height: 372px;
     overflow: hidden;
   }
-
+  .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed{
+    display: table;
+  }
+  .views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section{
+    display: table-cell;
+    vertical-align: middle;
+}
   .views-row {
     height: inherit;
   }

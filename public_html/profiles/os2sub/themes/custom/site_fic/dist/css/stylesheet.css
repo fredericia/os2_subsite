@@ -12392,6 +12392,11 @@ div.ctools-modal-content {
   .term-fic-header .views_slideshow_main {
     min-height: 372px;
     overflow: hidden; }
+  .term-fic-header .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed {
+    display: table; }
+  .term-fic-header .views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section {
+    display: table-cell;
+    vertical-align: middle; }
   .term-fic-header .views-row {
     height: inherit; }
   .term-fic-header .slide-content-wrapper {
