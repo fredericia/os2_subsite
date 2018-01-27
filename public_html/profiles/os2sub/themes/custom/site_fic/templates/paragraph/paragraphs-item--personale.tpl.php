@@ -34,14 +34,14 @@
           <?php print render($content['field_paragraph_header']); ?>
         </div>
       </div>
-      <?php $col_num = 0;
+      <?php $col_num = 1;
         foreach (element_children($content['field_paragraph_personale']) as $col) : ?>
-        <?php if (empty($col_num)): ?> <div class="row row--equal-height-columns"> <?php endif;?>
+        <?php if ($col_num == 1): ?> <div class="row row--equal-height-columns"> <?php endif;?>
         <div <?php if (!empty($col_class)): print 'class="' . $col_class . '"'; endif;?>>
           <?php print render($content['field_paragraph_personale'][$col]); ?>
         </div>
         <?php if (!empty($col_num) && $col_num == $col_amount): ?> </div> <?php endif;?>
-        <?php $col_num = $col_num == $col_amount ? 0  : $col_num + 1; ?>
+        <?php $col_num = $col_num == $col_amount ? 1  : $col_num + 1; ?>
       <?php endforeach; ?>
   </div>
   </div>
