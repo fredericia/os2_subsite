@@ -79,7 +79,7 @@ function fic_frontpage_settings_default_page_manager_handlers() {
   $pane->configuration = array(
     'more_link' => 1,
     'path' => 'fic-kommende-arrangementer',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => 'Kommende arrangementer',
     'override_title_heading' => 'h2',
   );

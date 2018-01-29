@@ -49,26 +49,26 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -87,7 +87,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Sektion (field_sektion) */
+  /* Contextual filter: Content: Sektion (field_sektion) */
   $handler->display->display_options['arguments']['field_sektion_tid']['id'] = 'field_sektion_tid';
   $handler->display->display_options['arguments']['field_sektion_tid']['table'] = 'field_data_field_sektion';
   $handler->display->display_options['arguments']['field_sektion_tid']['field'] = 'field_sektion_tid';
@@ -96,7 +96,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['field_sektion_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_sektion_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_sektion_tid']['summary_options']['items_per_page'] = '25';
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -109,21 +109,21 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['nid']['not'] = TRUE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_base_news' => 'os2web_base_news',
   );
-  /* Filterkriterie: Indhold: Forfremmet til forside */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
@@ -185,6 +185,7 @@ function fic_frontpage_settings_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Page'),
+    t('more'),
     t('Content pane'),
     t('Alle'),
     t('Forfremmet til forside'),
@@ -268,7 +269,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['advanced_options'] = '{"before":"var $termId = $(nextSlideElement).find(\'.taxonomy-term\').attr(\'id\').replace(\'taxonomy-term-\', \'\');\\nif (typeof Drupal.behaviors.ficBackstretch !== \\"undefined\\") { \\n    Drupal.behaviors.ficBackstretch.show($termId);\\n}"}';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  /* Felt: Entity translation: Name: translated */
+  /* Field: Entity translation: Name: translated */
   $handler->display->display_options['fields']['name_field_et']['id'] = 'name_field_et';
   $handler->display->display_options['fields']['name_field_et']['table'] = 'field_data_name_field';
   $handler->display->display_options['fields']['name_field_et']['field'] = 'name_field_et';
@@ -281,7 +282,7 @@ function fic_frontpage_settings_views_default_views() {
     'title_link' => 'content',
     'title_class' => '',
   );
-  /* Felt: Ord i ordforråd: Rendered Ord i ordforråd */
+  /* Field: Taxonomy term: Rendered Taxonomy term */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -291,18 +292,18 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'fic_header';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-  /* Sorteringskriterie: Ord i ordforråd: Vægt */
+  /* Sort criterion: Taxonomy term: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  /* Filterkriterie: Ordforråd: Internt navn */
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
-  /* Filterkriterie: Ord i ordforråd: Name (name_field:language) */
+  /* Filter criterion: Taxonomy term: Name (name_field:language) */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'field_data_name_field';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -328,6 +329,7 @@ function fic_frontpage_settings_views_default_views() {
     t('næste ›'),
     t('sidste »'),
     t('Block'),
+    t('more'),
   );
   $export['fic_header_banners'] = $view;
 
@@ -343,7 +345,7 @@ function fic_frontpage_settings_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Kalender';
+  $handler->display->display_options['title'] = 'Calendar';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['link_display'] = 'page';
@@ -371,18 +373,18 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'node';
   $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
   $handler->display->display_options['row_options']['links'] = FALSE;
-  /* Felt: Indhold: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sorteringskriterie: Indhold: Dato -  startdato (field_os2web_kulturnaut_date) */
+  /* Sort criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID (med dybde) */
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -392,27 +394,27 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
-  /* Filterkriterie: Indhold: Dato -  startdato (field_os2web_kulturnaut_date) */
+  /* Filter criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['default_date'] = 'now';
-  /* Filterkriterie: Indhold: Sprog */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -439,7 +441,7 @@ function fic_frontpage_settings_views_default_views() {
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Relaterede arrangementer';
+  $handler->display->display_options['title'] = 'Related events';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -461,7 +463,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID (med dybde) */
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -473,7 +475,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['term_node_tid_depth']['depth'] = '0';
   $handler->display->display_options['arguments']['term_node_tid_depth']['break_phrase'] = TRUE;
-  /* Kontekstuelt filter: Indhold: Nid */
+  /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
   $handler->display->display_options['arguments']['nid']['table'] = 'node';
   $handler->display->display_options['arguments']['nid']['field'] = 'nid';
@@ -516,14 +518,14 @@ function fic_frontpage_settings_views_default_views() {
   /* Display: Term page events */
   $handler = $view->new_display('panel_pane', 'Term page events', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Kommende arrangementer';
+  $handler->display->display_options['title'] = 'Upcoming events';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Se flere';
+  $handler->display->display_options['use_more_text'] = 'See more';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
@@ -538,7 +540,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['row_options']['links'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontekstuelt filter: Indhold: Har taksonomiterm ID (med dybde) */
+  /* Contextual filter: Content: Has taxonomy term ID (with depth) */
   $handler->display->display_options['arguments']['term_node_tid_depth']['id'] = 'term_node_tid_depth';
   $handler->display->display_options['arguments']['term_node_tid_depth']['table'] = 'node';
   $handler->display->display_options['arguments']['term_node_tid_depth']['field'] = 'term_node_tid_depth';
@@ -582,7 +584,7 @@ function fic_frontpage_settings_views_default_views() {
   /* Display: Front page events */
   $handler = $view->new_display('panel_pane', 'Front page events', 'panel_pane_3');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Kommende arrangementer';
+  $handler->display->display_options['title'] = 'Upcoming events';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -606,27 +608,27 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterie: Indhold: Udgivet */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterie: Indhold: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
-  /* Filterkriterie: Indhold: Dato -  startdato (field_os2web_kulturnaut_date) */
+  /* Filter criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['operator'] = '>';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['default_date'] = 'now';
-  /* Filterkriterie: Indhold: Sprog */
+  /* Filter criterion: Content: Language */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'node';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -634,7 +636,7 @@ function fic_frontpage_settings_views_default_views() {
     '***CURRENT_LANGUAGE***' => '***CURRENT_LANGUAGE***',
     'und' => 'und',
   );
-  /* Filterkriterie: Indhold: Forfremmet til forside */
+  /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
   $handler->display->display_options['filters']['promote']['table'] = 'node';
   $handler->display->display_options['filters']['promote']['field'] = 'promote';
@@ -669,7 +671,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['link_to_view'] = '0';
   $translatables['fic_kommende_arrangementer'] = array(
     t('Master'),
-    t('Kalender'),
+    t('Calendar'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
@@ -685,12 +687,14 @@ function fic_frontpage_settings_views_default_views() {
     t('sidste »'),
     t('Alle'),
     t('Page'),
+    t('more'),
     t('Content pane'),
-    t('Relaterede arrangementer'),
+    t('Related events'),
     t('Se flere'),
     t('View panes'),
     t('Term page events'),
-    t('Kommende arrangementer'),
+    t('Upcoming events'),
+    t('See more'),
     t('Front page events'),
   );
   $export['fic_kommende_arrangementer'] = $view;
@@ -723,13 +727,13 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Forbindelse: Felt: Paragraph (field_afsnit) */
+  /* Relationship: Field: Paragraph (field_afsnit) */
   $handler->display->display_options['relationships']['field_afsnit_value']['id'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['relationships']['field_afsnit_value']['field'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_afsnit_value']['delta'] = '-1';
-  /* Felt: Felt: Paragraph */
+  /* Field: Field: Paragraph */
   $handler->display->display_options['fields']['field_afsnit']['id'] = 'field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['field'] = 'field_afsnit';
@@ -740,7 +744,7 @@ function fic_frontpage_settings_views_default_views() {
   );
   $handler->display->display_options['fields']['field_afsnit']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_afsnit']['delta_offset'] = '0';
-  /* Kontekstuelt filter: Ord i ordforråd: Term ID */
+  /* Contextual filter: Taxonomy term: Term ID */
   $handler->display->display_options['arguments']['tid']['id'] = 'tid';
   $handler->display->display_options['arguments']['tid']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['arguments']['tid']['field'] = 'tid';
@@ -755,7 +759,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['arguments']['tid']['validate_options']['vocabularies'] = array(
     'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
-  /* Filterkriterie: Ordforråd: Internt navn */
+  /* Filter criterion: Taxonomy vocabulary: Machine name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['filters']['machine_name']['field'] = 'machine_name';
@@ -799,6 +803,7 @@ function fic_frontpage_settings_views_default_views() {
     t('Paragraph item from field_afsnit'),
     t('Alle'),
     t('Block'),
+    t('more'),
     t('Content pane'),
     t('View panes'),
   );
@@ -833,14 +838,14 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'teaser';
-  /* Felt: Fil: Navn */
+  /* Field: File: Name */
   $handler->display->display_options['fields']['filename']['id'] = 'filename';
   $handler->display->display_options['fields']['filename']['table'] = 'file_managed';
   $handler->display->display_options['fields']['filename']['field'] = 'filename';
   $handler->display->display_options['fields']['filename']['label'] = '';
   $handler->display->display_options['fields']['filename']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['filename']['alter']['ellipsis'] = FALSE;
-  /* Felt: Fil: Rendered Fil */
+  /* Field: File: Rendered File */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_file';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -850,11 +855,11 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-  /* Sorteringskriterie: Global: Tilfældig */
+  /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
-  /* Filterkriterie: Fil: Type */
+  /* Filter criterion: File: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'file_managed';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -877,7 +882,7 @@ function fic_frontpage_settings_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Felt: Fil: Rendered Fil */
+  /* Field: File: Rendered File */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_file';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -887,7 +892,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
   $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
-  /* Felt: Fil: Download link */
+  /* Field: File: Download link */
   $handler->display->display_options['fields']['download']['id'] = 'download';
   $handler->display->display_options['fields']['download']['table'] = 'file_managed';
   $handler->display->display_options['fields']['download']['field'] = 'download';
@@ -904,6 +909,7 @@ function fic_frontpage_settings_views_default_views() {
     t('Stigende'),
     t('Faldende'),
     t('Block'),
+    t('more'),
   );
   $export['instagram_billeder'] = $view;
 

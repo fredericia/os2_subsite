@@ -7406,7 +7406,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'fic_header' => array(
         'label' => 'hidden',
@@ -7462,7 +7462,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -7490,6 +7490,7 @@ function os2web_base_field_default_field_instances() {
         'afsnit_m_link' => 'afsnit_m_link',
         'header_text_links_image' => 'header_text_links_image',
         'header_text_media' => 'header_text_media',
+        'kolonner' => -1,
         'paragraph_departments' => 'paragraph_departments',
         'paragrph_address' => 'paragrph_address',
         'personale' => 'personale',
@@ -7502,6 +7503,7 @@ function os2web_base_field_default_field_instances() {
         'afsnit_m_link' => 4,
         'header_text_links_image' => 10,
         'header_text_media' => 11,
+        'kolonner' => -22,
         'paragraph_departments' => 12,
         'paragrph_address' => 13,
         'personale' => 14,
@@ -7534,7 +7536,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -7583,7 +7585,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 13,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -7628,7 +7630,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 17,
       ),
       'fic_header' => array(
         'label' => 'hidden',
@@ -7705,7 +7707,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
       'fic_header' => array(
         'label' => 'hidden',
@@ -7753,7 +7755,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'fic_header' => array(
         'label' => 'hidden',
@@ -7825,7 +7827,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 11,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -7966,7 +7968,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 10,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8012,7 +8014,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 16,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8099,7 +8101,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'fic_header' => array(
         'label' => 'hidden',
@@ -8170,7 +8172,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 9,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8218,7 +8220,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 15,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8266,7 +8268,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8315,7 +8317,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'node_reference',
         'settings' => array(),
         'type' => 'node_reference_default',
-        'weight' => 20,
+        'weight' => 4,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8358,7 +8360,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 3,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8423,7 +8425,7 @@ function os2web_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 2,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8491,7 +8493,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'fic_header' => array(
         'label' => 'above',
@@ -8537,7 +8539,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'fic_header' => array(
         'label' => 'above',

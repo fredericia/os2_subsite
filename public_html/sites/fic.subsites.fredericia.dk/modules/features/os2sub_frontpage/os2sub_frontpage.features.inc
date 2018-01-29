@@ -36,7 +36,7 @@ function os2sub_frontpage_image_default_styles() {
   $styles['os2web_cover'] = array(
     'label' => 'os2web cover',
     'effects' => array(
-      11 => array(
+      17 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1920,
@@ -45,13 +45,13 @@ function os2sub_frontpage_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      15 => array(
+      18 => array(
         'name' => 'canvasactions_file2canvas',
         'data' => array(
           'xpos' => 0,
           'ypos' => 0,
           'alpha' => 100,
-          'scale' => '',
+          'scale' => 100,
           'path' => 'profiles/os2sub/themes/custom/site_fic/dist/img/40P_sort_overlay.png',
         ),
         'weight' => 3,
