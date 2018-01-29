@@ -456,7 +456,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Se flere';
+  $handler->display->display_options['use_more_text'] = 'See more';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
@@ -599,7 +599,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = TRUE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Se flere';
+  $handler->display->display_options['use_more_text'] = 'See more';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
@@ -698,11 +698,10 @@ function fic_frontpage_settings_views_default_views() {
     t('more'),
     t('Content pane'),
     t('Related events'),
-    t('Se flere'),
+    t('See more'),
     t('View panes'),
     t('Term page events'),
     t('Upcoming events'),
-    t('See more'),
     t('Front page events'),
   );
   $export['fic_kommende_arrangementer'] = $view;
