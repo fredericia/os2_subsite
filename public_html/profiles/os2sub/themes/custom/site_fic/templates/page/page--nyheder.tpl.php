@@ -72,12 +72,6 @@
                           </nav>
                       </div>
                   <?php endif; ?>
-
-                  <?php
-                  $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
-                  print render($block['content']);
-                  ?>
-
                 </div>
             </nav>
         </div>
@@ -103,13 +97,13 @@
             </div>
 
             <div class="responsive-header__row responsive-header__row--second">
-              <?php
-              $block = module_invoke('views', 'block_view', '-exp-os2sub_kulturnaut_multi_search-pane_activities_multi_search');
-              print render($block['content']);
-              ?>
+              <?php print $search_block; ?>
             </div>
         </div>
         <!-- End - responsive header -->
+      </div>
+      <div class="header-search-form hidden-xs">
+        <?php print $search_block; ?>
       </div>
       <?php print render($page['header']); ?>
     </div>
