@@ -53,11 +53,18 @@ $navigation-bottom-border-color: $color-white;
       color: $brand-primary !important;
     }
   }
+
   ul.menu.nav.navbar-nav.secondary{
     float: unset;
     a{
       font-size: 12px !important;
       font-weight: 800;
+    }
+    li.expanded {
+      .dropdown-menu,
+      .caret {
+        display: none;
+      }
     }
   }
   .region.region-navigation{
