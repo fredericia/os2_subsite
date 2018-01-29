@@ -14,7 +14,7 @@ function fic_blocks_settings_default_fe_block_boxes() {
   $fe_block_boxes->info = 'Footer text';
   $fe_block_boxes->format = 'plain_text';
   $fe_block_boxes->machine_name = 'footer_text';
-  $fe_block_boxes->body = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s
+  $fe_block_boxes->body = 'Fredericia Idrætscenter forener sport, kultur, sundhed og erhverv i et bredt udvalg af aktiviteter og arrangementer.
 ';
 
   $export['footer_text'] = $fe_block_boxes;
