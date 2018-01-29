@@ -11617,6 +11617,9 @@ section.block-locale {
     .topnav-wrapper.user-nav ul.menu.nav.navbar-nav.secondary a {
       font-size: 12px !important;
       font-weight: 800; }
+    .topnav-wrapper.user-nav ul.menu.nav.navbar-nav.secondary li.expanded .dropdown-menu,
+    .topnav-wrapper.user-nav ul.menu.nav.navbar-nav.secondary li.expanded .caret {
+      display: none; }
   .topnav-wrapper.user-nav .region.region-navigation {
     display: -webkit-box;
     display: -webkit-flex;
