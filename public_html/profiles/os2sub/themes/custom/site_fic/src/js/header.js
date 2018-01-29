@@ -114,8 +114,12 @@ var header = (function ($) {
                 $minH = 300,
                 $maxH = 700;
 
+
             $descrH = $descrH < $minH ? $minH : ($descrH > $maxH ? $maxH : $descrH);
-            $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('min-height', $descrH+'px');
+          $descrH = $descrH - $('.views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section').height();  
+          $descrH = $descrH / 2;
+            $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-top', $descrH+'px');
+            $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-bottom', $descrH+'px');
         }
     };
 

@@ -50,10 +50,13 @@ $desktop-margin-default: 30px;
   .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed{
     display: flex;
     align-items: center;
+    height: 0;
+    justify-content: space-around;
   }
   .views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section{
     display: flex;
-    vertical-align: middle;
+    width: 100%;
+    justify-content: center;
 }
   .views-row {
     height: inherit;

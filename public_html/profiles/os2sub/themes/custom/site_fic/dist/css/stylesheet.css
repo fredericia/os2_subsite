@@ -12393,10 +12393,28 @@ div.ctools-modal-content {
     min-height: 372px;
     overflow: hidden; }
   .term-fic-header .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed {
-    display: table; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 0;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
   .term-fic-header .views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section {
-    display: table-cell;
-    vertical-align: middle; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .term-fic-header .views-row {
     height: inherit; }
   .term-fic-header .slide-content-wrapper {
