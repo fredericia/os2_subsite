@@ -27,7 +27,6 @@ function fic_common_menu() {
   return $items;
 }
 
-
 /**
  * Implements hook_block_info().
  */
@@ -38,6 +37,26 @@ function fic_common_block_info() {
   );
 
   return $blocks;
+}
+
+/**
+ * Implements hook_block_view_MODELU_DELTA_alter().
+ *
+ * Override default behavior of Language switcher block.
+ * We always switch user to frontpage of another language.
+ *
+ * @See locale_block_view();
+ */
+function fic_common_block_view_locale_language_alter(&$data, $block) {
+  if (drupal_multilingual()) {
+    $links = language_negotiation_get_switch_links('language', '<front>');
+    if (isset($links->links)) {
+      drupal_add_css(drupal_get_path('module', 'locale') . '/locale.css');
+      $class = "language-switcher-{$links->provider}";
+      $variables = array('links' => $links->links, 'attributes' => array('class' => array($class)));
+      $data['content'] = theme('links__locale_block', $variables);
+    }
+  }
 }
 
 /**
