@@ -25,7 +25,7 @@
         <div class="event-list-4-bottom-part">
           <div class="event-list-4-text">
             <span class="event-list-4-pluss">+</span>
-            <?php print t('Se flere'); ?>
+            <?php print t('See more'); ?>
           </div>
         </div>
         <img class="img-responsive " src="/profiles/os2sub/themes/custom/site_fic/dist/img/1px_transparent.png" width="1920" height="1080">

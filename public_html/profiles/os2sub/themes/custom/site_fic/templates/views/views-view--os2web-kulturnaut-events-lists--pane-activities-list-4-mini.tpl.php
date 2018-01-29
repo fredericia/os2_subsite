@@ -92,7 +92,7 @@
     </div><?php /* class view */ ?>
     <div class="show-all">  
       <div class="col-sm-6 col-sm-push-6 col-md-3 col-md-push-9">
-        <a class="btn btn-blue btn-full-width" href="/">+ <?php print t('Se flere'); ?></a>
+        <a class="btn btn-blue btn-full-width" href="/">+ <?php print t('See more'); ?></a>
       </div>
     </div>
   </div>
