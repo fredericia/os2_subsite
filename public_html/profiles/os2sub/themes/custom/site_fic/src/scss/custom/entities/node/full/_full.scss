@@ -19,6 +19,7 @@
   font-size: 1.06em;
   line-height: 1.58em;
 }
+
 .page-node {
   &.node-type-os2web-base-contentpage {
     h1 {
@@ -38,7 +39,7 @@
         margin-top: 20px;
       }
 
-      tbody > tr > td ,
+      tbody > tr > td,
       thead > tr > th {
         border: 0;
 
@@ -72,12 +73,12 @@
 
   .pane-node-field-os2web-kulturnaut-slidesho {
     margin-bottom: $grid-gutter-width;
-    .os2-box{
+    .os2-box {
       position: relative;
       img {
         border: solid 10px $color-black;
       }
-      .field-slideshow-controls{
+      .field-slideshow-controls {
         position: absolute;
         top: 0;
         z-index: 99;
@@ -87,16 +88,16 @@
         width: 100%;
         height: 100%;
 
-        a{
+        a {
           display: block;
           width: 64px;
           height: 64px;
           background-color: $brand-primary;
           font-size: 0;
           position: relative;
-          &.prev{
+          &.prev {
             margin-left: -32px;
-            &:before{
+            &:before {
               border: 20px solid transparent;
               border-right: 20px solid #fff;
               content: '';
@@ -105,9 +106,9 @@
               margin-bottom: 12px;
             }
           }
-          &.next{
+          &.next {
             margin-right: -32px;
-            &:after{
+            &:after {
               border: 20px solid transparent;
               border-left: 20px solid #fff;
               content: '';
@@ -119,7 +120,7 @@
           }
         }
       }
-      .field-slideshow-pager{
+      .field-slideshow-pager {
         position: absolute;
         bottom: 0;
         z-index: 99;
@@ -127,10 +128,10 @@
         margin-right: 24px;
         margin-bottom: 30px;
         display: flex;
-        a{
+        a {
           border-style: solid;
           border-width: 5px;
-          border-color: rgba(255,255,255,0.5);
+          border-color: rgba(255, 255, 255, 0.5);
           width: 24px;
           height: 24px;
           font-size: 0;
@@ -139,8 +140,8 @@
           display: block;
         }
         a.activeSlide,
-        a.active{
-          border-color: rgba(255,255,255,0.9);
+        a.active {
+          border-color: rgba(255, 255, 255, 0.9);
         }
       }
     }
@@ -184,8 +185,8 @@
       }
     }
   }
-  .panel-pane.pane-entity-field.pane-node-field-os2web-kulturnaut-saddress{
-    iframe{
+  .panel-pane.pane-entity-field.pane-node-field-os2web-kulturnaut-saddress {
+    iframe {
       border: solid 6px $color-black;
       max-width: 100%;
       margin: 20px 0;
@@ -194,42 +195,43 @@
 
   // Fix bottom content offset. See: .bg-undefined
   &.node-type-os2web-base-contentpage .os2-sectiont,
-  &.node-type-os2web-base-news .pane-node-content{
+  &.node-type-os2web-base-news .pane-node-content {
     margin-bottom: 30px;
   }
 }
-.node.node-os2web-contact-contact.node--os2web_contact_contact--full{
+
+.node.node-os2web-contact-contact.node--os2web_contact_contact--full {
   font-size: 1.875em;
   font-family: $headings-font-family;
   color: $gray-darker;
-  .all-contacts{
+  .all-contacts {
     margin-top: 55px;
     text-align: right;
-    a.btn{
+    a.btn {
       font-family: $headings-font-family;
       font-size: 1em;
       margin-left: $grid-gutter-width;
       font-weight: normal;
     }
   }
-  .field.field-name-field-paragraph-personale{
-    & > .field-items{
-      & > .field-item{
+  .field.field-name-field-paragraph-personale {
+    & > .field-items {
+      & > .field-item {
         border-top: 2px solid $color-light-gray;
         padding-top: 30px;
         padding-bottom: 30px;
-        &:first-child{
+        &:first-child {
           margin-top: 30px;
         }
-        &:last-child{
+        &:last-child {
           border-bottom: 2px solid $color-light-gray;
         }
       }
     }
   }
-  h1{
+  h1 {
     font-size: 2em;
-    color: $brand-primary; 
+    color: $brand-primary;
   }
   .all-contacts {
     .field,
@@ -243,13 +245,14 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-.os2-section.os2-section-light{
+.os2-section.os2-section-light {
   .pane-node-field-os2web-kulturnaut-slidesho {
     img {
       border: solid 6px $color-black;
     }
   }
 }
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
@@ -262,7 +265,52 @@
 // Mobile - only
 @include media-breakpoint-only(xs) {
 
+  .page-node {
 
+    .pane-node-field-os2web-kulturnaut-slidesho {
+
+      .os2-box {
+
+        .field-slideshow-pager {
+          display: none !important;
+        }
+
+        .field-slideshow-controls {
+
+          a {
+            width: 34px;
+            height: 34px;
+
+            &.prev {
+              margin-left: -10px;
+
+              &:before {
+                margin-top: 7px;
+                margin-bottom: 0;
+
+                border: 10px solid transparent;
+                border-right: 10px solid #fff;
+              }
+            }
+
+            &.next {
+              margin-right: -10px;
+
+              &:after {
+                margin-top: 7px;
+                margin-bottom: 0;
+
+                left: 14px;
+
+                border: 10px solid transparent;
+                border-left: 10px solid #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Tablet - and up
@@ -272,7 +320,6 @@
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
 
 }
 

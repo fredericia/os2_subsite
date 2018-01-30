@@ -11815,6 +11815,10 @@ section.block-locale {
     .banner .banner-wrapper.color-1 {
       color: #FFF; }
 
+@media (max-width: 767px) {
+  .field-slideshow-pager {
+    display: none; } }
+
 footer.footer {
   padding-top: 0;
   padding-bottom: 0;
@@ -13184,6 +13188,28 @@ div.ctools-modal-content {
 
 .os2-section.os2-section-light .pane-node-field-os2web-kulturnaut-slidesho img {
   border: solid 6px #192124; }
+
+@media (max-width: 767px) {
+  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager {
+    display: none !important; }
+  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a {
+    width: 34px;
+    height: 34px; }
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev {
+      margin-left: -10px; }
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev:before {
+        margin-top: 7px;
+        margin-bottom: 0;
+        border: 10px solid transparent;
+        border-right: 10px solid #fff; }
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next {
+      margin-right: -10px; }
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next:after {
+        margin-top: 7px;
+        margin-bottom: 0;
+        left: 14px;
+        border: 10px solid transparent;
+        border-left: 10px solid #fff; } }
 
 .node-os2web-kulturnaut-knactivity {
   position: relative;
