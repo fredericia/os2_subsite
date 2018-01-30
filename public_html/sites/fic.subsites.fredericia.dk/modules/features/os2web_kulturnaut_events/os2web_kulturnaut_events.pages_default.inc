@@ -374,14 +374,18 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
     ),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
-    'override_title_text' => 'Tid',
+    'override_title_text' => 'Time',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'ml-title',
+  );
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
@@ -404,14 +408,18 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
     'formatter_settings' => array(),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
-    'override_title_text' => 'Sted',
+    'override_title_text' => 'Place',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'ml-title',
+  );
   $pane->extras = array();
   $pane->position = 4;
   $pane->locks = array();
@@ -433,15 +441,19 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
     'delta_reversed' => FALSE,
     'formatter_settings' => array(),
     'context' => 'argument_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
+    'override_title' => 1,
+    'override_title_text' => 'Price',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'ml-title',
+  );
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
@@ -463,15 +475,19 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
     'delta_reversed' => FALSE,
     'formatter_settings' => array(),
     'context' => 'argument_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
+    'override_title' => 1,
+    'override_title_text' => 'Homepage',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'ml-title',
+  );
   $pane->extras = array();
   $pane->position = 6;
   $pane->locks = array();
@@ -494,14 +510,18 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
     'formatter_settings' => array(),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
-    'override_title_text' => 'Arrangør',
+    'override_title_text' => 'Organizer',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'ml-title',
+  );
   $pane->extras = array();
   $pane->position = 7;
   $pane->locks = array();
@@ -560,14 +580,18 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'override_title' => 1,
-    'override_title_text' => 'Del begivenhed',
+    'override_title_text' => 'Share event',
     'override_title_heading' => 'h2',
   );
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => '',
+    'template_suggestion' => 'ml-title',
+  );
   $pane->extras = array();
   $pane->position = 9;
   $pane->locks = array();
