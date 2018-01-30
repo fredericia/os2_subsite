@@ -44,6 +44,9 @@ function site_fic_preprocess_html(&$variables) {
     drupal_add_js(array('ficBackstretch' => $backstretch_data), 'setting');
     $variables['classes_array'][] = 'backstretched';
   }
+  $slide_reset_timout = variable_get('slide_reset_timout', 2000);
+  drupal_add_js(array('slideResetTimeout' => $slide_reset_timout), 'setting');
+
 }
 
 /**
