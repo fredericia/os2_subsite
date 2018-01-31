@@ -108,7 +108,7 @@ function fic_page_settings_default_page_manager_handlers() {
     'arguments' => array(
       'term_node_tid_depth' => '%term:tid',
     ),
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => 'Kommende arrangementer',
     'override_title_heading' => 'h2',
   );

@@ -631,15 +631,15 @@ function fic_page_settings_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'paragraphs_item-kolonner-field_afsnit'.
-  $field_instances['paragraphs_item-kolonner-field_afsnit'] = array(
+  // Exported field_instance: 'paragraphs_item-kolonner-field_kolonne_afsnit'.
+  $field_instances['paragraphs_item-kolonner-field_kolonne_afsnit'] = array(
     'bundle' => 'kolonner',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'paragraphs',
         'settings' => array(
           'view_mode' => 'full',
@@ -655,8 +655,8 @@ function fic_page_settings_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_afsnit',
-    'label' => 'Paragraph',
+    'field_name' => 'field_kolonne_afsnit',
+    'label' => 'Kolonne',
     'required' => 0,
     'settings' => array(
       'add_mode' => 'select',
@@ -688,8 +688,8 @@ function fic_page_settings_field_default_field_instances() {
       ),
       'default_edit_mode' => 'open',
       'entity_translation_sync' => FALSE,
-      'title' => 'Paragraph',
-      'title_multiple' => 'Paragraphs',
+      'title' => 'Kolonne',
+      'title_multiple' => 'Kolonner',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -697,7 +697,7 @@ function fic_page_settings_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -710,10 +710,9 @@ function fic_page_settings_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'list',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'paragraphs_editor_preview' => array(
@@ -945,7 +944,7 @@ function fic_page_settings_field_default_field_instances() {
   t('Email');
   t('Inkl. +45 - f.eks "+4572101213"');
   t('Jobtitel');
-  t('Paragraph');
+  t('Kolonne');
   t('Paragraphs');
   t('Sektion');
   t('Telefon');

@@ -27,6 +27,23 @@ function fic_page_settings_field_default_field_bases() {
     'type' => 'paragraphs',
   );
 
+  // Exported field_base: 'field_kolonne_afsnit'.
+  $field_bases['field_kolonne_afsnit'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_kolonne_afsnit',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'paragraphs',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'paragraphs',
+  );
+
   // Exported field_base: 'field_paragraph_personale'.
   $field_bases['field_paragraph_personale'] = array(
     'active' => 1,

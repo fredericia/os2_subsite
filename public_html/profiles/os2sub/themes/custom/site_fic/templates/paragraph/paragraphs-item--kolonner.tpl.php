@@ -30,10 +30,10 @@
   <div<?php print $content_attributes; ?>>
     <div class="container">
       <?php $col_num = 1;
-        foreach (element_children($content['field_afsnit']) as $col) : ?>
+        foreach (element_children($content['field_kolonne_afsnit']) as $col) : ?>
         <?php if ($col_num == 1): ?> <div class="row row--equal-height-columns"> <?php endif;?>
         <div <?php if (!empty($col_class)): print 'class="' . $col_class . '"'; endif;?>>
-          <?php print render($content['field_afsnit'][$col]); ?>
+          <?php print render($content['field_kolonne_afsnit'][$col]); ?>
         </div>
         <?php if (!empty($col_num) && $col_num == $col_amount): ?> </div> <?php endif;?>
         <?php $col_num = $col_num == $col_amount ? 1  : $col_num + 1; ?>
