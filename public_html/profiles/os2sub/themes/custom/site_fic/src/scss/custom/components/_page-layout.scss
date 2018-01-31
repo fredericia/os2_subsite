@@ -182,6 +182,17 @@ hr {
   border: 5px solid $color-black;
 }
 
+span {
+  &.primary-highlighted {
+    color: $brand-primary;
+  }
+
+  &.secondary-highlighted {
+    &, & a {
+      color: $brand-secondary;
+    }
+  }
+}
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
