@@ -283,32 +283,40 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
 
   $field_os2web_base_field_image = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_image');
 
-  // On frontpage we need just put term image to background.
-  // Another things will be done on FIC Header view side.
+  $term = $vars['term'];
+
+  // On frontpage show opening hours settings from frontpage term.
   if (drupal_is_front_page()) {
-    _site_fic_set_backstretch_background($vars['tid'], $field_os2web_base_field_image);
-    return;
+    $front_page_term = &drupal_static('front_page_term');
+    $term = empty($front_page_term) ? taxonomy_term_load(arg(2)) : $front_page_term;
   }
 
   // Get opening hours main text from term.
-  $opening_hours_main_text = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_opening_text');
+  $opening_hours_main_text = field_get_items('taxonomy_term', $term, 'field_os2web_base_opening_text');
   if (!empty($opening_hours_main_text)) {
     $opening_hours_main_text = reset($opening_hours_main_text);
     $vars['opening_hours_main_text'] = $opening_hours_main_text['safe_value'];
   }
   // Get opening hours sub text from term.
-  $opening_hours_sub_text = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_opening_sub');
+  $opening_hours_sub_text = field_get_items('taxonomy_term', $term, 'field_os2web_base_opening_sub');
   if (!empty($opening_hours_sub_text)) {
     $opening_hours_sub_text = reset($opening_hours_sub_text);
     $vars['opening_hours_sub_text'] = $opening_hours_sub_text['safe_value'];
   }
 
   // Get opening hours url from term.
-  $opening_hours_nid = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_opening_nid');
+  $opening_hours_nid = field_get_items('taxonomy_term', $term, 'field_os2web_base_opening_nid');
   if (!empty($opening_hours_nid)) {
     $opening_hours_node = node_load($opening_hours_nid[0]['nid']);
     _site_fic_get_node_translation($opening_hours_node);
     $vars['opening_hours_node_url'] = url('modal/node/' . $opening_hours_node->nid . '/nojs');
+  }
+
+  // On frontpage we need just put term image to background.
+  // Another things will be done on FIC Header view side.
+  if (drupal_is_front_page()) {
+    _site_fic_set_backstretch_background($vars['tid'], $field_os2web_base_field_image);
+    return;
   }
 
   // For taxonomy page we need to render full slideshow markup.
