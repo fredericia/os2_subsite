@@ -11086,6 +11086,12 @@ hr {
 .img-bordered {
   border: 5px solid #192124; }
 
+span.primary-highlighted {
+  color: #01B5D5; }
+
+span.secondary-highlighted, span.secondary-highlighted a {
+  color: #ff4200; }
+
 .content-inner {
   padding-top: 20px;
   padding-bottom: 25px; }
