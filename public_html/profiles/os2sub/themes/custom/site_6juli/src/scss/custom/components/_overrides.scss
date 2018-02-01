@@ -25,13 +25,22 @@
 
         label {
           display: block !important;
+
+          font-weight: normal;
           font-size: 17px;
         }
       }
 
-      .views-exposed-widget {
+      .btn {
+      }
 
+      .views-exposed-widget {
         float: none;
+      }
+
+      .views-submit-button button {
+        display: block !important;
+        width: 100%;
       }
     }
   }

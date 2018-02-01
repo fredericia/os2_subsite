@@ -9609,17 +9609,7 @@ select {
 @media only screen and (max-width: 1023px) {
   .event-teaser {
     width: 80vw;
-    height: 40vh; }
-  tr {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
+    height: 40vh; } }
 
 header#navbar {
   margin-bottom: 0px;
@@ -10408,9 +10398,13 @@ footer.footer a.image-links__link {
       margin-top: 10px; }
       .view-events .views-exposed-widgets #edit-title-wrapper label {
         display: block !important;
+        font-weight: normal;
         font-size: 17px; }
     .view-events .views-exposed-widgets .views-exposed-widget {
-      float: none; } }
+      float: none; }
+    .view-events .views-exposed-widgets .views-submit-button button {
+      display: block !important;
+      width: 100%; } }
 
 .node {
   font-size: 1.06em; }
