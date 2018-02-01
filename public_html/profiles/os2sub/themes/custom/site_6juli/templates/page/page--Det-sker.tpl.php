@@ -87,9 +87,6 @@ if ( !$social_share_title ) {
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="navbar">
     <div class="row">
-      <div class="social-share">
-        <?php echo" <a href=\"http://www.facebook.com/sharer/sharer.php?u=$social_share_url&title=$social_share_title\">"; ?>
-        <img src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/share.svg'; ?>"></a></div>
       <div class="header-logo">
         <a class="image-top-logo__link" href="<?php print $front_page; ?>"><img
             src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/6-juli-dagene-fredericia.png'; ?>"></a>

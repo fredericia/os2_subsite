@@ -9680,7 +9680,7 @@ header#navbar {
     color: #205692; }
   header#navbar .site-name-small {
     margin-top: 20px;
-    font-size: 0,885625em;
+    font-size: 0, 885625em;
     font-family: "Droid Serif", serif;
     font-weight: bold;
     text-transform: uppercase;
@@ -9719,7 +9719,7 @@ header#navbar {
   .site-name {
     width: 115px !important; }
   .header-logo .site-name {
-    font-size: 1.2em !important;
+    font-size: 1.200em !important;
     margin-top: 0px !important; }
   .header-logo {
     display: -webkit-box;
@@ -9746,22 +9746,8 @@ header#navbar {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 70px; }
-  .social-share {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    width: 100%;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 70px;
-    overflow: hidden; }
+  header#navbar .navbar .menu {
+    width: auto; }
   .social-share img {
     width: 35px; }
   .header-logo {
@@ -9854,7 +9840,7 @@ header#navbar {
     .menu.nav li > a {
       padding-left: 0;
       padding-right: 0;
-      font-size: 1.33em !important;
+      font-size: 1.330em !important;
       font-family: "Lato", sans-serif;
       font-weight: bold;
       color: #999999; }
