@@ -630,10 +630,6 @@ select {
 #mini-panel-facebook_panel {
   display: flex;
   align-items: center;
-  & .btn.btn-secondary.btn-lg{
-    padding-top: 1px !important;
-    padding-bottom: 1px !important;
-  }
 }
 
 #mini-panel-facebook_panel .pane-1 {
