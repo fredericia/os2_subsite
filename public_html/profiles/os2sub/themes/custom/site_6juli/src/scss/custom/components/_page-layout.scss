@@ -795,6 +795,22 @@ margin-bottom: 40px;
 @include media-breakpoint-only(xs) {
   // Page layout
   .content-inner {}
+
+  #mini-panel-forside_first_minipanel {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .pane-forside-first-minipanel {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .view-os2web-events-slideshow {
+
+    > .text-center {
+      display: none;
+    }
+  }
 }
 
 // Tablet - and up
