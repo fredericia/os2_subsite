@@ -64,7 +64,7 @@ body {
   content: 'Til: ';
   float: left;
   width: 30px;
-  margin-left: -45px;
+  margin-left: -50px;
   font-size: 17px;
   line-height: 40px;
 }
@@ -73,7 +73,7 @@ body {
   content: 'Fra: ';
   float: left;
   width: 30px;
-  margin-left: -45px;
+  margin-left: -50px;
   font-size: 17px;
   line-height: 40px;
 }
@@ -84,8 +84,7 @@ body {
 }
 
 #edit-event-calendar-date-value-value {
-
-  margin-left: 48px;
+  margin-left: 50px;
 }
 
 .form-control {
@@ -574,12 +573,14 @@ select {
   margin: 0 !important;
 }
 
+
 .form-item-event-calendar-date-value2-value-date input {
   background: none !important;
   border: 2px solid #fff !important;
 }
 
 .pane-views.pane-events {
+
   .views-widget-filter-title {
     float: right;
     &:before {
@@ -590,6 +591,19 @@ select {
       font-size: 17px;
       line-height: 40px;
 
+    }
+  }
+}
+
+@include media-breakpoint-only(xs) {
+
+  .pane-views.pane-events {
+
+    .views-widget-filter-title {
+
+      &:before {
+        display: none;
+      }
     }
   }
 }
@@ -1105,9 +1119,5 @@ select {
 
     display: flex;
     flex-direction: column;
-  }
-
-  .views-exposed-widgets {
-    flex-direction: column !important;
   }
 }

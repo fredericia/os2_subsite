@@ -8772,7 +8772,7 @@ body {
   content: 'Til: ';
   float: left;
   width: 30px;
-  margin-left: -45px;
+  margin-left: -50px;
   font-size: 17px;
   line-height: 40px; }
 
@@ -8780,7 +8780,7 @@ body {
   content: 'Fra: ';
   float: left;
   width: 30px;
-  margin-left: -45px;
+  margin-left: -50px;
   font-size: 17px;
   line-height: 40px; }
 
@@ -8788,7 +8788,7 @@ body {
   margin-left: 50px; }
 
 #edit-event-calendar-date-value-value {
-  margin-left: 48px; }
+  margin-left: 50px; }
 
 .form-control {
   background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png");
@@ -9303,6 +9303,10 @@ select {
     font-size: 17px;
     line-height: 40px; }
 
+@media (max-width: 767px) {
+  .pane-views.pane-events .views-widget-filter-title:before {
+    display: none; } }
+
 .pane-forside-first-minipanel {
   padding-top: 60px;
   padding-bottom: 60px; }
@@ -9615,13 +9619,7 @@ select {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
-  .views-exposed-widgets {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-    -webkit-flex-direction: column !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important; } }
+            flex-direction: column; } }
 
 header#navbar {
   margin-bottom: 0px;
@@ -10387,6 +10385,32 @@ footer.footer a.image-links__link {
 .btn, .banner .banner-wrapper a {
   max-width: 100%;
   white-space: normal; }
+
+@media (max-width: 767px) {
+  .view-events .views-exposed-widgets {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .view-events .views-exposed-widgets > * {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+    .view-events .views-exposed-widgets .container-inline-date > .form-item {
+      display: block; }
+    .view-events .views-exposed-widgets #edit-title-wrapper {
+      margin-top: 10px; }
+      .view-events .views-exposed-widgets #edit-title-wrapper label {
+        display: block !important;
+        font-size: 17px; }
+    .view-events .views-exposed-widgets .views-exposed-widget {
+      float: none; } }
 
 .node {
   font-size: 1.06em; }

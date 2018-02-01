@@ -2,3 +2,37 @@
   max-width: 100%;
   white-space: normal;
 }
+
+@include media-breakpoint-only(xs) {
+
+  .view-events {
+
+    .views-exposed-widgets {
+      display: flex;
+
+      flex-direction: column;
+
+      > * {
+        flex-grow: 1;
+      }
+
+      .container-inline-date > .form-item {
+        display: block;
+      }
+
+      #edit-title-wrapper {
+        margin-top: 10px;
+
+        label {
+          display: block !important;
+          font-size: 17px;
+        }
+      }
+
+      .views-exposed-widget {
+
+        float: none;
+      }
+    }
+  }
+}
