@@ -29,6 +29,11 @@ body {
   font-size: 1.0625em;
 }
 
+.panel-pane {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .call-to-action {
   text-align: center;
   background-color: $color-btn;
@@ -48,10 +53,10 @@ body {
 }
 
 #edit-event-calendar-date-value2-value-datepicker-popup-0 {
-  background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png')!important;
-  background-size: 25px!important;
-  background-position: right 10px center!important;
-  background-repeat: no-repeat!important;
+  background-image: url('https://d30y9cdsu7xlg0.cloudfront.net/png/10897-200.png') !important;
+  background-size: 25px !important;
+  background-position: right 10px center !important;
+  background-repeat: no-repeat !important;
 }
 
 #edit-event-calendar-date-value2-value:before {
@@ -60,7 +65,7 @@ body {
   width: 30px;
   margin-left: -45px;
   font-size: 17px;
-  line-height: 40px;    
+  line-height: 40px;
 }
 
 #edit-event-calendar-date-value-value:before {
@@ -69,7 +74,7 @@ body {
   width: 30px;
   margin-left: -45px;
   font-size: 17px;
-  line-height: 40px;    
+  line-height: 40px;
 }
 
 #edit-event-calendar-date-value2-value {
@@ -90,7 +95,7 @@ body {
 }
 
 #edit-title {
-  background-image: none!important;
+  background-image: none !important;
 }
 
 #edit-event-calendar-date-value2-wrapper label {
@@ -103,20 +108,20 @@ body {
 }
 
 #edit-title-wrapper label {
-  display: none!important;
+  display: none !important;
 }
 
 .views-row-even .teaser {
-  display: flex!important;
-  flex-direction: row-reverse!important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
 }
 
 .pane-os2sub-nyheder {
-  height:395px;
+  height: 395px;
 }
 
 .teaser .img-responsive {
-  max-width: inherit!important;
+  max-width: inherit !important;
   //width: 500px;
 }
 
@@ -129,13 +134,13 @@ body {
 
 .sidebar-left .pane-title {
 
-  font-size: 16px!important;
+  font-size: 16px !important;
   text-transform: uppercase;
   color: #aaa;
 }
 
-.card-title {
-  font-size: 16px!important;
+.card-title  {
+  font-size: 16px !important;
   text-transform: uppercase;
   color: #aaa;
   font-family: $font-droid-serif;
@@ -143,11 +148,11 @@ body {
 }
 
 .card-block h3 a {
-  font-size: 16px!important;
-  text-transform: uppercase!important;
-  color: #aaa!important;
-  font-family: $font-droid-serif!important;
-  font-weight: bold!important;  
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  color: #aaa !important;
+  font-family: $font-droid-serif !important;
+  font-weight: bold !important;
 }
 
 .card-text .field-name-field-os2web-contact-field-dept {
@@ -157,19 +162,21 @@ body {
 .card-block {
   padding: 0px;
 }
+
 .contextual-links-region .pane-title {
   font-size: 16px !important;
   text-transform: uppercase;
   color: #aaa;
-  & h1{
+  & h1 {
     margin-bottom: 30px;
   }
 }
 
-.panel-pane.pane-node-body h1.pane-title{
+.panel-pane.pane-node-body h1.pane-title {
   margin-bottom: 30px;
 }
-.field.field-name-field-os2web-base-field-related.field-type-node-reference{
+
+.field.field-name-field-os2web-base-field-related.field-type-node-reference {
   font-size: 16px !important;
   margin-bottom: 30px;
 }
@@ -179,11 +186,11 @@ body {
 }
 
 .node--os2web_contact_contact--teaser .card-text {
-  font-size: 16px!important;
+  font-size: 16px !important;
 }
 
 .node--os2web_contact_contact--teaser .card-title {
-  display: none!important;
+  display: none !important;
 }
 
 .node-os2web-contact-contact {
@@ -192,13 +199,13 @@ body {
 }
 
 .sidebar-right .pane-title {
-  font-size: 16px!important;
+  font-size: 16px !important;
   text-transform: uppercase;
   color: #aaa;
 }
 
 .sidebar-right {
-  border-left: 1px solid rgba(0,0,0,0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
 
@@ -221,7 +228,7 @@ iframe {
 }
 
 .block__share-links__link a {
-  font-size: 16px!important;
+  font-size: 16px !important;
   padding: 0;
   margin: 0;
 }
@@ -234,6 +241,7 @@ h1.pane-title {
   color: $headline-color;
   border: 0;
 }
+
 .pane-det-sker-slideshow .pane-title {
   display: none;
 }
@@ -242,8 +250,8 @@ h1.pane-title {
   font-family: $font-droid-serif;
   font-weight: bold;
   font-size: 32px;
-  color: $section-heading-color; 
-  text-align: left!important;
+  color: $section-heading-color;
+  text-align: left !important;
 }
 
 .det-sker-title a {
@@ -256,12 +264,14 @@ h1.pane-title {
 }
 
 .node--banner--teaser {
-  height: 600px!important;
+  height: 600px !important;
 }
+
 .field-name-event-calendar-date .field-item {
   margin-bottom: 15px;
   margin-top: 15px;
 }
+
 .date-display-single {
   font-size: 16px;
   color: #306783;
@@ -269,10 +279,11 @@ h1.pane-title {
 }
 
 .page-forside .date-display-single {
-  color: #fff!important;
+  color: #fff !important;
 }
+
 .pane-block-11 .pane-title {
-  display: block!important;
+  display: block !important;
   font-size: 16px !important;
   text-transform: uppercase;
   color: #aaa;
@@ -335,7 +346,7 @@ h2.pane-title {
       .field-item {
         padding-top: 20px;
         &:before,
-          &:after {
+        &:after {
           content: '"';
         }
       }
@@ -356,6 +367,7 @@ h2.pane-title {
     }
   }
 }
+
 .front .panels-flexible-9-inside,
 .front .panels-flexible-10-inside {
   @include make-row();
@@ -364,6 +376,7 @@ h2.pane-title {
     @include make-sm-column(6);
   }
 }
+
 .node-event-calendar {
   margin-bottom: 30px;
 }
@@ -396,10 +409,10 @@ h2.pane-title {
 
 .node-os2web-base-news {
 
-  border-top: none!important;
-  border-left: none!important;
-  border-right: none!important;
-  border-bottom: 1px solid #ddd!important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #ddd !important;
 }
 
 .teaser-news-date {
@@ -411,8 +424,8 @@ h2.pane-title {
 
 .teaser-news-title {
   font-family: "Droid Serif", serif;
-  font-weight: bold;    
-  font-size: 28px!important;
+  font-weight: bold;
+  font-size: 28px !important;
   margin-bottom: 10px;
 }
 
@@ -448,6 +461,7 @@ p {
     height: 200px;
   }
 }
+
 .breadcrumb {
   background-color: transparent;
   color: $brand-primary;
@@ -455,6 +469,7 @@ p {
     color: $color-font-dark-secondary;
   }
 }
+
 .content-width .pane-events .pane-content {
   background-color: $color-grey-background;
   padding-top: 10px;
@@ -469,59 +484,58 @@ p {
     padding-top: 40px;
   }
 }
-/*.80-procent {
-  padding-left: 10%;
-  padding-right: 10%;
-}*/
+
 .pane-clone-of-forside-first-minipanel {
   padding-bottom: 60px;
   padding-top: 60px;
 }
+
 .content-width .pane-events .form-control {
   border: #fff 1px solid;
   height: 45px;
-  box-shadow: none!important;
+  box-shadow: none !important;
   text-indent: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .footer .content-width {
   padding-top: 40px;
 }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
 
 .date-month {
-  border-radius: 0px!important;
-  text-indent: 10px!important;
-  padding: 0!important;
+  border-radius: 0px !important;
+  text-indent: 10px !important;
+  padding: 0 !important;
   width: 50px;
-  padding-left: 0!important;
+  padding-left: 0 !important;
 }
 
 .date-day {
-  border-top-right-radius: 0px!important;
-  border-bottom-right-radius: 0px!important;
-  text-indent: 8px!important;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+  text-indent: 8px !important;
   width: 50px;
-  padding-right: 0!important;
+  padding-right: 0 !important;
 }
 
 .date-year {
-  border-top-left-radius: 0px!important;
-  border-bottom-left-radius: 0px!important;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
   padding-right: 100px;
-  text-indent: 10px!important;
-  padding-left: 0!important;
+  text-indent: 10px !important;
+  padding-left: 0 !important;
 }
 
 #edit-event-calendar-date-value-1-value-year,
 #edit-event-calendar-date-value-value-year {
-  width: 148px!important;
+  width: 148px !important;
 }
-
 
 .form-item-body-value input {
   width: 300px;
@@ -537,32 +551,33 @@ select {
 }
 
 #edit-event-calendar-date-value-1-wrapper {
-  padding: 0!important;
+  padding: 0 !important;
 }
 
 .views-widget-filter-event_calendar_date_value select {
   background: none;
-  border: 2px solid #fff!important;
+  border: 2px solid #fff !important;
 }
 
 .views-widget-filter-event_calendar_date_value .date-day {
-  border-right: none!important;
+  border-right: none !important;
 }
 
 .views-widget-filter-event_calendar_date_value .date-month {
-  border-right: none!important;
+  border-right: none !important;
 }
 
 .container-inline-date .form-item input,
 .container-inline-date .form-item select,
 .container-inline-date .form-item option {
-  margin: 0!important;
+  margin: 0 !important;
 }
 
 .form-item-event-calendar-date-value2-value-date input {
-  background: none!important;
+  background: none !important;
   border: 2px solid #fff !important;
 }
+
 .pane-views.pane-events {
   .views-widget-filter-title {
     float: right;
@@ -588,9 +603,9 @@ select {
 }
 
 .page-forside .pane-det-sker-slideshow {
-  padding-top: 60px!important;
-  padding-bottom: 60px!important;
-  margin-bottom: 0!important;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+  margin-bottom: 0 !important;
 }
 
 #block-system-main .panel-pane.pane-det-sker-slideshow {
@@ -627,7 +642,7 @@ select {
 
 #mini-panel-facebook_panel .button {
 
-  margin: 0!important;
+  margin: 0 !important;
 }
 
 #mini-panel-facebook_panel {
@@ -646,15 +661,13 @@ select {
 }
 
 .page-forside .front-teaser-outer .front-teaser {
-  border: 1px solid rgba(224, 222, 212, 0.5)!important;
+  border: 1px solid rgba(224, 222, 212, 0.5) !important;
   overflow: hidden;
 }
 
 .page-forside .front-teaser-outer .date-display-single {
   font-weight: bold;
 }
-
-
 
 // -------
 // Det Sker
@@ -691,9 +704,10 @@ select {
   text-indent: 5%;
 
 }
+
 .top-section-headline h1 {
   color: #fff;
-  font-family: "Droid Serif", serif!important;
+  font-family: "Droid Serif", serif !important;
   font-size: 22px;
   margin: 0;
   padding: 0;
@@ -714,6 +728,7 @@ select {
 .page-nyheder .pane-block-12 {
   display: none;
 }
+
 .node-type-os2web-base-news .pane-block-12 {
   display: none;
 }
@@ -726,13 +741,13 @@ select {
 // Page node
 // ------
 .node-slideshow .img-container {
-  height: 350px!important;
+  height: 350px !important;
 }
 
 .field-name-field-citat {
 
-  font-family: "Droid Serif", serif!important;
-  font-size: 20px!important;
+  font-family: "Droid Serif", serif !important;
+  font-size: 20px !important;
 }
 
 .paragraphs-item-afsnit-m-link {
@@ -740,41 +755,44 @@ select {
 }
 
 .paragraphs-item-afsnit-m-link h2 {
-  font-family: "Droid Serif", serif!important;
+  font-family: "Droid Serif", serif !important;
   color: #0F2846;
 }
 
 .page-node .nav > li > a {
 
-  padding-left: 0!important;
+  padding-left: 0 !important;
   font-size: 16px;
   padding: 5px;
 }
 
-.page-node .breadcrumb, .page-nyheder .breadcrumb, .page-det-sker .breadcrumb{
+.page-node .breadcrumb, .page-nyheder .breadcrumb, .page-det-sker .breadcrumb {
   font-size: 16px;
   max-width: 1170px;
   margin: 0 auto;
-  padding-left: 0!important;
+  padding-left: 0 !important;
   margin-bottom: 20px;
 }
 
-.page-node .breadcrumb li.active, .page-nyheder .breadcrumb li.active, .page-det-sker .breadcrumb li.active{
+.page-node .breadcrumb li.active, .page-nyheder .breadcrumb li.active, .page-det-sker .breadcrumb li.active {
   color: #306783;
 }
 
-.page-nyheder .breadcrumb, .page-det-sker .breadcrumb{
-    margin-top: -60px;
+.page-nyheder .breadcrumb, .page-det-sker .breadcrumb {
+  margin-top: -60px;
 }
 
-.page-node .breadcrumb{
-margin-bottom: 40px;
+.page-node .breadcrumb {
+  margin-bottom: 40px;
 }
 
 .page-node iframe {
   margin-top: 20px;
 }
-.page-node .field-name-field-paragraph-header { display: none; }
+
+.page-node .field-name-field-paragraph-header {
+  display: none;
+}
 
 // --------------------------------------------------
 // Variants
@@ -794,7 +812,8 @@ margin-bottom: 40px;
 // Mobile - only
 @include media-breakpoint-only(xs) {
   // Page layout
-  .content-inner {}
+  .content-inner {
+  }
 
   #mini-panel-forside_first_minipanel {
     padding-top: 0 !important;
@@ -821,7 +840,6 @@ margin-bottom: 40px;
     padding-bottom: $sm-page-layout-content-inner-padding-bottom;
   }
 
-
   .node--os2web_base_news--teaser .teaser {
     display: flex;
 
@@ -836,7 +854,8 @@ margin-bottom: 40px;
 // Tablet - only
 @include media-breakpoint-only(sm) {
   // Page layout
-  .content-inner {}
+  .content-inner {
+  }
 }
 
 // Desktop - and up
@@ -851,38 +870,44 @@ margin-bottom: 40px;
 // Desktop - only
 @include media-breakpoint-only(md) {
   // Page layout
-  .content-inner {}
+  .content-inner {
+  }
 }
 
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
   // Page layout
-  .content-inner {}
+  .content-inner {
+  }
 }
 
 // Print
 @media print {
   // Page layout
-  .content-inner {}
+  .content-inner {
+  }
 }
 
 // Touch
 .touchevents {
   // Page layout
-  .content-inner {}
+  .content-inner {
+  }
 }
 
 // No touch
 .no-touchevents {
   // Page layout
-  .content-inner {}
+  .content-inner {
+  }
 }
 
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------
 // Page layout mixin
-@mixin content-mixin-inner() {}
+@mixin content-mixin-inner() {
+}
 
 //
 //@media only screen and (max-width : 780px) {
@@ -966,19 +991,20 @@ margin-bottom: 40px;
 //}
 //    
 //}
-.extend-button { display: none; }
+.extend-button {
+  display: none;
+}
 
 .fb_iframe_widget iframe {
 
   width: 100%;
 }
 
-
 @media only screen and (max-width: 768px) {
 
   .pane-frontpage-gallery .view-display-id-block_1 {
 
-    display: none!important;
+    display: none !important;
   }
 
   #mini-panel-forside_first_minipanel {
@@ -991,7 +1017,7 @@ margin-bottom: 40px;
     flex-direction: column;
     display: flex;
     justify-content: center;
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .readmore-btns a {
@@ -1010,19 +1036,19 @@ margin-bottom: 40px;
   }
 
   .owl-stage .owl-item {
-    width: 90vw!important;
+    width: 90vw !important;
     margin: 0;
   }
 
   .youtube-text .btn {
-    max-width: inherit!important;
-    display: flex!important;
-    width: 100%!important;
+    max-width: inherit !important;
+    display: flex !important;
+    width: 100% !important;
   }
 
   .youtube-text {
     padding: 20px;
-    padding-left: 20px!important;
+    padding-left: 20px !important;
   }
 
   #mini-panel-facebook_panel {
@@ -1040,12 +1066,12 @@ margin-bottom: 40px;
     display: flex;
     width: 100%;
     font-size: 18px;
-    max-width: inherit!important;
+    max-width: inherit !important;
   }
 
   .fb_iframe_widget iframe {
 
-    width: 100%!important;
+    width: 100% !important;
   }
 
   .extend-button {
@@ -1067,10 +1093,9 @@ margin-bottom: 40px;
   }
 }
 
-
 @media only screen and (max-width: 1023px) {
 
-  .event-teaser { 
+  .event-teaser {
     width: 80vw;
     height: 40vh;
   }
@@ -1082,6 +1107,6 @@ margin-bottom: 40px;
   }
 
   .views-exposed-widgets {
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
 }

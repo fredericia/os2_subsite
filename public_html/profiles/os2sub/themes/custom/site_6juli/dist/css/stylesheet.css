@@ -8738,6 +8738,10 @@ body {
   color: #666666;
   font-size: 1.0625em; }
 
+.panel-pane {
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .call-to-action {
   text-align: center;
   background-color: #a3283e;
@@ -9208,10 +9212,6 @@ p {
     padding-bottom: 40px;
     padding-top: 40px; }
 
-/*.80-procent {
-  padding-left: 10%;
-  padding-right: 10%;
-}*/
 .pane-clone-of-forside-first-minipanel {
   padding-bottom: 60px;
   padding-top: 60px; }
