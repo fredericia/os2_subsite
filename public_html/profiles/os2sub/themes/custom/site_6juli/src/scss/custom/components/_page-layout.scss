@@ -383,10 +383,15 @@ h2.pane-title {
 
 .teaser-news-img {
 
+  img {
+    width: 100%;
+  }
 }
 
 .node--os2web_base_news--teaser .teaser {
   display: flex;
+
+  flex-direction: column;
 }
 
 .node-os2web-base-news {
@@ -412,9 +417,7 @@ h2.pane-title {
 }
 
 .teaser-news-content {
-
   padding: 10px;
-  padding-left: 25px;
 }
 
 .teaser .field-name-field-os2web-base-field-summary {
@@ -800,6 +803,17 @@ margin-bottom: 40px;
   .content-inner {
     padding-top: $sm-page-layout-content-inner-padding-top;
     padding-bottom: $sm-page-layout-content-inner-padding-bottom;
+  }
+
+
+  .node--os2web_base_news--teaser .teaser {
+    display: flex;
+
+    flex-direction: row;
+  }
+
+  .teaser-news-content {
+    padding-left: 25px;
   }
 }
 
