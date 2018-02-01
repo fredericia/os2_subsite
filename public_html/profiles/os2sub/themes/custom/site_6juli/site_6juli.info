@@ -40,27 +40,14 @@ plugins[panels][layouts] = layouts
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;scripts[] = 'dist/js/modernizr.js'
-;scripts[] = 'dist/js/core.js'
+scripts[] = 'dist/js/modernizr.js'
+scripts[] = 'dist/js/core.js'
 scripts[] = 'dist/addons/jquery.smartmenus.js'
 scripts[] = 'dist/addons/jquery.smartmenus.bootstrap.js'
-
-; Disable the CDN provider so compiled source files can be used.
-;settings[bootstrap_cdn] = ''
-settings[bootstrap_cdn_provider] = 'jsdelivr'
-settings[bootstrap_cdn_custom_css] = 'https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.css'
-settings[bootstrap_cdn_custom_css_min] = 'https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css'
-settings[bootstrap_cdn_custom_js] = 'https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.js'
-settings[bootstrap_cdn_custom_js_min] = 'https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js'
-settings[bootstrap_cdn_jsdelivr_version] = '3.3.5'
-settings[bootstrap_cdn_jsdelivr_theme] = 'bootstrap'
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Plugins
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-; sassy[] = 'colors/variables.scss'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Theme settings
