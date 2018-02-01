@@ -29,7 +29,8 @@ body {
   font-size: 1.0625em;
 }
 
-.panel-pane {
+.panel-pane > .pane-title,
+.panel-pane > .pane-content {
   padding-left: 15px;
   padding-right: 15px;
 }

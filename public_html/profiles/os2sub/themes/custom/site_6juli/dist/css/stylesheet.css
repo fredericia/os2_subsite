@@ -8738,7 +8738,8 @@ body {
   color: #666666;
   font-size: 1.0625em; }
 
-.panel-pane {
+.panel-pane > .pane-title,
+.panel-pane > .pane-content {
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -10263,7 +10264,6 @@ footer.footer a.image-links__link {
   border-radius: 100px;
   margin-top: 15px;
   margin-bottom: 15px;
-  height: 40px;
   padding: 10px 35px; }
   .btn.btn-dark, .banner .banner-wrapper a.btn-dark {
     background-color: #a3283e;
