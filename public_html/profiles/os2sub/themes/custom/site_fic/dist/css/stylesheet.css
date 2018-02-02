@@ -12396,15 +12396,8 @@ div.ctools-modal-content {
     clear: both; }
   .backstretched .term-fic-header {
     display: block; }
-  .term-fic-header .views-slideshow-cycle-main-frame {
-    height: 100% !important;
-    position: static !important; }
   .term-fic-header .views-slideshow-cycle-main-frame-row {
-    position: static !important;
-    height: 100% !important; }
-  .term-fic-header .views_slideshow_main {
-    min-height: 372px;
-    overflow: hidden; }
+    width: 100% !important; }
   .term-fic-header .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed {
     display: -webkit-box;
     display: -webkit-flex;
