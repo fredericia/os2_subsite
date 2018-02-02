@@ -8,13 +8,7 @@
  */
 ?>
 <div id="taxonomy-term-<?php print $term->tid; ?>" class="<?php print $classes; ?>">
-    <?php if (! empty($slideshow)) : ?>
-        <?php print $slideshow; ?>
-    <?php else: ?>
-        <div class="slide-content-wrapper">
-            <?php print render($content); ?>
-        </div>
-    <?php endif; ?>
+    <?php print $slideshow; ?>
     <div class="slide-bottom">
         <div class="col-xs-6 col-sm-8">
             <div class="blue-block">
@@ -39,6 +33,3 @@
         <?php endif; ?>
     </div>
 </div>
-<?php if (! empty($related_links)) : ?>
-    <?php print render($related_links); ?>
-<?php endif; ?>

@@ -131,10 +131,9 @@ var header = (function ($) {
                 $maxH = 700;
 
                 $descrH = $descrH < $minH ? $minH : ($descrH > $maxH ? $maxH : $descrH);
-                $descrH = $descrH - $('.views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section').height();  
                 $descrH = $descrH / 2;
-                $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-top', $descrH+'px');
-                $('.term-fic-header .views_slideshow_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-bottom', $descrH+'px');
+                $('.term-fic-header .views_slideshow_cycle_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-top', $descrH+'px');
+                $('.term-fic-header .views_slideshow_cycle_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-bottom', $descrH+'px');
         }
     };
 
