@@ -83,19 +83,16 @@ function site_fic_preprocess_page(&$variables) {
     _color_page_alter($variables);
   }
 
-  $book_node_reference = variable_get('book_node_reference', FALSE);
-  if ($book_node_reference) {
-    $node = node_load($book_node_reference);
-    _site_fic_get_node_translation($node);
-
+  $book_button_url = variable_get('book_button_url', FALSE);
+  if ($book_button_url) {
     $variables['page']['navigation']['book_link'] = array(
       '#type' => 'container',
       '#attributes' => array('class' => array('book-link')),
       array(
         '#theme' => 'link',
         '#text' => t('Book'),
-        '#path' => 'node/' . $node->nid,
-      )
+        '#path' => $book_button_url,
+      ),
     );
   }
 
