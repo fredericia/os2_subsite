@@ -131,13 +131,17 @@ if(typeof(CKEDITOR) !== 'undefined') {
         // interested in (the "Table" dialog window).
         if ( dialogName == 'table' ) {
             // Get a reference to the "Advanced" tab.
-            var advancedTab = dialogDefinition.getContents('advanced');
-            console.log(advancedTab);
+            var infoTab = dialogDefinition.getContents('info');
+            // Set the default value for the txtBorder field.
+            var txtBorder = infoTab.get('txtBorder');
+            txtBorder['default'] = 0;
 
+            // Get a reference to the "Advanced" tab.
+            var advancedTab = dialogDefinition.getContents('advanced');
             // Set the default value for the Class field.
             var classes = advancedTab.get('advCSSClasses');
             // Add the same class like we add in styles above.
-            classes['default'] = 'table';
+            classes['default'] = 'table table-striped';
         }
     });
 }
