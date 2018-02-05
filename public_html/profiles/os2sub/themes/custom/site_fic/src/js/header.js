@@ -132,8 +132,8 @@ var header = (function ($) {
 
                 $descrH = $descrH < $minH ? $minH : ($descrH > $maxH ? $maxH : $descrH);
                 $descrH = $descrH / 2;
-                $('.term-fic-header .views_slideshow_cycle_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-top', $descrH+'px');
-                $('.term-fic-header .views_slideshow_cycle_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow').css('margin-bottom', $descrH+'px');
+                $('.term-fic-header .views_slideshow_cycle_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow-wrapper').css('margin-top', $descrH+'px');
+                $('.term-fic-header .views_slideshow_cycle_main, .page-taxonomy .term-fic-header > .taxonomy-term .cycle-slideshow-wrapper').css('margin-bottom', $descrH+'px');
         }
     };
 

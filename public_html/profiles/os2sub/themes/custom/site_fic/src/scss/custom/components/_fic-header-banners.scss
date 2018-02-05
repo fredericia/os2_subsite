@@ -251,28 +251,26 @@ $desktop-margin-default: 30px;
   }
 }
 
-.page-taxonomy {
-
+.not-front.page-taxonomy {
   .view-mode-fic_header {
-    display: flex;
-
-    flex-direction: column;
-
-    &,
-    & .cycle-slide {
-      height: inherit;
+    > .cycle-slideshow-wrapper {
+      display: flex;
+      height: 0 !important;
+      align-items: center;
       width: 100%;
-      background-color: transparent !important;
+
+      .cycle-slideshow {
+        display: flex;
+        justify-content: center;
+        width: 100% !important;
+
+        .cycle-slide {
+          background-color: transparent !important;
+          width: 100%
+        }
+
+      }
     }
-  }
-
-  .slide-content-wrapper {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-    flex-grow: 1;
   }
 }
 
