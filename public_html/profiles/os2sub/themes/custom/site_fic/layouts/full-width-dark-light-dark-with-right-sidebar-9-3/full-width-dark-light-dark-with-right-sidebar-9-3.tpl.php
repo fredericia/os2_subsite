@@ -7,7 +7,7 @@
     <!-- Begin - dark section no. 1 -->
     <div class="os2-section os2-section-dark os2-watermark os2-watermark-light">
       <div class="container">
-        <div class="row">
+        <div class="row row--equal-height-columns">
 
           <?php if ($content['sidebar']): ?>
 

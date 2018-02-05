@@ -21,7 +21,7 @@
     <!-- Begin - dark section no. 1 -->
     <div class="os2-section os2-section-dark os2-watermark os2-watermark-light content-primary">
       <div class="container content-primary">
-        <div class="row">
+        <div class="row row--equal-height-columns">
 
           <?php if ($content['sidebar']): ?>
 
