@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(../../vendor/smartmenus/dist/addons/bootstrap/jquery.smartmenus.bootstrap.css);
 @import url("https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Lato:400,700&amp;subset=latin-ext");
 .node-type-os2web-base-gallery .region.region-content,
 .node-type-event-calendar .region.region-content,

@@ -13,6 +13,9 @@
   },
   "concat": {
     "core": [
+      "src/js/init.js",
+      "src/vendor/smartmenus/dist/jquery.smartmenus.js",
+      "src/vendor/smartmenus/dist/addons/jquery.smartmenus.bootstrap.js",
       "src/vendor/bootstrap-sass/assets/javascripts/bootstrap.js"
     ]
   }
