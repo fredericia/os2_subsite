@@ -38,7 +38,10 @@ function os2web_base_form_alter(&$form, &$form_state, $form_id) {
     $current_node = menu_get_object();
     $webform_node = $form['#node'];
 
-    if ($current_node->type == 'os2web_base_contentpage'
+    // @TODO The condition below should be refactored.
+    // We can render embed webform anypage you want.
+    if (!empty($current_node)
+        && $current_node->type == 'os2web_base_contentpage'
         && $webform_node->webform['redirect_url'] == '<none>') {
       $webform_node->webform['redirect_url'] = current_path();
     }
