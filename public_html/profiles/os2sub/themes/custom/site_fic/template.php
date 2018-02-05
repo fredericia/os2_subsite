@@ -282,10 +282,10 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     $field_os2web_base_field_related = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_related');
     if (!empty($field_os2web_base_field_related)) {
       foreach ($field_os2web_base_field_related as $value) {
-        if (empty($value['nid'])) {
+        $related_node = node_load($value['nid']);
+        if (empty($related_node)) {
           continue;
         }
-        $related_node = node_load($value['nid']);
         _site_fic_get_node_translation($related_node);
         $content = node_view($related_node, 'fic_header');
         $slide_content = array();
