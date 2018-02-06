@@ -1,7 +1,5 @@
 <?php
 /**
  * @file
- * Code for the FIC Blocks settings feature.
+ * Drupal needs this blank file.
  */
-
-include_once 'fic_blocks_settings.features.inc';
