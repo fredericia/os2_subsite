@@ -5,7 +5,8 @@
     "development": "cross-env NODE_ENV=development grunt build",
     "watch": "cross-env NODE_ENV=development grunt watch",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production"
+    "production": "cross-env NODE_ENV=production",
+    "updep": "rm -rf ./node_modules && rm -rf ./src/vendor && npm install && bower install"
   },
   "devDependencies": {
     "cross-env": "^5.1.3",
