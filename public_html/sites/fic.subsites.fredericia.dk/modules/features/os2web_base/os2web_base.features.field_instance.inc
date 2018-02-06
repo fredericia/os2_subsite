@@ -7511,7 +7511,7 @@ function os2web_base_field_default_field_instances() {
         'personale' => 14,
         'webform' => 15,
       ),
-      'default_edit_mode' => 'open',
+      'default_edit_mode' => 'preview',
       'entity_translation_sync' => FALSE,
       'title' => 'Paragraph',
       'title_multiple' => 'Paragraphs',
