@@ -93,4 +93,14 @@
     }
     _set_height_on_page_wrapper(); // Load upon boot
 
+    // Init stackable responsive table plugin.
+    Drupal.behaviors.stackable = {
+        attach: function(context, settings){
+            console.log($('table'));
+            $('table').once('stackable', function() {
+                $(this).stacktable();
+            });
+        }
+    };
+
 })(jQuery);

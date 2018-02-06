@@ -1,0 +1,92 @@
+// |--------------------------------------------------------------------------
+// | Table
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .stackable
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+
+.stacktable {
+  width: 100%;
+
+  &.large-only {
+    display: none;
+  }
+
+  &.small-only {
+    display: table;
+  }
+}
+
+.st-head-row {
+  padding-top: 1em;
+}
+.st-head-row.st-head-row-main {
+  font-size: 1.5em; padding-top: 0;
+}
+.st-key {
+  width: 49%; text-align: right; padding-right: 1%;
+}
+.st-val {
+  width: 49%; padding-left: 1%;
+}
+
+
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+  .stacktable.large-only {
+    display: table;
+  }
+  .stacktable.small-only {
+    display: none;
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {}
+
+// Desktop - only
+@include media-breakpoint-only(md) {}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+

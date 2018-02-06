@@ -27,6 +27,7 @@
     "readable-bootstrap-breakpoints": "^1.0.2",
     "sidr": "^2.2.1",
     "sidr-bootstrap-theme": "^1.0.2",
-    "slinky-bootstrap-theme": "^1.0.2"
+    "slinky-bootstrap-theme": "^1.0.2",
+    "stacktable.js": "^1.0.3"
   }
 }

@@ -1727,6 +1727,10 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
+stacktable.js@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stacktable.js/-/stacktable.js-1.0.3.tgz#cc34b824365c3c95c7bd85b0c1f8d1f443bcdaf0"
+
 statuses@1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
