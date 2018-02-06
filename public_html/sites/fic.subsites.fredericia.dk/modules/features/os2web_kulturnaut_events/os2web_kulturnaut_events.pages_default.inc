@@ -381,11 +381,6 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-    'template_suggestion' => 'ml-title',
-  );
   $pane->extras = array();
   $pane->position = 3;
   $pane->locks = array();
@@ -414,11 +409,6 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-    'template_suggestion' => 'ml-title',
   );
   $pane->extras = array();
   $pane->position = 4;
@@ -449,11 +439,6 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-    'template_suggestion' => 'ml-title',
-  );
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
@@ -483,11 +468,6 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-    'template_suggestion' => 'ml-title',
-  );
   $pane->extras = array();
   $pane->position = 6;
   $pane->locks = array();
@@ -516,11 +496,6 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-    'template_suggestion' => 'ml-title',
   );
   $pane->extras = array();
   $pane->position = 7;
@@ -586,11 +561,6 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $pane->cache = array();
   $pane->style = array(
     'settings' => NULL,
-  );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => '',
-    'template_suggestion' => 'ml-title',
   );
   $pane->extras = array();
   $pane->position = 9;

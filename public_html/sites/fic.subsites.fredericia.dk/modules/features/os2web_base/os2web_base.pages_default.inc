@@ -1022,7 +1022,7 @@ function os2web_base_default_page_manager_handlers() {
       'term_node_tid_depth' => '%taxonomy_term_sektion:tid',
       'nid' => '',
     ),
-    'override_title' => 0,
+    'override_title' => 1,
     'override_title_text' => 'Upcoming events',
     'override_title_heading' => 'h2',
   );

@@ -224,3 +224,14 @@ function fic_common_ctools_plugin_directory($module, $plugin) {
     return 'plugins/content_types';
   }
 }
+
+/**
+ * Implements hook_panels_pane_content_alter().
+ */
+function fic_common_panels_pane_content_alter($content, $pane, $args, $contexts) {
+  if (!empty($content)
+    && !empty($pane->configuration['override_title'])
+    && !empty($pane->configuration['override_title_text'])) {
+     $content->title = t($pane->configuration['override_title_text']);
+  }
+}
