@@ -121,7 +121,7 @@ $image-border: 10px;
 .node--os2web_base_news--os2sub_teaser_mini {
   border: $image-border solid #fff;
   position: relative;
-
+  overflow: hidden;
 
   .upper-part{
     position: absolute;
