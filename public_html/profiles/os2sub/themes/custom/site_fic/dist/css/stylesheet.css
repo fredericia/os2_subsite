@@ -12407,7 +12407,7 @@ div.ctools-modal-content {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 0;
+    height: 0 !important;
     -webkit-justify-content: space-around;
         -ms-flex-pack: distribute;
             justify-content: space-around; }
