@@ -214,6 +214,7 @@
       .paragraphs-item {
         &-afsnit-m-billede,
         &-afsnit-m-link,
+        &-afsnit-m-galleri,
         &-header-text-media,
         &-header-text-links-image,
         &-paragrph-address,
@@ -241,7 +242,19 @@
   }
 }
 
+.paragraphs-item-kolonner{
+  .row .content{
+    margin-bottom: 1em;
 
+    .field-type-link-field {
+      margin: 1em 0;
+
+      a{
+        width: 100%;
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Responsive
