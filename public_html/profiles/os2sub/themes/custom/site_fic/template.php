@@ -306,7 +306,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     }
 
     // Prepare related node slides.
-    $field_os2web_base_field_ext_link = _site_fic_get_field_item('taxonomy_term', $vars['term'], 'field_os2web_base_field_ext_link');
+    $field_os2web_base_field_ext_link = _site_fic_field_get_item('taxonomy_term', $vars['term'], 'field_os2web_base_field_ext_link');
     if (!empty($field_os2web_base_field_ext_link)) {
       foreach ($field_os2web_base_field_ext_link as $value) {
         $slide_id = 'ext-link-' . count($slideshow);
