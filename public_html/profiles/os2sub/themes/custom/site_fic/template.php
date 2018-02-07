@@ -304,8 +304,9 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
         );
       }
     }
+
     // Prepare related node slides.
-    $field_os2web_base_field_ext_link = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_ext_link');
+    $field_os2web_base_field_ext_link = _site_fic_get_field_item('taxonomy_term', $vars['term'], 'field_os2web_base_field_ext_link');
     if (!empty($field_os2web_base_field_ext_link)) {
       foreach ($field_os2web_base_field_ext_link as $value) {
         $slide_id = 'ext-link-' . count($slideshow);
@@ -535,6 +536,36 @@ function _site_fic_cycle_slideshow_slide($slide_id, $name, $url, $target = NULL,
       'target' => $target,
     ),
   );
+}
+
+/**
+ * Helper function to get field value only on specific language.
+ *
+ * Revamped version of field_get_item() without using field language fallback.
+ */
+function _site_fic_field_get_item($entity_type, $entity, $field_name, $langcode = NULL) {
+  // The part of field_language() function without 'field_language' alter.
+  $display_languages = &drupal_static(__FUNCTION__, array());
+  list($id, , $bundle) = entity_extract_ids($entity_type, $entity);
+  $langcode = field_valid_language($langcode, FALSE);
+
+  if (!isset($display_languages[$entity_type][$id][$langcode])) {
+    $display_language = [];
+
+    foreach (field_info_instances($entity_type, $bundle) as $instance) {
+      $display_language[$instance['field_name']] = isset($entity->{$instance['field_name']}[$langcode]) ? $langcode : LANGUAGE_NONE;
+    }
+    $display_languages[$entity_type][$id][$langcode] = $display_language;
+  }
+
+  $display_language = $display_languages[$entity_type][$id][$langcode];
+
+  // Single-field mode.
+  if (isset($field_name)) {
+    $langcode = isset($display_language[$field_name]) ? $display_language[$field_name] : NULL;
+  }
+
+  return isset($entity->{$field_name}[$langcode]) ? $entity->{$field_name}[$langcode] : FALSE;
 }
 
 /**
