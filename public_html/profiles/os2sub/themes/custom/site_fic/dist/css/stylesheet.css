@@ -12703,7 +12703,9 @@ div.ctools-modal-content {
     padding-top: 40px;
     padding-bottom: 40px; }
   .term-fic-header .views_slideshow_main {
-    height: auto !important; }
+    height: auto !important;
+    margin-top: 100px !important;
+    margin-bottom: 100px !important; }
   .term-fic-header .views_slideshow_cycle_slide {
     width: 100% !important; }
   .term-fic-header .views-slideshow-controls-bottom > div,
