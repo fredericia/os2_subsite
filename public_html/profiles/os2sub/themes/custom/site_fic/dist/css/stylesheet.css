@@ -12373,7 +12373,10 @@ div.ctools-modal-content {
   .slinky-menu li {
     border-bottom: 1px solid #2a2f36; }
   .slinky-menu .back {
-    top: 10px; }
+    top: 19px; }
+  .slinky-menu .title {
+    font-weight: bold;
+    text-decoration: underline; }
   .slinky-menu .next:after {
     font-size: 18px;
     content: "";

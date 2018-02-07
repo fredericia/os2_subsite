@@ -3243,7 +3243,6 @@ if (typeof jQuery === 'undefined') {
   jQuery.fn.sidr = fnSidr;
 
 }());
-!function(e){var t;e.fn.slinky=function(a){var s=e.extend({label:"Back",title:!1,speed:300,resize:!0},a),i=e(this),n=i.children().first();i.addClass("slinky-menu");var r=function(e,t){var a=Math.round(parseInt(n.get(0).style.left))||0;n.css("left",a-100*e+"%"),"function"==typeof t&&setTimeout(t,s.speed)},l=function(e){i.height(e.outerHeight())},d=function(e){i.css("transition-duration",e+"ms"),n.css("transition-duration",e+"ms")};if(d(s.speed),e("a + ul",i).prev().addClass("next"),e("li > ul",i).prepend('<li class="header">'),s.title===!0&&e("li > ul",i).each(function(){var t=e(this).parent().find("a").first().text(),a=e("<h2>").text(t);e("> .header",this).append(a)}),s.title||s.label!==!0){var o=e("<a>").text(s.label).prop("href","#").addClass("back");e(".header",i).append(o)}else e("li > ul",i).each(function(){var t=e(this).parent().find("a").first().text(),a=e("<a>").text(t).prop("href","#").addClass("back");e("> .header",this).append(a)});e("a",i).on("click",function(a){if(!(t+s.speed>Date.now())){t=Date.now();var n=e(this);/#/.test(this.href)&&a.preventDefault(),n.hasClass("next")?(i.find(".active").removeClass("active"),n.next().show().addClass("active"),r(1),s.resize&&l(n.next())):n.hasClass("back")&&(r(-1,function(){i.find(".active").removeClass("active"),n.parent().parent().hide().parentsUntil(i,"ul").first().addClass("active")}),s.resize&&l(n.parent().parent().parentsUntil(i,"ul")))}}),this.jump=function(t,a){t=e(t);var n=i.find(".active");n=n.length>0?n.parentsUntil(i,"ul").length:0,i.find("ul").removeClass("active").hide();var o=t.parentsUntil(i,"ul");o.show(),t.show().addClass("active"),a===!1&&d(0),r(o.length-n),s.resize&&l(t),a===!1&&d(s.speed)},this.home=function(t){t===!1&&d(0);var a=i.find(".active"),n=a.parentsUntil(i,"li").length;n>0&&(r(-n,function(){a.removeClass("active")}),s.resize&&l(e(a.parentsUntil(i,"li").get(n-1)).parent())),t===!1&&d(s.speed)},this.destroy=function(){e(".header",i).remove(),e("a",i).removeClass("next").off("click"),i.removeClass("slinky-menu").css("transition-duration",""),n.css("transition-duration","")};var c=i.find(".active");return c.length>0&&(c.removeClass("active"),this.jump(c,!1)),this}}(jQuery);
 /**
  * stacktable.js
  * Author & copyright (c) 2012: John Polacek
@@ -3453,6 +3452,244 @@ if (typeof jQuery === 'undefined') {
     });
   };
 
+}(jQuery));
+
+/*
+ * Slinky
+ * A light-weight, responsive, mobile-like navigation menu plugin for jQuery
+ * Built by Ali Zahid <ali.zahid@live.com>
+ * Published under the MIT license
+ */
+
+;(function($)
+{
+    var lastClick;
+
+    $.fn.slinky = function(options)
+    {
+        var settings = $.extend
+        ({
+            label: 'Back',
+            title: false,
+            speed: 300,
+            resize: true,
+            activeClass: 'active',
+            headerClass: 'header',
+            headingTag: '<h2>',
+            backFirst: false,
+        }, options);
+
+        var menu = $(this),
+            root = menu.children().first();
+
+        menu.addClass('slinky-menu');
+
+        var move = function(depth, callback)
+        {
+            var left = Math.round(parseInt(root.get(0).style.left)) || 0;
+
+            root.css('left', left - (depth * 100) + '%');
+
+            if (typeof callback === 'function')
+            {
+                setTimeout(callback, settings.speed);
+            }
+        };
+
+        var resize = function(content)
+        {
+            menu.height(content.outerHeight());
+        };
+
+        var transition = function(speed)
+        {
+            menu.css('transition-duration', speed + 'ms');
+            root.css('transition-duration', speed + 'ms');
+        };
+
+        transition(settings.speed);
+
+        $('a + ul', menu).prev().addClass('next');
+
+        $('li > ul', menu).prepend('<li class="' + settings.headerClass + '">');
+
+        if (settings.title === true)
+        {
+            $('li > ul', menu).each(function()
+            {
+                var $link = $(this).parent().find('a').first(),
+                    label = $link.text(),
+                    title = $('<a>').addClass('title').text(label).attr('href', $link.attr('href'));
+
+                $('> .' + settings.headerClass, this).append(title);
+            });
+        }
+
+        if (!settings.title && settings.label === true)
+        {
+            $('li > ul', menu).each(function()
+            {
+                var label = $(this).parent().find('a').first().text(),
+                    backLink = $('<a>').text(label).prop('href', '#').addClass('back');
+
+                if (settings.backFirst)
+                {
+                    $('> .' + settings.headerClass, this).prepend(backLink);
+                }
+                else
+                {
+                    $('> .' + settings.headerClass, this).append(backLink);
+                }
+            });
+        }
+        else
+        {
+            var backLink = $('<a>').text(settings.label).prop('href', '#').addClass('back');
+
+            if (settings.backFirst)
+            {
+                $('.' + settings.headerClass, menu).prepend(backLink);
+            }
+            else
+            {
+                $('.' + settings.headerClass, menu).append(backLink);
+            }
+        }
+
+        $('a', menu).on('click', function(e)
+        {
+            if ((lastClick + settings.speed) > Date.now())
+            {
+                return false;
+            }
+
+            lastClick = Date.now();
+
+            var a = $(this);
+
+            if (a.hasClass('next') || a.hasClass('back'))
+            {
+                e.preventDefault();
+            }
+
+            if (a.hasClass('next'))
+            {
+                menu.find('.' + settings.activeClass).removeClass(settings.activeClass);
+
+                a.next().show().addClass(settings.activeClass);
+
+                move(1);
+
+                if (settings.resize)
+                {
+                    resize(a.next());
+                }
+            }
+            else if (a.hasClass('back'))
+            {
+                move(-1, function()
+                {
+                    menu.find('.' + settings.activeClass).removeClass(settings.activeClass);
+
+                    a.parent().parent().hide().parentsUntil(menu, 'ul').first().addClass(settings.activeClass);
+                });
+
+                if (settings.resize)
+                {
+                    resize(a.parent().parent().parentsUntil(menu, 'ul'));
+                }
+            }
+        });
+
+        this.jump = function(to, animate)
+        {
+            to = $(to);
+
+            var active = menu.find('.' + settings.activeClass);
+
+            if (active.length > 0)
+            {
+                active = active.parentsUntil(menu, 'ul').length;
+            }
+            else
+            {
+                active = 0;
+            }
+
+            menu.find('ul').removeClass(settings.activeClass).hide();
+
+            var menus = to.parentsUntil(menu, 'ul');
+
+            menus.show();
+            to.show().addClass(settings.activeClass);
+
+            if (animate === false)
+            {
+                transition(0);
+            }
+
+            move(menus.length - active);
+
+            if (settings.resize)
+            {
+                resize(to);
+            }
+
+            if (animate === false)
+            {
+                transition(settings.speed);
+            }
+        };
+
+        this.home = function(animate)
+        {
+            if (animate === false)
+            {
+                transition(0);
+            }
+
+            var active = menu.find('.' + settings.activeClass),
+                count = active.parentsUntil(menu, 'li').length;
+
+            if (count > 0)
+            {
+                move(-count, function()
+                {
+                    active.removeClass(settings.activeClass);
+                });
+
+                if (settings.resize)
+                {
+                    resize($(active.parentsUntil(menu, 'li').get(count - 1)).parent());
+                }
+            }
+
+            if (animate === false)
+            {
+                transition(settings.speed);
+            }
+        };
+
+        this.destroy = function()
+        {
+            $('.' + settings.headerClass, menu).remove();
+            $('a', menu).removeClass('next').off('click');
+
+            menu.removeClass('slinky-menu').css('transition-duration', '');
+            root.css('transition-duration', '');
+        };
+
+        var active = menu.find('.' + settings.activeClass);
+
+        if (active.length > 0)
+        {
+            active.removeClass(settings.activeClass);
+
+            this.jump(active, false);
+        }
+
+        return this;
+    };
 }(jQuery));
 
 //// |--------------------------------------------------------------------------

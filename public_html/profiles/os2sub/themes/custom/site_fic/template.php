@@ -67,7 +67,7 @@ function site_fic_preprocess_page(&$variables) {
   $current_theme = variable_get('theme_default', 'none');
   $primary_navigation_name = variable_get('menu_main_links_source', 'main-menu');
   $secondary_navigation_name = variable_get('menu_secondary_links_source', 'user-menu');
-  $variables['menu_slinky__primary'] = _bellcom_generate_menu($primary_navigation_name, 'slinky', true);
+  $variables['menu_slinky_custom__primary'] = _bellcom_generate_menu($primary_navigation_name, 'slinky-custom', true);
 
   // Tabs.
   $variables['tabs_primary'] = $variables['tabs'];

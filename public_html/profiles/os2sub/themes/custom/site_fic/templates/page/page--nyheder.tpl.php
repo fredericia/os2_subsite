@@ -10,8 +10,8 @@
     <!-- Begin - navigation -->
     <div class="slinky-menu">
 
-      <?php if ( !empty($menu_slinky__primary) ): ?>
-        <?php print render($menu_slinky__primary); ?>
+      <?php if ( !empty($menu_slinky_custom__primary) ): ?>
+        <?php print render($menu_slinky_custom__primary); ?>
       <?php endif; ?>
 
     </div>
