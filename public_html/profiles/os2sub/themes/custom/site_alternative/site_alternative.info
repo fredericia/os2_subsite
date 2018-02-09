@@ -33,7 +33,7 @@ stylesheets[all][] = 'dist/css/stylesheet.css'
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;scripts[] = 'dist/js/modernizr.js'
+scripts[] = 'dist/js/modernizr.js'
 scripts[] = 'dist/js/core.js'
 
 ;scripts[] = 'bootstrap/assets/javascripts/bootstrap/affix.js'
