@@ -7,3 +7,10 @@
     @include box-shadow(none);
   }
 }
+
+.inAppBrowserWrap {
+
+  .sliding-popup-bottom {
+    display: none;
+  }
+}

@@ -10450,6 +10450,9 @@ footer.footer a.block-image-links__link {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
+.inAppBrowserWrap .sliding-popup-bottom {
+  display: none; }
+
 .pane-taxonomy-term-description,
 .node {
   font-size: 1.06em; }
