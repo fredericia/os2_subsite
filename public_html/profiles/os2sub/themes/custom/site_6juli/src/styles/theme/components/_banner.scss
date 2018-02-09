@@ -35,16 +35,14 @@
 
   .carousel-inner {
     position: relative;
-
-    &, > .item {
-      overflow: hidden;
-
-      max-height: 600px;
-    }
   }
 
   .carousel-image {
     position: relative;
+
+    overflow: hidden;
+
+    max-height: 600px;
   }
 
   .carousel-overlay {
@@ -55,7 +53,7 @@
     right: 0;
     bottom: 0;
 
-    box-shadow: inset 10px -28px 330px 0px $brand-primary;
+    box-shadow: inset 10px -28px 130px 0px $brand-primary;
   }
 
   .carousel-indicators {
@@ -109,6 +107,10 @@
 
     .carousel-caption {
       padding-bottom: 60px;
+    }
+
+    .carousel-overlay {
+      box-shadow: inset 10px -28px 380px 0px $brand-primary;
     }
 
     .carousel-indicators {
