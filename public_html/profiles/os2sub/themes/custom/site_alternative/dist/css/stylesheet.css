@@ -10953,7 +10953,8 @@ body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .collapse .field
         font-size: inherit; } }
 
 .field-type-image .field-slideshow {
-  z-index: -1; }
+  z-index: -1;
+  height: auto !important; }
 
 .field-type-image .field-slideshow-controls a {
   position: absolute;
