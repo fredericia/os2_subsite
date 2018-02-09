@@ -3,37 +3,32 @@
 /**
  * Implements theme_preprocess_html().
  */
-function site_juli_preprocess_html(&$variables) {
-  $current_theme = variable_get('theme_default', 'none');
+function site_6juli_preprocess_html(&$variables) {
+  $theme_path = path_to_theme();
 
-  // Paths
-  $variables['path_js'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/js';
-  $variables['path_img'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/img';
-  $variables['path_css'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/css';
-  $variables['path_font'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/fonts';
+  // Add javascript files
+  drupal_add_js($theme_path . '/dist/javascripts/modernizr.js',
+    [
+      'type' => 'file',
+      'scope' => 'footer',
+      'group' => JS_LIBRARY,
+    ]);
+  drupal_add_js($theme_path . '/dist/javascripts/app.js',
+    [
+      'type' => 'file',
+      'scope' => 'footer',
+      'group' => JS_THEME,
+    ]);
 
-//  // Add out fonts from Google Fonts API.
-//  drupal_add_css(
-//    'https://fonts.googleapis.com/css?family=Raleway:300,400,600,700',
-//    array('type' => 'external')
-//  );
-//
-//  // Live reload.
-//  if (variable_get('environment', FALSE) == 'local') {
-//    $live_reload_file = 'http://127.0.0.1:35729/livereload.js';
-//    drupal_add_js(
-//      $live_reload_file,
-//      array(
-//        'group' => JS_LIBRARY,
-//      )
-//    );
-//  }
+  // Add fonts from Google fonts API.
+  drupal_add_css('https://fonts.googleapis.com/css?family=Lato:400,700|Droid+Serif:400,700',
+    ['type' => 'external']);
+}
 
-  // Body classes
-  $variables['classes_array'][] = 'footer-attached';
-
-  // Load jQuery UI
-  drupal_add_library('system', 'ui');
+/**
+ * Override or insert variables into the page template for HTML output.
+ */
+function site_6juli_process_html(&$variables) {
 
   // Hook into color.module.
   if (module_exists('color')) {
@@ -45,14 +40,34 @@ function site_juli_preprocess_html(&$variables) {
  * Implements hook_preprocess_page().
  */
 function site_6juli_preprocess_page(&$variables) {
+  $current_theme = variable_get('theme_default', 'none');
+  $primary_navigation_name = variable_get('menu_main_links_source', 'main-menu');
+  $secondary_navigation_name = variable_get('menu_secondary_links_source', 'user-menu');
 
-  // Tabs
-//  $variables['tabs_primary'] = $variables['tabs'];
-//  $variables['tabs_secondary'] = $variables['tabs'];
-//  unset($variables['tabs_primary']['#secondary']);
-//  unset($variables['tabs_secondary']['#primary']);
+  $variables['logo'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/img/logo/6-juli-dagene-fredericia.png';
 
-  // Color
+  // Overriding the one set by mother theme, as we want to limit the number of levels shown
+  $variables['theme_path'] = base_path() . drupal_get_path('theme', $current_theme);
+
+  // Navigation
+  $variables['flexy_navigation__primary'] = _bellcom_generate_menu($primary_navigation_name, 'flexy_navigation', FALSE, 1);
+
+  $variables['menu_slinky__primary'] = _bellcom_generate_menu($primary_navigation_name, 'slinky', FALSE, 1);
+  $variables['menu_slinky__secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'slinky', FALSE, 1);
+
+  // Tabs.
+  $variables['tabs_primary'] = $variables['tabs'];
+  $variables['tabs_secondary'] = $variables['tabs'];
+  unset($variables['tabs_primary']['#secondary']);
+  unset($variables['tabs_secondary']['#primary']);
+}
+
+/**
+ * Override or insert variables into the page template.
+ */
+function site_6juli_process_page(&$variables) {
+
+  // Hook into color.module.
   if (module_exists('color')) {
     _color_page_alter($variables);
   }
@@ -85,70 +100,8 @@ function site_6juli_preprocess_block(&$variables) {
   // Transform block description to a valid machine name
   if (!empty($block['info'])) {
     setlocale(LC_ALL, 'en_US'); // required for iconv()
-    $variables['theme_hook_suggestions'][] = 'block__' . str_replace(' ', '_', strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $block['info'])));
+    $variables['theme_hook_suggestions'][] = 'block__' . str_replace(' ',
+        '_',
+        strtolower(iconv('UTF-8', 'ASCII//TRANSLIT', $block['info'])));
   }
-}
-
-/**
- * overriding base theme menu_local_tasks. Base theme - Bellcom
- * overriding with bootstrap original
- *
- * @param $variables
- * @return string
- */
-function site_6juli_menu_local_tasks(&$variables) {
-  $output = '';
-
-  if (!empty($variables['primary'])) {
-    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] .= '<ul class="tabs--primary nav nav-tabs">';
-    $variables['primary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['primary']);
-  }
-
-  if (!empty($variables['secondary'])) {
-    $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $variables['secondary']['#prefix'] .= '<ul class="tabs--secondary pagination pagination-sm">';
-    $variables['secondary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['secondary']);
-  }
-
-  return $output;
-}
-
-function site_6juli_menu_link(array $variables) {
-  $element = $variables['element'];
-  $sub_menu = '';
- 
-  if ($element['#below']) {
-    // Prevent dropdown functions from being added to management menu so it
-    // does not affect the navbar module.
-    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
-      $sub_menu = drupal_render($element['#below']);
-    }
-    //Here we need to change from ==1 to >=1 to allow for multilevel submenus
-    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] >= 1)) {
-      // Add our own wrapper.
-      unset($element['#below']['#theme_wrappers']);
-      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
-      // Generate as standard dropdown.
-      //$element['#title'] .= ' <span class="caret"></span>'; Smartmenus plugin add's caret
-      $element['#attributes']['class'][] = 'dropdown';
-      $element['#localized_options']['html'] = TRUE;
- 
-      // Set dropdown trigger element to # to prevent inadvertant page loading
-      // when a submenu link is clicked.
-      $element['#localized_options']['attributes']['data-target'] = '#';
-      $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
-      //comment element bellow if you want your parent menu links to be "clickable"
-      //$element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
-    }
-  }
-  // On primary navigation menu, class 'active' is not set on active menu item.
-  // @see https://drupal.org/node/1896674
-  if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
-    $element['#attributes']['class'][] = 'active';
-  }
-  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }

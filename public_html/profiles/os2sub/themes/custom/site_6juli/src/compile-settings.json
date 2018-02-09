@@ -1,22 +1,21 @@
 {
-  "autoprefixer": {
-    "browsers": [
-      "Android 2.3",
-      "Android >= 4",
-      "Chrome >= 20",
-      "Firefox >= 24",
-      "Explorer >= 8",
-      "iOS >= 6",
-      "Opera >= 12",
-      "Safari >= 6"
-    ]
+  "options": {
+    "proxy": "http://6juli.fredericia.test"
   },
-  "concat": {
-    "core": [
-      "src/js/init.js",
-      "src/vendor/smartmenus/dist/jquery.smartmenus.js",
-      "src/vendor/smartmenus/dist/addons/jquery.smartmenus.bootstrap.js",
-      "src/vendor/bootstrap-sass/assets/javascripts/bootstrap.js"
-    ]
-  }
+  "javascripts": [
+    "node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
+    "node_modules/flexy-header/javascripts/flexy-header.js",
+    "node_modules/flexy-navigation/javascripts/flexy-navigation.js",
+    "node_modules/sidr/dist/jquery.sidr.js",
+    "node_modules/pace-progress/pace.js",
+    "src/javascripts/custom-slinky.js",
+    "src/javascripts/app.js"
+  ],
+  "styles": [
+    "src/styles/stylesheet.scss"
+  ],
+  "fonts": [
+    "node_modules/font-awesome/fonts/*",
+    "node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*"
+  ]
 }

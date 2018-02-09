@@ -1,0 +1,70 @@
+// |--------------------------------------------------------------------------
+// | Panel
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .panel-separator
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin panel-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.panel-separator {
+  height: $grid-gutter-width;
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {
+
+  .panel-pane > .pane-title,
+  .panel-pane > .pane-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

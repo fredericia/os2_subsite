@@ -1,0 +1,149 @@
+// |--------------------------------------------------------------------------
+// | Banner
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .banner
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin banner-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.background-slideshow,
+.banner {
+
+  h3 {
+    font-size: $font-size-h2;
+
+    margin: 0;
+  }
+
+  img {
+    min-width: 150%;
+  }
+
+  .carousel-inner {
+    position: relative;
+
+    &, > .item {
+      overflow: hidden;
+
+      max-height: 600px;
+    }
+  }
+
+  .carousel-image {
+    position: relative;
+  }
+
+  .carousel-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    box-shadow: inset 10px -28px 330px 0px $brand-primary;
+  }
+
+  .carousel-indicators {
+    display: none;
+
+    li {
+      margin: 2px;
+
+      border: 0;
+
+      background-color: rgba(255, 255, 255, .6);
+
+      border-radius: 100%;
+    }
+
+    .active {
+      margin: 2px;
+
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {
+
+  .background-slideshow,
+  .banner {
+
+    img {
+      min-width: 100%;
+    }
+
+    h3 {
+      font-size: $font-size-h1;
+    }
+
+    .carousel-caption {
+      padding-bottom: 60px;
+    }
+
+    .carousel-indicators {
+      display: block;
+
+      li {
+        width: 18px;
+        height: 18px;
+      }
+
+      .active {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

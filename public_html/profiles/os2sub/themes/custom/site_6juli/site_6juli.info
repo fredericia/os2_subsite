@@ -27,23 +27,17 @@ regions[page_bottom] = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = 'dist/css/stylesheet.css'
-stylesheets[all][] = 'dist/addons/jquery.smartmenus.bootstrap.css'
+stylesheets[all][] = 'dist/stylesheets/stylesheet.css'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Panels
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; Panels layouts. You can place multiple layouts under the "layouts" folder.
+
 plugins[panels][layouts] = layouts
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-scripts[] = 'dist/js/modernizr.js'
-scripts[] = 'dist/js/core.js'
-scripts[] = 'dist/addons/jquery.smartmenus.js'
-scripts[] = 'dist/addons/jquery.smartmenus.bootstrap.js'
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Plugins

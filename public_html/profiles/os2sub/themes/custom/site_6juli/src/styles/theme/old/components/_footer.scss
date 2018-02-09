@@ -1,0 +1,235 @@
+// |--------------------------------------------------------------------------
+// | Footer
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .footer
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+// Footer
+footer.footer {
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-bottom: 80px !important;
+  border: none;
+  background-color: $color-primary;
+  color: $color-font-light;
+
+  .social-links {
+    background-color: white !important;
+    color: $color-font-grey-3;
+    font-family: $headings-font-family;
+    font-size: 1em;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .social-footer {
+
+    @extend .social-links;
+
+    background: url("../img/page/footer-streamer.png") no-repeat bottom center;
+    background-size: 100%;
+    height: 207px;
+
+  }
+  section {
+    margin-bottom: 20px;
+  }
+  h2.block-title {
+    margin-top: 0;
+    font-size: $font-size-large;
+    font-family: $font-family-base;
+    color: $color-font-light;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $color-font-light;
+  }
+
+  .menu {
+    li {
+      padding: 3px 0;
+      font-size: 1.4em;
+    }
+    a {
+      //color: $color-font-light;
+      background: none;
+      display: inline;
+      padding: 0;
+    }
+  }
+
+  a.image-links__link {
+    padding-left: 15px;
+    padding-right: 15px;
+
+    img {
+      margin-bottom: 15px;
+    }
+  }
+
+  a.image-social-links__link {
+
+    img {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+  }
+
+  .block-contact {
+    div {
+      margin-bottom: 10px;
+      p {
+        margin-bottom: 0px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+  footer.footer {
+
+    > .container {
+      padding-top: 38px;
+      padding-bottom: 29px;
+    }
+
+    a.image-links__link {
+      margin-bottom: 20px;
+      /*            img {
+                      height: 43px;
+                  }*/
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Footer
+  footer.footer {
+    text-align: center;
+
+    a.image-social-links__link {
+
+      img {
+        margin-bottom: 15px;
+        width: 36px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+    .social-footer {
+
+      height: 20px;
+
+    }
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+  footer.footer {
+    > .container {
+      padding-top: 44px;
+    }
+    a.image-links__link {
+      margin-bottom: 35px;
+      /*            img {
+                      height: 50px;
+                  }*/
+    }
+  }
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+  // Footer
+  .footer {
+  }
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+  // Footer
+  .footer {
+  }
+
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+  // Footer
+  .footer {
+  }
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+  // Footer
+  .footer {
+  }
+}
+
+// Print
+@media print {
+
+  // Footer
+  .footer {
+  }
+}
+
+// Touch
+.touchevents {
+
+  // Footer
+  .footer {
+  }
+}
+
+// No touch
+.no-touchevents {
+
+  // Footer
+  .footer {
+  }
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+// Footer mixin
+@mixin footer-mixin() {
+}

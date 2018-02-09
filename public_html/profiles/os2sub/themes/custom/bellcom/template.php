@@ -31,6 +31,19 @@ function bellcom_preprocess_page(&$variables) {
   $variables['sidr_primary'] = _bellcom_generate_menu($primary_navigation_name, 'sidr', false);
   $variables['sidr_secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'sidr', false);
 
+  // Navigation
+  $variables['flexy_navigation__primary'] = _bellcom_generate_menu($primary_navigation_name, 'flexy_navigation', TRUE);
+  $variables['flexy_navigation__secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'flexy_navigation', TRUE);
+
+  $variables['menu_slinky_custom__primary'] = _bellcom_generate_menu($primary_navigation_name, 'slinky-custom', TRUE);
+  $variables['menu_slinky_custom__secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'slinky-custom', TRUE);
+
+  $variables['menu_slinky__primary'] = _bellcom_generate_menu($primary_navigation_name, 'slinky', TRUE);
+  $variables['menu_slinky__secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'slinky', TRUE);
+
+  $variables['flexy_list__primary'] = _bellcom_generate_menu($primary_navigation_name, 'flexy_list', FALSE, 1);
+  $variables['flexy_list__secondary'] = _bellcom_generate_menu($secondary_navigation_name, 'flexy_list', FALSE, 1);
+
   // Paths
   $variables['path_js']   = base_path() . drupal_get_path('theme', $current_theme) . '/dist/js';
   $variables['path_img']  = base_path() . drupal_get_path('theme', $current_theme) . '/dist/img';
@@ -139,29 +152,6 @@ function bellcom_preprocess_taxonomy_term(&$variables) {
   if (function_exists($function_view_mode)) {
     $function_view_mode($variables);
   }
-}
-
-/**
- * Implements template_menu_local_tasks().
- */
-function bellcom_menu_local_tasks(&$variables) {
-  $output = '';
-
-  if (!empty($variables['primary'])) {
-    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] .= '<ul class="tabs--primary">';
-    $variables['primary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['primary']);
-  }
-
-  if (!empty($variables['secondary'])) {
-    $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $variables['secondary']['#prefix'] .= '<ul class="tabs--secondary">';
-    $variables['secondary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['secondary']);
-  }
-
-  return $output;
 }
 
 /*
@@ -470,4 +460,135 @@ function bellcom_preprocess_breadcrumb(&$variables) {
     // Change link title to value from search request.
     $breadcrumb[$key]['data'] = substr($args[2], 0, 20);
   }
+}
+
+/*
+ * Implements theme_menu_tree().
+ * For slinky menu types.
+ */
+function bellcom_menu_tree__flexy_navigation(&$variables) {
+  return '<ul class="flexy-navigation">' . $variables['tree'] . '</ul>';
+}
+
+/*
+ * Implements theme_menu_tree().
+ * For slinky menu types.
+ */
+function bellcom_menu_tree__flexy_list(&$variables) {
+  return '<ul class="flexy-list">' . $variables['tree'] . '</ul>';
+}
+
+/*
+ * Implements theme_menu_link().
+ */
+function bellcom_menu_link__flexy_navigation(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  // @TODO - current level
+  // --- https://drupal.stackexchange.com/questions/32873/how-to-theme-only-top-level-menu
+  // If we are on second level or below, we need to add other classes to the list items.
+
+  // The navbar
+  if ($element['#original_link']['depth'] > 1) {
+    $element['#attributes']['class'][] = 'flexy-navigation__item__dropdown-menu__item';
+
+    // Has a dropdown menu
+    if ($element['#below']) {
+
+      if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+        $sub_menu = drupal_render($element['#below']);
+      }
+      elseif ((!empty($element['#original_link']['depth']))) {
+
+        // Add our own wrapper.
+        unset($element['#below']['#theme_wrappers']);
+        $sub_menu = '<ul class="flexy-navigation__item__dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+
+        // Generate as dropdown.
+        $element['#attributes']['class'][] = 'flexy-navigation__item__dropdown-menu__item--dropdown';
+        $element['#localized_options']['html'] = TRUE;
+      }
+    }
+  }
+
+  // Inside dropdown menu
+  else {
+    $element['#attributes']['class'][] = 'flexy-navigation__item';
+
+    // Has a dropdown menu
+    if ($element['#below']) {
+
+      if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+        $sub_menu = drupal_render($element['#below']);
+      }
+      elseif ((!empty($element['#original_link']['depth']))) {
+
+        // Add our own wrapper.
+        unset($element['#below']['#theme_wrappers']);
+        $sub_menu = '<ul class="flexy-navigation__item__dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+
+        // Generate as dropdown.
+        $element['#attributes']['class'][] = 'flexy-navigation__item--dropdown';
+        $element['#localized_options']['html'] = TRUE;
+      }
+    }
+  }
+
+  // On primary navigation menu, class 'active' is not set on active menu item.
+  // @see https://drupal.org/node/1896674
+  if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
+    $element['#attributes']['class'][] = 'active';
+  }
+
+  // If this item is active and/or in the active trail, add necessary classes.
+  $active_classes = _bellcom_in_active_trail($element['#href']);
+  if (isset($element['#attributes']['class'])) {
+    $element['#attributes']['class'] = array_merge($element['#attributes']['class'], $active_classes);
+  }
+  else {
+    $element['#attributes']['class'] = $active_classes;
+  }
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+/*
+ * Implements theme_menu_link().
+ */
+function bellcom_menu_link__flexy_list(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+
+    elseif ((!empty($element['#original_link']['depth']))) {
+
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+
+      // Submenu classes
+      $sub_menu = ' <ul>' . drupal_render($element['#below']) . '</ul>';
+    }
+  }
+
+  // If this is a parent link, slinky require is to just link to a #
+  if ($element['#below']) {
+    $element['#href'] = '';
+
+    $element['#localized_options']['fragment'] = 'content';
+    $element['#localized_options']['external'] = TRUE;
+  }
+
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+
+  return '<li>' . $output . $sub_menu . "</li>\n";
 }

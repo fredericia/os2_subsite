@@ -1,0 +1,150 @@
+// |--------------------------------------------------------------------------
+// | Buttons
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .buttons
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+p > .btn {
+  margin-top: 30px;
+}
+
+.btn {
+  display: block;
+
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 5px;
+
+  border: 0;
+
+  &.btn-dark {
+    background-color: $color-btn;
+    color: $color-light-background;
+
+    &:hover, &:active {
+      color: $color-light-background;
+      background-color: $color-btn-hover;
+    }
+  }
+
+  &.btn-light {
+    background-color: $color-font-light;
+    color: $color-primary;
+
+    &:hover, &:active {
+      color: $color-primary;
+      background-color: $color-font-grey-4;
+    }
+  }
+
+  &.btn-white {
+    background-color: $color-light-background;
+    color: $color-font-dark;
+    border-color: #fff;
+
+    &:hover, &:active {
+      color: $color-font-dark;
+      background-color: $color-font-grey-4;
+    }
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    color: $color-light-background;
+    border-color: $color-light-background;
+
+    &:hover, &:active {
+      color: $color-font-dark;
+      background-color: $color-font-grey-4;
+    }
+  }
+}
+
+.btn-default {
+  color: #0F2846;
+  background-color: #E0DED4;
+  border-color: #E0DED4;
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  // Footer
+  .btn {
+
+    &.btn-dark {
+      background-color: $color-btn;
+      color: $color-light-background;
+
+      &:hover, &:active {
+        color: $color-light-background;
+        background-color: $color-btn-hover;
+      }
+    }
+
+    &.btn-light {
+      background-color: $color-font-light;
+      color: $color-primary;
+
+      &:hover, &:active {
+        color: $color-primary;
+        background-color: $color-font-grey-4;
+      }
+    }
+  }
+
+  .button {
+    text-align: center;
+  }
+}
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {
+
+  .btn {
+    display: inline-block;
+
+    margin-right: 15px;
+  }
+}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}

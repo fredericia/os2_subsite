@@ -1,0 +1,110 @@
+// |--------------------------------------------------------------------------
+// | Flexy navigation
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .flexy-navigation
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// Responsive
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin flexy-navigation-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.flexy-navigation {
+
+  .flexy-navigation__item {
+
+    &:first-child {
+
+      > a {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.flexy-navigation__item--dropdown {
+
+  > a {
+
+    &:after {
+      display: none !important;
+    }
+  }
+}
+
+// Active and active-trail
+.flexy-navigation__item.active,
+.flexy-navigation__item.active-trail {
+
+  > a {
+
+    &, &:hover {
+      color: $flexy-navigation-item-active-link-font-color;
+      background-color: $flexy-navigation-item-active-link-background-color;
+    }
+  }
+}
+
+.flexy-navigation__item__dropdown-menu__item.active,
+.flexy-navigation__item__dropdown-menu__item.active-trail {
+
+  &,
+  &:hover {
+
+    > a {
+      color: $flexy-navigation-item-dropdown-menu-item-active-link-font-color;
+      background-color: $flexy-navigation-item-dropdown-menu-item-active-link-background-color;
+    }
+  }
+}
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@media #{$breakpoint-mobile-and-up} {}
+
+// Mobile - only
+@media #{$breakpoint-mobile-only} {}
+
+// Tablet - and up
+@media #{$breakpoint-tablet-and-up} {}
+
+// Tablet - only
+@media #{$breakpoint-tablet-only} {}
+
+// Desktop - and up
+@media #{$breakpoint-desktop-and-up} {}
+
+// Desktop - only
+@media #{$breakpoint-desktop-only} {}
+
+// Large desktop - and up
+@media #{$breakpoint-large-desktop-and-up} {}
+
+// Print
+@media print {}
+
+// Touch
+.touchevents {}
+
+// No touch
+.no-touchevents {}
