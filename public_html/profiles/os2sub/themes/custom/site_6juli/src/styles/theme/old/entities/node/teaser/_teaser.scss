@@ -101,14 +101,22 @@
   margin: 20px 0;
 }
 
+.view-det-sker-slideshow {
+  .front-teaser,
+  .node-teaser {
+    min-height: 295px;
+  }
+}
+
 .pane-os2sub-nyheder,
 .event-teasers,
 .view-det-sker-slideshow {
   .front-teaser,
   .node-teaser {
-    min-height: 295px;
     position: relative;
     border: 1px solid $brand-primary;
+    padding-bottom: 30px;
+
     a.teaser-link {
       position: absolute;
       height: 100%;
