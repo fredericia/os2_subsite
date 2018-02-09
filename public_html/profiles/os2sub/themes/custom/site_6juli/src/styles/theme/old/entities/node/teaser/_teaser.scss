@@ -106,7 +106,7 @@
 .view-det-sker-slideshow {
   .front-teaser,
   .node-teaser {
-    height: 295px;
+    min-height: 295px;
     position: relative;
     border: 1px solid $brand-primary;
     a.teaser-link {
