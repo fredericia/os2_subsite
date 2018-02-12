@@ -1,3 +1,4 @@
+// I used alot over !importants in this file. Dont ever use !importants. By @hjemmesidekongen
 .field-slideshow-wrapper {
 
   .field-slideshow-controls {
@@ -5,6 +6,9 @@
 
     top: auto !important;
     bottom: 0;
+
+    align-items: flex-end !important;
+    padding-bottom: 10px;
 
     .prev {
       margin-left: 10px !important;
@@ -15,6 +19,6 @@
   }
 
   .field-slideshow-pager {
-    display: none;
+    display: none !important;
   }
 }

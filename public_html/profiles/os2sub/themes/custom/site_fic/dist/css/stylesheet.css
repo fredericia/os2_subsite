@@ -12944,14 +12944,19 @@ div.ctools-modal-content {
 .field-slideshow-wrapper .field-slideshow-controls {
   position: absolute;
   top: auto !important;
-  bottom: 0; }
+  bottom: 0;
+  -webkit-box-align: end !important;
+  -webkit-align-items: flex-end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important;
+  padding-bottom: 10px; }
   .field-slideshow-wrapper .field-slideshow-controls .prev {
     margin-left: 10px !important; }
   .field-slideshow-wrapper .field-slideshow-controls .next {
     margin-right: 10px !important; }
 
 .field-slideshow-wrapper .field-slideshow-pager {
-  display: none; }
+  display: none !important; }
 
 .form-control {
   font-size: 16px;
