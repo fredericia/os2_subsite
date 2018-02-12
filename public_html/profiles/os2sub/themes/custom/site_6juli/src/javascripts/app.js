@@ -17,6 +17,10 @@ jQuery(function($) {
         source: '.sidr-source-provider'
     });
 
+    $('.sidr__toggle').on('click', function(event) {
+        $.sidr('close', 'sidr-main');
+    });
+
     // Slinky
     $('.sidr .slinky-menu').slinky({
         title: true,

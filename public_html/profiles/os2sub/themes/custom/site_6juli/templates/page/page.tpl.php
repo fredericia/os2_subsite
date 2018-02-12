@@ -23,6 +23,14 @@ if (!$social_share_title) {
     </nav>
     <!-- End - navigation -->
 
+    <!-- Begin - toggle -->
+    <div class="sidr__toggle">
+      <button class="btn btn-success">
+        <?php print t('Luk menu'); ?>
+      </button>
+    </div>
+    <!-- End - toggle -->
+
   </aside>
   <!-- End - sidr source provider -->
 

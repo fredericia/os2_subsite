@@ -34,6 +34,17 @@
     margin-top: floor( ( $grid-gutter-width / 2 ) );
   }
 }
+.sidr__toggle {
+  padding-top: $grid-gutter-width;
+
+  text-align: center;
+
+  .btn {
+    display: inline-block !important;
+
+    margin: auto !important;
+  }
+}
 
 // --------------------------------------------------
 // Variants
