@@ -10450,7 +10450,7 @@ footer.footer a.block-image-links__link {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.inAppBrowserWrap .sliding-popup-bottom {
+.platform-browser .sliding-popup-bottom {
   display: none; }
 
 .pane-taxonomy-term-description,
@@ -10657,12 +10657,16 @@ body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .collapse .field
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity header .heading-h2, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity header h2, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity header .heading-h2 {
-    font-size: 0.9em; }
+    font-size: 0.8em; }
+  .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date, .view-display-id-pane_activities_list_4
+  .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date, .view-display-id-pane_activities_list_4
+  .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date {
+    font-size: 0.8em; }
   .view-display-id-pane_activities_list_4 .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue, .view-display-id-pane_activities_list_4
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue {
-    font-size: 1em;
-    display: none; }
+    font-size: 0.7em !important;
+    padding: 0; }
   .one-left .view-mode-spotbox.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single, .one-left
   .view-mode-os2sub_spotbox_single.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single, .one-left
   .view-mode-os2sub_spotbox_mini.node.node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-date.field-type-datetime span.date-display-single {
