@@ -35,23 +35,23 @@ function subsites_paragraphs_preprocess_entity(&$variables) {
     $field_paragraph_personale_numrow = field_get_items('paragraphs_item', $variables['paragraphs_item'], 'field_paragraph_personale_numrow');
     if (!empty($field_paragraph_personale_numrow)) {
       $field_paragraph_personale_numrow = reset($field_paragraph_personale_numrow);
-      $col_class = 'col-md-12';
+      $col_class = 'col-xs-12 col-sm-12 col-md-12';
       switch ($field_paragraph_personale_numrow['value']) {
         case 2:
-          $col_class = 'col-md-6';
+          $col_class = 'col-xs-12 col-sm-12 col-md-6';
           break;
 
         case 3:
-          $col_class = 'col-md-4';
+          $col_class = 'col-xs-12 col-sm-12 col-md-4';
           break;
 
         case 4:
-          $col_class = 'col-md-3';
+          $col_class = 'col-xs-12 col-sm-12 col-md-3';
           break;
 
         case 5:
         case 6:
-          $col_class = 'col-md-2';
+          $col_class = 'col-xs-12 col-sm-12 col-md-2';
           break;
       }
       $variables['col_amount'] = $field_paragraph_personale_numrow['value'];

@@ -96,7 +96,6 @@
     // Init stackable responsive table plugin.
     Drupal.behaviors.stackable = {
         attach: function(context, settings){
-            console.log($('table'));
             $('table').once('stackable', function() {
                 $(this).stacktable();
             });
