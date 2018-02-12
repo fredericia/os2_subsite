@@ -12941,16 +12941,16 @@ div.ctools-modal-content {
   .stacktable.small-only {
     display: none; } }
 
-.field-slideshow .field-slideshow-controls {
+.field-slideshow-wrapper .field-slideshow-controls {
   position: absolute;
   top: auto !important;
   bottom: 0; }
-  .field-slideshow .field-slideshow-controls .prev {
+  .field-slideshow-wrapper .field-slideshow-controls .prev {
     margin-left: 10px !important; }
-  .field-slideshow .field-slideshow-controls .next {
+  .field-slideshow-wrapper .field-slideshow-controls .next {
     margin-right: 10px !important; }
 
-.field-slideshow .field-slideshow-pager {
+.field-slideshow-wrapper .field-slideshow-pager {
   display: none; }
 
 .form-control {
