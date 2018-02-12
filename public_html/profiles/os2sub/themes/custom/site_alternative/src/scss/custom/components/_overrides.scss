@@ -8,10 +8,12 @@
   }
 }
 
+// Hides EU cookie notice inside the app
+.inAppBrowserWrap,
 .platform-browser {
 
-  .sliding-popup-bottom {
-    display: none;
+  #sliding-popup {
+    display: none !important;
   }
 }
 

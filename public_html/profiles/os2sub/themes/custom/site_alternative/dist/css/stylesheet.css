@@ -10450,8 +10450,9 @@ footer.footer a.block-image-links__link {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.platform-browser .sliding-popup-bottom {
-  display: none; }
+.inAppBrowserWrap #sliding-popup,
+.platform-browser #sliding-popup {
+  display: none !important; }
 
 .pane-taxonomy-term-description,
 .node {
