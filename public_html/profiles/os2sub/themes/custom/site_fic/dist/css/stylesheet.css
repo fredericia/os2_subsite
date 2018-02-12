@@ -14040,7 +14040,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     line-height: 0.8em; }
 
 .view.view-instagram-billeder.view-id-instagram_billeder.view-display-id-block .file.file-instagram.file-text-instagram img {
-  border: 10px solid #fff; }
+  border: 10px solid #fff;
+  width: 100%; }
 
 @media (min-width: 992px) {
   .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
