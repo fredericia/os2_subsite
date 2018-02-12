@@ -97,6 +97,10 @@
   .background-slideshow,
   .banner {
 
+    .container {
+      position: relative;
+    }
+
     img {
       min-width: 100%;
     }
@@ -106,7 +110,12 @@
     }
 
     .carousel-caption {
-      padding-bottom: 60px;
+      left: 0;
+      right: 0;
+
+      padding-bottom: 80px;
+
+      text-align: left;
     }
 
     .carousel-overlay {
