@@ -14317,11 +14317,13 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding: 0; }
 
 .paragraphs-item-webform fieldset {
-  margin-bottom: 5px;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
   background-color: transparent; }
+
+.paragraphs-item-webform .form-group {
+  margin-bottom: 10px; }
 
 .paragraphs-item-webform .form-control {
   border-width: 0; }
@@ -14329,9 +14331,6 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 .paragraphs-item-webform .form-actions {
   text-align: right;
   margin-top: 15px; }
-
-.paragraphs-item-webform .form-group:last-child {
-  margin-bottom: 5px; }
 
 .paragraphs-item-webform .field.field-name-field-paragraph-header {
   text-align: left; }
