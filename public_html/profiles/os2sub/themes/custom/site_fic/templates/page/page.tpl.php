@@ -17,6 +17,10 @@
             <?php print render($menu_slinky_custom__primary); ?>
           <?php endif; ?>
 
+          <?php if ( !empty($menu_slinky_custom__secondary) ): ?>
+            <?php print render($menu_slinky_custom__secondary); ?>
+          <?php endif; ?>
+
         </div>
         <!-- End - navigation -->
 
