@@ -14317,6 +14317,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding: 0; }
 
 .paragraphs-item-webform fieldset {
+  margin-bottom: 5px;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -14340,7 +14341,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .paragraphs-item-webform .webform-component-select:after {
     position: absolute;
     display: block;
-    right: 5px;
+    right: 20px;
     top: 4px;
     content: "";
     width: 30px;
