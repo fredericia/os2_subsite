@@ -12958,52 +12958,6 @@ div.ctools-modal-content {
 .field-slideshow-wrapper .field-slideshow-pager {
   display: none !important; }
 
-.node-webform .panel {
-  border: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none; }
-
-.node-webform .panel-body {
-  padding: 0;
-  margin-left: -15px;
-  margin-right: -15px; }
-  .node-webform .panel-body:before, .node-webform .panel-body:after {
-    content: " ";
-    display: table; }
-  .node-webform .panel-body:after {
-    clear: both; }
-  .node-webform .panel-body > .form-item {
-    position: relative;
-    float: left;
-    width: 100%;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px; }
-    @media (min-width: 768px) {
-      .node-webform .panel-body > .form-item {
-        float: left;
-        width: 50%; } }
-    @media (min-width: 992px) {
-      .node-webform .panel-body > .form-item {
-        float: left;
-        width: 50%; } }
-    @media (min-width: 1230px) {
-      .node-webform .panel-body > .form-item {
-        float: left;
-        width: 50%; } }
-
 .form-control {
   font-size: 16px;
   -webkit-appearance: none;
