@@ -14317,6 +14317,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding: 0; }
 
 .paragraphs-item-webform fieldset {
+  margin-bottom: 0;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
