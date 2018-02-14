@@ -17,7 +17,11 @@ class MediaInternetInstagramHandler extends MediaInternetBaseHandler {
    * Override MediaInternetBaseHandler::__construct().
    */
   public function __construct($url) {
-    dpm('media_instagram construct $url: ' .$url );
+    
+    if (module_exists('devel')) {
+    dpm('MediaInternetInstagramHandler construct $url: ' .$url );
+    }
+    
     parent::__construct($url);
 
     $patterns = array(

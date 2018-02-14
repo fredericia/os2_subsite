@@ -15,11 +15,7 @@ function media_instagram_ctools_plugin_api($module, $api) {
   
   if (module_exists('devel')) {
   dpm('media_instagram_ctools_plugin_api');
-  if ($module == 'file_entity' && $api == 'file_default_displays') {
-    dpm('Yes');
-  }else{
-    dpm('No');
-  }
+  
   }
   
   if ($module == 'file_entity' && $api == 'file_default_displays') {
@@ -53,6 +49,13 @@ function media_instagram_file_mimetype_mapping_alter(&$mapping) {
  * Implements hook_file_default_types_alter().
  */
 function media_instagram_file_default_types_alter(&$types) {
+  
+  if (module_exists('devel')) {
+  dpm('media_instagram_file_default_types_alter');
+  }
+  
+  
+  
   $types['instagram'] = (object) array(
     'api_version' => 1,
     'type' => 'instagram',

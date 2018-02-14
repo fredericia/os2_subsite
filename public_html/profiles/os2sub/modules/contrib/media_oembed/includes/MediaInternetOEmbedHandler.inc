@@ -24,6 +24,13 @@ class MediaInternetOEmbedHandler extends MediaInternetBaseHandler {
   }
 
   public function getFileObject() {
+    
+    
+        if (module_exists('devel')) {
+    dpm('MediaInternetOEmbedHandler getFileObject: ' . $this->embedCode);
+  }
+    
+    
     $uri = $this->parse($this->embedCode);
     $file = file_uri_to_object($uri, TRUE);
 

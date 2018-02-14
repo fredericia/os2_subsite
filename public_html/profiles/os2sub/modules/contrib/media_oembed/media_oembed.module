@@ -42,6 +42,12 @@ function media_oembed_stream_wrappers() {
  *   appropriate handler.
  */
 function media_oembed_media_parse($embed_code) {
+  
+        if (module_exists('devel')) {
+    dpm('media_oembed_media_parse $embed_code: ' . $embed_code);
+  }
+  
+  
   $handler = new MediaInternetOEmbedHandler($embed_code);
   return $handler->parse($embed_code);
 }
@@ -50,6 +56,11 @@ function media_oembed_media_parse($embed_code) {
  * Implements hook_file_mimetype_mapping_alter().
  */
 function media_oembed_file_mimetype_mapping_alter(&$mapping) {
+  
+  
+
+  
+  
   $mapping['mimetypes'][] = 'audio/oembed';
   $mapping['mimetypes'][] = 'image/oembed';
   $mapping['mimetypes'][] = 'text/oembed';
@@ -127,6 +138,14 @@ function media_oembed_flush_caches() {
  *  A valid callback or FALSE
  */
 function media_oembed_get_provider($url, &$matches, $role = 'consumer') {
+  
+  
+    if (module_exists('devel')) {
+    dpm('media_oembed_get_provider $url: ' . $url);
+  }
+  
+  
+  
   ctools_include('plugins');
   $plugins = ctools_get_plugins('media_oembed', 'providers');
   uasort($plugins, 'ctools_plugin_sort');
