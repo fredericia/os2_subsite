@@ -1,0 +1,18 @@
+commit 9cfa09b4fa36049f548761d0c4b766f02c8cdf05
+Author: Dmitri Serõn <ds@bellcom.ee>
+Date:   Wed Feb 14 14:16:39 2018 +0200
+
+    FIC media_oembeded module weight set
+
+diff --git a/media_oembed.module b/media_oembed.module
+index 1326d4dc..0430370d 100644
+--- a/media_oembed.module
++++ b/media_oembed.module
+@@ -16,6 +16,7 @@ function media_oembed_media_internet_providers() {
+   return array(
+     'MediaInternetOEmbedHandler' => array(
+       'title' => t('oEmbed'),
++      'weight' => 999,
+     ),
+   );
+ }
