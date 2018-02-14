@@ -9,6 +9,13 @@
  * Implements hook_file_presave().
  */
 function file_entity_file_presave($file) {
+  
+  
+    if (module_exists('devel')) {
+    dpm('file_entity_file_presave filemime: ' . $file->filemime);
+  }
+  
+  
   // Always ensure the filemime property is current.
   if (!empty($file->original) || empty($file->filemime)) {
     $file->filemime = file_get_mimetype($file->uri);

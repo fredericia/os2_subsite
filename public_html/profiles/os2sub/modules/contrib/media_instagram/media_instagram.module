@@ -17,6 +17,8 @@ function media_instagram_ctools_plugin_api($module, $api) {
   dpm('media_instagram_ctools_plugin_api');
   if ($module == 'file_entity' && $api == 'file_default_displays') {
     dpm('Yes');
+  }else{
+    dpm('No');
   }
   }
   
