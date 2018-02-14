@@ -13078,9 +13078,6 @@ div.ctools-modal-content {
   .page-node.node-type-os2web-base-contentpage table tbody > tr > td:last-child {
     border: 0; }
 
-.page-node.node-type-os2web-base-contentpage table tbody > tr:last-child {
-  border-bottom: 2px solid #E9E7E8; }
-
 .page-node.node-type-os2web-base-contentpage table.table-striped > tbody > tr:nth-of-type(odd) {
   background: #E9E7E8; }
 
