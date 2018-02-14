@@ -16,6 +16,7 @@ function media_oembed_media_internet_providers() {
   return array(
     'MediaInternetOEmbedHandler' => array(
       'title' => t('oEmbed'),
+      'weight' => 999,
     ),
   );
 }
