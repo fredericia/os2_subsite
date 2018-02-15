@@ -2692,8 +2692,11 @@ if (typeof jQuery === 'undefined') {
         $see_classes.show();
     });
 
-    var classes = $('html').attr('class');
-    $see_classes.html(classes);
+    var classes_html = $('html').attr('class');
+    $see_classes.find('.html').html(classes_html);
+
+    var classes_body = $('body').attr('class');
+    $see_classes.find('.body').html(classes_body);
 
 })(jQuery);
 

@@ -223,4 +223,7 @@
 </footer>
 <?php //endif; ?>
 
-<div class="see-classes" style="display: none;"></div>
+<div class="see-classes" style="display: none;">
+  <div class="html"></div>
+  <div class="body"></div>
+</div>
