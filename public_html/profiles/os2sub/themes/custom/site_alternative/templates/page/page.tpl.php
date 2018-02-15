@@ -229,4 +229,16 @@
 </footer>
 <?php //endif; ?>
 
+<!-- Begin - history manipulator -->
+<div class="history-manipulator" style="display: none;">
+  <button class="btn btn-primary" onclick="history.back()">
+    Tilbage
+  </button>
+
+  <button class="btn btn-primary" onclick="history.forward()">
+    Frem
+  </button>
+</div>
+<!-- End - history manipulator -->
+
 <div class="see-classes" style="display: none;"></div>
