@@ -30,12 +30,13 @@
   <div<?php print $content_attributes; ?>>
     <div class="container">
       <?php $col_num = 1;
-      $children = element_children($content['field_kolonne_afsnit']);
+      $items = &$content['field_kolonne_afsnit'];
+      $children = !empty($items) ? element_children($items) : array();
       for ($i = 0; $i < count($children);) : ?>
         <div class="row row--equal-height-columns">
           <?php for ($j = $i; $j < count($children) && $j < $i + $col_amount; $j++) :?>
             <div <?php if (!empty($col_class[$col_amount])): print 'class="' . $col_class[$col_amount] . '"'; endif;?>>
-              <?php print render($content['field_kolonne_afsnit'][$j]); ?>
+              <?php print render($items[$j]); ?>
             </div>
           <?php endfor;
           $i = $j;?>

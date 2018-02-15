@@ -35,7 +35,8 @@
         </div>
       </div>
       <?php $col_num = 1;
-        $children = element_children($content['field_paragraph_personale']);
+        $items = &$content['field_paragraph_personale'];
+        $children = !empty($items) ? element_children($items) : array();
         for ($i = 0; $i < count($children);) :
           $row_columns = $col_amount;
           if (count($children) - $i < $col_amount) :
@@ -44,7 +45,7 @@
           <div class="row row--equal-height-columns row-amount-<?php print $row_columns; ?>">
             <?php for ($j = $i; $j < count($children) && $j < $i + $col_amount; $j++) :?>
               <div <?php if (!empty($col_class[$row_columns])): print 'class="' . $col_class[$row_columns] . '"'; endif;?>>
-                <?php print render($content['field_paragraph_personale'][$j]); ?>
+                <?php print render($items[$j]); ?>
               </div>
             <?php endfor;
             $i = $j;?>
