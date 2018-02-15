@@ -243,7 +243,7 @@
 }
 
 .paragraphs-item-kolonner{
-  .row .content{
+  .content{
     margin-bottom: 1em;
 
     .field-type-link-field {
@@ -251,6 +251,12 @@
 
       a{
         width: 100%;
+      }
+    }
+
+    .field-type-image {
+      img {
+        border: $color-black solid 5px;
       }
     }
   }
