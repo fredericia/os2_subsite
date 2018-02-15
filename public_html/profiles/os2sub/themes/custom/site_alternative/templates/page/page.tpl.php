@@ -230,12 +230,12 @@
 <?php //endif; ?>
 
 <!-- Begin - history manipulator -->
-<div class="history-manipulator" style="display: none;">
-  <button class="btn btn-primary" onclick="history.back()">
+<div class="history-manipulator">
+  <button class="history-manipulator__button history-manipulator--back" onclick="history.back()">
     Tilbage
   </button>
 
-  <button class="btn btn-primary" onclick="history.forward()">
+  <button class="history-manipulator__button history-manipulator__button--next" onclick="history.forward()">
     Frem
   </button>
 </div>
