@@ -26,7 +26,7 @@
         $see_classes.show();
     });
 
-    var classes = $('body').attr('class');
+    var classes = $('html').attr('class');
     $see_classes.html(classes);
 
 })(jQuery);
