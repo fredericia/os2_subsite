@@ -30,14 +30,17 @@
   <div<?php print $content_attributes; ?>>
     <div class="container">
       <?php $col_num = 1;
-        foreach (element_children($content['field_kolonne_afsnit']) as $col) : ?>
-        <?php if ($col_num == 1): ?> <div class="row row--equal-height-columns"> <?php endif;?>
-        <div <?php if (!empty($col_class)): print 'class="' . $col_class . '"'; endif;?>>
-          <?php print render($content['field_kolonne_afsnit'][$col]); ?>
+      $children = element_children($content['field_kolonne_afsnit']);
+      for ($i = 0; $i < count($children);) : ?>
+        <div class="row row--equal-height-columns">
+          <?php for ($j = $i; $j < count($children) && $j < $i + $col_amount; $j++) :?>
+            <div <?php if (!empty($col_class[$col_amount])): print 'class="' . $col_class[$col_amount] . '"'; endif;?>>
+              <?php print render($content['field_kolonne_afsnit'][$j]); ?>
+            </div>
+          <?php endfor;
+          $i = $j;?>
         </div>
-        <?php if (!empty($col_num) && $col_num == $col_amount): ?> </div> <?php endif;?>
-        <?php $col_num = $col_num == $col_amount ? 1  : $col_num + 1; ?>
-      <?php endforeach; ?>
-  </div>
+      <?php endfor; ?>
+    </div>
   </div>
 </div>

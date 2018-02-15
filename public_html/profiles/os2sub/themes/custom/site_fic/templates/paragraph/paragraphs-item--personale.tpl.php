@@ -35,14 +35,21 @@
         </div>
       </div>
       <?php $col_num = 1;
-        foreach (element_children($content['field_paragraph_personale']) as $col) : ?>
-        <?php if ($col_num == 1): ?> <div class="row row--equal-height-columns"> <?php endif;?>
-        <div <?php if (!empty($col_class)): print 'class="' . $col_class . '"'; endif;?>>
-          <?php print render($content['field_paragraph_personale'][$col]); ?>
+        $children = element_children($content['field_paragraph_personale']);
+        for ($i = 0; $i < count($children);) :
+          $row_columns = $col_amount;
+          if (count($children) - $i < $col_amount) :
+            $row_columns = count($children) - $i;
+          endif; ?>
+          <div class="row row--equal-height-columns row-amount-<?php print $row_columns; ?>">
+            <?php for ($j = $i; $j < count($children) && $j < $i + $col_amount; $j++) :?>
+              <div <?php if (!empty($col_class[$row_columns])): print 'class="' . $col_class[$row_columns] . '"'; endif;?>>
+                <?php print render($content['field_paragraph_personale'][$j]); ?>
+              </div>
+            <?php endfor;
+            $i = $j;?>
         </div>
-        <?php if (!empty($col_num) && $col_num == $col_amount): ?> </div> <?php endif;?>
-        <?php $col_num = $col_num == $col_amount ? 1  : $col_num + 1; ?>
-      <?php endforeach; ?>
-  </div>
+      <?php endfor; ?>
+    </div>
   </div>
 </div>
