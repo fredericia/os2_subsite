@@ -22,6 +22,15 @@ function site_alternative_preprocess_html(&$variables) {
   if (module_exists('color')) {
     _color_html_alter($variables);
   }
+
+  // Add a special CSS class if the user comes from the webapp
+  if ($_GET["from_app"] == true) {
+    $_SESSION["from_app"] = true;
+
+    $variables['classes_array'][] = 'from-webapp';
+  } else if ($_SESSION["from_app"] === true) {
+    $variables['classes_array'][] = 'from-webapp';
+  }
 }
 
 /*
