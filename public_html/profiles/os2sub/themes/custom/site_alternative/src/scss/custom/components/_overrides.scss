@@ -9,17 +9,10 @@
 }
 
 // Hides EU cookie notice inside the app
-.inAppBrowserWrap,
-.platform-browser {
+.from-webapp {
 
   #sliding-popup {
     display: none !important;
-  }
-}
-
-.inAppBrowserWrap {
-  .see-classes {
-    background-color: blue;
   }
 }
 
