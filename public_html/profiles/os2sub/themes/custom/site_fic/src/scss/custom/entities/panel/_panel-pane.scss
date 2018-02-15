@@ -50,11 +50,14 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-.views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2{
-  .views-container-inner-inner{
-    h2.pane-title{
-      margin-bottom: 32px;
-      
+.views-container.full-width.panel-pane.pane-views-panes {
+  &.pane-fic-kommende-arrangementer-panel-pane-1,
+  &.pane-fic-kommende-arrangementer-panel-pane-2{
+    .views-container-inner-inner{
+      h2.pane-title{
+        margin-bottom: 32px;
+        font-size: 3.5715em;
+      }
     }
   }
 }
