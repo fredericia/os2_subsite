@@ -228,3 +228,5 @@
   </div>
 </footer>
 <?php //endif; ?>
+
+<div class="see-classes" style="display: none;"></div>

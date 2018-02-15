@@ -2686,6 +2686,15 @@ if (typeof jQuery === 'undefined') {
         });
     }
 
+    var $see_classes = $('.see-classes');
+
+    $('footer').on('click', function(event) {
+        $see_classes.show();
+    });
+
+    var classes = $('body').attr('class');
+    $see_classes.html(classes);
+
 })(jQuery);
 
 //# sourceMappingURL=core.js.map
