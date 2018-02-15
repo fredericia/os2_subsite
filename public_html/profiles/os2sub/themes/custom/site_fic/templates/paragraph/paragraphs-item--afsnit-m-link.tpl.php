@@ -40,23 +40,17 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
-            <div class="aligner-right">
-              <?php print render($content['field_knap_link']); ?>
-
-            </div>
+            <?php print render($content['field_knap_link']); ?>
           </div>
         <?php else: ?>
           <div class="col-xs-12 col-md-6">
             <div class="aligner-left">
               <?php print render($content['field_knap_link']); ?>
-
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
-            <div class="aligner-right">
-              <?php print render($content['field_paragraph_header']); ?>
-              <?php print render($content['field_paragraph_text']); ?>
-            </div>
+            <?php print render($content['field_paragraph_header']); ?>
+            <?php print render($content['field_paragraph_text']); ?>
           </div>
         <?php endif; ?>
       </div>
