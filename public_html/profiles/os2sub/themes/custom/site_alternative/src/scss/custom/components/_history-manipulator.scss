@@ -59,5 +59,8 @@
 
 // App
 .from-webapp {
-  display: block;
+
+  .history-manipulator {
+    display: block;
+  }
 }
