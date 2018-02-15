@@ -621,6 +621,10 @@ function os2web_base_default_page_manager_handlers() {
       'column-left' => NULL,
       'column-center' => NULL,
       'column-right' => NULL,
+      'top' => NULL,
+      'sidebar-left' => NULL,
+      'sidebar-right' => NULL,
+      'bottom' => NULL,
     ),
   );
   $display->cache = array();
@@ -992,7 +996,7 @@ function os2web_base_default_page_manager_handlers() {
   $display->panels['dark_section_1'][0] = 'new-022d24a4-9142-4ba8-849b-3f2f5d818774';
   $pane = new stdClass();
   $pane->pid = 'new-4ccf0dac-b8d5-45e7-bec0-a3be66979abe';
-  $pane->panel = 'dark_section_1';
+  $pane->panel = 'dark_section_2';
   $pane->type = 'paragraphs_from_section';
   $pane->subtype = 'paragraphs_from_section';
   $pane->shown = TRUE;
@@ -1004,11 +1008,11 @@ function os2web_base_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '4ccf0dac-b8d5-45e7-bec0-a3be66979abe';
   $display->content['new-4ccf0dac-b8d5-45e7-bec0-a3be66979abe'] = $pane;
-  $display->panels['dark_section_1'][1] = 'new-4ccf0dac-b8d5-45e7-bec0-a3be66979abe';
+  $display->panels['dark_section_2'][0] = 'new-4ccf0dac-b8d5-45e7-bec0-a3be66979abe';
   $pane = new stdClass();
   $pane->pid = 'new-a8aef160-57d9-42e9-831c-26b0391a7114';
   $pane->panel = 'light_section_1';

@@ -1222,7 +1222,7 @@ function os2web_base_field_default_field_bases() {
         'banner' => 0,
         'event_calendar' => 0,
         'media' => 0,
-        'os2web_base_contentpage' => 0,
+        'os2web_base_contentpage' => 'os2web_base_contentpage',
         'os2web_base_gallery' => 0,
         'os2web_base_news' => 0,
         'os2web_base_selfservice_link' => 0,
