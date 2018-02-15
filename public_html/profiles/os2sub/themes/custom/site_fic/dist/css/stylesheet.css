@@ -11340,12 +11340,14 @@ h1.pane-title,
 .page-taxonomy .paragraphs-item-header-text-media .paragraph-video.full-width iframe {
   width: 100%; }
 
-.paragraphs-item-kolonner .row .content, .paragraphs-item-kolonner .page-nyheder .view-os2sub-nyheder .view-content .content, .page-nyheder .view-os2sub-nyheder .paragraphs-item-kolonner .view-content .content, .paragraphs-item-kolonner .page-node .os2-section.full-width .paragraphs-container .view-content .content, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-kolonner .view-content .content, .paragraphs-item-kolonner .activities-list-background .activities-list-container .panels-flexible-region-inside .content, .activities-list-background .activities-list-container .paragraphs-item-kolonner .panels-flexible-region-inside .content {
+.paragraphs-item-kolonner .content {
   margin-bottom: 1em; }
-  .paragraphs-item-kolonner .row .content .field-type-link-field, .paragraphs-item-kolonner .page-nyheder .view-os2sub-nyheder .view-content .content .field-type-link-field, .page-nyheder .view-os2sub-nyheder .paragraphs-item-kolonner .view-content .content .field-type-link-field, .paragraphs-item-kolonner .page-node .os2-section.full-width .paragraphs-container .view-content .content .field-type-link-field, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-kolonner .view-content .content .field-type-link-field, .paragraphs-item-kolonner .activities-list-background .activities-list-container .panels-flexible-region-inside .content .field-type-link-field, .activities-list-background .activities-list-container .paragraphs-item-kolonner .panels-flexible-region-inside .content .field-type-link-field {
+  .paragraphs-item-kolonner .content .field-type-link-field {
     margin: 1em 0; }
-    .paragraphs-item-kolonner .row .content .field-type-link-field a, .paragraphs-item-kolonner .page-nyheder .view-os2sub-nyheder .view-content .content .field-type-link-field a, .page-nyheder .view-os2sub-nyheder .paragraphs-item-kolonner .view-content .content .field-type-link-field a, .paragraphs-item-kolonner .page-node .os2-section.full-width .paragraphs-container .view-content .content .field-type-link-field a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-kolonner .view-content .content .field-type-link-field a, .paragraphs-item-kolonner .activities-list-background .activities-list-container .panels-flexible-region-inside .content .field-type-link-field a, .activities-list-background .activities-list-container .paragraphs-item-kolonner .panels-flexible-region-inside .content .field-type-link-field a {
+    .paragraphs-item-kolonner .content .field-type-link-field a {
       width: 100%; }
+  .paragraphs-item-kolonner .content .field-type-image img {
+    border: #192124 solid 5px; }
 
 .region-header {
   margin-left: -15px;
@@ -12935,7 +12937,7 @@ div.ctools-modal-content {
   width: 49%;
   padding-left: 1%; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .stacktable.large-only {
     display: table; }
   .stacktable.small-only {
@@ -14085,8 +14087,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content h1.pane-title, .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .pane-title.heading-h1, .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .pane-title.banner-headline {
   font-size: 3.375em; }
 
-.views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner h2.pane-title, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner .pane-title.heading-h2 {
-  margin-bottom: 32px; }
+.views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-1 .views-container-inner-inner h2.pane-title, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-1 .views-container-inner-inner .pane-title.heading-h2, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner h2.pane-title, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner .pane-title.heading-h2 {
+  margin-bottom: 32px;
+  font-size: 3.5715em; }
 
 .pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini {
   padding-bottom: 85px;
