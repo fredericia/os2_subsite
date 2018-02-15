@@ -7,19 +7,15 @@
       </a>
   <?php endif; ?>
 
-    <!-- Begin - navigation -->
-    <div class="slinky-menu">
+  <!-- Begin - navigation -->
+  <div class="slinky-menu">
 
-      <?php if ( !empty($menu_slinky_custom__primary) ): ?>
-        <?php print render($menu_slinky_custom__primary); ?>
-      <?php endif; ?>
+    <?php if ( !empty($menu_slinky_custom) ): ?>
+      <?php print render($menu_slinky_custom); ?>
+    <?php endif; ?>
 
-      <?php if ( !empty($menu_slinky_custom__secondary) ): ?>
-        <?php print render($menu_slinky_custom__secondary); ?>
-      <?php endif; ?>
-
-    </div>
-    <!-- End - navigation -->
+  </div>
+  <!-- End - navigation -->
 
 </aside>
 <!-- End - sidr source provider -->

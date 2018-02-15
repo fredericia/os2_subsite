@@ -1,0 +1,64 @@
+// |--------------------------------------------------------------------------
+// | History manipulator
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | - .history-manipulator
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------
+
+@mixin history-manipulator-mixin() {}
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+
+.history-manipulator {
+  display: none;
+  position: fixed;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 40px;
+
+  background-color: $brand-primary;
+}
+
+.history-manipulator__button {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 50%;
+
+  text-align: center;
+  line-height: 40px;
+
+  font-weight: bold;
+
+  color: #fff;
+  border: 0;
+  background: none;
+}
+.history-manipulator__button--next {
+  right: 0;
+}
+.history-manipulator__button--back {
+  left: 0;
+}
+
+// App
+.inAppBrowserWrap,
+.platform-browser {
+  display: block;
+}

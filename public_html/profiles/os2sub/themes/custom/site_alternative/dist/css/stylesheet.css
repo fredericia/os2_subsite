@@ -10442,6 +10442,37 @@ footer.footer a.block-image-links__link {
   padding-left: 0;
   padding-right: 0; }
 
+.history-manipulator {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background-color: #00406f; }
+
+.history-manipulator__button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+  color: #fff;
+  border: 0;
+  background: none; }
+
+.history-manipulator__button--next {
+  right: 0; }
+
+.history-manipulator__button--back {
+  left: 0; }
+
+.inAppBrowserWrap,
+.platform-browser {
+  display: block; }
+
 .form-control {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -10453,6 +10484,9 @@ footer.footer a.block-image-links__link {
 .inAppBrowserWrap #sliding-popup,
 .platform-browser #sliding-popup {
   display: none !important; }
+
+.inAppBrowserWrap .see-classes {
+  background-color: blue; }
 
 .pane-taxonomy-term-description,
 .node {

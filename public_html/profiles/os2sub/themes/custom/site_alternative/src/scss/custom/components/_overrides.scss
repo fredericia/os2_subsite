@@ -17,6 +17,12 @@
   }
 }
 
+.inAppBrowserWrap {
+  .see-classes {
+    background-color: blue;
+  }
+}
+
 .icon.glyphicon {
   @extend .glyphicon;
 }
