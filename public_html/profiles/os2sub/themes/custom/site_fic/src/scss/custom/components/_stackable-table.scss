@@ -56,7 +56,13 @@
 @include media-breakpoint-only(xs) {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@include media-breakpoint-up(sm) {}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
   .stacktable.large-only {
     display: table;
   }
@@ -64,12 +70,6 @@
     display: none;
   }
 }
-
-// Tablet - only
-@include media-breakpoint-only(sm) {}
-
-// Desktop - and up
-@include media-breakpoint-up(md) {}
 
 // Desktop - only
 @include media-breakpoint-only(md) {}
