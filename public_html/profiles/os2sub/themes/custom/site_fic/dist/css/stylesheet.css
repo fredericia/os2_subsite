@@ -11308,6 +11308,10 @@ h1.pane-title,
 .paragraphs-item-personale h2, .paragraphs-item-personale .heading-h2 {
   text-align: center; }
 
+.paragraphs-item-personale .row-amount-2 {
+  width: 66.666667%;
+  margin: 0 auto; }
+
 .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items {
   margin-top: 60px; }
   .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items:first-child {
@@ -11909,7 +11913,8 @@ ul.social-icon-list {
 @media (min-width: 768px) {
   .footer .footer5 {
     position: relative;
-    text-align: right; }
+    text-align: right;
+    min-height: 54px; }
     .footer .footer5 ul.social-icon-list {
       margin: 0;
       position: absolute;
