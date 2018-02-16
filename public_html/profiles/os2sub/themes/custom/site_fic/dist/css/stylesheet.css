@@ -12965,6 +12965,11 @@ div.ctools-modal-content {
 .field-slideshow-wrapper .field-slideshow-pager {
   display: none !important; }
 
+@media (max-width: 767px) {
+  .field-slideshow {
+    width: 100% !important;
+    height: auto !important; } }
+
 .form-control {
   font-size: 16px;
   -webkit-appearance: none;
@@ -14101,6 +14106,11 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini .show-all {
     text-align: right;
     margin-top: 45px; }
+
+.paragraphs-items-field-afsnit .entity-paragraphs-item, .entity-paragraphs-item.no-bg {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  background-color: white !important; }
 
 .paragraphs-item-afsnit-m-link {
   padding-bottom: 45px;

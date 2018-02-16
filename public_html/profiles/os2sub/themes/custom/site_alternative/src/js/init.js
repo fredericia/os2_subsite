@@ -20,4 +20,11 @@
         });
     }
 
+    // Add to calendar link transformation inside app
+    if ($('body').hasClass('from-webapp')) {
+        $('.addtocal_menu')
+            .find('a[target=_blank]')
+            .attr('target', '_system');
+    }
+
 })(jQuery);
