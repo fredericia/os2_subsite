@@ -1,5 +1,5 @@
 <!-- Begin - history manipulator -->
-<div class="history-manipulator" style="height: 400px; width: 100%; background-color: pink;">
+<div class="history-manipulator">
   <button class="history-manipulator__button history-manipulator--back" onclick="history.back()">
     Tilbage
   </button>
