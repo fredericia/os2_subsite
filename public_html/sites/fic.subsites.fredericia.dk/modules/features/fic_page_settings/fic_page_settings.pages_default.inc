@@ -58,7 +58,7 @@ function fic_page_settings_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '%term:name';
+  $display->title = '%term:name_field';
   $display->uuid = '63f29836-972d-4b91-8d1a-77aef61b78ed';
   $display->storage_type = 'page_manager';
   $display->storage_id = 'term_view__panel_context_38e272dc-4fcb-429b-bfab-07fa049970f0';
