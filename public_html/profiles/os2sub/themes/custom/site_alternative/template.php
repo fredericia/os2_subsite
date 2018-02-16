@@ -28,10 +28,8 @@ function site_alternative_preprocess_html(&$variables) {
     $_SESSION["from_app"] = true;
 
     $variables['classes_array'][] = 'from-webapp';
-    $variables['show_history_manipulator'] = true;
   } else if ($_SESSION["from_app"] === true) {
     $variables['classes_array'][] = 'from-webapp';
-    $variables['show_history_manipulator'] = true;
   }
 }
 

@@ -21,6 +21,7 @@
 // --------------------------------------------------
 
 .history-manipulator {
+  display: none;
   position: fixed;
 
   left: 0;
@@ -54,4 +55,12 @@
 }
 .history-manipulator__button--back {
   left: 0;
+}
+
+// App
+.from-webapp {
+
+  .history-manipulator {
+    display: block;
+  }
 }
