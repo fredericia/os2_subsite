@@ -16,6 +16,8 @@ function fic_frontpage_settings_default_fe_block_settings() {
     'cache' => -1,
     'custom' => 0,
     'delta' => 'instagram_billeder-block',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
     'module' => 'views',
     'node_types' => array(),
     'pages' => '',
