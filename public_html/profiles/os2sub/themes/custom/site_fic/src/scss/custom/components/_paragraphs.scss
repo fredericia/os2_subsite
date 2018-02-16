@@ -127,15 +127,19 @@
   }
   .view-content {
     @include make-row();
-    .views-row {
-      @include make-xs-column(12);
-      @include make-sm-column(6);
-      @include make-md-column(3);
-    }
   }
 }
-.panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row.views-row-first {
-  @include make-md-column(6);
+.panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content {
+  .views-row {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-md-column(3);
+
+    &.views-row-first {
+      @include make-md-column(6);
+    }
+  }
+
 }
 
 .node-type-os2web-base-contentpage {

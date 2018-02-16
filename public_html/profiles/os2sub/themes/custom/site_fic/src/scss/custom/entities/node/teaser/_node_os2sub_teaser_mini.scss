@@ -193,18 +193,20 @@ $image-border: 10px;
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
-.view-display-id-page,
-.view-display-id-panel_pane_1{
+.view-os2sub-nyheder,
+.view-fic-artikler{
   .views-row{
     margin-bottom: $grid-gutter-width;
   }
-}
-.se-flere{
-  border: $image-border dashed $gray-darker;
-  &:hover{
-    border-color: #fff;
+
+  .se-flere{
+    border: $image-border dashed $gray-darker;
+    &:hover{
+      border-color: #fff;
+    }
   }
 }
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

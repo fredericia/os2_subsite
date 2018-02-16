@@ -87,7 +87,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Sektion (field_sektion) */
+  /* Contextual filter: Indholdselement: Sektion (field_sektion) */
   $handler->display->display_options['arguments']['field_sektion_tid']['id'] = 'field_sektion_tid';
   $handler->display->display_options['arguments']['field_sektion_tid']['table'] = 'field_data_field_sektion';
   $handler->display->display_options['arguments']['field_sektion_tid']['field'] = 'field_sektion_tid';
@@ -290,7 +290,7 @@ function fic_frontpage_settings_views_default_views() {
     'title_link' => 'content',
     'title_class' => '',
   );
-  /* Field: Taxonomy term: Rendered Taxonomy term */
+  /* Field: Taxonomy term: Rendered Ord i ordforråd */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_taxonomy_term';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -311,7 +311,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
-  /* Filter criterion: Taxonomy term: Name (name_field:language) */
+  /* Filter criterion: Ord i ordforråd: Name (name_field:language) */
   $handler->display->display_options['filters']['language']['id'] = 'language';
   $handler->display->display_options['filters']['language']['table'] = 'field_data_name_field';
   $handler->display->display_options['filters']['language']['field'] = 'language';
@@ -354,6 +354,7 @@ function fic_frontpage_settings_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Calendar';
+  $handler->display->display_options['css_class'] = 'row--equal-height-columns';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['link_display'] = 'page';
@@ -388,7 +389,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Sort criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
+  /* Sort criterion: Indholdselement: Dato -  start date (field_os2web_kulturnaut_date) */
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['sorts']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
@@ -416,7 +417,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
-  /* Filter criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
+  /* Filter criterion: Indholdselement: Dato -  start date (field_os2web_kulturnaut_date) */
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
@@ -630,7 +631,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'os2web_kulturnaut_knactivity' => 'os2web_kulturnaut_knactivity',
   );
-  /* Filter criterion: Content: Dato -  start date (field_os2web_kulturnaut_date) */
+  /* Filter criterion: Indholdselement: Dato -  start date (field_os2web_kulturnaut_date) */
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['id'] = 'field_os2web_kulturnaut_date_value';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['table'] = 'field_data_field_os2web_kulturnaut_date';
   $handler->display->display_options['filters']['field_os2web_kulturnaut_date_value']['field'] = 'field_os2web_kulturnaut_date_value';
@@ -734,13 +735,13 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '1';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Relationship: Field: Paragraph (field_afsnit) */
+  /* Relationship: Field: Afsnit (field_afsnit) */
   $handler->display->display_options['relationships']['field_afsnit_value']['id'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['relationships']['field_afsnit_value']['field'] = 'field_afsnit_value';
   $handler->display->display_options['relationships']['field_afsnit_value']['required'] = TRUE;
   $handler->display->display_options['relationships']['field_afsnit_value']['delta'] = '-1';
-  /* Field: Field: Paragraph */
+  /* Field: Field: Afsnit */
   $handler->display->display_options['fields']['field_afsnit']['id'] = 'field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['table'] = 'field_data_field_afsnit';
   $handler->display->display_options['fields']['field_afsnit']['field'] = 'field_afsnit';
@@ -852,7 +853,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['fields']['filename']['label'] = '';
   $handler->display->display_options['fields']['filename']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['filename']['alter']['ellipsis'] = FALSE;
-  /* Field: File: Rendered File */
+  /* Field: File: Rendered Fil */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_file';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
@@ -889,7 +890,7 @@ function fic_frontpage_settings_views_default_views() {
   );
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: File: Rendered File */
+  /* Field: File: Rendered Fil */
   $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
   $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_file';
   $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
