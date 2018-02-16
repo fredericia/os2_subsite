@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="dk.detskerifredericia" version="0.1.30" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>Det sker i Fredericia</name>
+	<description>
+		App that wraps the http://oplevfredericia.fredericia.bellcom.dk/ website.
+	</description>
+	<author email="riivo.erik@bellcom.ee" href="http://bellcom.dk">
+		Bellcom
+	</author>
+	<content src="index.html" />
+	<plugin name="cordova-plugin-whitelist" spec="1" />
+	<plugin name="cordova-plugin-device" spec="~1.1.1" />
+	<plugin name="cordova-plugin-inappbrowser" spec="~1.6.1" />
+	<plugin name="cordova-plugin-statusbar" spec="~2.2.3" />
+	<plugin name="cordova-plugin-splashscreen" spec="~2" />
+	<access origin="*" />
+	<allow-navigation href="http://*/*" />
+	<allow-navigation href="https://*/*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="sms:*" />
+	<allow-intent href="mailto:*" />
+	<allow-intent href="geo:*" />
+
+	<preference name="orientation" value="default" />
+	<preference name="SplashScreen" value="screen" />
+	<preference name="ShowSplashScreenSpinner" value="false" />
+	<preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
+
+	<platform name="android">
+		<allow-intent href="market:*" />
+
+		<preference name="android-minSdkVersion" value="1" />
+		<preference name="SplashShowOnlyFirstTime" value="false" />
+		<preference name="SplashScreenDelay" value="8000" />
+	</platform>
+	<platform name="ios">
+		<allow-intent href="itms:*" />
+		<allow-intent href="itms-apps:*" />
+
+		<preference name="StatusBarOverlaysWebView" value="false" />
+		<preference name="StatusBarBackgroundColor" value="#000000" />
+		<preference name="StatusBarStyle" value="lightcontent" />
+		<preference name="AutoHideSplashScreen" value="false" />
+
+		<feature name="StatusBar">
+			<param name="ios-package" value="CDVStatusBar" onload="true" />
+		</feature>
+		<feature name="InAppBrowser">
+			<param name="ios-package" value="CDVInAppBrowser" />
+		</feature>
+		<feature name="SplashScreen">
+			<param name="ios-package" value="CDVSplashScreen"/>
+			<param name="onload" value="true"/>
+		</feature>
+	</platform>
+
+	<!-- Icons & splash screen images - BEGIN -->
+	<icon src="icon.png" />
+	<splash src="splash.png" />
+
+	<platform name="android">
+		<!-- Android icons -->
+		<icon qualifier="ldpi" src="res/icons/android/icon-36-ldpi.png" />
+		<icon qualifier="mdpi" src="res/icons/android/icon-48-mdpi.png" />
+		<icon qualifier="hdpi" src="res/icons/android/icon-72-hdpi.png" />
+		<icon qualifier="xhdpi" src="res/icons/android/icon-96-xhdpi.png" />
+		<icon qualifier="xxhdpi" src="res/icons/android/icon-144-xxhdpi.png" />
+		<icon qualifier="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png" />
+
+		<!-- Android splash screens -->
+		<splash qualifier="land-hdpi" src="res/screens/android/screen-hdpi-landscape.png" />
+		<splash qualifier="land-ldpi" src="res/screens/android/screen-ldpi-landscape.png" />
+		<splash qualifier="land-mdpi" src="res/screens/android/screen-mdpi-landscape.png" />
+		<splash qualifier="land-xhdpi" src="res/screens/android/screen-xhdpi-landscape.png" />
+		<splash qualifier="port-hdpi" src="res/screens/android/screen-hdpi-portrait.png" />
+		<splash qualifier="port-ldpi" src="res/screens/android/screen-ldpi-portrait.png" />
+		<splash qualifier="port-mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
+		<splash qualifier="port-xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
+	</platform>
+	<platform name="ios">
+		<!-- iOS icons -->
+		<icon height="60" width="60" src="res/icons/ios/icon-60.png" />
+		<icon height="120" width="120" src="res/icons/ios/icon-60-2x.png" />
+		<icon height="180" width="180" src="res/icons/ios/icon-60-3x.png" />
+		<icon height="76" width="76" src="res/icons/ios/icon-76.png" />
+		<icon height="152" width="152" src="res/icons/ios/icon-76-2x.png" />
+		<icon height="40" width="40" src="res/icons/ios/icon-40.png" />
+		<icon height="80" width="80" src="res/icons/ios/icon-40-2x.png" />
+		<icon height="57" width="57" src="res/icons/ios/icon-57.png" />
+		<icon height="114" width="114" src="res/icons/ios/icon-57-2x.png" />
+		<icon height="72" width="72" src="res/icons/ios/icon-72.png" />
+		<icon height="144" width="144" src="res/icons/ios/icon-72-2x.png" />
+		<icon height="29" width="29" src="res/icons/ios/icon-small.png" />
+		<icon height="58" width="58" src="res/icons/ios/icon-small-2x.png" />
+		<icon height="50" width="50" src="res/icons/ios/icon-50.png" />
+		<icon height="100" width="100" src="res/icons/ios/icon-50-2x.png" />
+
+		<!-- iOS splash screens -->
+		<splash height="480" width="320" src="res/screens/ios/screen-iphone-portrait.png" />
+		<splash height="960" width="640" src="res/screens/ios/screen-iphone-portrait-2x.png" />
+		<splash height="1024" width="768" src="res/screens/ios/screen-ipad-portrait.png" />
+		<splash height="2048" width="1536" src="res/screens/ios/screen-ipad-portrait-2x.png" />
+		<splash height="768" width="1024" src="res/screens/ios/screen-ipad-landscape.png" />
+		<splash height="1536" width="2048" src="res/screens/ios/screen-ipad-landscape-2x.png" />
+		<splash height="1136" width="640" src="res/screens/ios/screen-iphone-568h-2x.png" />
+		<splash height="1334" width="750" src="res/screens/ios/screen-iphone-portrait-667h.png" />
+		<splash height="2208" width="1242" src="res/screens/ios/screen-iphone-portrait-736h.png" />
+		<splash height="1242" width="2208" src="res/screens/ios/screen-iphone-landscape-736h.png" />
+	</platform>
+	<!-- Icons & splash screen images - END -->
+</widget>

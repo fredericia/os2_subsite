@@ -622,3 +622,87 @@ function _site_fic_get_header_bottom_links(&$vars, $term) {
     $vars['opening_hours_node_url'] = url('modal/node/' . $opening_hours_node->nid . '/nojs');
   }
 }
+
+/*
+ * Implements template_preprocess_entity().
+ */
+function site_fic_preprocess_entity(&$variables) {
+  $entity_type = $variables['entity_type'];
+
+  // Paragraphs item
+  if ($entity_type === 'paragraphs_item') {
+    $paragraphs_item = $variables['paragraphs_item'];
+
+    $bundle = $paragraphs_item->bundle;
+    $view_mode = $variables['view_mode'];
+
+    // Optionally, run bundle specific preprocess functions
+    $function_bundle = __FUNCTION__ . '__' . $bundle;
+    $function_view_mode = __FUNCTION__ . '__' . $view_mode;
+
+    if (function_exists($function_bundle)) {
+      $function_bundle($variables);
+    }
+
+    if (function_exists($function_view_mode)) {
+      $function_view_mode($variables);
+    }
+  }
+}
+
+/*
+ * Implements template_preprocess_entity().
+ * List of news teasers.
+ */
+function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
+  $paragraph = $variables['paragraphs_item'];
+  $ids = [];
+
+  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_news_nid')) {
+
+    foreach($fields as $field) {
+      $ids[] = $field['nid'];
+    }
+  }
+  $contextual_filter = implode('+', $ids);
+
+  $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'news', $contextual_filter);
+}
+
+/*
+ * Implements template_preprocess_entity().
+ * List of event teasers.
+ */
+function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
+  $paragraph = $variables['paragraphs_item'];
+  $ids = [];
+
+  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_event_nid')) {
+
+    foreach($fields as $field) {
+      $ids[] = $field['nid'];
+    }
+  }
+  $contextual_filter = implode('+', $ids);
+
+  $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'events', $contextual_filter);
+}
+
+/*
+ * Implements template_preprocess_entity().
+ * List of Instagram teasers.
+ */
+function site_fic_preprocess_entity__fic_list_of_instagram_teasers(&$variables) {
+  $paragraph = $variables['paragraphs_item'];
+  $ids = [];
+
+  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_instagram_fid')) {
+
+    foreach($fields as $field) {
+      $ids[] = $field['fid'];
+    }
+  }
+  $contextual_filter = implode('+', $ids);
+
+  $variables['embedded_view'] = views_embed_view('fic_embed_files', 'instagram', $contextual_filter);
+}
