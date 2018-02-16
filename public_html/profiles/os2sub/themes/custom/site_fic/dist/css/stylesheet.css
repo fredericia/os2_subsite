@@ -14102,6 +14102,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     text-align: right;
     margin-top: 45px; }
 
+.entity-paragraphs-item.no-bg {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important; }
+
 .paragraphs-item-afsnit-m-link {
   padding-bottom: 45px;
   padding-top: 45px;
