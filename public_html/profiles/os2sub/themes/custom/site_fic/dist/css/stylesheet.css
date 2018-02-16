@@ -13088,13 +13088,17 @@ div.ctools-modal-content {
 .page-node.node-type-os2web-base-contentpage table.table-striped > tbody > tr:nth-of-type(odd) {
   background: #E9E7E8; }
 
-.page-node .pane-node-field-os2web-kulturnaut-slidesho {
+.page-node .pane-node-field-os2web-kulturnaut-slidesho,
+.page-node .pane-node-field-os2web-base-field-image {
   margin-bottom: 30px; }
-  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box {
+  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box,
+  .page-node .pane-node-field-os2web-base-field-image .os2-box {
     position: relative; }
-    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box img {
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box img,
+    .page-node .pane-node-field-os2web-base-field-image .os2-box img {
       border: solid 10px #192124; }
-    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls {
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls,
+    .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls {
       position: absolute;
       top: 0;
       z-index: 99;
@@ -13112,25 +13116,30 @@ div.ctools-modal-content {
               align-items: center;
       width: 100%;
       height: 100%; }
-      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a {
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a,
+      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a {
         display: block;
         width: 64px;
         height: 64px;
         background-color: #01B5D5;
         font-size: 0;
         position: relative; }
-        .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev {
+        .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev,
+        .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.prev {
           margin-left: -32px; }
-          .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev:before {
+          .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev:before,
+          .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.prev:before {
             border: 20px solid transparent;
             border-right: 20px solid #fff;
             content: '';
             position: absolute;
             margin-top: 12px;
             margin-bottom: 12px; }
-        .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next {
+        .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next,
+        .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.next {
           margin-right: -32px; }
-          .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next:after {
+          .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next:after,
+          .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.next:after {
             border: 20px solid transparent;
             border-left: 20px solid #fff;
             content: '';
@@ -13138,7 +13147,8 @@ div.ctools-modal-content {
             left: 24px;
             margin-top: 12px;
             margin-bottom: 12px; }
-    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager {
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager,
+    .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager {
       position: absolute;
       bottom: 0;
       z-index: 99;
@@ -13149,7 +13159,8 @@ div.ctools-modal-content {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a {
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a,
+      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a {
         border-style: solid;
         border-width: 5px;
         border-color: rgba(255, 255, 255, 0.5);
@@ -13160,7 +13171,9 @@ div.ctools-modal-content {
         margin-right: 6px;
         display: block; }
       .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.activeSlide,
-      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.active {
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.active,
+      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a.activeSlide,
+      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a.active {
         border-color: rgba(255, 255, 255, 0.9); }
 
 .page-node .content-sidebar {
@@ -13924,31 +13937,17 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     border: solid 6px #192124;
     max-width: 100% !important;
     width: 100% !important; }
-  .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a {
-    display: block;
-    width: 64px;
-    height: 64px;
-    background-color: #01B5D5;
-    font-size: 0;
-    position: absolute;
-    bottom: 6px;
-    z-index: 10; }
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.prev:before, .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.next:before {
-      border: 20px solid transparent;
-      content: '';
-      position: absolute;
-      margin-top: 12px;
-      margin-bottom: 12px; }
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.prev {
-      left: 6px; }
-      .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.prev:before {
-        border-right: 20px solid #ffffff;
-        left: 0; }
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.next {
-      right: 6px; }
-      .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.next:before {
-        border-left: 20px solid #ffffff;
-        right: 0; }
+    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 .field-slideshow-slide,
+    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 img {
+      width: 100% !important; }
+    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 img {
+      border: 0; }
+  .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls {
+    padding-bottom: 6px; }
+    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls .prev {
+      margin-left: 6px !important; }
+    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls .next {
+      margin-right: 6px !important; }
 
 .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 h2.pane-title, .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .pane-title.heading-h2 {
   margin-bottom: 52px; }
