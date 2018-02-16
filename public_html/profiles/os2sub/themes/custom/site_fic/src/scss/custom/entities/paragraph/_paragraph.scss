@@ -16,9 +16,12 @@
 
 .entity-paragraphs-item {
 
+  .paragraphs-items-field-afsnit &,
   &.no-bg {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+
+    background-color: white !important;
   }
 }
 
