@@ -10445,6 +10445,7 @@ footer.footer a.block-image-links__link {
 .history-manipulator {
   display: none;
   position: fixed;
+  z-index: 1050;
   left: 0;
   right: 0;
   bottom: 0;

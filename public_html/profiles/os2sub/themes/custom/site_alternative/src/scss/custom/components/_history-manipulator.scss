@@ -24,6 +24,8 @@
   display: none;
   position: fixed;
 
+  z-index: $zindex-modal;
+
   left: 0;
   right: 0;
   bottom: 0;
