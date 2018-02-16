@@ -11305,13 +11305,6 @@ h1.pane-title,
   font-size: 3.125em;
   text-transform: capitalize; }
 
-.paragraphs-item-personale h2, .paragraphs-item-personale .heading-h2 {
-  text-align: center; }
-
-.paragraphs-item-personale .row-amount-2 {
-  width: 66.666667%;
-  margin: 0 auto; }
-
 .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items {
   margin-top: 60px; }
   .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items:first-child {
@@ -14406,6 +14399,35 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
       font-size: 1.375em; }
   .paragraphs-item-personale article {
     margin-bottom: 60px; }
+
+.paragraphs-item-personale {
+  font-size: 1.45em; }
+  .paragraphs-item-personale article {
+    line-height: 1.2em;
+    margin-bottom: 40px; }
+  .paragraphs-item-personale .field.field-name-field-paragraph-header {
+    margin-bottom: 45px; }
+  .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale h2, .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale .heading-h2 {
+    font-size: 1em;
+    margin-bottom: 3px;
+    text-align: center; }
+    .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale h2 a, .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale .heading-h2 a {
+      color: #192124; }
+      .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale h2 a:hover, .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale .heading-h2 a:hover {
+        text-decoration: none; }
+  .paragraphs-item-personale .field-name-field-personale-billede img {
+    width: 172px;
+    border: 6px solid #E9E7E8; }
+  .paragraphs-item-personale .field-name-field-personale-jobtitel {
+    color: #9b9b9b;
+    margin-bottom: 28px; }
+  .paragraphs-item-personale .field-name-field-personale-telefon-disp {
+    color: #ff4200; }
+
+@media (min-width: 992px) {
+  .paragraphs-item-personale .row-amount-2 {
+    width: 66.666667%;
+    margin: 0 auto; } }
 
 .paragraphs-item-kolonner .field.field-name-field-paragraph-text {
   margin: 1em 0; }
