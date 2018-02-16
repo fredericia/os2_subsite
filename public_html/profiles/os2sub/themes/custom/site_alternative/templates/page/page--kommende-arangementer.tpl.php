@@ -73,6 +73,21 @@
  * @ingroup templates
  */
 ?>
+
+<?php if ($show_history_manipulator): ?>
+  <!-- Begin - history manipulator -->
+  <div class="history-manipulator">
+    <button class="history-manipulator__button history-manipulator--back" onclick="history.back()">
+      Tilbage
+    </button>
+
+    <button class="history-manipulator__button history-manipulator__button--next" onclick="history.forward()">
+      Frem
+    </button>
+  </div>
+  <!-- End - history manipulator -->
+<?php endif; ?>
+
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
@@ -222,20 +237,3 @@
   </div>
 </footer>
 <?php //endif; ?>
-
-<!-- Begin - history manipulator -->
-<div class="history-manipulator">
-  <button class="history-manipulator__button history-manipulator--back" onclick="history.back()">
-    Tilbage
-  </button>
-
-  <button class="history-manipulator__button history-manipulator__button--next" onclick="history.forward()">
-    Frem
-  </button>
-</div>
-<!-- End - history manipulator -->
-
-<div class="see-classes" style="display: none;">
-  <div class="html"></div>
-  <div class="body"></div>
-</div>

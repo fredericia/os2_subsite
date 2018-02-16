@@ -2686,18 +2686,6 @@ if (typeof jQuery === 'undefined') {
         });
     }
 
-    var $see_classes = $('.see-classes');
-
-    $('footer').on('click', function(event) {
-        $see_classes.show();
-    });
-
-    var classes_html = $('html').attr('class');
-    $see_classes.find('.html').html(classes_html);
-
-    var classes_body = $('body').attr('class');
-    $see_classes.find('.body').html(classes_body);
-
 })(jQuery);
 
 //# sourceMappingURL=core.js.map
