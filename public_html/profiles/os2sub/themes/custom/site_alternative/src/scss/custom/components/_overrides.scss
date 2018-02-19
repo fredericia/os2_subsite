@@ -24,6 +24,10 @@
   @extend .glyphicon;
 }
 
+.addtocalendar {
+  z-index: auto !important;
+}
+
 .addthisevent_dropdown {
   z-index: ($zindex-modal - 10) !important;
 }
