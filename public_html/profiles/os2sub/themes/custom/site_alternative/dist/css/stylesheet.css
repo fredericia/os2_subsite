@@ -10488,6 +10488,9 @@ footer.footer a.block-image-links__link {
   .from-webapp #sliding-popup {
     display: none !important; }
 
+.addthisevent_dropdown {
+  z-index: 1040 !important; }
+
 .pane-taxonomy-term-description,
 .node {
   font-size: 1.06em; }
