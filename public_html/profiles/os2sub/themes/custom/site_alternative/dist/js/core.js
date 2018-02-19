@@ -2864,7 +2864,7 @@ if (typeof jQuery === 'undefined') {
 
     var param = getParameterByName('from_app');
     if (param) {
-        Cookies.set('from_webapp', true, { expires: 365 });
+        Cookies.set('from_webapp', 1, { expires: 365 });
     }
 })(jQuery);
 
