@@ -10481,12 +10481,11 @@ footer.footer a.block-image-links__link {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.from-webapp {
-  /*  .addtocalendar {
-    display: none !important;
-  }*/ }
-  .from-webapp #sliding-popup {
-    display: none !important; }
+.from-webapp #sliding-popup {
+  display: none !important; }
+
+.from-webapp .addtocalendar {
+  display: none !important; }
 
 .addtocalendar {
   z-index: auto !important; }

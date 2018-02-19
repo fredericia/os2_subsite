@@ -20,6 +20,9 @@
         });
     }
 
+    // Set a cookie that determines that we are coming from the app
+    // if Drupal handles this inside preprocess_html, it doesnt work
+    // most places.
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
