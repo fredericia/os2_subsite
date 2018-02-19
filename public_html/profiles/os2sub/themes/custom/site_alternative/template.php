@@ -24,10 +24,7 @@ function site_alternative_preprocess_html(&$variables) {
   }
 
   // Add a special CSS class if the user comes from the webapp
-  if (isset($_GET['from_app']) OR isset($_COOKIE['Drupal_visitor_fromwebapp'])) {
-    user_cookie_save(array('fromwebapp' => 'set'));
-  }
-  if (isset($_COOKIE['Drupal_visitor_fromwebapp'])) {
+  if (isset($_GET['from_app']) OR isset($_COOKIE['from_webapp'])) {
     $variables['classes_array'][] = 'from-webapp';
   }
 }

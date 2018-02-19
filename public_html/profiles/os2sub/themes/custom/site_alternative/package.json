@@ -8,6 +8,7 @@
     "production": "cross-env NODE_ENV=production"
   },
   "devDependencies": {
+    "cross-env": "^5.1.3",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "~3.0.4",
     "grunt-contrib-clean": "~1.1.0",
@@ -17,7 +18,9 @@
     "grunt-modernizr": "^1.0.2",
     "grunt-sass": "^2.0.0",
     "grunt-scss-lint": "^0.5.0",
-    "grunt-shell": "^2.1.0",
-    "cross-env": "^5.1.3"
+    "grunt-shell": "^2.1.0"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.0"
   }
 }
