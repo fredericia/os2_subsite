@@ -90,7 +90,7 @@
 
     &:not(.view),
     > .view-content {
-      display: flex;
+      display: flex !important;
 
       flex-wrap: wrap;
 
@@ -103,7 +103,7 @@
       // Fixes Safari issue (https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap)
       &:after,
       &:before {
-        content: normal; // IE doesn't support `initial`
+        content: normal !important; // IE doesn't support `initial`
       }
     }
   }

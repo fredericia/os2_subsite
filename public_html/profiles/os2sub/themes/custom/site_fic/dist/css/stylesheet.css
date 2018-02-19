@@ -11016,31 +11016,6 @@ h2.pane-title, .pane-title.heading-h2 {
   margin-top: 0; }
 
 /*Some flex panel tweaks stop*/
-.flexbox .row--equal-height-columns:not(.view),
-.flexbox .row--equal-height-columns > .view-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  .flexbox .row--equal-height-columns:not(.view) > [class*='col-'],
-  .flexbox .row--equal-height-columns > .view-content > [class*='col-'] {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .flexbox .row--equal-height-columns:not(.view):after, .flexbox .row--equal-height-columns:not(.view):before,
-  .flexbox .row--equal-height-columns > .view-content:after,
-  .flexbox .row--equal-height-columns > .view-content:before {
-    content: normal; }
-
 .menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2 li a {
   color: #192124;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
@@ -13026,10 +13001,10 @@ div.ctools-modal-content {
 
 .flexbox .row--equal-height-columns:not(.view),
 .flexbox .row--equal-height-columns > .view-content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
@@ -13047,7 +13022,7 @@ div.ctools-modal-content {
   .flexbox .row--equal-height-columns:not(.view):after, .flexbox .row--equal-height-columns:not(.view):before,
   .flexbox .row--equal-height-columns > .view-content:after,
   .flexbox .row--equal-height-columns > .view-content:before {
-    content: normal; }
+    content: normal !important; }
 
 .node {
   font-size: 1.06em;

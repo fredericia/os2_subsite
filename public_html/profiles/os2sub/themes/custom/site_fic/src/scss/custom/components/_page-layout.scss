@@ -91,31 +91,6 @@ h2.pane-title {
 
 /*Some flex panel tweaks stop*/
 
-// Flexbox
-.flexbox {
-
-  .row--equal-height-columns {
-
-    &:not(.view),
-      > .view-content {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      > [class*='col-'] {
-        display: flex;
-
-        flex-direction: column;
-      }
-
-      // Fixes Safari issue (https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap)
-      &:after,
-        &:before {
-        content: normal; // IE doesn't support `initial`
-      }
-    }
-  }
-}
 .menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2{
   li{
     a{
