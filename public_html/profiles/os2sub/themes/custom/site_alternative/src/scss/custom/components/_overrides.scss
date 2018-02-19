@@ -11,6 +11,13 @@
 // Hides EU cookie notice inside the app
 .from-webapp {
 
+  .views-field-field-os2web-kulturnaut-slidesho {
+
+    .views-field-view-node-1 {
+      display: none !important;
+    }
+  }
+
   #sliding-popup {
     display: none !important;
   }
