@@ -666,7 +666,11 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   }
   $contextual_filter = implode('+', $ids);
 
-  $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'news', $contextual_filter);
+  if (! $contextual_filter) {
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'news');
+  } else {
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'news', $contextual_filter);
+  }
 }
 
 /*
@@ -685,7 +689,11 @@ function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   }
   $contextual_filter = implode('+', $ids);
 
-  $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'events', $contextual_filter);
+  if (! $contextual_filter) {
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'events');
+  } else {
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'events', $contextual_filter);
+  }
 }
 
 /*
@@ -704,5 +712,9 @@ function site_fic_preprocess_entity__fic_list_of_instagram_teasers(&$variables) 
   }
   $contextual_filter = implode('+', $ids);
 
-  $variables['embedded_view'] = views_embed_view('fic_embed_files', 'instagram', $contextual_filter);
+  if (! $contextual_filter) {
+    $variables['embedded_view'] = views_embed_view('fic_embed_files', 'instagram');
+  } else {
+    $variables['embedded_view'] = views_embed_view('fic_embed_files', 'instagram', $contextual_filter);
+  }
 }
