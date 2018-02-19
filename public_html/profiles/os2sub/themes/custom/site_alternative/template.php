@@ -24,10 +24,9 @@ function site_alternative_preprocess_html(&$variables) {
   }
 
   // Add a special CSS class if the user comes from the webapp
-  if ($_GET['from_app'] == true || $_GET['from_app'] == 'true' || isset($_COOKIE['from_app'])) {
+  if (isset($_GET['from_app']) || isset($_COOKIE['from_app'])) {
     setcookie('from_app', 'is-set', strtotime( '+30 days' ));
-  }
-  if (isset($_COOKIE['from_app'])) {
+
     $variables['classes_array'][] = 'from-webapp';
   }
 }
