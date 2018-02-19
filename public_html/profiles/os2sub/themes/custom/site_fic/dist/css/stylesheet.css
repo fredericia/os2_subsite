@@ -11207,9 +11207,6 @@ h1.pane-title,
       -ms-flex-pack: center;
           justify-content: center; }
 
-.pane-instagram-billeder .views-row {
-  margin-bottom: 30px; }
-
 .panel-pane.views-container.full-width .views-container-inner {
   margin-right: auto;
   margin-left: auto;
@@ -14059,9 +14056,22 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     font-size: 2em;
     line-height: 0.8em; }
 
-.view.view-instagram-billeder.view-id-instagram_billeder.view-display-id-block .file.file-instagram.file-text-instagram img {
-  border: 10px solid #fff;
-  width: 100%; }
+.file-instagram {
+  margin-bottom: 30px; }
+  .file-instagram .content {
+    display: block !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: auto !important; }
+  .file-instagram img {
+    border: 10px solid #2a2f36;
+    width: 100%; }
+
+.bg-dark .file-instagram img, .page-nyheder .main-container .file-instagram img {
+  border-color: #fff; }
+
+.bg-darker .file-instagram img {
+  border-color: #fff; }
 
 @media (min-width: 992px) {
   .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {

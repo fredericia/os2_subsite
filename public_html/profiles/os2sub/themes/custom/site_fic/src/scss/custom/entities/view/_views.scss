@@ -35,18 +35,47 @@
   }
 }
 
-.view.view-instagram-billeder.view-id-instagram_billeder.view-display-id-block{
-  .file.file-instagram.file-text-instagram{
-    img{
-      border: 10px solid #fff;
-      width: 100%;
-    }
+.file-instagram {
+  margin-bottom: $grid-gutter-width;
+
+  // Sorry for the !importants. This is to override an @extend in panel-pane.scss:40
+  .content {
+    display: block !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: auto !important;
+  }
+
+  img {
+    border: 10px solid $color-dark-gray;
+    width: 100%;
   }
 }
 
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.bg-dark {
+
+  .file-instagram {
+
+    img {
+      border-color: #fff;
+    }
+  }
+}
+
+.bg-darker {
+
+  .file-instagram {
+
+    img {
+      border-color: #fff;
+    }
+  }
+}
 
 // --------------------------------------------------
 // Responsive
