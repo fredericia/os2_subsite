@@ -14,6 +14,7 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+
 .paragraphs-item-afsnit-m-link{
   padding-bottom: floor(1.5*$grid-gutter-width);
   padding-top: floor(1.5*$grid-gutter-width);
@@ -21,8 +22,9 @@
 
   .field.field-name-field-paragraph-header{
     font-size: 3.125em;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
+
   .field.field-name-field-knap-link{
     a{
       @extend .btn;
@@ -38,9 +40,11 @@
       margin-top: 3px;
     }
   }
+
   .aligner-left{
     text-align: center;
   }
+
   .aligner-right{
     text-align: center;
   }
@@ -55,29 +59,16 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-up(xs) {}
 
-
-}
 // Mobile - only
-@include media-breakpoint-only(xs) {
-
-
-}
+@include media-breakpoint-only(xs) {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
-
-
-
-}
+@include media-breakpoint-up(sm) {}
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-
-  .social-icons {}
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
@@ -85,46 +76,28 @@
   .paragraphs-item-afsnit-m-link{
     padding-bottom: 60px;
     padding-top: 60px;
+
     .aligner-left{
       text-align: left;
     }
+
     .aligner-right{
-      text-align: left;
+      text-align: right;
     }
   }
-
-
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
-
-
-}
+@include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Social icons
-  .social-icons {}
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-  // Social icons
-  .social-icons {}
-}
-
+.no-touchevents {}

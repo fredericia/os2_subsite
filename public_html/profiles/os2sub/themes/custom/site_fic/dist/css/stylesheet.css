@@ -14098,7 +14098,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   font-family: "RBNo21a-Medium", "Lato", sans-serif; }
   .paragraphs-item-afsnit-m-link .field.field-name-field-paragraph-header {
     font-size: 3.125em;
-    margin-bottom: 0px; }
+    margin-bottom: 0; }
   .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a {
     font-size: 1.875em !important;
     width: auto !important;
@@ -14121,7 +14121,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     .paragraphs-item-afsnit-m-link .aligner-left {
       text-align: left; }
     .paragraphs-item-afsnit-m-link .aligner-right {
-      text-align: left; } }
+      text-align: right; } }
 
 .paragraphs-item-header-text-links-image {
   padding-bottom: 40px;

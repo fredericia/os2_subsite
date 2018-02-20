@@ -40,7 +40,9 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
-            <?php print render($content['field_knap_link']); ?>
+            <div class="aligner-right">
+              <?php print render($content['field_knap_link']); ?>
+            </div>
           </div>
         <?php else: ?>
           <div class="col-xs-12 col-md-6">
