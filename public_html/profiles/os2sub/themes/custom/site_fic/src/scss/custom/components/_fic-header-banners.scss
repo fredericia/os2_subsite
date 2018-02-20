@@ -262,11 +262,16 @@ $desktop-margin-default: 30px;
       .cycle-slideshow {
         display: flex;
         justify-content: center;
+        align-items: center;
         width: 100% !important;
+        height: auto !important;
 
         .cycle-slide {
           background-color: transparent !important;
-          width: 100%
+          width: 100% !important;
+          top: auto !important;
+          bottom: auto !important;
+          height: auto !important;
         }
 
       }
