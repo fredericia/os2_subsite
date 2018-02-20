@@ -11002,7 +11002,7 @@ a.icon-after .glyphicon {
   display: none; }
 
 h2.pane-title, .pane-title.heading-h2 {
-  font-size: 50px;
+  font-size: 3.5715em;
   color: #2a2f36; }
   h2.pane-title a, .pane-title.heading-h2 a {
     color: #2a2f36; }
@@ -14076,10 +14076,6 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content h1.pane-title, .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .pane-title.heading-h1, .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .panel-pane.pane-node-title .os2-box .os2-box-body.pane-content .pane-title.banner-headline {
   font-size: 3.375em; }
 
-.views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-1 .views-container-inner-inner h2.pane-title, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-1 .views-container-inner-inner .pane-title.heading-h2, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner h2.pane-title, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-kommende-arrangementer-panel-pane-2 .views-container-inner-inner .pane-title.heading-h2 {
-  margin-bottom: 12px;
-  font-size: 3.5715em; }
-
 .pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini {
   padding-bottom: 85px;
   padding-top: 75px; }
@@ -14389,9 +14385,11 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   font-size: 1.45em; }
   .paragraphs-item-personale article {
     line-height: 1.2em;
-    margin-bottom: 40px; }
+    margin-bottom: 68px; }
   .paragraphs-item-personale .field.field-name-field-paragraph-header {
     margin-bottom: 45px; }
+    .paragraphs-item-personale .field.field-name-field-paragraph-header .field-item {
+      text-transform: none; }
   .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale h2, .page-node.node-type-os2web-base-contentpage .paragraphs-item-personale .heading-h2 {
     font-size: 1em;
     margin-bottom: 3px;
@@ -14405,7 +14403,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     border: 6px solid #E9E7E8; }
   .paragraphs-item-personale .field-name-field-personale-jobtitel {
     color: #9b9b9b;
-    margin-bottom: 28px; }
+    margin-bottom: 30px; }
   .paragraphs-item-personale .field-name-field-personale-telefon-disp {
     color: #ff4200; }
 
