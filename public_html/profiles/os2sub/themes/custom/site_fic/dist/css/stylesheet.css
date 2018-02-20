@@ -11314,7 +11314,8 @@ h1.pane-title,
   .paragraphs-item-kolonner .content .field-type-link-field {
     margin: 1em 0; }
     .paragraphs-item-kolonner .content .field-type-link-field a {
-      width: 100%; }
+      width: 100%;
+      padding: 10px; }
   .paragraphs-item-kolonner .content .field-type-image img {
     border: #192124 solid 5px; }
 
