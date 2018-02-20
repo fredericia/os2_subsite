@@ -428,6 +428,14 @@ function site_fic_field__field_citat(&$vars) {
  * Custom fields preprocess function.
  */
 function site_fic_preprocess_field(&$vars) {
+  if ($vars['element']['#field_name'] == 'field_personale_telefon_disp'
+  && !empty($vars['items'])) {
+    // Add counter class to have ability customize styles.
+    $vars['items'][0]['#prefix'] = format_string('<span>@label </span>', array(
+      '@label' => t('Ph.'),
+    ));
+  }
+
   if ($vars['element']['#field_name'] != 'field_os2web_base_field_related') {
     return;
   }
