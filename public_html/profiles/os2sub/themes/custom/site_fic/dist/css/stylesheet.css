@@ -11029,9 +11029,6 @@ h2.pane-title, .pane-title.heading-h2 {
 .bg-white h2.pane-title, .bg-white .pane-title.heading-h2 {
   padding-bottom: 20px; }
 
-.os2-sectiont .col-sm-9 {
-  border-left: solid 2px #CCCCCC; }
-
 .modal-content.popups-body {
   background-color: #fff; }
   .modal-content.popups-body header h2 a, .modal-content.popups-body header .heading-h2 a {
@@ -11081,10 +11078,16 @@ h1.pane-title,
   margin-top: 20px;
   margin-bottom: 0; }
 
+@media (max-width: 767px) {
+  .os2-sectiont .col-sm-3 {
+    margin-bottom: 40px; } }
+
 @media (min-width: 768px) {
   .content-inner {
     padding-top: 30px;
-    padding-bottom: 40px; } }
+    padding-bottom: 40px; }
+  .os2-sectiont .col-sm-9 {
+    border-left: solid 2px #CCCCCC; } }
 
 .bg-undefined, .bg-white, .bg-alternative {
   padding-top: 60px;
@@ -12941,8 +12944,7 @@ div.ctools-modal-content {
 
 @media (max-width: 767px) {
   .field-slideshow {
-    width: 100% !important;
-    height: auto !important; } }
+    width: 100% !important; } }
 
 .form-control {
   font-size: 16px;
@@ -13236,21 +13238,27 @@ div.ctools-modal-content {
   border: solid 6px #192124; }
 
 @media (max-width: 767px) {
-  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager {
+  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager,
+  .page-node .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-pager {
     display: none !important; }
-  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a {
+  .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a,
+  .page-node .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a {
     width: 34px;
     height: 34px; }
-    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev {
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev,
+    .page-node .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.prev {
       margin-left: -10px; }
-      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev:before {
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev:before,
+      .page-node .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.prev:before {
         margin-top: 7px;
         margin-bottom: 0;
         border: 10px solid transparent;
         border-right: 10px solid #fff; }
-    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next {
+    .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next,
+    .page-node .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.next {
       margin-right: -10px; }
-      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next:after {
+      .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next:after,
+      .page-node .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls a.next:after {
         margin-top: 7px;
         margin-bottom: 0;
         left: 14px;
@@ -13564,6 +13572,9 @@ div.ctools-modal-content {
   .view-os2sub-nyheder .se-flere:hover,
   .view-fic-artikler .se-flere:hover {
     border-color: #fff; }
+
+.view-fic-embed-nodes article.node {
+  margin-bottom: 30px; }
 
 @media (min-width: 992px) and (max-width: 1229px) {
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content,
@@ -13912,8 +13923,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     color: #ff4200; }
 
 .os2-sectiont .field-name-field-os2web-base-field-image {
-  position: relative;
-  margin-bottom: 40px; }
+  position: relative; }
   .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 {
     border: solid 6px #192124;
     max-width: 100% !important;
