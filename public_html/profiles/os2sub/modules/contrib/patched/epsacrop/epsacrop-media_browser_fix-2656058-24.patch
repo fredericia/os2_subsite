@@ -28,10 +28,10 @@ index 544cc68..01f5dce 100644
        '#weight' => 0,
      );
 diff --git a/js/epsacrop-media.js b/js/epsacrop-media.js
-index 75a4c56..739b4f3 100644
+index 75a4c56..f7487c9 100644
 --- a/js/epsacrop-media.js
 +++ b/js/epsacrop-media.js
-@@ -21,15 +21,13 @@ Drupal.behaviors.EPSACropMediaElement = {
+@@ -21,15 +21,16 @@ Drupal.behaviors.EPSACropMediaElement = {
        }
  
        // When someone clicks the link to manage EPSA crops
@@ -40,16 +40,17 @@ index 75a4c56..739b4f3 100644
          e.preventDefault();
 -        var elem = $(this).parents('.media-widget');
 -        // Handle media widgets with an unlimited cardinality.
--        if ($(this).parent('td').length === 1) {
--          elem = $(this).parents('tr').find('.media-widget');
--        }
--        var fileInfo = epsaDialogSettings[elem.attr('id')];
--        var fid = fidField.val();
 +        var epsaId = $(this).attr('data-epsaid');
 +        epsaId = epsaId.split(" ")[0];
 +        var fileInfo = epsaDialogSettings[epsaId];
++        var fid = fidField.val();
 +        // Fetch fid value from related input.fid form element.
-+        var fid = $(this).parents('tr:first').find('.fid').val();
+         if ($(this).parent('td').length === 1) {
+-          elem = $(this).parents('tr').find('.media-widget');
++          fid = $(this).parents('tr:first').find('.fid').val();
+         }
+-        var fileInfo = epsaDialogSettings[elem.attr('id')];
+-        var fid = fidField.val();
          if(!fileInfo.fid || fileInfo.fid != fid) {
            //if no file info or file has been replaced, get if via ajax using the fid
            $.get(Drupal.settings.basePath +'?q=crop/ajaxinfo/' + fid, function(data) {

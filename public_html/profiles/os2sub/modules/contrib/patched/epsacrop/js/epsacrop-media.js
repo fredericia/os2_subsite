@@ -27,7 +27,10 @@ Drupal.behaviors.EPSACropMediaElement = {
         epsaId = epsaId.split(" ")[0];
         var fileInfo = epsaDialogSettings[epsaId];
         // Fetch fid value from related input.fid form element.
-        var fid = $(this).parents('tr:first').find('.fid').val();
+        var fid = fidField.val();
+        if ($(this).parent('td').length === 1) {
+          fid = $(this).parents('tr:first').find('.fid').val();
+        }
         if(!fileInfo.fid || fileInfo.fid != fid) {
           //if no file info or file has been replaced, get if via ajax using the fid
           $.get(Drupal.settings.basePath +'?q=crop/ajaxinfo/' + fid, function(data) {
