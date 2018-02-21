@@ -194,7 +194,7 @@ $image-border: 10px;
 // Variants
 // --------------------------------------------------
 .view-os2sub-nyheder,
-.view-fic-artikler{
+.view-fic-artikler {
   .views-row{
     margin-bottom: $grid-gutter-width;
   }
@@ -205,6 +205,10 @@ $image-border: 10px;
       border-color: #fff;
     }
   }
+}
+
+.view-fic-embed-nodes article.node {
+  margin-bottom: $grid-gutter-width;
 }
 
 // --------------------------------------------------

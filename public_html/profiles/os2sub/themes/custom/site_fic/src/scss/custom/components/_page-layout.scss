@@ -113,11 +113,6 @@ h2.pane-title {
   }
 }
 
-.os2-sectiont{
-  .col-sm-9{
-    border-left: solid 2px $color-light-gray;
-  }
-}
 .modal-content.popups-body{
   background-color: #fff;
   header h2 a {
@@ -202,7 +197,11 @@ span {
 @include media-breakpoint-only(xs) {
 
   // Page layout
-
+  .os2-sectiont {
+    .col-sm-3 {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 // Tablet - and up
@@ -212,6 +211,12 @@ span {
   .content-inner {
     padding-top: $sm-page-layout-content-inner-padding-top;
     padding-bottom: $sm-page-layout-content-inner-padding-bottom;
+  }
+
+  .os2-sectiont {
+    .col-sm-9 {
+      border-left: solid 2px $color-light-gray;
+    }
   }
 }
 

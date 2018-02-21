@@ -263,45 +263,41 @@
 @include media-breakpoint-only(xs) {
 
   .page-node {
+    .pane-node-field-os2web-kulturnaut-slidesho .os2-box,
+    .os2-sectiont .field-name-field-os2web-base-field-image {
+      .field-slideshow-pager {
+        display: none !important;
+      }
 
-    .pane-node-field-os2web-kulturnaut-slidesho {
+      .field-slideshow-controls {
 
-      .os2-box {
+        a {
+          width: 34px;
+          height: 34px;
 
-        .field-slideshow-pager {
-          display: none !important;
-        }
+          &.prev {
+            margin-left: -10px;
 
-        .field-slideshow-controls {
+            &:before {
+              margin-top: 7px;
+              margin-bottom: 0;
 
-          a {
-            width: 34px;
-            height: 34px;
-
-            &.prev {
-              margin-left: -10px;
-
-              &:before {
-                margin-top: 7px;
-                margin-bottom: 0;
-
-                border: 10px solid transparent;
-                border-right: 10px solid #fff;
-              }
+              border: 10px solid transparent;
+              border-right: 10px solid #fff;
             }
+          }
 
-            &.next {
-              margin-right: -10px;
+          &.next {
+            margin-right: -10px;
 
-              &:after {
-                margin-top: 7px;
-                margin-bottom: 0;
+            &:after {
+              margin-top: 7px;
+              margin-bottom: 0;
 
-                left: 14px;
+              left: 14px;
 
-                border: 10px solid transparent;
-                border-left: 10px solid #fff;
-              }
+              border: 10px solid transparent;
+              border-left: 10px solid #fff;
             }
           }
         }
