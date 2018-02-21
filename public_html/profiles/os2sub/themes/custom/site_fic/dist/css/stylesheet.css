@@ -11080,7 +11080,7 @@ h1.pane-title,
 
 @media (max-width: 767px) {
   .os2-sectiont .col-sm-3 {
-    margin-bottom: 40px; } }
+    margin: 40px 0; } }
 
 @media (min-width: 768px) {
   .content-inner {
