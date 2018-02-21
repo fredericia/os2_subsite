@@ -197,7 +197,6 @@
 }
 
 .youtube-text .pane-content {
-  height: 380px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -248,6 +247,10 @@
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
+
+  .youtube-text .pane-content {
+    height: 380px;
+  }
 
   // Teaser
   .node-teaser {
