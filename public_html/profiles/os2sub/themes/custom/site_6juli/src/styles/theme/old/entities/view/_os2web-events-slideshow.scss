@@ -32,6 +32,10 @@ $header-size: 112px;
 }
 
 .container-fluid .background-slideshow {
+  .item .carousel-caption a {
+    color: $headings-color;
+  }
+
   .views-slideshow-controls-bottom {
     > .container {
       position: relative;
