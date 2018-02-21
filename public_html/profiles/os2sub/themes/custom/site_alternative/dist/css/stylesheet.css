@@ -10368,7 +10368,7 @@ footer.footer {
   footer.footer .block-contact div {
     margin-bottom: 10px; }
     footer.footer .block-contact div p {
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
     footer.footer .block-contact div:last-child {
       margin-bottom: 0px; }
 
@@ -10378,8 +10378,6 @@ footer.footer > .container {
 
 footer.footer a.block-image-links__link {
   margin-bottom: 20px; }
-  footer.footer a.block-image-links__link img {
-    height: 43px; }
   footer.footer a.block-image-links__link:last-child {
     margin-bottom: 0; }
 
@@ -10387,9 +10385,7 @@ footer.footer a.block-image-links__link {
   footer.footer > .container {
     padding-top: 44px; }
   footer.footer a.block-image-links__link {
-    margin-bottom: 35px; }
-    footer.footer a.block-image-links__link img {
-      height: 50px; } }
+    margin-bottom: 35px; } }
 
 @media (min-width: 992px) {
   footer.footer a.block-image-links__link {

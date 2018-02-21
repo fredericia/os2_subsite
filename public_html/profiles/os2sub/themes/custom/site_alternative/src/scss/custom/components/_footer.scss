@@ -54,7 +54,7 @@ footer.footer {
     div {
       margin-bottom: 10px;
       p {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
       &:last-child {
         margin-bottom: 0px;
@@ -82,9 +82,7 @@ footer.footer {
 
     a.block-image-links__link {
       margin-bottom: 20px;
-      img {
-        height: 43px;
-      }
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -108,9 +106,6 @@ footer.footer {
     }
     a.block-image-links__link {
       margin-bottom: 35px;
-      img {
-        height: 50px;
-      }
     }
   }
 }
