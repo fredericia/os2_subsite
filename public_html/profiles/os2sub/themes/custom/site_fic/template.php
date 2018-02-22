@@ -349,6 +349,12 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     $fic_header_image = field_get_items('node', $node, 'field_baggrund');
   }
 
+  // Show content section node intro text instead of section description.
+  $intro = field_view_field('node', $node, 'field_os2web_base_field_summary', 'fic_header');
+  if (!empty($intro)) {
+    $vars['content']['description_field'] = $intro;
+  }
+
   if (!empty($fic_header_image)) {
     _site_fic_set_backstretch_background($vars['tid'], $fic_header_image);
   }
