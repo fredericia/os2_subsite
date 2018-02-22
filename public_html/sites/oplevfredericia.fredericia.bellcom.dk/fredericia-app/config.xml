@@ -2,7 +2,7 @@
 <widget id="dk.detskerifredericia" version="0.1.30" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 	<name>Det sker i Fredericia</name>
 	<description>
-		App that wraps the http://oplevfredericia.fredericia.bellcom.dk/ website.
+		App that wraps the DetskeriFredericia website.
 	</description>
 	<author email="riivo.erik@bellcom.ee" href="http://bellcom.dk">
 		Bellcom
@@ -26,7 +26,6 @@
 	<preference name="orientation" value="default" />
 	<preference name="SplashScreen" value="screen" />
 	<preference name="ShowSplashScreenSpinner" value="false" />
-	<preference name="OverrideUserAgent" value="Mozilla/5.0 Google" />
 
 	<platform name="android">
 		<allow-intent href="market:*" />
@@ -111,3 +110,4 @@
 	</platform>
 	<!-- Icons & splash screen images - END -->
 </widget>
+
