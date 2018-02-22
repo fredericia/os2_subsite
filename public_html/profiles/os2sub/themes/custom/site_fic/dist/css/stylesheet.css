@@ -12434,6 +12434,8 @@ div.ctools-modal-content {
         min-width: 185px; }
         .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-ext-link .field-item a:hover, .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-ext-link .field-item a:focus {
           text-decoration: none; }
+  .term-fic-header .cycle-pager {
+    min-height: 165px; }
   .term-fic-header .views-slideshow-controls-bottom > div,
   .term-fic-header .field-name-field-os2web-base-field-related > div,
   .term-fic-header .cycle-pager > div {
