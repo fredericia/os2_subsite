@@ -35,19 +35,23 @@ $desktop-margin-default: 30px;
 
   .views-slideshow-cycle-main-frame-row {
     width: 100% !important;
+    top: auto !important;
+    bottom: auto !important;
+    height: auto !important;
   }
 
   .views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed{
     display: flex;
     align-items: center;
-    height: 0 !important;
     justify-content: space-around;
   }
   .views-slideshow-cycle-main-frame.views_slideshow_cycle_teaser_section{
     display: flex;
     width: 100%;
     justify-content: center;
-}
+    align-items: center;
+    height: auto !important;
+  }
   .views-row {
     height: inherit;
   }
@@ -259,7 +263,6 @@ $desktop-margin-default: 30px;
   .view-mode-fic_header {
     > .cycle-slideshow-wrapper {
       display: flex;
-      height: 0 !important;
       align-items: center;
       width: 100%;
 
