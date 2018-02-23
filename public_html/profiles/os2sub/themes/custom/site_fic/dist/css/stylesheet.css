@@ -11905,13 +11905,10 @@ ul.social-icon-list {
   font-weight: 900;
   font-size: 1.31em;
   text-transform: uppercase;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 10px 20px;
   width: auto;
   height: auto;
-  border-radius: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  border-radius: 0;
   outline: none;
   word-break: break-all;
   word-break: break-word;
@@ -12112,6 +12109,17 @@ ul.social-icon-list {
   width: 100%;
   padding-left: 0;
   padding-right: 0; }
+
+@media (max-width: 767px) {
+  .btn, .topnav-wrapper.user-nav .region.region-navigation .book-link a, .banner .banner-wrapper a, .html #sliding-popup .popup-content #popup-buttons button, body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a, .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
+  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-webform .form-actions .webform-submit.form-submit, .paragraphs-item-kolonner .field-name-field-knap-link a {
+    white-space: normal; } }
+
+@media (min-width: 768px) {
+  .btn, .topnav-wrapper.user-nav .region.region-navigation .book-link a, .banner .banner-wrapper a, .html #sliding-popup .popup-content #popup-buttons button, body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a, .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
+  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-webform .form-actions .webform-submit.form-submit, .paragraphs-item-kolonner .field-name-field-knap-link a {
+    padding-left: 50px;
+    padding-right: 50px; } }
 
 #modalContent {
   position: fixed !important;
@@ -13045,30 +13053,30 @@ div.ctools-modal-content {
   font-size: 3.8em;
   margin-bottom: 20px; }
 
-.page-node.node-type-os2web-base-contentpage h2, .page-node.node-type-os2web-base-contentpage .heading-h2 {
+.page-node .node--os2web_base_contentpage--full h2, .page-node .node--os2web_base_contentpage--full .heading-h2 {
   font-size: 2em; }
 
-.page-node.node-type-os2web-base-contentpage table caption {
+.page-node .node--os2web_base_contentpage--full table caption {
   font-size: 2em;
   font-family: "RBNo21a-Medium", sans-serif;
   color: #192124;
   margin-top: 20px; }
 
-.page-node.node-type-os2web-base-contentpage table tbody > tr > td,
-.page-node.node-type-os2web-base-contentpage table thead > tr > th {
+.page-node .node--os2web_base_contentpage--full table tbody > tr > td,
+.page-node .node--os2web_base_contentpage--full table thead > tr > th {
   border: 0; }
 
-.page-node.node-type-os2web-base-contentpage table th {
+.page-node .node--os2web_base_contentpage--full table th {
   font-size: 1.1em;
   padding: 15px 8px; }
 
-.page-node.node-type-os2web-base-contentpage table tbody > tr > td {
+.page-node .node--os2web_base_contentpage--full table tbody > tr > td {
   padding: 5px 15px;
   border-right: 2px solid #ffffff; }
-  .page-node.node-type-os2web-base-contentpage table tbody > tr > td:last-child {
+  .page-node .node--os2web_base_contentpage--full table tbody > tr > td:last-child {
     border: 0; }
 
-.page-node.node-type-os2web-base-contentpage table.table-striped > tbody > tr:nth-of-type(odd) {
+.page-node .node--os2web_base_contentpage--full table.table-striped > tbody > tr:nth-of-type(odd) {
   background: #E9E7E8; }
 
 .page-node .pane-node-field-os2web-kulturnaut-slidesho,
