@@ -69,11 +69,19 @@
     }
   }
 
-  .pane-node-field-os2web-kulturnaut-slidesho,
+  .pane-node-field-os2web-base-field-lead-img {
+
+    img {
+      border: solid 10px $color-black;
+    }
+  }
+
   .pane-node-field-os2web-base-field-image {
     margin-bottom: $grid-gutter-width;
+
     .os2-box {
       position: relative;
+
       img {
         border: solid 10px $color-black;
       }
