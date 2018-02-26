@@ -11881,6 +11881,10 @@ ul.social-icon-list {
   display: inline-block;
   min-width: 160px; }
 
+@media (max-width: 767px) {
+  .footer .footer5 {
+    text-align: center; } }
+
 @media (min-width: 768px) {
   .footer .footer5 {
     position: relative;

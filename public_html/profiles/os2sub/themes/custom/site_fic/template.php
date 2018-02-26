@@ -623,7 +623,7 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   $paragraph = $variables['paragraphs_item'];
   $ids = [];
 
-  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_news_nid')) {
+  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_section_id')) {
 
     foreach($fields as $field) {
       $ids[] = $field['nid'];
@@ -646,7 +646,7 @@ function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   $paragraph = $variables['paragraphs_item'];
   $ids = [];
 
-  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_event_nid')) {
+  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_section_id')) {
 
     foreach($fields as $field) {
       $ids[] = $field['nid'];
