@@ -5172,7 +5172,13 @@ function os2web_base_field_default_field_instances() {
     'bundle' => 'afsnit_m_billede',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please use following classes to set color of link button:
+<ul> 
+<li><i>btn-red</i> - red button</li>
+<li><i>btn-blue</i> - blue button</li>
+<li><i>btn-white</i> - white button</li>
+<li><i>btn-dark</i> - dark button</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -5196,7 +5202,7 @@ function os2web_base_field_default_field_instances() {
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
-        'configurable_class' => 0,
+        'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
@@ -5793,7 +5799,13 @@ function os2web_base_field_default_field_instances() {
     'bundle' => 'afsnit_m_link',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please use following classes to set color of link button:
+<ul> 
+<li><i>btn-red</i> - red button</li>
+<li><i>btn-blue</i> - blue button</li>
+<li><i>btn-white</i> - white button</li>
+<li><i>btn-dark</i> - dark button</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -5857,7 +5869,7 @@ function os2web_base_field_default_field_instances() {
     'bundle' => 'afsnit_m_link',
     'default_value' => array(
       0 => array(
-        'value' => 'White',
+        'value' => 'no-bg',
       ),
     ),
     'deleted' => 0,
@@ -6152,7 +6164,13 @@ function os2web_base_field_default_field_instances() {
     'bundle' => 'header_text_links_image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please use following classes to set color of link button:
+<ul> 
+<li><i>btn-red</i> - red button</li>
+<li><i>btn-blue</i> - blue button</li>
+<li><i>btn-white</i> - white button</li>
+<li><i>btn-dark</i> - dark button</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -6176,7 +6194,7 @@ function os2web_base_field_default_field_instances() {
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
-        'configurable_class' => 0,
+        'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
@@ -6615,46 +6633,6 @@ function os2web_base_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'paragraphs_item-header_text_media-field_paragraph_pos'.
-  $field_instances['paragraphs_item-header_text_media-field_paragraph_pos'] = array(
-    'bundle' => 'header_text_media',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_paragraph_pos',
-    'label' => 'Vis media ',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'content_taxonomy_opt_groups' => FALSE,
-      ),
-      'type' => 'options_select',
-      'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance:
   // 'paragraphs_item-header_text_media-field_paragraph_position'.
   $field_instances['paragraphs_item-header_text_media-field_paragraph_position'] = array(
     'bundle' => 'header_text_media',
@@ -6941,7 +6919,13 @@ function os2web_base_field_default_field_instances() {
     'bundle' => 'paragrph_address',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Please use following classes to set color of link button:
+<ul> 
+<li><i>btn-red</i> - red button</li>
+<li><i>btn-blue</i> - blue button</li>
+<li><i>btn-white</i> - white button</li>
+<li><i>btn-dark</i> - dark button</li>
+</ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -6965,7 +6949,7 @@ function os2web_base_field_default_field_instances() {
       'absolute_url' => 1,
       'attributes' => array(
         'class' => '',
-        'configurable_class' => 0,
+        'configurable_class' => 1,
         'configurable_title' => 0,
         'rel' => '',
         'target' => 'default',
@@ -7490,6 +7474,9 @@ function os2web_base_field_default_field_instances() {
         'afsnit_m_citat' => -1,
         'afsnit_m_galleri' => 'afsnit_m_galleri',
         'afsnit_m_link' => 'afsnit_m_link',
+        'fic_list_of_event_teasers' => 'fic_list_of_event_teasers',
+        'fic_list_of_instagram_teasers' => 'fic_list_of_instagram_teasers',
+        'fic_list_of_news_teasers' => 'fic_list_of_news_teasers',
         'header_text_links_image' => 'header_text_links_image',
         'header_text_media' => 'header_text_media',
         'kolonner' => -1,
@@ -7503,6 +7490,9 @@ function os2web_base_field_default_field_instances() {
         'afsnit_m_citat' => 3,
         'afsnit_m_galleri' => 8,
         'afsnit_m_link' => 4,
+        'fic_list_of_event_teasers' => 21,
+        'fic_list_of_instagram_teasers' => 22,
+        'fic_list_of_news_teasers' => 23,
         'header_text_links_image' => 10,
         'header_text_media' => 11,
         'kolonner' => -22,
@@ -8636,6 +8626,13 @@ function os2web_base_field_default_field_instances() {
   t('PDF filer');
   t('Paragraph');
   t('Placering');
+  t('Please use following classes to set color of link button:
+<ul> 
+<li><i>btn-red</i> - red button</li>
+<li><i>btn-blue</i> - blue button</li>
+<li><i>btn-white</i> - white button</li>
+<li><i>btn-dark</i> - dark button</li>
+</ul>');
   t('Politik');
   t('Primære billede');
   t('Resume (maks 2 linier!)');
@@ -8657,7 +8654,6 @@ function os2web_base_field_default_field_instances() {
   t('Unikke relaterede links');
   t('Video');
   t('Vis ikke afsnit fra sektion');
-  t('Vis media ');
   t('Vis på portalside');
   t('Vises før indholdet af iframe');
   t('Vist navn');
