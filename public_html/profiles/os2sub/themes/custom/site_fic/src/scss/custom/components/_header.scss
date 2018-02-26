@@ -53,9 +53,7 @@
 
 #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
 form.search-form{
-  height: 60px;
   input.form-control.form-text{
-    height: 60px;
     font-size: 1.5em;
     font-family: $headings-font-family;
     color: #fff;
@@ -280,6 +278,14 @@ section.block-locale{
 
     .row{
       width: 970px;
+    }
+  }
+
+  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
+  form.search-form {
+    height: 60px;
+    input.form-control.form-text {
+      height: 60px;
     }
   }
 

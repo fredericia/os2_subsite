@@ -410,22 +410,20 @@ $desktop-margin-default: 30px;
     }
 
     .slide-content-wrapper {
+      padding-bottom: (10px * 2); // To resolve the overhead margin-bottom made by .responsive-header
 
       .field-name-description-field,
       .field-name-field-os2web-base-field-summary {
         font-size: 2.5em;
         line-height: 1em;
-
-        padding-top: 40px;
-        padding-bottom: 40px;
       }
     }
 
     .views_slideshow_main {
       height: auto !important;
 
-      margin-top: 110px !important;
-      margin-bottom: 110px !important;
+      margin-top: 90px !important;
+      margin-bottom: 90px !important;
     }
 
     .views_slideshow_cycle_slide {
