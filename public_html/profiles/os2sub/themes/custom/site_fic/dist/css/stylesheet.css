@@ -14231,6 +14231,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
       padding-top: 25px;
       height: 0;
       width: 100%; }
+  .paragraphs-item-header-text-media .file-video {
+    border: 10px solid #192124; }
 
 .page-node .paragraphs-item-header-text-media {
   padding-bottom: 30px;
