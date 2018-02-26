@@ -12718,9 +12718,7 @@ div.ctools-modal-content {
       line-height: 1em; }
   .term-fic-header .cycle-slideshow-wrapper,
   .term-fic-header .views_slideshow_main {
-    height: auto !important;
-    margin-top: 80px !important;
-    margin-bottom: 80px !important; }
+    height: 160px !important; }
   .term-fic-header .views_slideshow_cycle_slide {
     width: 100% !important; }
   .term-fic-header .views-slideshow-controls-bottom > div,
