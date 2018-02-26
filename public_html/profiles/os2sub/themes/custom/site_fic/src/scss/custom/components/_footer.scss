@@ -101,7 +101,13 @@ ul.social-icon-list {
           content: $fa-var-facebook;
         }
       }
+    }
 
+    &:last-child {
+
+      a.social-icon {
+        margin-right: 0;
+      }
     }
   }
 }

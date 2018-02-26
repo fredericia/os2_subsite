@@ -626,7 +626,7 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_section_id')) {
 
     foreach($fields as $field) {
-      $ids[] = $field['nid'];
+      $ids[] = $field['tid'];
     }
   }
   $contextual_filter = implode('+', $ids);
@@ -649,7 +649,7 @@ function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_section_id')) {
 
     foreach($fields as $field) {
-      $ids[] = $field['nid'];
+      $ids[] = $field['tid'];
     }
   }
   $contextual_filter = implode('+', $ids);

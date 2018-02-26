@@ -11871,6 +11871,8 @@ ul.social-icon-list {
         content: "\f167"; }
       ul.social-icon-list li a.social-icon.social-icon-facebook:before {
         content: ""; }
+    ul.social-icon-list li:last-child a.social-icon {
+      margin-right: 0; }
 
 .footer4 {
   margin: 30px 0;
