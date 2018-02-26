@@ -11605,14 +11605,13 @@ section.block-locale {
     .topnav-wrapper.user-nav a:active, .topnav-wrapper.user-nav a:hover, .topnav-wrapper.user-nav a:focus {
       background: none !important;
       color: #01B5D5 !important; }
-  .topnav-wrapper.user-nav ul.menu.nav.navbar-nav.secondary {
+  .topnav-wrapper.user-nav ul.menu {
     float: unset; }
-    .topnav-wrapper.user-nav ul.menu.nav.navbar-nav.secondary a {
+    .topnav-wrapper.user-nav ul.menu li {
+      display: inline-block; }
+    .topnav-wrapper.user-nav ul.menu a {
       font-size: 12px !important;
       font-weight: 800; }
-    .topnav-wrapper.user-nav ul.menu.nav.navbar-nav.secondary li.expanded .dropdown-menu,
-    .topnav-wrapper.user-nav ul.menu.nav.navbar-nav.secondary li.expanded .caret {
-      display: none; }
   .topnav-wrapper.user-nav .region.region-navigation {
     display: -webkit-box;
     display: -webkit-flex;

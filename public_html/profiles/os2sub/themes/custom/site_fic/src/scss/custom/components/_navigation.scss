@@ -54,17 +54,16 @@ $navigation-bottom-border-color: $color-white;
     }
   }
 
-  ul.menu.nav.navbar-nav.secondary{
+  ul.menu {
     float: unset;
+
+    li {
+      display: inline-block;
+    }
+
     a{
       font-size: 12px !important;
       font-weight: 800;
-    }
-    li.expanded {
-      .dropdown-menu,
-      .caret {
-        display: none;
-      }
     }
   }
   .region.region-navigation{
