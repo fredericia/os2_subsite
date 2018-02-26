@@ -16,14 +16,14 @@
 // --------------------------------------------------
 .paragraphs-item-personale{
   font-family: $headings-font-family;
+  text-align: center;
 
   .field-items{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    .field-item{
 
-      text-align: center;
+    .field-item{
       position: relative;
 
       .field.field-name-field-personale-billede{
@@ -35,7 +35,7 @@
         color: #999;
         font-size: 1.375em;
       }
-      .field.field-name-field-personale-telefon, 
+      .field.field-name-field-personale-telefon,
       .field.field-name-field-personale-telefon-disp{
         font-size: 1.375em;
         color: $brand-secondary;
@@ -46,7 +46,7 @@
       .field.field-name-field-personale-email{
         font-size: 1.375em;
       }
-    } 
+    }
     h2{
       a{
         color: $gray-darker;

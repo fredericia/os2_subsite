@@ -14376,7 +14376,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     margin-right: 5px; } }
 
 .paragraphs-item-personale {
-  font-family: "RBNo21a-Medium", "Lato", sans-serif; }
+  font-family: "RBNo21a-Medium", "Lato", sans-serif;
+  text-align: center; }
   .paragraphs-item-personale .field-items {
     display: -webkit-box;
     display: -webkit-flex;
@@ -14389,7 +14390,6 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
     .paragraphs-item-personale .field-items .field-item {
-      text-align: center;
       position: relative; }
       .paragraphs-item-personale .field-items .field-item .field.field-name-field-personale-billede img {
         border: 6px solid #e6e9ec !important; }
