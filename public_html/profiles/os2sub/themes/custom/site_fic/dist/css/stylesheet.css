@@ -11213,6 +11213,7 @@ h1.pane-title,
     .panel-pane.views-container.full-width .views-container-inner .view-content:after {
       clear: both; }
 
+.view-fic-embed-nodes.view-display-id-news .views-row,
 .panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row {
   position: relative;
   float: left;
@@ -11229,19 +11230,23 @@ h1.pane-title,
   padding-left: 15px;
   padding-right: 15px; }
   @media (min-width: 768px) {
+    .view-fic-embed-nodes.view-display-id-news .views-row,
     .panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row {
       float: left;
       width: 50%; } }
   @media (min-width: 992px) {
+    .view-fic-embed-nodes.view-display-id-news .views-row,
     .panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row {
       float: left;
       width: 25%; } }
+  .view-fic-embed-nodes.view-display-id-news .views-row.views-row-first,
   .panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row.views-row-first {
     position: relative;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px; }
     @media (min-width: 992px) {
+      .view-fic-embed-nodes.view-display-id-news .views-row.views-row-first,
       .panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content .views-row.views-row-first {
         float: left;
         width: 50%; } }

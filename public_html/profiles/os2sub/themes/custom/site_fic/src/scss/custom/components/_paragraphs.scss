@@ -17,10 +17,11 @@
   padding-top: (2* $grid-gutter-width);
   padding-bottom: (2* $grid-gutter-width);
 }
+
 .bg-white {
   @extend .bg-undefined;
   background-color: #FFF;
-  .field{
+  .field {
     color: $gray-darker;
     border-color: $gray-darker;
   }
@@ -28,32 +29,36 @@
     padding-bottom: $grid-gutter-width;
   }
 }
+
 .bg-darker {
   background-color: $color-black;
   padding-top: (3* $grid-gutter-width);
   padding-bottom: (2* $grid-gutter-width);
-  .field{
+  .field {
     color: #FFF;
     border-color: #FFF;
   }
 }
+
 .bg-dark {
   background-color: $color-dark-gray;
   padding-top: (3* $grid-gutter-width);
   padding-bottom: (2* $grid-gutter-width);
-  .field{
+  .field {
     color: #FFF;
     border-color: #FFF;
   }
 }
+
 .bg-alternative {
   background-color: $brand-primary;
   @extend .bg-undefined;
-  .field{
+  .field {
     color: #FFF;
     border-color: #FFF;
   }
 }
+
 .top-border.bg-white {
   padding-top: ($grid-gutter-width);
 
@@ -62,14 +67,16 @@
     padding-top: floor($grid-gutter-width * 1.5);
   }
 }
+
 .page-taxonomy .paragraphs-container,
 .front .paragraphs-container {
   .entity-paragraphs-item .content {
     @extend .container;
   }
 }
-.paragraphs-items{
-  .field.field-name-field-paragraph-header{
+
+.paragraphs-items {
+  .field.field-name-field-paragraph-header {
     margin-bottom: ($grid-gutter-width /2);
     text-transform: uppercase;
     font-size: 2.368em;
@@ -78,11 +85,11 @@
     line-height: 1.1em;
   }
   .aligner {
-    .field.field-name-field-paragraph-header{
-    margin-top: $grid-gutter-width;
+    .field.field-name-field-paragraph-header {
+      margin-top: $grid-gutter-width;
     }
   }
-  .field.field-name-field-paragraph-text{
+  .field.field-name-field-paragraph-text {
     font-size: 1.25em;
     font-weight: normal;
     font-family: $font-lato;
@@ -97,21 +104,23 @@
     .field-item {
       @include make-xs-column(6);
       @include make-sm-column(4);
-      margin-bottom: ($grid-gutter-width /2 );
+      margin-bottom: ($grid-gutter-width /2);
       img {
         border: $color-black solid 5px;
       }
     }
   }
 }
+
 .pane-instagram-billeder {
 
-  .views-row.views-row-0{
+  .views-row.views-row-0 {
     padding-top: 40px;
     display: flex;
     justify-content: center;
   }
 }
+
 .panel-pane.views-container.full-width .views-container-inner {
   @include container-fixed($gutter: $grid-gutter-width);
   @media (min-width: $screen-sm-min) {
@@ -127,6 +136,8 @@
     @include make-row();
   }
 }
+
+.view-fic-embed-nodes.view-display-id-news,
 .panel-pane.views-container.full-width .views-container-inner .view-id-fic_artikler .view-content {
   .views-row {
     @include make-xs-column(12);
@@ -137,7 +148,6 @@
       @include make-md-column(6);
     }
   }
-
 }
 
 .node-type-os2web-base-contentpage {
@@ -146,9 +156,9 @@
 
     .paragraphs-item-header-text-media {
       @include make-row();
-      .paragraph-video-container{
-        .paragraph-video{
-          iframe{
+      .paragraph-video-container {
+        .paragraph-video {
+          iframe {
             height: 460px !important;
           }
         }
@@ -161,22 +171,22 @@
 // Variants
 // --------------------------------------------------
 .paragraphs-item-paragrph-address,
-.paragraphs-item-paragraph-departments{
+.paragraphs-item-paragraph-departments {
 
-  .field.field-name-field-paragraph-text{
+  .field.field-name-field-paragraph-text {
     font-family: $headings-font-family;
     font-size: 1.700em;
 
-    span{
+    span {
       display: block;
 
-      &.phone{
+      &.phone {
         color: $brand-primary;
       }
 
-      &.email{
+      &.email {
 
-        a{
+        a {
           color: $brand-secondary;
         }
       }
@@ -187,8 +197,8 @@
 .paragraphs-item-paragrph-address,
 .paragraphs-item-paragraph-departments,
 .paragraphs-item-personale,
-.paragraphs-item-webform{
-  .field.field-name-field-paragraph-header{
+.paragraphs-item-webform {
+  .field.field-name-field-paragraph-header {
     text-align: center;
     color: $brand-primary;
     font-size: 3.125em;
@@ -196,8 +206,8 @@
   }
 }
 
-.node{
-  .field.field-name-field-afsnit.field-type-paragraphs{
+.node {
+  .field.field-name-field-afsnit.field-type-paragraphs {
     & > .field-items {
       margin-top: 60px;
 
@@ -206,7 +216,7 @@
       }
     }
 
-    .field-item{
+    .field-item {
       .paragraphs-item {
         &-afsnit-m-billede,
         &-afsnit-m-link,
@@ -228,24 +238,24 @@
   }
 }
 
-.page-taxonomy{
-  .paragraphs-item-header-text-media{
-    .paragraph-video.full-width{
-      iframe{
+.page-taxonomy {
+  .paragraphs-item-header-text-media {
+    .paragraph-video.full-width {
+      iframe {
         width: 100%;
       }
     }
   }
 }
 
-.paragraphs-item-kolonner{
-  .content{
+.paragraphs-item-kolonner {
+  .content {
     margin-bottom: 1em;
 
     .field-type-link-field {
       margin: 1em 0;
 
-      a{
+      a {
         width: 100%;
         padding: 10px;
       }
