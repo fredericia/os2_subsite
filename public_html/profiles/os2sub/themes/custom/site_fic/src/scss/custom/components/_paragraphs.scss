@@ -97,6 +97,14 @@
   }
 }
 
+.paragraphs-items.paragraphs-item-fic-list-of-event-teasers {
+  .field.field-name-field-paragraph-header {
+    padding-bottom: 20px;
+    font-size: 3.5715em;
+    margin-bottom: 10px;
+  }
+}
+
 .paragraphs-item-afsnit-m-galleri {
   .field-items {
     @include make-row();

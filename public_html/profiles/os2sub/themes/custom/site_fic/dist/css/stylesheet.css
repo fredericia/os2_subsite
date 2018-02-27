@@ -11002,6 +11002,7 @@ a.icon-after .glyphicon {
   display: none; }
 
 h2.pane-title, .pane-title.heading-h2 {
+  padding-bottom: 20px;
   font-size: 3.5715em;
   color: #2a2f36; }
   h2.pane-title a, .pane-title.heading-h2 a {
@@ -11025,9 +11026,6 @@ h2.pane-title, .pane-title.heading-h2 {
 
 .menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2 li.active a {
   color: #ff4200; }
-
-.bg-white h2.pane-title, .bg-white .pane-title.heading-h2 {
-  padding-bottom: 20px; }
 
 .modal-content.popups-body {
   background-color: #fff; }
@@ -11145,6 +11143,11 @@ h1.pane-title,
   font-weight: normal;
   font-family: "Lato", sans-serif;
   margin-bottom: 30px; }
+
+.paragraphs-items.paragraphs-item-fic-list-of-event-teasers .field.field-name-field-paragraph-header {
+  padding-bottom: 20px;
+  font-size: 3.5715em;
+  margin-bottom: 10px; }
 
 .paragraphs-item-afsnit-m-galleri .field-items {
   margin-left: -15px;

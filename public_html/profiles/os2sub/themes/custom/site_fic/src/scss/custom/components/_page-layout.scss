@@ -59,8 +59,10 @@ $md-page-layout-content-inner-padding-bottom: 60px;
 }
 
 h2.pane-title {
+  padding-bottom: 20px;
   font-size: 3.5715em;
   color: $color-dark-gray;
+
   a {
     color: $color-dark-gray;
   }
@@ -107,12 +109,6 @@ h2.pane-title {
     }
   }
 }
-.bg-white {
-  h2.pane-title {
-    padding-bottom: 20px;
-  }
-}
-
 .modal-content.popups-body{
   background-color: #fff;
   header h2 a {
