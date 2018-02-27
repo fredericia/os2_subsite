@@ -14435,6 +14435,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 
 .paragraphs-item-personale {
   font-size: 1.45em; }
+  .paragraphs-item-personale h2, .paragraphs-item-personale .heading-h2 {
+    color: #192124; }
   .paragraphs-item-personale article {
     line-height: 1.2em;
     margin-bottom: 68px; }

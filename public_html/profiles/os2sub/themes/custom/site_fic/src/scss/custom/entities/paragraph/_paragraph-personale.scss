@@ -17,6 +17,10 @@
 .paragraphs-item-personale {
   font-size: 1.45em;
 
+  h2 {
+    color: $color-black;
+  }
+
   article {
     line-height: 1.2em;
     margin-bottom: 68px;
