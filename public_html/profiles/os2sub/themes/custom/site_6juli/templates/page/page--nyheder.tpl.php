@@ -123,7 +123,7 @@ if (!$social_share_title) {
             <div class="field-content">
               <div class="img-container"
                    style="background-image:url(<?php
-                   print image_style_url('6_juli_banner', $banner->field_banner_billede['und'][0]['uri']);
+                   print image_style_url('os2sub_banner', $banner->field_banner_billede['und'][0]['uri']);
                    ?>);">
               </div>
             </div>
