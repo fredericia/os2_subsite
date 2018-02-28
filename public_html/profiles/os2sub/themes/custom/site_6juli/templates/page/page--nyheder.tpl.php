@@ -112,17 +112,26 @@ if (!$social_share_title) {
   <!-- Begin - content -->
   <main class="layout__content" role="main">
 
-    <!--Slideshow begin-->
-    <div class="container-fluid">
-      <div class="background-slideshow row">
-        <?php
-        $view_popular_tags = views_get_view('os2web_events_slideshow');
-        $view_popular_tags->set_display('block_slideshow');
-        print $view_popular_tags->preview('block_slideshow');
-        ?>
+    <?php
+    $banner = node_load(276);
+    if ($banner && isset($banner->field_banner_billede['und'])) {
+      ?>
+
+      <div class="container-fluid">
+        <div class="background-slideshow row">
+          <div class="views-field views-field-field-image-event">
+            <div class="field-content">
+              <div class="img-container"
+                   style="background-image:url(<?php
+                   print image_style_url('6_juli_banner', $banner->field_banner_billede['und'][0]['uri']);
+                   ?>);">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <!--Slideshow end-->
+    <?php } ?>
+
     <div class="main-container <?php print $container_class; ?>">
 
       <header role="banner" id="page-header">
