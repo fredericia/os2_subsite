@@ -1,13 +1,12 @@
 <!-- content-with-left-and-right-sidebar.tpl.php -->
 
-
-<div class="row" <?php if (!empty($css_id)) {
+<div class="panel panel--content-with-left-and-right-sidebar" <?php if (!empty($css_id)) {
   print "id=\"$css_id\"";
 } ?>>
 
   <?php if ($content['top']): ?>
     <!-- Begin - top -->
-    <div class="row">
+    <div class="row row--first">
       <div class="col-md-12 content-top">
         <?php print $content['top']; ?>
       </div>
@@ -15,7 +14,7 @@
     <!-- End - top -->
   <?php endif ?>
 
-  <div class="row">
+  <div class="row row--second">
 
     <!-- Begin - left sidebar -->
     <div class="col-md-2">
@@ -45,7 +44,7 @@
 
   <?php if ($content['footer']): ?>
     <!-- Begin - bottom -->
-    <div class="row">
+    <div class="row row--third">
       <div class="col-md-12">
         <?php print $content['footer']; ?>
       </div>

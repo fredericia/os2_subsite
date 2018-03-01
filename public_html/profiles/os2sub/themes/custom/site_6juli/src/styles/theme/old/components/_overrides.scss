@@ -66,6 +66,16 @@
   max-width: $container-md;
   margin: 0 auto;
 }
+
+.panel--content-with-left-and-right-sidebar {
+
+  .row--first,
+  .row--second {
+    max-width: $container-md;
+    margin: 0 auto;
+  }
+}
+
 .full-width .pane-content,
 .full-width .pane-title,
 .front .full-width .pane-content,
