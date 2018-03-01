@@ -120,9 +120,7 @@ footer.footer {
 
     a.image-links__link {
       margin-bottom: 20px;
-      /*            img {
-                      height: 43px;
-                  }*/
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -146,10 +144,9 @@ footer.footer {
         margin-right: 5px;
       }
     }
+
     .social-footer {
-
       height: 20px;
-
     }
   }
 }
@@ -160,71 +157,39 @@ footer.footer {
     > .container {
       padding-top: 44px;
     }
+
     a.image-links__link {
       margin-bottom: 35px;
-      /*            img {
-                      height: 50px;
-                  }*/
+
+      img {
+        height: 70px;
+        width: auto !important;
+      }
     }
   }
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-  // Footer
-  .footer {
-  }
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
-
-  // Footer
-  .footer {
-  }
-
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
-
-  // Footer
-  .footer {
-  }
-}
+@include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-  // Footer
-  .footer {
-  }
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-  // Footer
-  .footer {
-  }
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Footer
-  .footer {
-  }
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-  // Footer
-  .footer {
-  }
-}
+.no-touchevents {}
 
 // --------------------------------------------------
 // Mixins

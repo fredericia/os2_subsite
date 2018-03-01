@@ -46,7 +46,7 @@
               </div>
               <div class="col-md-2">
                   <a class="image-links__link"><img
-                          src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/falogo-negativ.png'; ?>"></a>
+                          src="<?php print base_path() . drupal_get_path('theme', 'site_6juli') . '/dist/img/logo/falogo-negativ.png?updated=y2018d01m03'; ?>"></a>
               </div>
           
       </section>
