@@ -13066,6 +13066,9 @@ div.ctools-modal-content {
 .node {
   font-size: 1.06em;
   line-height: 1.58em; }
+  .node.view-mode-full img,
+  .node.view-mode-full .media_embed {
+    max-width: 100%; }
 
 .page-node.node-type-os2web-base-contentpage h1, .page-node.node-type-os2web-base-contentpage .heading-h1, .page-node.node-type-os2web-base-contentpage .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .page-node.node-type-os2web-base-contentpage .banner-headline {
   font-size: 3.8em;
@@ -13269,6 +13272,9 @@ div.ctools-modal-content {
   border: solid 6px #192124; }
 
 @media (max-width: 767px) {
+  .node.view-mode-full img,
+  .node.view-mode-full .media_embed {
+    height: auto !important; }
   .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager,
   .page-node .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-pager {
     display: none !important; }
@@ -13295,6 +13301,11 @@ div.ctools-modal-content {
         left: 14px;
         border: 10px solid transparent;
         border-left: 10px solid #fff; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .node.view-mode-full img,
+  .node.view-mode-full .media_embed {
+    height: auto !important; } }
 
 .node-os2web-kulturnaut-knactivity {
   position: relative;
