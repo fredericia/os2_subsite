@@ -16,9 +16,10 @@
 
 // Footer
 footer.footer {
-  padding-top: 0px;
-  margin-top: 0px;
-  padding-bottom: 80px !important;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+
   border: none;
   background-color: $color-primary;
   color: $color-font-light;
@@ -70,11 +71,19 @@ footer.footer {
     }
   }
 
+  .block-image-links {
+    text-align: center;
+  }
+
   a.image-links__link {
+    display: inline-block;
+
     padding-left: 15px;
     padding-right: 15px;
 
     img {
+      max-height: 40px;
+
       margin-bottom: 15px;
     }
   }
@@ -91,10 +100,10 @@ footer.footer {
     div {
       margin-bottom: 10px;
       p {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
       &:last-child {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
     }
   }
@@ -120,9 +129,7 @@ footer.footer {
 
     a.image-links__link {
       margin-bottom: 20px;
-      /*            img {
-                      height: 43px;
-                  }*/
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -146,10 +153,9 @@ footer.footer {
         margin-right: 5px;
       }
     }
+
     .social-footer {
-
       height: 20px;
-
     }
   }
 }
@@ -157,74 +163,45 @@ footer.footer {
 // Tablet - and up
 @include media-breakpoint-up(sm) {
   footer.footer {
+    padding-bottom: 80px !important;
+
     > .container {
       padding-top: 44px;
     }
+
+    .block-image-links {
+      text-align: right;
+    }
+
     a.image-links__link {
-      margin-bottom: 35px;
-      /*            img {
-                      height: 50px;
-                  }*/
+
+      img {
+        max-height: 70px;
+      }
     }
   }
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-  // Footer
-  .footer {
-  }
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
-
-  // Footer
-  .footer {
-  }
-
-}
+@include media-breakpoint-up(md) {}
 
 // Desktop - only
-@include media-breakpoint-only(md) {
-
-  // Footer
-  .footer {
-  }
-}
+@include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-  // Footer
-  .footer {
-  }
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-  // Footer
-  .footer {
-  }
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Footer
-  .footer {
-  }
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-  // Footer
-  .footer {
-  }
-}
+.no-touchevents {}
 
 // --------------------------------------------------
 // Mixins

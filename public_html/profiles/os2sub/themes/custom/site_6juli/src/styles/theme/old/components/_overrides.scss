@@ -58,11 +58,24 @@
 .content-width .event-teasers,
 .content-width .pane-block-1,
 .content-width .pane-events .pane-title,
-.footer .content-width,
-.page-nyheder .main-container .content-width {
+.footer .content-width {
   max-width: $container-lg;
   margin: 0 auto;
 }
+.page-nyheder .main-container .content-width {
+  max-width: $container-md;
+  margin: 0 auto;
+}
+
+.panel--content-with-left-and-right-sidebar {
+
+  .row--first,
+  .row--second {
+    max-width: $container-md;
+    margin: 0 auto;
+  }
+}
+
 .full-width .pane-content,
 .full-width .pane-title,
 .front .full-width .pane-content,
