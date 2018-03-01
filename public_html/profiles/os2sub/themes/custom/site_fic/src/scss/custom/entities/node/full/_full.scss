@@ -18,6 +18,13 @@
 .node {
   font-size: 1.06em;
   line-height: 1.58em;
+
+  &.view-mode-full {
+    img,
+    .media_embed {
+      max-width: 100%;
+    }
+  }
 }
 
 .page-node {
@@ -272,6 +279,14 @@
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
+  .node {
+    &.view-mode-full {
+      img,
+      .media_embed {
+        height: auto !important;
+      }
+    }
+  }
 
   .page-node {
     .pane-node-field-os2web-kulturnaut-slidesho .os2-box,
@@ -324,7 +339,14 @@
 
 // Tablet - only
 @include media-breakpoint-only(sm) {
-
+  .node {
+    &.view-mode-full {
+      img,
+      .media_embed {
+        height: auto !important;
+      }
+    }
+  }
 }
 
 // Desktop - and up
