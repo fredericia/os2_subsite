@@ -799,6 +799,7 @@ select {
 
     .teaser-news-img {
       flex-basis: 330px;
+      flex-shrink: 0;
     }
   }
 
