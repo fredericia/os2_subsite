@@ -231,7 +231,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
     );
 
     // Prepare related node slides.
-    $field_os2web_base_field_related = field_get_items('taxonomy_term', $vars['term'], 'field_os2web_base_field_related');
+    $field_os2web_base_field_related = _site_fic_field_get_item('taxonomy_term', $vars['term'], 'field_os2web_base_field_related');
     if (!empty($field_os2web_base_field_related)) {
       foreach ($field_os2web_base_field_related as $value) {
         $related_node = node_load($value['nid']);
@@ -257,7 +257,7 @@ function site_fic_preprocess_taxonomy_term__fic_header(&$vars) {
       }
     }
 
-    // Prepare related node slides.
+    // Prepare external links slides.
     $field_os2web_base_field_ext_link = _site_fic_field_get_item('taxonomy_term', $vars['term'], 'field_os2web_base_field_ext_link');
     if (!empty($field_os2web_base_field_ext_link)) {
       foreach ($field_os2web_base_field_ext_link as $value) {
