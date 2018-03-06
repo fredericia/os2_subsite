@@ -12961,11 +12961,11 @@ div.ctools-modal-content {
   -webkit-align-items: flex-end !important;
       -ms-flex-align: end !important;
           align-items: flex-end !important;
-  padding-bottom: 10px; }
+  padding-bottom: 6px; }
   .field-slideshow-wrapper .field-slideshow-controls .prev {
-    margin-left: 10px !important; }
+    margin-left: 6px !important; }
   .field-slideshow-wrapper .field-slideshow-controls .next {
-    margin-right: 10px !important; }
+    margin-right: 6px !important; }
 
 .field-slideshow-wrapper .field-slideshow-pager {
   display: none !important; }
