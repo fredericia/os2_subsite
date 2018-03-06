@@ -14110,18 +14110,25 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   border-color: #fff; }
 
 @media (min-width: 992px) {
+  .view-fic-embed-nodes.view-display-id-news .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a,
   .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .upper-part a {
     font-size: 1.125em;
     padding: 15px; }
+  .view-fic-embed-nodes.view-display-id-news .views-row-first .node--os2web_base_news--os2sub_teaser_mini .text-contraster,
   .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .text-contraster {
     height: 300px; }
-  .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2, .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2 {
+  .view-fic-embed-nodes.view-display-id-news .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2, .view-fic-embed-nodes.view-display-id-news .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2,
+  .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2,
+  .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2 {
     font-size: 3.125em; }
+  .view-fic-embed-nodes.view-display-id-news .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content,
   .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
     padding-left: 65px;
     padding-right: 65px; }
+    .view-fic-embed-nodes.view-display-id-news .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary,
     .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
       font-size: 1.75em; }
+    .view-fic-embed-nodes.view-display-id-news .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a,
     .views-container.full-width.panel-pane.pane-views-panes.pane-fic-artikler-panel-pane-1 .views-row-first .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
       padding: 10px 15px;
       font-size: 2em;
