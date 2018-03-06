@@ -8,10 +8,7 @@
 
 // --------------------------------------------------
 // Variables
-// --------------------------------------------------
-
-
-// --------------------------------------------------
+// --------------------------------------------------// --------------------------------------------------
 // Styling
 // --------------------------------------------------
 
@@ -69,10 +66,7 @@
       }
     }
   }
-}
-
-
-// --------------------------------------------------
+}// --------------------------------------------------
 // Variants
 // --------------------------------------------------
 
@@ -81,15 +75,10 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-up(xs) {}
 
-
-}
 // Mobile - only
-@include media-breakpoint-only(xs) {
-
-
-}
+@include media-breakpoint-only(xs) {}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
@@ -109,53 +98,29 @@
       }
     }
   }
-
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-
-  .social-icons {}
+@include media-breakpoint-only(sm) {  .social-icons {}
 }
 
 // Desktop - and up
 @include media-breakpoint-up(md) {
 
-
-
-
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
-
-
-}
+@include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Social icons
-  .social-icons {}
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-  // Social icons
-  .social-icons {}
-}
+.no-touchevents {}
 

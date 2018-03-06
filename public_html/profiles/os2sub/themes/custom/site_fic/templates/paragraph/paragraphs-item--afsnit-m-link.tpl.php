@@ -45,14 +45,17 @@
             </div>
           </div>
         <?php else: ?>
-          <div class="col-xs-12 col-md-6">
+
+          <div class="col-xs-12 col-md-6 col-md-push-6">
             <div class="aligner-left">
-              <?php print render($content['field_knap_link']); ?>
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6">
-            <?php print render($content['field_paragraph_header']); ?>
-            <?php print render($content['field_paragraph_text']); ?>
+          <div class="col-xs-12 col-md-6 col-md-pull-6">
+            <div class="aligner-right">
+              <?php print render($content['field_knap_link']); ?>
+            </div>
           </div>
         <?php endif; ?>
       </div>
