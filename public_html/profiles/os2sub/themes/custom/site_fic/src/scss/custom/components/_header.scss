@@ -160,8 +160,6 @@ section.block-locale{
 }
 // Sticky menu styles.
 .sticky {
-  @include container-fixed();
-
   background-color: transparent;
   background-image: linear-gradient(
                   rgba(0, 0, 0, .6) 20%,
@@ -172,10 +170,6 @@ section.block-locale{
   left: 0;
   right: 0;
   z-index: 1100;
-
-  .row {
-    margin: auto;
-  }
 }
 .backstretched {
   .region-header {
@@ -233,9 +227,13 @@ section.block-locale{
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
-  .sticky .row{
-    width: 750px;
+  .sticky {
+
+    .row{
+      width: 750px;
+    }
   }
+
   .backstretched {
     .region-header {
       margin-top: 250px;
@@ -273,10 +271,13 @@ section.block-locale{
 @include media-breakpoint-up(md) {
   //trick to mane menu clickable on the front page because of background slideshow
   .sticky {
+    @include container-fixed();
     @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);
     background-position: 0;
 
     .row{
+      margin: auto;
+
       width: 970px;
     }
   }

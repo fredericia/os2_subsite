@@ -11470,10 +11470,6 @@ section.block-locale {
   margin-bottom: 30px; }
 
 .sticky {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
   background-color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.6)), color-stop(70%, transparent));
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
@@ -11483,13 +11479,6 @@ section.block-locale {
   left: 0;
   right: 0;
   z-index: 1100; }
-  .sticky:before, .sticky:after {
-    content: " ";
-    display: table; }
-  .sticky:after {
-    clear: both; }
-  .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
-    margin: auto; }
 
 .backstretched .region-header {
   margin-top: 140px; }
@@ -11545,6 +11534,10 @@ section.block-locale {
 
 @media (min-width: 992px) {
   .sticky {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
     background-image: -webkit-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
     background-image: -o-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
@@ -11552,7 +11545,13 @@ section.block-locale {
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
     background-position: 0; }
+    .sticky:before, .sticky:after {
+      content: " ";
+      display: table; }
+    .sticky:after {
+      clear: both; }
     .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
+      margin: auto;
       width: 970px; }
   #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
   form.search-form {
@@ -12198,6 +12197,7 @@ div.ctools-modal-content {
     width: 970px; } }
 
 .responsive-header {
+  padding: 0 15px;
   margin-bottom: 10px; }
   .responsive-header .logo img {
     max-height: 70px; }
@@ -12974,6 +12974,9 @@ div.ctools-modal-content {
 @media (max-width: 767px) {
   .field-slideshow {
     width: 100% !important; } }
+
+body {
+  margin-left: 0 !important; }
 
 .form-control {
   font-size: 16px;
