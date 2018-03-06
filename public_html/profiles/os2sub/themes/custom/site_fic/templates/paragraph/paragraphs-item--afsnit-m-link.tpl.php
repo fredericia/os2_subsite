@@ -53,7 +53,7 @@
             </div>
           </div>
           <div class="col-xs-12 col-md-6 col-md-pull-6">
-            <div class="aligner-right">
+            <div class="aligner-left">
               <?php print render($content['field_knap_link']); ?>
             </div>
           </div>
