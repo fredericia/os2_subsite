@@ -51,38 +51,6 @@
         color: $brand-secondary;
       }
     }
-
-  }
-
-  .field-name-field-os2web-base-field-image {
-    position: relative;
-
-    .field-slideshow.field-slideshow-1{
-      border: solid 6px #192124;
-      max-width: 100% !important;
-      width: 100% !important;
-
-      .field-slideshow-slide,
-      img {
-        width: 100% !important;
-      }
-
-      img {
-        border: 0;
-      }
-    }
-
-    .field-slideshow-controls {
-      padding-bottom: 6px;
-
-      .prev {
-        margin-left: 6px !important;
-      }
-
-      .next {
-        margin-right: 6px !important;
-      }
-    }
   }
 }
 

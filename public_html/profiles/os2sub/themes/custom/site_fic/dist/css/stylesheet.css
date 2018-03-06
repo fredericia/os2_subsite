@@ -13961,24 +13961,6 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary a {
     color: #ff4200; }
 
-.os2-sectiont .field-name-field-os2web-base-field-image {
-  position: relative; }
-  .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 {
-    border: solid 6px #192124;
-    max-width: 100% !important;
-    width: 100% !important; }
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 .field-slideshow-slide,
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 img {
-      width: 100% !important; }
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow.field-slideshow-1 img {
-      border: 0; }
-  .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls {
-    padding-bottom: 6px; }
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls .prev {
-      margin-left: 6px !important; }
-    .os2-sectiont .field-name-field-os2web-base-field-image .field-slideshow-controls .next {
-      margin-right: 6px !important; }
-
 .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 h2.pane-title, .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .pane-title.heading-h2 {
   margin-bottom: 12px; }
 
