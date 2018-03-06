@@ -54,10 +54,10 @@
         margin-left: 5px !important;
         margin-right: 5px !important;
         &:last-child {
-          margin-right: 0px !important;
+          margin-right: 0 !important;
         }
         &:first-child{
-          margin-left: 0px !important;
+          margin-left: 0 !important;
         }
 
       }
@@ -65,7 +65,7 @@
     .field.field-name-field-image.field-type-image{
       img{
         border-style: solid;
-        border-width: 10px;
+        border-width: 6px;
       }
     }
   }
