@@ -14162,6 +14162,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     text-align: center; }
 
 @media (max-width: 767px) {
+  .paragraphs-item-afsnit-m-link .paragraph-position--right .field.field-name-field-paragraph-text {
+    margin-bottom: 0; }
   .paragraphs-item-afsnit-m-link .paragraph-position--right .field-name-field-knap-link {
     margin-bottom: 30px; } }
 

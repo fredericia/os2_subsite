@@ -68,6 +68,10 @@
 
     .paragraph-position--right {
 
+      .field.field-name-field-paragraph-text {
+        margin-bottom: 0;
+      }
+
       .field-name-field-knap-link {
         margin-bottom: $grid-gutter-width;
       }
