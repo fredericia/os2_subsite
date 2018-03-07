@@ -86,8 +86,8 @@ function site_fic_preprocess_page(&$variables) {
     _color_page_alter($variables);
   }
 
-  $book_button_url = variable_get('book_button_url', FALSE);
-  if ($book_button_url) {
+
+  if ($book_button_url = _site_fic_get_book_url()) {
     $variables['page']['navigation']['book_link'] = array(
       '#type' => 'container',
       '#attributes' => array('class' => array('book-link')),
@@ -588,7 +588,7 @@ function _site_fic_get_header_bottom_links(&$vars, $term) {
   }
 }
 
-/*
+/**
  * Implements template_preprocess_entity().
  */
 function site_fic_preprocess_entity(&$variables) {
@@ -615,7 +615,7 @@ function site_fic_preprocess_entity(&$variables) {
   }
 }
 
-/*
+/**
  * Implements template_preprocess_entity().
  * List of news teasers.
  */
@@ -638,7 +638,7 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   }
 }
 
-/*
+/**
  * Implements template_preprocess_entity().
  * List of event teasers.
  */
@@ -661,7 +661,7 @@ function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   }
 }
 
-/*
+/**
  * Implements template_preprocess_entity().
  * List of Instagram teasers.
  */
@@ -682,4 +682,33 @@ function site_fic_preprocess_entity__fic_list_of_instagram_teasers(&$variables) 
   } else {
     $variables['embedded_view'] = views_embed_view('fic_embed_files', 'instagram', $contextual_filter);
   }
+}
+
+/**
+ * Get book url function.
+ */
+function _site_fic_get_book_url() {
+  // Fetch term from menu active trail.
+  $term = fic_common_load_term_by_menutrail();
+
+  $node = menu_get_object();
+  // When page is node.
+  if (!empty($node) && empty($term)) {
+    if (!empty($node->field_sektion) && $node->type == 'os2web_base_contentpage') {
+      $field_sektion = field_get_items('node', $node, 'field_sektion');
+      $term = taxonomy_term_load($field_sektion[0]['tid']);
+    }
+  }
+
+  global $language;
+  $default_book_url = variable_get('book_button_url_' . $language->language, '');
+  // Check available terms and nodes for FIC header.
+  if ((empty($term) || $term->vocabulary_machine_name != 'os2web_base_tax_site_structure')
+    && (empty($node) || $node->type != 'os2web_base_contentpage')) {
+    return $default_book_url;
+  }
+
+  $book_url = variable_get('book_button_url_' . $term->tid . '_' . $language->language);
+
+  return !empty($book_url) ? $book_url : $default_book_url;
 }

@@ -68,12 +68,37 @@ function fic_common_block_view_locale_language_alter(&$data, $block) {
  * @return mixed
  */
 function fic_settings($form, &$form_state) {
-  $form['book_button_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('The "BOOK" blue button url'),
-    '#default_value' => variable_get('book_button_url'),
-    '#description' => t('Regular URL with protocos. Example: http://google.com'),
+  $form['book_button_url_title'] = array(
+    '#prefix' => '<div class="form-item"><label>',
+    '#markup' => t('The "BOOK" blue button url'),
+    '#suffix' => '</label></div>',
   );
+
+  global $language;
+
+  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_base_tax_site_structure');
+  $terms = entity_load('taxonomy_term', FALSE, ['vid' => $vocabulary->vid]);
+  foreach ($terms as $term) {
+    $book_url = variable_get('book_button_url_' . $term->tid . '_' . $language->language, '');
+    $form['wrapper_' . $term->tid] = array(
+      '#type' => 'fieldset',
+      '#title' => $term->name,
+      '#collapsible' => TRUE,
+      '#collapsed' => empty($book_url),
+      'book_button_url_' . $term->tid . '_' . $language->language => array(
+        '#type' => 'textfield',
+        '#title' => t('Specify book url set for section.'),
+        '#default_value' => $book_url,
+      ),
+    );
+  }
+
+  $form['book_button_url_' . $language->language] = array(
+    '#type' => 'textfield',
+    '#title' => t('Default button url'),
+    '#default_value' => variable_get('book_button_url_' . $language->language),
+  );
+
   $form['opening_hours_node_reference'] = array(
     '#type' => 'textfield',
     '#title' => t('The opening hours page node id'),
