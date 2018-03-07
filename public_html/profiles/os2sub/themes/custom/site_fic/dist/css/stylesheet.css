@@ -14161,6 +14161,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .paragraphs-item-afsnit-m-link .aligner-right {
     text-align: center; }
 
+@media (max-width: 767px) {
+  .paragraphs-item-afsnit-m-link .paragraph-position--right .field-name-field-knap-link {
+    margin-bottom: 30px; } }
+
 @media (min-width: 992px) {
   .paragraphs-item-afsnit-m-link {
     padding-bottom: 60px;

@@ -62,7 +62,18 @@
 @include media-breakpoint-up(xs) {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(xs) {
+
+  .paragraphs-item-afsnit-m-link {
+
+    .paragraph-position--right {
+
+      .field-name-field-knap-link {
+        margin-bottom: $grid-gutter-width;
+      }
+    }
+  }
+}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {}

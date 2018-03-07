@@ -29,36 +29,40 @@
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
     <div class="container">
-      <div class="row">
-        <!--        Check if sides switch is in off position-->
-        <?php if ( !$field_paragraph_position ): ?>
+      <?php if ( !$field_paragraph_position ): ?>
+        <div class="paragraph-position paragraph-position--left">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="aligner-left">
+                <?php print render($content['field_paragraph_header']); ?>
+                <?php print render($content['field_paragraph_text']); ?>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="aligner-right">
+                <?php print render($content['field_knap_link']); ?>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <div class="col-xs-12 col-md-6">
-            <div class="aligner-left">
-              <?php print render($content['field_paragraph_header']); ?>
-              <?php print render($content['field_paragraph_text']); ?>
+      <?php else: ?>
+        <div class="paragraph-position paragraph-position--right">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div class="aligner-left">
+                <?php print render($content['field_knap_link']); ?>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="aligner-left">
+                <?php print render($content['field_paragraph_header']); ?>
+                <?php print render($content['field_paragraph_text']); ?>
+              </div>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6">
-            <div class="aligner-right">
-              <?php print render($content['field_knap_link']); ?>
-            </div>
-          </div>
-        <?php else: ?>
-
-          <div class="col-xs-12 col-md-6 col-md-push-6">
-            <div class="aligner-left">
-              <?php print render($content['field_paragraph_header']); ?>
-              <?php print render($content['field_paragraph_text']); ?>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-6 col-md-pull-6">
-            <div class="aligner-left">
-              <?php print render($content['field_knap_link']); ?>
-            </div>
-          </div>
-        <?php endif; ?>
-      </div>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
