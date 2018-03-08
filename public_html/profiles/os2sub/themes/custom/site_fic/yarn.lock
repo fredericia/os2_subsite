@@ -1053,6 +1053,10 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
+lity@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/lity/-/lity-2.3.0.tgz#a5920f908ce037eeb3417c690b44959ff56d7f05"
+
 livereload-js@^2.2.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/livereload-js/-/livereload-js-2.2.2.tgz#6c87257e648ab475bc24ea257457edcc1f8d0bc2"

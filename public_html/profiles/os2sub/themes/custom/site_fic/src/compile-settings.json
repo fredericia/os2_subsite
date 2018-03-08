@@ -17,6 +17,7 @@
       "src/vendor/jquery-sticky/jquery.sticky.js",
       "node_modules/sidr/dist/jquery.sidr.js",
       "node_modules/stacktable.js/stacktable.js",
+      "node_modules/lity/dist/lity.js",
       "src/js/custom-slinky.js",
       "src/js/page-layout.js",
       "src/js/header.js",
