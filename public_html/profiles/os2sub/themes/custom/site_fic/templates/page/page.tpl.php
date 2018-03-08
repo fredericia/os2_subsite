@@ -130,10 +130,8 @@
                             <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
                         <?php endif; ?>
                         <?php if (!empty($breadcrumb)): ?>
-                            <div class="row hidden-xs">
-                                <div class="col-xs-6 breadcrumb-wrapper">
-                                    <?php print $breadcrumb;?>
-                                </div>
+                            <div class="breadcrumb-wrapper">
+                                <?php print $breadcrumb;?>
                             </div>
                         <?php endif; ?>
                         <a id="main-content"></a>
