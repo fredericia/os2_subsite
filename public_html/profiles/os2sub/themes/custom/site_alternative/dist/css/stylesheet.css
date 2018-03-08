@@ -11000,7 +11000,7 @@ body.not-front.page-node.node-type-os2web-kulturnaut-knactivity .collapse .field
 
 .field-type-image .field-slideshow {
   z-index: -1;
-  height: auto !important; }
+  height: auto; }
 
 .field-type-image .field-slideshow-controls a {
   position: absolute;
