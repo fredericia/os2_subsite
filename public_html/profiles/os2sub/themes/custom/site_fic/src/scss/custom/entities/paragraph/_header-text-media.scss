@@ -10,56 +10,49 @@
 // Variables
 // --------------------------------------------------
 
-
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-header-text-media{
-  padding-bottom: 40px;
-  padding-top: 40px;
 
-  .row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    // Fixes Safari issue (https://stackoverflow.com/questions/34250282/flexbox-safari-bug-flex-wrap)
-    &:after,
-    &:before {
-      content: normal; // IE doesn't support `initial`
-    }
-    .field.field-name-field-paragraph-header{
-      color: $color-red;
+.paragraphs-item-header-text-media {
+  padding-bottom: $grid-gutter-width;
+  padding-top: $grid-gutter-width;
+
+  .field-name-field-paragraph-header {
+    color: $color-red;
+  }
+
+  .field-name-field-image {
+    border: 6px solid $color-black;
+
+    img {
+      width: 100%;
+      height: auto;
     }
 
-    .paragraph-video-container{
-      .paragraph-video {
-        iframe{
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-        .content{
-          position: relative;
-          padding-left: 0;
-          padding-right: 0;
-          padding-bottom: 56.25%; /* 16:9 */
-          padding-top: 25px;
-          height: 0;
-          width: 100%;
-        }
+    // Responsive embed (look at Bootstrap responsive-embed.scss)
+    .file-video {
+      position: relative;
+      display: block;
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+
+      .embed-responsive-item,
+      iframe,
+      embed,
+      object,
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
       }
     }
   }
-
-  .file-video {
-    border: 6px solid $color-black;
-  }
-}
-.page-node .paragraphs-item-header-text-media {
-  padding-bottom: $grid-gutter-width;
-  padding-top: $grid-gutter-width;
 }
 
 // --------------------------------------------------
@@ -71,15 +64,10 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-up(xs) {}
 
-
-}
 // Mobile - only
-@include media-breakpoint-only(xs) {
-
-
-}
+@include media-breakpoint-only(xs) {}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
@@ -88,53 +76,25 @@
     padding-bottom: 60px;
     padding-top: 60px;
   }
-
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-
-  .social-icons {}
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
-
-
-
-
-}
+@include media-breakpoint-up(md) {}
 
 // Desktop - only
-@include media-breakpoint-only(md) {
-
-
-}
+@include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Social icons
-  .social-icons {}
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-  // Social icons
-  .social-icons {}
-}
-
+.no-touchevents {}
