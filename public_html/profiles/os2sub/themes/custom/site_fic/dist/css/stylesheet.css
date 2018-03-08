@@ -14440,7 +14440,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
       display: block;
       height: 0;
       padding: 0;
-      overflow: hidden; }
+      overflow: hidden;
+      padding-bottom: 56.25%; }
       .paragraphs-item-header-text-media .field-name-field-image .file-video .embed-responsive-item,
       .paragraphs-item-header-text-media .field-name-field-image .file-video iframe,
       .paragraphs-item-header-text-media .field-name-field-image .file-video embed,
