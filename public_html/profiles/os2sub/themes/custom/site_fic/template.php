@@ -695,7 +695,8 @@ function site_fic_preprocess_entity__header_text_media(&$variables) {
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_video_url')) {
     $variables['show_media_in_modal'] = TRUE;
-    $variables['url_for_media_modal'] = $fields[0]['value'];
+    $variables['url_for_media_modal'] = $fields[0]['url'];
+
   }
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_position_of_media')) {
