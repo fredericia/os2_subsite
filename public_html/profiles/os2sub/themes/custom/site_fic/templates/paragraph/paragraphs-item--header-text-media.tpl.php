@@ -28,34 +28,49 @@
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
     <div class="container">
+      <?php if ($position_of_media == 'left'): ?>
+        <div class="row">
+          <div class="col-xs-12 col-lg-6 paragraph-video-container">
+            <div class="paragraph-video">
+              <?php print render($content['field_image']); ?>
+            </div>
+          </div>
+          <div class="col-xs-12 col-lg-6">
+            <div class="aligner">
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
+            </div>
+          </div>
+        </div>
+      <?php elseif ($position_of_media == 'right'): ?>
+        <div class="row">
+          <div class="col-xs-12 col-lg-6">
+            <div class="aligner">
+              <?php print render($content['field_paragraph_header']); ?>
+              <?php print render($content['field_paragraph_text']); ?>
+            </div>
+          </div>
+          <div class="col-xs-12 col-lg-6 paragraph-video-container">
+            <div class="paragraph-video">
+              <?php print render($content['field_image']); ?>
+            </div>
+          </div>
+        </div>
+      <?php else : ?>
       <div class="row">
-        <!--        Check if sides switch is in off position-->
-        <?php if ( !$field_paragraph_position ): ?>
-          <div class="col-xs-12 col-lg-6 paragraph-video-container">
-            <div class="paragraph-video">
-              <?php print render($content['field_image']); ?>
-            </div>
+        <div class="col-xs-12">
+          <div class="paragraph-video">
+            <?php print render($content['field_image']); ?>
           </div>
-          <div class="col-xs-12 col-lg-6">
-            <div class="aligner">
-              <?php print render($content['field_paragraph_header']); ?>
-              <?php print render($content['field_paragraph_text']); ?>
-            </div>
-          </div>
-        <?php else : ?>
-          <div class="col-xs-12 col-lg-6">
-            <div class="aligner">
-              <?php print render($content['field_paragraph_header']); ?>
-              <?php print render($content['field_paragraph_text']); ?>
-            </div>
-          </div>
-          <div class="col-xs-12 col-lg-6 paragraph-video-container">
-            <div class="paragraph-video">
-              <?php print render($content['field_image']); ?>
-            </div>
-          </div>
-        <?php endif; ?>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <?php print render($content['field_paragraph_header']); ?>
+          <?php print render($content['field_paragraph_text']); ?>
+        </div>
+      </div>
+      <?php endif; ?>
     </div>
   </div>
 </div>
