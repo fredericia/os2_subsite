@@ -693,10 +693,17 @@ function site_fic_preprocess_entity__header_text_media(&$variables) {
   $variables['position_of_media'] = '';
   $variables['show_media_in_modal'] = FALSE;
 
-  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_video_url')) {
-    $variables['show_media_in_modal'] = TRUE;
-    $variables['url_for_media_modal'] = $fields[0]['url'];
+  // We only want to show media in a modal if the media is an image - not a video
+  if ($field_image = field_get_items('paragraphs_item', $paragraph, 'field_image')) {
+    $image = $field_image[0];
 
+    if ($image['type'] == 'image') {
+
+      if ($field_video_url = field_get_items('paragraphs_item', $paragraph, 'field_video_url')) {
+        $variables['show_media_in_modal'] = TRUE;
+        $variables['url_for_media_modal'] = $field_video_url[0]['url'];
+      }
+    }
   }
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_position_of_media')) {

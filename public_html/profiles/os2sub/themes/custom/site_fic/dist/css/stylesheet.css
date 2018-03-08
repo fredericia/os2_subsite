@@ -14453,6 +14453,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
         height: 100%;
         width: 100%;
         border: 0; }
+  .paragraphs-item-header-text-media .position-of-media--centered .field-name-field-image {
+    margin-bottom: 30px; }
 
 @media (min-width: 768px) {
   .paragraphs-item-header-text-media {
