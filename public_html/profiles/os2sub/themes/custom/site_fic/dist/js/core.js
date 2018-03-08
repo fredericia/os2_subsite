@@ -4626,6 +4626,16 @@ var header = (function ($) {
         }
     };
 
+    // Lity
+    $('a[rel="modalbox"]').on('click', function(event) {
+        event.preventDefault();
+
+        var $element = $(this),
+            href = $element.attr('href');
+
+        lity(href);
+    });
+
 })(jQuery);
 
 //# sourceMappingURL=core.js.map
