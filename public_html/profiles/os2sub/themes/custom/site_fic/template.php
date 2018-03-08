@@ -690,6 +690,7 @@ function site_fic_preprocess_entity__fic_list_of_instagram_teasers(&$variables) 
  */
 function site_fic_preprocess_entity__header_text_media(&$variables) {
   $paragraph = $variables['paragraphs_item'];
+  $variables['position_of_media'] = '';
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_position_of_media')) {
     $variables['position_of_media'] = $fields[0]['value'];
