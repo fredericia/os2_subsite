@@ -32,7 +32,13 @@
         <div class="row">
           <div class="col-xs-12 col-lg-6 paragraph-video-container">
             <div class="paragraph-video">
-              <?php print render($content['field_image']); ?>
+              <?php if ($show_media_in_modal): ?>
+                <a href="<?=$url_for_media_modal; ?>" data-lity>
+                  <?php print render($content['field_image']); ?>
+                </a>
+              <?php else: ?>
+                <?php print render($content['field_image']); ?>
+              <?php endif; ?>
             </div>
           </div>
           <div class="col-xs-12 col-lg-6">
@@ -52,7 +58,13 @@
           </div>
           <div class="col-xs-12 col-lg-6 paragraph-video-container">
             <div class="paragraph-video">
-              <?php print render($content['field_image']); ?>
+              <?php if ($show_media_in_modal): ?>
+                <a href="<?=$url_for_media_modal; ?>" data-lity>
+                  <?php print render($content['field_image']); ?>
+                </a>
+              <?php else: ?>
+                <?php print render($content['field_image']); ?>
+              <?php endif; ?>
             </div>
           </div>
         </div>
@@ -60,7 +72,13 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="paragraph-video">
-            <?php print render($content['field_image']); ?>
+            <?php if ($show_media_in_modal): ?>
+              <a href="<?=$url_for_media_modal; ?>" data-lity>
+                <?php print render($content['field_image']); ?>
+              </a>
+            <?php else: ?>
+              <?php print render($content['field_image']); ?>
+            <?php endif; ?>
           </div>
         </div>
       </div>
