@@ -43,7 +43,7 @@
 .field-type-image {
   .field-slideshow {
     z-index: -1;
-    height: auto !important; // overrides the inline set height
+    height: auto; // overrides the inline set height
   }
   .field-slideshow-controls {
     a {
