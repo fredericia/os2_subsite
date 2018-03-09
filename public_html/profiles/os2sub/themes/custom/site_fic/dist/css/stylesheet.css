@@ -13286,6 +13286,9 @@ div.ctools-modal-content {
   -webkit-box-shadow: none !important;
           box-shadow: none !important; }
 
+.sidr__toggle {
+  border: 0; }
+
 .term-fic-header {
   margin-right: auto;
   margin-left: auto;
