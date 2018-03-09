@@ -11887,8 +11887,6 @@ h1.pane-title,
 
 .view-fic-embed-files.view-display-id-instagram .views-row.views-row-0,
 .pane-instagram-billeder .views-row.views-row-0 {
-  padding-top: 40px;
-  padding-bottom: 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11896,7 +11894,9 @@ h1.pane-title,
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  padding-bottom: 70px;
+  text-align: center; }
 
 .panel-pane.views-container.full-width .views-container-inner {
   margin-right: auto;
@@ -12039,6 +12039,12 @@ h1.pane-title,
       padding: 10px; }
   .paragraphs-item-kolonner .content .field-type-image img {
     border: #192124 solid 5px; }
+
+@media (min-width: 768px) {
+  .view-fic-embed-files.view-display-id-instagram .views-row.views-row-0,
+  .pane-instagram-billeder .views-row.views-row-0 {
+    padding-top: 40px;
+    padding-bottom: 40px; } }
 
 .region-header {
   margin-left: -15px;

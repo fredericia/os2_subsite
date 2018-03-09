@@ -144,10 +144,13 @@
 .pane-instagram-billeder {
 
   .views-row.views-row-0 {
-    padding-top: 40px;
-    padding-bottom: 40px;
     display: flex;
+
     justify-content: center;
+
+    padding-bottom: 70px;
+
+    text-align: center;
   }
 }
 
@@ -310,15 +313,19 @@
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
-
-  // Header
-  .paragraphs {
-  }
 }
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
+  .view-fic-embed-files.view-display-id-instagram,
+  .pane-instagram-billeder {
+
+    .views-row.views-row-0 {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
 }
 
 // Tablet - only
