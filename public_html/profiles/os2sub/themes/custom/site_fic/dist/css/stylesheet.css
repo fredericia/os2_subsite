@@ -11344,10 +11344,17 @@ h1.pane-title,
   font-family: "Lato", sans-serif;
   margin-bottom: 30px; }
 
-.paragraphs-items.paragraphs-item-fic-list-of-event-teasers .field.field-name-field-paragraph-header {
+.entity-paragraphs-item.paragraphs-item-fic-list-of-event-teasers .paragraph__heading__title {
   padding-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 3.5715em;
-  margin-bottom: 10px; }
+  text-transform: initial; }
+
+.entity-paragraphs-item.paragraphs-item-fic-list-of-event-teasers .field.field-name-field-paragraph-header {
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  text-transform: initial; }
 
 .paragraphs-item-afsnit-m-galleri .field-items {
   margin-left: -15px;
