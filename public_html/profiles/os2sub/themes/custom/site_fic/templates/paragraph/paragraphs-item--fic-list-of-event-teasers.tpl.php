@@ -10,6 +10,16 @@
     <?php endif; ?>
 
     <?php print $embedded_view; ?>
+
+    <div class="more-link">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-md-push-9 col-sm-push-6">
+          <a href="/fic-kommende-arrangementer">
+            <?php print t('See more'); ?>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
