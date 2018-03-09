@@ -11895,7 +11895,7 @@ h1.pane-title,
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
   text-align: center; }
 
 .paragraphs-item-afsnit-m-alm-tekss .field.field-name-field-paragraph-text {
@@ -12042,6 +12042,16 @@ h1.pane-title,
       padding: 10px; }
   .paragraphs-item-kolonner .content .field-type-image img {
     border: #192124 solid 5px; }
+
+@media (max-width: 767px) {
+  .bg-white.paragraphs-item-afsnit-m-billede {
+    padding-bottom: 30px; }
+  .bg-undefined, .bg-white, .bg-alternative,
+  .bg-dark,
+  .page-nyheder .main-container,
+  .bg-darker {
+    padding-top: 30px;
+    padding-bottom: 30px; } }
 
 @media (min-width: 768px) {
   .view-fic-embed-files.view-display-id-instagram .views-row.views-row-0,
