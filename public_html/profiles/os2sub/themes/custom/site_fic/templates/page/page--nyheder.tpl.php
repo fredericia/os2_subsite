@@ -95,14 +95,13 @@
                 </button>
 
             </div>
-
-            <div class="responsive-header__row responsive-header__row--second">
-              <?php print $search_block; ?>
-            </div>
         </div>
         <!-- End - responsive header -->
       </div>
       <div class="header-search-form hidden-xs">
+        <?php print $search_block; ?>
+      </div>
+      <div class="responsive-header__row responsive-header__row--second visible-xs">
         <?php print $search_block; ?>
       </div>
       <?php print render($page['header']); ?>

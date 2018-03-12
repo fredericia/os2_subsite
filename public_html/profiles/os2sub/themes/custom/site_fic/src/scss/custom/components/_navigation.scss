@@ -222,8 +222,11 @@ $navigation-bottom-border-color: $color-white;
 // Tablet - only
 @include media-breakpoint-only(sm) {
 
-  // Navigation
-  .navigation-wrapper {}
+  .topnav-wrapper {
+    .nav > li > a {
+      padding: 10px 5px;
+    }
+  }
 }
 
 // Desktop - and up

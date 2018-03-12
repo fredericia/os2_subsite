@@ -27,66 +27,6 @@
       color: #fff;
     }
   }
-
-  // We are in a hurry, why everything has been !important'ed.
-  // i made this decisions, because it would take a long time to
-  // avoid using it, because of the specificity used elsewhere.
-  .search-form,
-  .views-exposed-form {
-
-    .form-control {
-      border: 0;
-
-      height: $input-height-base !important; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-      padding: $padding-base-vertical $padding-base-horizontal !important;
-      font-size: $font-size-large !important;
-      line-height: $line-height-base !important;
-      color: $text-color !important;
-      background-color: #fff;
-      border-color: #fff;
-
-      @include placeholder(#ff4200 !important);
-    }
-
-    .btn {
-      border: 1px solid #fff;
-      background-color: #fff;
-
-      padding: $padding-base-vertical $padding-base-horizontal !important;
-      font-size: 0 !important;
-      line-height: $line-height-base !important;
-
-      &:after {
-        font-size: $font-size-base !important;
-        color: #ff4200;
-      }
-    }
-  }
-
-  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button button {
-    border: 1px solid #fff;
-    background-color: #fff;
-
-    padding: $padding-base-vertical $padding-base-horizontal !important;
-    font-size: 0 !important;
-    line-height: $line-height-base !important;
-
-    &:after {
-      font-size: $font-size-base !important;
-      color: #ff4200;
-    }
-  }
-
-  .views-exposed-widget.views-submit-button {
-    top: 0 !important;
-  }
-}
-
-.responsive-header__row {
-
-  + .responsive-header__row {
-    margin-top: 10px;
-  }
 }
 
 .responsive-header__row--first {
@@ -94,3 +34,96 @@
 
   align-content: center;
 }
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+  .search-form,
+  .views-exposed-form {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+
+    .form-control {
+      border: 0;
+
+      height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+      padding: $padding-base-vertical $padding-base-horizontal;
+      font-size: $font-size-large !important;
+      line-height: $line-height-base;
+      color: $text-color !important;
+      background-color: #fff;
+      border-color: #fff;
+
+      @include placeholder(#ff4200 !important);
+    }
+  }
+
+  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button {
+    top: 0;
+
+    button {
+      border: 1px solid #fff;
+      background-color: #fff;
+
+      padding: $padding-base-vertical $padding-base-horizontal !important;
+      font-size: 0;
+      line-height: $line-height-base;
+
+      &:after {
+        font-size: $font-size-base;
+        color: #ff4200;
+      }
+    }
+  }
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+}
+
+// Print
+@media print {
+}
+
+// Touch
+.touchevents {
+}
+
+// No touch
+.no-touchevents {
+}
+
+// --------------------------------------------------
+// Mixins
+// --------------------------------------------------

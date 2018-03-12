@@ -228,9 +228,20 @@ section.block-locale{
 // Tablet - and up
 @include media-breakpoint-up(sm) {
   .sticky {
+    @include container-fixed();
+    @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);
 
     .row{
+      margin: auto;
       width: 750px;
+    }
+  }
+
+  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
+  form.search-form {
+    height: 60px;
+    input.form-control.form-text {
+      height: 60px;
     }
   }
 
@@ -271,22 +282,12 @@ section.block-locale{
 @include media-breakpoint-up(md) {
   //trick to mane menu clickable on the front page because of background slideshow
   .sticky {
-    @include container-fixed();
-    @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);
     background-position: 0;
 
     .row{
       margin: auto;
 
       width: 970px;
-    }
-  }
-
-  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
-  form.search-form {
-    height: 60px;
-    input.form-control.form-text {
-      height: 60px;
     }
   }
 
