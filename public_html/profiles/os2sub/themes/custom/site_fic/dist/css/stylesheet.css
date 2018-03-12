@@ -12238,8 +12238,31 @@ section.block-locale {
     background-position: 0 0; } }
 
 @media (min-width: 768px) {
-  .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
-    width: 750px; }
+  .sticky {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-image: -webkit-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
+    background-image: -o-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
+    background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0); }
+    .sticky:before, .sticky:after {
+      content: " ";
+      display: table; }
+    .sticky:after {
+      clear: both; }
+    .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
+      margin: auto;
+      width: 750px; }
+  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
+  form.search-form {
+    height: 60px; }
+    #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search input.form-control.form-text,
+    form.search-form input.form-control.form-text {
+      height: 60px; }
   .backstretched .region-header {
     margin-top: 250px; }
   .header-container {
@@ -12263,31 +12286,10 @@ section.block-locale {
 
 @media (min-width: 992px) {
   .sticky {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-image: -webkit-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
-    background-image: -o-linear-gradient(top, #192124 0%, rgba(25, 33, 36, 0) 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
-    background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
     background-position: 0; }
-    .sticky:before, .sticky:after {
-      content: " ";
-      display: table; }
-    .sticky:after {
-      clear: both; }
     .sticky .row, .sticky .page-nyheder .view-os2sub-nyheder .view-content, .page-nyheder .view-os2sub-nyheder .sticky .view-content, .sticky .page-node .os2-section.full-width .paragraphs-container .view-content, .page-node .os2-section.full-width .paragraphs-container .sticky .view-content, .sticky .activities-list-background .activities-list-container .panels-flexible-region-inside, .activities-list-background .activities-list-container .sticky .panels-flexible-region-inside {
       margin: auto;
       width: 970px; }
-  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search,
-  form.search-form {
-    height: 60px; }
-    #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search input.form-control.form-text,
-    form.search-form input.form-control.form-text {
-      height: 60px; }
   .backstretched .region-header {
     margin-top: 200px; }
   .header-container {
@@ -12467,6 +12469,10 @@ section.block-locale {
   .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content ul.dropdown-menu {
     border: none;
     padding: 0; }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .topnav-wrapper .nav > li > a {
+    padding: 10px 5px; } }
 
 @media (min-width: 1230px) {
   .headerwrapper-inner .navbar-collapse {
@@ -13092,143 +13098,6 @@ div.ctools-modal-content {
     .responsive-header .sidr__toggle .icon {
       font-size: 24px;
       color: #fff; }
-  .responsive-header .search-form .form-control,
-  .responsive-header .views-exposed-form .form-control {
-    border: 0;
-    height: 38px !important;
-    padding: 8px 12px !important;
-    font-size: 16px !important;
-    line-height: 1.428571429 !important;
-    color: #5C4B51 !important;
-    background-color: #fff;
-    border-color: #fff; }
-    .responsive-header .search-form .form-control::-moz-placeholder,
-    .responsive-header .views-exposed-form .form-control::-moz-placeholder {
-      color: #ff4200 !important;
-      opacity: 1; }
-    .responsive-header .search-form .form-control:-ms-input-placeholder,
-    .responsive-header .views-exposed-form .form-control:-ms-input-placeholder {
-      color: #ff4200 !important; }
-    .responsive-header .search-form .form-control::-webkit-input-placeholder,
-    .responsive-header .views-exposed-form .form-control::-webkit-input-placeholder {
-      color: #ff4200 !important; }
-  .responsive-header .search-form .btn, .responsive-header .search-form .topnav-wrapper.user-nav .region.region-navigation .book-link a, .topnav-wrapper.user-nav .region.region-navigation .book-link .responsive-header .search-form a, .responsive-header .search-form .banner .banner-wrapper a, .banner .banner-wrapper .responsive-header .search-form a, .responsive-header .search-form .html #sliding-popup .popup-content #popup-buttons button, .html #sliding-popup .popup-content #popup-buttons .responsive-header .search-form button, .responsive-header .search-form body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, body.page-search.page-search-content section.block.block-system.block-system > form .responsive-header .search-form button.btn.btn-primary, .responsive-header .search-form .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-fic-list-of-event-teasers .more-link a, .paragraphs-item-fic-list-of-event-teasers .more-link .responsive-header .search-form a, .responsive-header .search-form
-  .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
-  .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link .responsive-header .search-form a, .responsive-header .search-form
-  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a,
-  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .responsive-header .search-form a, .responsive-header .search-form .paragraphs-item-webform .form-actions .webform-submit.form-submit, .paragraphs-item-webform .form-actions .responsive-header .search-form .webform-submit.form-submit, .responsive-header .search-form .paragraphs-item-kolonner .field-name-field-knap-link a, .paragraphs-item-kolonner .field-name-field-knap-link .responsive-header .search-form a,
-  .responsive-header .views-exposed-form .btn,
-  .responsive-header .views-exposed-form .topnav-wrapper.user-nav .region.region-navigation .book-link a, .topnav-wrapper.user-nav .region.region-navigation .book-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .banner .banner-wrapper a, .banner .banner-wrapper
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .html #sliding-popup .popup-content #popup-buttons button, .html #sliding-popup .popup-content #popup-buttons
-  .responsive-header .views-exposed-form button,
-  .responsive-header .views-exposed-form body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, body.page-search.page-search-content section.block.block-system.block-system > form
-  .responsive-header .views-exposed-form button.btn.btn-primary,
-  .responsive-header .views-exposed-form .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-fic-list-of-event-teasers .more-link a, .paragraphs-item-fic-list-of-event-teasers .more-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form
-  .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
-  .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form
-  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a,
-  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link
-  .responsive-header .views-exposed-form a,
-  .responsive-header .views-exposed-form .paragraphs-item-webform .form-actions .webform-submit.form-submit, .paragraphs-item-webform .form-actions
-  .responsive-header .views-exposed-form .webform-submit.form-submit,
-  .responsive-header .views-exposed-form .paragraphs-item-kolonner .field-name-field-knap-link a, .paragraphs-item-kolonner .field-name-field-knap-link
-  .responsive-header .views-exposed-form a {
-    border: 1px solid #fff;
-    background-color: #fff;
-    padding: 8px 12px !important;
-    font-size: 0 !important;
-    line-height: 1.428571429 !important; }
-    .responsive-header .search-form .btn:after, .responsive-header .search-form .topnav-wrapper.user-nav .region.region-navigation .book-link a:after, .topnav-wrapper.user-nav .region.region-navigation .book-link .responsive-header .search-form a:after, .responsive-header .search-form .banner .banner-wrapper a:after, .banner .banner-wrapper .responsive-header .search-form a:after, .responsive-header .search-form .html #sliding-popup .popup-content #popup-buttons button:after, .html #sliding-popup .popup-content #popup-buttons .responsive-header .search-form button:after, .responsive-header .search-form body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary:after, body.page-search.page-search-content section.block.block-system.block-system > form .responsive-header .search-form button.btn.btn-primary:after, .responsive-header .search-form .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a:after, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-fic-list-of-event-teasers .more-link a:after, .paragraphs-item-fic-list-of-event-teasers .more-link .responsive-header .search-form a:after, .responsive-header .search-form
-    .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a:after,
-    .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link .responsive-header .search-form a:after, .responsive-header .search-form
-    .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a:after,
-    .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:after, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:after, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:after, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:after, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-paragrph-address .field.field-name-field-knap-link a:after, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .responsive-header .search-form a:after, .responsive-header .search-form .paragraphs-item-webform .form-actions .webform-submit.form-submit:after, .paragraphs-item-webform .form-actions .responsive-header .search-form .webform-submit.form-submit:after, .responsive-header .search-form .paragraphs-item-kolonner .field-name-field-knap-link a:after, .paragraphs-item-kolonner .field-name-field-knap-link .responsive-header .search-form a:after,
-    .responsive-header .views-exposed-form .btn:after,
-    .responsive-header .views-exposed-form .topnav-wrapper.user-nav .region.region-navigation .book-link a:after, .topnav-wrapper.user-nav .region.region-navigation .book-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .banner .banner-wrapper a:after, .banner .banner-wrapper
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .html #sliding-popup .popup-content #popup-buttons button:after, .html #sliding-popup .popup-content #popup-buttons
-    .responsive-header .views-exposed-form button:after,
-    .responsive-header .views-exposed-form body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary:after, body.page-search.page-search-content section.block.block-system.block-system > form
-    .responsive-header .views-exposed-form button.btn.btn-primary:after,
-    .responsive-header .views-exposed-form .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a:after, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-fic-list-of-event-teasers .more-link a:after, .paragraphs-item-fic-list-of-event-teasers .more-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form
-    .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a:after,
-    .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form
-    .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a:after,
-    .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a:after, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .page-nyheder .view-os2sub-nyheder .view-content .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:after, .page-nyheder .view-os2sub-nyheder .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container .view-content .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link a:after, .page-node .os2-section.full-width .paragraphs-container .paragraphs-item-header-text-links-image .view-content .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link a:after, .paragraphs-item-header-text-links-image .activities-list-background .activities-list-container .panels-flexible-region-inside .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link a:after, .activities-list-background .activities-list-container .paragraphs-item-header-text-links-image .panels-flexible-region-inside .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-paragrph-address .field.field-name-field-knap-link a:after, .paragraphs-item-paragrph-address .field.field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after,
-    .responsive-header .views-exposed-form .paragraphs-item-webform .form-actions .webform-submit.form-submit:after, .paragraphs-item-webform .form-actions
-    .responsive-header .views-exposed-form .webform-submit.form-submit:after,
-    .responsive-header .views-exposed-form .paragraphs-item-kolonner .field-name-field-knap-link a:after, .paragraphs-item-kolonner .field-name-field-knap-link
-    .responsive-header .views-exposed-form a:after {
-      font-size: 14px !important;
-      color: #ff4200; }
-  .responsive-header #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button button {
-    border: 1px solid #fff;
-    background-color: #fff;
-    padding: 8px 12px !important;
-    font-size: 0 !important;
-    line-height: 1.428571429 !important; }
-    .responsive-header #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button button:after {
-      font-size: 14px !important;
-      color: #ff4200; }
-  .responsive-header .views-exposed-widget.views-submit-button {
-    top: 0 !important; }
-
-.responsive-header__row + .responsive-header__row {
-  margin-top: 10px; }
 
 .responsive-header__row--first {
   display: -webkit-box;
@@ -13238,6 +13107,46 @@ div.ctools-modal-content {
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center; }
+
+@media (max-width: 767px) {
+  .search-form,
+  .views-exposed-form {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    padding: 0 15px; }
+    .search-form .form-control,
+    .views-exposed-form .form-control {
+      border: 0;
+      height: 38px;
+      padding: 8px 12px;
+      font-size: 16px !important;
+      line-height: 1.428571429;
+      color: #5C4B51 !important;
+      background-color: #fff;
+      border-color: #fff; }
+      .search-form .form-control::-moz-placeholder,
+      .views-exposed-form .form-control::-moz-placeholder {
+        color: #ff4200 !important;
+        opacity: 1; }
+      .search-form .form-control:-ms-input-placeholder,
+      .views-exposed-form .form-control:-ms-input-placeholder {
+        color: #ff4200 !important; }
+      .search-form .form-control::-webkit-input-placeholder,
+      .views-exposed-form .form-control::-webkit-input-placeholder {
+        color: #ff4200 !important; }
+  #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button {
+    top: 0; }
+    #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+      border: 1px solid #fff;
+      background-color: #fff;
+      padding: 8px 12px !important;
+      font-size: 0;
+      line-height: 1.428571429; }
+      #views-exposed-form-os2sub-kulturnaut-multi-search-pane-activities-multi-search .views-exposed-widgets .views-exposed-widget.views-submit-button button:after {
+        font-size: 14px;
+        color: #ff4200; } }
 
 .navbar.container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content,
 .front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.content {
