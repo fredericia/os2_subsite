@@ -370,7 +370,7 @@ $lg-pager-spacing: 30px;
 .slide-bottom {
   @include make-row($xs-pager-spacing);
 
-  > [class~=col] {
+  [class*=col] {
 
     // If we are not overriding with !important, the include make-x-column
     // is overriding the custom pager spacing.
@@ -458,7 +458,7 @@ $lg-pager-spacing: 30px;
   .slide-bottom {
     @include make-row($xs-pager-spacing);
 
-    > [class~=col] {
+    [class*=col] {
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
@@ -480,7 +480,7 @@ $lg-pager-spacing: 30px;
       padding-left:  ($sm-pager-spacing / 2) !important;
       padding-right: ($sm-pager-spacing / 2) !important;
 
-      > a {
+      a {
         margin-bottom: $sm-pager-spacing;
       }
     }
@@ -489,7 +489,7 @@ $lg-pager-spacing: 30px;
   .slide-bottom {
     @include make-row($sm-pager-spacing);
 
-    > [class~=col] {
+    [class*=col] {
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
@@ -571,7 +571,7 @@ $lg-pager-spacing: 30px;
       padding-left:  ($md-pager-spacing / 2) !important;
       padding-right: ($md-pager-spacing / 2) !important;
 
-      > a {
+      a {
         margin-bottom: $md-pager-spacing;
       }
     }
@@ -580,7 +580,7 @@ $lg-pager-spacing: 30px;
   .slide-bottom {
     @include make-row($md-pager-spacing);
 
-    > [class~=col] {
+    [class*=col] {
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
@@ -666,7 +666,7 @@ $lg-pager-spacing: 30px;
       padding-left:  ($lg-pager-spacing / 2) !important;
       padding-right: ($lg-pager-spacing / 2) !important;
 
-      > a {
+      a {
         margin-bottom: $lg-pager-spacing;
       }
     }
@@ -675,7 +675,7 @@ $lg-pager-spacing: 30px;
   .slide-bottom {
     @include make-row($lg-pager-spacing);
 
-    > [class~=col] {
+    [class*=col] {
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
