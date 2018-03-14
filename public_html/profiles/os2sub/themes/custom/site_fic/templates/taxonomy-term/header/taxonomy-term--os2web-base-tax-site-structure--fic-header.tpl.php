@@ -15,10 +15,11 @@
             <?php print render($content); ?>
         </div>
     <?php endif; ?>
+    <?php if (!empty($opening_hours_node_url) || !empty($contact_link_url)) : ?>
     <div class="slide-bottom">
         <div class="col-xs-6 col-sm-8">
-            <div class="blue-block">
-                <?php if (! empty($opening_hours_node_url)) : ?>
+           <?php if (!empty($opening_hours_node_url)) : ?>
+              <div class="blue-block">
                     <a href="<?php print $opening_hours_node_url; ?>"
                        class="ctools-modal-contact-modal-style ctools-use-modal">
                         <span class="text hidden-xs"><?php print $opening_hours_main_text; ?></span>
@@ -26,8 +27,8 @@
 
                         <span class="read-more hidden-xs"><?php print $opening_hours_sub_text; ?></span>
                     </a>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
         </div>
         <?php if (!empty($contact_link_url)) : ?>
             <div class="col-xs-6 col-sm-4">
@@ -38,4 +39,5 @@
             </div>
         <?php endif; ?>
     </div>
+    <?php endif; ?>
 </div>

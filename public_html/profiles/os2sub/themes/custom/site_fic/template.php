@@ -541,7 +541,7 @@ function _site_fic_get_header_bottom_links(&$vars, $term) {
   // Processing modal contact field.
   $contact_link_url = &drupal_static('contact_link_url');
   if (empty($contact_link_url)) {
-    $field_contact_value = field_get_items('taxonomy_term', $term, 'field_os2web_base_field_contact');
+    $field_contact_value = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_field_contact');
     if (!empty($field_contact_value)) {
       $contact_node_reference = node_load($field_contact_value[0]['nid']);
       _site_fic_get_node_translation($contact_node_reference);
@@ -550,37 +550,26 @@ function _site_fic_get_header_bottom_links(&$vars, $term) {
   }
   $vars['contact_link_url'] = $contact_link_url;
 
-  // Default text for openin ghours block.
-  $vars['opening_hours_sub_text'] = t('See all opening hours');
-  $vars['opening_hours_main_text'] = t('Get an overview of all opening hours');
-
-  // Default opening hours url.
-  $default_opening_hours_node_reference = variable_get('opening_hours_node_reference', FALSE);
-  $default_opening_hours_url = &drupal_static('opening_hours_url');
-  if ($default_opening_hours_node_reference && empty($default_opening_hours_url)) {
-    $default_opening_hours_node = node_load($default_opening_hours_node_reference);
-    if (!empty($default_opening_hours_node)) {
-      _site_fic_get_node_translation($default_opening_hours_node);
-      $default_opening_hours_url = url('modal/node/' . $default_opening_hours_node->nid . '/nojs');
-    }
-  }
-  $vars['opening_hours_node_url'] = $default_opening_hours_url;
+  // Default values for opening hours block.
+  $vars['opening_hours_sub_text'] = '';
+  $vars['opening_hours_main_text'] = '';
+  $vars['opening_hours_node_url'] = '';
 
   // Get opening hours main text from term.
-  $opening_hours_main_text = field_get_items('taxonomy_term', $term, 'field_os2web_base_opening_text');
+  $opening_hours_main_text = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_opening_text');
   if (!empty($opening_hours_main_text)) {
     $opening_hours_main_text = reset($opening_hours_main_text);
     $vars['opening_hours_main_text'] = $opening_hours_main_text['safe_value'];
   }
   // Get opening hours sub text from term.
-  $opening_hours_sub_text = field_get_items('taxonomy_term', $term, 'field_os2web_base_opening_sub');
+  $opening_hours_sub_text = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_opening_sub');
   if (!empty($opening_hours_sub_text)) {
     $opening_hours_sub_text = reset($opening_hours_sub_text);
     $vars['opening_hours_sub_text'] = $opening_hours_sub_text['safe_value'];
   }
 
   // Get opening hours url from term.
-  $opening_hours_nid = field_get_items('taxonomy_term', $term, 'field_os2web_base_opening_nid');
+  $opening_hours_nid = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_opening_nid');
   if (!empty($opening_hours_nid)) {
     $opening_hours_node = node_load($opening_hours_nid[0]['nid']);
     _site_fic_get_node_translation($opening_hours_node);
