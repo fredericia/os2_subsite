@@ -91,16 +91,13 @@ $desktop-margin-default: 30px;
     }
   }
 
-  .cycle-pager {
-    min-height: 165px;
-  }
-
   .views-slideshow-controls-bottom,
   .field-name-field-os2web-base-field-related,
   .cycle-pager {
+    min-height: 80px;
+    margin-bottom: 60px;
 
     > div {
-      margin-bottom: 80px;
       overflow: hidden;
     }
 
@@ -438,9 +435,6 @@ $desktop-margin-default: 30px;
     }
 
     .slide-bottom {
-      top: 100%;
-      bottom: auto;
-
       .blue-block {
         min-height: auto;
       }
@@ -538,10 +532,7 @@ $desktop-margin-default: 30px;
     .views-slideshow-controls-bottom,
     .field-name-field-os2web-base-field-related,
     .cycle-pager {
-
-      > div {
-        margin-bottom: 0;
-      }
+      margin-bottom: 65px;
 
       .views-slideshow-pager-field-item,
       .field-item {
@@ -554,9 +545,6 @@ $desktop-margin-default: 30px;
     }
 
     .slide-bottom {
-      top: 100%;
-      bottom: auto;
-
       .blue-block {
         min-height: auto;
       }
@@ -644,10 +632,7 @@ $desktop-margin-default: 30px;
     .views-slideshow-controls-bottom,
     .field-name-field-os2web-base-field-related,
     .cycle-pager {
-
-      > div {
-        margin-bottom: 0;
-      }
+      margin-bottom: 70px;
 
       .views-slideshow-pager-field-item,
       .field-item {
@@ -665,9 +650,6 @@ $desktop-margin-default: 30px;
 
 
     .slide-bottom {
-      top: 100%;
-      bottom: auto;
-
       .blue-block {
         min-height: auto;
       }
@@ -729,7 +711,15 @@ $desktop-margin-default: 30px;
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+  .term-fic-header {
+    .views-slideshow-controls-bottom,
+    .field-name-field-os2web-base-field-related,
+    .cycle-pager {
+      margin-bottom: 80px;
+    }
+  }
+}
 
 // Print
 @media print {}
