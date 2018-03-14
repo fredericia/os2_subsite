@@ -10,38 +10,40 @@
 // Variables
 // --------------------------------------------------
 
-
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.paragraphs-item-afsnit-m-billede{
+
+.paragraphs-item-afsnit-m-billede {
   padding-bottom: 40px;
   padding-top: 40px;
   text-align: center;
-  form{
+
+  form {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    input{
+
+    input {
       vertical-align: baseline;
       text-transform: uppercase;
       font-family: $headings-font-family;
       font-size: 1.875em;
       margin-bottom: ($grid-gutter-width / 2);
-      &.btn{
-        padding: 0px 10px;
+
+      &.btn {
+        padding: 0;
         font-size: 1.6em;
         height: auto;
         width: auto;
       }
     }
   }
-  .field.field-name-field-paragraph-header{
+
+  .field.field-name-field-paragraph-header {
     font-size: 3.125em;
   }
-
 }
-
 
 // --------------------------------------------------
 // Variants
@@ -52,15 +54,10 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@include media-breakpoint-up(xs) {}
 
-
-}
 // Mobile - only
-@include media-breakpoint-only(xs) {
-
-
-}
+@include media-breakpoint-only(xs) {}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
@@ -68,57 +65,30 @@
   .paragraphs-item-afsnit-m-billede{
     padding-bottom: 60px;
     padding-top: 60px;
+
     form{
       justify-content: center;
     }
   }
-
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-
-  .social-icons {}
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
-
-
-
-
-}
+@include media-breakpoint-up(md) {}
 
 // Desktop - only
-@include media-breakpoint-only(md) {
-
-
-}
+@include media-breakpoint-only(md) {}
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Social icons
-  .social-icons {}
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
-
-  // Social icons
-  .social-icons {}
-}
-
+.no-touchevents {}
