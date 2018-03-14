@@ -79,7 +79,8 @@
  * @ingroup templates
  */
 ?>
-<article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<article id="node-<?php print $node->nid; ?>"
+         class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php
   // Hide comments, tags, and links now so that we can render them later.
@@ -90,14 +91,14 @@
 
   print render($content['field_personale_billede']);
   ?>
-  <?php if ( (!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted ): ?>
+  <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
     <header>
       <?php print render($title_prefix); ?>
-      <?php if ( !$page && !empty($title) ): ?>
+      <?php if (!$page && !empty($title)): ?>
         <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-      <?php if ( $display_submitted ): ?>
+      <?php if ($display_submitted): ?>
         <span class="submitted">
           <?php print $user_picture; ?>
           <?php print $submitted; ?>
@@ -105,6 +106,27 @@
       <?php endif; ?>
     </header>
   <?php endif; ?>
-  <?php print render($content); ?>
+
+  <?php if (isset($content['field_personale_jobtitel'])): ?>
+    <!-- Begin - job title -->
+    <div class="entity-teaser__job-title">
+      <?php print render($content['field_personale_jobtitel']); ?>
+    </div>
+    <!-- End - job title -->
+  <?php endif; ?>
+
+  <!-- Begin - phone -->
+  <div class="entity-teaser__phone">
+    <?php print render($content['field_personale_telefon_disp']); ?>
+  </div>
+  <!-- End - phone -->
+
+  <?php if (isset($content['field_personale_email'])): ?>
+    <!-- Begin - email -->
+    <div class="entity-teaser__email">
+      <?php print render($content['field_personale_email']); ?>
+    </div>
+    <!-- End - email -->
+  <?php endif; ?>
 
 </article>

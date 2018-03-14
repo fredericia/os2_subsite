@@ -15281,6 +15281,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     margin-bottom: 30px; }
   .paragraphs-item-personale .field-name-field-personale-telefon-disp {
     color: #ff4200; }
+  .paragraphs-item-personale .entity-teaser__phone {
+    min-height: 26px; }
 
 @media (min-width: 992px) {
   .paragraphs-item-personale .row-amount-2 {
