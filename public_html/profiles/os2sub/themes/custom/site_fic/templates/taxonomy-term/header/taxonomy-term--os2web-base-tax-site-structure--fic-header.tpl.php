@@ -17,7 +17,7 @@
     <?php endif; ?>
     <?php if (!empty($opening_hours_node_url) || !empty($contact_link_url)) : ?>
     <div class="slide-bottom">
-        <div class="col-xs-6 col-sm-8">
+        <div class="col-xs-6 col-md-8">
            <?php if (!empty($opening_hours_node_url)) : ?>
               <div class="blue-block">
                     <a href="<?php print $opening_hours_node_url; ?>"
@@ -31,7 +31,7 @@
             <?php endif; ?>
         </div>
         <?php if (!empty($contact_link_url)) : ?>
-            <div class="col-xs-6 col-sm-4">
+            <div class="col-xs-6 col-md-4">
               <a href="<?php print $contact_link_url; ?>"
                  class="modal-link ctools-modal-contact-modal-style ctools-use-modal contact">
                 <?php print t('Contact'); ?>
