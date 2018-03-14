@@ -32,9 +32,6 @@ function site_fic_preprocess_html(&$variables) {
     'group' => JS_THEME,
   ]);
 
-  // Body classes.
-  $variables['classes_array'][] = 'footer-attached';
-
   // Load jQuery UI.
   drupal_add_library('system', 'ui');
 
