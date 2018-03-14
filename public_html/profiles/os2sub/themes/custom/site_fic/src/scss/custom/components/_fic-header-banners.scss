@@ -297,7 +297,7 @@ $lg-pager-spacing: 30px;
 
       width: auto; // Reset
 
-      margin-bottom: $xs-pager-spacing * 2;
+      margin-bottom: $xs-pager-spacing;
     }
   }
 
@@ -456,7 +456,7 @@ $lg-pager-spacing: 30px;
       padding-right: ($sm-pager-spacing / 2) !important;
 
       > a {
-        margin-bottom: $sm-pager-spacing * 2;
+        margin-bottom: $sm-pager-spacing;
       }
     }
   }
@@ -539,7 +539,7 @@ $lg-pager-spacing: 30px;
       padding-right: ($md-pager-spacing / 2) !important;
 
       > a {
-        margin-bottom: $md-pager-spacing * 2;
+        margin-bottom: $md-pager-spacing;
       }
     }
   }
@@ -626,7 +626,7 @@ $lg-pager-spacing: 30px;
       padding-right: ($lg-pager-spacing / 2) !important;
 
       > a {
-        margin-bottom: $lg-pager-spacing * 2;
+        margin-bottom: $lg-pager-spacing;
       }
     }
   }
