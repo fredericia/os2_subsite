@@ -369,6 +369,14 @@ $lg-pager-spacing: 30px;
 
 .slide-bottom {
   @include make-row($xs-pager-spacing);
+
+  > [class~=col] {
+
+    // If we are not overriding with !important, the include make-x-column
+    // is overriding the custom pager spacing.
+    padding-left:  ($xs-pager-spacing / 2) !important;
+    padding-right: ($xs-pager-spacing / 2) !important;
+  }
 }
 
 // --------------------------------------------------
@@ -406,15 +414,6 @@ $lg-pager-spacing: 30px;
       width: 100% !important;
     }
 
-    .views-slideshow-controls-bottom,
-    .field-name-field-os2web-base-field-related,
-    .cycle-pager {
-
-      > div {
-        margin-bottom: 0;
-      }
-    }
-
     .slide-bottom {
       .blue-block {
         min-height: auto;
@@ -441,6 +440,32 @@ $lg-pager-spacing: 30px;
       display: none;
     }
   }
+
+  .widget_pager_bottom,
+  .cycle-pager {
+    @include make-row($xs-pager-spacing);
+
+    > .views-slideshow-pager-field-item,
+    > .field-item {
+
+      // If we are not overriding with !important, the include make-x-column
+      // is overriding the custom pager spacing.
+      padding-left: ($xs-pager-spacing / 2) !important;
+      padding-right: ($xs-pager-spacing / 2) !important;
+    }
+  }
+
+  .slide-bottom {
+    @include make-row($xs-pager-spacing);
+
+    > [class~=col] {
+
+      // If we are not overriding with !important, the include make-x-column
+      // is overriding the custom pager spacing.
+      padding-left:  ($xs-pager-spacing / 2) !important;
+      padding-right: ($xs-pager-spacing / 2) !important;
+    }
+  }
 }
 
 // Tablet - and up
@@ -463,6 +488,14 @@ $lg-pager-spacing: 30px;
 
   .slide-bottom {
     @include make-row($sm-pager-spacing);
+
+    > [class~=col] {
+
+      // If we are not overriding with !important, the include make-x-column
+      // is overriding the custom pager spacing.
+      padding-left:  ($sm-pager-spacing / 2) !important;
+      padding-right: ($sm-pager-spacing / 2) !important;
+    }
   }
 }
 
@@ -546,6 +579,14 @@ $lg-pager-spacing: 30px;
 
   .slide-bottom {
     @include make-row($md-pager-spacing);
+
+    > [class~=col] {
+
+      // If we are not overriding with !important, the include make-x-column
+      // is overriding the custom pager spacing.
+      padding-left:  ($md-pager-spacing / 2) !important;
+      padding-right: ($md-pager-spacing / 2) !important;
+    }
   }
 }
 
@@ -633,6 +674,14 @@ $lg-pager-spacing: 30px;
 
   .slide-bottom {
     @include make-row($lg-pager-spacing);
+
+    > [class~=col] {
+
+      // If we are not overriding with !important, the include make-x-column
+      // is overriding the custom pager spacing.
+      padding-left:  ($lg-pager-spacing / 2) !important;
+      padding-right: ($lg-pager-spacing / 2) !important;
+    }
   }
 }
 
