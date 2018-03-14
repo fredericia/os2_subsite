@@ -9,6 +9,14 @@
 // Variables
 // --------------------------------------------------
 
+// Tablet
+$tablet-width-2buttons: 570px;
+$tablet-width-3buttons: 370px;
+$tablet-width-4buttons: 270px;
+$tablet-width-5buttons: 210px;
+$tablet-width-6buttons: 170px;
+
+// Desktop
 $desktop-width-2buttons: 570px;
 $desktop-width-3buttons: 370px;
 $desktop-width-4buttons: 270px;
@@ -283,55 +291,6 @@ $desktop-margin-default: 30px;
   }
 }
 
-.term-fic-header {
-
-  .num-slides {
-
-    &-3 .views-slideshow-controls-bottom a {
-      width: $desktop-width-2buttons;
-    }
-
-    &-4 .views-slideshow-controls-bottom a {
-      width: $desktop-width-3buttons;
-    }
-
-    &-5 .views-slideshow-controls-bottom a {
-      width: $desktop-width-4buttons;
-    }
-
-    &-6 .views-slideshow-controls-bottom a {
-      width: $desktop-width-5buttons;
-    }
-
-    &-7 .views-slideshow-controls-bottom a {
-      width: $desktop-width-6buttons;
-    }
-  }
-
-  .num-items {
-
-    &-3 a {
-      width: $desktop-width-2buttons;
-    }
-
-    &-4 a {
-      width: $desktop-width-3buttons;
-    }
-
-    &-5 a {
-      width: $desktop-width-4buttons;
-    }
-
-    &-6 a {
-      width: $desktop-width-5buttons;
-    }
-
-    &-7 a {
-      width: $desktop-width-6buttons;
-    }
-  }
-}
-
 .node-type-os2web-base-contentpage {
 
   .backstretched & .page-header-wrapper {
@@ -559,28 +518,6 @@ $desktop-margin-default: 30px;
       font-size: 1.7em;
       line-height: 1em;
     }
-
-    .num-slides {
-
-      &-3 .views-slideshow-controls-bottom a,
-      &-4 .views-slideshow-controls-bottom a,
-      &-5 .views-slideshow-controls-bottom a,
-      &-6 .views-slideshow-controls-bottom a,
-      &-7 .views-slideshow-controls-bottom a {
-        width: 236px
-      }
-    }
-
-    .num-items {
-
-      &-3 a,
-      &-4 a,
-      &-5 a,
-      &-6 a,
-      &-7 a {
-        width: 236px;
-      }
-    }
   }
 
   .scroll-down-wrapper {
@@ -593,10 +530,108 @@ $desktop-margin-default: 30px;
     }
   }
 
+  .term-fic-header {
+
+    .num-slides {
+
+      &-3 .views-slideshow-controls-bottom a {
+        width: $tablet-width-2buttons;
+      }
+
+      &-4 .views-slideshow-controls-bottom a {
+        width: $tablet-width-3buttons;
+      }
+
+      &-5 .views-slideshow-controls-bottom a {
+        width: $tablet-width-4buttons;
+      }
+
+      &-6 .views-slideshow-controls-bottom a {
+        width: $tablet-width-5buttons;
+      }
+
+      &-7 .views-slideshow-controls-bottom a {
+        width: $tablet-width-6buttons;
+      }
+    }
+
+    .num-items {
+
+      &-3 a {
+        width: $tablet-width-2buttons;
+      }
+
+      &-4 a {
+        width: $tablet-width-3buttons;
+      }
+
+      &-5 a {
+        width: $tablet-width-4buttons;
+      }
+
+      &-6 a {
+        width: $tablet-width-5buttons;
+      }
+
+      &-7 a {
+        width: $tablet-width-6buttons;
+      }
+    }
+  }
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+
+  .term-fic-header {
+
+    .num-slides {
+
+      &-3 .views-slideshow-controls-bottom a {
+        width: $desktop-width-2buttons;
+      }
+
+      &-4 .views-slideshow-controls-bottom a {
+        width: $desktop-width-3buttons;
+      }
+
+      &-5 .views-slideshow-controls-bottom a {
+        width: $desktop-width-4buttons;
+      }
+
+      &-6 .views-slideshow-controls-bottom a {
+        width: $desktop-width-5buttons;
+      }
+
+      &-7 .views-slideshow-controls-bottom a {
+        width: $desktop-width-6buttons;
+      }
+    }
+
+    .num-items {
+
+      &-3 a {
+        width: $desktop-width-2buttons;
+      }
+
+      &-4 a {
+        width: $desktop-width-3buttons;
+      }
+
+      &-5 a {
+        width: $desktop-width-4buttons;
+      }
+
+      &-6 a {
+        width: $desktop-width-5buttons;
+      }
+
+      &-7 a {
+        width: $desktop-width-6buttons;
+      }
+    }
+  }
+}
 
 // Desktop - only
 @include media-breakpoint-only(md) {
@@ -674,28 +709,6 @@ $desktop-margin-default: 30px;
     .contact.modal-link {
       font-size: 1.7em;
       line-height: 1em;
-    }
-
-    .num-slides {
-
-      &-3 .views-slideshow-controls-bottom a,
-      &-4 .views-slideshow-controls-bottom a,
-      &-5 .views-slideshow-controls-bottom a,
-      &-6 .views-slideshow-controls-bottom a,
-      &-7 .views-slideshow-controls-bottom a {
-        width: 152px
-      }
-    }
-
-    .num-items {
-
-      &-3 a,
-      &-4 a,
-      &-5 a,
-      &-6 a,
-      &-7 a {
-        width: 152px;
-      }
     }
   }
 

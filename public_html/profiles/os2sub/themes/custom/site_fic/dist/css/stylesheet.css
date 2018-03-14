@@ -13453,36 +13453,6 @@ div.ctools-modal-content {
       bottom: auto !important;
       height: auto !important; }
 
-.term-fic-header .num-slides-3 .views-slideshow-controls-bottom a {
-  width: 570px; }
-
-.term-fic-header .num-slides-4 .views-slideshow-controls-bottom a {
-  width: 370px; }
-
-.term-fic-header .num-slides-5 .views-slideshow-controls-bottom a {
-  width: 270px; }
-
-.term-fic-header .num-slides-6 .views-slideshow-controls-bottom a {
-  width: 210px; }
-
-.term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-  width: 170px; }
-
-.term-fic-header .num-items-3 a {
-  width: 570px; }
-
-.term-fic-header .num-items-4 a {
-  width: 370px; }
-
-.term-fic-header .num-items-5 a {
-  width: 270px; }
-
-.term-fic-header .num-items-6 a {
-  width: 210px; }
-
-.term-fic-header .num-items-7 a {
-  width: 170px; }
-
 .backstretched .node-type-os2web-base-contentpage .page-header-wrapper {
   margin-bottom: 30px; }
 
@@ -13605,23 +13575,53 @@ div.ctools-modal-content {
   .term-fic-header .contact.modal-link {
     font-size: 1.7em;
     line-height: 1em; }
-  .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-4 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-    width: 236px; }
-  .term-fic-header .num-items-3 a,
-  .term-fic-header .num-items-4 a,
-  .term-fic-header .num-items-5 a,
-  .term-fic-header .num-items-6 a,
-  .term-fic-header .num-items-7 a {
-    width: 236px; }
   .scroll-down-wrapper {
     height: 90px;
     margin: 0; }
     .scroll-down-wrapper .scroll-down-link {
-      display: none; } }
+      display: none; }
+  .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a {
+    width: 570px; }
+  .term-fic-header .num-slides-4 .views-slideshow-controls-bottom a {
+    width: 370px; }
+  .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a {
+    width: 270px; }
+  .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a {
+    width: 210px; }
+  .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
+    width: 170px; }
+  .term-fic-header .num-items-3 a {
+    width: 570px; }
+  .term-fic-header .num-items-4 a {
+    width: 370px; }
+  .term-fic-header .num-items-5 a {
+    width: 270px; }
+  .term-fic-header .num-items-6 a {
+    width: 210px; }
+  .term-fic-header .num-items-7 a {
+    width: 170px; } }
+
+@media (min-width: 992px) {
+  .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a {
+    width: 570px; }
+  .term-fic-header .num-slides-4 .views-slideshow-controls-bottom a {
+    width: 370px; }
+  .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a {
+    width: 270px; }
+  .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a {
+    width: 210px; }
+  .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
+    width: 170px; }
+  .term-fic-header .num-items-3 a {
+    width: 570px; }
+  .term-fic-header .num-items-4 a {
+    width: 370px; }
+  .term-fic-header .num-items-5 a {
+    width: 270px; }
+  .term-fic-header .num-items-6 a {
+    width: 210px; }
+  .term-fic-header .num-items-7 a {
+    width: 170px; } }
 
 @media (min-width: 992px) and (max-width: 1229px) {
   .term-fic-header .slide-bottom .blue-block .text,
@@ -13663,18 +13663,6 @@ div.ctools-modal-content {
   .term-fic-header .contact.modal-link {
     font-size: 1.7em;
     line-height: 1em; }
-  .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-4 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-    width: 152px; }
-  .term-fic-header .num-items-3 a,
-  .term-fic-header .num-items-4 a,
-  .term-fic-header .num-items-5 a,
-  .term-fic-header .num-items-6 a,
-  .term-fic-header .num-items-7 a {
-    width: 152px; }
   .scroll-down-wrapper {
     height: 90px;
     margin: 0; }
