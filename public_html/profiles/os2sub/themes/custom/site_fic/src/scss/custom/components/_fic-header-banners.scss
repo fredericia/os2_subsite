@@ -279,9 +279,6 @@ $lg-pager-spacing: 30px;
 }
 
 
-
-
-
 .widget_pager_bottom,
 .cycle-pager {
   @include make-row($xs-pager-spacing);
@@ -289,6 +286,11 @@ $lg-pager-spacing: 30px;
   > .views-slideshow-pager-field-item,
   > .field-item {
     position: relative;
+
+    // If we are not overriding with !important, the include make-x-column
+    // is overriding the custom pager spacing.
+    padding-left:  ($xs-pager-spacing / 2) !important;
+    padding-right: ($xs-pager-spacing / 2) !important;
 
     a {
       display: block;
@@ -305,10 +307,10 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      @include make-xs-column(6, $xs-pager-spacing);
-      @include make-sm-column(6, $sm-pager-spacing);
-      @include make-md-column(6, $md-pager-spacing);
-      @include make-lg-column(6, $lg-pager-spacing);
+      @include make-xs-column(6);
+      @include make-sm-column(6);
+      @include make-md-column(6);
+      @include make-lg-column(6);
     }
   }
 
@@ -318,10 +320,10 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      @include make-xs-column(6, $xs-pager-spacing);
-      @include make-sm-column(4, $sm-pager-spacing);
-      @include make-md-column(4, $md-pager-spacing);
-      @include make-lg-column(4, $lg-pager-spacing);
+      @include make-xs-column(6);
+      @include make-sm-column(4);
+      @include make-md-column(4);
+      @include make-lg-column(4);
     }
   }
 
@@ -331,10 +333,10 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      @include make-xs-column(6, $xs-pager-spacing);
-      @include make-sm-column(3, $sm-pager-spacing);
-      @include make-md-column(3, $md-pager-spacing);
-      @include make-lg-column(3, $lg-pager-spacing);
+      @include make-xs-column(6);
+      @include make-sm-column(3);
+      @include make-md-column(3);
+      @include make-lg-column(3);
     }
   }
 
@@ -344,10 +346,10 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      @include make-xs-column(6, $xs-pager-spacing);
-      @include make-sm-column(3, $sm-pager-spacing);
-      @include make-md-column(3, $md-pager-spacing);
-      @include make-lg-column(3, $lg-pager-spacing);
+      @include make-xs-column(6);
+      @include make-sm-column(3);
+      @include make-md-column(3);
+      @include make-lg-column(3);
     }
   }
 
@@ -357,10 +359,10 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      @include make-xs-column(6, $xs-pager-spacing);
-      @include make-sm-column(3, $sm-pager-spacing);
-      @include make-md-column(2, $md-pager-spacing);
-      @include make-lg-column(2, $lg-pager-spacing);
+      @include make-xs-column(6);
+      @include make-sm-column(3);
+      @include make-md-column(2);
+      @include make-lg-column(2);
     }
   }
 }
@@ -384,46 +386,6 @@ $lg-pager-spacing: 30px;
 @include media-breakpoint-only(xs) {
 
   .term-fic-header {
-
-    //.cycle-pager,
-    //.views-slideshow-pager-fields {
-    //  display: block !important;
-    //
-    //  div {
-    //    display: block;
-    //  }
-    //
-    //  > div {
-    //    display: inline-block;
-    //
-    //    margin: 0 0 10px 0 !important;
-    //    padding: 0;
-    //
-    //    width: 50%;
-    //
-    //    > a {
-    //      display: block;
-    //
-    //      width: auto !important;
-    //    }
-    //
-    //    &:nth-child(even) {
-    //
-    //      > a,
-    //      > div {
-    //        margin-right: 2.5px;
-    //      }
-    //    }
-    //
-    //    &:nth-child(odd) {
-    //
-    //      > a,
-    //      > div {
-    //        margin-left: 2.5px;
-    //      }
-    //    }
-    //  }
-    //}
 
     .slide-content-wrapper {
       padding-bottom: (10px * 2); // To resolve the overhead margin-bottom made by .responsive-header
@@ -457,17 +419,6 @@ $lg-pager-spacing: 30px;
       .blue-block {
         min-height: auto;
       }
-      //
-      //div {
-      //
-      //  &:nth-child(even) {
-      //    padding-left: 2.5px;
-      //  }
-      //
-      //  &:nth-child(odd) {
-      //    padding-right: 2.5px;
-      //  }
-      //}
 
       .text {
         font-size: 1.7em;
@@ -501,6 +452,8 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
+      padding-left:  ($sm-pager-spacing / 2) !important;
+      padding-right: ($sm-pager-spacing / 2) !important;
 
       > a {
         margin-bottom: $sm-pager-spacing * 2;
@@ -582,6 +535,8 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
+      padding-left:  ($md-pager-spacing / 2) !important;
+      padding-right: ($md-pager-spacing / 2) !important;
 
       > a {
         margin-bottom: $md-pager-spacing * 2;
@@ -617,10 +572,6 @@ $lg-pager-spacing: 30px;
       }
     }
 
-    //.views_slideshow_main {
-    //  height: auto !important;
-    //}
-
     .views_slideshow_cycle_slide {
       width: 100% !important;
     }
@@ -634,20 +585,10 @@ $lg-pager-spacing: 30px;
     }
 
     .slide-bottom {
+
       .blue-block {
         min-height: auto;
       }
-
-      //div {
-      //
-      //  &:nth-child(even) {
-      //    padding-left: 2.2px;
-      //  }
-      //
-      //  &:nth-child(odd) {
-      //    padding-right: 2.2px;
-      //  }
-      //}
 
       .text {
         font-size: 1.6em;
@@ -681,6 +622,8 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
+      padding-left:  ($lg-pager-spacing / 2) !important;
+      padding-right: ($lg-pager-spacing / 2) !important;
 
       > a {
         margin-bottom: $lg-pager-spacing * 2;
