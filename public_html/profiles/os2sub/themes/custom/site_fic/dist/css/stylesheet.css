@@ -14836,9 +14836,9 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding-bottom: 40px;
   padding-top: 40px;
   text-align: center; }
-  .paragraphs-item-afsnit-m-billede form input[type="text"] {
+  .paragraphs-item-afsnit-m-billede input[type="text"] {
     display: inline-block;
-    height: 44px;
+    height: 42px;
     padding: 10px 16px;
     background-image: none;
     margin: 0;
@@ -14847,18 +14847,23 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     text-transform: uppercase;
     font-family: "RBNo21a-Medium", "Lato", sans-serif;
     font-size: 1.875em;
+    outline: 0;
     text-indent: 0 !important; }
-  .paragraphs-item-afsnit-m-billede form .btn, .paragraphs-item-afsnit-m-billede form .topnav-wrapper.user-nav .region.region-navigation .book-link a, .topnav-wrapper.user-nav .region.region-navigation .book-link .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form .banner .banner-wrapper a, .banner .banner-wrapper .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form .html #sliding-popup .popup-content #popup-buttons button, .html #sliding-popup .popup-content #popup-buttons .paragraphs-item-afsnit-m-billede form button, .paragraphs-item-afsnit-m-billede body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, body.page-search.page-search-content .paragraphs-item-afsnit-m-billede section.block.block-system.block-system > form button.btn.btn-primary, .paragraphs-item-afsnit-m-billede form .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form .paragraphs-item-fic-list-of-event-teasers .more-link a, .paragraphs-item-fic-list-of-event-teasers .more-link .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form
+  .paragraphs-item-afsnit-m-billede .btn, .paragraphs-item-afsnit-m-billede .topnav-wrapper.user-nav .region.region-navigation .book-link a, .topnav-wrapper.user-nav .region.region-navigation .book-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .banner .banner-wrapper a, .banner .banner-wrapper .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .html #sliding-popup .popup-content #popup-buttons button, .html #sliding-popup .popup-content #popup-buttons .paragraphs-item-afsnit-m-billede button, .paragraphs-item-afsnit-m-billede body.page-search.page-search-content section.block.block-system.block-system > form button.btn.btn-primary, body.page-search.page-search-content section.block.block-system.block-system > form .paragraphs-item-afsnit-m-billede button.btn.btn-primary, .paragraphs-item-afsnit-m-billede .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .pager--infinite-scroll .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-fic-list-of-event-teasers .more-link a, .paragraphs-item-fic-list-of-event-teasers .more-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede
   .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
-  .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form
+  .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede
   .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a,
-  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede form a, .paragraphs-item-afsnit-m-billede form .paragraphs-item-webform .form-actions .webform-submit.form-submit, .paragraphs-item-webform .form-actions .paragraphs-item-afsnit-m-billede form .webform-submit.form-submit, .paragraphs-item-afsnit-m-billede form .paragraphs-item-kolonner .field-name-field-knap-link a, .paragraphs-item-kolonner .field-name-field-knap-link .paragraphs-item-afsnit-m-billede form a {
+  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-webform .form-actions .webform-submit.form-submit, .paragraphs-item-webform .form-actions .paragraphs-item-afsnit-m-billede .webform-submit.form-submit, .paragraphs-item-afsnit-m-billede .paragraphs-item-kolonner .field-name-field-knap-link a, .paragraphs-item-kolonner .field-name-field-knap-link .paragraphs-item-afsnit-m-billede a {
     height: auto;
     padding: 10px 16px;
-    font-size: 16px;
+    font-size: 1.625em;
     line-height: 1.3333333;
     border-radius: 6px;
-    width: auto !important; }
+    padding: 2px 5px;
+    font-family: "RBNo21a-Medium", "Lato", sans-serif;
+    font-size: 1.625em;
+    border: 0;
+    border-radius: 0; }
   .paragraphs-item-afsnit-m-billede .field.field-name-field-paragraph-header {
     font-size: 3.125em; }
 
