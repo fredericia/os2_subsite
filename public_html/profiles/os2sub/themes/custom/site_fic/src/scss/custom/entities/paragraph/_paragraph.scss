@@ -14,15 +14,19 @@
 // Styling
 // --------------------------------------------------
 
-.entity-paragraphs-item {
+.node-os2web-base-contentpage {
 
-  .paragraphs-items-field-afsnit {
+  .field-name-field-afsnit {
 
-    &.no-bg {
-      padding-top: 10px !important;
-      padding-bottom: 10px !important;
+    .entity-paragraphs-item {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
 
       background-color: white !important;
+
+      .field-name-field-paragraph-text {
+        margin-bottom: 0;
+      }
     }
   }
 }

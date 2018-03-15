@@ -334,6 +334,20 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  .view-fic-embed-files.view-display-id-instagram,
+  .pane-instagram-billeder {
+
+    .views-row.views-row-0 {
+
+      > a {
+
+        img {
+          margin: auto;
+        }
+      }
+    }
+  }
 }
 
 // Tablet - and up
@@ -343,8 +357,15 @@
   .pane-instagram-billeder {
 
     .views-row.views-row-0 {
-      padding-top: 40px;
-      padding-bottom: 40px;
+
+      > a {
+        display: flex;
+
+        flex-grow: 1;
+
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }

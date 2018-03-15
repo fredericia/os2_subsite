@@ -1490,30 +1490,37 @@ address {
   line-height: 1.428571429; }
 
 .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .pane-node-field-afsnit-full-width .entity .content {
+.front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .field-name-field-afsnit-full-width .entity .content,
+.pane-paragraphs-from-section .entity .content {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
   .container:before, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content:before,
-  .front .paragraphs-container .entity-paragraphs-item .content:before, .page-node .os2-section.full-width .paragraphs-container:before, .pane-node-field-afsnit-full-width .entity .content:before, .container:after, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content:after,
-  .front .paragraphs-container .entity-paragraphs-item .content:after, .page-node .os2-section.full-width .paragraphs-container:after, .pane-node-field-afsnit-full-width .entity .content:after {
+  .front .paragraphs-container .entity-paragraphs-item .content:before, .page-node .os2-section.full-width .paragraphs-container:before, .field-name-field-afsnit-full-width .entity .content:before,
+  .pane-paragraphs-from-section .entity .content:before, .container:after, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content:after,
+  .front .paragraphs-container .entity-paragraphs-item .content:after, .page-node .os2-section.full-width .paragraphs-container:after, .field-name-field-afsnit-full-width .entity .content:after,
+  .pane-paragraphs-from-section .entity .content:after {
     content: " ";
     display: table; }
   .container:after, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content:after,
-  .front .paragraphs-container .entity-paragraphs-item .content:after, .page-node .os2-section.full-width .paragraphs-container:after, .pane-node-field-afsnit-full-width .entity .content:after {
+  .front .paragraphs-container .entity-paragraphs-item .content:after, .page-node .os2-section.full-width .paragraphs-container:after, .field-name-field-afsnit-full-width .entity .content:after,
+  .pane-paragraphs-from-section .entity .content:after {
     clear: both; }
   @media (min-width: 768px) {
     .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
-    .front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .pane-node-field-afsnit-full-width .entity .content {
+    .front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .field-name-field-afsnit-full-width .entity .content,
+    .pane-paragraphs-from-section .entity .content {
       width: 750px; } }
   @media (min-width: 992px) {
     .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
-    .front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .pane-node-field-afsnit-full-width .entity .content {
+    .front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .field-name-field-afsnit-full-width .entity .content,
+    .pane-paragraphs-from-section .entity .content {
       width: 970px; } }
   @media (min-width: 1230px) {
     .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content,
-    .front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .pane-node-field-afsnit-full-width .entity .content {
+    .front .paragraphs-container .entity-paragraphs-item .content, .page-node .os2-section.full-width .paragraphs-container, .field-name-field-afsnit-full-width .entity .content,
+    .pane-paragraphs-from-section .entity .content {
       width: 1200px; } }
 
 .container-fluid {
@@ -5197,18 +5204,22 @@ tbody.collapse.in {
       max-height: 200px; } }
 
 .container > .navbar-header, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-header,
-.front .paragraphs-container .entity-paragraphs-item .content > .navbar-header, .page-node .os2-section.full-width .paragraphs-container > .navbar-header, .pane-node-field-afsnit-full-width .entity .content > .navbar-header,
+.front .paragraphs-container .entity-paragraphs-item .content > .navbar-header, .page-node .os2-section.full-width .paragraphs-container > .navbar-header, .field-name-field-afsnit-full-width .entity .content > .navbar-header,
+.pane-paragraphs-from-section .entity .content > .navbar-header,
 .container > .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse,
-.front .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse, .page-node .os2-section.full-width .paragraphs-container > .navbar-collapse, .pane-node-field-afsnit-full-width .entity .content > .navbar-collapse,
+.front .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse, .page-node .os2-section.full-width .paragraphs-container > .navbar-collapse, .field-name-field-afsnit-full-width .entity .content > .navbar-collapse,
+.pane-paragraphs-from-section .entity .content > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
     .container > .navbar-header, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-header,
-    .front .paragraphs-container .entity-paragraphs-item .content > .navbar-header, .page-node .os2-section.full-width .paragraphs-container > .navbar-header, .pane-node-field-afsnit-full-width .entity .content > .navbar-header,
+    .front .paragraphs-container .entity-paragraphs-item .content > .navbar-header, .page-node .os2-section.full-width .paragraphs-container > .navbar-header, .field-name-field-afsnit-full-width .entity .content > .navbar-header,
+    .pane-paragraphs-from-section .entity .content > .navbar-header,
     .container > .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse,
-    .front .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse, .page-node .os2-section.full-width .paragraphs-container > .navbar-collapse, .pane-node-field-afsnit-full-width .entity .content > .navbar-collapse,
+    .front .paragraphs-container .entity-paragraphs-item .content > .navbar-collapse, .page-node .os2-section.full-width .paragraphs-container > .navbar-collapse, .field-name-field-afsnit-full-width .entity .content > .navbar-collapse,
+    .pane-paragraphs-from-section .entity .content > .navbar-collapse,
     .container-fluid > .navbar-header,
     .container-fluid > .navbar-collapse {
       margin-right: 0;
@@ -5253,7 +5264,8 @@ tbody.collapse.in {
     display: block; }
   @media (min-width: 768px) {
     .navbar > .container .navbar-brand, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar > .content .navbar-brand,
-    .front .paragraphs-container .entity-paragraphs-item .navbar > .content .navbar-brand, .page-node .os2-section.full-width .navbar > .paragraphs-container .navbar-brand, .pane-node-field-afsnit-full-width .entity .navbar > .content .navbar-brand,
+    .front .paragraphs-container .entity-paragraphs-item .navbar > .content .navbar-brand, .page-node .os2-section.full-width .navbar > .paragraphs-container .navbar-brand, .field-name-field-afsnit-full-width .entity .navbar > .content .navbar-brand,
+    .pane-paragraphs-from-section .entity .navbar > .content .navbar-brand,
     .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
@@ -5820,21 +5832,25 @@ a.badge:hover, a.badge:focus {
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
   .container .jumbotron, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content .jumbotron,
-  .front .paragraphs-container .entity-paragraphs-item .content .jumbotron, .page-node .os2-section.full-width .paragraphs-container .jumbotron, .pane-node-field-afsnit-full-width .entity .content .jumbotron,
+  .front .paragraphs-container .entity-paragraphs-item .content .jumbotron, .page-node .os2-section.full-width .paragraphs-container .jumbotron, .field-name-field-afsnit-full-width .entity .content .jumbotron,
+  .pane-paragraphs-from-section .entity .content .jumbotron,
   .container-fluid .jumbotron {
     border-radius: 6px;
     padding-left: 15px;
     padding-right: 15px; }
   .jumbotron .container, .jumbotron .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .jumbotron .content, .jumbotron
   .front .paragraphs-container .entity-paragraphs-item .content,
-  .front .paragraphs-container .entity-paragraphs-item .jumbotron .content, .jumbotron .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .jumbotron .paragraphs-container, .jumbotron .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .jumbotron .content {
+  .front .paragraphs-container .entity-paragraphs-item .jumbotron .content, .jumbotron .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .jumbotron .paragraphs-container, .jumbotron .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .jumbotron .content, .jumbotron
+  .pane-paragraphs-from-section .entity .content,
+  .pane-paragraphs-from-section .entity .jumbotron .content {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding-top: 48px;
       padding-bottom: 48px; }
       .container .jumbotron, .page-taxonomy .paragraphs-container .entity-paragraphs-item .content .jumbotron,
-      .front .paragraphs-container .entity-paragraphs-item .content .jumbotron, .page-node .os2-section.full-width .paragraphs-container .jumbotron, .pane-node-field-afsnit-full-width .entity .content .jumbotron,
+      .front .paragraphs-container .entity-paragraphs-item .content .jumbotron, .page-node .os2-section.full-width .paragraphs-container .jumbotron, .field-name-field-afsnit-full-width .entity .content .jumbotron,
+      .pane-paragraphs-from-section .entity .content .jumbotron,
       .container-fluid .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
@@ -11052,30 +11068,40 @@ body {
 
 @media screen and (min-width: 768px) {
   .navbar.container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content,
-  .front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.content {
+  .front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .field-name-field-afsnit-full-width .entity .navbar.content,
+  .pane-paragraphs-from-section .entity .navbar.content {
     max-width: 720px; } }
 
 @media screen and (min-width: 992px) {
   .navbar.container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content,
-  .front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.content {
+  .front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .field-name-field-afsnit-full-width .entity .navbar.content,
+  .pane-paragraphs-from-section .entity .navbar.content {
     max-width: 940px; } }
 
 @media screen and (min-width: 1230px) {
   .navbar.container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content,
-  .front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.content {
+  .front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .field-name-field-afsnit-full-width .entity .navbar.content,
+  .pane-paragraphs-from-section .entity .navbar.content {
     max-width: 1170px; } }
 
 .navbar.container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content,
-.front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.content, .navbar.container-fluid {
+.front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .field-name-field-afsnit-full-width .entity .navbar.content,
+.pane-paragraphs-from-section .entity .navbar.content, .navbar.container-fluid {
   margin-top: 20px; }
 
 .navbar.container > .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content > .container,
-.front .paragraphs-container .entity-paragraphs-item .navbar.content > .container, .page-node .os2-section.full-width .navbar.paragraphs-container > .container, .pane-node-field-afsnit-full-width .entity .navbar.content > .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.container > .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content > .content, .page-node .os2-section.full-width .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.paragraphs-container > .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .page-node .os2-section.full-width .navbar.paragraphs-container > .content,
+.front .paragraphs-container .entity-paragraphs-item .navbar.content > .container, .page-node .os2-section.full-width .navbar.paragraphs-container > .container, .field-name-field-afsnit-full-width .entity .navbar.content > .container,
+.pane-paragraphs-from-section .entity .navbar.content > .container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.container > .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content > .content, .page-node .os2-section.full-width .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.paragraphs-container > .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .page-node .os2-section.full-width .navbar.paragraphs-container > .content,
 .front .paragraphs-container .entity-paragraphs-item .navbar.container > .content, .front .paragraphs-container .entity-paragraphs-item .navbar.content > .content, .page-node .os2-section.full-width
 .front .paragraphs-container .entity-paragraphs-item .navbar.paragraphs-container > .content,
 .front .paragraphs-container .entity-paragraphs-item .page-node .os2-section.full-width .navbar.paragraphs-container > .content, .page-node .os2-section.full-width .navbar.container > .paragraphs-container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .page-node .os2-section.full-width .navbar.content > .paragraphs-container, .page-node .os2-section.full-width .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content > .paragraphs-container,
 .front .paragraphs-container .entity-paragraphs-item .page-node .os2-section.full-width .navbar.content > .paragraphs-container, .page-node .os2-section.full-width
-.front .paragraphs-container .entity-paragraphs-item .navbar.content > .paragraphs-container, .page-node .os2-section.full-width .navbar.paragraphs-container > .paragraphs-container, .pane-node-field-afsnit-full-width .entity .page-node .os2-section.full-width .navbar.content > .paragraphs-container, .page-node .os2-section.full-width .pane-node-field-afsnit-full-width .entity .navbar.content > .paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.container > .content, .page-node .os2-section.full-width .pane-node-field-afsnit-full-width .entity .navbar.paragraphs-container > .content, .pane-node-field-afsnit-full-width .entity .page-node .os2-section.full-width .navbar.paragraphs-container > .content, .pane-node-field-afsnit-full-width .entity .navbar.content > .content,
+.front .paragraphs-container .entity-paragraphs-item .navbar.content > .paragraphs-container, .page-node .os2-section.full-width .navbar.paragraphs-container > .paragraphs-container, .field-name-field-afsnit-full-width .entity .page-node .os2-section.full-width .navbar.content > .paragraphs-container, .page-node .os2-section.full-width .field-name-field-afsnit-full-width .entity .navbar.content > .paragraphs-container,
+.pane-paragraphs-from-section .entity .page-node .os2-section.full-width .navbar.content > .paragraphs-container, .page-node .os2-section.full-width
+.pane-paragraphs-from-section .entity .navbar.content > .paragraphs-container, .field-name-field-afsnit-full-width .entity .navbar.container > .content, .page-node .os2-section.full-width .field-name-field-afsnit-full-width .entity .navbar.paragraphs-container > .content, .field-name-field-afsnit-full-width .entity .page-node .os2-section.full-width .navbar.paragraphs-container > .content, .field-name-field-afsnit-full-width .entity .navbar.content > .content,
+.pane-paragraphs-from-section .entity .navbar.container > .content, .page-node .os2-section.full-width
+.pane-paragraphs-from-section .entity .navbar.paragraphs-container > .content,
+.pane-paragraphs-from-section .entity .page-node .os2-section.full-width .navbar.paragraphs-container > .content, .pane-paragraphs-from-section .entity .navbar.content > .content,
 .navbar.container-fluid > .container-fluid {
   margin: 0;
   padding: 0;
@@ -12008,25 +12034,45 @@ h1.pane-title,
 
 .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-billede .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-link .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-afsnit-m-galleri .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-media .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-header-text-links-image .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragrph-address .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-paragraph-departments .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-personale .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-kolonner .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform
 .front .paragraphs-container .entity-paragraphs-item .content,
-.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .content {
+.front .paragraphs-container .entity-paragraphs-item .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .paragraphs-container, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .content, .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform
+.pane-paragraphs-from-section .entity .content,
+.pane-paragraphs-from-section .entity .node .field.field-name-field-afsnit.field-type-paragraphs .field-item .paragraphs-item-webform .content {
   width: inherit;
   padding: 0; }
 
@@ -12051,13 +12097,30 @@ h1.pane-title,
   .page-nyheder .main-container,
   .bg-darker {
     padding-top: 30px;
-    padding-bottom: 30px; } }
+    padding-bottom: 30px; }
+  .view-fic-embed-files.view-display-id-instagram .views-row.views-row-0 > a img,
+  .pane-instagram-billeder .views-row.views-row-0 > a img {
+    margin: auto; } }
 
 @media (min-width: 768px) {
-  .view-fic-embed-files.view-display-id-instagram .views-row.views-row-0,
-  .pane-instagram-billeder .views-row.views-row-0 {
-    padding-top: 40px;
-    padding-bottom: 40px; } }
+  .view-fic-embed-files.view-display-id-instagram .views-row.views-row-0 > a,
+  .pane-instagram-billeder .views-row.views-row-0 > a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; } }
 
 .region-header {
   margin-left: -15px;
@@ -12199,6 +12262,7 @@ section.block-locale {
   margin-bottom: 30px; }
 
 .sticky {
+  padding-bottom: 35px;
   background-color: transparent;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.6)), color-stop(70%, transparent));
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
@@ -12233,10 +12297,6 @@ section.block-locale {
   .sidr-open .sidr__toggle .fa-times {
     display: inline-block; }
 
-@media (max-width: 767px) {
-  .sticky {
-    background-position: 0 0; } }
-
 @media (min-width: 768px) {
   .sticky {
     margin-right: auto;
@@ -12248,7 +12308,8 @@ section.block-locale {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
     background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0); }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
+    padding-bottom: 0; }
     .sticky:before, .sticky:after {
       content: " ";
       display: table; }
@@ -12277,7 +12338,8 @@ section.block-locale {
   .topnav-wrapper.user-nav {
     height: 42px !important; }
   .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
-  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
+  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
+  .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
     margin-top: 0; }
   .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
     display: none; }
@@ -12397,11 +12459,13 @@ section.block-locale {
           color: #ffffff !important; }
 
 .navbar.container.navbar-default, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content,
-.front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content {
+.front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content,
+.pane-paragraphs-from-section .entity .navbar.navbar-default.content {
   margin-top: 0;
   border: 0; }
   .navbar.container.navbar-default .headerwrapper-inner, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner,
-  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner {
+  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner,
+  .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -12414,59 +12478,84 @@ section.block-locale {
         -ms-flex-pack: end;
             justify-content: flex-end; }
     .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
-    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
+    .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
+    .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
       padding: 0;
       width: 100%;
       z-index: 7; }
       .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav,
-      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav {
+      .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav,
+      .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav {
         float: right; }
         .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a,
-        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a {
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a,
+        .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a {
           padding: 20px 15px;
           font-family: "RBNo21a-Medium", "Lato", sans-serif;
           font-size: 1.4em; }
           .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret {
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a .caret {
             display: none; }
         .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active,
-        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail,
-        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail {
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active,
+        .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail,
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail,
+        .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail {
           background-color: #01B5D5;
           color: #ffffff; }
           .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus {
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active:focus, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li > a.active-trail:focus {
             background-color: #01B5D5;
             color: #ffffff; }
         .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a,
-        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a,
-        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a {
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a,
+        .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a,
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a,
+        .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a {
           color: #333333;
           background-color: #ffffff; }
           .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus {
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li a:focus, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li.open a:focus {
             background-color: #01B5D5;
             color: #ffffff; }
         .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a,
-        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a {
+        .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a,
+        .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a {
           background-color: #E9E7E8; }
           .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus,
-          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus {
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:active, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:hover, .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus,
+          .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus,
+          .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse ul.navbar-nav > li ul.dropdown-menu li:nth-child(odd) a:focus {
             background-color: #01B5D5; }
   .navbar.container.navbar-default ul.dropdown-menu, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu,
-  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content ul.dropdown-menu {
+  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content ul.dropdown-menu, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container ul.dropdown-menu, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content ul.dropdown-menu,
+  .pane-paragraphs-from-section .entity .navbar.navbar-default.content ul.dropdown-menu {
     border: none;
     padding: 0; }
 
@@ -12567,7 +12656,9 @@ footer.footer {
     color: #ffffff; }
     footer.footer .footer-dark .container, footer.footer .footer-dark .page-taxonomy .paragraphs-container .entity-paragraphs-item .content, .page-taxonomy .paragraphs-container .entity-paragraphs-item footer.footer .footer-dark .content, footer.footer .footer-dark
     .front .paragraphs-container .entity-paragraphs-item .content,
-    .front .paragraphs-container .entity-paragraphs-item footer.footer .footer-dark .content, footer.footer .footer-dark .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width footer.footer .footer-dark .paragraphs-container, footer.footer .footer-dark .pane-node-field-afsnit-full-width .entity .content, .pane-node-field-afsnit-full-width .entity footer.footer .footer-dark .content {
+    .front .paragraphs-container .entity-paragraphs-item footer.footer .footer-dark .content, footer.footer .footer-dark .page-node .os2-section.full-width .paragraphs-container, .page-node .os2-section.full-width footer.footer .footer-dark .paragraphs-container, footer.footer .footer-dark .field-name-field-afsnit-full-width .entity .content, .field-name-field-afsnit-full-width .entity footer.footer .footer-dark .content, footer.footer .footer-dark
+    .pane-paragraphs-from-section .entity .content,
+    .pane-paragraphs-from-section .entity footer.footer .footer-dark .content {
       padding-top: 30px;
       padding-bottom: 30px; }
     footer.footer .footer-dark a {
@@ -13149,7 +13240,8 @@ div.ctools-modal-content {
         color: #ff4200; } }
 
 .navbar.container, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.content,
-.front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .pane-node-field-afsnit-full-width .entity .navbar.content {
+.front .paragraphs-container .entity-paragraphs-item .navbar.content, .page-node .os2-section.full-width .navbar.paragraphs-container, .field-name-field-afsnit-full-width .entity .navbar.content,
+.pane-paragraphs-from-section .entity .navbar.content {
   max-width: none; }
 
 .navbar-default {
@@ -13163,7 +13255,8 @@ div.ctools-modal-content {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
-  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse, .pane-node-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
+  .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse, .page-node .os2-section.full-width .navbar.navbar-default.paragraphs-container .headerwrapper-inner .navbar-collapse, .field-name-field-afsnit-full-width .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
+  .pane-paragraphs-from-section .entity .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
     margin-right: 0;
     width: 100%;
     margin-top: 10px; } }
@@ -13270,93 +13363,65 @@ div.ctools-modal-content {
         min-width: 185px; }
         .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-ext-link .field-item a:hover, .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-ext-link .field-item a:focus {
           text-decoration: none; }
-  .term-fic-header .views-slideshow-controls-bottom,
-  .term-fic-header .field-name-field-os2web-base-field-related,
-  .term-fic-header .cycle-pager {
-    min-height: 85px;
-    margin-bottom: 60px; }
-    .term-fic-header .views-slideshow-controls-bottom > div,
-    .term-fic-header .field-name-field-os2web-base-field-related > div,
-    .term-fic-header .cycle-pager > div {
-      overflow: hidden; }
-    .term-fic-header .views-slideshow-controls-bottom div,
-    .term-fic-header .field-name-field-os2web-base-field-related div,
-    .term-fic-header .cycle-pager div {
-      display: inline-block; }
-    .term-fic-header .views-slideshow-controls-bottom a,
-    .term-fic-header .field-name-field-os2web-base-field-related a,
-    .term-fic-header .cycle-pager a {
-      font-size: 1.7em;
-      line-height: 1em;
-      text-transform: uppercase;
+  .term-fic-header .views-slideshow-controls-bottom > div,
+  .term-fic-header .field-name-field-os2web-base-field-related > div,
+  .term-fic-header .cycle-pager > div {
+    overflow: hidden; }
+  .term-fic-header .views-slideshow-controls-bottom a,
+  .term-fic-header .field-name-field-os2web-base-field-related a,
+  .term-fic-header .cycle-pager a {
+    font-size: 1.7em;
+    line-height: 1em;
+    text-transform: uppercase;
+    display: block;
+    background: #ffffff;
+    color: #192124;
+    position: relative;
+    text-decoration: none;
+    border: 5px solid #ffffff;
+    overflow: hidden;
+    height: 80px; }
+    .term-fic-header .views-slideshow-controls-bottom a span,
+    .term-fic-header .field-name-field-os2web-base-field-related a span,
+    .term-fic-header .cycle-pager a span {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+           -o-transform: translateY(-50%);
+              transform: translateY(-50%);
+      padding: 0 40px 0 10px;
+      display: block; }
+    .term-fic-header .views-slideshow-controls-bottom a:hover,
+    .term-fic-header .field-name-field-os2web-base-field-related a:hover,
+    .term-fic-header .cycle-pager a:hover {
+      background: #ff4200;
+      color: #ffffff; }
+    .term-fic-header .views-slideshow-controls-bottom a::after,
+    .term-fic-header .field-name-field-os2web-base-field-related a::after,
+    .term-fic-header .cycle-pager a::after {
+      content: '›';
       display: block;
-      background: #ffffff;
-      color: #192124;
-      position: relative;
-      text-decoration: none;
-      width: 1170px;
-      border: 5px solid #ffffff;
-      overflow: hidden;
-      height: 80px; }
-      .term-fic-header .views-slideshow-controls-bottom a span,
-      .term-fic-header .field-name-field-os2web-base-field-related a span,
-      .term-fic-header .cycle-pager a span {
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-             -o-transform: translateY(-50%);
-                transform: translateY(-50%);
-        padding: 0 40px 0 10px;
-        display: block; }
-      .term-fic-header .views-slideshow-controls-bottom a:hover,
-      .term-fic-header .field-name-field-os2web-base-field-related a:hover,
-      .term-fic-header .cycle-pager a:hover {
-        background: #ff4200;
-        color: #ffffff; }
-      .term-fic-header .views-slideshow-controls-bottom a::after,
-      .term-fic-header .field-name-field-os2web-base-field-related a::after,
-      .term-fic-header .cycle-pager a::after {
-        content: '›';
-        display: block;
-        height: 31px;
-        position: absolute;
-        right: 10px;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        font-size: 1.4em;
-        font-family: "sans-serif"; }
-    .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item,
-    .term-fic-header .views-slideshow-controls-bottom .field-item,
-    .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item,
-    .term-fic-header .field-name-field-os2web-base-field-related .field-item,
-    .term-fic-header .cycle-pager .views-slideshow-pager-field-item,
-    .term-fic-header .cycle-pager .field-item {
-      margin-right: 30px; }
-      .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item.views-row-first, .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item:first-child,
-      .term-fic-header .views-slideshow-controls-bottom .field-item.views-row-first,
-      .term-fic-header .views-slideshow-controls-bottom .field-item:first-child,
-      .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item.views-row-first,
-      .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item:first-child,
-      .term-fic-header .field-name-field-os2web-base-field-related .field-item.views-row-first,
-      .term-fic-header .field-name-field-os2web-base-field-related .field-item:first-child,
-      .term-fic-header .cycle-pager .views-slideshow-pager-field-item.views-row-first,
-      .term-fic-header .cycle-pager .views-slideshow-pager-field-item:first-child,
-      .term-fic-header .cycle-pager .field-item.views-row-first,
-      .term-fic-header .cycle-pager .field-item:first-child {
-        display: none; }
-      .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item:last-child,
-      .term-fic-header .views-slideshow-controls-bottom .field-item:last-child,
-      .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item:last-child,
-      .term-fic-header .field-name-field-os2web-base-field-related .field-item:last-child,
-      .term-fic-header .cycle-pager .views-slideshow-pager-field-item:last-child,
-      .term-fic-header .cycle-pager .field-item:last-child {
-        margin-right: 0; }
-    .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-fields > div,
-    .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-fields > div,
-    .term-fic-header .cycle-pager .views-slideshow-pager-fields > div {
-      padding: 0; }
+      height: 31px;
+      position: absolute;
+      right: 10px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: 1.4em;
+      font-family: "sans-serif"; }
+  .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item.views-row-first, .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item:first-child,
+  .term-fic-header .views-slideshow-controls-bottom .field-item.views-row-first,
+  .term-fic-header .views-slideshow-controls-bottom .field-item:first-child,
+  .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item.views-row-first,
+  .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item:first-child,
+  .term-fic-header .field-name-field-os2web-base-field-related .field-item.views-row-first,
+  .term-fic-header .field-name-field-os2web-base-field-related .field-item:first-child,
+  .term-fic-header .cycle-pager .views-slideshow-pager-field-item.views-row-first,
+  .term-fic-header .cycle-pager .views-slideshow-pager-field-item:first-child,
+  .term-fic-header .cycle-pager .field-item.views-row-first,
+  .term-fic-header .cycle-pager .field-item:first-child {
+    display: none; }
   .term-fic-header .views-slideshow-controls-bottom {
     font-size: 0; }
     .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item {
@@ -13364,12 +13429,6 @@ div.ctools-modal-content {
       .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item span {
         width: 130px; }
   .term-fic-header .slide-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    min-height: 60px;
-    width: 100%;
-    z-index: 1;
     text-transform: uppercase; }
     .term-fic-header .slide-bottom .blue-block {
       background-color: #01B5D5;
@@ -13453,36 +13512,6 @@ div.ctools-modal-content {
       bottom: auto !important;
       height: auto !important; }
 
-.term-fic-header .num-slides-3 .views-slideshow-controls-bottom a {
-  width: 570px; }
-
-.term-fic-header .num-slides-4 .views-slideshow-controls-bottom a {
-  width: 370px; }
-
-.term-fic-header .num-slides-5 .views-slideshow-controls-bottom a {
-  width: 270px; }
-
-.term-fic-header .num-slides-6 .views-slideshow-controls-bottom a {
-  width: 210px; }
-
-.term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-  width: 170px; }
-
-.term-fic-header .num-items-3 a {
-  width: 570px; }
-
-.term-fic-header .num-items-4 a {
-  width: 370px; }
-
-.term-fic-header .num-items-5 a {
-  width: 270px; }
-
-.term-fic-header .num-items-6 a {
-  width: 210px; }
-
-.term-fic-header .num-items-7 a {
-  width: 170px; }
-
 .backstretched .node-type-os2web-base-contentpage .page-header-wrapper {
   margin-bottom: 30px; }
 
@@ -13492,33 +13521,341 @@ div.ctools-modal-content {
 .node-type-os2web-base-contentpage .slide-content-wrapper {
   margin: 30px 0 110px; }
 
+.widget_pager_bottom,
+.cycle-pager {
+  margin-left: -2px;
+  margin-right: -3px; }
+  .widget_pager_bottom:before, .widget_pager_bottom:after,
+  .cycle-pager:before,
+  .cycle-pager:after {
+    content: " ";
+    display: table; }
+  .widget_pager_bottom:after,
+  .cycle-pager:after {
+    clear: both; }
+  .widget_pager_bottom > .views-slideshow-pager-field-item,
+  .widget_pager_bottom > .field-item,
+  .cycle-pager > .views-slideshow-pager-field-item,
+  .cycle-pager > .field-item {
+    position: relative;
+    padding-left: 2.5px !important;
+    padding-right: 2.5px !important; }
+    .widget_pager_bottom > .views-slideshow-pager-field-item a,
+    .widget_pager_bottom > .field-item a,
+    .cycle-pager > .views-slideshow-pager-field-item a,
+    .cycle-pager > .field-item a {
+      display: block;
+      width: auto;
+      margin-bottom: 5px; }
+  .num-slides-3 .widget_pager_bottom > .views-slideshow-pager-field-item,
+  .num-slides-3 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-3 > .views-slideshow-pager-field-item,
+  .widget_pager_bottom.num-items-3 > .field-item, .num-slides-3
+  .cycle-pager > .views-slideshow-pager-field-item,
+  .num-slides-3
+  .cycle-pager > .field-item,
+  .cycle-pager.num-items-3 > .views-slideshow-pager-field-item,
+  .cycle-pager.num-items-3 > .field-item {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .num-slides-3 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-3 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-3 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-3 > .field-item, .num-slides-3
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-3
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-3 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-3 > .field-item {
+        float: left;
+        width: 50%; } }
+    @media (min-width: 992px) {
+      .num-slides-3 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-3 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-3 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-3 > .field-item, .num-slides-3
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-3
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-3 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-3 > .field-item {
+        float: left;
+        width: 50%; } }
+    @media (min-width: 1230px) {
+      .num-slides-3 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-3 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-3 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-3 > .field-item, .num-slides-3
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-3
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-3 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-3 > .field-item {
+        float: left;
+        width: 50%; } }
+  .num-slides-4 .widget_pager_bottom > .views-slideshow-pager-field-item,
+  .num-slides-4 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-4 > .views-slideshow-pager-field-item,
+  .widget_pager_bottom.num-items-4 > .field-item, .num-slides-4
+  .cycle-pager > .views-slideshow-pager-field-item,
+  .num-slides-4
+  .cycle-pager > .field-item,
+  .cycle-pager.num-items-4 > .views-slideshow-pager-field-item,
+  .cycle-pager.num-items-4 > .field-item {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .num-slides-4 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-4 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-4 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-4 > .field-item, .num-slides-4
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-4
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-4 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-4 > .field-item {
+        float: left;
+        width: 33.3333333333%; } }
+    @media (min-width: 992px) {
+      .num-slides-4 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-4 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-4 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-4 > .field-item, .num-slides-4
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-4
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-4 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-4 > .field-item {
+        float: left;
+        width: 33.3333333333%; } }
+    @media (min-width: 1230px) {
+      .num-slides-4 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-4 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-4 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-4 > .field-item, .num-slides-4
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-4
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-4 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-4 > .field-item {
+        float: left;
+        width: 33.3333333333%; } }
+  .num-slides-5 .widget_pager_bottom > .views-slideshow-pager-field-item,
+  .num-slides-5 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-5 > .views-slideshow-pager-field-item,
+  .widget_pager_bottom.num-items-5 > .field-item, .num-slides-5
+  .cycle-pager > .views-slideshow-pager-field-item,
+  .num-slides-5
+  .cycle-pager > .field-item,
+  .cycle-pager.num-items-5 > .views-slideshow-pager-field-item,
+  .cycle-pager.num-items-5 > .field-item {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .num-slides-5 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-5 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-5 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-5 > .field-item, .num-slides-5
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-5
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-5 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-5 > .field-item {
+        float: left;
+        width: 25%; } }
+    @media (min-width: 992px) {
+      .num-slides-5 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-5 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-5 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-5 > .field-item, .num-slides-5
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-5
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-5 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-5 > .field-item {
+        float: left;
+        width: 25%; } }
+    @media (min-width: 1230px) {
+      .num-slides-5 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-5 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-5 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-5 > .field-item, .num-slides-5
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-5
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-5 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-5 > .field-item {
+        float: left;
+        width: 25%; } }
+  .num-slides-6 .widget_pager_bottom > .views-slideshow-pager-field-item,
+  .num-slides-6 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-6 > .views-slideshow-pager-field-item,
+  .widget_pager_bottom.num-items-6 > .field-item, .num-slides-6
+  .cycle-pager > .views-slideshow-pager-field-item,
+  .num-slides-6
+  .cycle-pager > .field-item,
+  .cycle-pager.num-items-6 > .views-slideshow-pager-field-item,
+  .cycle-pager.num-items-6 > .field-item {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .num-slides-6 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-6 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-6 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-6 > .field-item, .num-slides-6
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-6
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-6 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-6 > .field-item {
+        float: left;
+        width: 25%; } }
+    @media (min-width: 992px) {
+      .num-slides-6 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-6 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-6 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-6 > .field-item, .num-slides-6
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-6
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-6 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-6 > .field-item {
+        float: left;
+        width: 25%; } }
+    @media (min-width: 1230px) {
+      .num-slides-6 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-6 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-6 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-6 > .field-item, .num-slides-6
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-6
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-6 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-6 > .field-item {
+        float: left;
+        width: 25%; } }
+  .num-slides-7 .widget_pager_bottom > .views-slideshow-pager-field-item,
+  .num-slides-7 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-7 > .views-slideshow-pager-field-item,
+  .widget_pager_bottom.num-items-7 > .field-item, .num-slides-7
+  .cycle-pager > .views-slideshow-pager-field-item,
+  .num-slides-7
+  .cycle-pager > .field-item,
+  .cycle-pager.num-items-7 > .views-slideshow-pager-field-item,
+  .cycle-pager.num-items-7 > .field-item {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    @media (min-width: 768px) {
+      .num-slides-7 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-7 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-7 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-7 > .field-item, .num-slides-7
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-7
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-7 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-7 > .field-item {
+        float: left;
+        width: 33.3333333333%; } }
+    @media (min-width: 992px) {
+      .num-slides-7 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-7 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-7 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-7 > .field-item, .num-slides-7
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-7
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-7 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-7 > .field-item {
+        float: left;
+        width: 16.6666666667%; } }
+    @media (min-width: 1230px) {
+      .num-slides-7 .widget_pager_bottom > .views-slideshow-pager-field-item,
+      .num-slides-7 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-7 > .views-slideshow-pager-field-item,
+      .widget_pager_bottom.num-items-7 > .field-item, .num-slides-7
+      .cycle-pager > .views-slideshow-pager-field-item,
+      .num-slides-7
+      .cycle-pager > .field-item,
+      .cycle-pager.num-items-7 > .views-slideshow-pager-field-item,
+      .cycle-pager.num-items-7 > .field-item {
+        float: left;
+        width: 16.6666666667%; } }
+
+.slide-bottom {
+  margin-left: -2px;
+  margin-right: -3px; }
+  .slide-bottom:before, .slide-bottom:after {
+    content: " ";
+    display: table; }
+  .slide-bottom:after {
+    clear: both; }
+  .slide-bottom [class*=col] {
+    padding-left: 2.5px !important;
+    padding-right: 2.5px !important; }
+
 @media (max-width: 767px) {
-  .term-fic-header .cycle-pager,
-  .term-fic-header .views-slideshow-pager-fields {
-    display: block !important; }
-    .term-fic-header .cycle-pager div,
-    .term-fic-header .views-slideshow-pager-fields div {
-      display: block; }
-    .term-fic-header .cycle-pager > div,
-    .term-fic-header .views-slideshow-pager-fields > div {
-      display: inline-block;
-      margin: 0 0 10px 0 !important;
-      padding: 0;
-      width: 50%; }
-      .term-fic-header .cycle-pager > div > a,
-      .term-fic-header .views-slideshow-pager-fields > div > a {
-        display: block;
-        width: auto !important; }
-      .term-fic-header .cycle-pager > div:nth-child(even) > a,
-      .term-fic-header .cycle-pager > div:nth-child(even) > div,
-      .term-fic-header .views-slideshow-pager-fields > div:nth-child(even) > a,
-      .term-fic-header .views-slideshow-pager-fields > div:nth-child(even) > div {
-        margin-right: 2.5px; }
-      .term-fic-header .cycle-pager > div:nth-child(odd) > a,
-      .term-fic-header .cycle-pager > div:nth-child(odd) > div,
-      .term-fic-header .views-slideshow-pager-fields > div:nth-child(odd) > a,
-      .term-fic-header .views-slideshow-pager-fields > div:nth-child(odd) > div {
-        margin-left: 2.5px; }
   .term-fic-header .slide-content-wrapper {
     padding-bottom: 20px; }
     .term-fic-header .slide-content-wrapper .field-name-description-field,
@@ -13530,39 +13867,84 @@ div.ctools-modal-content {
     height: 160px !important; }
   .term-fic-header .views_slideshow_cycle_slide {
     width: 100% !important; }
-  .term-fic-header .views-slideshow-controls-bottom > div,
-  .term-fic-header .field-name-field-os2web-base-field-related > div,
-  .term-fic-header .cycle-pager > div {
-    margin-bottom: 0; }
   .term-fic-header .slide-bottom .blue-block {
     min-height: auto; }
-  .term-fic-header .slide-bottom div:nth-child(even) {
-    padding-left: 2.5px; }
-  .term-fic-header .slide-bottom div:nth-child(odd) {
-    padding-right: 2.5px; }
   .term-fic-header .slide-bottom .text {
     font-size: 1.7em;
     line-height: 1em; }
   .term-fic-header .contact.modal-link {
     font-size: 1.7em;
     line-height: 1em; }
-  .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-4 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-    width: 100%; }
-  .term-fic-header .num-items-3 a,
-  .term-fic-header .num-items-4 a,
-  .term-fic-header .num-items-5 a,
-  .term-fic-header .num-items-6 a,
-  .term-fic-header .num-items-7 a {
-    width: 100%; }
   .scroll-down-wrapper {
     height: 90px;
     margin: 0; }
     .scroll-down-wrapper .scroll-down-link {
-      display: none; } }
+      display: none; }
+  .widget_pager_bottom,
+  .cycle-pager {
+    margin-left: -2px;
+    margin-right: -3px; }
+    .widget_pager_bottom:before, .widget_pager_bottom:after,
+    .cycle-pager:before,
+    .cycle-pager:after {
+      content: " ";
+      display: table; }
+    .widget_pager_bottom:after,
+    .cycle-pager:after {
+      clear: both; }
+    .widget_pager_bottom > .views-slideshow-pager-field-item,
+    .widget_pager_bottom > .field-item,
+    .cycle-pager > .views-slideshow-pager-field-item,
+    .cycle-pager > .field-item {
+      padding-left: 2.5px !important;
+      padding-right: 2.5px !important; }
+  .slide-bottom {
+    margin-left: -2px;
+    margin-right: -3px; }
+    .slide-bottom:before, .slide-bottom:after {
+      content: " ";
+      display: table; }
+    .slide-bottom:after {
+      clear: both; }
+    .slide-bottom [class*=col] {
+      padding-left: 2.5px !important;
+      padding-right: 2.5px !important; } }
+
+@media (min-width: 768px) {
+  .widget_pager_bottom,
+  .cycle-pager {
+    margin-left: -5px;
+    margin-right: -5px; }
+    .widget_pager_bottom:before, .widget_pager_bottom:after,
+    .cycle-pager:before,
+    .cycle-pager:after {
+      content: " ";
+      display: table; }
+    .widget_pager_bottom:after,
+    .cycle-pager:after {
+      clear: both; }
+    .widget_pager_bottom > .views-slideshow-pager-field-item,
+    .widget_pager_bottom > .field-item,
+    .cycle-pager > .views-slideshow-pager-field-item,
+    .cycle-pager > .field-item {
+      padding-left: 5px !important;
+      padding-right: 5px !important; }
+      .widget_pager_bottom > .views-slideshow-pager-field-item a,
+      .widget_pager_bottom > .field-item a,
+      .cycle-pager > .views-slideshow-pager-field-item a,
+      .cycle-pager > .field-item a {
+        margin-bottom: 10px; }
+  .slide-bottom {
+    margin-left: -5px;
+    margin-right: -5px; }
+    .slide-bottom:before, .slide-bottom:after {
+      content: " ";
+      display: table; }
+    .slide-bottom:after {
+      clear: both; }
+    .slide-bottom [class*=col] {
+      padding-left: 5px !important;
+      padding-right: 5px !important; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .term-fic-header .slide-bottom .blue-block .text,
@@ -13579,24 +13961,6 @@ div.ctools-modal-content {
     padding-bottom: 40px; }
   .term-fic-header .views_slideshow_cycle_slide {
     width: 100% !important; }
-  .term-fic-header .views-slideshow-controls-bottom,
-  .term-fic-header .field-name-field-os2web-base-field-related,
-  .term-fic-header .cycle-pager {
-    margin-bottom: 65px; }
-    .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item,
-    .term-fic-header .views-slideshow-controls-bottom .field-item,
-    .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item,
-    .term-fic-header .field-name-field-os2web-base-field-related .field-item,
-    .term-fic-header .cycle-pager .views-slideshow-pager-field-item,
-    .term-fic-header .cycle-pager .field-item {
-      margin-right: 5px; }
-      .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item:nth-child(4),
-      .term-fic-header .views-slideshow-controls-bottom .field-item:nth-child(4),
-      .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item:nth-child(4),
-      .term-fic-header .field-name-field-os2web-base-field-related .field-item:nth-child(4),
-      .term-fic-header .cycle-pager .views-slideshow-pager-field-item:nth-child(4),
-      .term-fic-header .cycle-pager .field-item:nth-child(4) {
-        margin-right: 0; }
   .term-fic-header .slide-bottom .blue-block {
     min-height: auto; }
   .term-fic-header .slide-bottom .text {
@@ -13605,23 +13969,47 @@ div.ctools-modal-content {
   .term-fic-header .contact.modal-link {
     font-size: 1.7em;
     line-height: 1em; }
-  .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-4 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-    width: 236px; }
-  .term-fic-header .num-items-3 a,
-  .term-fic-header .num-items-4 a,
-  .term-fic-header .num-items-5 a,
-  .term-fic-header .num-items-6 a,
-  .term-fic-header .num-items-7 a {
-    width: 236px; }
   .scroll-down-wrapper {
     height: 90px;
     margin: 0; }
     .scroll-down-wrapper .scroll-down-link {
       display: none; } }
+
+@media (min-width: 992px) {
+  .widget_pager_bottom,
+  .cycle-pager {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .widget_pager_bottom:before, .widget_pager_bottom:after,
+    .cycle-pager:before,
+    .cycle-pager:after {
+      content: " ";
+      display: table; }
+    .widget_pager_bottom:after,
+    .cycle-pager:after {
+      clear: both; }
+    .widget_pager_bottom > .views-slideshow-pager-field-item,
+    .widget_pager_bottom > .field-item,
+    .cycle-pager > .views-slideshow-pager-field-item,
+    .cycle-pager > .field-item {
+      padding-left: 15px !important;
+      padding-right: 15px !important; }
+      .widget_pager_bottom > .views-slideshow-pager-field-item a,
+      .widget_pager_bottom > .field-item a,
+      .cycle-pager > .views-slideshow-pager-field-item a,
+      .cycle-pager > .field-item a {
+        margin-bottom: 30px; }
+  .slide-bottom {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .slide-bottom:before, .slide-bottom:after {
+      content: " ";
+      display: table; }
+    .slide-bottom:after {
+      clear: both; }
+    .slide-bottom [class*=col] {
+      padding-left: 15px !important;
+      padding-right: 15px !important; } }
 
 @media (min-width: 992px) and (max-width: 1229px) {
   .term-fic-header .slide-bottom .blue-block .text,
@@ -13638,43 +14026,16 @@ div.ctools-modal-content {
     padding-bottom: 40px; }
   .term-fic-header .views_slideshow_cycle_slide {
     width: 100% !important; }
-  .term-fic-header .views-slideshow-controls-bottom,
-  .term-fic-header .field-name-field-os2web-base-field-related,
-  .term-fic-header .cycle-pager {
-    margin-bottom: 70px; }
-    .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item,
-    .term-fic-header .views-slideshow-controls-bottom .field-item,
-    .term-fic-header .field-name-field-os2web-base-field-related .views-slideshow-pager-field-item,
-    .term-fic-header .field-name-field-os2web-base-field-related .field-item,
-    .term-fic-header .cycle-pager .views-slideshow-pager-field-item,
-    .term-fic-header .cycle-pager .field-item {
-      margin-right: 5px; }
   .term-fic-header .views-slideshow-controls-bottom .views-slideshow-pager-field-item span {
     width: auto; }
   .term-fic-header .slide-bottom .blue-block {
     min-height: auto; }
-  .term-fic-header .slide-bottom div:nth-child(even) {
-    padding-left: 2.2px; }
-  .term-fic-header .slide-bottom div:nth-child(odd) {
-    padding-right: 2.2px; }
   .term-fic-header .slide-bottom .text {
     font-size: 1.6em;
     line-height: 1em; }
   .term-fic-header .contact.modal-link {
     font-size: 1.7em;
     line-height: 1em; }
-  .term-fic-header .num-slides-3 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-4 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-5 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-6 .views-slideshow-controls-bottom a,
-  .term-fic-header .num-slides-7 .views-slideshow-controls-bottom a {
-    width: 152px; }
-  .term-fic-header .num-items-3 a,
-  .term-fic-header .num-items-4 a,
-  .term-fic-header .num-items-5 a,
-  .term-fic-header .num-items-6 a,
-  .term-fic-header .num-items-7 a {
-    width: 152px; }
   .scroll-down-wrapper {
     height: 90px;
     margin: 0; }
@@ -13682,10 +14043,40 @@ div.ctools-modal-content {
       display: none; } }
 
 @media (min-width: 1230px) {
-  .term-fic-header .views-slideshow-controls-bottom,
-  .term-fic-header .field-name-field-os2web-base-field-related,
-  .term-fic-header .cycle-pager {
-    margin-bottom: 80px; } }
+  .widget_pager_bottom,
+  .cycle-pager {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .widget_pager_bottom:before, .widget_pager_bottom:after,
+    .cycle-pager:before,
+    .cycle-pager:after {
+      content: " ";
+      display: table; }
+    .widget_pager_bottom:after,
+    .cycle-pager:after {
+      clear: both; }
+    .widget_pager_bottom > .views-slideshow-pager-field-item,
+    .widget_pager_bottom > .field-item,
+    .cycle-pager > .views-slideshow-pager-field-item,
+    .cycle-pager > .field-item {
+      padding-left: 15px !important;
+      padding-right: 15px !important; }
+      .widget_pager_bottom > .views-slideshow-pager-field-item a,
+      .widget_pager_bottom > .field-item a,
+      .cycle-pager > .views-slideshow-pager-field-item a,
+      .cycle-pager > .field-item a {
+        margin-bottom: 30px; }
+  .slide-bottom {
+    margin-left: -15px;
+    margin-right: -15px; }
+    .slide-bottom:before, .slide-bottom:after {
+      content: " ";
+      display: table; }
+    .slide-bottom:after {
+      clear: both; }
+    .slide-bottom [class*=col] {
+      padding-left: 15px !important;
+      padding-right: 15px !important; } }
 
 @media screen and (max-width: 767px) {
   .page-node .content-sidebar .panel-pane {
@@ -14735,17 +15126,128 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   text-transform: uppercase;
   font-weight: bold; }
 
+.os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc,
+.os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
+.os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary,
+.os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss,
+.os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc,
+.os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
+.os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary,
+.os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss,
+.os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc,
 .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
 .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary,
-.os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss {
+.os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss,
+.os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc,
+.os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
+.os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary,
+.os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss {
   color: #192124; }
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h2.h2, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h2.h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc h2.h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary h2.h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h2.h2,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h2.h2,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2 {
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc h2.h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary h2.h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2 {
     color: #022846; }
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4, .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc p, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h3, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h4, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary p,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .heading-h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .kontaktblok-headline,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary .heading-h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss p,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .heading-h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok-headline,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc p,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary p,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .heading-h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .kontaktblok-headline,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .heading-h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss p,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .heading-h3,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok-headline,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h4,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc p,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h3,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h4,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary p,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h3,
@@ -14761,29 +15263,113 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok .kontaktblok-headline, .kontaktblok
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok-headline,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss h4,
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4 {
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc p,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary p,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .heading-h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .kontaktblok-headline,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .heading-h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss p,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .heading-h3,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok-headline,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h4,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4 {
     color: #192124; }
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc ul,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary ul,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss ul,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc ul,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary ul,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss ul,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc ul,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary ul,
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss ul {
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss ul,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc ul,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary ul,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss ul {
     list-style: none;
     padding: 0;
     margin: 0 0 10px;
     line-height: 1.9em; }
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li,
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss li {
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li {
     padding-left: 1em;
     text-indent: -1em; }
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li::before,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li::before,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss li::before,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc li::before,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li::before,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li::before,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li::before,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li::before,
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss li::before {
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss li::before,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc li::before,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li::before,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li::before {
     content: "•\00a0\00a0";
     color: #ff4200;
     /* or whatever color you prefer */ }
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc a,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary a,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss a,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc a,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary a,
+  .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss a,
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc a,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary a,
-  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss a {
+  .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .paragraphs-item-afsnit-m-alm-tekss a,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field-name-field-os2web-kulturnaut-longdesc a,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary a,
+  .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss a {
     color: #ff4200; }
 
 .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 h2.pane-title, .node-type-os2web-kulturnaut-knactivity .pane-fic-kommende-arrangementer-panel-pane-1 .pane-title.heading-h2 {
@@ -14957,10 +15543,12 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     text-align: right;
     margin-top: 45px; }
 
-.entity-paragraphs-item .paragraphs-items-field-afsnit.no-bg {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+.node-os2web-base-contentpage .field-name-field-afsnit .entity-paragraphs-item {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
   background-color: white !important; }
+  .node-os2web-base-contentpage .field-name-field-afsnit .entity-paragraphs-item .field-name-field-paragraph-text {
+    margin-bottom: 0; }
 
 .paragraphs-item-afsnit-m-link {
   padding-bottom: 45px;

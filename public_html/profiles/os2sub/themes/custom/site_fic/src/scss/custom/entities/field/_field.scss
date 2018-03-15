@@ -19,10 +19,14 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+
+.os2-section,
 .os2-sectiont {
 
-  article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full {
+  article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full,
+  article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full {
 
+    .field-name-field-os2web-kulturnaut-longdesc,
     .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
     .field.field-name-body.field-type-text-with-summary,
     .paragraphs-item-afsnit-m-alm-tekss {

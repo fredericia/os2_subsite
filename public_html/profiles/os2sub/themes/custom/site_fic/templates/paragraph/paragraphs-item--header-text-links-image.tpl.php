@@ -31,21 +31,21 @@
       <div class="row">
         <!--        Check if sides switch is in off position-->
         <?php if ( !$field_paragraph_position ): ?>
-          <div class="col-md-12 col-lg-6">
+          <div class="col-xs-12 col-sm-6">
             <div class="aligner">
               <?php print render($content['field_paragraph_header']); ?>
               <?php print render($content['field_paragraph_text']); ?>
               <?php print render($content['field_knap_link']); ?>
             </div>
           </div>
-          <div class="col-md-12 col-lg-6">
+          <div class="col-xs-12 col-sm-6">
             <?php print render($content['field_image']); ?>
           </div>
         <?php else: ?>
-          <div class="col-md-12 col-lg-6">
+          <div class="col-xs-12 col-sm-6">
             <?php print render($content['field_image']); ?>
           </div>
-          <div class="col-md-12 col-lg-6">
+          <div class="col-xs-12 col-sm-6">
             <div class="aligner">
               <?php print render($content['field_paragraph_header']); ?>
               <?php print render($content['field_paragraph_text']); ?>
