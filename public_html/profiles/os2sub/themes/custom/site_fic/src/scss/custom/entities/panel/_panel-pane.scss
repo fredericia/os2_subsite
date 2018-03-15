@@ -22,7 +22,7 @@
   .activities-list-container{
     float: unset;
     .panels-flexible-region-inside{
-      @extend .row;
+      @include make-row();
     }
   }
 }
@@ -43,7 +43,17 @@
   .entity {
 
     .content {
-      @extend .container;
+      @include container-fixed;
+
+      @media (min-width: $screen-sm-min) {
+        width: $container-sm;
+      }
+      @media (min-width: $screen-md-min) {
+        width: $container-md;
+      }
+      @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+      }
     }
   }
 }
