@@ -15552,6 +15552,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   background-color: white !important; }
+  .node-os2web-base-contentpage .field-name-field-afsnit .entity-paragraphs-item .field-name-field-paragraph-text {
+    margin-bottom: 0; }
 
 .paragraphs-item-afsnit-m-link {
   padding-bottom: 45px;
