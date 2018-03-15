@@ -13524,7 +13524,8 @@ div.ctools-modal-content {
 .widget_pager_bottom,
 .cycle-pager {
   margin-left: -2px;
-  margin-right: -3px; }
+  margin-right: -3px;
+  min-height: 85px; }
   .widget_pager_bottom:before, .widget_pager_bottom:after,
   .cycle-pager:before,
   .cycle-pager:after {
@@ -13914,7 +13915,8 @@ div.ctools-modal-content {
   .widget_pager_bottom,
   .cycle-pager {
     margin-left: -5px;
-    margin-right: -5px; }
+    margin-right: -5px;
+    min-height: 90px; }
     .widget_pager_bottom:before, .widget_pager_bottom:after,
     .cycle-pager:before,
     .cycle-pager:after {
@@ -13979,7 +13981,8 @@ div.ctools-modal-content {
   .widget_pager_bottom,
   .cycle-pager {
     margin-left: -15px;
-    margin-right: -15px; }
+    margin-right: -15px;
+    min-height: 110px; }
     .widget_pager_bottom:before, .widget_pager_bottom:after,
     .cycle-pager:before,
     .cycle-pager:after {
@@ -14046,7 +14049,8 @@ div.ctools-modal-content {
   .widget_pager_bottom,
   .cycle-pager {
     margin-left: -15px;
-    margin-right: -15px; }
+    margin-right: -15px;
+    min-height: 110px; }
     .widget_pager_bottom:before, .widget_pager_bottom:after,
     .cycle-pager:before,
     .cycle-pager:after {
@@ -15677,29 +15681,19 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   padding-bottom: 40px;
   padding-top: 40px;
   text-align: center; }
-  .paragraphs-item-afsnit-m-billede form {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    .paragraphs-item-afsnit-m-billede form input {
-      vertical-align: baseline;
-      text-transform: uppercase;
-      font-family: "RBNo21a-Medium", "Lato", sans-serif;
-      font-size: 1.875em;
-      margin-bottom: 15px; }
-      .paragraphs-item-afsnit-m-billede form input.btn, .paragraphs-item-afsnit-m-billede form .paragraphs-item-webform .form-actions input.webform-submit.form-submit, .paragraphs-item-webform .form-actions .paragraphs-item-afsnit-m-billede form input.webform-submit.form-submit {
-        padding: 0;
-        font-size: 1.6em;
-        height: auto;
-        width: auto; }
+  .paragraphs-item-afsnit-m-billede form input {
+    height: 44px;
+    padding: 10px 16px;
+    background-image: none;
+    margin: 0;
+    border-radius: 0 !important;
+    border: 0;
+    text-transform: uppercase;
+    font-family: "RBNo21a-Medium", "Lato", sans-serif;
+    font-size: 1.875em;
+    text-indent: 0 !important; }
+    .paragraphs-item-afsnit-m-billede form input.btn, .paragraphs-item-afsnit-m-billede form .paragraphs-item-webform .form-actions input.webform-submit.form-submit, .paragraphs-item-webform .form-actions .paragraphs-item-afsnit-m-billede form input.webform-submit.form-submit {
+      height: auto; }
   .paragraphs-item-afsnit-m-billede .field.field-name-field-paragraph-header {
     font-size: 3.125em; }
 

@@ -20,22 +20,22 @@
   text-align: center;
 
   form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
 
     input {
-      vertical-align: baseline;
+      height: $input-height-large; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+      padding: $padding-large-vertical $padding-large-horizontal;
+      background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+
+      margin: 0;
+      border-radius: 0 !important;
+      border: 0;
       text-transform: uppercase;
       font-family: $headings-font-family;
       font-size: 1.875em;
-      margin-bottom: ($grid-gutter-width / 2);
+      text-indent: 0 !important; // override the inline styling set on element
 
       &.btn {
-        padding: 0;
-        font-size: 1.6em;
         height: auto;
-        width: auto;
       }
     }
   }
