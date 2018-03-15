@@ -35,10 +35,8 @@
       text-indent: 0 !important; // override the inline styling set on element
 
       &.btn {
-        @extend .btn-lg;
         padding-left: 0;
         padding-right: 0;
-        font-size: 1.6em;
       }
     }
   }
