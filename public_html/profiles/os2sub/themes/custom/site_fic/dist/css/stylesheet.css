@@ -15548,12 +15548,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     text-align: right;
     margin-top: 45px; }
 
-.field-name-field-afsnit .entity-paragraphs-item {
-  padding-top: 20px !important;
-  padding-bottom: 20px !important;
+.entity-paragraphs-item .paragraphs-items-field-afsnit.no-bg {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
   background-color: white !important; }
-  .field-name-field-afsnit .entity-paragraphs-item .field.field-name-field-paragraph-text {
-    margin-bottom: 0; }
 
 .paragraphs-item-afsnit-m-link {
   padding-bottom: 45px;
