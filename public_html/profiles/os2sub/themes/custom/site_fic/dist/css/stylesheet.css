@@ -12245,11 +12245,12 @@ section.block-locale {
   margin-bottom: 30px; }
 
 .sticky {
+  padding-bottom: 35px;
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.6)), color-stop(70%, transparent));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.6)), color-stop(75%, transparent));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 75%);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 75%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 75%);
   position: fixed;
   left: 0;
   right: 0;
@@ -12279,10 +12280,6 @@ section.block-locale {
   .sidr-open .sidr__toggle .fa-times {
     display: inline-block; }
 
-@media (max-width: 767px) {
-  .sticky {
-    background-position: 0 0; } }
-
 @media (min-width: 768px) {
   .sticky {
     margin-right: auto;
@@ -12294,7 +12291,13 @@ section.block-locale {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#192124), to(rgba(25, 33, 36, 0)));
     background-image: linear-gradient(to bottom, #192124 0%, rgba(25, 33, 36, 0) 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0); }
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF192124', endColorstr='#00192124', GradientType=0);
+    padding-bottom: 0;
+    background-color: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.6)), color-stop(70%, transparent));
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%); }
     .sticky:before, .sticky:after {
       content: " ";
       display: table; }

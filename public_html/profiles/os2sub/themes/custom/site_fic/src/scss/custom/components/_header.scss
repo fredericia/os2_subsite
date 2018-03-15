@@ -160,10 +160,12 @@ section.block-locale{
 }
 // Sticky menu styles.
 .sticky {
+  padding-bottom: 35px;
+
   background-color: transparent;
   background-image: linear-gradient(
                   rgba(0, 0, 0, .6) 20%,
-                  transparent 70%
+                  transparent 75%
   );
 
   position: fixed;
@@ -219,17 +221,22 @@ section.block-locale{
 @include media-breakpoint-up(xs) {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
-  .sticky {
-    background-position: 0 0;
-  }
-}
+@include media-breakpoint-only(xs) {}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {
+
   .sticky {
     @include container-fixed();
     @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);
+
+    padding-bottom: 0;
+
+    background-color: transparent;
+    background-image: linear-gradient(
+            rgba(0, 0, 0, .6) 20%,
+            transparent 70%
+    );
 
     .row{
       margin: auto;
