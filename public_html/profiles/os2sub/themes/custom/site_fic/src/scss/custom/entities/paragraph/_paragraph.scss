@@ -4,7 +4,6 @@
 // |
 // | This file contains styles for the following:
 // |
-// |
 
 // --------------------------------------------------
 // Variables
@@ -14,16 +13,13 @@
 // Styling
 // --------------------------------------------------
 
-.entity-paragraphs-item {
+.field-name-field-afsnit {
 
-  .paragraphs-items-field-afsnit {
+  .entity-paragraphs-item {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
 
-    &.no-bg {
-      padding-top: 10px !important;
-      padding-bottom: 10px !important;
-
-      background-color: white !important;
-    }
+    background-color: white !important;
   }
 }
 

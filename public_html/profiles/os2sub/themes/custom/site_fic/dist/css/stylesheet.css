@@ -15333,7 +15333,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     text-align: right;
     margin-top: 45px; }
 
-.entity-paragraphs-item .paragraphs-items-field-afsnit.no-bg {
+.field-name-field-afsnit .entity-paragraphs-item {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   background-color: white !important; }
