@@ -13819,7 +13819,7 @@ div.ctools-modal-content {
       .cycle-pager.num-items-7 > .views-slideshow-pager-field-item,
       .cycle-pager.num-items-7 > .field-item {
         float: left;
-        width: 25%; } }
+        width: 33.3333333333%; } }
     @media (min-width: 992px) {
       .num-slides-7 .widget_pager_bottom > .views-slideshow-pager-field-item,
       .num-slides-7 .widget_pager_bottom > .field-item, .widget_pager_bottom.num-items-7 > .views-slideshow-pager-field-item,
