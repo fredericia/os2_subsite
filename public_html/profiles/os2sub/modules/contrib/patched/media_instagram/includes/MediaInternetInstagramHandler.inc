@@ -10,7 +10,7 @@
  */
 class MediaInternetInstagramHandler extends MediaInternetBaseHandler {
   private $instagramUrl = 'https://instagram.com/p';
-  private $oembedUrl = 'http://api.instagram.com/publicapi/oembed/';
+  private $oembedUrl = 'https://api.instagram.com/oembed/';
   private $uri = FALSE;
 
   /**

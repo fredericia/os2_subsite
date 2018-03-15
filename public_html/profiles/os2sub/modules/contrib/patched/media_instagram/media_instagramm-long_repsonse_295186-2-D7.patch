@@ -1,0 +1,13 @@
+diff --git a/includes/MediaInternetInstagramHandler.inc b/includes/MediaInternetInstagramHandler.inc
+index 857f929..c63ae09 100644
+--- a/includes/MediaInternetInstagramHandler.inc
++++ b/includes/MediaInternetInstagramHandler.inc
+@@ -10,7 +10,7 @@
+  */
+ class MediaInternetInstagramHandler extends MediaInternetBaseHandler {
+   private $instagramUrl = 'https://instagram.com/p';
+-  private $oembedUrl = 'http://api.instagram.com/publicapi/oembed/';
++  private $oembedUrl = 'https://api.instagram.com/oembed/';
+   private $uri = FALSE;
+ 
+   /**
