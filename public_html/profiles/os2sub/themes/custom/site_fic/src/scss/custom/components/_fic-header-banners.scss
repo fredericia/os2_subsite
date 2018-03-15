@@ -283,6 +283,8 @@ $lg-pager-spacing: 30px;
 .cycle-pager {
   @include make-row($xs-pager-spacing);
 
+  min-height: 80px + $xs-pager-spacing;
+
   > .views-slideshow-pager-field-item,
   > .field-item {
     position: relative;
@@ -475,6 +477,8 @@ $lg-pager-spacing: 30px;
   .cycle-pager {
     @include make-row($sm-pager-spacing);
 
+    min-height: 80px + $sm-pager-spacing;
+
     > .views-slideshow-pager-field-item,
     > .field-item {
       padding-left:  ($sm-pager-spacing / 2) !important;
@@ -565,6 +569,8 @@ $lg-pager-spacing: 30px;
   .widget_pager_bottom,
   .cycle-pager {
     @include make-row($md-pager-spacing);
+
+    min-height: 80px + $md-pager-spacing;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
@@ -660,6 +666,8 @@ $lg-pager-spacing: 30px;
   .widget_pager_bottom,
   .cycle-pager {
     @include make-row($lg-pager-spacing);
+
+    min-height: 80px + $lg-pager-spacing;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
