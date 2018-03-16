@@ -24,8 +24,9 @@
                        class="ctools-modal-contact-modal-style ctools-use-modal">
                         <span class="text hidden-xs"><?php print $opening_hours_main_text; ?></span>
                         <span class="text visible-xs"><?php print t('Opening hours'); ?></span>
-
-                        <span class="read-more hidden-xs"><?php print $opening_hours_sub_text; ?></span>
+                        <?php if (!empty($opening_hours_sub_text)) : ?>
+                          <span class="read-more hidden-xs"><?php print $opening_hours_sub_text; ?></span>
+                        <?php endif; ?>
                     </a>
                 </div>
             <?php endif; ?>
