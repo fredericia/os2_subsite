@@ -13021,8 +13021,8 @@ div.ctools-modal-content {
     .slide-bottom:after {
       clear: both; }
     .slide-bottom [class*=col] {
-      padding-left: 2.5px !important;
-      padding-right: 2.5px !important; } }
+      padding-left: 2px !important;
+      padding-right: 3px !important; } }
 
 @media (min-width: 768px) {
   .widget_pager_bottom,

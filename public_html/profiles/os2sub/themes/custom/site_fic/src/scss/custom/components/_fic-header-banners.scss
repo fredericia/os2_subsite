@@ -464,8 +464,8 @@ $lg-pager-spacing: 30px;
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
-      padding-left:  ($xs-pager-spacing / 2) !important;
-      padding-right: ($xs-pager-spacing / 2) !important;
+      padding-left:  floor(($xs-pager-spacing / 2)) !important;
+      padding-right: ceil(($xs-pager-spacing / 2)) !important;
     }
   }
 }
@@ -481,8 +481,8 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      padding-left:  ($sm-pager-spacing / 2) !important;
-      padding-right: ($sm-pager-spacing / 2) !important;
+      padding-left:  floor(($sm-pager-spacing / 2)) !important;
+      padding-right: ceil(($sm-pager-spacing / 2)) !important;
 
       a {
         margin-bottom: $sm-pager-spacing;
@@ -497,8 +497,8 @@ $lg-pager-spacing: 30px;
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
-      padding-left:  ($sm-pager-spacing / 2) !important;
-      padding-right: ($sm-pager-spacing / 2) !important;
+      padding-left:  floor(($sm-pager-spacing / 2)) !important;
+      padding-right: ceil(($sm-pager-spacing / 2)) !important;
     }
   }
 }
@@ -574,8 +574,8 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      padding-left:  ($md-pager-spacing / 2) !important;
-      padding-right: ($md-pager-spacing / 2) !important;
+      padding-left:  floor(($md-pager-spacing / 2)) !important;
+      padding-right: ceil(($md-pager-spacing / 2)) !important;
 
       a {
         margin-bottom: $md-pager-spacing;
@@ -590,8 +590,8 @@ $lg-pager-spacing: 30px;
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
-      padding-left:  ($md-pager-spacing / 2) !important;
-      padding-right: ($md-pager-spacing / 2) !important;
+      padding-left:  floor(($md-pager-spacing / 2)) !important;
+      padding-right: ceil(($md-pager-spacing / 2)) !important;
     }
   }
 }
@@ -671,8 +671,8 @@ $lg-pager-spacing: 30px;
 
     > .views-slideshow-pager-field-item,
     > .field-item {
-      padding-left:  ($lg-pager-spacing / 2) !important;
-      padding-right: ($lg-pager-spacing / 2) !important;
+      padding-left:  floor(($lg-pager-spacing / 2)) !important;
+      padding-right: ceil(($lg-pager-spacing / 2)) !important;
 
       a {
         margin-bottom: $lg-pager-spacing;
@@ -687,8 +687,8 @@ $lg-pager-spacing: 30px;
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
-      padding-left:  ($lg-pager-spacing / 2) !important;
-      padding-right: ($lg-pager-spacing / 2) !important;
+      padding-left:  floor(($lg-pager-spacing / 2)) !important;
+      padding-right: ceil(($lg-pager-spacing / 2)) !important;
     }
   }
 }
