@@ -607,7 +607,15 @@ function site_fic_preprocess_entity(&$variables) {
  */
 function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   $paragraph = $variables['paragraphs_item'];
+  $display = 'news';
   $ids = [];
+
+  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_promoted')) {
+
+    if ((boolean) $fields[0]['value']) {
+      $display = 'news_promoted';
+    }
+  }
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_section_id')) {
 
@@ -618,9 +626,9 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   $contextual_filter = implode('+', $ids);
 
   if (! $contextual_filter) {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'news');
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display);
   } else {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'news', $contextual_filter);
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display, $contextual_filter);
   }
 }
 
@@ -630,7 +638,15 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
  */
 function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   $paragraph = $variables['paragraphs_item'];
+  $display = 'events';
   $ids = [];
+
+  if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_promoted')) {
+
+    if ((boolean) $fields[0]['value']) {
+      $display = 'events_promoted';
+    }
+  }
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_section_id')) {
 
@@ -641,9 +657,9 @@ function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   $contextual_filter = implode('+', $ids);
 
   if (! $contextual_filter) {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'events');
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display);
   } else {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', 'events', $contextual_filter);
+    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display, $contextual_filter);
   }
 }
 

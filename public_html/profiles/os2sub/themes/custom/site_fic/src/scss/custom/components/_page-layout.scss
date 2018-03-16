@@ -87,7 +87,7 @@ h2.pane-title {
     margin-top: 0;
   }
   .view-os2sub-nyheder .view-content {
-    @extend .row;
+    @include make-row();
   }
 }
 

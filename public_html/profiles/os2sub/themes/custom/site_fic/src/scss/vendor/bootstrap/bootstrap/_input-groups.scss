@@ -143,6 +143,7 @@
   // element above the siblings.
   > .btn {
     position: relative;
+
     + .btn {
       margin-left: -1px;
     }
@@ -156,12 +157,15 @@
 
   // Negative margin to only have a 1px border between the two
   &:first-child {
+
     > .btn,
     > .btn-group {
       margin-right: -1px;
     }
   }
+
   &:last-child {
+
     > .btn,
     > .btn-group {
       z-index: 2;
