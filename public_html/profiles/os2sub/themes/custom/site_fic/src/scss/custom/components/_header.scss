@@ -265,7 +265,7 @@ section.block-locale{
     padding-right: 10px;
   }
   .topnav-wrapper.user-nav {
-    height: 42px !important;
+    //height: 42px !important;
   }
   .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse {
     margin-top: 0;
@@ -275,7 +275,18 @@ section.block-locale{
   }
 
   .header-container .header-search-form {
-    top: 112px;
+    top: 130px;
+  }
+
+  .logo-wrapper {
+
+    .logo {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
   }
 }
 

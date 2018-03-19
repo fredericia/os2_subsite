@@ -11736,15 +11736,18 @@ section.block-locale {
     padding-bottom: 0;
     padding-left: 10px;
     padding-right: 10px; }
-  .topnav-wrapper.user-nav {
-    height: 42px !important; }
   .navbar.container.navbar-default .headerwrapper-inner .navbar-collapse, .page-taxonomy .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse,
   .front .paragraphs-container .entity-paragraphs-item .navbar.navbar-default.content .headerwrapper-inner .navbar-collapse {
     margin-top: 0; }
   .view-mode-fic_header .field-name-field-os2web-base-field-ext-link {
     display: none; }
   .header-container .header-search-form {
-    top: 112px; } }
+    top: 130px; }
+  .logo-wrapper .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0; } }
 
 @media (min-width: 992px) {
   .sticky {
