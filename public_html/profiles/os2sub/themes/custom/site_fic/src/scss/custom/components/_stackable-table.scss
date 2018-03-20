@@ -20,6 +20,13 @@
 .stacktable {
   width: 100%;
 
+  tbody {
+
+    tr:first-child {
+      display: none;
+    }
+  }
+
   &.large-only {
     display: none;
   }
@@ -41,8 +48,6 @@
 .st-val {
   width: 49%; padding-left: 1%;
 }
-
-
 
 // --------------------------------------------------
 // Responsive

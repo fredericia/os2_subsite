@@ -13240,6 +13240,8 @@ div.ctools-modal-content {
 
 .stacktable {
   width: 100%; }
+  .stacktable tbody tr:first-child {
+    display: none; }
   .stacktable.large-only {
     display: none; }
   .stacktable.small-only {
