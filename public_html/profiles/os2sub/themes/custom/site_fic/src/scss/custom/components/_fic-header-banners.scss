@@ -452,8 +452,8 @@ $lg-pager-spacing: 30px;
 
       // If we are not overriding with !important, the include make-x-column
       // is overriding the custom pager spacing.
-      padding-left: ($xs-pager-spacing / 2) !important;
-      padding-right: ($xs-pager-spacing / 2) !important;
+      padding-left:  floor(($xs-pager-spacing / 2)) !important;
+      padding-right: ceil(($xs-pager-spacing / 2)) !important;
     }
   }
 
