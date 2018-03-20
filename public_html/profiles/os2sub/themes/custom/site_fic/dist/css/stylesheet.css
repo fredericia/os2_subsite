@@ -13240,8 +13240,6 @@ div.ctools-modal-content {
 
 .stacktable {
   width: 100%; }
-  .stacktable tbody tr:first-child {
-    display: none; }
   .stacktable.large-only {
     display: none; }
   .stacktable.small-only {
@@ -13262,6 +13260,10 @@ div.ctools-modal-content {
 .st-val {
   width: 49%;
   padding-left: 1%; }
+
+@media (max-width: 767px) {
+  .stacktable tbody tr:first-child {
+    display: none; } }
 
 @media (min-width: 992px) {
   .stacktable.large-only {
