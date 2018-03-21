@@ -11440,6 +11440,10 @@ h1.pane-title,
     .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text span.email a {
       color: #ff4200; }
 
+.paragraphs-item-paragrph-address .field-name-field-knap-link,
+.paragraphs-item-paragraph-departments .field-name-field-knap-link {
+  margin-top: 30px; }
+
 .paragraphs-item-paragrph-address .field.field-name-field-paragraph-header,
 .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-header,
 .paragraphs-item-personale .field.field-name-field-paragraph-header,
