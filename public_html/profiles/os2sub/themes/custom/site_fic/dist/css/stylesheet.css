@@ -11439,8 +11439,8 @@ h1.pane-title,
     .paragraphs-item-paragrph-address .field.field-name-field-paragraph-text span.email a,
     .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text span.email a {
       color: #ff4200; }
-  .paragraphs-item-paragrph-address .field.field-name-field-paragraph-text .field + .field,
-  .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text .field + .field {
+  .paragraphs-item-paragrph-address .field.field-name-field-paragraph-text .field-name-field-knap-link,
+  .paragraphs-item-paragraph-departments .field.field-name-field-paragraph-text .field-name-field-knap-link {
     margin-top: 30px; }
 
 .paragraphs-item-paragrph-address .field.field-name-field-paragraph-header,
