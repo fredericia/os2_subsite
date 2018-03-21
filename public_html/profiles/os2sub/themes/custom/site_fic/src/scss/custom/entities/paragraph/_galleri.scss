@@ -1,0 +1,109 @@
+// |--------------------------------------------------------------------------
+// | 
+// |--------------------------------------------------------------------------
+// |
+// | This file contains styles for the following:
+// | 
+// |
+
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+
+// --------------------------------------------------
+// Styling
+// --------------------------------------------------
+.paragraphs-item-afsnit-m-galleri {
+
+  .field.field-name-field-paragraph-header {
+    margin-bottom: 0;
+
+    + .photoswipe-gallery {
+      margin-top: 30px;
+    }
+  }
+
+  .field-items {
+    margin-top: 0;
+
+    .field-item {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// --------------------------------------------------
+// Variants
+// --------------------------------------------------
+
+// --------------------------------------------------
+// Responsive
+// --------------------------------------------------
+
+// Mobile - and up
+@include media-breakpoint-up(xs) {
+
+
+}
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+
+}
+
+// Tablet - and up
+@include media-breakpoint-up(sm) {
+}
+
+// Tablet - only
+@include media-breakpoint-only(sm) {
+
+
+  .social-icons {}
+}
+
+// Desktop - and up
+@include media-breakpoint-up(md) {
+
+
+
+
+}
+
+// Desktop - only
+@include media-breakpoint-only(md) {
+
+
+}
+
+// Large desktop - and up
+@include media-breakpoint-up(lg) {
+
+
+}
+
+// Print
+@media print {
+
+
+}
+
+// Touch
+.touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+
+// No touch
+.no-touchevents {
+
+  // Social icons
+  .social-icons {}
+}
+

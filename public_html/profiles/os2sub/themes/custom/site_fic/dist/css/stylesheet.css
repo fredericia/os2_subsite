@@ -15064,4 +15064,16 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 
 .paragraphs-item-kolonner .field.field-name-field-paragraph-text {
   margin: 1em 0; }
+
+.paragraphs-item-afsnit-m-galleri .field.field-name-field-paragraph-header {
+  margin-bottom: 0; }
+  .paragraphs-item-afsnit-m-galleri .field.field-name-field-paragraph-header + .photoswipe-gallery {
+    margin-top: 30px; }
+
+.paragraphs-item-afsnit-m-galleri .field-items {
+  margin-top: 0; }
+  .paragraphs-item-afsnit-m-galleri .field-items .field-item {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 0; }
 /*# sourceMappingURL=stylesheet.css.map */
