@@ -265,8 +265,16 @@
 .node-type-os2web-kulturnaut-knactivity {
 
   .pane-title {
+    padding-bottom: 0;
+
     font-size: 2.500em;
-    padding-bottom: 5px;
+  }
+
+  .content-sidebar {
+
+    .field-item {
+      font-weight: bold;
+    }
   }
 }
 
