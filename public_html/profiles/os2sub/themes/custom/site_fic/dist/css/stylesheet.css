@@ -13615,6 +13615,14 @@ body {
   .node.node-os2web-contact-contact.node--os2web_contact_contact--full .all-contacts .field-item {
     display: inline; }
 
+.node-type-os2web-kulturnaut-knactivity .pane-title {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  font-size: 2.500em; }
+
+.node-type-os2web-kulturnaut-knactivity .content-sidebar .field-item {
+  font-weight: bold; }
+
 .os2-section.os2-section-light .pane-node-field-os2web-kulturnaut-slidesho img {
   border: solid 6px #192124; }
 
