@@ -282,6 +282,7 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
 .os2-section.os2-section-light {
   .pane-node-field-os2web-kulturnaut-slidesho {
     img {
@@ -352,12 +353,17 @@
       }
     }
   }
+
+  .node-type-os2web-kulturnaut-knactivity {
+
+    .pane-title {
+      font-size: 18px;
+    }
+  }
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
-
-}
+@include media-breakpoint-up(sm) {}
 
 // Tablet - only
 @include media-breakpoint-only(sm) {

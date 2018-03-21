@@ -13659,7 +13659,9 @@ body {
         margin-bottom: 0;
         left: 14px;
         border: 10px solid transparent;
-        border-left: 10px solid #fff; } }
+        border-left: 10px solid #fff; }
+  .node-type-os2web-kulturnaut-knactivity .pane-title {
+    font-size: 18px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .node.view-mode-full img,
