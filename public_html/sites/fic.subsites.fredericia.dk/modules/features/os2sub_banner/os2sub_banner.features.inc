@@ -30,11 +30,11 @@ function os2sub_banner_image_default_styles() {
   $styles['os2sub_banner'] = array(
     'label' => 'Banner',
     'effects' => array(
-      36 => array(
+      19 => array(
         'name' => 'epsacrop_crop',
         'data' => array(
-          'width' => 1200,
-          'height' => 350,
+          'width' => 870,
+          'height' => 450,
           'anchor' => 'center-center',
           'disable_scale' => 0,
           'jcrop_settings' => array(
@@ -46,7 +46,7 @@ function os2sub_banner_image_default_styles() {
         ),
         'weight' => 1,
       ),
-      37 => array(
+      20 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1200,
