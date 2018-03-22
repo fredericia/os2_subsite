@@ -153,15 +153,16 @@ $image-border: 10px;
       }
     }
   }
+
+  .content-sidebar & {
+    border: $image-border solid $gray-darker;
+  }
 }
 
 .big-plus-wrapper{
-
   position: relative;
   width: 100%;
   padding-top: 100%;
-
-
 
   a.big-plus-link{
     position: absolute;
@@ -187,6 +188,17 @@ $image-border: 10px;
     }
     &:hover{
       border-color: #fff;
+    }
+  }
+
+  .content-sidebar & {
+
+    a.big-plus-link {
+      color: $text-color;
+
+      &:hover{
+        border-color: $gray-darker;
+      }
     }
   }
 }

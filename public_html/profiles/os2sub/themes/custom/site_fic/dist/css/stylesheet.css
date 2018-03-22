@@ -13925,6 +13925,8 @@ body {
     margin-right: 20px; }
     .node--os2web_base_news--os2sub_teaser_mini .bottom-part header h2, .node--os2web_base_news--os2sub_teaser_mini .bottom-part header .heading-h2 {
       color: #fff; }
+  .content-sidebar .node--os2web_base_news--os2sub_teaser_mini {
+    border: 10px solid #222222; }
 
 .big-plus-wrapper {
   position: relative;
@@ -13965,6 +13967,10 @@ body {
       margin-bottom: 0; }
     .big-plus-wrapper a.big-plus-link:hover {
       border-color: #fff; }
+  .content-sidebar .big-plus-wrapper a.big-plus-link {
+    color: #5C4B51; }
+    .content-sidebar .big-plus-wrapper a.big-plus-link:hover {
+      border-color: #222222; }
 
 .view-os2sub-nyheder .views-row,
 .view-fic-artikler .views-row {
