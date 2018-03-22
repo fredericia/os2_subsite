@@ -9,7 +9,6 @@ dependencies[] = features
 dependencies[] = field_group
 dependencies[] = list
 dependencies[] = media
-dependencies[] = node
 dependencies[] = node_reference
 dependencies[] = options
 dependencies[] = os2web_base

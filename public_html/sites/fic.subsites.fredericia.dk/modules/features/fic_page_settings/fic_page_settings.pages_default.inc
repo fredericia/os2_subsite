@@ -100,7 +100,7 @@ function fic_page_settings_default_page_manager_handlers() {
   $pane->panel = 'dark_section_1';
   $pane->type = 'views_panes';
   $pane->subtype = 'fic_kommende_arrangementer-panel_pane_2';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'more_link' => 1,
@@ -168,7 +168,7 @@ function fic_page_settings_default_page_manager_handlers() {
   $pane->panel = 'light_section_1';
   $pane->type = 'views_panes';
   $pane->subtype = 'fic_artikler-panel_pane_1';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'arguments' => array(
