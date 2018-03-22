@@ -731,8 +731,7 @@ function _site_fic_get_book_url() {
   global $language;
   $default_book_url = variable_get('book_button_url_' . $language->language, '');
   // Check available terms and nodes for FIC header.
-  if ((empty($term) || $term->vocabulary_machine_name != 'os2web_base_tax_site_structure')
-    && (empty($node) || $node->type != 'os2web_base_contentpage')) {
+  if ((empty($term) || $term->vocabulary_machine_name != 'os2web_base_tax_site_structure')) {
     return $default_book_url;
   }
 
