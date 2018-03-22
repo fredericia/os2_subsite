@@ -58,8 +58,8 @@
 
   .position-of-media--centered {
 
-    .field-name-field-image {
-      margin-bottom: $grid-gutter-width;
+    .row + .row {
+      margin-top: $grid-gutter-width;
     }
   }
 }
