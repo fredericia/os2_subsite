@@ -121,7 +121,7 @@ function os2sub_frontpage_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Articles';
+  $handler->display->display_options['title'] = 'News';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
@@ -200,9 +200,11 @@ function os2sub_frontpage_views_default_views() {
   $handler->display->display_options['row_options']['view_mode'] = 'os2sub_teaser_mini';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['path'] = 'nyheder';
-  $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Nyheder';
+  $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -238,7 +240,7 @@ function os2sub_frontpage_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $translatables['os2sub_nyheder'] = array(
     t('Master'),
-    t('Articles'),
+    t('News'),
     t('mere'),
     t('Udfør'),
     t('Gendan'),
