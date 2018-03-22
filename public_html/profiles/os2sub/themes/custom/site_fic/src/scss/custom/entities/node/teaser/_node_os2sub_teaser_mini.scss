@@ -23,27 +23,27 @@ $image-border: 10px;
     background: linear-gradient(to top, black, transparent);
   }
   & .overlay{
-    transition: .5s ease;
-    opacity: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    transition: .5s ease;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
+
     background-color: rgba($color-black, 0.9);
-    margin-top: -1px;
-    margin-left: -1px;
 
     .overlay-content {
-      text-align: center;
       position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
       padding: 20px;
+      color: #fff;
       .field-type-text-with-summary{
         font-size: 1.2em;
         font-family: $font-rbn021a;
