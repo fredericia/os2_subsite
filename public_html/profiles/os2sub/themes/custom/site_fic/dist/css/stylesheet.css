@@ -11165,14 +11165,14 @@ h2.pane-title, .pane-title.heading-h2 {
     clear: both; }
 
 /*Some flex panel tweaks stop*/
-.menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2 li a {
+.pane-menu-tree li a {
   color: #192124;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
   font-size: 1.75em;
   padding-top: 0;
   padding-bottom: 0; }
 
-.menu-block-wrapper.menu-block-ctools-main-menu-1.menu-name-main-menu.parent-mlid-0.menu-level-2 li.active a {
+.pane-menu-tree li.active a {
   color: #ff4200; }
 
 .modal-content.popups-body {
