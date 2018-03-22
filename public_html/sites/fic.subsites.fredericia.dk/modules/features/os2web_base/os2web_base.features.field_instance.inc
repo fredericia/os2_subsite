@@ -3468,10 +3468,10 @@ function os2web_base_field_default_field_instances() {
       'epsacrop' => array(
         'styles' => array(
           'fic_square' => 'fic_square',
-          'fic_wide' => 'fic_wide',
+          'fic_wide' => 0,
           'os2sub_220x130' => 0,
           'os2sub_300x175' => 0,
-          'os2sub_banner' => 0,
+          'os2sub_banner' => 'os2sub_banner',
           'os2sub_normal_imagesize' => 0,
           'os2sub_teaser_mini_image' => 0,
           'os2web_spotbox_image' => 0,

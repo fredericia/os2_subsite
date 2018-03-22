@@ -304,7 +304,7 @@ function os2web_base_default_page_manager_handlers() {
     'formatter_settings' => array(
       'image_style' => 'os2sub_banner',
       'image_link' => '',
-      'slideshow_image_style' => 'fic_wide',
+      'slideshow_image_style' => 'os2sub_banner',
       'slideshow_link' => '',
       'slideshow_caption' => '',
       'slideshow_caption_link' => '',
@@ -482,7 +482,7 @@ function os2web_base_default_page_manager_handlers() {
   $pane->panel = 'sidebar';
   $pane->type = 'entity_field';
   $pane->subtype = 'node:field_os2web_base_field_related';
-  $pane->shown = FALSE;
+  $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'title',
@@ -512,7 +512,7 @@ function os2web_base_default_page_manager_handlers() {
   $pane->panel = 'sidebar';
   $pane->type = 'entity_field';
   $pane->subtype = 'node:field_os2web_base_field_ext_link';
-  $pane->shown = FALSE;
+  $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'title',
