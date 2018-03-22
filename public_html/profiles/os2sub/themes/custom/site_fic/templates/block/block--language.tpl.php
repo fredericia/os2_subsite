@@ -46,18 +46,20 @@
  */
 global $language;
 ?>
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<section id="<?php print $block_html_id; ?>"
+         class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-<?php print render($title_prefix); ?>
-  <?php if ( $title ): ?>
-    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
+    <?php print render($title_prefix); ?>
+    <?php if ($title): ?>
+        <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+    <?php endif; ?>
+    <?php print render($title_suffix); ?>
 
-  <button class="lang-buton" type="button" data-toggle="dropdown"><?php print $language->name; ?>
-  </button>
-  <div class="dropdown-menu">
-<?php print $content ?>
-  </div>
+    <button class="lang-buton" type="button"
+            data-toggle="dropdown"><span class="visible-xs"><?php print t('Language'); ?></span></span><?php print $language->name; ?>
+    </button>
+    <div class="dropdown-menu">
+        <?php print $content ?>
+    </div>
 
 </section>
