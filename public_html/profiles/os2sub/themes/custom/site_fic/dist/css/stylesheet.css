@@ -11668,12 +11668,11 @@ section.block-locale {
   margin-bottom: 30px; }
 
 .sticky {
-  padding-bottom: 35px;
   background-color: transparent;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.6)), color-stop(70%, transparent));
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 70%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.6)), to(transparent));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 100%);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 100%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 20%, transparent 100%);
   position: fixed;
   left: 0;
   right: 0;
@@ -12297,7 +12296,11 @@ div.ctools-modal-content {
 
 .responsive-header {
   padding: 0 15px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(0, 0, 0, 0.2)), color-stop(70%, transparent));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.2) 20%, transparent 70%);
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.2) 20%, transparent 70%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 20%, transparent 70%); }
   .responsive-header .logo img {
     max-height: 70px; }
   .responsive-header .flexy-spacer {
@@ -12329,8 +12332,7 @@ div.ctools-modal-content {
     top: 80px;
     left: 0;
     width: 100%;
-    padding: 0 15px;
-    z-index: 1101; }
+    padding: 0 15px; }
     .search-form .form-control,
     .views-exposed-form .form-control {
       border: 0;
