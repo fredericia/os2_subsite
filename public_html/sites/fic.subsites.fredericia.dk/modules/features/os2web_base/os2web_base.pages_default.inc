@@ -482,7 +482,7 @@ function os2web_base_default_page_manager_handlers() {
   $pane->panel = 'sidebar';
   $pane->type = 'entity_field';
   $pane->subtype = 'node:field_os2web_base_field_related';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'title',
@@ -512,7 +512,7 @@ function os2web_base_default_page_manager_handlers() {
   $pane->panel = 'sidebar';
   $pane->type = 'entity_field';
   $pane->subtype = 'node:field_os2web_base_field_ext_link';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'title',
@@ -569,6 +569,36 @@ function os2web_base_default_page_manager_handlers() {
   $pane->uuid = 'a8639e0e-ae7b-4dfe-ac36-d36bdebd7f65';
   $display->content['new-a8639e0e-ae7b-4dfe-ac36-d36bdebd7f65'] = $pane;
   $display->panels['sidebar'][3] = 'new-a8639e0e-ae7b-4dfe-ac36-d36bdebd7f65';
+  $pane = new stdClass();
+  $pane->pid = 'new-ece206df-fd17-47ae-981c-e8b710b43b98';
+  $pane->panel = 'sidebar';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'fic_artikler-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'arguments' => array(
+      'field_sektion_tid' => '',
+      'nid' => '%node:nid',
+    ),
+    'exposed' => array(
+      'promote' => '1',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $pane->uuid = 'ece206df-fd17-47ae-981c-e8b710b43b98';
+  $display->content['new-ece206df-fd17-47ae-981c-e8b710b43b98'] = $pane;
+  $display->panels['sidebar'][4] = 'new-ece206df-fd17-47ae-981c-e8b710b43b98';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-b398e1ac-858e-43e3-872f-2d6f3524454d';
   $handler->conf['display'] = $display;

@@ -634,10 +634,14 @@ function os2web_base_field_default_field_instances() {
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
+        'afsnit_m_alm_tekss' => 'afsnit_m_alm_tekss',
         'afsnit_m_billede' => -1,
         'afsnit_m_citat' => -1,
         'afsnit_m_galleri' => 'afsnit_m_galleri',
         'afsnit_m_link' => 'afsnit_m_link',
+        'fic_list_of_event_teasers' => -1,
+        'fic_list_of_instagram_teasers' => -1,
+        'fic_list_of_news_teasers' => -1,
         'header_text_links_image' => 'header_text_links_image',
         'header_text_media' => 'header_text_media',
         'kolonner' => 'kolonner',
@@ -647,17 +651,21 @@ function os2web_base_field_default_field_instances() {
         'webform' => 'webform',
       ),
       'bundle_weights' => array(
-        'afsnit_m_billede' => 2,
-        'afsnit_m_citat' => 5,
-        'afsnit_m_galleri' => 6,
-        'afsnit_m_link' => 7,
-        'header_text_links_image' => 8,
-        'header_text_media' => 9,
-        'kolonner' => 21,
-        'paragraph_departments' => 10,
-        'paragrph_address' => 11,
-        'personale' => 12,
-        'webform' => 13,
+        'afsnit_m_alm_tekss' => -28,
+        'afsnit_m_billede' => -30,
+        'afsnit_m_citat' => -29,
+        'afsnit_m_galleri' => -27,
+        'afsnit_m_link' => -26,
+        'fic_list_of_event_teasers' => -18,
+        'fic_list_of_instagram_teasers' => -17,
+        'fic_list_of_news_teasers' => -16,
+        'header_text_links_image' => -25,
+        'header_text_media' => -24,
+        'kolonner' => -19,
+        'paragraph_departments' => -23,
+        'paragrph_address' => -22,
+        'personale' => -21,
+        'webform' => -20,
       ),
       'default_edit_mode' => 'preview',
       'entity_translation_sync' => FALSE,
@@ -5045,6 +5053,115 @@ function os2web_base_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_alm_tekss-field_paragraph_bg'.
+  $field_instances['paragraphs_item-afsnit_m_alm_tekss-field_paragraph_bg'] = array(
+    'bundle' => 'afsnit_m_alm_tekss',
+    'default_value' => array(
+      0 => array(
+        'value' => 'no-bg',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_bg',
+    'label' => 'Baggrund',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-afsnit_m_alm_tekss-field_paragraph_text'.
+  $field_instances['paragraphs_item-afsnit_m_alm_tekss-field_paragraph_text'] = array(
+    'bundle' => 'afsnit_m_alm_tekss',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_text',
+    'label' => 'Tekst',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'paragraphs_item-afsnit_m_billede-field_image'.
   $field_instances['paragraphs_item-afsnit_m_billede-field_image'] = array(
     'bundle' => 'afsnit_m_billede',
@@ -6080,6 +6197,578 @@ function os2web_base_field_default_field_instances() {
   );
 
   // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_event_teasers-field_paragraph_bg'.
+  $field_instances['paragraphs_item-fic_list_of_event_teasers-field_paragraph_bg'] = array(
+    'bundle' => 'fic_list_of_event_teasers',
+    'default_value' => array(
+      0 => array(
+        'value' => 'bg-white',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_bg',
+    'label' => 'Baggrund',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_event_teasers-field_paragraph_header'.
+  $field_instances['paragraphs_item-fic_list_of_event_teasers-field_paragraph_header'] = array(
+    'bundle' => 'fic_list_of_event_teasers',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_header',
+    'label' => 'Afsnit overskrift',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Søg',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_event_teasers-field_promoted'.
+  $field_instances['paragraphs_item-fic_list_of_event_teasers-field_promoted'] = array(
+    'bundle' => 'fic_list_of_event_teasers',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_promoted',
+    'label' => 'Vis forfremmet til forside',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_event_teasers-field_section_id'.
+  $field_instances['paragraphs_item-fic_list_of_event_teasers-field_section_id'] = array(
+    'bundle' => 'fic_list_of_event_teasers',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Hvis der ikke vælges en sektion vil de næste 4 begivenheder vises uanset hvilken sektion begivenheden befinder sig i.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_section_id',
+    'label' => 'Sektion',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_instagram_teasers-field_instagram_fid'.
+  $field_instances['paragraphs_item-fic_list_of_instagram_teasers-field_instagram_fid'] = array(
+    'bundle' => 'fic_list_of_instagram_teasers',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_instagram_fid',
+    'label' => 'Instagram',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'epsacrop' => array(
+        'styles' => array(
+          'fic_square' => 0,
+          'fic_wide' => 0,
+          'os2sub_220x130' => 0,
+          'os2sub_300x175' => 0,
+          'os2sub_banner' => 0,
+          'os2sub_normal_imagesize' => 0,
+          'os2sub_teaser_mini_image' => 0,
+          'os2web_spotbox_image' => 0,
+        ),
+      ),
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'instagram' => 'instagram',
+          'oembed' => 0,
+          'public' => 'public',
+          'youtube' => 0,
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'instagram' => 'instagram',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_instagram_teasers-field_paragraph_bg'.
+  $field_instances['paragraphs_item-fic_list_of_instagram_teasers-field_paragraph_bg'] = array(
+    'bundle' => 'fic_list_of_instagram_teasers',
+    'default_value' => array(
+      0 => array(
+        'value' => 'bg-white',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_bg',
+    'label' => 'Baggrund',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_instagram_teasers-field_paragraph_header'.
+  $field_instances['paragraphs_item-fic_list_of_instagram_teasers-field_paragraph_header'] = array(
+    'bundle' => 'fic_list_of_instagram_teasers',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_header',
+    'label' => 'Afsnit overskrift',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Søg',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_news_teasers-field_paragraph_bg'.
+  $field_instances['paragraphs_item-fic_list_of_news_teasers-field_paragraph_bg'] = array(
+    'bundle' => 'fic_list_of_news_teasers',
+    'default_value' => array(
+      0 => array(
+        'value' => 'bg-white',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_bg',
+    'label' => 'Baggrund',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_news_teasers-field_paragraph_header'.
+  $field_instances['paragraphs_item-fic_list_of_news_teasers-field_paragraph_header'] = array(
+    'bundle' => 'fic_list_of_news_teasers',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_paragraph_header',
+    'label' => 'Afsnit overskrift',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 'full_html',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => -9,
+            ),
+          ),
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Søg',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_news_teasers-field_promoted'.
+  $field_instances['paragraphs_item-fic_list_of_news_teasers-field_promoted'] = array(
+    'bundle' => 'fic_list_of_news_teasers',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_promoted',
+    'label' => 'Vis forfremmet til forside',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-fic_list_of_news_teasers-field_section_id'.
+  $field_instances['paragraphs_item-fic_list_of_news_teasers-field_section_id'] = array(
+    'bundle' => 'fic_list_of_news_teasers',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Hvis der ikke vælges en sektion, vil de seneste 4 nyheder vises uanset hvilken sektion nyheden tilhører.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_section_id',
+    'label' => 'Sektion',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
   // 'paragraphs_item-header_text_links_image-field_image'.
   $field_instances['paragraphs_item-header_text_links_image-field_image'] = array(
     'bundle' => 'header_text_links_image',
@@ -6469,7 +7158,7 @@ function os2web_base_field_default_field_instances() {
     'entity_type' => 'paragraphs_item',
     'field_name' => 'field_image',
     'label' => 'Media',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
@@ -6519,7 +7208,7 @@ function os2web_base_field_default_field_instances() {
         ),
       ),
       'type' => 'media_generic',
-      'weight' => 8,
+      'weight' => 3,
     ),
   );
 
@@ -6539,7 +7228,7 @@ function os2web_base_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'paragraphs_editor_preview' => array(
         'label' => 'above',
@@ -6563,7 +7252,7 @@ function os2web_base_field_default_field_instances() {
         'content_taxonomy_opt_groups' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -6628,49 +7317,7 @@ function os2web_base_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'paragraphs_item-header_text_media-field_paragraph_position'.
-  $field_instances['paragraphs_item-header_text_media-field_paragraph_position'] = array(
-    'bundle' => 'header_text_media',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-      'paragraphs_editor_preview' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'paragraphs_item',
-    'field_name' => 'field_paragraph_position',
-    'label' => 'Skift side',
-    'required' => 1,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 6,
+      'weight' => 0,
     ),
   );
 
@@ -6735,6 +7382,113 @@ function os2web_base_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-header_text_media-field_position_of_media'.
+  $field_instances['paragraphs_item-header_text_media-field_position_of_media'] = array(
+    'bundle' => 'header_text_media',
+    'default_value' => array(
+      0 => array(
+        'value' => 'center',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_position_of_media',
+    'label' => 'Placering af media',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-header_text_media-field_video_url'.
+  $field_instances['paragraphs_item-header_text_media-field_video_url'] = array(
+    'bundle' => 'header_text_media',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Eks. https://www.youtube.com/watch?v=1G0YkQ859Fg
+Hvis du har valgt et billede i "Media", kan du her tilføje en URL til eks. Youtube. Videoen vil herefter åbne i en modal ved klik på billedet. Obs.: virker kun ved valg af billede da en video blot vil blive embedded.
+',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_video_url',
+    'label' => 'Video URL',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => 80,
+      ),
+      'enable_tokens' => 1,
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'button_text' => 'Søg',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 128,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
       'weight' => 4,
     ),
   );
@@ -8585,11 +9339,17 @@ function os2web_base_field_default_field_instances() {
   t('Det der vises med sort');
   t('Egenavne / stednavne');
   t('Egennavne/stednavne');
+  t('Eks. https://www.youtube.com/watch?v=1G0YkQ859Fg
+Hvis du har valgt et billede i "Media", kan du her tilføje en URL til eks. Youtube. Videoen vil herefter åbne i en modal ved klik på billedet. Obs.: virker kun ved valg af billede da en video blot vil blive embedded.
+');
   t('Filer');
   t('Forfrem til');
   t('Forældre-menupunkt');
+  t('Hvis der ikke vælges en sektion vil de næste 4 begivenheder vises uanset hvilken sektion begivenheden befinder sig i.');
+  t('Hvis der ikke vælges en sektion, vil de seneste 4 nyheder vises uanset hvilken sektion nyheden tilhører.');
   t('Indhold');
   t('Indløb / Udløb');
+  t('Instagram');
   t('Intro');
   t('Intro / Resume (maks 2 linier!)');
   t('KL Emneord');
@@ -8626,6 +9386,7 @@ function os2web_base_field_default_field_instances() {
   t('PDF filer');
   t('Paragraph');
   t('Placering');
+  t('Placering af media');
   t('Please use following classes to set color of link button:
 <ul> 
 <li><i>btn-red</i> - red button</li>
@@ -8637,10 +9398,10 @@ function os2web_base_field_default_field_instances() {
   t('Primære billede');
   t('Resume (maks 2 linier!)');
   t('Resume - lang overskrift');
+  t('Sektion');
   t('Selvbetjening');
   t('Selvbetjeningslinks');
   t('Sides switch');
-  t('Skift side');
   t('Skjul automatisk relaterede links');
   t('Skjul højre sidebar');
   t('Skjul kontaktblok');
@@ -8653,6 +9414,8 @@ function os2web_base_field_default_field_instances() {
   t('Unikke eksterne links	');
   t('Unikke relaterede links');
   t('Video');
+  t('Video URL');
+  t('Vis forfremmet til forside');
   t('Vis ikke afsnit fra sektion');
   t('Vis på portalside');
   t('Vises før indholdet af iframe');

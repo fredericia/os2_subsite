@@ -23,6 +23,13 @@ function os2web_base_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function os2web_base_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function os2web_base_image_default_styles() {
@@ -423,6 +430,11 @@ function os2web_base_node_info() {
  */
 function os2web_base_paragraphs_info() {
   $items = array(
+    'afsnit_m_alm_tekss' => array(
+      'name' => 'Afsnit m alm tekst',
+      'bundle' => 'afsnit_m_alm_tekss',
+      'locked' => '1',
+    ),
     'afsnit_m_billede' => array(
       'name' => 'Afsnit m billede',
       'bundle' => 'afsnit_m_billede',
@@ -441,6 +453,21 @@ function os2web_base_paragraphs_info() {
     'afsnit_m_link' => array(
       'name' => 'Afsnit m link',
       'bundle' => 'afsnit_m_link',
+      'locked' => '1',
+    ),
+    'fic_list_of_event_teasers' => array(
+      'name' => 'Liste - Begivenheder',
+      'bundle' => 'fic_list_of_event_teasers',
+      'locked' => '1',
+    ),
+    'fic_list_of_instagram_teasers' => array(
+      'name' => 'Liste - Instagram',
+      'bundle' => 'fic_list_of_instagram_teasers',
+      'locked' => '1',
+    ),
+    'fic_list_of_news_teasers' => array(
+      'name' => 'Liste - Nyheder',
+      'bundle' => 'fic_list_of_news_teasers',
       'locked' => '1',
     ),
     'header_text_links_image' => array(
