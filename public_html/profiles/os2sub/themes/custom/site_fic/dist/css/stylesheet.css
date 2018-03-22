@@ -13430,16 +13430,20 @@ body {
   background: #E9E7E8; }
 
 .page-node .pane-node-field-os2web-kulturnaut-slidesho,
-.page-node .pane-node-field-os2web-base-field-image {
+.page-node .pane-node-field-os2web-base-field-image,
+.page-node .pane-node-field-os2web-base-field-lead-img {
   margin-bottom: 30px; }
   .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box,
-  .page-node .pane-node-field-os2web-base-field-image .os2-box {
+  .page-node .pane-node-field-os2web-base-field-image .os2-box,
+  .page-node .pane-node-field-os2web-base-field-lead-img .os2-box {
     position: relative; }
     .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box img,
-    .page-node .pane-node-field-os2web-base-field-image .os2-box img {
+    .page-node .pane-node-field-os2web-base-field-image .os2-box img,
+    .page-node .pane-node-field-os2web-base-field-lead-img .os2-box img {
       border: solid 6px #192124; }
     .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls,
-    .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls {
+    .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls,
+    .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-controls {
       position: absolute;
       top: 0;
       z-index: 99;
@@ -13458,7 +13462,8 @@ body {
       width: 100%;
       height: 100%; }
       .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a,
-      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a {
+      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a,
+      .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-controls a {
         display: block;
         width: 64px;
         height: 64px;
@@ -13466,10 +13471,12 @@ body {
         font-size: 0;
         position: relative; }
         .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev,
-        .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.prev {
+        .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.prev,
+        .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-controls a.prev {
           margin-left: -32px; }
           .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.prev:before,
-          .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.prev:before {
+          .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.prev:before,
+          .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-controls a.prev:before {
             border: 20px solid transparent;
             border-right: 20px solid #fff;
             content: '';
@@ -13477,10 +13484,12 @@ body {
             margin-top: 12px;
             margin-bottom: 12px; }
         .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next,
-        .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.next {
+        .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.next,
+        .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-controls a.next {
           margin-right: -32px; }
           .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-controls a.next:after,
-          .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.next:after {
+          .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-controls a.next:after,
+          .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-controls a.next:after {
             border: 20px solid transparent;
             border-left: 20px solid #fff;
             content: '';
@@ -13489,7 +13498,8 @@ body {
             margin-top: 12px;
             margin-bottom: 12px; }
     .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager,
-    .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager {
+    .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager,
+    .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-pager {
       position: absolute;
       bottom: 0;
       z-index: 99;
@@ -13501,7 +13511,8 @@ body {
       display: -ms-flexbox;
       display: flex; }
       .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a,
-      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a {
+      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a,
+      .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-pager a {
         border-style: solid;
         border-width: 5px;
         border-color: rgba(255, 255, 255, 0.5);
@@ -13514,7 +13525,9 @@ body {
       .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.activeSlide,
       .page-node .pane-node-field-os2web-kulturnaut-slidesho .os2-box .field-slideshow-pager a.active,
       .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a.activeSlide,
-      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a.active {
+      .page-node .pane-node-field-os2web-base-field-image .os2-box .field-slideshow-pager a.active,
+      .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-pager a.activeSlide,
+      .page-node .pane-node-field-os2web-base-field-lead-img .os2-box .field-slideshow-pager a.active {
         border-color: rgba(255, 255, 255, 0.9); }
 
 .page-node .content-sidebar {
@@ -14298,6 +14311,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   text-transform: uppercase;
   font-weight: bold; }
 
+.os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc,
+.os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
+.os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary,
+.os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss,
 .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc,
 .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
 .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary,
@@ -14306,6 +14323,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
 .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary,
 .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss,
+.os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc,
+.os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
+.os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary,
+.os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss,
 .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc,
 .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary,
 .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary,
@@ -14315,7 +14336,15 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary,
 .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss {
   color: #192124; }
-  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h2.h2, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
+  .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc h2.h2, .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary h2.h2,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h2.h2,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary h2.h2,
@@ -14330,6 +14359,14 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc h2.h2,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .h2.heading-h2,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary h2.h2,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .h2.heading-h2,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h2.h2,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .h2.heading-h2,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h2.h2,
@@ -14347,7 +14384,39 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h2.h2,
   .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .h2.heading-h2 {
     color: #022846; }
-  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc p, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h3, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h4, .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
+  .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc p, .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc li, .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc h3, .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3, .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline, .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc h4, .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary p,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary h3,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .heading-h3,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .kontaktblok-headline,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary h4,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .heading-h4,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss p,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss h3,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .heading-h3,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok-headline,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss h4,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc p,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h4,
+  .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3,
@@ -14404,6 +14473,38 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok-headline,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h4,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc p,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc h3,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .heading-h3,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .kontaktblok-headline,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc h4,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc .heading-h4,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary p,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h3,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h3,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .kontaktblok-headline,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary h4,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary .heading-h4,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary p,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary h3,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .heading-h3,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .kontaktblok-headline,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary h4,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary .heading-h4,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss p,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss h3,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .heading-h3,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok .kontaktblok-headline, .kontaktblok
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .kontaktblok-headline,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss h4,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc p,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc h3,
@@ -14469,6 +14570,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss h4,
   .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss .heading-h4 {
     color: #192124; }
+  .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc ul,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary ul,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss ul,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc ul,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary ul,
@@ -14477,6 +14582,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary ul,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss ul,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc ul,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary ul,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss ul,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc ul,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary ul,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary ul,
@@ -14489,6 +14598,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     padding: 0;
     margin: 0 0 10px;
     line-height: 1.9em; }
+  .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss li,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li,
@@ -14497,6 +14610,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc li,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary li,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss li,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li,
@@ -14507,6 +14624,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-sectiont article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li {
     padding-left: 1em;
     text-indent: -1em; }
+  .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc li::before,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary li::before,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss li::before,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li::before,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li::before,
@@ -14515,6 +14636,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary li::before,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss li::before,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc li::before,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary li::before,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss li::before,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc li::before,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary li::before,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary li::before,
@@ -14526,6 +14651,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     content: "•\00a0\00a0";
     color: #ff4200;
     /* or whatever color you prefer */ }
+  .os2-section article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc a,
+  .os2-section article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
+  .os2-section article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary a,
+  .os2-section article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss a,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc a,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
   .os2-section article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary a,
@@ -14534,6 +14663,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .field.field-name-body.field-type-text-with-summary a,
   .os2-section article.node-os2web-kulturnaut-knactivity.view-mode-full.node--os2web_kulturnaut_knactivity--full .paragraphs-item-afsnit-m-alm-tekss a,
+  .os2-sectiont article.node--os2web_base_news--full .field-name-field-os2web-kulturnaut-longdesc a,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
+  .os2-sectiont article.node--os2web_base_news--full .field.field-name-body.field-type-text-with-summary a,
+  .os2-sectiont article.node--os2web_base_news--full .paragraphs-item-afsnit-m-alm-tekss a,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field-name-field-os2web-kulturnaut-longdesc a,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-field-os2web-base-field-summary.field-type-text-with-summary a,
   .os2-sectiont article.node.node-os2web-base-contentpage.view-mode-full.node--os2web_base_contentpage--full .field.field-name-body.field-type-text-with-summary a,
