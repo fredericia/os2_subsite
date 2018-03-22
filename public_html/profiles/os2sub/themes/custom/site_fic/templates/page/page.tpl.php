@@ -10,6 +10,10 @@
           </a>
       <?php endif; ?>
 
+        <?php if ( !empty($page['navigation']) ): ?>
+            <?php print render($page['navigation']); ?>
+        <?php endif; ?>
+
       <!-- Begin - navigation -->
       <div class="slinky-menu">
 
