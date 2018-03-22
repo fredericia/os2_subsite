@@ -13792,92 +13792,89 @@ body {
 .one-left .node-os2web-kulturnaut-knactivity .field-name-field-os2web-kulturnaut-venue.field-type-taxonomy-term-reference {
   font-weight: normal; }
 
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .text-contraster,
-.node--os2web_base_news--os2sub_teaser_mini .text-contraster {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 150px;
-  background: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
-  background: -webkit-linear-gradient(bottom, black, transparent);
-  background: -o-linear-gradient(bottom, black, transparent);
-  background: linear-gradient(to top, black, transparent); }
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay,
-.node--os2web_base_news--os2sub_teaser_mini .overlay {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transition: .5s ease;
-       -o-transition: .5s ease;
-          transition: .5s ease;
-  -webkit-transform: translate(-50%, -50%);
-       -o-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgba(25, 33, 36, 0.9); }
-  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content,
-  .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
-    position: relative;
-    padding: 20px;
-    color: #fff; }
-    .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary,
-    .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
-      font-size: 1.2em;
-      font-family: "RBNo21a-Medium", sans-serif; }
-    .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content a,
-    .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
-      background-color: #ff4200;
-      font-family: "RBNo21a-Medium", sans-serif;
-      font-weight: normal;
-      border: 0;
-      padding: 5px 10px;
-      font-size: 1.5em;
-      height: auto;
-      width: auto;
-      margin-top: 30px; }
-    .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content div.link-show-more a,
-    .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content div.link-show-more a {
-      margin-top: 0; }
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini:hover .overlay,
-.node--os2web_base_news--os2sub_teaser_mini:hover .overlay {
-  opacity: 1; }
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-date.field-type-datetime,
-.node--os2web_base_news--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-date.field-type-datetime {
-  font-size: 0.9em;
-  color: #ff4200;
-  text-transform: uppercase; }
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h2, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h2, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline,
-.node--os2web_base_news--os2sub_teaser_mini header h2,
-.node--os2web_base_news--os2sub_teaser_mini header .heading-h2,
-.node--os2web_base_news--os2sub_teaser_mini header h3,
-.node--os2web_base_news--os2sub_teaser_mini header .heading-h3,
-.node--os2web_base_news--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok
-.node--os2web_base_news--os2sub_teaser_mini header .kontaktblok-headline {
-  margin-top: 0;
-  text-transform: uppercase;
-  font-size: 1.92em;
-  font-family: "RBNo21a-Medium", "Lato", sans-serif;
-  line-height: 1em; }
-
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-descrip.field-type-text-with-summary,
-.node--os2web_base_news--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-descrip.field-type-text-with-summary {
-  line-height: 1.6em; }
+.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini,
+.node--os2web_base_news--os2sub_teaser_mini {
+  position: relative; }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .text-contraster,
+  .node--os2web_base_news--os2sub_teaser_mini .text-contraster {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background: -webkit-gradient(linear, left bottom, left top, from(black), to(transparent));
+    background: -webkit-linear-gradient(bottom, black, transparent);
+    background: -o-linear-gradient(bottom, black, transparent);
+    background: linear-gradient(to top, black, transparent); }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay,
+  .node--os2web_base_news--os2sub_teaser_mini .overlay {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: .5s ease;
+         -o-transition: .5s ease;
+            transition: .5s ease;
+    background-color: rgba(25, 33, 36, 0.9); }
+    .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content,
+    .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
+      padding: 20px;
+      text-align: center;
+      color: #fff; }
+      .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary,
+      .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
+        font-size: 1.2em;
+        font-family: "RBNo21a-Medium", sans-serif; }
+      .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content a,
+      .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
+        background-color: #ff4200;
+        font-family: "RBNo21a-Medium", sans-serif;
+        font-weight: normal;
+        border: 0;
+        padding: 5px 10px;
+        font-size: 1.5em;
+        height: auto;
+        width: auto;
+        margin-top: 30px; }
+      .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content div.link-show-more a,
+      .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content div.link-show-more a {
+        margin-top: 0; }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini:hover .overlay,
+  .node--os2web_base_news--os2sub_teaser_mini:hover .overlay {
+    opacity: 1; }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-date.field-type-datetime,
+  .node--os2web_base_news--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-date.field-type-datetime {
+    font-size: 0.9em;
+    color: #ff4200;
+    text-transform: uppercase; }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h2, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h2, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3, .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline,
+  .node--os2web_base_news--os2sub_teaser_mini header h2,
+  .node--os2web_base_news--os2sub_teaser_mini header .heading-h2,
+  .node--os2web_base_news--os2sub_teaser_mini header h3,
+  .node--os2web_base_news--os2sub_teaser_mini header .heading-h3,
+  .node--os2web_base_news--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok
+  .node--os2web_base_news--os2sub_teaser_mini header .kontaktblok-headline {
+    margin-top: 0;
+    text-transform: uppercase;
+    font-size: 1.92em;
+    font-family: "RBNo21a-Medium", "Lato", sans-serif;
+    line-height: 1em; }
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-descrip.field-type-text-with-summary,
+  .node--os2web_base_news--os2sub_teaser_mini .field.field-name-field-os2web-kulturnaut-descrip.field-type-text-with-summary {
+    line-height: 1.6em; }
 
 .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper {
   border: 6px solid #222222;
