@@ -13538,7 +13538,12 @@ body {
   .page-node .content-sidebar h2, .page-node .content-sidebar .heading-h2 {
     color: #ff4200; }
 
-.page-node h1.pane-title, .page-node .pane-title.heading-h1, .page-node .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper .page-node .pane-title.banner-headline {
+.page-node .pane-node-content h2.pane-title, .page-node .pane-node-content .pane-title.heading-h2,
+.page-node h1.pane-title,
+.page-node .pane-title.heading-h1,
+.page-node .banner .banner-wrapper .pane-title.banner-headline, .banner .banner-wrapper
+.page-node .pane-title.banner-headline {
+  padding-bottom: 0;
   color: #01B5D5; }
 
 .page-node .field-name-field-os2web-base-field-summary {

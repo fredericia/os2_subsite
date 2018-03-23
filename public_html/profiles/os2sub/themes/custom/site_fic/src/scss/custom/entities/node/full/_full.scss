@@ -29,7 +29,6 @@
 
 .page-node {
 
-
   &.node-type-os2web-base-contentpage {
     h1 {
       font-size: 3.8em;
@@ -169,7 +168,9 @@
       color: $brand-secondary;
     }
   }
+  .pane-node-content h2.pane-title,
   h1.pane-title {
+    padding-bottom: 0;
     color: $brand-primary;
   }
   .field-name-field-os2web-base-field-summary {
