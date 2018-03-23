@@ -15220,7 +15220,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     margin-top: 30px; }
 
 .paragraphs-item-afsnit-m-galleri .field-items {
-  margin-top: 0; }
+  margin-top: -8px;
+  margin-bottom: -8px; }
   .paragraphs-item-afsnit-m-galleri .field-items .field-item {
     padding-top: 8px;
     padding-bottom: 8px;
