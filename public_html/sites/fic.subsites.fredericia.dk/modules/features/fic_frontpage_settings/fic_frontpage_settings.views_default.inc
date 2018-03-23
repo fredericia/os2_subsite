@@ -87,7 +87,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Indholdselement: Sektion (field_sektion) */
+  /* Contextual filter: Content: Sektion (field_sektion) */
   $handler->display->display_options['arguments']['field_sektion_tid']['id'] = 'field_sektion_tid';
   $handler->display->display_options['arguments']['field_sektion_tid']['table'] = 'field_data_field_sektion';
   $handler->display->display_options['arguments']['field_sektion_tid']['field'] = 'field_sektion_tid';
@@ -879,7 +879,7 @@ function fic_frontpage_settings_views_default_views() {
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'col-xs-12 col-sm-6 col-lg-3';
+  $handler->display->display_options['style_options']['row_class'] = 'col-xs-12 col-sm-4 col-lg-3';
   $handler->display->display_options['style_options']['uses_fields'] = TRUE;
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
