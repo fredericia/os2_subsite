@@ -13287,7 +13287,7 @@ div.ctools-modal-content {
   -webkit-align-items: flex-end !important;
       -ms-flex-align: end !important;
           align-items: flex-end !important;
-  padding-bottom: 6px; }
+  padding-bottom: 8px; }
   .field-slideshow-wrapper .field-slideshow-controls .prev {
     margin-left: 6px !important; }
   .field-slideshow-wrapper .field-slideshow-controls .next {
