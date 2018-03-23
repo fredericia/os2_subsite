@@ -13603,6 +13603,9 @@ body {
 .page-node.node-type-os2web-base-news .pane-node-content {
   margin-bottom: 30px; }
 
+.page-node.node-type-os2web-base-news .os2-section.content-primary {
+  padding-bottom: 30px; }
+
 .node.node-os2web-contact-contact.node--os2web_contact_contact--full {
   font-size: 1.875em;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
