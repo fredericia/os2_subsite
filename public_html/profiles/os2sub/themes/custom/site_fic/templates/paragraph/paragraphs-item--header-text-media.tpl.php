@@ -11,7 +11,7 @@
                             <?php if (isset($content['field_image'])): ?>
                                 <?php if ($show_media_in_modal): ?>
                                     <a href="<?= $url_for_media_modal; ?>"
-                                       rel="modalbox"]>
+                                       rel="modalbox">
                                         <?php print render($content['field_image']); ?>
                                     </a>
                                 <?php else: ?>
@@ -41,7 +41,7 @@
                             <?php if (isset($content['field_image'])): ?>
                                 <?php if ($show_media_in_modal): ?>
                                     <a href="<?= $url_for_media_modal; ?>"
-                                       rel="modalbox"]>
+                                       rel="modalbox"s>
                                         <?php print render($content['field_image']); ?>
                                     </a>
                                 <?php else: ?>
@@ -71,7 +71,7 @@
 
                                 <?php if ($show_media_in_modal): ?>
                                     <a href="<?= $url_for_media_modal; ?>"
-                                       rel="modalbox"]>
+                                       rel="modalbox">
                                         <?php print render($content['field_image']); ?>
                                     </a>
                                 <?php else: ?>
