@@ -13,8 +13,12 @@
 // --------------------------------------------------
 
 .paragraphs-item-header-text-links-image {
-  padding-bottom: 40px;
-  padding-top: 40px;
+  padding-bottom: $grid-gutter-width;
+  padding-top: $grid-gutter-width;
+
+  .field-name-field-paragraph-header {
+    color: $color-red;
+  }
 
   .row {
 
@@ -50,6 +54,7 @@
     }
 
     .field.field-name-field-image.field-type-image {
+
       img {
         border-style: solid;
         border-width: 6px;
@@ -75,15 +80,15 @@
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
-  .paragraphs-item-header-text-links-image{
+  .paragraphs-item-header-text-links-image {
     padding-bottom: 60px;
     padding-top: 60px;
 
-    .row{
+    .row {
 
-      .field.field-name-field-knap-link{
+      .field.field-name-field-knap-link {
 
-        .field-item{
+        .field-item {
           margin-left: 0 !important;
           margin-right: 15px !important;
         }
@@ -93,13 +98,10 @@
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {  .social-icons {}
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
-
-}
+@include media-breakpoint-up(md) {}
 
 // Desktop - only
 @include media-breakpoint-only(md) {}
@@ -115,4 +117,3 @@
 
 // No touch
 .no-touchevents {}
-

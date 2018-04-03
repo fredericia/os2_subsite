@@ -11287,9 +11287,6 @@ h1.pane-title,
   margin-top: 30px; }
 
 .paragraphs-items .field.field-name-field-paragraph-text {
-  font-size: 1.25em;
-  font-weight: normal;
-  font-family: "Lato", sans-serif;
   margin-bottom: 30px; }
 
 .entity-paragraphs-item.paragraphs-item-fic-list-of-event-teasers .paragraph__heading__title {
@@ -14936,8 +14933,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
       text-align: right; } }
 
 .paragraphs-item-header-text-links-image {
-  padding-bottom: 40px;
-  padding-top: 40px; }
+  padding-bottom: 30px;
+  padding-top: 30px; }
+  .paragraphs-item-header-text-links-image .field-name-field-paragraph-header {
+    color: #ff4200; }
   .paragraphs-item-header-text-links-image .row:after, .paragraphs-item-header-text-links-image .row:before {
     content: normal; }
   .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a {

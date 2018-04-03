@@ -58,7 +58,7 @@
                     <?php if (isset($content['field_image'])): ?>
                         <div class="row">
                             <div
-                                class="col-xs-12 col-sm-8 col-sm-push-2 col-md-6 col-md-push-3">
+                                class="col-xs-12 col-sm-8 col-sm-push-2 col-md-4 col-md-push-4">
 
                                 <?php if ($show_media_in_modal): ?>
                                     <a href="<?= $url_for_media_modal; ?>"
@@ -75,7 +75,7 @@
                     <?php if (isset($content['field_paragraph_header']) || isset($content['field_paragraph_text'])): ?>
                         <div class="row">
                             <div
-                                class="col-xs-12 col-sm-8 col-sm-push-2 col-md-6 col-md-push-3">
+                                class="col-xs-12 col-sm-8 col-sm-push-2 col-md-4 col-md-push-4">
                                 <?php print render($content['field_paragraph_header']); ?>
                                 <?php print render($content['field_paragraph_text']); ?>
                             </div>
