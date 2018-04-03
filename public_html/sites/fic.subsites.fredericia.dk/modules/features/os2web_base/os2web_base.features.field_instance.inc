@@ -7141,11 +7141,12 @@ function os2web_base_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'image',
         'settings' => array(
-          'file_view_mode' => 'teaser',
+          'image_link' => '',
+          'image_style' => '',
         ),
-        'type' => 'file_rendered',
+        'type' => 'image',
         'weight' => 2,
       ),
       'paragraphs_editor_preview' => array(

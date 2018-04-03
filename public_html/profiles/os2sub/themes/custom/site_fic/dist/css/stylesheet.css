@@ -14995,6 +14995,12 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
         border: 0; }
   .paragraphs-item-header-text-media .position-of-media--centered .row + .row {
     margin-top: 30px; }
+  .paragraphs-item-header-text-media .position-of-media--left [class*='col-'],
+  .paragraphs-item-header-text-media .position-of-media--right [class*='col-'] {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 @media (min-width: 768px) {
   .paragraphs-item-header-text-media {

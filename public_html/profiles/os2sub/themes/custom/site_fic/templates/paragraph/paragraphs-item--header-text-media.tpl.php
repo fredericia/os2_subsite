@@ -5,13 +5,13 @@
             <?php if ($position_of_media == 'left'): ?>
 
                 <div class="position-of-media position-of-media--left">
-                    <div class="row">
+                    <div class="row row--equal-height-columns">
                         <div class="col-xs-12 col-lg-6">
 
                             <?php if (isset($content['field_image'])): ?>
                                 <?php if ($show_media_in_modal): ?>
                                     <a href="<?= $url_for_media_modal; ?>"
-                                       data-lity>
+                                       rel="modalbox"]>
                                         <?php print render($content['field_image']); ?>
                                     </a>
                                 <?php else: ?>
@@ -30,7 +30,7 @@
             <?php elseif ($position_of_media == 'right'): ?>
 
                 <div class="position-of-media position-of-media--right">
-                    <div class="row">
+                    <div class="row row--equal-height-columns">
                         <div class="col-xs-12 col-lg-6">
                             <?php print render($content['field_paragraph_header']); ?>
                             <?php print render($content['field_paragraph_text']); ?>
@@ -41,7 +41,7 @@
                             <?php if (isset($content['field_image'])): ?>
                                 <?php if ($show_media_in_modal): ?>
                                     <a href="<?= $url_for_media_modal; ?>"
-                                       data-lity>
+                                       rel="modalbox"]>
                                         <?php print render($content['field_image']); ?>
                                     </a>
                                 <?php else: ?>
@@ -55,6 +55,15 @@
 
             <?php else : ?>
                 <div class="position-of-media position-of-media--centered">
+                    <?php if (isset($content['field_paragraph_header']) || isset($content['field_paragraph_text'])): ?>
+                        <div class="row">
+                            <div
+                                class="col-xs-12 col-sm-8 col-sm-push-2 col-md-4 col-md-push-4">
+                                <?php print render($content['field_paragraph_header']); ?>
+                                <?php print render($content['field_paragraph_text']); ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <?php if (isset($content['field_image'])): ?>
                         <div class="row">
                             <div
@@ -62,22 +71,13 @@
 
                                 <?php if ($show_media_in_modal): ?>
                                     <a href="<?= $url_for_media_modal; ?>"
-                                       data-lity>
+                                       rel="modalbox"]>
                                         <?php print render($content['field_image']); ?>
                                     </a>
                                 <?php else: ?>
                                     <?php print render($content['field_image']); ?>
                                 <?php endif; ?>
 
-                            </div>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (isset($content['field_paragraph_header']) || isset($content['field_paragraph_text'])): ?>
-                        <div class="row">
-                            <div
-                                class="col-xs-12 col-sm-8 col-sm-push-2 col-md-4 col-md-push-4">
-                                <?php print render($content['field_paragraph_header']); ?>
-                                <?php print render($content['field_paragraph_text']); ?>
                             </div>
                         </div>
                     <?php endif; ?>
