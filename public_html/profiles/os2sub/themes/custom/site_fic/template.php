@@ -608,6 +608,7 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   $paragraph = $variables['paragraphs_item'];
   $display = 'news';
   $ids = [];
+  $variables['embedded_view'] = false;
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_promoted')) {
 
@@ -625,9 +626,15 @@ function site_fic_preprocess_entity__fic_list_of_news_teasers(&$variables) {
   $contextual_filter = implode('+', $ids);
 
   if (! $contextual_filter) {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display);
+
+    if (count(views_get_view_result('fic_embed_nodes', $display))) {
+      $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display);
+    }
   } else {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display, $contextual_filter);
+
+    if (count(views_get_view_result('fic_embed_nodes', $display, $contextual_filter))) {
+      $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display, $contextual_filter);
+    }
   }
 }
 
@@ -639,6 +646,7 @@ function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   $paragraph = $variables['paragraphs_item'];
   $display = 'events';
   $ids = [];
+  $variables['embedded_view'] = false;
 
   if ($fields = field_get_items('paragraphs_item', $paragraph, 'field_promoted')) {
 
@@ -656,9 +664,15 @@ function site_fic_preprocess_entity__fic_list_of_event_teasers(&$variables) {
   $contextual_filter = implode('+', $ids);
 
   if (! $contextual_filter) {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display);
+
+    if (count(views_get_view_result('fic_embed_nodes', $display))) {
+      $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display);
+    }
   } else {
-    $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display, $contextual_filter);
+
+    if (count(views_get_view_result('fic_embed_nodes', $display, $contextual_filter))) {
+      $variables['embedded_view'] = views_embed_view('fic_embed_nodes', $display, $contextual_filter);
+    }
   }
 }
 
