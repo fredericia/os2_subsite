@@ -7190,22 +7190,22 @@ function os2web_base_field_default_field_instances() {
       'settings' => array(
         'allowed_schemes' => array(
           'instagram' => 'instagram',
-          'oembed' => 'oembed',
+          'oembed' => 0,
           'public' => 'public',
-          'youtube' => 'youtube',
+          'youtube' => 0,
         ),
         'allowed_types' => array(
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
           'instagram' => 0,
-          'video' => 'video',
+          'video' => 0,
         ),
         'browser_plugins' => array(
-          'media_default--media_browser_1' => 0,
-          'media_default--media_browser_my_files' => 0,
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
           'media_internet' => 0,
-          'upload' => 0,
+          'upload' => 'upload',
         ),
       ),
       'type' => 'media_generic',
