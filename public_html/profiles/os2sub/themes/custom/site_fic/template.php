@@ -118,6 +118,29 @@ function site_fic_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_node.
+ * For news.
+ */
+function site_fic_preprocess_node__os2web_base_news(&$variables) {
+  $node = $variables['node'];
+  $view_mode = $variables['view_mode'];
+
+  if ($view_mode === 'os2sub_teaser_mini') {
+
+    if (isset($variables['content']['field_sektion'])) {
+
+      foreach($variables['content']['field_sektion']['#items'] as $key => $value) {
+
+        // Dont show "forside" term
+        if ($value['tid'] == '14') {
+          unset($variables['content']['field_sektion']['#items'][$key]);
+        }
+      }
+    }
+  }
+}
+
+/**
  * Implements template_preprocess_taxonomy_term.
  */
 function site_fic_preprocess_taxonomy_term(&$variables) {
