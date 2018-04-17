@@ -46,16 +46,19 @@
         padding: 0;
         margin: 0 0 10px;
         line-height: 1.9em;
+
+        li {
+
+          &:before {
+            content: "•\00a0\00a0";
+            color: $brand-secondary;
+          }
+        }
       }
 
       li {
         padding-left: 1em;
         text-indent: -1em;
-      }
-
-      li::before {
-        content: "•\00a0\00a0";
-        color: $brand-secondary; /* or whatever color you prefer */
       }
 
       a {
