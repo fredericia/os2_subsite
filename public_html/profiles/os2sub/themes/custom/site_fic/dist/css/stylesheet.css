@@ -12412,6 +12412,47 @@ div.ctools-modal-content {
 .sidr__toggle {
   border: 0; }
 
+.sidr .region-navigation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 40px;
+  padding: 10px 15px;
+  color: #fff;
+  border-bottom: 1px solid #2a2f36; }
+  .sidr .region-navigation a {
+    text-transform: uppercase; }
+  .sidr .region-navigation > * {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%; }
+  .sidr .region-navigation .book-link {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right; }
+    .sidr .region-navigation .book-link a {
+      font-weight: 600 !important; }
+  .sidr .region-navigation section.block-locale {
+    float: none; }
+    .sidr .region-navigation section.block-locale button.lang-buton {
+      padding: 0; }
+      .sidr .region-navigation section.block-locale button.lang-buton, .sidr .region-navigation section.block-locale button.lang-buton span {
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        font-weight: 600 !important;
+        text-shadow: none; }
+      .sidr .region-navigation section.block-locale button.lang-buton span {
+        margin-right: 5px; }
+  .sidr .region-navigation .dropdown-menu {
+    min-width: 100px; }
+
+@media screen and (max-width: 767px) {
+  .sidr .region-navigation section.block-locale button.lang-buton .visible-xs {
+    display: inline-block !important; } }
+
 .term-fic-header {
   margin-right: auto;
   margin-left: auto;
