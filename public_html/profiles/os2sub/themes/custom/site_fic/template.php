@@ -70,6 +70,7 @@ function site_fic_preprocess_page(&$variables) {
   unset($variables['tabs_primary']['#secondary']);
   unset($variables['tabs_secondary']['#primary']);
 
+//  $variables['primary_nav'] = _bellcom_generate_menu($primary_navigation_name, 'flexy_navigation', false);
   $variables['secondary_nav'] = _bellcom_generate_menu($secondary_navigation_name, 'menu_tree__secondary', false, 1);
 
   // Tabbed navigation.
@@ -775,4 +776,55 @@ function _site_fic_get_book_url() {
   $book_url = variable_get('book_button_url_' . $term->tid . '_' . $language->language);
 
   return !empty($book_url) ? $book_url : $default_book_url;
+}
+
+function site_fic_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  $options = !empty($element['#localized_options']) ? $element['#localized_options'] : array();
+
+  // Check plain title if "html" is not set, otherwise, filter for XSS attacks.
+  $title = empty($options['html']) ? check_plain($element['#title']) : filter_xss_admin($element['#title']);
+
+  // Ensure "html" is now enabled so l() doesn't double encode. This is now
+  // safe to do since both check_plain() and filter_xss_admin() encode HTML
+  // entities. See: https://www.drupal.org/node/2854978
+  $options['html'] = TRUE;
+
+  $href = $element['#href'];
+  $attributes = !empty($element['#attributes']) ? $element['#attributes'] : array();
+
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+
+      // Generate as standard dropdown.
+      $title .= ' <span class="caret"></span>';
+      $attributes['class'][] = 'dropdown';
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      $options['attributes']['data-target'] = '#';
+      $options['attributes']['class'][] = 'dropdown-toggle';
+      $options['attributes']['data-toggle'] = 'dropdown';
+    }
+  }
+
+  $active_classes = _bellcom_in_active_trail($href);
+  if (isset($options['attributes']['class'])) {
+    $options['attributes']['class'] = array_merge($options['#attributes']['class'], $active_classes);
+  }
+  else {
+    $options['attributes']['class'] = $active_classes;
+  }
+
+  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
 }
