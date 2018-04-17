@@ -11808,7 +11808,7 @@ section.block-locale {
   .topnav-wrapper.user-nav a {
     font-size: 0.75em !important;
     color: #ffffff; }
-    .topnav-wrapper.user-nav a:active, .topnav-wrapper.user-nav a:hover, .topnav-wrapper.user-nav a:focus {
+    .topnav-wrapper.user-nav a.active, .topnav-wrapper.user-nav a.active-trail, .topnav-wrapper.user-nav a:active, .topnav-wrapper.user-nav a:hover, .topnav-wrapper.user-nav a:focus {
       background: none !important;
       color: #01B5D5 !important; }
   .topnav-wrapper.user-nav ul.menu {

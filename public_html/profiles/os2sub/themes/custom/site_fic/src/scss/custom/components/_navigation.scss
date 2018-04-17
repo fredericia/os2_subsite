@@ -48,6 +48,8 @@ $navigation-bottom-border-color: $color-white;
   a{
     font-size: 0.75em !important;
     color: $color-white;
+
+    &.active, &.active-trail,
     &:active, &:hover, &:focus{
       background: none !important;
       color: $brand-primary !important;
