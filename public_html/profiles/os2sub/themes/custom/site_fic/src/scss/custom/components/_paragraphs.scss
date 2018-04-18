@@ -78,12 +78,16 @@
 
 .paragraphs-items {
   .field.field-name-field-paragraph-header {
-    margin-bottom: ($grid-gutter-width /2);
-    text-transform: uppercase;
-    font-size: 2.368em;
     font-weight: normal;
     font-family: $headings-font-family;
     line-height: 1.1em;
+
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+
+    font-size: 2.368em;
+
+    text-transform: initial;
   }
   .aligner {
     .field.field-name-field-paragraph-header {
@@ -101,21 +105,8 @@
 
     .paragraph__heading {}
     .paragraph__heading__title {
-      padding-bottom: 20px;
-      margin-bottom: 10px;
-
-      font-size: 3.5715em;
-
-      text-transform: initial;
-    }
-
-    .field.field-name-field-paragraph-header {
       padding: 0;
       margin: 0;
-
-      font-size: inherit;
-
-      text-transform: initial;
     }
   }
 }

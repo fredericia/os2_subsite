@@ -11276,12 +11276,13 @@ h1.pane-title,
     padding-top: 45px; }
 
 .paragraphs-items .field.field-name-field-paragraph-header {
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  font-size: 2.368em;
   font-weight: normal;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
-  line-height: 1.1em; }
+  line-height: 1.1em;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 2.368em;
+  text-transform: initial; }
 
 .paragraphs-items .aligner .field.field-name-field-paragraph-header {
   margin-top: 30px; }
@@ -11290,16 +11291,8 @@ h1.pane-title,
   margin-bottom: 30px; }
 
 .entity-paragraphs-item.paragraphs-item-fic-list-of-event-teasers .paragraph__heading__title {
-  padding-bottom: 20px;
-  margin-bottom: 10px;
-  font-size: 3.5715em;
-  text-transform: initial; }
-
-.entity-paragraphs-item.paragraphs-item-fic-list-of-event-teasers .field.field-name-field-paragraph-header {
   padding: 0;
-  margin: 0;
-  font-size: inherit;
-  text-transform: initial; }
+  margin: 0; }
 
 .paragraphs-item-afsnit-m-galleri .field-items {
   margin-left: -15px;
