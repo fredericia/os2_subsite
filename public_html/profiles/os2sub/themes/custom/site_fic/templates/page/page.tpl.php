@@ -119,6 +119,12 @@
     <!-- Begin - content -->
     <main class="layout__content" role="main">
 
+      <?php if ( !empty($page['navigation__tertiary']) ): ?>
+        <div class="navigation navigation--tertiary">
+          <?php print render($page['highlighted']); ?>
+        </div>
+      <?php endif; ?>
+
         <div class="main-container">
             <div class="row search-and-title">
                 <?php if ( !empty($page['sidebar_first']) ): ?>
