@@ -121,7 +121,7 @@
 
       <?php if ( !empty($page['navigation__tertiary']) ): ?>
         <div class="navigation navigation--tertiary">
-          <?php print render($page['highlighted']); ?>
+          <?php print render($page['navigation__tertiary']); ?>
         </div>
       <?php endif; ?>
 

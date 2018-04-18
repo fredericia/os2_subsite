@@ -89,13 +89,12 @@
   }
 
   .field-name-field-paragraph-header {
-    font-weight: normal;
-    font-family: $headings-font-family;
-    line-height: 1.1em;
-
     margin-bottom: 15px;
 
+    font-weight: normal;
+    font-family: $headings-font-family;
     font-size: 3.125em;
+    line-height: 1.1em;
 
     text-transform: initial;
   }
