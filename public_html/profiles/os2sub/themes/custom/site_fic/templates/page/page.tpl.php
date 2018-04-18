@@ -121,7 +121,9 @@
 
       <?php if ( !empty($page['navigation__tertiary']) ): ?>
         <div class="navigation-bar">
-          <?php print render($page['navigation__tertiary']); ?>
+          <div class="navigation-bar__inner">
+            <?php print render($page['navigation__tertiary']); ?>
+          </div>
         </div>
       <?php endif; ?>
 

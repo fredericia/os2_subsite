@@ -71,6 +71,16 @@
       }
     }
   }
+
+  .page-taxonomy-term {
+
+    .page-header-wrapper {
+
+      &:before {
+        display: none;
+      }
+    }
+  }
 }
 
 // Desktop - only

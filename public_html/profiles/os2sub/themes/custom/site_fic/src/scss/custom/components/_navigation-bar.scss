@@ -21,11 +21,13 @@
 // --------------------------------------------------
 
 .navigation-bar {
-  background-color: $brand-primary;
 
   ul {
     @include list-unstyled;
   }
+}
+.navigation-bar__inner {
+  background-color: $brand-primary;
 }
 
 // --------------------------------------------------
@@ -40,25 +42,46 @@
 @media #{$breakpoint-mobile-and-up} {}
 
 // Mobile - only
-@media #{$breakpoint-mobile-only} {}
+@media #{$breakpoint-mobile-only} {
+
+  .navigation-bar {
+    @include container-fixed;
+  }
+}
 
 // Tablet - and up
 @media #{$breakpoint-tablet-and-up} {}
 
 // Tablet - only
-@media #{$breakpoint-tablet-only} {}
+@media #{$breakpoint-tablet-only} {
+
+  .navigation-bar {
+    @include container-fixed;
+
+    width: $container-sm;
+  }
+}
 
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
+  // Only show on section pages (ex. FICNESS)
+  .page-taxonomy-term {
+
+    .navigation-bar {
+      display: block;
+    }
+  }
+
   .navigation-bar {
-    text-align: center;
-    background-color: $color-black;
+    display: none;
 
     ul {
 
       > li {
         display: inline-block;
+
+        margin: 0;
 
         > a {
           padding: 35px 50px;
@@ -75,6 +98,12 @@
         }
       }
     }
+  }
+
+  .navigation-bar__inner {
+    text-align: center;
+
+    background-color: $color-black;
   }
 }
 
