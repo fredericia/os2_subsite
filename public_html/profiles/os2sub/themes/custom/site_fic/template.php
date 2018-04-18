@@ -820,7 +820,7 @@ function site_fic_menu_link(array $variables) {
 
   $active_classes = _bellcom_in_active_trail($href);
   if (isset($options['attributes']['class'])) {
-    $options['attributes']['class'] = array_merge($options['#attributes']['class'], $active_classes);
+    $options['attributes']['class'] = array_merge($options['attributes']['class'], $active_classes);
   }
   else {
     $options['attributes']['class'] = $active_classes;
