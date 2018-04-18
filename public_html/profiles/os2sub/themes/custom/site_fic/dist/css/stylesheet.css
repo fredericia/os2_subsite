@@ -11275,7 +11275,11 @@ h1.pane-title,
     border-top: 2px solid #CCCCCC;
     padding-top: 45px; }
 
-.paragraphs-items .field.field-name-field-paragraph-header {
+.paragraphs-items .paragraph__heading__title {
+  padding: 0;
+  margin: 0; }
+
+.paragraphs-items .field-name-field-paragraph-header {
   font-weight: normal;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
   line-height: 1.1em;
@@ -11286,12 +11290,8 @@ h1.pane-title,
 .paragraphs-items .aligner .field.field-name-field-paragraph-header {
   margin-top: 30px; }
 
-.paragraphs-items .field.field-name-field-paragraph-text {
+.paragraphs-items .field-name-field-paragraph-text {
   margin-bottom: 30px; }
-
-.entity-paragraphs-item.paragraphs-item-fic-list-of-event-teasers .paragraph__heading__title {
-  padding: 0;
-  margin: 0; }
 
 .paragraphs-item-afsnit-m-galleri .field-items {
   margin-left: -15px;

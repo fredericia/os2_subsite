@@ -77,7 +77,14 @@
 }
 
 .paragraphs-items {
-  .field.field-name-field-paragraph-header {
+
+  .paragraph__heading {}
+  .paragraph__heading__title {
+    padding: 0;
+    margin: 0;
+  }
+
+  .field-name-field-paragraph-header {
     font-weight: normal;
     font-family: $headings-font-family;
     line-height: 1.1em;
@@ -88,25 +95,16 @@
 
     text-transform: initial;
   }
+
   .aligner {
+
     .field.field-name-field-paragraph-header {
       margin-top: $grid-gutter-width;
     }
   }
-  .field.field-name-field-paragraph-text {
+
+  .field-name-field-paragraph-text {
     margin-bottom: 30px;
-  }
-}
-
-.entity-paragraphs-item {
-
-  &.paragraphs-item-fic-list-of-event-teasers {
-
-    .paragraph__heading {}
-    .paragraph__heading__title {
-      padding: 0;
-      margin: 0;
-    }
   }
 }
 

@@ -6,7 +6,7 @@
       <?php if ( isset( $content['field_paragraph_header'] ) ): ?>
         <!-- Begin - heading -->
         <div class="paragraph__heading">
-          <h2 class="paragraph__heading__title"><?php print render( $content['field_paragraph_header'] ); ?></h2>
+          <div class="paragraph__heading__title"><?php print render( $content['field_paragraph_header'] ); ?></div>
         </div>
         <!-- End - heading -->
       <?php endif; ?>
