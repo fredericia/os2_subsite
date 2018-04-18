@@ -2236,8 +2236,11 @@ function url($path = NULL, array $options = array()) {
     'prefix' => ''
   );
 
+  // Determine whether this is an external link, but ensure that the current
+  // path is always treated as internal by default (to prevent external link
+  // injection vulnerabilities).
   if (!isset($options['external'])) {
-    $options['external'] = url_is_external($path);
+    $options['external'] = $path === $_GET['q'] ? FALSE : url_is_external($path);
   }
 
   // Preserve the original path before altering or aliasing.
@@ -6056,9 +6059,7 @@ function drupal_render(&$elements) {
   // for speed.
   if ($elements['#children'] == '') {
     foreach ($children as $key) {
-      if (is_array($elements[$key])) {
-        $elements['#children'] .= drupal_render($elements[$key]);
-      }
+      $elements['#children'] .= drupal_render($elements[$key]);
     }
   }
 
