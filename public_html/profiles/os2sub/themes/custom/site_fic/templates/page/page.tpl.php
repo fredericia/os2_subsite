@@ -120,7 +120,7 @@
     <main class="layout__content" role="main">
 
       <?php if ( !empty($page['navigation__tertiary']) ): ?>
-        <div class="navigation navigation--tertiary">
+        <div class="navigation-bar">
           <?php print render($page['navigation__tertiary']); ?>
         </div>
       <?php endif; ?>

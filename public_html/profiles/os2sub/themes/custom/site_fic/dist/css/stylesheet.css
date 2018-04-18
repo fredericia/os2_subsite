@@ -11280,11 +11280,11 @@ h1.pane-title,
   margin: 0; }
 
 .paragraphs-items .field-name-field-paragraph-header {
+  margin-bottom: 15px;
   font-weight: normal;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
-  line-height: 1.1em;
-  margin-bottom: 15px;
   font-size: 3.125em;
+  line-height: 1.1em;
   text-transform: initial; }
 
 .paragraphs-items .aligner .field.field-name-field-paragraph-header {
@@ -13337,6 +13337,27 @@ div.ctools-modal-content {
     left: 0;
     bottom: 0;
     background-color: #fff; } }
+
+.navigation-bar {
+  background-color: #01B5D5; }
+  .navigation-bar ul {
+    padding-left: 0;
+    list-style: none; }
+
+@media screen and (min-width: 992px) {
+  .navigation-bar {
+    text-align: center;
+    background-color: #192124; }
+    .navigation-bar ul > li {
+      display: inline-block; }
+      .navigation-bar ul > li > a {
+        padding: 35px 50px;
+        font-family: "RBNo21a-Medium", "Lato", sans-serif;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #fff; }
+        .navigation-bar ul > li > a.active, .navigation-bar ul > li > a.active-trail, .navigation-bar ul > li > a:hover, .navigation-bar ul > li > a:active {
+          background-color: #01B5D5; } }
 
 body {
   margin-left: 0 !important; }
