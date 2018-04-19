@@ -828,3 +828,39 @@ function site_fic_menu_link(array $variables) {
 
   return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
 }
+
+/*
+ * Implements template_menu_link().
+ */
+function site_fic_menu_link__menu_block(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  $options = !empty($element['#localized_options']) ? $element['#localized_options'] : array();
+
+  // Check plain title if "html" is not set, otherwise, filter for XSS attacks.
+  $title = empty($options['html']) ? check_plain($element['#title']) : filter_xss_admin($element['#title']);
+
+  // Ensure "html" is now enabled so l() doesn't double encode. This is now
+  // safe to do since both check_plain() and filter_xss_admin() encode HTML
+  // entities. See: https://www.drupal.org/node/2854978
+  $options['html'] = TRUE;
+
+  $href = $element['#href'];
+  $attributes = !empty($element['#attributes']) ? $element['#attributes'] : array();
+
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    elseif ((!empty($element['#original_link']['depth']))) {
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul>' . drupal_render($element['#below']) . '</ul>';
+    }
+  }
+
+  return '<li' . drupal_attributes($attributes) . '>' . l($title, $href, $options) . $sub_menu . "</li>\n";
+}

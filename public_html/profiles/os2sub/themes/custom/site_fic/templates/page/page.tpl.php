@@ -122,7 +122,36 @@
       <?php if ( !empty($page['navigation__tertiary']) ): ?>
         <div class="navigation-bar">
           <div class="navigation-bar__inner">
-            <?php print render($page['navigation__tertiary']); ?>
+
+            <!-- Begin - mobile -->
+            <div class="visible-xs visible-sm">
+
+              <div class="navigation-bar__menu">
+                <div class="navigation-bar__toggle">
+                  <span class="navigation-bar__toggle__text navigation-bar__toggle__text--additional-items">
+                    <?php print t('Yderligere menupunkter'); ?>
+                  </span>
+
+                  <span class="navigation-bar__toggle__text navigation-bar__toggle__text--all-in-sections">
+                    <?php print t('Alle menupunkter i sektionen'); ?>
+                  </span>
+                </div>
+
+                <div class="navigation-bar__dropup">
+                  <?php print render($page['navigation__tertiary']); ?>
+                </div>
+              </div>
+            </div>
+            <!-- End - mobile -->
+
+            <!-- Begin - desktop -->
+            <div class="hidden-xs hidden-sm">
+              <div class="navigation-bar__menu">
+                <?php print render($page['navigation__tertiary']); ?>
+              </div>
+            </div>
+            <!-- End - desktop -->
+
           </div>
         </div>
       <?php endif; ?>

@@ -112,4 +112,14 @@
         lity(href);
     });
 
+    // Navigation bar
+    $('.navigation-bar__toggle').on('click', function(event) {
+        event.preventDefault();
+
+        var $element = $(this),
+            $parent = $element.parents('.navigation-bar');
+
+        $parent.toggleClass('visible');
+    })
+
 })(jQuery);

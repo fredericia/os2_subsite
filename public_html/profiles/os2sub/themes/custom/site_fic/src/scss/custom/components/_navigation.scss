@@ -192,6 +192,14 @@ $navigation-bottom-border-color: $color-white;
     padding: 0;
   }
 }
+
+.layout__content {
+
+  .pane-main-menu {
+    display: none;
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -234,8 +242,12 @@ $navigation-bottom-border-color: $color-white;
 // Desktop - and up
 @include media-breakpoint-up(md) {
 
-  // Navigation
+  .layout__content {
 
+    .pane-main-menu {
+      display: block;
+    }
+  }
 }
 
 // Desktop - only

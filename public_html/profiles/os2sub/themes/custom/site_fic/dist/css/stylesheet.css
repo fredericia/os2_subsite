@@ -6514,7 +6514,7 @@ button.close {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .icon, .slinky-menu .next:after {
+.fa, .icon, .navigation-bar__toggle:after, .slinky-menu .next:after {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -6571,10 +6571,10 @@ button.close {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.icon, .slinky-menu .fa-pull-left.next:after {
+.fa.fa-pull-left, .fa-pull-left.icon, .fa-pull-left.navigation-bar__toggle:after, .slinky-menu .fa-pull-left.next:after {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.icon, .slinky-menu .fa-pull-right.next:after {
+.fa.fa-pull-right, .fa-pull-right.icon, .fa-pull-right.navigation-bar__toggle:after, .slinky-menu .fa-pull-right.next:after {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -6584,10 +6584,10 @@ button.close {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.icon, .slinky-menu .pull-left.next:after {
+.fa.pull-left, .pull-left.icon, .pull-left.navigation-bar__toggle:after, .slinky-menu .pull-left.next:after {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.icon, .slinky-menu .pull-right.next:after {
+.fa.pull-right, .pull-right.icon, .pull-right.navigation-bar__toggle:after, .slinky-menu .pull-right.next:after {
   margin-left: .3em; }
 
 .fa-spin {
@@ -11165,14 +11165,23 @@ h2.pane-title, .pane-title.heading-h2 {
     clear: both; }
 
 /*Some flex panel tweaks stop*/
+.pane-menu-tree li span,
 .pane-menu-tree li a {
-  color: #192124;
   font-family: "RBNo21a-Medium", "Lato", sans-serif;
   font-size: 1.75em;
   padding-top: 0;
   padding-bottom: 0; }
 
-.pane-menu-tree li.active a {
+.pane-menu-tree li a {
+  color: #192124; }
+
+.pane-menu-tree li span {
+  display: block;
+  margin-top: 15px;
+  color: #01B5D5; }
+
+.pane-menu-tree .active > a,
+.pane-menu-tree .active-trail > a {
   color: #ff4200; }
 
 .modal-content.popups-body {
@@ -11231,8 +11240,10 @@ h1.pane-title,
 @media (min-width: 768px) {
   .content-inner {
     padding-top: 30px;
-    padding-bottom: 40px; }
-  .os2-sectiont .col-sm-9 {
+    padding-bottom: 40px; } }
+
+@media (min-width: 992px) {
+  .os2-sectiont .col-md-9 {
     border-left: solid 2px #CCCCCC; } }
 
 .bg-undefined, .bg-white, .bg-alternative {
@@ -11928,9 +11939,16 @@ section.block-locale {
     border: none;
     padding: 0; }
 
+.layout__content .pane-main-menu {
+  display: none; }
+
 @media (min-width: 768px) and (max-width: 991px) {
   .topnav-wrapper .nav > li > a {
     padding: 10px 5px; } }
+
+@media (min-width: 992px) {
+  .layout__content .pane-main-menu {
+    display: block; } }
 
 @media (min-width: 1230px) {
   .headerwrapper-inner .navbar-collapse {
@@ -12301,7 +12319,7 @@ div.ctools-modal-content {
     padding: 20px 0;
     background-color: transparent;
     border-color: transparent; }
-    .responsive-header .sidr__toggle .icon {
+    .responsive-header .sidr__toggle .icon, .responsive-header .sidr__toggle .navigation-bar__toggle:after {
       font-size: 24px;
       color: #fff; }
 
@@ -13327,7 +13345,7 @@ div.ctools-modal-content {
   .field-slideshow {
     width: 100% !important; } }
 
-@media (min-width: 992px) {
+@media (min-width: 1230px) {
   .not-front .page-header-wrapper:before {
     position: absolute;
     display: block;
@@ -13340,12 +13358,81 @@ div.ctools-modal-content {
   .page-taxonomy-term .page-header-wrapper:before {
     display: none; } }
 
-.navigation-bar ul {
-  padding-left: 0;
-  list-style: none; }
+.navigation-bar {
+  display: none;
+  margin-top: 15px; }
 
-.navigation-bar__inner {
+.navigation-bar__menu {
+  position: relative;
   background-color: #01B5D5; }
+  .navigation-bar__menu ul {
+    padding-left: 0;
+    list-style: none; }
+    .navigation-bar__menu ul a {
+      font-family: "RBNo21a-Medium", "Lato", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff; }
+      .navigation-bar__menu ul a.active, .navigation-bar__menu ul a.active-trail, .navigation-bar__menu ul a:hover, .navigation-bar__menu ul a:focus, .navigation-bar__menu ul a:active {
+        background-color: #01B5D5; }
+    .navigation-bar__menu ul ul {
+      display: none; }
+  .navigation-bar__menu .dropdown-toggle .caret {
+    display: none; }
+
+.navigation-bar__toggle {
+  padding: 10px;
+  font-family: "RBNo21a-Medium", "Lato", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: hand;
+  cursor: pointer; }
+  .navigation-bar__toggle:after {
+    position: absolute;
+    bottom: 14px;
+    right: 10px;
+    content: "";
+    font-size: 20px;
+    color: #fff; }
+  .visible .navigation-bar__toggle:after {
+    content: ""; }
+
+.navigation-bar__dropup {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  overflow-y: scroll;
+  max-height: 450px;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  background-color: #192124; }
+  .visible .navigation-bar__dropup {
+    display: block; }
+  .navigation-bar__dropup ul > li {
+    border-bottom: 1px solid #2a2f36; }
+  .navigation-bar__dropup ul a {
+    padding: 10px;
+    text-align: center; }
+
+.navigation-bar__toggle__text {
+  display: none; }
+
+body:not(.page-taxonomy-term) .navigation-bar__toggle__text--additional-items {
+  display: block; }
+
+.page-taxonomy-term .navigation-bar__toggle__text--all-in-sections {
+  display: block; }
+
+.front .navigation-bar {
+  display: none !important; }
+
+.page-taxonomy-term.not-front .navigation-bar {
+  display: block !important; }
+
+.page-node .navigation-bar {
+  display: block !important; }
 
 @media screen and (max-width: 767px) {
   .navigation-bar {
@@ -13373,24 +13460,22 @@ div.ctools-modal-content {
       clear: both; } }
 
 @media screen and (min-width: 992px) {
-  .page-taxonomy-term .navigation-bar {
-    display: block; }
+  .page-node .navigation-bar {
+    display: none !important; }
   .navigation-bar {
-    display: none; }
-    .navigation-bar ul > li {
+    margin-top: 0;
+    max-height: 81px;
+    overflow: hidden; }
+  .navigation-bar__menu {
+    text-align: center;
+    background-color: #192124; }
+    .navigation-bar__menu ul > li {
       display: inline-block;
       margin: 0; }
-      .navigation-bar ul > li > a {
-        padding: 35px 50px;
-        font-family: "RBNo21a-Medium", "Lato", sans-serif;
-        font-size: 18px;
-        text-transform: uppercase;
-        color: #fff; }
-        .navigation-bar ul > li > a.active, .navigation-bar ul > li > a.active-trail, .navigation-bar ul > li > a:hover, .navigation-bar ul > li > a:active {
-          background-color: #01B5D5; }
-  .navigation-bar__inner {
-    text-align: center;
-    background-color: #192124; } }
+      .navigation-bar__menu ul > li + li {
+        margin-left: -5px; }
+      .navigation-bar__menu ul > li > a {
+        padding: 28px 40px; } }
 
 body {
   margin-left: 0 !important; }
@@ -14073,7 +14158,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     text-transform: uppercase; }
-    .big-plus-wrapper a.big-plus-link span.link.fa.fa-plus, .big-plus-wrapper a.big-plus-link span.link.fa-plus.icon, .big-plus-wrapper a.big-plus-link .slinky-menu span.link.fa-plus.next:after, .slinky-menu .big-plus-wrapper a.big-plus-link span.link.fa-plus.next:after {
+    .big-plus-wrapper a.big-plus-link span.link.fa.fa-plus, .big-plus-wrapper a.big-plus-link span.link.fa-plus.icon, .big-plus-wrapper a.big-plus-link span.link.fa-plus.navigation-bar__toggle:after, .big-plus-wrapper a.big-plus-link .slinky-menu span.link.fa-plus.next:after, .slinky-menu .big-plus-wrapper a.big-plus-link span.link.fa-plus.next:after {
       color: #01B5D5;
       font-size: 2.75em;
       line-height: 80px;
@@ -14974,6 +15059,21 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     .field-name-field-afsnit-full-width .entity .content,
     .pane-paragraphs-from-section .entity .content {
       width: 1200px; } }
+
+.pane-menu-tree .menu > li > ul {
+  padding-left: 15px;
+  margin-bottom: 10px; }
+
+.pane-menu-tree .menu > li span,
+.pane-menu-tree .menu > li a {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.pane-menu-tree .menu ul {
+  padding-left: 15px; }
+  .pane-menu-tree .menu ul span,
+  .pane-menu-tree .menu ul a {
+    font-size: 1.4em !important; }
 
 .pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini {
   padding-bottom: 85px;

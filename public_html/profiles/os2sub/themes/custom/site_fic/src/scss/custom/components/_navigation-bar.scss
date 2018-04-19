@@ -21,13 +21,146 @@
 // --------------------------------------------------
 
 .navigation-bar {
+  display: none;
+
+  margin-top: floor( ($grid-gutter-width / 2) );
+}
+.navigation-bar__inner {}
+
+.navigation-bar__menu {
+  position: relative;
+
+  background-color: $brand-primary;
 
   ul {
     @include list-unstyled;
+
+    a {
+      font-family: $headings-font-family;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #fff;
+
+      &.active, &.active-trail,
+      &:hover, &:focus, &:active {
+        background-color: $brand-primary;
+      }
+    }
+
+    ul {
+      display: none; // hide subnavigations
+    }
+  }
+
+  .dropdown-toggle {
+
+    .caret {
+      display: none;
+    }
   }
 }
-.navigation-bar__inner {
-  background-color: $brand-primary;
+
+.navigation-bar__toggle {
+  padding: 10px;
+
+  font-family: $headings-font-family;
+  font-size: 18px;
+  text-transform: uppercase;
+
+  color: #fff;
+
+  cursor: hand;
+  cursor: pointer;
+
+  &:after {
+    position: absolute;
+
+    @extend .icon;
+
+    bottom: 14px;
+    right: 10px;
+
+    content: $fa-var-angle-up;
+
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .visible &:after {
+    content: $fa-var-angle-down;
+  }
+}
+
+.navigation-bar__dropup {
+  position: absolute;
+
+  z-index: $zindex-dropdown;
+
+  display: none;
+
+  overflow-y: scroll;
+
+  max-height: 450px;
+
+  left: 0;
+  right: 0;
+  bottom: 100%;
+
+  background-color: $color-black;
+
+  .visible & {
+    display: block;
+  }
+
+  ul {
+
+    > li {
+      border-bottom: 1px solid #2a2f36;
+    }
+
+    a {
+      padding: 10px;
+
+      text-align: center;
+    }
+  }
+}
+
+.navigation-bar__toggle__text {
+  display: none;
+}
+.navigation-bar__toggle__text--additional-items {
+
+  body:not(.page-taxonomy-term) & {
+    display: block;
+  }
+}
+.navigation-bar__toggle__text--all-in-sections {
+
+  .page-taxonomy-term & {
+    display: block;
+  }
+}
+
+.front {
+
+  .navigation-bar {
+    display: none !important;
+  }
+}
+
+.page-taxonomy-term.not-front {
+
+  .navigation-bar {
+    display: block !important;
+  }
+}
+
+.page-node {
+
+  .navigation-bar {
+    display: block !important;
+  }
 }
 
 // --------------------------------------------------
@@ -65,16 +198,26 @@
 // Desktop - and up
 @media #{$breakpoint-desktop-and-up} {
 
-  // Only show on section pages (ex. FICNESS)
-  .page-taxonomy-term {
+  .page-node {
 
     .navigation-bar {
-      display: block;
+      display: none !important;
     }
   }
 
   .navigation-bar {
-    display: none;
+    margin-top: 0;
+
+    max-height: 81px;
+    overflow: hidden;
+  }
+
+  .navigation-bar__inner {}
+
+  .navigation-bar__menu {
+    text-align: center;
+
+    background-color: $color-black;
 
     ul {
 
@@ -83,27 +226,15 @@
 
         margin: 0;
 
+        + li {
+          margin-left: -5px;
+        }
+
         > a {
-          padding: 35px 50px;
-
-          font-family: $headings-font-family;
-          font-size: 18px;
-          text-transform: uppercase;
-          color: #fff;
-
-          &.active, &.active-trail,
-          &:hover, &:active {
-            background-color: $brand-primary;
-          }
+          padding: 28px 40px;
         }
       }
     }
-  }
-
-  .navigation-bar__inner {
-    text-align: center;
-
-    background-color: $color-black;
   }
 }
 

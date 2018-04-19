@@ -93,17 +93,34 @@ h2.pane-title {
 
 /*Some flex panel tweaks stop*/
 .pane-menu-tree {
-  li{
-    a{
-      color: $color-black;
+
+  li {
+
+    span,
+    a {
       font-family: $headings-font-family;
       font-size: 1.75em;
       padding-top: 0;
       padding-bottom: 0;
     }
+
+    a {
+      color: $color-black;
+    }
+
+    span {
+      display: block;
+
+      margin-top: 15px;
+
+      color: $brand-primary;
+    }
   }
-  li.active{
-    a{
+
+  .active,
+  .active-trail {
+
+    > a {
       color: $brand-secondary;
     }
   }
@@ -207,12 +224,6 @@ span {
     padding-top: $sm-page-layout-content-inner-padding-top;
     padding-bottom: $sm-page-layout-content-inner-padding-bottom;
   }
-
-  .os2-sectiont {
-    .col-sm-9 {
-      border-left: solid 2px $color-light-gray;
-    }
-  }
 }
 
 // Tablet - only
@@ -227,6 +238,12 @@ span {
 
   // Page layout
 
+  .os2-sectiont {
+
+    .col-md-9 {
+      border-left: solid 2px $color-light-gray;
+    }
+  }
 }
 
 // Desktop - only

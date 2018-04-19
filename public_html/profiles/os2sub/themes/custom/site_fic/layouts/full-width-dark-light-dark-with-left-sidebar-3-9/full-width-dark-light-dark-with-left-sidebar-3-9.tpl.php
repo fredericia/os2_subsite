@@ -12,12 +12,12 @@
           <?php if ($content['sidebar']): ?>
 
             <!-- Begin - sidebar -->
-            <div class="col-sm-3">
+            <div class="col-xs-12 col-md-3">
                 <?php echo $content['sidebar']; ?>
             </div>
             <!-- End - sidebar -->
             <!-- Begin - content -->
-            <div class="col-sm-9">
+            <div class="col-xs-12 col-md-9">
               <?php echo $content['content']; ?>
             </div>
             <!-- End - content -->
