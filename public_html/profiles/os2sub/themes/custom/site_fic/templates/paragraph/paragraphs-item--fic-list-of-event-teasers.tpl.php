@@ -16,7 +16,7 @@
       <div class="more-link">
         <div class="row">
           <div class="col-md-3 col-sm-6 col-md-push-9 col-sm-push-6">
-            <a href="/fic-kommende-arrangementer">
+            <a href="/kalender">
               <?php print t('See more'); ?>
             </a>
           </div>
