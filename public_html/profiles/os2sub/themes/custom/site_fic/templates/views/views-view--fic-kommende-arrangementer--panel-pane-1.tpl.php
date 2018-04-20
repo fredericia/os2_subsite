@@ -72,8 +72,15 @@
   <?php endif; ?>
 
   <?php if ($more): ?>
-    /kalender
-  <?php endif; ?>
+<div class="more-link">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 col-md-push-9 col-sm-push-6">
+      <a href="/kalender">
+        <?php print $link_text; ?>
+      </a>
+    </div>
+  </div>
+</div>  <?php endif; ?>
 
   <?php if ($footer): ?>
     <div class="view-footer">
