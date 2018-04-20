@@ -76,7 +76,7 @@
   <div class="row">
     <div class="col-md-3 col-sm-6 col-md-push-9 col-sm-push-6">
       <a href="/kalender">
-        <?php print $link_text; ?>
+        <?php print t('See more') ?>
       </a>
     </div>
   </div>
