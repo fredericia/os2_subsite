@@ -5,3 +5,21 @@
  */
 
 include_once 'fic_frontpage_settings.features.inc';
+
+
+function fic_frontpage_settings_views_pre_view(&$view, &$display_id, &$args) {
+
+  if ($view->name == 'fic_kommende_arrangementer' && $display_id == 'panel_pane_1') {
+   $terms = array();
+   if (isset($args[1])) {
+     $node = node_load($args[1]);
+     $section = field_get_items('node', $node, 'field_sektion');
+     foreach ($section as $tid) {
+       if ($tid['tid'] !=  variable_get('fronpage_term_tid', 14)) {
+        $terms[] = $tid['tid'];
+       }
+     }
+   }
+   $args[0] =  implode('+', $terms);
+  }
+}
