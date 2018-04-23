@@ -12675,6 +12675,7 @@ div.ctools-modal-content {
     .sidr .region-navigation .book-link a {
       font-weight: 600 !important; }
   .sidr .region-navigation section.block-locale {
+    position: relative;
     float: none; }
     .sidr .region-navigation section.block-locale button.lang-buton {
       padding: 0; }
@@ -12686,10 +12687,13 @@ div.ctools-modal-content {
       .sidr .region-navigation section.block-locale button.lang-buton span {
         margin-right: 5px; }
   .sidr .region-navigation .dropdown-menu {
-    min-width: 100px; }
+    min-width: 100px;
+    padding: 0; }
     .sidr .region-navigation .dropdown-menu ul {
       padding: 0 !important;
       margin: 0; }
+      .sidr .region-navigation .dropdown-menu ul li + li {
+        border-top: 1px solid #eee; }
     .sidr .region-navigation .dropdown-menu a {
       display: block;
       padding: 8px 15px;

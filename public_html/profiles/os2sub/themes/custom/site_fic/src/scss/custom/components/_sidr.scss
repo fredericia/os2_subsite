@@ -74,6 +74,8 @@
     }
 
     section.block-locale {
+      position: relative;
+
       float: none; // reset
 
       button.lang-buton {
@@ -95,9 +97,15 @@
     .dropdown-menu {
       min-width: 100px;
 
+      padding: 0;
+
       ul {
         padding: 0 !important;
         margin: 0;
+
+        li + li {
+          border-top: 1px solid #eee;
+        }
       }
 
       a {
