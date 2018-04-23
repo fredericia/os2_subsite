@@ -214,6 +214,7 @@ $image-border: 10px;
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
 .view-os2sub-nyheder,
 .view-fic-artikler {
   .views-row{
@@ -232,41 +233,79 @@ $image-border: 10px;
   margin-bottom: $grid-gutter-width;
 }
 
+
+
+
+.bg-dark {
+
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
+
+    .overlay-wrapper {
+      border-color: #fff;
+    }
+
+    header{
+
+      h3{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.bg-darker {
+
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
+
+    .overlay-wrapper {
+      border-color: #fff;
+    }
+
+    header{
+
+      h3{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.bg-alternative {
+
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
+
+    .link.show-more{
+
+      a{
+
+        &, &:hover, &:hover, &:focus {
+          color: $color-red;
+        }
+      }
+    }
+  }
+}
+
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
-
-
-
-
-}
+@include media-breakpoint-up(xs) {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
-
-
-}
+@include media-breakpoint-only(xs) {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
-
-
-}
+@include media-breakpoint-up(sm) {}
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
-
-
-}
+@include media-breakpoint-only(sm) {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(md) {}
 
-
-}
 // Desktop - only
 @include media-breakpoint-only(md) {
 
@@ -284,29 +323,17 @@ $image-border: 10px;
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
-
-
-}
+@include media-breakpoint-up(lg) {}
 
 // Print
-@media print {
-
-
-}
+@media print {}
 
 // Touch
-.touchevents {
-
-  // Page layout
-  .content-inner {}
-}
+.touchevents {}
 
 // No touch
-.no-touchevents {
+.no-touchevents {}
 
-
-}
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------

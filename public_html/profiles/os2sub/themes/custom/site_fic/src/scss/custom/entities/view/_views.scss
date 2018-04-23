@@ -78,6 +78,21 @@
   }
 }
 
+.bg-alternative {
+
+  &.paragraphs-item-fic-list-of-event-teasers,
+  .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1,
+  .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer {
+
+    .more-link {
+
+      a {
+        @extend .btn-red;
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
