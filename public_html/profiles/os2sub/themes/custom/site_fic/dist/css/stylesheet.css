@@ -15711,6 +15711,30 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .paragraphs-item-personale .entity-teaser__phone {
     min-height: 26px; }
 
+.bg-dark.paragraphs-item-personale h2, .page-nyheder .paragraphs-item-personale.main-container h2, .bg-dark.paragraphs-item-personale .heading-h2, .page-nyheder .paragraphs-item-personale.main-container .heading-h2 {
+  color: #fff; }
+
+.bg-dark.paragraphs-item-personale .field-name-field-personale-billede img, .page-nyheder .paragraphs-item-personale.main-container .field-name-field-personale-billede img {
+  border-color: #fff; }
+
+.bg-darker.paragraphs-item-personale h2, .bg-darker.paragraphs-item-personale .heading-h2 {
+  color: #fff; }
+
+.bg-darker.paragraphs-item-personale .field-name-field-personale-billede img {
+  border-color: #fff; }
+
+.bg-alternative.paragraphs-item-personale .field.field-name-field-paragraph-header {
+  color: #192124; }
+
+.bg-alternative.paragraphs-item-personale .field-name-field-personale-jobtitel {
+  color: #fff; }
+
+.bg-alternative.paragraphs-item-personale .field-name-field-personale-billede img {
+  border-color: #192124; }
+
+.bg-alternative.paragraphs-item-personale .field-name-field-personale-email a, .bg-alternative.paragraphs-item-personale .field-name-field-personale-email a:hover {
+  color: #192124; }
+
 @media (min-width: 992px) {
   .paragraphs-item-personale .row-amount-2 {
     width: 66.666667%;

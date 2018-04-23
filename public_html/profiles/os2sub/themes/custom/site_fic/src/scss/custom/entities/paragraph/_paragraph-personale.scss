@@ -14,6 +14,7 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
+
 .paragraphs-item-personale {
   font-size: 1.45em;
 
@@ -75,6 +76,71 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.bg-dark {
+
+  &.paragraphs-item-personale {
+
+    h2 {
+      color: #fff;
+    }
+
+    .field-name-field-personale-billede {
+
+      img {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.bg-darker {
+
+  &.paragraphs-item-personale {
+
+    h2 {
+      color: #fff;
+    }
+
+    .field-name-field-personale-billede {
+
+      img {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.bg-alternative {
+
+  &.paragraphs-item-personale {
+
+    .field.field-name-field-paragraph-header {
+      color: $color-black;
+    }
+
+    .field-name-field-personale-jobtitel {
+      color: #fff;
+    }
+
+    .field-name-field-personale-billede {
+
+      img {
+        border-color: $color-black;
+      }
+    }
+
+    .field-name-field-personale-email {
+
+      a {
+
+        &, &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Responsive
