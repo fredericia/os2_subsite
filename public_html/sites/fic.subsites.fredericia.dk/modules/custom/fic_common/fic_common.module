@@ -97,7 +97,7 @@ function fic_settings($form, &$form_state) {
   }
   $form['fronpage_term_tid'] = array(
     '#type' => 'select',
-    '#title' => t('Frontpage term in os2web_base_tax_site_structure taxonmoy'),
+    '#title' => t('Frontpage term in os2web_base_tax_site_structure taxonomy'),
     '#options' => $options,
     '#default_value' => variable_get('fronpage_term_tid', 14 ),
   );
