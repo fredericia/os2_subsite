@@ -28,7 +28,7 @@
   .field.field-name-field-knap-link{
     a{
       @extend .btn;
-      @extend .btn-black;
+      @extend .btn-blue;
       font-size: 1.875em !important;
       width: auto !important;
       height: auto !important;
@@ -53,6 +53,45 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.bg-dark {
+
+  &.paragraphs-item-afsnit-m-link{
+
+    .field.field-name-field-knap-link {
+
+      a {
+        @extend .btn-red;
+      }
+    }
+  }
+}
+
+.bg-darker {
+
+  &.paragraphs-item-afsnit-m-link{
+
+    .field.field-name-field-knap-link {
+
+      a {
+        @extend .btn-red;
+      }
+    }
+  }
+}
+
+.bg-alternative {
+
+  &.paragraphs-item-afsnit-m-link{
+
+    .field.field-name-field-knap-link {
+
+      a {
+        @extend .btn-black;
+      }
+    }
+  }
+}
 
 // --------------------------------------------------
 // Responsive
