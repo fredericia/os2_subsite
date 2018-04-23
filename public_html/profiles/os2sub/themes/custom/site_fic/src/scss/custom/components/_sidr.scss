@@ -94,6 +94,19 @@
 
     .dropdown-menu {
       min-width: 100px;
+
+      ul {
+        padding: 0 !important;
+        margin: 0;
+      }
+
+      a {
+        display: block;
+
+        padding: 8px 15px;
+
+        font-size: $font-size-base !important;
+      }
     }
   }
 }

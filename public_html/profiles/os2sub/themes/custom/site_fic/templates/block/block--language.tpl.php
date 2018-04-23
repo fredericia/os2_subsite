@@ -56,7 +56,7 @@ global $language;
     <?php print render($title_suffix); ?>
 
     <button class="lang-buton" type="button"
-            data-toggle="dropdown"><span class="visible-xs"><?php print t('Language'); ?></span></span><?php print $language->name; ?>
+            data-toggle="dropdown"><span class="visible-xs"><?php print t('Language'); ?>: </span><?php print $language->name; ?>
     </button>
     <div class="dropdown-menu">
         <?php print $content ?>

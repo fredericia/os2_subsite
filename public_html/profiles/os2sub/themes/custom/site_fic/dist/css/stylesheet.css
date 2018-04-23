@@ -12457,6 +12457,13 @@ div.ctools-modal-content {
         margin-right: 5px; }
   .sidr .region-navigation .dropdown-menu {
     min-width: 100px; }
+    .sidr .region-navigation .dropdown-menu ul {
+      padding: 0 !important;
+      margin: 0; }
+    .sidr .region-navigation .dropdown-menu a {
+      display: block;
+      padding: 8px 15px;
+      font-size: 14px !important; }
 
 @media screen and (max-width: 767px) {
   .sidr .region-navigation section.block-locale button.lang-buton .visible-xs {
