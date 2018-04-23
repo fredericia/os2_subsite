@@ -14,7 +14,10 @@
 <div class="row--equal-height-columns">
   <div class="views-row views-row-0 col-xs-12 col-sm-4 col-lg-3">
     <a href="https://www.instagram.com/fredericiaidraetscenter/">
-      <img class="img-responsive" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram.png')); ?>" border="0">
+      <img class="img-responsive instagram-logo instagram-logo--default" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram-default.png')); ?>" border="0">
+      <img class="img-responsive instagram-logo instagram-logo--dark" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram-dark.png')); ?>" border="0">
+      <img class="img-responsive instagram-logo instagram-logo--darker" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram-darker.png')); ?>" border="0">
+      <img class="img-responsive instagram-logo instagram-logo--alternative" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram-alternative.png')); ?>" border="0">
     </a>
   </div>
 

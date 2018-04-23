@@ -213,6 +213,10 @@ $image-border: 10px;
   }
 }
 
+.instagram-logo {
+  display: none;
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -235,7 +239,18 @@ $image-border: 10px;
   margin-bottom: $grid-gutter-width;
 }
 
+.bg-white {
+
+  .instagram-logo--default {
+    display: block;
+  }
+}
+
 .bg-dark {
+
+  .instagram-logo--dark {
+    display: block;
+  }
 
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
 
@@ -274,6 +289,10 @@ $image-border: 10px;
 
 .bg-darker {
 
+  .instagram-logo--darker {
+    display: block;
+  }
+
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
 
     .overlay-wrapper {
@@ -310,6 +329,10 @@ $image-border: 10px;
 }
 
 .bg-alternative {
+
+  .instagram-logo--alternative {
+    display: block;
+  }
 
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
 
