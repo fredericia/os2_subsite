@@ -14464,11 +14464,7 @@ body {
 .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a, .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:hover, .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:hover, .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:focus {
   color: #ff4200; }
 
-.bg-alternative .node--os2web_base_news--os2sub_teaser_mini {
-  border-color: #fff; }
-
 .bg-alternative .big-plus-wrapper a.big-plus-link {
-  border-color: #fff;
   color: #fff; }
   .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa.fa-plus, .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa-plus.icon, .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa-plus.navigation-bar__toggle:after, .bg-alternative .big-plus-wrapper a.big-plus-link .slinky-menu span.link.fa-plus.next:after, .slinky-menu .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa-plus.next:after {
     color: #ff4200; }
@@ -15439,7 +15435,17 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     margin-right: 5px; }
   .paragraphs-item-header-text-links-image .row .field.field-name-field-image.field-type-image img {
     border-style: solid;
-    border-width: 6px; }
+    border-width: 6px;
+    border-color: #192124; }
+
+.bg-dark.paragraphs-item-header-text-links-image .field.field-name-field-image.field-type-image img, .page-nyheder .paragraphs-item-header-text-links-image.main-container .field.field-name-field-image.field-type-image img {
+  border-color: #fff; }
+
+.bg-darker.paragraphs-item-header-text-links-image .field.field-name-field-image.field-type-image img {
+  border-color: #fff; }
+
+.bg-alternative.paragraphs-item-header-text-links-image .field-name-field-paragraph-header {
+  color: #fff; }
 
 @media (min-width: 768px) {
   .paragraphs-item-header-text-links-image {
@@ -15486,6 +15492,15 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center; }
+
+.bg-dark.paragraphs-item-header-text-media .field-name-field-image, .page-nyheder .paragraphs-item-header-text-media.main-container .field-name-field-image {
+  border-color: #fff; }
+
+.bg-darker.paragraphs-item-header-text-media .field-name-field-image {
+  border-color: #fff; }
+
+.bg-alternative.paragraphs-item-header-text-media .field-name-field-paragraph-header {
+  color: #fff; }
 
 @media (min-width: 768px) {
   .paragraphs-item-header-text-media {

@@ -76,6 +76,36 @@
 // Variants
 // --------------------------------------------------
 
+.bg-dark {
+
+  &.paragraphs-item-header-text-media {
+
+    .field-name-field-image {
+      border-color: #fff;
+    }
+  }
+}
+
+.bg-darker {
+
+  &.paragraphs-item-header-text-media {
+
+    .field-name-field-image {
+      border-color: #fff;
+    }
+  }
+}
+
+.bg-alternative {
+
+  &.paragraphs-item-header-text-media {
+
+    .field-name-field-paragraph-header {
+      color: #fff;
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------

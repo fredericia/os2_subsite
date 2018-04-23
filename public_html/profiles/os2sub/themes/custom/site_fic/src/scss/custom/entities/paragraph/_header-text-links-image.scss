@@ -58,6 +58,7 @@
       img {
         border-style: solid;
         border-width: 6px;
+        border-color: $color-black;
       }
     }
   }
@@ -66,6 +67,42 @@
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
+
+.bg-dark {
+
+  &.paragraphs-item-header-text-links-image {
+
+    .field.field-name-field-image.field-type-image {
+
+      img {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.bg-darker {
+
+  &.paragraphs-item-header-text-links-image {
+
+    .field.field-name-field-image.field-type-image {
+
+      img {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.bg-alternative {
+
+  &.paragraphs-item-header-text-links-image {
+
+    .field-name-field-paragraph-header {
+      color: #fff;
+    }
+  }
+}
 
 // --------------------------------------------------
 // Responsive
