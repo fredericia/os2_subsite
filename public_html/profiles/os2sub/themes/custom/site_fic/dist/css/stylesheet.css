@@ -11450,8 +11450,7 @@ h1.pane-title,
 .paragraphs-item-webform .field.field-name-field-paragraph-header {
   text-align: center;
   color: #01B5D5;
-  font-size: 3.125em;
-  text-transform: capitalize; }
+  font-size: 3.125em; }
 
 .node .field.field-name-field-afsnit.field-type-paragraphs > .field-items {
   margin-top: 60px; }
