@@ -77,7 +77,7 @@ function site_fic_preprocess_page(&$variables) {
   $variables['tabbed_navigation'] = _bellcom_generate_menu($primary_navigation_name, 'tabbed', 1);
 
   // Merge the secondary navigation into the primary
-  $variables['menu_slinky_custom'] = array_merge(_bellcom_generate_menu('main-menu', 'slinky', TRUE), $variables['menu_slinky_custom__secondary']);
+  $variables['menu_slinky_custom'] = array_merge(_bellcom_generate_menu('main-menu', 'slinky_custom', TRUE), $variables['menu_slinky_custom__secondary']);
 
   // Color.
   if (module_exists('color')) {
