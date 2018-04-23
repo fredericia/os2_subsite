@@ -14113,7 +14113,7 @@ body {
   height: 102%; }
 
 .node--os2web_base_news--os2sub_teaser_mini {
-  border: 10px solid #fff;
+  border: 10px solid #222222;
   position: relative;
   overflow: hidden; }
   .node--os2web_base_news--os2sub_teaser_mini .upper-part {
@@ -14152,7 +14152,7 @@ body {
     width: 100%;
     height: 100%;
     border: 10px #222222 dashed;
-    color: #fff;
+    color: #5C4B51;
     font-family: "RBNo21a-Medium", "Lato", sans-serif;
     font-size: 1.75em;
     text-decoration: none;
@@ -14180,7 +14180,7 @@ body {
       line-height: 80px;
       margin-bottom: 0; }
     .big-plus-wrapper a.big-plus-link:hover {
-      border-color: #fff; }
+      border-color: #222222; }
   .content-sidebar .big-plus-wrapper a.big-plus-link {
     color: #5C4B51; }
     .content-sidebar .big-plus-wrapper a.big-plus-link:hover {
@@ -14206,14 +14206,47 @@ body {
 .bg-dark .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3, .page-nyheder .main-container .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3, .bg-dark .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3, .page-nyheder .main-container .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3, .bg-dark .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok .bg-dark .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline, .page-nyheder .main-container .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok .page-nyheder .main-container .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline {
   color: #fff; }
 
+.bg-dark .node--os2web_base_news--os2sub_teaser_mini, .page-nyheder .main-container .node--os2web_base_news--os2sub_teaser_mini {
+  border-color: #fff; }
+
+.bg-dark .big-plus-wrapper a.big-plus-link, .page-nyheder .main-container .big-plus-wrapper a.big-plus-link {
+  border-color: #222222;
+  color: #fff; }
+  .bg-dark .big-plus-wrapper a.big-plus-link span.link.fa.fa-plus, .page-nyheder .main-container .big-plus-wrapper a.big-plus-link span.link.fa.fa-plus, .bg-dark .big-plus-wrapper a.big-plus-link span.link.fa-plus.icon, .page-nyheder .main-container .big-plus-wrapper a.big-plus-link span.link.fa-plus.icon, .bg-dark .big-plus-wrapper a.big-plus-link span.link.fa-plus.navigation-bar__toggle:after, .page-nyheder .main-container .big-plus-wrapper a.big-plus-link span.link.fa-plus.navigation-bar__toggle:after, .bg-dark .big-plus-wrapper a.big-plus-link .slinky-menu span.link.fa-plus.next:after, .slinky-menu .bg-dark .big-plus-wrapper a.big-plus-link span.link.fa-plus.next:after, .page-nyheder .main-container .big-plus-wrapper a.big-plus-link .slinky-menu span.link.fa-plus.next:after, .slinky-menu .page-nyheder .main-container .big-plus-wrapper a.big-plus-link span.link.fa-plus.next:after {
+    color: #01B5D5; }
+  .bg-dark .big-plus-wrapper a.big-plus-link:hover, .page-nyheder .main-container .big-plus-wrapper a.big-plus-link:hover {
+    border-color: #fff; }
+
 .bg-darker .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay-wrapper {
   border-color: #fff; }
 
 .bg-darker .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header h3, .bg-darker .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .heading-h3, .bg-darker .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok .kontaktblok-headline, .kontaktblok .bg-darker .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini header .kontaktblok-headline {
   color: #fff; }
 
+.bg-darker .node--os2web_base_news--os2sub_teaser_mini {
+  border-color: #fff; }
+
+.bg-darker .big-plus-wrapper a.big-plus-link {
+  border-color: #5C4B51;
+  color: #fff; }
+  .bg-darker .big-plus-wrapper a.big-plus-link span.link.fa.fa-plus, .bg-darker .big-plus-wrapper a.big-plus-link span.link.fa-plus.icon, .bg-darker .big-plus-wrapper a.big-plus-link span.link.fa-plus.navigation-bar__toggle:after, .bg-darker .big-plus-wrapper a.big-plus-link .slinky-menu span.link.fa-plus.next:after, .slinky-menu .bg-darker .big-plus-wrapper a.big-plus-link span.link.fa-plus.next:after {
+    color: #01B5D5; }
+  .bg-darker .big-plus-wrapper a.big-plus-link:hover {
+    border-color: #fff; }
+
 .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a, .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:hover, .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:hover, .bg-alternative .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .link.show-more a:focus {
   color: #ff4200; }
+
+.bg-alternative .node--os2web_base_news--os2sub_teaser_mini {
+  border-color: #fff; }
+
+.bg-alternative .big-plus-wrapper a.big-plus-link {
+  border-color: #fff;
+  color: #fff; }
+  .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa.fa-plus, .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa-plus.icon, .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa-plus.navigation-bar__toggle:after, .bg-alternative .big-plus-wrapper a.big-plus-link .slinky-menu span.link.fa-plus.next:after, .slinky-menu .bg-alternative .big-plus-wrapper a.big-plus-link span.link.fa-plus.next:after {
+    color: #ff4200; }
+  .bg-alternative .big-plus-wrapper a.big-plus-link:hover {
+    border-color: #fff; }
 
 @media (min-width: 992px) and (max-width: 1229px) {
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content,

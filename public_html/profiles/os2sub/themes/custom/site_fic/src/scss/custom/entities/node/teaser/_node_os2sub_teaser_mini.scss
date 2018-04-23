@@ -128,7 +128,7 @@ $image-border: 10px;
 }
 
 .node--os2web_base_news--os2sub_teaser_mini {
-  border: $image-border solid #fff;
+  border: $image-border solid $gray-darker;
   position: relative;
   overflow: hidden;
 
@@ -168,18 +168,18 @@ $image-border: 10px;
   }
 }
 
-.big-plus-wrapper{
+.big-plus-wrapper {
   position: relative;
   width: 100%;
   padding-top: 100%;
 
-  a.big-plus-link{
+  a.big-plus-link {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     border: 10px $gray-darker dashed;
-    color: #fff;
+    color: $text-color;
     font-family: $headings-font-family;
     font-size: 1.75em;
     text-decoration: none;
@@ -189,14 +189,14 @@ $image-border: 10px;
     flex-direction: column;
     text-transform: uppercase;
 
-    span.link.fa.fa-plus{
+    span.link.fa.fa-plus {
       color: $brand-primary;
       font-size: 2.75em;
       line-height: 80px;
       margin-bottom: 0;
     }
-    &:hover{
-      border-color: #fff;
+    &:hover {
+      border-color: $gray-darker;
     }
   }
 
@@ -205,12 +205,13 @@ $image-border: 10px;
     a.big-plus-link {
       color: $text-color;
 
-      &:hover{
+      &:hover {
         border-color: $gray-darker;
       }
     }
   }
 }
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
@@ -251,6 +252,26 @@ $image-border: 10px;
       }
     }
   }
+
+  .node--os2web_base_news--os2sub_teaser_mini {
+    border-color: #fff;
+  }
+
+  .big-plus-wrapper {
+
+    a.big-plus-link {
+      border-color: $gray-darker;
+      color: #fff;
+
+      span.link.fa.fa-plus {
+        color: $brand-primary;
+      }
+
+      &:hover {
+        border-color: #fff;
+      }
+    }
+  }
 }
 
 .bg-darker {
@@ -268,6 +289,26 @@ $image-border: 10px;
       }
     }
   }
+
+  .node--os2web_base_news--os2sub_teaser_mini {
+    border-color: #fff;
+  }
+
+  .big-plus-wrapper {
+
+    a.big-plus-link {
+      border-color: $text-color;
+      color: #fff;
+
+      span.link.fa.fa-plus {
+        color: $brand-primary;
+      }
+
+      &:hover {
+        border-color: #fff;
+      }
+    }
+  }
 }
 
 .bg-alternative {
@@ -281,6 +322,26 @@ $image-border: 10px;
         &, &:hover, &:hover, &:focus {
           color: $color-red;
         }
+      }
+    }
+  }
+
+  .node--os2web_base_news--os2sub_teaser_mini {
+    border-color: #fff;
+  }
+
+  .big-plus-wrapper {
+
+    a.big-plus-link {
+      border-color: #fff;
+      color: #fff;
+
+      span.link.fa.fa-plus {
+        color: $color-red;
+      }
+
+      &:hover {
+        border-color: #fff;
       }
     }
   }
