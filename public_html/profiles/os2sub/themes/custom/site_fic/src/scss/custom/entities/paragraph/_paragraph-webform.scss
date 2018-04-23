@@ -71,6 +71,23 @@
 // Variants
 // --------------------------------------------------
 
+.bg-alternative {
+
+  &.paragraphs-item-webform {
+
+    .field.field-name-field-paragraph-header {
+      color: $color-black;
+    }
+
+    .form-actions {
+
+      .webform-submit.form-submit {
+        @extend .btn-red;
+      }
+    }
+  }
+}
+
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
