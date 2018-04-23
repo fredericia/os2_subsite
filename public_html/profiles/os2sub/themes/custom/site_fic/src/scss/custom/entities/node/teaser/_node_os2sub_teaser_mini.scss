@@ -17,14 +17,14 @@ $image-border: 10px;
 .node--os2web_base_news--os2sub_teaser_mini {
   position: relative;
 
-  & .text-contraster{
+  & .text-contraster {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 150px;
     background: linear-gradient(to top, black, transparent);
   }
-  & .overlay{
+  & .overlay {
     position: absolute;
 
     opacity: 0;
@@ -47,12 +47,12 @@ $image-border: 10px;
       text-align: center;
       color: #fff;
 
-      .field-type-text-with-summary{
+      .field-type-text-with-summary {
         font-size: 1.2em;
         font-family: $font-rbn021a;
       }
 
-      a{
+      a {
         background-color: $color-red;
         font-family: $font-rbn021a;
         font-weight: normal;
@@ -64,9 +64,9 @@ $image-border: 10px;
         margin-top: 30px;
       }
 
-      div.link-show-more{
+      div.link-show-more {
 
-        a{
+        a {
           margin-top: 0;
         }
       }
@@ -77,13 +77,13 @@ $image-border: 10px;
       opacity: 1;
     }
   }
-  .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
+  .field.field-name-field-os2web-kulturnaut-date.field-type-datetime {
     font-size: 0.9em;
     color: $brand-secondary;
     text-transform: uppercase;
   }
-  header{
-    h2, h3{
+  header {
+    h2, h3 {
       margin-top: 0;
       text-transform: uppercase;
       font-size: 1.92em;
@@ -91,30 +91,31 @@ $image-border: 10px;
       line-height: 1em;
     }
   }
-  .field.field-name-field-os2web-kulturnaut-descrip.field-type-text-with-summary{
+  .field.field-name-field-os2web-kulturnaut-descrip.field-type-text-with-summary {
     line-height: 1.6em;
   }
 }
-// Teaser
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini{
 
-  .overlay-wrapper{
+// Teaser
+.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
+
+  .overlay-wrapper {
     border: 6px solid $gray-darker;
     position: relative;
     margin-bottom: 27px;
   }
-  header{
-    h3{
+  header {
+    h3 {
       margin-bottom: 15px;
       color: $color-dark-gray;
     }
   }
-  .link.show-more{
+  .link.show-more {
     margin-top: 10px;
-    a{
+    a {
       text-transform: uppercase;
       font-weight: bold;
-      &:active, &:hover, &:focus{
+      &:active, &:hover, &:focus {
         text-decoration: none;
         color: $gray-dark;
       }
@@ -132,11 +133,11 @@ $image-border: 10px;
   position: relative;
   overflow: hidden;
 
-  .upper-part{
+  .upper-part {
     position: absolute;
     top: 0;
     right: 0;
-    a{
+    a {
       display: block;
       background-color: $brand-secondary;
       color: #fff;
@@ -145,19 +146,19 @@ $image-border: 10px;
       font-weight: 800;
       text-transform: uppercase;
       padding: 10px;
-      &:active, &:hover, &:focus{
+      &:active, &:hover, &:focus {
         text-decoration: none;
         color: $gray-dark;
       }
     }
   }
-  .bottom-part{
+  .bottom-part {
     position: absolute;
     bottom: 0;
     margin-left: 20px;
     margin-right: 20px;
-    & header{
-      & h2{
+    & header {
+      & h2 {
         color: #fff;
       }
     }
@@ -218,13 +219,13 @@ $image-border: 10px;
 
 .view-os2sub-nyheder,
 .view-fic-artikler {
-  .views-row{
+  .views-row {
     margin-bottom: $grid-gutter-width;
   }
 
-  .se-flere{
+  .se-flere {
     border: $image-border dashed $gray-darker;
-    &:hover{
+    &:hover {
       border-color: #fff;
     }
   }
@@ -234,9 +235,6 @@ $image-border: 10px;
   margin-bottom: $grid-gutter-width;
 }
 
-
-
-
 .bg-dark {
 
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
@@ -245,9 +243,9 @@ $image-border: 10px;
       border-color: #fff;
     }
 
-    header{
+    header {
 
-      h3{
+      h3 {
         color: #fff;
       }
     }
@@ -282,9 +280,9 @@ $image-border: 10px;
       border-color: #fff;
     }
 
-    header{
+    header {
 
-      h3{
+      h3 {
         color: #fff;
       }
     }
@@ -315,9 +313,9 @@ $image-border: 10px;
 
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini {
 
-    .link.show-more{
+    .link.show-more {
 
-      a{
+      a {
 
         &, &:hover, &:hover, &:focus {
           color: $color-red;
@@ -347,36 +345,40 @@ $image-border: 10px;
   }
 }
 
-
 // --------------------------------------------------
 // Responsive
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@include media-breakpoint-up(xs) {
+}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(xs) {
+}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+}
 
 // Tablet - only
-@include media-breakpoint-only(sm) {}
+@include media-breakpoint-only(sm) {
+}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {}
+@include media-breakpoint-up(md) {
+}
 
 // Desktop - only
 @include media-breakpoint-only(md) {
 
-.node--os2web_kulturnaut_knactivity--os2sub_teaser_mini,
-.node--os2web_base_news--os2sub_teaser_mini {
-  & .overlay{
-    .overlay-content {
-      padding: 10px;
-      .field-type-text-with-summary{
-        font-size: 0.8em;
+  .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini,
+  .node--os2web_base_news--os2sub_teaser_mini {
+    & .overlay {
+      .overlay-content {
+        padding: 10px;
+        .field-type-text-with-summary {
+          font-size: 0.8em;
         }
       }
     }
@@ -384,20 +386,25 @@ $image-border: 10px;
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {}
+@include media-breakpoint-up(lg) {
+}
 
 // Print
-@media print {}
+@media print {
+}
 
 // Touch
-.touchevents {}
+.touchevents {
+}
 
 // No touch
-.no-touchevents {}
+.no-touchevents {
+}
 
 // --------------------------------------------------
 // Mixins
 // --------------------------------------------------
 
 // Page layout mixin
-@mixin content-mixin-inner() {}
+@mixin content-mixin-inner() {
+}
