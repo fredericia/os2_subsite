@@ -14266,12 +14266,12 @@ body {
     .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content,
     .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content {
       padding: 20px;
-      text-align: center;
-      color: #fff; }
+      text-align: center; }
       .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary,
       .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content .field-type-text-with-summary {
         font-size: 1.2em;
-        font-family: "RBNo21a-Medium", sans-serif; }
+        font-family: "RBNo21a-Medium", sans-serif;
+        color: #fff; }
       .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini .overlay .overlay-content a,
       .node--os2web_base_news--os2sub_teaser_mini .overlay .overlay-content a {
         background-color: #ff4200;

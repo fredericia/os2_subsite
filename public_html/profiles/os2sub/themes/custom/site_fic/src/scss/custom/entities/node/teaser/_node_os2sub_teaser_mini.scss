@@ -45,11 +45,11 @@ $image-border: 10px;
       padding: 20px;
 
       text-align: center;
-      color: #fff;
 
       .field-type-text-with-summary {
         font-size: 1.2em;
         font-family: $font-rbn021a;
+        color: #fff;
       }
 
       a {
@@ -72,16 +72,19 @@ $image-border: 10px;
       }
     }
   }
+
   &:hover {
     .overlay {
       opacity: 1;
     }
   }
+
   .field.field-name-field-os2web-kulturnaut-date.field-type-datetime {
     font-size: 0.9em;
     color: $brand-secondary;
     text-transform: uppercase;
   }
+
   header {
     h2, h3 {
       margin-top: 0;
@@ -91,6 +94,7 @@ $image-border: 10px;
       line-height: 1em;
     }
   }
+
   .field.field-name-field-os2web-kulturnaut-descrip.field-type-text-with-summary {
     line-height: 1.6em;
   }
