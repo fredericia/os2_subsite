@@ -11260,7 +11260,7 @@ h1.pane-title,
 
 .bg-darker {
   background-color: #192124;
-  padding-top: 90px;
+  padding-top: 60px;
   padding-bottom: 60px; }
   .bg-darker .field {
     color: #FFF;
@@ -11268,7 +11268,7 @@ h1.pane-title,
 
 .bg-dark, .page-nyheder .main-container {
   background-color: #2a2f36;
-  padding-top: 90px;
+  padding-top: 60px;
   padding-bottom: 60px; }
   .bg-dark .field, .page-nyheder .main-container .field {
     color: #FFF;
@@ -13572,7 +13572,7 @@ div.ctools-modal-content {
   -webkit-align-items: flex-end !important;
       -ms-flex-align: end !important;
           align-items: flex-end !important;
-  padding-bottom: 8px; }
+  padding-bottom: 6px; }
   .field-slideshow-wrapper .field-slideshow-controls .prev {
     margin-left: 6px !important; }
   .field-slideshow-wrapper .field-slideshow-controls .next {
