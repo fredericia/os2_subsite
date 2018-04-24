@@ -16,27 +16,29 @@
 // --------------------------------------------------
 .paragraphs-item-afsnit-m-galleri {
 
-  .field.field-name-field-paragraph-header {
-    margin-bottom: 0;
+  .photoswipe-gallery {
 
-    + .photoswipe-gallery {
-      margin-top: 30px;
-    }
-  }
+    .field-items {
+      @include make-row();
 
-  .field-items {
-    margin-top: -8px;
-    margin-bottom: -8px;
+      margin-top: -8px;
+      margin-bottom: -8px;
 
-    .field-item {
-      padding-top: 8px;
-      padding-bottom: 8px;
+      .field-item {
+        padding-top: 8px;
+        padding-bottom: 8px;
 
-      margin-bottom: 0;
+        @include make-xs-column(6);
+        @include make-sm-column(4);
+        margin-bottom: ($grid-gutter-width /2);
+
+        img {
+          border: $color-black solid 6px;
+        }
+      }
     }
   }
 }
-
 
 // --------------------------------------------------
 // Variants

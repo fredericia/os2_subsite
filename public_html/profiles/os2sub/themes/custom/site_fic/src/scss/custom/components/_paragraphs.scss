@@ -111,24 +111,6 @@
   }
 }
 
-.paragraphs-item-afsnit-m-galleri {
-
-  .field-items {
-    @include make-row();
-    margin-top: $grid-gutter-width;
-
-    .field-item {
-      @include make-xs-column(6);
-      @include make-sm-column(4);
-      margin-bottom: ($grid-gutter-width /2);
-
-      img {
-        border: $color-black solid 6px;
-      }
-    }
-  }
-}
-
 .view-fic-embed-files.view-display-id-instagram,
 .pane-instagram-billeder {
 
