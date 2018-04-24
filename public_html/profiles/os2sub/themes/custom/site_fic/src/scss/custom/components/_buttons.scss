@@ -14,15 +14,11 @@
 // Styling
 // --------------------------------------------------
 .btn {
+  font-family: $headings-font-family;
+  font-size: 26px;
   border: 5px solid $color-black;
-  font-family: $font-lato;
-  font-weight: 900;
-  font-size: 1.31em;
+
   text-transform: uppercase;
-  padding: 10px 20px;
-  width: auto;
-  height: auto;
-  border-radius: 0;
   outline: none;
 
   word-break: break-all;
