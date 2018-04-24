@@ -11573,6 +11573,7 @@ form.search-form .views-exposed-widgets {
     form.search-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
       -webkit-box-shadow: none;
               box-shadow: none;
+      font-size: 1.31em;
       padding: 10px !important;
       width: 60px !important;
       outline: none; }
