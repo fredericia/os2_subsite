@@ -11915,7 +11915,21 @@ section.block-locale {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .topnav-wrapper .nav > li > a {
-    padding: 10px 5px; } }
+    padding: 10px 5px; }
+  .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu {
+    min-width: 100px;
+    padding: 0; }
+    .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu ul {
+      padding: 0 !important;
+      margin: 0; }
+      .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu ul li + li {
+        border-top: 1px solid #eee; }
+    .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu a {
+      display: block;
+      padding: 8px 15px;
+      font-size: 14px !important; }
+      .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu a.active, .topnav-wrapper.user-nav .region.region-navigation section.block.block-locale.contextual-links-region.block-locale .dropdown-menu a.active:hover {
+        color: #01B5D5; } }
 
 @media (min-width: 992px) {
   .layout__content .pane-main-menu {
@@ -12665,6 +12679,8 @@ div.ctools-modal-content {
       display: block;
       padding: 8px 15px;
       font-size: 14px !important; }
+      .sidr .region-navigation .dropdown-menu a.active, .sidr .region-navigation .dropdown-menu a.active:hover {
+        color: #01B5D5; }
 
 @media screen and (max-width: 767px) {
   .sidr .region-navigation section.block-locale button.lang-buton .visible-xs {

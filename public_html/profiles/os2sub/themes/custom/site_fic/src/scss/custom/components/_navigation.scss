@@ -72,8 +72,8 @@ $navigation-bottom-border-color: $color-white;
     display: flex;
     position: relative;
     align-items: center;
-    section.block.block-locale.contextual-links-region.block-locale{
 
+    section.block.block-locale.contextual-links-region.block-locale{
 
       button.lang-buton{
         text-transform: uppercase;
@@ -235,6 +235,46 @@ $navigation-bottom-border-color: $color-white;
   .topnav-wrapper {
     .nav > li > a {
       padding: 10px 5px;
+    }
+  }
+
+
+  .topnav-wrapper.user-nav {
+
+    .region.region-navigation {
+
+      section.block.block-locale.contextual-links-region.block-locale {
+
+        .dropdown-menu {
+          min-width: 100px;
+
+          padding: 0;
+
+          ul {
+            padding: 0 !important;
+            margin: 0;
+
+            li + li {
+              border-top: 1px solid #eee;
+            }
+          }
+
+          a {
+            display: block;
+
+            padding: 8px 15px;
+
+            font-size: $font-size-base !important;
+
+            &.active {
+
+              &, &:hover {
+                color: $brand-primary;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

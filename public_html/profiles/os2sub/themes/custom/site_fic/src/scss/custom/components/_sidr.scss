@@ -114,6 +114,13 @@
         padding: 8px 15px;
 
         font-size: $font-size-base !important;
+
+        &.active {
+
+          &, &:hover {
+            color: $brand-primary;
+          }
+        }
       }
     }
   }
