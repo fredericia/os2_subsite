@@ -13713,6 +13713,9 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
+.pswp__bg {
+  background: rgba(0, 0, 0, 0.9); }
+
 .sidr-main-open {
   position: static !important; }
 
