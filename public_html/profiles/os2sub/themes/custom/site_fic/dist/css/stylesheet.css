@@ -12470,10 +12470,12 @@ div.ctools-modal-content {
   border: 0;
   width: 80%; }
   div.ctools-modal-content h1, div.ctools-modal-content .heading-h1, div.ctools-modal-content .banner .banner-wrapper .banner-headline, .banner .banner-wrapper div.ctools-modal-content .banner-headline {
-    font-size: 3.5em; }
+    font-size: 3.5em;
+    color: #01B5D5;
+    margin-bottom: 20px; }
     div.ctools-modal-content h1 a, div.ctools-modal-content .heading-h1 a, div.ctools-modal-content .banner .banner-wrapper .banner-headline a, .banner .banner-wrapper div.ctools-modal-content .banner-headline a {
       cursor: text;
-      color: #192124;
+      color: #01B5D5;
       text-decoration: none;
       outline: none; }
   div.ctools-modal-content .modal-content {
@@ -12483,6 +12485,7 @@ div.ctools-modal-content {
             box-shadow: none;
     border: 0; }
     div.ctools-modal-content .modal-content .field-name-body {
+      padding-top: 10px;
       font-weight: bold; }
   div.ctools-modal-content .popups-close {
     display: block;

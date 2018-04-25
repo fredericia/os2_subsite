@@ -33,10 +33,12 @@ div.ctools-modal-content {
 
   h1 {
     font-size: 3.5em;
+    color: $brand-primary;
+    margin-bottom: 20px;
 
     a {
       cursor: text;
-      color: $color-black;
+      color: $brand-primary;
       text-decoration: none;
       outline: none;
     }
@@ -49,6 +51,7 @@ div.ctools-modal-content {
     border: 0;
 
     .field-name-body {
+      padding-top: 10px;
       font-weight: bold;
     }
   }
