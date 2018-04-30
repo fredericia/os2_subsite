@@ -109,33 +109,16 @@
         </header>
       <?php endif; ?>
       <?php
-      if ($content['field_os2web_base_field_lead_img']): {
-        hide($content['field_os2web_base_field_lead_img']);
-      }
-      if ($content['field_os2web_base_field_photo']) {
-        hide($content['field_os2web_base_field_photo']);
-      }
-      if($content['field_os2web_base_field_image']) {
-        hide($content['field_os2web_base_field_image']);
-      }
-      if($content['field_os2web_kulturnaut_date']) {
-        hide($content['field_os2web_kulturnaut_date']);
-      }
-      if($content['field_os2web_kulturnaut_slidesho']) {
-        hide($content['field_os2web_kulturnaut_slidesho']);
-      }
-      if($content['field_sektion']) {
-        hide($content['field_sektion']);
-      }
-      if($content['comments']) {
-        hide($content['comments']);
-      }
-      if($content['links']) {
-        hide($content['links']);
-      }
-      if($content['field_tags']) {
-        hide($content['field_tags']);
-      }
+      hide($content['field_os2web_base_field_lead_img']);
+      hide($content['field_os2web_base_field_photo']);
+      hide($content['field_os2web_base_field_image']);
+      hide($content['field_os2web_kulturnaut_date']);
+      hide($content['field_os2web_kulturnaut_slidesho']);
+      hide($content['field_sektion']);
+      hide($content['comments']);
+      hide($content['links']);
+      hide($content['field_tags']);
+
       if (!empty($content['field_os2web_kulturnaut_descrip'])) {
         hide($content['field_os2web_kulturnaut_longdesc']);
       }
