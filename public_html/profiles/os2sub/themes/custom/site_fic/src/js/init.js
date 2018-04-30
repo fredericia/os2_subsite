@@ -41,15 +41,16 @@
     // Enable header
     header.init();
 
+    // Remove .nolink and .separator
+    $('.slinky-menu, .navigation-bar__dropup')
+        .find('.nolink, .separator')
+        .parent()
+        .remove();
+
     // Sidr
     $('.slinky-menu')
         .find('ul, li, a')
         .removeClass();
-
-    $('.slinky-menu')
-        .find('.nolink, .separator')
-        .parent()
-        .remove();
 
     $('.sidr__toggle').sidr({
         name: 'sidr-main',
