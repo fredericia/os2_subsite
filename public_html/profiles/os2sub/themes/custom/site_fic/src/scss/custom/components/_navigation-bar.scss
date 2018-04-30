@@ -35,6 +35,10 @@
   ul {
     @include list-unstyled;
 
+    .nolink {
+      display: none;
+    }
+
     a {
       font-family: $headings-font-family;
       font-size: 16px;
