@@ -61,19 +61,22 @@
 
     .page-header-wrapper {
 
-      &:before {
-        position: absolute;
+      .backstretch {
 
-        display: block;
-        content: "";
+        &:before {
+          position: absolute;
 
-        height: 30px;
+          display: block;
+          content: "";
 
-        right: 0;
-        left: 0;
-        bottom: 0;
+          height: 30px;
 
-        background-color: #fff;
+          right: 0;
+          left: 0;
+          bottom: 0;
+
+          background-color: #fff;
+        }
       }
     }
   }
