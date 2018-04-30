@@ -11834,6 +11834,7 @@ section.block-locale {
     .topnav-wrapper.user-nav .region.region-navigation .book-link {
       margin-left: 20px; }
       .topnav-wrapper.user-nav .region.region-navigation .book-link a {
+        font-size: 15px !important;
         padding: 2px 15px !important; }
         .topnav-wrapper.user-nav .region.region-navigation .book-link a:hover, .topnav-wrapper.user-nav .region.region-navigation .book-link a:active, .topnav-wrapper.user-nav .region.region-navigation .book-link a:focus {
           background-color: #01B5D5 !important;
@@ -15519,13 +15520,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link a,
   .view.view-fic-kommende-arrangementer.view-id-fic_kommende_arrangementer .more-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link a, .paragraphs-item-afsnit-m-link .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link a, .paragraphs-item-header-text-links-image .row .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-paragrph-address .field.field-name-field-knap-link a, .paragraphs-item-paragrph-address .field.field-name-field-knap-link .paragraphs-item-afsnit-m-billede a, .paragraphs-item-afsnit-m-billede .paragraphs-item-webform .form-actions .webform-submit.form-submit, .paragraphs-item-webform .form-actions .paragraphs-item-afsnit-m-billede .webform-submit.form-submit, .paragraphs-item-afsnit-m-billede .paragraphs-item-kolonner .field-name-field-knap-link a, .paragraphs-item-kolonner .field-name-field-knap-link .paragraphs-item-afsnit-m-billede a {
     height: auto;
-    padding: 15px 5px;
-    font-size: 1.625em;
+    padding: 9px 16px;
+    font-size: 1.875em;
     line-height: 1.3333333;
     border-radius: 0;
-    padding: 7px 5px;
-    font-family: "RBNo21a-Medium", "Lato", sans-serif;
-    font-size: 1.625em;
     border: 0;
     border-radius: 0; }
   .paragraphs-item-afsnit-m-billede .field.field-name-field-paragraph-header {

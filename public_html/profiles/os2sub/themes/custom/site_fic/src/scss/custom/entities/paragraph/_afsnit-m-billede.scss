@@ -41,11 +41,7 @@ $custom-input-height: (ceil($font-size-large * $line-height-large) + ($custom-pa
 
   .btn {
     height: auto;
-    @include button-size($custom-padding-large-vertical, 5px, 1.625em, $line-height-large, $btn-border-radius-large);
-    padding: 7px 5px;
-
-    font-family: $headings-font-family;
-    font-size: 1.625em;
+    @include button-size(9px, $padding-large-horizontal, 1.875em, $line-height-large, $btn-border-radius-large);
 
     border: 0;
     border-radius: 0;
