@@ -13575,7 +13575,7 @@ div.ctools-modal-content {
     width: 100% !important; } }
 
 @media (min-width: 1230px) {
-  .not-front .page-header-wrapper .backstretch:before {
+  .not-front.page-node .page-header-wrapper .backstretch:before {
     position: absolute;
     display: block;
     content: "";

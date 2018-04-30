@@ -57,7 +57,7 @@
 // Large desktop - and up
 @include media-breakpoint-up(lg) {
 
-  .not-front {
+  .not-front.page-node {
 
     .page-header-wrapper {
 
