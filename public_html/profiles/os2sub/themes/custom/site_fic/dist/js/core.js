@@ -4570,6 +4570,11 @@ var header = (function ($) {
         .find('ul, li, a')
         .removeClass();
 
+    $('.slinky-menu')
+        .find('.nolink, .separator')
+        .parent()
+        .remove();
+
     $('.sidr__toggle').sidr({
         name: 'sidr-main',
         side: 'left',

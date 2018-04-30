@@ -12624,6 +12624,9 @@ div.ctools-modal-content {
     font-size: 18px;
     content: "";
     color: #2a2f36; }
+  .slinky-menu .nolink,
+  .slinky-menu .separator {
+    display: none; }
 
 .sidr {
   z-index: 2000; }
