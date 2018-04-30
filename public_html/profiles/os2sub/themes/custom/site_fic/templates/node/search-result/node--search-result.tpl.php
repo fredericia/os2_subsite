@@ -105,6 +105,7 @@
       <?php endif; ?>
 
       <?php print render($content['field_os2web_base_field_summary']); ?>
+      <?php print render($content['field_os2web_kulturnaut_descrip']); ?>
 
       <a class='read-more' href="<?php print $node_url; ?>"><?php print t('Read more'); ?></a>
     </div>
