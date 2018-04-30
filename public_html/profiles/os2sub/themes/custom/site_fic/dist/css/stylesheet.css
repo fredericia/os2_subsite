@@ -15362,6 +15362,10 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .pane-menu-tree .menu ul a {
     font-size: 1.4em !important; }
 
+@media (max-width: 767px) {
+  .page-node .pane-menu-tree {
+    display: none !important; } }
+
 .pane-os2web-kulturnaut-events-lists-pane-activities-list-4-mini {
   padding-bottom: 85px;
   padding-top: 75px; }
