@@ -15353,6 +15353,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
 
 .pane-menu-tree .menu > li span,
 .pane-menu-tree .menu > li a {
+  display: block;
   padding-left: 15px;
   padding-right: 15px; }
 
