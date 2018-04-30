@@ -222,6 +222,10 @@ section.block-locale{
 // Tablet - and up
 @include media-breakpoint-up(sm) {
 
+  .not-front .page-header-wrapper {
+    background-image: none;
+  }
+
   .sticky {
     @include container-fixed();
     @include gradient-vertical(rgba($color-black,1), rgba($color-black,0), 0%, 100%);

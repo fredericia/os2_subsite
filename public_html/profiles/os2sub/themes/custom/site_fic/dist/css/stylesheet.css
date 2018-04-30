@@ -11675,6 +11675,8 @@ section.block-locale {
     display: inline-block; }
 
 @media (min-width: 768px) {
+  .not-front .page-header-wrapper {
+    background-image: none; }
   .sticky {
     margin-right: auto;
     margin-left: auto;
