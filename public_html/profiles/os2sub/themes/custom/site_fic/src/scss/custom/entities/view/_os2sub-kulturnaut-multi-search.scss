@@ -13,31 +13,31 @@
 // --------------------------------------------------
 // Styling
 // --------------------------------------------------
-.page-soeg h2.pane-title{
+.page-soeg h2.pane-title {
   color: $brand-primary;
 }
 
-.view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search{
-  .views-row{
+.view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search {
+  .views-row {
     margin-top: 35px;
     margin-bottom: 35px;
     .taxonomy-term,
-    article{
+    article {
       .field.field-name-field-os2web-base-field-image.field-type-image,
       .field.field-name-field-os2web-base-field-photo.field-type-image,
       .field.field-name-field-os2web-kulturnaut-slidesho.field-type-image,
-      .field.field-name-field-os2web-base-field-lead-img.field-type-image{
+      .field.field-name-field-os2web-base-field-lead-img.field-type-image {
         border: solid 6px $color-black;
         margin-top: 6px;
       }
     }
-    & *, header{
-      h2{
+    & *, header {
+      h2 {
         margin: 0;
 
-        a{
+        a {
           color: $color-dark-gray;
-          font-size: 2.375em;
+          font-size: 38px;
           font-family: $headings-font-family;
           text-transform: uppercase;
           font-weight: normal;
@@ -48,37 +48,39 @@
         }
       }
     }
-    .field.field-name-field-sektion.field-type-taxonomy-term-reference{
-      a{
+    .field.field-name-field-sektion.field-type-taxonomy-term-reference {
+      a {
         color: $brand-secondary;
         text-transform: uppercase;
         font-size: 1em;
         font-family: $font-open-sans;
         font-weight: bold;
       }
-      .field-item{
+      .field-item {
         display: inline;
         margin-right: 5px;
       }
     }
-    .field.field-name-field-os2web-kulturnaut-date.field-type-datetime{
+    .field.field-name-field-os2web-kulturnaut-date.field-type-datetime {
       text-transform: uppercase;
       font-family: $font-open-sans;
       font-weight: bold;
       color: #a18f81;
     }
-    a.read-more{
+    a.read-more {
       text-transform: uppercase;
       font-family: $font-lato;
       font-size: 1em;
       font-weight: bold;
     }
-    .top-part{
-      display: flex;
+    .top-part {
+      display: block;
 
-      span{
+      padding-top: 10px;
+
+      span {
         display: block;
-        &:after{
+        &:after {
           content: '\00a0|\00a0';
         }
       }
@@ -94,10 +96,33 @@
       justify-content: center;
       align-items: center;
       font-family: $headings-font-family;
-      &:before{
-        content:'+\00a0';
+      &:before {
+        content: '+\00a0';
         font-size: 2em;
         line-height: 0.8em;
+      }
+    }
+  }
+}
+
+// Mobile - only
+@include media-breakpoint-only(xs) {
+
+  .page-soeg h2.pane-title {
+    padding-bottom: 0;
+
+    font-size: 34px;
+  }
+
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search {
+    .views-row {
+      & *, header {
+        h2 {
+
+          a {
+            font-size: 34px;
+          }
+        }
       }
     }
   }

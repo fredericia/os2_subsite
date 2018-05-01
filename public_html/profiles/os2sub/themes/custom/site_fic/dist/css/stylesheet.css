@@ -11650,7 +11650,7 @@ section.block-locale {
   z-index: 1100; }
 
 .backstretched .region-header {
-  margin-top: 140px; }
+  margin-top: 120px; }
 
 .backstretched .header-container {
   padding-bottom: 0; }
@@ -11659,7 +11659,7 @@ section.block-locale {
   margin-top: 0; }
 
 .header-container {
-  padding-bottom: 140px; }
+  padding-bottom: 120px; }
 
 .pane-fic-artikler-panel-pane-1 .pane-content.paragraphs-container {
   margin-right: auto !important;
@@ -15185,7 +15185,7 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     margin: 0; }
     .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * .heading-h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header .heading-h2 a {
       color: #2a2f36;
-      font-size: 2.375em;
+      font-size: 38px;
       font-family: "RBNo21a-Medium", "Lato", sans-serif;
       text-transform: uppercase;
       font-weight: normal; }
@@ -15211,10 +15211,8 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     font-size: 1em;
     font-weight: bold; }
   .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .top-part {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
+    display: block;
+    padding-top: 10px; }
     .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .top-part span {
       display: block; }
       .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row .top-part span:after {
@@ -15239,6 +15237,13 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
     content: '+\00a0';
     font-size: 2em;
     line-height: 0.8em; }
+
+@media (max-width: 767px) {
+  .page-soeg h2.pane-title, .page-soeg .pane-title.heading-h2 {
+    padding-bottom: 0;
+    font-size: 34px; }
+  .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row * .heading-h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header h2 a, .view.view-id-os2sub_kulturnaut_multi_search.view-display-id-pane_activities_multi_search .views-row header .heading-h2 a {
+    font-size: 34px; } }
 
 .paragraphs-item-fic-list-of-event-teasers .more-link a,
 .views-container.full-width.pane-fic-kommende-arrangementer-panel-pane-1 .more-link a,
