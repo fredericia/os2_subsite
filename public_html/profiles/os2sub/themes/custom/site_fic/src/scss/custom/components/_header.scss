@@ -214,7 +214,15 @@ section.block-locale{
 @include media-breakpoint-up(xs) {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {}
+@include media-breakpoint-only(xs) {
+
+  .header-container {
+
+    .page-node & {
+      padding-bottom: 30px;
+    }
+  }
+}
 
 // Tablet - and up
 @include media-breakpoint-up(sm) {

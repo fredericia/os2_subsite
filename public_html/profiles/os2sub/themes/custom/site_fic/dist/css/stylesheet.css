@@ -11675,6 +11675,10 @@ section.block-locale {
   .sidr-open .sidr__toggle .fa-times {
     display: inline-block; }
 
+@media (max-width: 767px) {
+  .page-node .header-container {
+    padding-bottom: 30px; } }
+
 @media (min-width: 768px) {
   .not-front .page-header-wrapper {
     background-image: none; }
