@@ -216,6 +216,16 @@ section.block-locale{
 // Mobile - only
 @include media-breakpoint-only(xs) {
 
+  .not-front .page-header-wrapper {
+    background-color: transparent;
+    background-image: linear-gradient(
+                    to bottom,
+                    rgba($color-black, .6) 10%,
+                    rgba($color-black, .4) 50%,
+                    transparent 100%
+    );
+  }
+
   .header-container {
 
     .page-node & {
