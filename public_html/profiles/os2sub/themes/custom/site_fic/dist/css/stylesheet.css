@@ -13638,23 +13638,28 @@ div.ctools-modal-content {
     position: absolute;
     bottom: 14px;
     right: 10px;
-    content: "";
+    content: "";
     font-size: 20px;
     color: #fff; }
   .visible .navigation-bar__toggle:after {
+    content: ""; }
+  .page-taxonomy-term .navigation-bar__toggle:after {
+    content: ""; }
+  .page-taxonomy-term .visible .navigation-bar__toggle:after {
     content: ""; }
 
 .navigation-bar__dropup {
   position: absolute;
   z-index: 1000;
   display: none;
-  overflow-y: scroll;
-  max-height: 195px;
+  top: 100%;
   left: 0;
   right: 0;
-  bottom: 100%;
   background-color: #192124; }
-  .page-taxonomy .navigation-bar__dropup {
+  .page-taxonomy-term .navigation-bar__dropup {
+    top: auto;
+    bottom: 100%;
+    overflow-y: scroll;
     max-height: 410px; }
   .visible .navigation-bar__dropup {
     display: block; }

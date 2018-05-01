@@ -84,13 +84,21 @@
     bottom: 14px;
     right: 10px;
 
-    content: $fa-var-angle-up;
+    content: $fa-var-angle-down;
 
     font-size: 20px;
     color: #fff;
   }
 
   .visible &:after {
+    content: $fa-var-angle-up;
+  }
+
+  .page-taxonomy-term &:after {
+    content: $fa-var-angle-up;
+  }
+
+  .page-taxonomy-term .visible &:after {
     content: $fa-var-angle-down;
   }
 }
@@ -102,17 +110,18 @@
 
   display: none;
 
-  overflow-y: scroll;
-
-  max-height: 195px;
-
+  top: 100%;
   left: 0;
   right: 0;
-  bottom: 100%;
 
   background-color: $color-black;
 
-  .page-taxonomy & {
+  .page-taxonomy-term & {
+    top: auto;
+    bottom: 100%;
+
+    overflow-y: scroll;
+
     max-height: 410px;
   }
 
