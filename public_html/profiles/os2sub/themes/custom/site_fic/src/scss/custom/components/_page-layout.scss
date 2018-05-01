@@ -38,7 +38,7 @@ $md-page-layout-content-inner-padding-bottom: 60px;
 }
 
 .breadcrumb-wrapper {
-  padding: 20px 0;
+  padding: 15px 0;
 
   .breadcrumb {
     margin-bottom: 0;
@@ -210,6 +210,10 @@ span {
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
+
+  .breadcrumb-wrapper {
+    padding: 5px 0;
+  }
 
   // Page layout
   .os2-sectiont {

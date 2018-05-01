@@ -11128,7 +11128,7 @@ a.icon-after .glyphicon {
     color: #ff4200; }
 
 .breadcrumb-wrapper {
-  padding: 20px 0; }
+  padding: 15px 0; }
   .breadcrumb-wrapper .breadcrumb {
     margin-bottom: 0; }
 
@@ -11236,6 +11236,8 @@ h1.pane-title,
   margin-bottom: 0; }
 
 @media (max-width: 767px) {
+  .breadcrumb-wrapper {
+    padding: 5px 0; }
   .os2-sectiont .col-sm-3 {
     margin: 40px 0; } }
 
