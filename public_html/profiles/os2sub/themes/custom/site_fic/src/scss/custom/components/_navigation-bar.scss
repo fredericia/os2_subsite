@@ -112,6 +112,10 @@
 
   background-color: $color-black;
 
+  .page-taxonomy & {
+    max-height: 410px;
+  }
+
   .visible & {
     display: block;
   }

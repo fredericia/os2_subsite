@@ -13643,6 +13643,8 @@ div.ctools-modal-content {
   right: 0;
   bottom: 100%;
   background-color: #192124; }
+  .page-taxonomy .navigation-bar__dropup {
+    max-height: 410px; }
   .visible .navigation-bar__dropup {
     display: block; }
   .navigation-bar__dropup ul > li {
