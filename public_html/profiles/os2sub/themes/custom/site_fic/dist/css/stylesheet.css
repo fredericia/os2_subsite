@@ -11127,8 +11127,10 @@ a.icon-after .glyphicon {
   .breadcrumb .active {
     color: #ff4200; }
 
-.page-node.backstretched .breadcrumb-wrapper {
-  margin-top: 30px; }
+.breadcrumb-wrapper {
+  padding: 20px 0; }
+  .breadcrumb-wrapper .breadcrumb {
+    margin-bottom: 0; }
 
 .search-and-title {
   padding-top: 0; }
@@ -11628,9 +11630,6 @@ section.block-locale {
 .headerwrapper-inner {
   height: 60px;
   margin-bottom: 0; }
-
-.page-nyheder .header-container .row .breadcrumb-wrapper {
-  margin-top: -70px; }
 
 .page-nyheder .header-container h1, .page-nyheder .header-container .heading-h1, .page-nyheder .header-container .banner .banner-wrapper .banner-headline, .banner .banner-wrapper .page-nyheder .header-container .banner-headline {
   margin-top: 0;

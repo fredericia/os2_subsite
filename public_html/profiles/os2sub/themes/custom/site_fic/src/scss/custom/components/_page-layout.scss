@@ -36,9 +36,12 @@ $md-page-layout-content-inner-padding-bottom: 60px;
     color: $brand-secondary;
   }
 }
+
 .breadcrumb-wrapper {
-  .page-node.backstretched & {
-    margin-top: 30px;
+  padding: 20px 0;
+
+  .breadcrumb {
+    margin-bottom: 0;
   }
 }
 
