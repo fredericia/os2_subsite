@@ -59,6 +59,14 @@
       .field-item {
         display: inline;
         margin-right: 5px;
+
+        + .field-item:before {
+          // [converter] Workaround for https://github.com/sass/libsass/issues/1115
+          $nbsp: "\00a0";
+          content: "-#{$nbsp}"; // Unicode space added since inline-block means non-collapsing white-space
+          padding: 0 5px;
+          color: $brand-secondary;
+        }
       }
     }
     .field.field-name-field-os2web-kulturnaut-date.field-type-datetime {
