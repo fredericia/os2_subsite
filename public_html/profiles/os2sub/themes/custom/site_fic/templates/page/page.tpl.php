@@ -5,7 +5,7 @@
     <aside class="sidr-source-provider">
 
       <?php if ( $logo ): ?>
-          <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+          <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>">
               <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
           </a>
       <?php endif; ?>
