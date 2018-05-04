@@ -11677,6 +11677,7 @@ section.block-locale {
 
 @media (max-width: 767px) {
   .not-front .page-header-wrapper {
+    padding-bottom: 15px;
     background-color: transparent;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(25, 33, 36, 0.6)), color-stop(50%, rgba(25, 33, 36, 0.4)), to(transparent));
     background-image: -webkit-linear-gradient(top, rgba(25, 33, 36, 0.6) 10%, rgba(25, 33, 36, 0.4) 50%, transparent 100%);
