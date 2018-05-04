@@ -36,8 +36,8 @@
             <div class="row hidden-xs">
                 <div class="logo-wrapper col-sm-2 col-md-3 col-lg-4">
                   <?php if ( $logo ): ?>
-                      <a class="logo" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-                          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+                      <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>">
+                          <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>"/>
                       </a>
                   <?php endif; ?>
 
