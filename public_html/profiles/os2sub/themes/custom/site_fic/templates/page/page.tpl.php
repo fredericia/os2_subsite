@@ -6,7 +6,7 @@
 
       <?php if ( $logo ): ?>
           <a class="logo" href="<?php print $front_page; ?>" title="<?php print $site_name; ?>">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+              <img src="<?php print $logo; ?>" alt="<?php print $site_name; ?>"/>
           </a>
       <?php endif; ?>
 

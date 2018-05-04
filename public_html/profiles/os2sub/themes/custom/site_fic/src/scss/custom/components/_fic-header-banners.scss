@@ -388,10 +388,47 @@ $lg-pager-spacing: 30px;
 // Mobile - only
 @include media-breakpoint-only(xs) {
 
+  .not-front {
+
+    .header-container {
+      padding-bottom: 0;
+    }
+
+    .backstretch {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      height: auto !important;
+      width: auto !important;
+    }
+
+    .scroll-down-wrapper {
+      display: none;
+    }
+
+    .term-fic-header {
+
+      .slide-content-wrapper {
+        margin: 0 !important;
+
+        .field-name-description-field,
+        .field-name-field-os2web-base-field-summary {
+          display: flex;
+
+          align-items: center;
+
+          min-height: 160px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
   .term-fic-header {
 
     .slide-content-wrapper {
-      padding-bottom: (10px * 2); // To resolve the overhead margin-bottom made by .responsive-header
 
       .field-name-description-field,
       .field-name-field-os2web-base-field-summary {

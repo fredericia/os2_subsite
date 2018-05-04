@@ -13271,12 +13271,35 @@ div.ctools-modal-content {
     padding-right: 2.5px !important; }
 
 @media (max-width: 767px) {
-  .term-fic-header .slide-content-wrapper {
-    padding-bottom: 20px; }
-    .term-fic-header .slide-content-wrapper .field-name-description-field,
-    .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-summary {
-      font-size: 2.5em;
-      line-height: 1em; }
+  .not-front .header-container {
+    padding-bottom: 0; }
+  .not-front .backstretch {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: auto !important;
+    width: auto !important; }
+  .not-front .scroll-down-wrapper {
+    display: none; }
+  .not-front .term-fic-header .slide-content-wrapper {
+    margin: 0 !important; }
+    .not-front .term-fic-header .slide-content-wrapper .field-name-description-field,
+    .not-front .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-summary {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      min-height: 160px;
+      margin-bottom: 0; }
+  .term-fic-header .slide-content-wrapper .field-name-description-field,
+  .term-fic-header .slide-content-wrapper .field-name-field-os2web-base-field-summary {
+    font-size: 2.5em;
+    line-height: 1em; }
   .term-fic-header .cycle-slideshow-wrapper,
   .term-fic-header .views_slideshow_main {
     height: 160px !important; }
