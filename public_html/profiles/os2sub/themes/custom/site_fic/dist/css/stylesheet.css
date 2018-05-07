@@ -13272,7 +13272,8 @@ div.ctools-modal-content {
 
 @media (max-width: 767px) {
   .not-front .header-container {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    min-height: 115px; }
   .not-front .backstretch {
     top: 0;
     bottom: 0;
