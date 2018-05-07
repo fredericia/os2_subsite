@@ -1,0 +1,16 @@
+name = "Schema.org: Organization"
+description = "Adds Schema.org/Organization to the JSON LD array."
+package = SEO
+core = 7.x
+dependencies[] = schema_metatag
+
+files[] = src/SchemaOrganizationType.php
+files[] = src/SchemaOrganizationPotentialAction.php
+files[] = tests/SchemaMetatagOrganizationTest.test
+
+; Information added by Drupal.org packaging script on 2018-03-24
+version = "7.x-1.1"
+core = "7.x"
+project = "schema_metatag"
+datestamp = "1521896288"
+

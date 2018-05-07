@@ -1,0 +1,15 @@
+name = Schema Meta Tag Test
+description = Helper module for testing schema_metatag.module.
+core = 7.x
+
+; Don't show this on the modules admin page.
+hidden = TRUE
+
+dependencies[] = schema_metatag:schema_metatag
+
+; Information added by Drupal.org packaging script on 2018-03-24
+version = "7.x-1.1"
+core = "7.x"
+project = "schema_metatag"
+datestamp = "1521896288"
+

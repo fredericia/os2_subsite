@@ -1,0 +1,15 @@
+name = "Schema.org Recipe"
+description = "Adds Schema.org/Recipe to the JSON LD array. Creates Recipe."
+package = SEO
+core = 7.x
+dependencies[] = schema_metatag
+
+files[] = src/SchemaRecipeType.php
+files[] = tests/SchemaMetatagRecipeTest.test
+
+; Information added by Drupal.org packaging script on 2018-03-24
+version = "7.x-1.1"
+core = "7.x"
+project = "schema_metatag"
+datestamp = "1521896288"
+
