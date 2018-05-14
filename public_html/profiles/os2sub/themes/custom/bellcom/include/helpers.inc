@@ -81,6 +81,8 @@ function _bellcom_collect_theme_settings() {
   // Contact information
   $settings['layout']['branding_show'] = theme_get_setting('branding_show');
   $settings['layout']['branding_text'] = theme_get_setting('branding_text');
+  $settings['siteimprove']['siteimprove_use'] = theme_get_setting('siteimprove_use');
+  $settings['siteimprove']['siteimprove_code'] = theme_get_setting('siteimprove_code');
 
   // Contact information
   $settings['contact_information']['site_owner_name'] = theme_get_setting('site_owner_name');
