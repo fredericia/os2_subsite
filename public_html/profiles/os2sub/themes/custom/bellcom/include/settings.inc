@@ -65,6 +65,31 @@ function _theme_settings_form(&$form, $form_state) {
     '#description' => t("Skal links til sociale tjenester vises i bunden af siden?"),
   );
 
+  // Siteimprove
+  $form['options']['layout']['siteimprove'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Siteimprove'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['options']['layout']['siteimprove']['siteimprove_use'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Brug Siteimprove'),
+    '#default_value' => theme_get_setting('siteimprove_use'),
+  );
+
+  $form['options']['layout']['siteimprove']['siteimprove_code'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Siteimprove Kode'),
+    '#default_value' => theme_get_setting('siteimprove_code'),
+    '#description' => t("Find koden her: siteimproveanalytics.com/js/siteanalyze_XXXXX <- koden er der der står istedet for XXXXXX"),
+    '#states'        => array(
+      'visible' => array(
+        ':input[name="siteimprove_use"]' => array('checked' => TRUE),
+      ),
+    ),
+  );
+
   /*
   |--------------------------------------------------------------------------
   | Contact information
