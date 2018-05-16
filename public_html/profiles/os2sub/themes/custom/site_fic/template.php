@@ -43,7 +43,6 @@ function site_fic_preprocess_html(&$variables) {
   }
   $slide_reset_timout = variable_get('slide_reset_timout', 2000);
   drupal_add_js(array('slideResetTimeout' => $slide_reset_timout), 'setting');
-
 }
 
 /**

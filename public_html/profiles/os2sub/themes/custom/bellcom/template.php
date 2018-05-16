@@ -13,6 +13,9 @@ function bellcom_preprocess_html(&$variables) {
   $variables['path_img']  = base_path() . drupal_get_path('theme', $current_theme) . '/dist/img';
   $variables['path_css']  = base_path() . drupal_get_path('theme', $current_theme) . '/dist/css';
   $variables['path_font'] = base_path() . drupal_get_path('theme', $current_theme) . '/dist/font';
+
+  // Theme settings
+  $variables['theme_settings'] = _bellcom_collect_theme_settings();
 }
 
 /*
