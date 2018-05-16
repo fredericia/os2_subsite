@@ -49,6 +49,8 @@
 <?php print $page; ?>
 <?php print $page_bottom; ?>
 
+<?php print $scripts; ?>
+
 <?php if ($theme_settings['siteimprove']['siteimprove_use']): ?>
   <script type="text/javascript">
       /*<![CDATA[*/
