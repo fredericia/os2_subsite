@@ -488,7 +488,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_news_tabs';
   $field_group->data = array(
     'label' => 'Indstillinger',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_os2web_news_page_archive',
       1 => 'field_svendborg_hide_sidebar',
@@ -580,7 +580,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_news_tabs';
   $field_group->data = array(
     'label' => 'Emneord',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_os2web_base_field_edi_tags',
       1 => 'field_os2web_base_field_loca_ref',
@@ -651,6 +651,7 @@ function os2web_base_field_group_info() {
       4 => 'group_os2web_news_group_media',
       5 => 'group_relationer',
       6 => 'group_spotbokse',
+      7 => 'group_paragraphs',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -690,6 +691,33 @@ function os2web_base_field_group_info() {
     ),
   );
   $field_groups['group_os2web_news_group_media|node|os2web_base_news|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_paragraphs|node|os2web_base_news|form';
+  $field_group->group_name = 'group_paragraphs';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'os2web_base_news';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_os2web_base_news_tabs';
+  $field_group->data = array(
+    'label' => 'Afsnit (indhold)',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_afsnit',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-paragraphs field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_paragraphs|node|os2web_base_news|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -761,7 +789,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_news_tabs';
   $field_group->data = array(
     'label' => 'Relationer',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'field_os2web_base_field_ext_link',
       1 => 'field_os2web_base_field_related',
@@ -848,7 +876,7 @@ function os2web_base_field_group_info() {
   $field_group->parent_name = 'group_os2web_base_news_tabs';
   $field_group->data = array(
     'label' => 'Spotbokse',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_os2web_base_field_spotbox',
     ),

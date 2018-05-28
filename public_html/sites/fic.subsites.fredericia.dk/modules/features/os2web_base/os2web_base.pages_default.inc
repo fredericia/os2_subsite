@@ -304,7 +304,7 @@ function os2web_base_default_page_manager_handlers() {
     'formatter_settings' => array(
       'image_style' => 'os2sub_banner',
       'image_link' => '',
-      'slideshow_image_style' => 'os2sub_banner',
+      'slideshow_image_style' => 'os2sub_normal_imagesize',
       'slideshow_link' => '',
       'slideshow_caption' => '',
       'slideshow_caption_link' => '',
@@ -319,8 +319,8 @@ function os2web_base_default_page_manager_handlers() {
       'slideshow_start_on_hover' => 0,
       'slideshow_pager' => '',
       'slideshow_pager_position' => 'after',
-      'slideshow_pager_image_style' => '',
-      'slideshow_carousel_image_style' => '',
+      'slideshow_pager_image_style' => 'os2sub_normal_imagesize',
+      'slideshow_carousel_image_style' => 'os2sub_normal_imagesize',
       'slideshow_carousel_visible' => '3',
       'slideshow_carousel_scroll' => '1',
       'slideshow_carousel_speed' => '500',
@@ -582,7 +582,7 @@ function os2web_base_default_page_manager_handlers() {
       'nid' => '%node:nid',
     ),
     'exposed' => array(
-      'promote' => '1',
+      'field_sektion_tid' => '14',
     ),
     'override_title' => 1,
     'override_title_text' => 'Flere nyheder',
@@ -1048,7 +1048,7 @@ function os2web_base_default_page_manager_handlers() {
   $pane->panel = 'light_section_1';
   $pane->type = 'views_panes';
   $pane->subtype = 'fic_kommende_arrangementer-panel_pane_1';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'more_link' => 1,
@@ -1080,7 +1080,7 @@ function os2web_base_default_page_manager_handlers() {
   $pane->panel = 'light_section_1';
   $pane->type = 'views_panes';
   $pane->subtype = 'fic_artikler-panel_pane_1';
-  $pane->shown = TRUE;
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
     'arguments' => array(

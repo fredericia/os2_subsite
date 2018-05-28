@@ -1203,13 +1203,13 @@ function os2web_base_strongarm() {
     'name' => 'Dk',
     'native' => 'Dk',
     'direction' => '0',
-    'enabled' => '1',
+    'enabled' => 1,
     'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => '',
     'weight' => '0',
-    'javascript' => 'odEKhrnWowl7UpMiTC4c2N-b5bPvsL4hUQ840gQG_i8',
+    'javascript' => '6-quAoy9bAniAQPTl3MzmcyAsS0kL4wQ0u2WtNfkqPc',
   );
   $export['language_default'] = $strongarm;
 
@@ -1628,6 +1628,27 @@ function os2web_base_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_os2web_base_news_da_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_os2web_base_news_da_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_os2web_base_news_en_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_os2web_base_news_en_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_os2web_base_news_und_pattern';
+  $strongarm->value = '';
+  $export['pathauto_node_os2web_base_news_und_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_webform_pattern';
   $strongarm->value = '';
   $export['pathauto_node_webform_pattern'] = $strongarm;
@@ -1722,6 +1743,26 @@ function os2web_base_strongarm() {
   $strongarm->name = 'transliteration_file_uploads';
   $strongarm->value = 1;
   $export['transliteration_file_uploads'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_os2web_base_contentpage';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_os2web_base_contentpage'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_os2web_base_news';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.5',
+  );
+  $export['xmlsitemap_settings_node_os2web_base_news'] = $strongarm;
 
   return $export;
 }

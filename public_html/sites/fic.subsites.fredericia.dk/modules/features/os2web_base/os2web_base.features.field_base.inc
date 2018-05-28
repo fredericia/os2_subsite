@@ -1332,7 +1332,7 @@ function os2web_base_field_default_field_bases() {
         'bg-dark' => 'Dark',
         'bg-darker' => 'Darker',
         'bg-alternative' => 'Alternative',
-        'no-bg' => 'Ingen',
+        'no-bg' => 'White - no space',
       ),
       'allowed_values_function' => '',
       'entity_translation_sync' => FALSE,
@@ -1523,32 +1523,6 @@ function os2web_base_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_promoted'.
-  $field_bases['field_promoted'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_promoted',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => '',
-        1 => '',
-      ),
-      'allowed_values_function' => '',
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_section_id'.
