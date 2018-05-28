@@ -142,6 +142,7 @@ features[variable][] = scheduler_unpublish_enable_os2web_kulturnaut_knactivity
 features[variable][] = scheduler_unpublish_required_os2web_kulturnaut_knactivity
 features[variable][] = scheduler_unpublish_revision_os2web_kulturnaut_knactivity
 features[variable][] = scheduler_use_vertical_tabs_os2web_kulturnaut_knactivity
+features[variable][] = xmlsitemap_settings_node_os2web_kulturnaut_knactivity
 features[views_view][] = os2sub_venues
 features[views_view][] = os2web_kulturnaut_events_lists
 features[views_view][] = os2web_taxonomies_tax_editor_tag_list

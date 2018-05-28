@@ -386,8 +386,11 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       ),
       'search_result' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 150,
+        ),
+        'type' => 'text_trimmed',
         'weight' => 4,
       ),
       'spotbox' => array(
@@ -1337,11 +1340,13 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       'entity_translation_sync' => FALSE,
       'epsacrop' => array(
         'styles' => array(
+          'fic_square' => 0,
+          'fic_wide' => 0,
           'os2sub_220x130' => 0,
           'os2sub_300x175' => 0,
-          'os2sub_banner' => 'os2sub_banner',
-          'os2sub_normal_imagesize' => 0,
-          'os2sub_page_slideshow' => 0,
+          'os2sub_banner' => 0,
+          'os2sub_normal_imagesize' => 'os2sub_normal_imagesize',
+          'os2sub_teaser_mini_image' => 0,
           'os2web_spotbox_image' => 0,
         ),
       ),
@@ -1358,6 +1363,8 @@ function os2web_kulturnaut_events_field_default_field_instances() {
       'module' => 'media',
       'settings' => array(
         'allowed_schemes' => array(
+          'instagram' => 0,
+          'oembed' => 0,
           'public' => 'public',
           'youtube' => 0,
         ),
@@ -1365,6 +1372,7 @@ function os2web_kulturnaut_events_field_default_field_instances() {
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
+          'instagram' => 0,
           'video' => 0,
         ),
         'browser_plugins' => array(

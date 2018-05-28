@@ -16,24 +16,10 @@ function os2web_kulturnaut_events_metatag_export_default() {
     'disabled' => FALSE,
     'config' => array(
       'description' => array(
-        'value' => '[node:field_os2web_kulturnaut_date] [node:field_os2web_kulturnaut_descrip] [node:field_os2web_kulturnaut_longdesc]',
+        'value' => '[node:field_os2web_kulturnaut_descrip]',
       ),
       'abstract' => array(
         'value' => '[node:summary]',
-      ),
-      'robots' => array(
-        'value' => array(
-          'index' => 'index',
-          'follow' => 'follow',
-          'noindex' => 0,
-          'nofollow' => 0,
-          'noarchive' => 0,
-          'nosnippet' => 0,
-          'noodp' => 0,
-          'noydir' => 0,
-          'noimageindex' => 0,
-          'notranslate' => 0,
-        ),
       ),
       'news_keywords' => array(
         'value' => '[node:field_os2web_base_field_edi_tags]',

@@ -94,7 +94,7 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => 0,
     'formatter_settings' => array(
-      'slideshow_image_style' => 'os2sub_banner',
+      'slideshow_image_style' => 'os2sub_normal_imagesize',
       'slideshow_link' => '',
       'slideshow_caption' => '',
       'slideshow_caption_link' => '',
@@ -109,9 +109,9 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
       'slideshow_start_on_hover' => 0,
       'slideshow_pager' => '',
       'slideshow_pager_position' => 'after',
-      'slideshow_pager_image_style' => '',
-      'slideshow_carousel_image_style' => '',
-      'slideshow_carousel_visible' => '3',
+      'slideshow_pager_image_style' => 'os2sub_normal_imagesize',
+      'slideshow_carousel_image_style' => 'os2sub_normal_imagesize',
+      'slideshow_carousel_visible' => '1',
       'slideshow_carousel_scroll' => '1',
       'slideshow_carousel_speed' => '500',
       'slideshow_carousel_vertical' => 0,
@@ -242,7 +242,8 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
     'override_title' => 0,
     'override_title_text' => 'Kommende arrangementer',
     'override_title_heading' => 'h2',
-    'path' => 'fic-kommende-arrangementer',
+    'path' => 'kalender',
+    'link_to_view' => 0,
   );
   $pane->cache = array();
   $pane->style = array(
@@ -552,6 +553,35 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   $display->content['new-491d03a7-8c76-46af-b6f3-c5dbb52bcfae'] = $pane;
   $display->panels['sidebar'][8] = 'new-491d03a7-8c76-46af-b6f3-c5dbb52bcfae';
   $pane = new stdClass();
+  $pane->pid = 'new-ae1017ab-9b7c-4bfa-8193-e7db4e8c8a00';
+  $pane->panel = 'sidebar';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'fic_fields_on_nodes-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'fields_override' => array(
+      'field_os2web_kulturnaut_url' => 1,
+    ),
+    'context' => array(
+      0 => 'argument_entity_id:node_1',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 9;
+  $pane->locks = array();
+  $pane->uuid = 'ae1017ab-9b7c-4bfa-8193-e7db4e8c8a00';
+  $display->content['new-ae1017ab-9b7c-4bfa-8193-e7db4e8c8a00'] = $pane;
+  $display->panels['sidebar'][9] = 'new-ae1017ab-9b7c-4bfa-8193-e7db4e8c8a00';
+  $pane = new stdClass();
   $pane->pid = 'new-6286e3b1-2010-4fa7-89bd-cd8c25dee868';
   $pane->panel = 'sidebar';
   $pane->type = 'block';
@@ -569,11 +599,11 @@ function os2web_kulturnaut_events_default_page_manager_handlers() {
   );
   $pane->css = '';
   $pane->extras = array();
-  $pane->position = 9;
+  $pane->position = 10;
   $pane->locks = array();
   $pane->uuid = '6286e3b1-2010-4fa7-89bd-cd8c25dee868';
   $display->content['new-6286e3b1-2010-4fa7-89bd-cd8c25dee868'] = $pane;
-  $display->panels['sidebar'][9] = 'new-6286e3b1-2010-4fa7-89bd-cd8c25dee868';
+  $display->panels['sidebar'][10] = 'new-6286e3b1-2010-4fa7-89bd-cd8c25dee868';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
