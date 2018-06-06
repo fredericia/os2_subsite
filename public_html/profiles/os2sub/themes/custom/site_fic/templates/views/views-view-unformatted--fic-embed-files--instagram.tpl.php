@@ -1,4 +1,10 @@
 <?php
+$instagram_url = 'https://www.instagram.com/fredericiaidraetscenter/';
+
+if (strpos($_SERVER['SERVER_NAME'], 'madsbyparken') !== FALSE) {
+  $instagram_url = 'https://www.instagram.com/madsbyparken/';
+}
+
 /**
  * @file
  * Default simple view template to display a list of rows.
@@ -13,7 +19,7 @@
 <!--first row is a logo-->
 <div class="row--equal-height-columns">
   <div class="views-row views-row-0 col-xs-12 col-sm-4 col-lg-3">
-    <a href="https://www.instagram.com/fredericiaidraetscenter/">
+    <a href="<?=$instagram_url;?>">
       <img class="img-responsive instagram-logo instagram-logo--default" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram-default.png')); ?>" border="0">
       <img class="img-responsive instagram-logo instagram-logo--dark" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram-dark.png')); ?>" border="0">
       <img class="img-responsive instagram-logo instagram-logo--darker" src="<?php print(file_create_url(path_to_theme() . '/dist/img/bg-instagram-darker.png')); ?>" border="0">
