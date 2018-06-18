@@ -23,7 +23,19 @@ function os2sub_uses_and_tools_default_linkit_profiles() {
       'plain_text' => 0,
     ),
     'search_plugins' => array(
-      'entity:taxonomy_term' => array(
+      'entity:search_api_server' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'entity:fieldable_panels_pane' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'entity:search_api_index' => array(
+        'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'entity:menu_link' => array(
         'enabled' => 0,
         'weight' => '-10',
       ),
@@ -31,12 +43,16 @@ function os2sub_uses_and_tools_default_linkit_profiles() {
         'enabled' => 1,
         'weight' => '-10',
       ),
-      'entity:file' => array(
-        'enabled' => 1,
+      'entity:taxonomy_term' => array(
+        'enabled' => 0,
         'weight' => '-10',
       ),
       'entity:user' => array(
         'enabled' => 0,
+        'weight' => '-10',
+      ),
+      'entity:file' => array(
+        'enabled' => 1,
         'weight' => '-10',
       ),
     ),
@@ -47,17 +63,19 @@ function os2sub_uses_and_tools_default_linkit_profiles() {
         'os2web_base_contentpage' => 'os2web_base_contentpage',
         'os2web_base_news' => 'os2web_base_news',
         'webform' => 'webform',
-        'event_calendar' => 0,
         'banner' => 0,
+        'os2web_kulturnaut_knactivity' => 0,
+        'event_calendar' => 0,
         'os2web_contact_contact' => 0,
         'media' => 0,
+        'personale' => 0,
         'os2web_base_selfservice_link' => 0,
+        'os2web_spotbox_box' => 0,
         'velkomst' => 0,
       ),
       'group_by_bundle' => 0,
       'include_unpublished' => 0,
     ),
-    'entity:file' => 'entity',
     'entity:taxonomy_term' => array(
       'result_description' => '',
       'bundles' => array(
@@ -74,12 +92,52 @@ function os2sub_uses_and_tools_default_linkit_profiles() {
         'tags' => 0,
         'os2web_base_tax_promoteto' => 0,
         'os2web_base_tax_site_structure' => 0,
-        'forsidefoto' => 0,
+        'os2web_kulturnaut_tema' => 0,
+        'os2web_kulturnaut_venue' => 0,
       ),
       'group_by_bundle' => 0,
     ),
+    'entity:fieldable_panels_pane' => array(
+      'result_description' => '',
+    ),
+    'entity:search_api_server' => array(
+      'result_description' => '',
+    ),
+    'entity:search_api_index' => array(
+      'result_description' => '',
+    ),
+    'entity:file' => array(
+      'result_description' => '',
+      'bundles' => array(
+        'image' => 0,
+        'video' => 0,
+        'audio' => 0,
+        'document' => 0,
+        'instagram' => 0,
+      ),
+      'group_by_bundle' => 0,
+      'show_scheme' => 0,
+      'group_by_scheme' => 0,
+      'url_type' => 'direct',
+      'image_extra_info' => array(
+        'thumbnail' => 'thumbnail',
+        'dimensions' => 'dimensions',
+      ),
+    ),
     'entity:user' => array(
       'result_description' => '',
+    ),
+    'entity:menu_link' => array(
+      'result_description' => '',
+      'bundles' => array(
+        'menu-dropdown-menu' => 0,
+        'menu-genveje' => 0,
+        'main-menu' => 0,
+        'management' => 0,
+        'navigation' => 0,
+        'user-menu' => 0,
+      ),
+      'group_by_bundle' => 0,
     ),
     'insert_plugin' => array(
       'url_method' => '2',
