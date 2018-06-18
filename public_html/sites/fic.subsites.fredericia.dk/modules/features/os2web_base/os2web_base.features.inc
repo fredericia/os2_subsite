@@ -119,6 +119,21 @@ function os2web_base_image_default_styles() {
     ),
   );
 
+  // Exported image style: instagram_image.
+  $styles['instagram_image'] = array(
+    'label' => 'instagram image (310x310)',
+    'effects' => array(
+      1 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 310,
+          'height' => 310,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: os2sub_220x130.
   $styles['os2sub_220x130'] = array(
     'label' => 'Forside nyhed 4 spalter',
