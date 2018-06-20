@@ -11955,7 +11955,7 @@ section.block-locale {
 @media (min-width: 1230px) {
   .headerwrapper-inner .navbar-collapse {
     margin-right: 60px; }
-  .topnav-wrapper.user-nav .region.region-navigation .book-link {
+  .topnav-wrapper .region.region-navigation .book-link {
     margin-right: 60px; } }
 
 .social-icons-list {
