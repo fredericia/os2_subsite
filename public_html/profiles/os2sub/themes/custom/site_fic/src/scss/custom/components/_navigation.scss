@@ -111,8 +111,12 @@ $navigation-bottom-border-color: $color-white;
       }
     }
   }
+}
+.topnav-wrapper {
+
   .book-link{
     margin-left: 20px;
+
     a {
       @extend .btn;
       @extend .btn-blue;
