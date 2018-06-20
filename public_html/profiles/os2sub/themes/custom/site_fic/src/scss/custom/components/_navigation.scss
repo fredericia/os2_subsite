@@ -110,18 +110,18 @@ $navigation-bottom-border-color: $color-white;
         }
       }
     }
-    .book-link{
-      margin-left: 20px;
-      a {
-        @extend .btn;
-        @extend .btn-blue;
-        font-size: 15px !important;
-        padding: 2px 15px !important;
+  }
+  .book-link{
+    margin-left: 20px;
+    a {
+      @extend .btn;
+      @extend .btn-blue;
+      font-size: 15px !important;
+      padding: 2px 15px !important;
 
-        &:hover, &:active, &:focus {
-          background-color: $color-blue !important;
-          color: $color-white !important;
-        }
+      &:hover, &:active, &:focus {
+        background-color: $color-blue !important;
+        color: $color-white !important;
       }
     }
   }
