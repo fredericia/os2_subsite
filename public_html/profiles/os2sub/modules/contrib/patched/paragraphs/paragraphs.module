@@ -10,6 +10,8 @@ define('PARAGRAPHS_DEFAULT_TITLE', 'Paragraph');
 define('PARAGRAPHS_DEFAULT_TITLE_MULTIPLE', 'Paragraphs');
 define('PARAGRAPHS_DEFAULT_EDIT_MODE', 'open');
 define('PARAGRAPHS_DEFAULT_EDIT_MODE_OVERRIDE', 1);
+define('PARAGRAPHS_DEFAULT_EDIT_OPEN', FALSE);
+define('PARAGRAPHS_DEFAULT_EDIT_COLLAPSIBLE', FALSE);
 define('PARAGRAPHS_DEFAULT_ADD_MODE', 'select');
 
 /**
@@ -432,6 +434,8 @@ function paragraphs_field_info() {
       'title_multiple' => PARAGRAPHS_DEFAULT_TITLE_MULTIPLE,
       'allowed_bundles' => array(),
       'bundle_weights' => array(),
+      'collapsible' => PARAGRAPHS_DEFAULT_EDIT_COLLAPSIBLE,
+      'default_edit_open' => PARAGRAPHS_DEFAULT_EDIT_OPEN,
     ),
     'default_widget' => 'paragraphs_hidden',
     'default_formatter' => 'paragraphs_view',
@@ -548,9 +552,9 @@ function paragraphs_field_instance_settings_form($field, $instance) {
     '#title' => t('Default edit mode'),
     '#description' => t('The default edit mode the paragraph item is in. Preview will render the paragraph in the preview view mode.'),
     '#options' => array(
-      'open' => t('Open'),
-      'closed' => t('Closed'),
-      'preview' => t('Preview'),
+      'open' => t('Fully loaded form'),
+      'closed' => t('AJAX form'),
+      'preview' => t('AJAX form + Preview'),
     ),
     '#default_value' => isset($settings['default_edit_mode']) ? $settings['default_edit_mode'] : PARAGRAPHS_DEFAULT_EDIT_MODE,
     '#required' => TRUE,
@@ -581,6 +585,20 @@ function paragraphs_field_instance_settings_form($field, $instance) {
   if (!$elements_exists) {
     $element['default_edit_mode_override']['#element_validate'] = array('element_validate_integer_positive');
   }
+
+  $element['default_edit_open'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Open paragraph forms initially'),
+    '#default_value' => isset($settings['default_edit_open']) ? $settings['default_edit_open'] : PARAGRAPHS_DEFAULT_EDIT_OPEN,
+    '#description' => t('The "Fully loaded form" edit mode only supports "collapsed" initially if "Enable improved collapsibility" is enabled.'),
+  );
+
+  $element['collapsible'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enable improved collapsibility'),
+    '#description' => t('Provides improved collapsible support with clickable bundle labels and a collapse / expand all trigger for the "Fully loaded form" edit mode.'),
+    '#default_value' => isset($settings['collapsible']) ? $settings['collapsible'] : PARAGRAPHS_DEFAULT_EDIT_COLLAPSIBLE,
+  );
 
   $element['add_mode'] = array(
     '#type' => 'select',
@@ -1157,7 +1175,9 @@ function theme_paragraphs_field_multiple_value_form($variables) {
   }
 
   $add_mode = (isset($instance['settings']['add_mode']) ? $instance['settings']['add_mode'] : PARAGRAPHS_DEFAULT_ADD_MODE);
-
+  $default_edit_mode = isset($instance['settings']['default_edit_mode']) ? $instance['settings']['default_edit_mode'] : PARAGRAPHS_DEFAULT_EDIT_MODE;
+  $default_edit_open = isset($instance['settings']['default_edit_open']) ? $instance['settings']['default_edit_open'] : PARAGRAPHS_DEFAULT_EDIT_OPEN;
+  $collapsible = isset($instance['settings']['collapsible']) ? $instance['settings']['collapsible'] : PARAGRAPHS_DEFAULT_EDIT_COLLAPSIBLE;
   $required = !empty($element['#required']) ? theme('form_required_marker', $variables) : '';
 
   // Sort items according to '_weight' (needed when the form comes back after
@@ -1183,23 +1203,78 @@ function theme_paragraphs_field_multiple_value_form($variables) {
     $table_id = drupal_html_id($element['#field_name'] . '_values');
     $order_class = $element['#field_name'] . '-' . $table_id . '-delta-order';
 
-    $header = array(
-      array(
-        'data' => '<label>' . t('!title !required', array('!title' => $element['#title'], '!required' => $required)) . '</label>',
-        'colspan' => 2,
-        'class' => array('field-label'),
-      ),
-      t('Order'),
-    );
+    // Build table rows.
     $rows = array();
+    $collapsed_row_count = 0;
 
     // Add the items as table rows.
+    $item_base_classes = array(
+      'paragraph-bundle-content',
+      'paragraph-bundle-content-' . drupal_html_class($default_edit_mode),
+    );
+    if ($collapsible) {
+      $item_base_classes[] = 'paragraph-bundle-content-collapsible';
+    }
+
     foreach ($items as $key => $item) {
+      $item_classes = $item_base_classes;
+      $is_ajax_new = isset($item['#prefix']) && strpos($item['#prefix'], 'class="ajax-new-content"') !== FALSE;
+
+      // The item has been removed if the confirm delete button is present.
+      $is_being_edited = !empty($item['actions']['collapse_button']);
+
+      // The item has been removed if the confirm delete button is present.
+      $is_removed = !empty($item['actions']['confirm_delete_button']);
+
+      if ($collapsible) {
+        $expanded = $default_edit_open;
+        $collapsible_restore = TRUE;
+        if ($default_edit_mode === 'open') {
+          // Non-AJAX collapsing.
+          $collapsible_restore = $default_edit_open;
+          if (!$expanded && !$is_ajax_new && !$is_removed) {
+            // Collapse if set to initially collapse and the paragraph is not
+            // new content or deleted. The being_edited flag is set for all
+            // new open form items so it cannot be used to determine the state.
+            $expanded = FALSE;
+          }
+        }
+        else {
+          // AJAX collapsing.
+          $collapsible_restore = FALSE;
+          if ($is_removed || $is_being_edited) {
+            $expanded = TRUE;
+          }
+        }
+
+        // Set collapsible state classes.
+        if ($expanded) {
+          $item_classes[] = 'expanded';
+        }
+        else {
+          $item_classes[] = 'collapsed';
+          $collapsed_row_count++;
+        }
+
+        // Add current mode classes.
+        if ($is_being_edited) {
+          $item_classes[] = 'editing';
+        }
+        if ($is_removed) {
+          $item_classes[] = 'removed';
+        }
+
+        // Block collapsible state restore for this item.
+        if (!$collapsible_restore) {
+          $item_classes[] = 'no-collapsible-state-restore';
+        }
+      }
+
       $item['_weight']['#attributes']['class'] = array($order_class);
       $delta_element = drupal_render($item['_weight']);
       $cells = array(
         array('data' => '', 'class' => array('field-multiple-drag')),
-        drupal_render($item),
+        array('data' => drupal_render($item), 'class' => $item_classes),
         array('data' => $delta_element, 'class' => array('delta-order')),
       );
       $rows[] = array(
@@ -1207,6 +1282,60 @@ function theme_paragraphs_field_multiple_value_form($variables) {
         'class' => array('draggable', drupal_html_class('paragraphs_item_type_' . $item['#bundle'])),
       );
     }
+
+    // Collapsible All trigger markup.
+    // Currently only displayed for non-AJAX forms.
+    // The JavaScript supports AJAX forms, however it is very inefficient since
+    // it has to serially trigger the AJAX callbacks due to Drupal.ajax only
+    // allowing 1 request at a time.
+    // Example: 9 large paragraphs could take 20+ seconds to collapse / expand.
+    $collapsible_all_markup = '';
+    if ($collapsible && $default_edit_mode === 'open') {
+      $collapsible_all_link_classes = array(
+        'paragraphs-collapsible-trigger-link',
+      );
+      if ($collapsed_row_count > 0) {
+        $collapsible_all_link_text = t('Expand All');
+        $collapsible_all_link_classes[] = 'collapsed';
+      }
+      else {
+        $collapsible_all_link_text = t('Collapse All');
+        $collapsible_all_link_classes[] = 'expanded';
+      }
+
+      $collapsible_all_markup = '<span style="float: right" class="paragraphs-collapsible-trigger">';
+      $collapsible_all_markup .= l($collapsible_all_link_text, '#', array(
+        'external' => TRUE,
+        'attributes' => array(
+          'class' => $collapsible_all_link_classes,
+        ),
+      ));
+      $collapsible_all_markup .= '</span>';
+    }
+
+    // Build table header.
+    if ($collapsible_all_markup) {
+      $header_text = t('!title !required !collapsible', array(
+        '!collapsible' => $collapsible_all_markup,
+        '!title' => $element['#title'],
+        '!required' => $required,
+      ));
+    }
+    else {
+      $header_text = t('!title !required', array(
+        '!title' => $element['#title'],
+        '!required' => $required,
+      ));
+    }
+
+    $header = array(
+      array(
+        'data' => '<label>' . $header_text . '</label>',
+        'colspan' => 2,
+        'class' => array('field-label'),
+      ),
+      t('Order'),
+    );
 
     $field_content = theme('table', array('header' => $header, 'rows' => $rows, 'attributes' => array('id' => $table_id, 'class' => array('field-multiple-table'))));
 

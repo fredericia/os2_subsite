@@ -345,6 +345,10 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
     $instance['settings']['title_multiple'] = PARAGRAPHS_DEFAULT_TITLE_MULTIPLE;
   }
 
+  if (!isset($instance['settings']['collapsible'])) {
+    $instance['settings']['collapsible'] = PARAGRAPHS_DEFAULT_EDIT_COLLAPSIBLE;
+  }
+
   // If the paragraph item form contains another paragraph,
   // we might ran into a recursive loop. Prevent that.
   if ($recursion++ > PARAGRAPHS_RECURSION_LIMIT) {
@@ -386,6 +390,7 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
 
   $default_edit_mode = isset($instance['settings']['default_edit_mode']) ? $instance['settings']['default_edit_mode'] : PARAGRAPHS_DEFAULT_EDIT_MODE;
   $default_edit_mode_override = isset($instance['settings']['default_edit_mode_override']) ? $instance['settings']['default_edit_mode_override'] : PARAGRAPHS_DEFAULT_EDIT_MODE_OVERRIDE;
+  $default_edit_open = isset($instance['settings']['default_edit_open']) ? $instance['settings']['default_edit_open'] : PARAGRAPHS_DEFAULT_EDIT_OPEN;
   $force_open = (!empty($instance['widget']['paragraphs_edit_mode_open']) || count($items) < $default_edit_mode_override);
 
   $being_edited_paragraph = ($default_edit_mode === 'open');
@@ -397,11 +402,16 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
     if (isset($field_state['entity'][$delta]->confirmed_removed) && $field_state['entity'][$delta]->confirmed_removed) {
       $confirmed_deleted_paragraph = TRUE;
     }
-    if ($being_edited_paragraph || (isset($field_state['entity'][$delta]->being_edited) && $field_state['entity'][$delta]->being_edited)) {
-      $being_edited_paragraph = TRUE;
-    }
-    else {
-      $being_edited_paragraph = FALSE;
+    if ($default_edit_mode !== 'open')  {
+      // Closed edit modes.
+      if (isset($field_state['entity'][$delta]->being_edited)) {
+        // Entity state controls being_edited.
+        $being_edited_paragraph = !empty($field_state['entity'][$delta]->being_edited);
+      }
+      elseif ($default_edit_mode !== 'open') {
+        // Default open controls being_edited.
+        $being_edited_paragraph = $default_edit_open;
+      }
     }
 
     /* @var $paragraph_item ParagraphsItemEntity */
@@ -409,6 +419,11 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
     $paragraph_item->setHostEntity($field_state['instance']['entity_type'], $element['#entity'], $langcode, FALSE);
   }
   else {
+    // Set being_edited to default open initially.
+    if ($default_edit_mode !== 'open') {
+      $being_edited_paragraph = $default_edit_open;
+    }
+
     if (isset($items[$delta])) {
       $paragraph_item = paragraphs_field_get_entity($items[$delta]);
     }
@@ -445,6 +460,7 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
       $element['paragraph_bundle_title'] = array(
         '#type' => 'container',
         '#weight' => -100,
+        '#attributes' => array('class' => array('paragraph-bundle-title')),
       );
       $element['paragraph_bundle_title']['info'] = array(
         '#markup' => t('@title type: %bundle', array('@title' => t($instance['settings']['title']), '%bundle' => $bundle_info->name)),
@@ -496,6 +512,9 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
             ),
             '#access' => entity_access('update', 'paragraphs_item', $paragraph_item),
             '#weight' => 999,
+            '#attributes' => array(
+              'class' => array('paragraphs-collapse-button'),
+            ),
           );
         }
       }
@@ -503,6 +522,7 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
         if($default_edit_mode === 'preview' && entity_access('view', 'paragraphs_item', $paragraph_item)) {
           $element['paragraph_bundle_preview'] = array(
             '#type' => 'container',
+            '#attributes' => array('class' => array('paragraph-bundle-preview')),
           );
           $preview = $paragraph_item->view('paragraphs_editor_preview');
           $element['paragraph_bundle_preview']['preview'] = $preview;
@@ -539,9 +559,11 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
           ),
           '#access' => entity_access('update', 'paragraphs_item', $paragraph_item),
           '#weight' => 999,
+          '#attributes' => array(
+            'class' => array('paragraphs-edit-button'),
+          ),
         );
       }
-
 
       if (isset($paragraph_item)) {
         $element['actions']['remove_button'] = array(
@@ -558,6 +580,9 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
           ),
           '#access' => entity_access('delete', 'paragraphs_item', $paragraph_item),
           '#weight' => 1000,
+          '#attributes' => array(
+            'class' => array('paragraphs-remove-button'),
+          ),
         );
       }
 
@@ -615,6 +640,9 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
           'effect' => 'fade',
         ),
         '#weight' => 1000,
+        '#attributes' => array(
+          'class' => array('paragraphs-restore-button'),
+        ),
       );
       $element['actions']['confirm_delete_button'] = array(
         '#delta' => $delta,
@@ -629,7 +657,66 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
           'effect' => 'fade',
         ),
         '#weight' => 1001,
+        '#attributes' => array(
+          'class' => array('paragraphs-deleteconfirm-button'),
+        ),
       );
+    }
+
+    // Collapsible open paragraphs.
+    if (!empty($instance['settings']['collapsible'])) {
+      // Attach js and css.
+      $element['#attached']['js'][] = drupal_get_path('module', 'paragraphs') . '/paragraphs.collapsible.js';
+      $element['#attached']['css'][] = drupal_get_path('module', 'paragraphs') . '/paragraphs.collapsible.css';
+
+      // Add fake buttons for open mode.
+      if ($default_edit_mode === 'open' && $field['cardinality'] != 1 &&
+          isset($paragraph_item) && entity_access('update', 'paragraphs_item', $paragraph_item)) {
+        $fake_button_links = array(
+          'edit' => t('Edit'),
+          'collapse' => t('Collapse'),
+        );
+        foreach ($fake_button_links as $fake_button_action => $fake_button_label) {
+          if (!isset($element['actions'][$fake_button_action . '_button'])) {
+            $fake_button_link_name = implode('_', $parents) . '_' . $fake_button_action . '_link';
+            $fake_button_link_attributes = array(
+              'class' => array(
+                drupal_html_class($fake_button_link_name),
+                'paragraphs-action-link',
+                'paragraphs-' . $fake_button_action . '-link',
+              ),
+            );
+
+            $element['actions'][$fake_button_action . '_link'] = array(
+              '#delta' => $delta,
+              '#name' => $fake_button_link_name,
+              '#type' => 'markup',
+              '#prefix' => '<a href="#"' . drupal_attributes($fake_button_link_attributes) . '>',
+              '#markup' => $fake_button_label,
+              '#suffix' => '</a>',
+              '#access' => TRUE,
+              '#weight' => 999,
+              '#attached' => array(
+                'library' => array(
+                  array('system', 'ui.button'),
+                ),
+              ),
+            );
+          }
+        }
+      }
+
+      // Add classes to always show these elements.
+      $collapsible_elements_shown = array(
+        'paragraph_bundle_title',
+        'paragraph_bundle_preview',
+        'actions',
+      );
+      foreach ($collapsible_elements_shown as $collapsible_element_name) {
+        if (isset($element[$collapsible_element_name])) {
+          $element[$collapsible_element_name]['#attributes']['class'][] = 'paragraph-bundle-content-collapsible-shown';
+        }
+      }
     }
   }
 
