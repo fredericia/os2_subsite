@@ -126,9 +126,10 @@ function theme_feedback_admin_view_form($variables) {
     if (empty($rows)) {
       $rows[] = array(array('data' => t('No feedback entries available.'), 'colspan' => 6));
     }
+    $form['#feedback_header'][0] = ($status == FEEDBACK_OPEN)?t('Process'):t('Re-open');
     // Inject the table.
     $item['messages'] = array(
-      '#markup' => theme('table', array('header' => $form['#feedback_header'], 'rows' => $rows)),
+      '#markup' => theme('table', array('header' => $form['#feedback_header'], 'rows' => $rows, 'attributes' => array('id'=>'feedback-status-'.$status))),
       '#suffix' => theme('pager', array('element' => $status)),
       '#weight' => -1,
     );
@@ -258,6 +259,45 @@ function feedback_admin_settings_form($form, &$form_state) {
     '#title' => t('Paths to exclude from feedback display'),
     '#default_value' => variable_get('feedback_excluded_paths', 'admin/reports/feedback'),
     '#description' => t("Specify pages by using their paths. Enter one path per line. The '*' character is a wildcard. Example paths are %blog for the blog page and %blog-wildcard for every personal blog. %front is the front page.", array('%blog' => 'blog', '%blog-wildcard' => 'blog/*', '%front' => '<front>')),
+  );
+  $form['fieldset_labels'] = array(
+    '#type'        => 'fieldset',
+    '#title'       => t('Feedback labels'),
+    '#description' => t('You can edit labels and titles for default fields.'),
+    '#collapsible' => TRUE,
+    '#collapsed' => TRUE,
+  );
+  $form['fieldset_labels']['feedback_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#size' => 40,
+    '#maxlength' => 128,
+    '#default_value' => variable_get('feedback_title', 'Feedback'),
+    '#description' => t("Specify the title that will appear on the feedback form. Defaults to 'Feedback'"),
+  );
+  $form['fieldset_labels']['feedback_help'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Help'),
+    '#size' => 40,
+    '#maxlength' => 255,
+    '#default_value' => variable_get('feedback_help', 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'),
+    '#description' => t("Feedback submission guidelines. Defaults to 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'"),
+  );
+  $form['fieldset_labels']['feedback_message'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Message'),
+    '#size' => 40,
+    '#maxlength' => 128,
+    '#default_value' => variable_get('feedback_message', 'Message'),
+    '#description' => t("Specify the label that will appear over the feedback message text field. Defaults to 'Message'"),
+  );
+  $form['fieldset_labels']['feedback_submit'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Submit button'),
+    '#size' => 40,
+    '#maxlength' => 128,
+    '#default_value' => variable_get('feedback_submit', 'Send feedback'),
+    '#description' => t("Specify the label that will appear on the feedback submit button. Defaults to 'Send feedback'"),
   );
   return system_settings_form($form);
 }

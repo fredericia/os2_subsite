@@ -2,14 +2,18 @@
 
 /**
  * The form displayed on admin/structure/crumbs(/weights)
+ *
+ * @param array $form
+ * @param array $form_state
+ * @param string $type
+ *   E.g. 'tabledrag' or 'textual' or 'expansible'.
+ *
+ * @return array
  */
 function crumbs_admin_weights_form($form, $form_state, $type = 'tabledrag') {
 
   $form = array();
 
-  /**
-   * @var crumbs_Container_CachedLazyPluginInfo $info
-   */
   $info = crumbs()->pluginInfo;
 
   // Re-discover plugins, when the admin visits the weights configuration form.
@@ -116,11 +120,11 @@ function crumbs_admin_display_form() {
     '#title' => t('Wrap the separator in !tags tags:', array(
         '!tags' => '<code>&lt;span class="crumbs-separator"&gt;</code>',
       )),
-    '#default_value' => variable_get('crumbs_separator_span', FALSE),
+    '#default_value' => (bool)variable_get('crumbs_separator_span', FALSE),
   );
   $separator_notes = '';
   foreach (array(
-    'Be careful, this is a <em>free HTML</em> field. The output will be printed as-is.',
+    'A subset of HTML is accepted.',
     'Special characters should be specified as htmlentities, e.g. "&amp;raquo;".',
     'Spaces should be added around the separator symbol.',
     'The setting will only work in themes where the Crumbs implementation of theme_breadcrumb() is used.',
@@ -128,12 +132,13 @@ function crumbs_admin_display_form() {
     $separator_notes .= '<li>' . str_replace("\n", '<br/>', t($note)) . '</li>';
   }
   $separator_notes = '<ul>' . $separator_notes . '</ul>';
-  $separator_desc = '<p>' . t('A custom separator symbol, such as " &amp;raquo; " ( &raquo; ) or " &amp;gt; " (&gt).') . '</p>';
+  $separator_desc = '<p>' . t('A custom separator symbol, such as " &amp;raquo; " ( &raquo; ) or " &amp;gt; " ( &gt; ).') . '</p>';
   $form['separator_settings']['crumbs_separator'] = array(
     '#type' => 'textfield',
     '#title' => t('Custom separator HTML'),
     '#description' => $separator_desc,
     '#default_value' => variable_get('crumbs_separator', ' &raquo; '),
+    '#element_validate' => array('_crumbs_validate_separator_xss'),
   );
   $form['separator_settings']['notes'] = array(
     '#type' => 'markup',
@@ -149,7 +154,7 @@ function crumbs_admin_display_form() {
       // Theme is disabled.
       continue;
     }
-    $path = 'admin/appearance_settings/' . $theme_name;
+    $path = 'admin/appearance/settings/' . $theme_name;
     $link = l($theme_obj->info['name'], $path);
     if (!isset($originals[$theme_name])) {
       $f = 'theme_breadcrumb';
@@ -204,6 +209,23 @@ function crumbs_admin_display_form() {
   $form = system_settings_form($form);
   $form['#submit'][] = '_crumbs_admin_display_submit_flush_cache';
   return $form;
+}
+
+/**
+ * Element validate callback for separator string.
+ *
+ * @param array $element
+ * @param array $form_state
+ */
+function _crumbs_validate_separator_xss($element, $form_state) {
+  $string = $element['#value'];
+  $filtered = filter_xss_admin($string);
+  if ($string !== $filtered) {
+    form_error($element, t('%name contains unsafe HTML. Maybe you meant %safe instead.', array(
+      '%name' => $element['#title'],
+      '!safe' => '"<code>' . check_plain($filtered) . '</code>"',
+    )));
+  }
 }
 
 /**

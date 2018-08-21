@@ -1,0 +1,270 @@
+<?php
+
+/**
+ * @file
+ * Common module for custom functionality.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function fic_common_menu() {
+  $items = array();
+  $items['modal/node/%node/%ctools_js'] = array(
+    'title' => 'Modal load route',
+    'page arguments' => array(2, 3),
+    'page callback' => 'fic_common_node_modal_page',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['admin/config/fic'] = array(
+    'title' => 'FIC Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('fic_settings'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function fic_common_block_info() {
+  $blocks['fic_header_term_view'] = array(
+    'info' => t('FIC Header term view'),
+    'cache' => DRUPAL_CACHE_PER_PAGE,
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view_MODELU_DELTA_alter().
+ *
+ * Override default behavior of Language switcher block.
+ * We always switch user to frontpage of another language.
+ *
+ * @See locale_block_view();
+ */
+function fic_common_block_view_locale_language_alter(&$data, $block) {
+  if (drupal_multilingual()) {
+    $links = language_negotiation_get_switch_links('language', '<front>');
+    if (isset($links->links)) {
+      drupal_add_css(drupal_get_path('module', 'locale') . '/locale.css');
+      $class = "language-switcher-{$links->provider}";
+      $variables = array('links' => $links->links, 'attributes' => array('class' => array($class)));
+      $data['content'] = theme('links__locale_block', $variables);
+    }
+  }
+}
+
+/**
+ * FIC setting form definition.
+ *
+ * @param $form
+ * @param $form_state
+ *
+ * @return mixed
+ */
+function fic_settings($form, &$form_state) {
+  $form['book_button_url_title'] = array(
+    '#prefix' => '<div class="form-item"><label>',
+    '#markup' => t('The "BOOK" blue button url'),
+    '#suffix' => '</label></div>',
+  );
+
+  global $language;
+
+  $vocabulary = taxonomy_vocabulary_machine_name_load('os2web_base_tax_site_structure');
+  $terms = entity_load('taxonomy_term', FALSE, ['vid' => $vocabulary->vid]);
+  foreach ($terms as $term) {
+    $book_url = variable_get('book_button_url_' . $term->tid . '_' . $language->language, '');
+    $form['wrapper_' . $term->tid] = array(
+      '#type' => 'fieldset',
+      '#title' => $term->name,
+      '#collapsible' => TRUE,
+      '#collapsed' => empty($book_url),
+      'book_button_url_' . $term->tid . '_' . $language->language => array(
+        '#type' => 'textfield',
+        '#title' => t('Specify book url set for section.'),
+        '#default_value' => $book_url,
+      ),
+    );
+  }
+  foreach ($terms as $term) {
+    $options[$term->tid] = $term->name;
+  }
+  $form['fronpage_term_tid'] = array(
+    '#type' => 'select',
+    '#title' => t('Frontpage term in os2web_base_tax_site_structure taxonomy'),
+    '#options' => $options,
+    '#default_value' => variable_get('fronpage_term_tid', 14 ),
+  );
+  $form['book_button_url_' . $language->language] = array(
+    '#type' => 'textfield',
+    '#title' => t('Default button url'),
+    '#default_value' => variable_get('book_button_url_' . $language->language),
+  );
+
+  $form['opening_hours_node_reference'] = array(
+    '#type' => 'textfield',
+    '#title' => t('The opening hours page node id'),
+    '#default_value' => variable_get('opening_hours_node_reference'),
+  );
+  $form['slide_reset_timout'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Timeout in miliseconds to reset header slideshow slide to default'),
+    '#default_value' => variable_get('slide_reset_timout', 2000),
+  );
+  return system_settings_form($form);
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function fic_common_block_view($delta = '') {
+  $block = array();
+  if ($delta != 'fic_header_term_view') {
+    return;
+  }
+
+  // Fetch term from menu active trail.
+  $term = fic_common_load_term_by_menutrail();
+
+  $node = menu_get_object();
+  // When page is node.
+  if (!empty($node) && empty($term)) {
+    if (!empty($node->field_sektion) && $node->type == 'os2web_base_contentpage') {
+      $field_sektion = field_get_items('node', $node, 'field_sektion');
+      $term = taxonomy_term_load($field_sektion[0]['tid']);
+    }
+  }
+
+  // Check available terms and nodes for FIC header.
+  if ((empty($term) || $term->vocabulary_machine_name != 'os2web_base_tax_site_structure')
+    && (empty($node) || $node->type != 'os2web_base_contentpage')) {
+    return;
+  }
+
+  $fic_header_block = array(
+    '#type' => 'container',
+    '#attributes' => array(
+      'class' => array('term-fic-header'),
+    ),
+  );
+
+  if (drupal_is_front_page()) {
+    $fic_header_block[] = module_invoke('views', 'block_view', 'fic_header_banners-block_1');
+  } elseif (!empty($term)) {
+    $fic_header_block[] = taxonomy_term_view($term, 'fic_header');
+  } else {
+    $fic_header_block[] = node_view($node, 'fic_header');
+  }
+
+  // Required includes for ctools to work for modal contact link.
+  ctools_include('ajax');
+  ctools_include('modal');
+  ctools_modal_add_js();
+
+  $contact_modal_style = array(
+    'contact-modal-style' => array(
+      'modalSize' => array(
+        'type' => 'fixed',
+      ),
+      'modalOptions' => array(
+        'opacity' => .8,
+        'background-color' => '#000',
+      ),
+      'animation' => 'fadeIn',
+      'modalTheme' => 'fic_modal',
+    ),
+  );
+  drupal_add_js($contact_modal_style, 'setting');
+
+  $block['content'] = render($fic_header_block);
+  return $block;
+}
+
+/**
+ * A modal static node page callback.
+ *
+ * @param int $node
+ *    Define id of loaded entity.
+ * @param string $js
+ *    Determines if JS is enabled at user's browser end or not.
+ *
+ * @return string
+ *     The HTML, parsed by Drupal to show the login form.
+ */
+function fic_common_node_modal_page($node, $js) {
+  if (!$js) {
+    drupal_goto('node/' . $node->nid);
+  }
+
+  ctools_include('modal');
+  ctools_include('ajax');
+  $contents = render(node_view($node));
+  return ctools_modal_render($node->title, $contents) ;
+}
+
+/**
+ * Helper function to get term from menu trail.
+ *
+ * @param array | NULL $active_trail
+ *
+ * @return mixed
+ */
+function fic_common_load_term_by_menutrail($active_trail = NULL) {
+  // Load active trail and setup pointer to end of trail.
+  if (!isset($active_trail)) {
+    $active_trail = menu_get_active_trail();
+    end($active_trail);
+  }
+
+  // Load term from current item.
+  $menu_item = current($active_trail);
+  if ($term = menu_get_object('taxonomy_term', 2, $menu_item['href'])) {
+    return $term;
+  }
+
+  // If we have parent items go up.
+  if (prev($active_trail)) {
+    return fic_common_load_term_by_menutrail($active_trail);
+  }
+
+  // Term is not found in menu trail.
+  return FALSE;
+}
+
+/**
+ * Implements hook_url_outbound_alter().
+ */
+function fic_common_url_outbound_alter(&$path, &$options, $original_path) {
+  // Remove ajax destination from modal popups.
+  if (arg(3) == 'ajax' && arg(0) == 'modal'
+    && !empty($options['query']['destination'])
+    && strpos($options['query']['destination'], 'ajax')) {
+    unset($options['query']['destination']);
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function fic_common_ctools_plugin_directory($module, $plugin) {
+  if (($module == 'ctools') && ($plugin == 'content_types')) {
+    return 'plugins/content_types';
+  }
+}
+
+/**
+ * Implements hook_panels_pane_content_alter().
+ */
+function fic_common_panels_pane_content_alter($content, $pane, $args, $contexts) {
+  if (!empty($content)
+    && !empty($pane->configuration['override_title'])
+    && !empty($pane->configuration['override_title_text'])) {
+     $content->title = t($pane->configuration['override_title_text']);
+  }
+}

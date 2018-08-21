@@ -81,6 +81,82 @@ function feedback_entity_info() {
 }
 
 /**
+ * Implements hook_entity_property_info().
+ */
+function feedback_entity_property_info() {
+  $info = array();
+  $properties = &$info['feedback']['properties'];
+
+  $properties['fid'] = array(
+    'label' => t('Feedback ID'),
+    'type' => 'integer',
+    'description' => t('The Feedback ID'),
+    'schema field' => 'fid',
+  );
+  $properties['status'] = array(
+    'label' => t("Status"),
+    'type' => 'integer',
+    'description' => t("0 for new, 1 for processed"),
+    'schema field' => 'status',
+  );
+  $properties['author'] = array(
+    'label' => t("Author"),
+    'type' => 'user',
+    'description' => t("The author of the feedback."),
+    'setter callback' => 'entity_property_verbatim_set',
+    'required' => TRUE,
+    'schema field' => 'uid',
+  );
+  $properties['location'] = array(
+    'label' => t('Location'),
+    'type' => 'uri',
+    'description' => t('System path of the originating page.'),
+    'setter callback' => 'entity_property_verbatim_set',
+    'required' => TRUE,
+    'schema field' => 'location',
+  );
+  $properties['location_masked'] = array(
+    'label' => t('Location'),
+    'type' => 'uri',
+    'description' => t('Untranslated system path of the originating page.'),
+    'setter callback' => 'entity_property_verbatim_set',
+    'required' => TRUE,
+    'schema field' => 'location_masked',
+  );
+  $properties['url'] = array(
+    'label' => t('URL'),
+    'type' => 'uri',
+    'description' => t('Absolute URL of the originating page.'),
+    'setter callback' => 'entity_property_verbatim_set',
+    'required' => TRUE,
+    'schema field' => 'url',
+  );
+  $properties['useragent'] = array(
+    'label' => t('User agent'),
+    'description' => t('User agent of the feedback message author.'),
+    'setter callback' => 'entity_property_verbatim_set',
+    'required' => TRUE,
+    'schema field' => 'useragent',
+  );
+  $properties['message'] = array(
+    'label' => t('Message'),
+    'description' => t("The feedback message."),
+    'setter callback' => 'entity_property_verbatim_set',
+    'schema field' => 'message',
+    'required' => TRUE,
+  );
+  $properties['timestamp'] = array(
+    'label' => t("Date created"),
+    'type' => 'date',
+    'schema field' => 'timestamp',
+    'description' => t("The date the feedback was created."),
+  );
+
+  return $info;
+}
+
+
+/**
  * Implements hook_field_extra_fields().
  */
 function feedback_field_extra_fields() {
@@ -213,9 +289,10 @@ function feedback_menu() {
  */
 function feedback_page_build(&$page) {
   if (user_access('access feedback form') && !feedback_match_path(variable_get('feedback_excluded_paths', 'admin/reports/feedback'))) {
+    $title = variable_get('feedback_title', 'Feedback');
     $page['page_bottom']['feedback'] = array(
       '#theme' => 'feedback_form_display',
-      '#title' => t('Feedback'),
+      '#title' => t($title),
       '#content' => drupal_get_form('feedback_form'),
     );
     $path = drupal_get_path('module', 'feedback');
@@ -268,9 +345,10 @@ function feedback_form($form, &$form_state) {
     '#value' => $form_state['inline']['location'],
   );
 
+  $help = variable_get('feedback_help', 'If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.');
   $form['help'] = array(
     '#prefix' => '<div class="feedback-help">',
-    '#markup' => t('If you experience a bug or would like to see an addition on the current page, feel free to leave us a message.'),
+    '#markup' => t($help),
     '#suffix' => '</div>',
   );
   if (user_access('view feedback messages')) {
@@ -308,11 +386,12 @@ function feedback_form($form, &$form_state) {
       }
     }
   }
+  $message = variable_get('feedback_message', 'Message');
   $form['message'] = array(
     '#type' => 'textarea',
     '#attributes' => array('class' => array('feedback-message')),
     '#cols' => 20,
-    '#title' => t('Message'),
+    '#title' => t($message),
     '#required' => TRUE,
     '#wysiwyg' => FALSE,
   );
@@ -326,9 +405,10 @@ function feedback_form($form, &$form_state) {
     // @todo Patch #type actions in core?
     '#attributes' => array('class' => array('clearfix')),
   );
+  $submit = variable_get('feedback_submit', 'Send feedback');
   $form['actions']['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Send feedback'),
+    '#value' => t($submit),
     '#id' => 'feedback-submit',
     '#ajax' => array(
       'wrapper' => 'feedback-form',
@@ -601,4 +681,24 @@ function feedback_views_api() {
     'api' => 3.0,
     'path' => drupal_get_path('module', 'feedback') . '/views',
   );
+}
+
+/**
+ * Implements hook_feedback_insert().
+ */
+function feedback_feedback_insert($entry) {
+  // Trigger rule if Rules is enabled
+  if (module_exists('rules')) {
+    rules_invoke_event('feedback_insert', $entry);
+  }
+}
+
+/**
+ * Implements hook_feedback_update().
+ */
+function feedback_feedback_update($entry) {
+  // Trigger rule if Rules is enabled
+  if (module_exists('rules')) {
+    rules_invoke_event('feedback_update', $entry);
+  }
 }

@@ -1,0 +1,4 @@
+name = FIC Frontpage custom module
+core = 7.x
+package = FIC
+project = fic_frontpage

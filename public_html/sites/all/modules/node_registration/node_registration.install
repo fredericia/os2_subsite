@@ -359,3 +359,10 @@ function node_registration_update_13() {
     $weight++;
   }
 }
+
+/**
+ * WARN about removing custom mail action, USE SYSTEM MAIL ACTION!
+ */
+function node_registration_update_14() {
+  drupal_set_message(t("Node Registration REMOVED THE CUSTOM MAIL ACTION. If you want to mail registrees, USE THE SYSTEM MAIL ACTION."));
+}

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OS2web News Page Archive feature.
+ */
+
+include_once 'os2web_news_page_archive.features.inc';

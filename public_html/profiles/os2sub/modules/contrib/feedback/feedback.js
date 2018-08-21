@@ -1,5 +1,16 @@
 (function ($) {
 
+$.fn.toggleClick = function () {
+    var functions = arguments
+    return this.each(function () {
+      var iteration = 0
+      $(this).click(function () {
+        functions[iteration].apply(this, arguments)
+        iteration = (iteration + 1) % functions.length
+      })
+    })
+  }
+
 /**
  * Attach collapse behavior to the feedback form block.
  */
@@ -10,7 +21,7 @@ Drupal.behaviors.feedbackForm = {
       $block.find('span.feedback-link')
         .prepend('<span id="feedback-form-toggle">[ + ]</span> ')
         .css('cursor', 'pointer')
-        .toggle(function () {
+        .toggleClick(function () {
             Drupal.feedbackFormToggle($block, false);
           },
           function() {

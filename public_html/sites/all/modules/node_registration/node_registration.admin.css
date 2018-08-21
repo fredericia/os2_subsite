@@ -22,3 +22,10 @@
 .node-registration .verified > a {
   color: inherit;
 }
+
+.nr-not-translated {
+  color: red;
+}
+.nr-translated {
+  color: green;
+}

@@ -1,0 +1,12 @@
+name = FIC data export
+description = Data export views feature
+core = 7.x
+package = FIC
+version = 7.x-1.0-beta1
+dependencies[] = views
+dependencies[] = views_data_export
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:2
+features[views_view][] = oplevfredericia_feed
+features_exclude[dependencies][ctools] = ctools
+project path = sites/fic.subsites.fredericia.dk/modules/features
