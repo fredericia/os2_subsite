@@ -15,6 +15,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'admin_menu',
@@ -25,6 +27,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'system',
@@ -65,6 +69,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -84,6 +90,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'access own webform results',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'webform',
@@ -253,6 +261,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'menu',
@@ -413,6 +423,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
+      'Webmaster' => 'Webmaster',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'user',
@@ -497,6 +508,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'file_entity',
@@ -506,6 +519,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['create media content'] = array(
     'name' => 'create media content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -554,6 +568,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['create os2web_base_selfservice_link content'] = array(
     'name' => 'create os2web_base_selfservice_link content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -609,6 +624,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete any banner content'] = array(
     'name' => 'delete any banner content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -636,6 +652,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete any media content'] = array(
     'name' => 'delete any media content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -645,6 +662,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete any os2web_base_contentpage content'] = array(
     'name' => 'delete any os2web_base_contentpage content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -664,6 +682,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete any os2web_base_news content'] = array(
     'name' => 'delete any os2web_base_news content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -673,6 +692,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete any os2web_base_selfservice_link content'] = array(
     'name' => 'delete any os2web_base_selfservice_link content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -691,6 +711,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete any webform content'] = array(
     'name' => 'delete any webform content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -737,6 +758,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete own media content'] = array(
     'name' => 'delete own media content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -776,6 +798,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete own os2web_base_selfservice_link content'] = array(
     'name' => 'delete own os2web_base_selfservice_link content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -814,6 +837,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -942,6 +966,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'roles' => array(
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'eu_cookie_compliance',
   );
@@ -1040,6 +1065,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['edit any banner content'] = array(
     'name' => 'edit any banner content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -1067,6 +1093,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['edit any media content'] = array(
     'name' => 'edit any media content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -1106,6 +1133,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['edit any os2web_base_selfservice_link content'] = array(
     'name' => 'edit any os2web_base_selfservice_link content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -1124,6 +1152,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['edit any webform content'] = array(
     'name' => 'edit any webform content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -1134,6 +1163,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'edit meta tags',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'metatag',
@@ -1180,6 +1211,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['edit own media content'] = array(
     'name' => 'edit own media content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -1219,6 +1251,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['edit own os2web_base_selfservice_link content'] = array(
     'name' => 'edit own os2web_base_selfservice_link content',
     'roles' => array(
+      'Editor' => 'Editor',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -1384,6 +1417,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'epsacrop create crops',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'epsacrop',
@@ -1394,6 +1429,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'epsacrop delete all crops',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'epsacrop',
@@ -1404,6 +1441,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'epsacrop edit all crops',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'epsacrop',
@@ -1479,6 +1518,7 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       'Editor' => 'Editor',
+      'authenticated user' => 'authenticated user',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'filter',
@@ -1521,6 +1561,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'node',
@@ -1559,7 +1601,8 @@ function os2sub_uses_and_tools_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
-      'Editor' => 'Editor',
+      'Ekstern indholdsproducent' => 'Ekstern indholdsproducent',
+      'Indholdsproducent' => 'Indholdsproducent',
       'subsiteadmin' => 'subsiteadmin',
     ),
     'module' => 'system',
