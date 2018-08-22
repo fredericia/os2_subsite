@@ -33,7 +33,7 @@ function os2sub_uses_and_tools_ckeditor_profile_defaults() {
     [\'Source\'],
     [\'Cut\',\'Copy\',\'Paste\',\'PasteText\',\'PasteFromWord\',\'-\',\'SpellChecker\',\'Scayt\'],
     [\'Undo\',\'Redo\',\'Find\',\'Replace\',\'-\',\'SelectAll\'],
-    [\'Table\',\'HorizontalRule\',\'Image\',\'MediaEmbed\'],
+    [\'Media\',\'Flash\',\'Table\',\'HorizontalRule\',\'Smiley\',\'SpecialChar\',\'Iframe\'],
     \'/\',
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Subscript\',\'Superscript\',\'-\',\'RemoveFormat\'],
     [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\',\'Blockquote\'],
@@ -52,7 +52,7 @@ function os2sub_uses_and_tools_ckeditor_profile_defaults() {
         'lang' => 'da',
         'auto_lang' => 't',
         'language_direction' => 'default',
-        'allowed_content' => 'f',
+        'allowed_content' => 't',
         'extraAllowedContent' => '',
         'enter_mode' => 'p',
         'shift_enter_mode' => 'br',
@@ -106,9 +106,21 @@ function os2sub_uses_and_tools_ckeditor_profile_defaults() {
               ),
             ),
           ),
+          'media' => array(
+            'name' => 'media',
+            'desc' => 'Plugin for embedding files using Media CKEditor',
+            'path' => '%base_path%profiles/os2sub/modules/contrib/media_ckeditor/js/plugins/media/',
+            'buttons' => array(
+              'Media' => array(
+                'icon' => 'icons/media.png',
+                'label' => 'Add media',
+              ),
+            ),
+            'default' => 'f',
+          ),
           'mediaBrowser' => array(
             'name' => 'mediaBrowser',
-            'desc' => 'Media Browser for File Upload/Browsing',
+            'desc' => 'Filarkiv til upload og genbrug af billeder',
             'path' => '/profiles/os2sub/modules/contrib/ckeditor_media/plugins/mediaBrowser/',
           ),
           'mediaembed' => array(
