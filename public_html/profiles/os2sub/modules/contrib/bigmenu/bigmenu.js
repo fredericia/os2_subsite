@@ -29,7 +29,7 @@ Drupal.behaviors.bigmenu = {
             $(parentRow)
               .removeClass('bigmenu-collapsed')
               .addClass('bigmenu-expanded');
-            $('.hide-show', parentRow).html('Hide children');
+            $('.hide-show', parentRow).html(Drupal.t('Hide children'));
 
             return false;
           }
@@ -91,6 +91,9 @@ Drupal.behaviors.bigmenu = {
                   $('#menu-overview').removeClass('tabledrag-processed');
                   $('#menu-overview .tabledrag-handle').remove();
 
+                  // Remove the weight toggle widget as it will be added in again with AJAX.
+                  $('.tabledrag-toggle-weight-wrapper').remove();
+
                   Drupal.attachBehaviors();
                   // Remove tabledrag warning, otherwise it will duplicate for each set of children we show.
                   Drupal.theme.tableDragChangedWarning = function () {
@@ -101,7 +104,7 @@ Drupal.behaviors.bigmenu = {
                   $(parentRow)
                     .removeClass('bigmenu-collapsed')
                     .addClass('bigmenu-expanded');
-                  $('.hide-show', parentRow).html('Hide children');
+                  $('.hide-show', parentRow).html(Drupal.t('Hide children'));
                 }
                 else {
                   // Failure...
@@ -130,7 +133,7 @@ Drupal.behaviors.bigmenu = {
               .removeClass('bigmenu-expanded')
               .addClass('bigmenu-collapsed')
               .addClass('bigmenu-generated')
-            $('.hide-show', parentRow).html('Show children');
+            $('.hide-show', parentRow).html(Drupal.t('Show children'));
           }
 
           return false;

@@ -21,7 +21,7 @@ function simple_subscription_help($path, $arg) {
 
   switch ($path) {
     case 'admin/help#simple_subscription':
-      $output = '<p>' . t('This module provides a block with a simple newsletter subscription form, i.e., an text input field (validated as an e-mail address) and a submit button. In the <a href="@block_configuration">block configuration page</a> you can add a header, a label and a footer to the form, as well as a small text appearing in the input field(usually used as a replacement to the field label. You can also choose a path to redirect the user after a successful submission.', array('@block_configuration' => '/admin/structure/block/configure/simple_subscription/0')) . '</p>';
+      $output = '<p>' . t('This module provides a block with a simple newsletter subscription form, i.e., an text input field (validated as an e-mail address) and a submit button. In the <a href="@block_configuration">block configuration page</a> you can add a header, a label and a footer to the form, as well as a small text appearing in the input field(usually used as a replacement to the field label. You can also choose a path to redirect the user after a successful submission.', array('@block_configuration' => url('admin/structure/block/configure/simple_subscription/0'))) . '</p>';
       $output .= '<p>' . t("Simple subscription integrates with the trigger module to send site administrators (or anybody else) the submitted. It can be used with only the core action module for notifications, but the <a href='@token_url'>Token module</a> should also be installed for complete costumisation of the notification e-mails.", array('@token_url' => 'http://drupal.org/project/token')) . '</p>';
       break;
   }
@@ -41,6 +41,10 @@ function simple_subscription_permission() {
     'manage all subscriptions' => array(
       'title' => t("Manage subscriptions of all users."),
       'restrict access' => TRUE,
+    ),
+    'administer simple subscription' => array(
+      'title' => t("Administer Simple Subscription"),
+      'description' => t('Allow users to change Simple Subscription settings.')
     ),
   );
 }
@@ -70,7 +74,7 @@ function simple_subscription_menu() {
   $items = array();
   $items['admin/config/simple_subscription'] = array(
     'title' => "Simple Subscription",
-    'access arguments' => array('manage all subscriptions'),
+    'access arguments' => array('administer simple subscription'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('simple_subscription_main_admin_form'),
     'file' => 'simple_subscription.pages.inc',
@@ -82,7 +86,7 @@ function simple_subscription_menu() {
     'page callback' => 'drupal_get_form',
     'page arguments' => array('simple_subscription_admin_form'),
     'file' => 'simple_subscription.pages.inc',
-    'type' => MENU_NORMAL_ITEM,
+    'type' => MENU_LOCAL_TASK,
   );
   $items['admin/people/subscriptions/list'] = array(
     'title' => "List",
@@ -100,6 +104,14 @@ function simple_subscription_menu() {
   );
 
   $items['newsletter/unsubscribe/%simple_subscription'] = array(
+    'title' => 'Unsubscribe from newsletter',
+    'access arguments' => array('manage own subscription'),
+    'page callback' => 'simple_subscription_unsubscribe_page',
+    'page arguments' => array(2),
+    'file' => 'simple_subscription.pages.inc',
+    'type' => MENU_CALLBACK,
+  );
+  $items['newsletter/unsubscribe-hash/%simple_subscription_hash'] = array(
     'title' => 'Unsubscribe from newsletter',
     'access arguments' => array('manage own subscription'),
     'page callback' => 'simple_subscription_unsubscribe_page',
@@ -134,11 +146,11 @@ function simple_subscription_load_multiple($sids = array(), $conditions = array(
 /**
  * Loads a subscription object.
  *
- * @param  $sid
+ * @param int $sid
  *   The SID to load.
  * @param bool $reset
  *   Reset internal cache ?
- * @return
+ * @return object|boolean
  *   A subscription object, or FALSE.
  */
 function simple_subscription_load($sid, $reset = FALSE) {
@@ -152,11 +164,28 @@ function simple_subscription_load($sid, $reset = FALSE) {
 
 
 /**
+ * Loads a subscription object by hash.
+ *
+ * @param $hash string The subscrition hash to load
+ *   The md5 e-mail to load.
+ * @return object|boolean
+ *   A subscription object, or FALSE.
+ */
+function simple_subscription_md5_load($hash) {
+  $subscriptions = simple_subscription_load_multiple(
+    array(),
+    array('hash' => $hash)
+  );
+  return reset($subscriptions);
+}
+
+
+/**
  * Fetch a subscription object by mail.
  *
- * @param  $mail
+ * @param string $mail
  *   String with the subscription's mail.
- * @return
+ * @return object|boolean
  *   A subscription object, or FALSE.
  */
 function simple_subscription_load_by_mail($mail) {
@@ -173,8 +202,8 @@ function simple_subscription_load_by_mail($mail) {
  *
  * @param  $uid
  *  String with the subscription's uid.
- * @return
- *  A subscription object, or FALSE.
+ * @return object|boolean
+ *   A subscription object, or FALSE.
  */
 function simple_subscription_load_by_uid($uid) {
   $subscriptions = simple_subscription_load_multiple(
@@ -196,7 +225,7 @@ function simple_subscription_load_by_uid($uid) {
  * @return bool|object
  *   The saved subscription object, or FALSE.
  */
-function simple_subscription_save($subscription) {
+function simple_subscription_save(&$subscription) {
 
   global $user;
 
@@ -246,7 +275,7 @@ function simple_subscription_save($subscription) {
     watchdog('simple_subscription', $msg, array('@submitted_email' => $subscription->mail));
   }
 
-  module_invoke_all('subscription_' . $op);
+  module_invoke_all('subscription_' . $op, $subscription);
   module_invoke_all('entity_' . $op, $subscription, 'subscription');
 
   return $success ? $subscription : FALSE;
@@ -258,7 +287,6 @@ function simple_subscription_save($subscription) {
  *
  * @param  $sid
  *   The subscription's SID
- * @return
  */
 function simple_subscription_delete($sid) {
   simple_subscription_delete_multiple(array($sid));
@@ -270,7 +298,6 @@ function simple_subscription_delete($sid) {
  *
  * @param array $sids
  *   An array with the SIDs to delete
- * @return
  */
 function simple_subscription_delete_multiple(array $sids) {
   $subscriptions = simple_subscription_load_multiple($sids);
@@ -319,13 +346,12 @@ function simple_subscription_unsubscribe_multiple(array $sids) {
 /**
  * Implementation of hook_user_load().
  */
-function simple_subscription_user_load($account) {
-
+function simple_subscription_user_load($accounts) {
   if (!variable_get('ssubscription_user_account_attach', TRUE)) {
     return;
   }
 
-  foreach($account as $uid => $account) {
+  foreach($accounts as $uid => &$account) {
     if (!$uid) {
       continue;
     }
@@ -431,13 +457,11 @@ function simple_subscription_block_save($delta = '', $edit = array()) {
 /**
  * Implements hook_block_view().
  */
-function simple_subscription_block_view($delta = '') {
-
+function simple_subscription_block_view() {
   $return = array(
     'subject' => t('Subscription'),
     'content' => drupal_get_form('simple_subscription_form'),
   );
-
   return $return;
 }
 
@@ -471,9 +495,17 @@ function simple_subscription_token_info() {
     ),
     'tokens' => array(
       'simple-subscription' => array(
+        'sid' => array(
+          'name'  => t('Subscription id'),
+          'description' => t('The subscription ID.'),
+        ),
         'email' => array(
           'name'  => t('Submitted email address'),
           'description' => t('Email address submitted using the <em>Simple subscription</em> block.'),
+        ),
+        'unsubscribe-link' => array(
+          'name' => t('Unsubscribe link'),
+          'description' => t('Link to unsubscribe with the subscription hashed.'),
         ),
       ),
     ),
@@ -495,9 +527,22 @@ function simple_subscription_tokens($type, $tokens, array $data = array(), array
 
   foreach ($tokens as $machine_name => $raw_text) {
     switch ($machine_name) {
+      case 'sid':
+        if (isset($data['simple-subscription']['sid'])) {
+          $return[$raw_text] = $data['simple-subscription']['sid'];
+        }
+        break;
       case 'email':
         if (isset($data['simple-subscription']['mail'])) {
           $return[$raw_text] = $data['simple-subscription']['mail'];
+        }
+        break;
+      case 'unsubscribe-link':
+        if (isset($data['simple-subscription']['hash'])) {
+          $url = 'newsletter/unsubscribe-hash/' . $data['simple-subscription']['hash'];
+          $return[$raw_text] = l(t('Unsubscribe'), $url, array(
+            'absolute' => TRUE,
+          ));
         }
         break;
       default:
@@ -514,8 +559,7 @@ function simple_subscription_tokens($type, $tokens, array $data = array(), array
  *
  * If Token module is available, adds the standard fieldset with the available tokens
  *
- * @return
- *   The form array
+ * @return array The form array
  */
 function simple_subscription_block_config_form() {
 
@@ -651,8 +695,7 @@ function simple_subscription_redirect_path_validate($element, &$form_state) {
  * 'simple_subscription_form' theme function or template in your
  * theme layer.
  *
- * @return
- *   The form array.
+ * @return array The form array.
  */
 function simple_subscription_form() {
 
@@ -692,6 +735,7 @@ function simple_subscription_form() {
     '#size'           => $config['input_size'],
     '#required'       => TRUE,    //@FIXME doesn't seem to work !
     '#element_validate' => array('simple_subscription_email_validate', 'simple_subscription_verify_duplicate'),
+    '#attributes'     => array('class' => array('edit-mail')),
   );
 
   if ($config['input_label']) {
@@ -749,7 +793,14 @@ function simple_subscription_email_validate($element, &$form_state, $form) {
 }
 
 
-function simple_subscription_verify_duplicate($element, &$form_state, $form) {
+/**
+ * Verify that there is no duplicate subscription.
+ *
+ * @param $element
+ * @param $form_state
+ * @param $form
+ */
+function simple_subscription_verify_duplicate($element) {
   global $user;
   //load full $user object
   $account = user_load($user->uid);
@@ -759,9 +810,7 @@ function simple_subscription_verify_duplicate($element, &$form_state, $form) {
   }
 
   $user_subscribed = isset($account->simple_subscription);
-
-  if (!$user_subscribed
-      || ($user_subscribed && $subscription->uid != $account->uid)) {
+  if (!$user_subscribed || $subscription->uid != $account->uid) {
     form_set_error($element['#name'],
       t("The e-mail '@submitted_email' is already registered.",
         array('@submitted_email' => check_plain($element['#value'])))
@@ -776,9 +825,8 @@ function simple_subscription_verify_duplicate($element, &$form_state, $form) {
  * We invoke all the modules hooked on hook_simple_subscription, trigger all the actions
  * associated with the form submition and display the configured success message.
  *
- * @param string $form_id
- * @param string $form_values
- * @return void
+ * @param $form
+ * @param $form_state
  */
 function simple_subscription_form_submit($form, &$form_state) {
   
@@ -790,6 +838,8 @@ function simple_subscription_form_submit($form, &$form_state) {
   $data = array(
     'simple-subscription' => array(
       'mail'  => $subscription->mail,
+      'sid'  => $subscription->sid,
+      'hash'  => $subscription->hash,
     ),
   );
 
@@ -818,7 +868,12 @@ function simple_subscription_form_submit($form, &$form_state) {
 }
 
 
-
+/**
+ * Process the subscription of a user (create or update).
+ *
+ * @param $mail
+ * @return mixed|\stdClass
+ */
 function simple_subscription_process_subscription($mail) {
   global $user;
   $account = user_load($user->uid);  //load full $user object
@@ -859,6 +914,7 @@ function simple_subscription_process_subscription($mail) {
   }
   else {
     $msg = t("You were successfully added to the newsletter recipients.");
+    $subscription = new stdClass();
     $subscription->mail = $mail;
     $subscription->status = 1;
     $subscription->created = time();
@@ -879,8 +935,7 @@ function simple_subscription_process_subscription($mail) {
 /**
  * Returns the simple_subscription default values.
  *
- * @return
- *   An array with the block's default values
+ * @return array An array with the block's default values
  */
 function simple_subscription_get_default_values() {
 

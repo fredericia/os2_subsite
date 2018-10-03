@@ -137,7 +137,7 @@ function _slick_views_options_form(&$form, &$form_state, $view, $settings) {
 
   $elements['slide_thumbnail']['#description'] = t("Only needed if <em>Option set thumbnail</em> is provided. Maybe the same field as the main image, only different instance. Leave empty to not use thumbnail pager.");
 
-  $elements['slide_classes']['#description'] = t('If provided, individual slide will have this class, e.g.: to have different background with transparent images and skin Split, or Slick filtering. Be sure to have a Key, Label or Plain text under Formatter without links accordingly. Supported fields: Node title, Entityreference, Taxonomy term, List, Text.');
+  $elements['slide_classes']['#description'] = t('If provided, individual slide will have this class, e.g.: to have different background with transparent images and skin Split, or Slick filtering. Be sure to have a Key, Label or Plain text under Formatter without links accordingly. Supported fields: Node title, Entityreference, Taxonomy term, List, Text. Only works if using Fields under Format > Show.');
 
   $elements['id'] = array(
     '#type'         => 'textfield',

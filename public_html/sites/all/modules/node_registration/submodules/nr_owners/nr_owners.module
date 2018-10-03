@@ -48,3 +48,12 @@ function nr_owners_node_registration_node_access($node, $op, $account, $reason) 
     }
   }
 }
+
+/**
+ * Implements hook_node_registration_access().
+ */
+function nr_owners_node_registration_access($registration, $op, $account, $reason) {
+  if (in_array($op, array('edit', 'update')) && $registration->node->uid == $account->uid) {
+    return TRUE;
+  }
+}

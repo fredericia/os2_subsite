@@ -1,4 +1,9 @@
 
+Slick views 7.x-2.0-dev, 2017-06-01
+-----------------------------------
+- #2882663 by gausarts, giupenni: Notice: Undefined property: view::$row_index
+  in template_preprocess_views_view_fields().
+
 Slick views 7.x-2.0-dev, 2016-09-06
 -----------------------------------
 - #2795415 by gausarts: Support aspect ratio.

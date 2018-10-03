@@ -1,5 +1,4 @@
-
-form.simple-subscription-empty #edit-mail {
+form.simple-subscription-empty .edit-mail {
   font-style:italic;
   color: #7F7F7F;
 }

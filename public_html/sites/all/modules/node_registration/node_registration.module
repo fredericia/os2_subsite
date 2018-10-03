@@ -118,11 +118,17 @@ function node_registration_entity_view($entity, $entity_type, $view_mode, $langc
   if ('node' == $entity_type && _node_registration_node_type_enabled($entity->type) && !empty($entity->nid)) {
     global $user;
 
-    // Check registration page access.
+    // Find which fields to show. Unfortunately this is necessary for new extra fields, which are
+    // VISIBLE by default. Crazy Drupal...
+    $bundle_settings = field_bundle_settings('node', $entity->type);
+    $use_view_mode = !empty($bundle_settings['view_modes'][$view_mode]['custom_settings']) ? $view_mode : 'default';
+    $show_field = function($name) use ($bundle_settings, $use_view_mode) {
+      return !empty($bundle_settings['extra_fields']['display'][$name][$use_view_mode]['visible']);
+    };
+
+    // Add link to registration page.
     $path = 'node/' . $entity->nid . '/register';
     $item = menu_get_item($path);
-
-    // Add link.
     $entity->content['registration_link'] = array(
       '#type' => 'container',
       '#attributes' => array('class' => array('registration-link')),
@@ -156,12 +162,18 @@ function node_registration_entity_view($entity, $entity_type, $view_mode, $langc
       '#access' => !$access && (user_access('access devel information') || isset($_GET['debug'])),
     );
 
-    // Show the registration form in this view_mode?
-    $bundle_settings = field_bundle_settings($entity_type, $entity->type);
-    $use_view_mode = !empty($bundle_settings['view_modes'][$view_mode]['custom_settings']) ? $view_mode : 'default';
-    $show_form = !empty($bundle_settings['extra_fields']['display']['registration_form'][$use_view_mode]['visible']);
+    // Add link to log in to register.
+    $entity->content['log_in_to_register'] = array(
+      '#type' => 'container',
+      '#attributes' => array('class' => array('log-in-to-register')),
+      'content' => array(
+        '#markup' => 'Bla bla bla',
+      ),
+      '#access' => $show_field('log_in_to_register'),
+    );
 
-    if ($show_form) {
+    // Add registration form.
+    if ($show_field('registration_form')) {
       // Create empty registration (for form).
       $registration = entity_get_controller('node_registration')->create(array(
         'nid' => $entity->nid,
@@ -1299,6 +1311,43 @@ function node_registration_node_registration_update($registration) {
       if ($send && $subject && $message) {
         $registration->node = $node;
         node_registration_send_broadcast($node, $subject, $message, array($registration));
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_form_FORM_ID_alter() for views_form().
+ */
+function node_registration_form_views_form_alter(&$form, &$form_state) {
+  // VBO settings form.
+  if (isset($form_state['operation'])) {
+    $op = $form_state['operation'];
+
+    // Send mail action.
+    if ($op->operationId == 'action::system_send_email_action' && $op->entityType == 'node_registration') {
+      // Pre-fill the NR mail token.
+      if (isset($form['recipient']['#type']) && empty($form['recipient']['#default_value'])) {
+        $form['recipient']['#default_value'] = '[node-registration:mail]';
+      }
+
+      // Pre-fill mail text.
+      if (isset($form['message']['#type']) && empty($form['message']['#default_value'])) {
+        $form['message']['#default_value'] =
+          "Hello [node-registration:user:name],\n" .
+          "\n" .
+          "Your registration ID is [node-registration:registration-id].";
+      }
+
+      // Add NR tokens.
+      if (module_exists('token')) {
+        $form['token_help'] = array(
+          '#theme' => 'token_tree',
+          '#dialog' => TRUE,
+          '#token_types' => array('node-registration'),
+          '#global_types' => variable_get('node_registration_token_tree_globals', FALSE),
+        );
       }
     }
   }

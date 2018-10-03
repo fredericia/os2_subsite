@@ -15,6 +15,12 @@ function node_registration_toggle_flag($registration, $ajax, $field, $new_value)
   $registration->save();
 
   if ($ajax) {
+    // Drupal 7.39+ is paranoid about their Ajax URLs.
+    // @see ajax.options.success in ajax.js.
+    if (function_exists('ajax_set_verification_header')) {
+      ajax_set_verification_header();
+    }
+
     // What a mess, just to reload the page. CTools doesn't help here either.
     $commands = array(ajax_command_prepend('head', '<script>location.reload()</script>'));
     print drupal_json_encode($commands);
@@ -185,7 +191,10 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Registration success message'),
     '#default_value' => $settings->registration_success_message,
-    '#description' => t('You can use HTML. URL for the new registration: @registration_url.'),
+    '#description' =>
+      t('You can use HTML. URL for the new registration: @registration_url.') .
+      _node_registration_translation_description_for($settings->registration_success_message, ''),
+    '#nr_locale_kick' => array('context' => FALSE),
   );
   $form['register_cancel']['allow_cancellation_until'] = array(
     '#type' => 'textfield',
@@ -223,7 +232,7 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
   $form['numbers']['capacity']['#description'] .= ' ' . t("Empty or <code>0</code> means capacity is unlimited, waiting list will never be used.");
   $form['numbers']['allow_exceeding_capacity'] = array(
     '#type' => 'checkbox',
-    '#title' => t('Allow exceeding capacity?'),
+    '#title' => t('Allow exceeding capacity (waiting list)'),
     '#description' => t('Allows people to register even after capacity has been reached.'),
     '#default_value' => $settings->allow_exceeding_capacity,
   );
@@ -274,6 +283,14 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#collapsible' => TRUE,
     '#collapsed' => !$any_mail,
   );
+  if (module_exists('locale')) {
+    $menu_item = menu_get_item('admin/config/regional/translate/translate');
+    if (!empty($menu_item['access'])) {
+      $form['email']['#description'] = t('Mail texts are translatable via the <a href="!url">interface translation UI</a>. Saving this form adds relevant source strings.', array(
+        '!url' => url('admin/config/regional/translate/translate'),
+      ));
+    }
+  }
   $form['email']['sender_name'] = array(
     '#type' => 'textfield',
     '#title' => t('Sender name'),
@@ -325,11 +342,15 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => $settings->mail_to_registree_subject,
+    '#description' => trim(_node_registration_translation_description_for($settings->mail_to_registree_subject)),
+    '#nr_locale_kick' => TRUE,
   );
   $form['email']['mail_to_registree']['mail_to_registree_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => $settings->mail_to_registree_body,
+    '#description' => trim(_node_registration_translation_description_for($settings->mail_to_registree_body)),
+    '#nr_locale_kick' => TRUE,
   );
 
   $form['email']['mail_to_registree']['mail_for_waiting_list_registree'] = array(
@@ -347,11 +368,15 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => $settings->mail_for_waiting_list_registree_subject,
+    '#description' => trim(_node_registration_translation_description_for($settings->mail_for_waiting_list_registree_subject)),
+    '#nr_locale_kick' => TRUE,
   );
   $form['email']['mail_to_registree']['mail_for_waiting_list_registree']['mail_for_waiting_list_registree_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => $settings->mail_for_waiting_list_registree_body,
+    '#description' => trim(_node_registration_translation_description_for($settings->mail_for_waiting_list_registree_body)),
+    '#nr_locale_kick' => TRUE,
   );
 
   $form['email']['mail_to_admin'] = array(
@@ -377,11 +402,15 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => $settings->mail_to_admin_subject,
+    '#description' => trim(_node_registration_translation_description_for($settings->mail_to_admin_subject)),
+    '#nr_locale_kick' => TRUE,
   );
   $form['email']['mail_to_admin']['mail_to_admin_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => $settings->mail_to_admin_body,
+    '#description' => trim(_node_registration_translation_description_for($settings->mail_to_admin_body)),
+    '#nr_locale_kick' => TRUE,
   );
 
   $form['email']['reminder_mail_to_registrees'] = array(
@@ -407,11 +436,15 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => $settings->reminder_mail_to_registrees_subject,
+    '#description' => trim(_node_registration_translation_description_for($settings->reminder_mail_to_registrees_subject)),
+    '#nr_locale_kick' => TRUE,
   );
   $form['email']['reminder_mail_to_registrees']['reminder_mail_to_registrees_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => $settings->reminder_mail_to_registrees_body,
+    '#description' => trim(_node_registration_translation_description_for($settings->reminder_mail_to_registrees_body)),
+    '#nr_locale_kick' => TRUE,
   );
 
   $form['email']['cancel_mail_to_registree'] = array(
@@ -437,11 +470,15 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => $settings->cancel_mail_to_registree_subject,
+    '#description' => trim(_node_registration_translation_description_for($settings->cancel_mail_to_registree_subject)),
+    '#nr_locale_kick' => TRUE,
   );
   $form['email']['cancel_mail_to_registree']['cancel_mail_to_registree_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => $settings->cancel_mail_to_registree_body,
+    '#description' => trim(_node_registration_translation_description_for($settings->cancel_mail_to_registree_body)),
+    '#nr_locale_kick' => TRUE,
   );
 
   $form['email']['cancel_mail_to_admin'] = array(
@@ -467,11 +504,15 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => $settings->cancel_mail_to_admin_subject,
+    '#description' => trim(_node_registration_translation_description_for($settings->cancel_mail_to_admin_subject)),
+    '#nr_locale_kick' => TRUE,
   );
   $form['email']['cancel_mail_to_admin']['cancel_mail_to_admin_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => $settings->cancel_mail_to_admin_body,
+    '#description' => trim(_node_registration_translation_description_for($settings->cancel_mail_to_admin_body)),
+    '#nr_locale_kick' => TRUE,
   );
 
   $form['email']['unwaitinglist_mail_to_registree'] = array(
@@ -489,11 +530,15 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
     '#type' => 'textfield',
     '#title' => t('Subject'),
     '#default_value' => $settings->unwaitinglist_mail_to_registree_subject,
+    '#description' => trim(_node_registration_translation_description_for($settings->unwaitinglist_mail_to_registree_subject)),
+    '#nr_locale_kick' => TRUE,
   );
   $form['email']['unwaitinglist_mail_to_registree']['unwaitinglist_mail_to_registree_body'] = array(
     '#type' => 'textarea',
     '#title' => t('Body'),
     '#default_value' => $settings->unwaitinglist_mail_to_registree_body,
+    '#description' => trim(_node_registration_translation_description_for($settings->unwaitinglist_mail_to_registree_body)),
+    '#nr_locale_kick' => TRUE,
   );
 
   $form['show_messages'] = array(
@@ -529,6 +574,54 @@ function _node_registration_type_settings_form($type, $settings, $node = NULL) {
 }
 
 /**
+ * Returns a pretty translation status text for the given source string.
+ */
+function _node_registration_translation_description_for($source_text, $textgroup = NULL) {
+  if (!module_exists('locale')) {
+    return '';
+  }
+
+  $languages = _node_registration_translations_for($source_text, $textgroup);
+  if ($languages) {
+    return ' ' . t('Translation status: <span class="nr-translated">translated into: @languages</span>.', array(
+      '@languages' => implode(', ', $languages),
+    ));
+  }
+
+  return ' ' . t('Translation status: <span class="nr-not-translated">NOT translated</span>.');
+}
+
+/**
+ * Fetches languages this source string has been translated into.
+ *
+ * @see _node_registration_send_email()
+ */
+function _node_registration_translations_for($source_text, $textgroup = NULL) {
+  if (!module_exists('locale')) {
+    return array();
+  }
+
+  if ($textgroup === NULL) {
+    $textgroup = 'node_registration';
+  }
+
+  $translations = &drupal_static(__FUNCTION__, array());
+  $cid = md5($source_text . ':' . $textgroup);
+  $languages = &$translations[$cid];
+
+  if (!isset($languages)) {
+    $languages = db_query('
+      SELECT t.language
+      FROM {locales_source} s
+      JOIN {locales_target} t ON (s.lid = t.lid)
+      WHERE s.textgroup = ? AND context = ? AND source = ?
+    ', array('default', $textgroup, $source_text))->fetchCol();
+  }
+
+  return $languages;
+}
+
+/**
  * Add token tree to form array.
  */
 function _node_registration_add_token_tree(&$form) {
@@ -541,7 +634,7 @@ function _node_registration_add_token_tree(&$form) {
       'tokens' => array(
         '#theme' => 'token_tree',
         '#token_types' => array('node-registration', 'node', 'current-date'),
-        '#global_types' => FALSE,
+        '#global_types' => variable_get('node_registration_token_tree_globals', FALSE),
       ),
     );
   }
@@ -586,7 +679,7 @@ function node_registration_type_settings($form, &$form_state, $registration_type
 
   $form['register_cancel']['help'] = array(
     '#markup' => '<p>' . t('To disable registration on this <strong>content type</strong>, or to change the <strong>date field</strong>, go to the !settings_link.', array(
-      '!settings_link' => l(t('content type settings page'), 'admin/structure/types/manage/' . $type),
+      '!settings_link' => l(t('content type settings page'), 'admin/structure/types/manage/' . $type, array('fragment' => 'edit-registration')),
     )) . '</p>',
     '#weight' => -10,
   );
@@ -596,6 +689,9 @@ function node_registration_type_settings($form, &$form_state, $registration_type
     '#type' => 'submit',
     '#value' => t('Save'),
   );
+
+  $form['#submit'][] = 'node_registration_type_settings_submit';
+  $form['#submit'][] = 'node_registration_submit_locale_kick';
 
   return $form;
 }
@@ -1263,6 +1359,7 @@ function node_registration_registrations_settings_form($form, &$form_state, $nod
   );
 
   $form['#submit'][] = 'node_registration_registrations_settings_form_submit';
+  $form['#submit'][] = 'node_registration_submit_locale_kick';
 
   return $form;
 }
@@ -1282,6 +1379,46 @@ function node_registration_registrations_settings_form_submit($form, &$form_stat
   $node->registration->update($values);
 
   drupal_set_message(t('Registration node settings saved.'));
+}
+
+/**
+ * Submit handler for localized forms.
+ */
+function node_registration_submit_locale_kick($form, &$form_state) {
+  if (!module_exists('locale')) {
+    return;
+  }
+
+  // Find any enabled non-English language.
+  foreach (language_list() as $langcode => $language) {
+    if ($langcode != 'en' && $language->enabled) {
+      break;
+    }
+  }
+
+  // No point if we only have English.
+  if ($langcode == 'en') {
+    return;
+  }
+
+  // Recursively find ALL #nr_locale_kick elements and force their value into locale.
+  $walk = function($element) use (&$walk, $langcode) {
+    foreach (element_children($element) as $name) {
+      if (!empty($element[$name]['#nr_locale_kick'])) {
+        // Got one. Make sure this value exists in locale, so it's translatable via Locale's UI.
+        if (!empty($element[$name]['#value'])) {
+          $cfg = is_array($element[$name]['#nr_locale_kick']) ? $element[$name]['#nr_locale_kick'] : array();
+          $context = isset($cfg['context']) ? ($cfg['context'] ?: NULL) : 'node_registration';
+
+          locale($element[$name]['#value'], $context, $langcode);
+        }
+      }
+      elseif (is_array($element[$name])) {
+        $walk($element[$name]);
+      }
+    }
+  };
+  $walk($form_state['complete form']);
 }
 
 /**

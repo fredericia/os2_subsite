@@ -172,16 +172,6 @@ class SlickViews extends views_plugin_style {
 
       $settings['delta'] = $index;
 
-      if (!empty($class)) {
-        if ($this->get_field($index, $class) && $classes = $this->getFieldValue($row, $class, $index)) {
-          $classes = array_filter($classes);
-          $settings['slide_classes'] = empty($classes[$index]) ? '' : $classes[$index];
-        }
-        else {
-          $settings['slide_classes'] = '';
-        }
-      }
-
       // Uses all Views markups, ignoring Slick markups.
       if (empty($settings['slide_field_wrapper'])) {
         $slide['slide'] = $view->style_plugin->row_plugin->render($row);
@@ -274,6 +264,16 @@ class SlickViews extends views_plugin_style {
             $thumb['slide'] = array();
             $settings['type'] = 'text';
           }
+        }
+      }
+
+      if (!empty($class)) {
+        if ($this->get_field($index, $class) && $classes = $this->getFieldValue($row, $class, $index)) {
+          $classes = array_filter($classes);
+          $settings['slide_classes'] = empty($classes[$index]) ? '' : $classes[$index];
+        }
+        else {
+          $settings['slide_classes'] = '';
         }
       }
 

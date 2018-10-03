@@ -74,7 +74,11 @@ function simple_subscription_admin_form() {
   // Build the database query.
   $query = db_select('simple_subscription_subscriptions', 's')->fields('s');
   $query->leftJoin('users', 'u', 's.uid = u.uid');
-  $query->fields('u', array('name'))->extend('PagerDefault')->extend('TableSort')->orderByHeader($header)->limit(20);
+  $query = $query->fields('u', array('name'))
+                 ->extend('PagerDefault')
+                 ->extend('TableSort')
+                 ->orderByHeader($header)
+                 ->limit(20);
   $results = $query->execute();
 
   // Prepare the list of subscribers.
@@ -99,10 +103,6 @@ function simple_subscription_admin_form() {
 
   $form['submit'][] = array(
     '#type' => 'submit',
-    '#value' => t('Add'),
-  );
-  $form['submit'][] = array(
-    '#type' => 'submit',
     '#value' => t('Delete'),
   );
 
@@ -117,12 +117,8 @@ function simple_subscription_admin_form_validate($form, &$form_state) {
 }
 
 function simple_subscription_admin_form_submit($form, &$form_state) {
-  $subscribers = array_filter($form_state['values']['subscriptions']);
-  $count = 0;
-  foreach ($subscribers as $sid) {
-    simple_subscription_delete($sid);
-    $count++;
-  }
+  simple_subscription_delete_multiple(array_filter($form_state['values']['subscriptions']));
+  $count = count($form_state['values']['subscriptions']);
   drupal_set_message(format_plural($count, '1 subscription deleted.', '@count subscriptions deleted.'));
 }
 
@@ -194,17 +190,12 @@ function simple_subscription_export_form_submit($form, &$form_state) {
   $query = db_select('simple_subscription_subscriptions', 's')->fields('s', $fields);
   $results = $query->execute();
 
-  switch ($form_state['values']['delimiter']) {
-    case 1:
-      $del = ',';
-      break;
-    case 2:
-      $del = ';';
-      break;
-    case 3:
-      $del = "\t";
-      break;
-  }
+  $delimiters = array(
+    1 => ',',
+    2 => ';',
+    3 => 'tab',
+  );
+  $del = $delimiters[$form_state['values']['delimiter']];
 
   // Append table headers
   if ($form_state['values']['skip'] == FALSE) {

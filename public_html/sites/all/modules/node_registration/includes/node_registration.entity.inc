@@ -36,6 +36,7 @@ function node_registration_entity_info() {
       'entity class' => 'NodeRegistrationEntityClass',
       'base table' => 'node_registration',
       'fieldable' => TRUE,
+      'redirect' => FALSE,
       'entity keys' => array(
         'id' => 'registration_id',
         'bundle' => 'type',
@@ -384,6 +385,13 @@ function node_registration_entity_property_info_alter(&$info) {
   $properties['email'] = array(
     'label' => t("E-mail address"),
     'description' => t("The registree's e-mail address."),
+    'type' => 'text',
+    'schema field' => 'email',
+    'setter callback' => 'entity_property_verbatim_set',
+  );
+  $properties['mail'] = array(
+    'label' => t("E-mail address"),
+    'description' => t("Alias for [node-registration:email] because Drupal likes [x:mail] tokens better."),
     'type' => 'text',
     'schema field' => 'email',
     'setter callback' => 'entity_property_verbatim_set',

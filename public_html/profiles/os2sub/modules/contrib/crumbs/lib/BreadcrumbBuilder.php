@@ -4,20 +4,23 @@
 class crumbs_BreadcrumbBuilder {
 
   /**
-   * @var crumbs_PluginEngine
+   * @var crumbs_PluginSystem_PluginEngine
    */
   protected $pluginEngine;
 
   /**
-   * @param crumbs_PluginEngine $pluginEngine
+   * @param crumbs_PluginSystem_PluginEngine $pluginEngine
    */
   function __construct($pluginEngine) {
     $this->pluginEngine = $pluginEngine;
   }
 
   /**
-   * @param array $trail
-   * @return array
+   * @param array[] $trail
+   *   Trail items, keyed by system path.
+   *
+   * @return array[]
+   *   Breadcrumb items, keyed numerically.
    */
   function buildBreadcrumb($trail) {
     $breadcrumb = array();

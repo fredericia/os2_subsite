@@ -35,6 +35,13 @@ function schema_organization_metatag_info() {
     'weight' => ++$weight,
   ) + $defaults;
 
+  $info['tags']['schema_organization.additionalType'] = array(
+    'class' => 'SchemaOrganizationType',
+    'label' => t('additionalType'),
+    'description' => t(" An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in."),
+    'weight' => ++$weight,
+  ) + $defaults;
+
   $info['tags']['schema_organization.@id'] = array(
     'label' => t('@id'),
     'description' => t('REQUIRED BY GOOGLE. Globally unique @id, usually a url, used to to link other properties to this object.'),
@@ -65,16 +72,15 @@ function schema_organization_metatag_info() {
 
   $info['tags']['schema_organization.telephone'] = array(
     'label' => t('telephone'),
-    'description' => t('RECOMMENDED BY GOOGLE. The telephone of the organization.'),
-    'multiple' => TRUE,
+    'description' => t("RECOMMENDED BY GOOGLE. A business phone number meant to be the primary contact method for customers. Be sure to include the country code and area code in the phone number."),
     'weight' => ++$weight,
   ) + $defaults;
 
-  $info['tags']['schema_organization.acceptsReservations'] = array(
-    'class' => 'SchemaTrueFalseBase',
-    'label' => t('acceptsReservations'),
-    'description' => t('RECOMMENDED BY GOOGLE FOR Food Establishments.'),
-    'multiple' => FALSE,
+  $info['tags']['schema_organization.contactPoint'] = array(
+    'class' => 'SchemaContactPointBase',
+    'label' => t('contactPoint'),
+    'description' => t("Telephone and other contact point information. See <a href=\":url\">Google Corporate Contact</a>.", [":url" => "https://developers.google.com/search/docs/data-types/corporate-contact"]),
+    'multiple' => TRUE,
     'weight' => ++$weight,
   ) + $defaults;
 
@@ -92,6 +98,21 @@ function schema_organization_metatag_info() {
     'description' => t('Additional urls, such as wikipedia page or social profiles.'),
     'multiple' => TRUE,
     'url' => TRUE,
+    'weight' => ++$weight,
+  ) + $defaults;
+
+  $info['tags']['schema_organization.brand'] = array(
+    'class' => 'SchemaBrandBase',
+    'label' => t('brand'),
+    'description' => t('The brand of the organization.'),
+    'weight' => ++$weight,
+  ) + $defaults;
+
+  $info['tags']['schema_organization.acceptsReservations'] = array(
+    'class' => 'SchemaTrueFalseBase',
+    'label' => t('acceptsReservations'),
+    'description' => t('RECOMMENDED BY GOOGLE FOR Food Establishments.'),
+    'multiple' => FALSE,
     'weight' => ++$weight,
   ) + $defaults;
 

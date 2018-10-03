@@ -67,14 +67,6 @@ function node_registration_action_info() {
       'behavior' => array('changes_property'),
       'triggers' => array(),
     ),
-
-    // Configurable actions.
-    'node_registration_send_mail_action' => array(
-      'type' => 'entity',
-      'label' => t('Send selected users an e-mail'),
-      'configurable' => FALSE,
-      'vbo_configurable' => TRUE,
-    ),
   );
 }
 
@@ -114,34 +106,6 @@ function node_registration_rules_condition_info() {
     'base' => 'node_registration_rules_condition_is_cancelled',
   );
   return $items;
-}
-
-/**
- * Action handler: send e-mail.
- */
-function node_registration_send_mail_action($registration, $context) {
-  $token_data = array(
-    'node' => node_load($registration->nid),
-    'node-registration' => $registration,
-    'from' => array(
-      'from_name' => $context['from_name'],
-      'from_email' => $context['from_email'],
-    ),
-  );
-
-  $options = array();
-  if (!empty($context['bcc'])) {
-    $options['bcc'] = $context['bcc'];
-  }
-
-  $recipient = $registration->email;
-  if (!empty($context['recipientfield'])) {
-    $recipient = token_replace($context['recipientfield'], $token_data, array('clear' => TRUE, 'sanitize' => FALSE));
-    $recipient = implode(', ', array_map('trim', array_filter(explode(',', $recipient))));
-  }
-  $options['alter'] = 'node_registration_send_mail_action';
-
-  return _node_registration_send_email($recipient, $context['subject'], $context['message'], $token_data, $options);
 }
 
 /**

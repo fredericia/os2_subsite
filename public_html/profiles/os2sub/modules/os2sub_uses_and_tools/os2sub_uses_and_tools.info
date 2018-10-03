@@ -230,4 +230,3 @@ features[variable][] = extlink_mailto_class
 features[variable][] = extlink_subdomains
 features[variable][] = extlink_target
 features[variable][] = scheduler_date_format
-project path = sites/fic.subsites.fredericia.dk7modules/features

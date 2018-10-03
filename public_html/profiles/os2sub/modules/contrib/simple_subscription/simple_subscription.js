@@ -6,7 +6,7 @@
          * If the field is empty, this adds a class to the form and the predefined text to the e-mail
          * input field
          */
-        $('#simple-subscription-form #edit-mail', context).blur(function() {
+        $('#simple-subscription-form .edit-mail', context).blur(function() {
           var val = $(this).val();
           if (!val) {
             $('#simple-subscription-form').addClass('simple-subscription-empty');
@@ -30,7 +30,7 @@
         $('#simple-subscription-form', context).submit(function() {
           if ($(this).hasClass('simple-subscription-empty')) {
             $('#simple-subscription-form').removeClass('simple-subscription-empty');
-            $('#simple-subscription-form #edit-mail').val("");
+            $('#simple-subscription-form .edit-mail').val("");
           }
         });    
         

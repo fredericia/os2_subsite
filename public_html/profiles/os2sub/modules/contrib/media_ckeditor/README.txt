@@ -10,7 +10,9 @@ INTRODUCTION
 ------------
 
 Current Maintainers:
+ * Joseph Olstad <http://drupal.org/user/1321830>
 
+Previous Maintainers:
  * Devin Carlson <http://drupal.org/user/290182>
 
 Media CKEditor provides a bridge between Media and the stand-alone CKEditor
@@ -33,13 +35,19 @@ CKEditor Library
    http://ckeditor.com/download
 
 CKEditor Library Plugins
- * CKEditor Line Utilities plugin - Compatible with the installed version of CKEditor.
+ * CKEditor Line Utilities plugin - Compatible with CKEditor.
    http://ckeditor.com/addon/lineutils
  * CKEditor Widget plugin - Compatible with the installed version of CKEditor.
    http://ckeditor.com/addon/widget
 
 INSTALLATION
 ------------
+
+***NEW***
+  For a quicker and easier setup, follow this recipe
+  https://www.drupal.org/node/2843391
+  use this README.txt as additional troubleshooting
+***end NEW***
 
 * Install Media CKEditor via the standard Drupal installation process:
   'http://drupal.org/node/895232'.

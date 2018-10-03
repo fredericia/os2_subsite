@@ -249,52 +249,52 @@ $handler->display->display_options['fields']['views_bulk_operations']['vbo_setti
 $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
   'action::node_registration_attend_action' => array(
     'selected' => 1,
+    'postpone_processing' => 0,
     'skip_confirmation' => 0,
     'override_label' => 0,
     'label' => '',
-    'postpone_processing' => 0,
   ),
   'action::node_registration_cancel_action' => array(
     'selected' => 1,
+    'postpone_processing' => 0,
     'skip_confirmation' => 0,
     'override_label' => 0,
     'label' => '',
-    'postpone_processing' => 0,
   ),
   'action::views_bulk_operations_delete_item' => array(
     'selected' => 1,
+    'postpone_processing' => 0,
     'skip_confirmation' => 0,
     'override_label' => 0,
     'label' => '',
-    'postpone_processing' => 0,
   ),
-  'action::node_registration_send_mail_action' => array(
+  'action::system_send_email_action' => array(
     'selected' => 1,
+    'postpone_processing' => 0,
     'skip_confirmation' => 0,
     'override_label' => 0,
     'label' => '',
-    'postpone_processing' => 0,
   ),
   'action::node_registration_unattend_action' => array(
     'selected' => 1,
+    'postpone_processing' => 0,
     'skip_confirmation' => 0,
     'override_label' => 0,
     'label' => '',
-    'postpone_processing' => 0,
   ),
   'action::node_registration_unverify_action' => array(
     'selected' => 1,
+    'postpone_processing' => 0,
     'skip_confirmation' => 0,
     'override_label' => 0,
     'label' => '',
-    'postpone_processing' => 0,
   ),
   'action::node_registration_verify_action' => array(
     'selected' => 1,
+    'postpone_processing' => 0,
     'skip_confirmation' => 0,
     'override_label' => 0,
     'label' => '',
-    'postpone_processing' => 0,
   ),
 );
 /* Field: Node registration: Registration ID */
@@ -360,6 +360,7 @@ $handler->display->display_options['fields']['verified']['field'] = 'verified';
 $handler->display->display_options['fields']['verified']['element_class'] = 'verified [verified_1]';
 $handler->display->display_options['fields']['verified']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['verified']['not'] = 0;
+$handler->display->display_options['fields']['verified']['togglable'] = 1;
 /* Field: Node registration: Attended */
 $handler->display->display_options['fields']['attended']['id'] = 'attended';
 $handler->display->display_options['fields']['attended']['table'] = 'node_registration';
@@ -367,6 +368,7 @@ $handler->display->display_options['fields']['attended']['field'] = 'attended';
 $handler->display->display_options['fields']['attended']['element_class'] = 'attended [attended_1]';
 $handler->display->display_options['fields']['attended']['element_default_classes'] = FALSE;
 $handler->display->display_options['fields']['attended']['not'] = 0;
+$handler->display->display_options['fields']['attended']['togglable'] = 1;
 /* Field: Node registration: Edit link */
 $handler->display->display_options['fields']['edit_node_registration']['id'] = 'edit_node_registration';
 $handler->display->display_options['fields']['edit_node_registration']['table'] = 'views_entity_node_registration';
@@ -480,6 +482,7 @@ $handler->display->display_options['menu']['title'] = 'Registrations';
 $handler->display->display_options['menu']['weight'] = '0';
 $handler->display->display_options['menu']['name'] = 'management';
 $handler->display->display_options['tab_options']['weight'] = '0';
+
 
   // Remove VBO fields if not available.
   if (!$vbo) {
