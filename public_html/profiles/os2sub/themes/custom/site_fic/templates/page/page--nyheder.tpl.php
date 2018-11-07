@@ -230,16 +230,16 @@
               <?php print $theme_settings['contact_information']['working_hours']; ?></br>
             <?php endif; ?>
 
-            <?php if (!empty($theme_settings['contact_information']['cvr_nr']) ) : ?>
-              <br/><?php print $theme_settings['contact_information']['cvr_nr']; ?></br>
+            <?php if (!empty($theme_settings['contact_information']['cvr_no'])) : ?>
+              <br/><?php print $theme_settings['contact_information']['cvr_no']; ?></br>
             <?php endif; ?>
 
-            <?php if (!empty($theme_settings['contact_information']['giro_nr']) ) : ?>
-              <?php print $theme_settings['contact_information']['giro_nr']; ?></br>
+            <?php if (!empty($theme_settings['contact_information']['giro_no'])) : ?>
+              <?php print $theme_settings['contact_information']['giro_no']; ?></br>
             <?php endif; ?>
 
-            <?php if (!empty($theme_settings['contact_information']['ean']) ) : ?>
-              <?php print $theme_settings['contact_information']['ean']; ?></br>
+            <?php if (!empty($theme_settings['contact_information']['ean_no'])) : ?>
+              <?php print $theme_settings['contact_information']['ean_no']; ?></br>
             <?php endif; ?>
           </p>
         </div>

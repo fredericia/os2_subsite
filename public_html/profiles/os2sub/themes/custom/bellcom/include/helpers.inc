@@ -98,6 +98,9 @@ function _bellcom_collect_theme_settings() {
   $settings['contact_information']['phone_readable'] = theme_get_setting('phone_readable');
   $settings['contact_information']['email'] = theme_get_setting('email');
   $settings['contact_information']['working_hours'] = theme_get_setting('working_hours');
+  $settings['contact_information']['cvr_no'] = theme_get_setting('cvr_no');
+  $settings['contact_information']['giro_no'] = theme_get_setting('giro_no');
+  $settings['contact_information']['ean_no'] = theme_get_setting('ean_no');
 
   // Social links
   $settings['social_links']['facebook']['active'] = theme_get_setting('facebook');

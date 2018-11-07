@@ -195,6 +195,27 @@ function _theme_settings_form(&$form, $form_state) {
     '#default_value' => theme_get_setting('working_hours'),
   );
 
+  // CVR no.
+  $form['options']['contact_information']['cvr_no'] = array(
+    '#type' => 'textfield',
+    '#title' => t('CVR nummer'),
+    '#default_value' => theme_get_setting('cvr_no'),
+  );
+
+  // Giro no.
+  $form['options']['contact_information']['giro_no'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Giro nummer'),
+    '#default_value' => theme_get_setting('giro_no'),
+  );
+
+  // EAN no.
+  $form['options']['contact_information']['ean_no'] = array(
+    '#type' => 'textfield',
+    '#title' => t('EAN nummer'),
+    '#default_value' => theme_get_setting('ean_no'),
+  );
+
   /*
 |--------------------------------------------------------------------------
 | Social links
