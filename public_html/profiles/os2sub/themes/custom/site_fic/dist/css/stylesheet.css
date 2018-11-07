@@ -14528,6 +14528,13 @@ body.page-search.page-search-content .field.field-name-field-sektion.field-type-
   .pane-menu-tree .menu ul a {
     font-size: 1.4em !important; }
 
+.pane-node-field-os2web-kulturnaut-date .date-display-start {
+  display: block; }
+
+.pane-node-field-os2web-kulturnaut-date .date-display-single .date-display-start,
+.pane-node-field-os2web-kulturnaut-date .date-display-single .date-display-end {
+  display: inline-block; }
+
 @media (max-width: 768px - 1px) {
   .page-node .pane-menu-tree {
     display: none !important; } }

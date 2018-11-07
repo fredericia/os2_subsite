@@ -89,6 +89,21 @@
   }
 }
 
+.pane-node-field-os2web-kulturnaut-date {
+
+  .date-display-start {
+    display: block;
+  }
+
+  .date-display-single {
+
+    .date-display-start,
+    .date-display-end {
+      display: inline-block;
+    }
+  }
+}
+
 // --------------------------------------------------
 // Variants
 // --------------------------------------------------
