@@ -128,4 +128,11 @@
         $parent.toggleClass('visible');
     })
 
+    // All links to PDFs should open in a new window.
+    $('a[href$=".pdf"]').each(function() {
+        var $element = $(this);
+
+        $element.attr('target', '_blank');
+    });
+
 })(jQuery);
