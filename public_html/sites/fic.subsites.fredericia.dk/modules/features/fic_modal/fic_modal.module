@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FIC modal feature.
+ */
+
+include_once 'fic_modal.features.inc';
