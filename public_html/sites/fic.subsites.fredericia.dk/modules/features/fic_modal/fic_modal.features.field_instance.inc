@@ -81,6 +81,54 @@ function fic_modal_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-modal-field_node_ids'.
+  $field_instances['node-modal-field_node_ids'] = array(
+    'bundle' => 'modal',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Vælg den/de sider som modalen også skal vises på.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'node_reference',
+        'settings' => array(),
+        'type' => 'node_reference_default',
+        'weight' => 3,
+      ),
+      'spotbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_node_ids',
+    'label' => 'Indhold',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'node_reference',
+      'settings' => array(
+        'autocomplete_match' => 'contains',
+        'autocomplete_path' => 'node_reference/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'node_reference_autocomplete',
       'weight' => 3,
     ),
   );
@@ -115,7 +163,7 @@ function fic_modal_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_sektion',
     'label' => 'Sektion',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -123,18 +171,18 @@ function fic_modal_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'content_taxonomy_opt_groups' => 0,
-      ),
+      'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Indhold');
   t('Sektion');
+  t('Vælg den/de sider som modalen også skal vises på.');
 
   return $field_instances;
 }

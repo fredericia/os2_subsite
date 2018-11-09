@@ -40,19 +40,19 @@ function fic_modal_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'title' => array(
-          'weight' => '2',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '6',
+          'weight' => '5',
         ),
         'redirect' => array(
           'weight' => '4',
         ),
         'xmlsitemap' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
       ),
       'display' => array(),

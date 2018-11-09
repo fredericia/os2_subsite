@@ -58,5 +58,51 @@ function fic_modal_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['views-fic_modal-block_node'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'fic_modal-block_node',
+    'i18n_block_language' => array(),
+    'i18n_mode' => 0,
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'adminimal' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'adminimal',
+        'weight' => 0,
+      ),
+      'bellcom' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bellcom',
+        'weight' => 0,
+      ),
+      'bootstrap' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootstrap',
+        'weight' => 0,
+      ),
+      'site' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'site',
+        'weight' => 0,
+      ),
+      'site_fic' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'site_fic',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 0,
+  );
+
   return $export;
 }

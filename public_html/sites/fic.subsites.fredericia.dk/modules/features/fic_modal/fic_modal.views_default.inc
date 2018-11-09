@@ -65,6 +65,16 @@ function fic_modal_views_default_views() {
   $handler->display->display_options['arguments']['field_sektion_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_sektion_tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_sektion_tid']['break_phrase'] = TRUE;
+  /* Kontekstuelt filter: Indhold: Indhold (field_node_ids) */
+  $handler->display->display_options['arguments']['field_node_ids_nid']['id'] = 'field_node_ids_nid';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['table'] = 'field_data_field_node_ids';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['field'] = 'field_node_ids_nid';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['summary_options']['items_per_page'] = '25';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -80,8 +90,39 @@ function fic_modal_views_default_views() {
     'modal' => 'modal',
   );
 
-  /* Display: Blok */
-  $handler = $view->new_display('block', 'Blok', 'block');
+  /* Display: Blok - sektion */
+  $handler = $view->new_display('block', 'Blok - sektion', 'block');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Kontekstuelt filter: Indhold: Sektion (field_sektion) */
+  $handler->display->display_options['arguments']['field_sektion_tid']['id'] = 'field_sektion_tid';
+  $handler->display->display_options['arguments']['field_sektion_tid']['table'] = 'field_data_field_sektion';
+  $handler->display->display_options['arguments']['field_sektion_tid']['field'] = 'field_sektion_tid';
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_sektion_tid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_options']['limit'] = TRUE;
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_options']['vocabularies'] = array(
+    'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
+  );
+  $handler->display->display_options['arguments']['field_sektion_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_sektion_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_sektion_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_sektion_tid']['break_phrase'] = TRUE;
+
+  /* Display: Blok - node */
+  $handler = $view->new_display('block', 'Blok - node', 'block_node');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Kontekstuelt filter: Indhold: Indhold (field_node_ids) */
+  $handler->display->display_options['arguments']['field_node_ids_nid']['id'] = 'field_node_ids_nid';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['table'] = 'field_data_field_node_ids';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['field'] = 'field_node_ids_nid';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_node_ids_nid']['summary_options']['items_per_page'] = '25';
   $translatables['fic_modal'] = array(
     t('Master'),
     t('mere'),
@@ -91,7 +132,8 @@ function fic_modal_views_default_views() {
     t('Stigende'),
     t('Faldende'),
     t('Alle'),
-    t('Blok'),
+    t('Blok - sektion'),
+    t('Blok - node'),
   );
   $export['fic_modal'] = $view;
 
