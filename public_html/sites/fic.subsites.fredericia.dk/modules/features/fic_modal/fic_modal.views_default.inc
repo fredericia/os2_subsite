@@ -49,20 +49,22 @@ function fic_modal_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Kontekstuelt filter: Felt: Sektion (field_section_id) */
-  $handler->display->display_options['arguments']['field_section_id_tid']['id'] = 'field_section_id_tid';
-  $handler->display->display_options['arguments']['field_section_id_tid']['table'] = 'field_data_field_section_id';
-  $handler->display->display_options['arguments']['field_section_id_tid']['field'] = 'field_section_id_tid';
-  $handler->display->display_options['arguments']['field_section_id_tid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['field_section_id_tid']['exception']['title'] = 'Alle';
-  $handler->display->display_options['arguments']['field_section_id_tid']['default_argument_type'] = 'taxonomy_tid';
-  $handler->display->display_options['arguments']['field_section_id_tid']['default_argument_options']['node'] = TRUE;
-  $handler->display->display_options['arguments']['field_section_id_tid']['default_argument_options']['vocabularies'] = array(
+  /* Kontekstuelt filter: Indhold: Sektion (field_sektion) */
+  $handler->display->display_options['arguments']['field_sektion_tid']['id'] = 'field_sektion_tid';
+  $handler->display->display_options['arguments']['field_sektion_tid']['table'] = 'field_data_field_sektion';
+  $handler->display->display_options['arguments']['field_sektion_tid']['field'] = 'field_sektion_tid';
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_sektion_tid']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_options']['node'] = TRUE;
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_options']['limit'] = TRUE;
+  $handler->display->display_options['arguments']['field_sektion_tid']['default_argument_options']['vocabularies'] = array(
     'os2web_base_tax_site_structure' => 'os2web_base_tax_site_structure',
   );
-  $handler->display->display_options['arguments']['field_section_id_tid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['field_section_id_tid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['field_section_id_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_sektion_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_sektion_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_sektion_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_sektion_tid']['break_phrase'] = TRUE;
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';

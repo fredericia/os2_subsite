@@ -81,12 +81,12 @@ function fic_modal_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
-  // Exported field_instance: 'node-modal-field_section_id'.
-  $field_instances['node-modal-field_section_id'] = array(
+  // Exported field_instance: 'node-modal-field_sektion'.
+  $field_instances['node-modal-field_sektion'] = array(
     'bundle' => 'modal',
     'default_value' => NULL,
     'deleted' => 0,
@@ -97,7 +97,7 @@ function fic_modal_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'spotbox' => array(
         'label' => 'above',
@@ -113,9 +113,9 @@ function fic_modal_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_section_id',
+    'field_name' => 'field_sektion',
     'label' => 'Sektion',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
@@ -123,9 +123,11 @@ function fic_modal_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'content_taxonomy_opt_groups' => 0,
+      ),
       'type' => 'options_buttons',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
