@@ -588,19 +588,32 @@ function _site_fic_get_header_bottom_links(&$vars, $term) {
     $vars['opening_hours_sub_text'] = $opening_hours_sub_text['safe_value'];
   }
 
-  // Get opening hours url from term.
-  $opening_hours_nid = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_opening_nid');
-  if (!empty($opening_hours_nid)) {
-    $opening_hours_node = node_load($opening_hours_nid[0]['nid']);
-    _site_fic_get_node_translation($opening_hours_node);
-    $vars['opening_hours_node_url'] = url('modal/node/' . $opening_hours_node->nid . '/nojs');
-  }
-
   // Get opening hours open type from term.
   $opening_hours_open_type = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_opening_type');
   if (!empty($opening_hours_open_type)) {
     $opening_hours_open_type = reset($opening_hours_open_type);
+
     $vars['opening_hours_open_type'] = $opening_hours_open_type['value'];
+  }
+
+  if ($vars['opening_hours_open_type'] == 'modal') {
+    // Get opening hours url from term.
+    $opening_hours_nid = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_opening_nid');
+    if (!empty($opening_hours_nid)) {
+      $opening_hours_node = node_load($opening_hours_nid[0]['nid']);
+      _site_fic_get_node_translation($opening_hours_node);
+      $vars['opening_hours_node_url'] = url('modal/node/' . $opening_hours_node->nid . '/nojs');
+    }
+  } else {
+
+    // Get from URL field.
+    $opening_hours_open_url = _site_fic_field_get_item('taxonomy_term', $term, 'field_os2web_base_opening_url');
+
+    if (!empty($opening_hours_open_url)) {
+      $opening_hours_open_url = reset($opening_hours_open_url);
+
+      $vars['opening_hours_node_url'] = $opening_hours_open_url['url'];
+    }
   }
 }
 
