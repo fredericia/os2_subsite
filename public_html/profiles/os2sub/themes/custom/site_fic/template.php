@@ -436,8 +436,17 @@ function site_fic_preprocess_views_slideshow_pager_field_field(&$vars) {
     return;
   }
   $tid = $view->result[$vars['count']]->tid;
+  $url = url('taxonomy/term/' . $tid);
   $link_text = $view->result[$vars['count']]->field_name_field_et[0]['raw']['safe_value'];
-  $vars['field_rendered'] = "<a href='" . url('taxonomy/term/' . $tid) . "'><span>$link_text</span></a>";
+
+  // External URL.
+  $term = taxonomy_term_load($tid);
+
+  if ($field = field_get_items('taxonomy_term', $term, 'field_redirect_url')) {
+    $url = $field[0]['url'];
+  }
+
+  $vars['field_rendered'] = "<a href='" . $url . "'><span>$link_text</span></a>";
 }
 
 /**
