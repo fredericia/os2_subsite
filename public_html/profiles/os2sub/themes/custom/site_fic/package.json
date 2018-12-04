@@ -2,34 +2,44 @@
   "private": true,
   "scripts": {
     "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development grunt build",
-    "watch": "cross-env NODE_ENV=development grunt watch",
+    "development": "cross-env NODE_ENV=development gulp build",
+    "watch": "cross-env NODE_ENV=development gulp watch",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production",
-    "updep": "rm -rf ./node_modules && rm -rf ./src/vendor && npm install && bower install"
-  },
-  "devDependencies": {
-    "cross-env": "^5.1.4",
-    "grunt": "^1.0.2",
-    "grunt-autoprefixer": "~3.0.4",
-    "grunt-contrib-clean": "~1.1.0",
-    "grunt-contrib-concat": "~1.0.1",
-    "grunt-contrib-uglify": "^3.3.0",
-    "grunt-contrib-watch": "~1.0.0",
-    "grunt-modernizr": "^1.0.2",
-    "grunt-sass": "^2.1.0",
-    "grunt-scss-lint": "^0.5.0",
-    "grunt-shell": "^2.1.0"
+    "production": "cross-env NODE_ENV=production"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.3.7",
     "content-transitions": "^1.0.4",
+    "element-wrapper-link": "^1.0.0",
     "flexy-layout": "^1.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "jquery-sticky": "^1.0.4",
     "js-cookie": "^2.2.0",
-    "lity": "^2.3.0",
+    "lity": "^2.3.1",
     "readable-bootstrap-breakpoints": "^1.0.2",
     "sidr": "^2.2.1",
     "sidr-bootstrap-theme": "^1.0.2",
     "slinky-bootstrap-theme": "^1.0.2",
     "stacktable.js": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "browser-sync": "^2.26.3",
+    "cross-env": "^5.2.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^3.2.0",
+    "gulp-modernizr": "^2.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "npm-check-updates": "^2.15.0",
+    "run-sequence": "^2.2.1"
   }
 }

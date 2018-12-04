@@ -44,11 +44,11 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
-}
+@include media-breakpoint-up(xs) {}
 
 // Mobile - only
 @include media-breakpoint-only(xs) {
+
   .search-form,
   .views-exposed-form {
     position: absolute;

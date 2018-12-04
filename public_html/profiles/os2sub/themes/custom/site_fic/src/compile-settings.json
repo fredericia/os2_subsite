@@ -1,28 +1,26 @@
 {
-  "autoprefixer": {
-    "browsers": [
-      "Android 2.3",
-      "Android >= 4",
-      "Chrome >= 20",
-      "Firefox >= 24",
-      "Explorer >= 8",
-      "iOS >= 6",
-      "Opera >= 12",
-      "Safari >= 6"
-    ]
+  "options": {
+    "proxy": "http://f-i-c.test"
   },
-  "concat": {
-    "core": [
-      "src/vendor/bootstrap-sass/assets/javascripts/bootstrap.js",
-      "src/vendor/jquery-sticky/jquery.sticky.js",
-      "node_modules/sidr/dist/jquery.sidr.js",
-      "node_modules/stacktable.js/stacktable.js",
-      "node_modules/lity/dist/lity.js",
-      "node_modules/js-cookie/src/js.cookie.js",
-      "src/js/custom-slinky.js",
-      "src/js/page-layout.js",
-      "src/js/header.js",
-      "src/js/init.js"
-    ]
-  }
+  "javascripts": [
+    "node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
+    "node_modules/jquery-sticky/jquery.sticky.js",
+    "node_modules/sidr/dist/jquery.sidr.js",
+    "node_modules/stacktable.js/stacktable.js",
+    "node_modules/lity/dist/lity.js",
+    "node_modules/js-cookie/src/js.cookie.js",
+    "src/javascripts/custom-slinky.js",
+    "src/javascripts/page-layout.js",
+    "src/javascripts/header.js",
+    "src/javascripts/app.js"
+  ],
+  "styles": [
+    "src/styles/stylesheet.scss"
+  ],
+  "fonts": [
+    "node_modules/font-awesome/fonts/*",
+    "node_modules/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.*",
+    "src/fonts/*"
+  ]
 }
+

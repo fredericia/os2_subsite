@@ -21,16 +21,19 @@ function site_fic_preprocess_html(&$variables) {
   // Add out fonts from Google Fonts API.
   drupal_add_css('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i', array('type' => 'external'));
 
-  drupal_add_js($theme_path . '/dist/js/modernizr.js', [
-    'type' => 'file',
-    'scope' => 'footer',
-    'group' => JS_LIBRARY,
-  ]);
-  drupal_add_js($theme_path . '/dist/js/core.js', [
-    'type' => 'file',
-    'scope' => 'footer',
-    'group' => JS_THEME,
-  ]);
+  // Add javascript files
+  drupal_add_js($theme_path . '/dist/javascripts/modernizr.js',
+    [
+      'type' => 'file',
+      'scope' => 'footer',
+      'group' => JS_LIBRARY,
+    ]);
+  drupal_add_js($theme_path . '/dist/javascripts/app.js',
+    [
+      'type' => 'file',
+      'scope' => 'footer',
+      'group' => JS_THEME,
+    ]);
 
   // Load jQuery UI.
   drupal_add_library('system', 'ui');
