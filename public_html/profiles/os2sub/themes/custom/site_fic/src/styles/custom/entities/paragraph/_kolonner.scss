@@ -35,29 +35,29 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
 
 }
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
 
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
 
   .social-icons {}
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
 
 
@@ -65,13 +65,13 @@
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
 
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
 
 }

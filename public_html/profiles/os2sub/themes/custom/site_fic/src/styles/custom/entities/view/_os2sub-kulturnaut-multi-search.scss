@@ -114,7 +114,7 @@
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   .page-soeg h2.pane-title {
     padding-bottom: 0;
@@ -137,6 +137,6 @@
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
 }

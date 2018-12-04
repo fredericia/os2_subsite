@@ -30,7 +30,7 @@
 /* General */
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Banner
   .banner {
@@ -38,7 +38,7 @@
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   // Banner
   .banner {

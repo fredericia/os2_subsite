@@ -1,8 +1,8 @@
+@import "../../../node_modules/readable-bootstrap-breakpoints/scss/readable-bootstrap-breakpoints";
 @import "bootstrap/bootstrap";
 @import "fontawesome/scss/font-awesome";
 @import "select2-bootstrap/select2-bootstrap";
 @import "bs3-card/bs3-card";
-@import "bs3-easy-breakpoints/bs3-easy-breakpoints";
 @import "bs3-extra-brand-colors/bs3-extra-brand-colors";
 @import "navigation-list/navigation-list";
 @import "textual-breakpoints-positioning/textual-breakpoints-positioning";
@@ -10,7 +10,6 @@
 
 @import "custom-vendors/loader";
 
-@import "../../../node_modules/readable-bootstrap-breakpoints/scss/readable-bootstrap-breakpoints";
 @import "../../../node_modules/flexy-layout/scss/flexy-layout";
 @import "../../../node_modules/content-transitions/scss/content-transitions";
 @import "../../../node_modules/sidr-bootstrap-theme/scss/sidr-bootstrap-theme";

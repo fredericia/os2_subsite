@@ -189,7 +189,7 @@ span {
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
   // Page layout
   .content-inner {
@@ -209,7 +209,7 @@ span {
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   .breadcrumb-wrapper {
     padding: 5px 0;
@@ -224,7 +224,7 @@ span {
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   // Page layout
   .content-inner {
@@ -234,14 +234,14 @@ span {
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   // Page layout
   .content-inner {}
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   // Page layout
 
@@ -254,14 +254,14 @@ span {
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Page layout
   .content-inner {}
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   // Page layout
   .content-inner {}

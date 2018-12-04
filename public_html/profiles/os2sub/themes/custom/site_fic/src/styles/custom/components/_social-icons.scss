@@ -136,49 +136,49 @@ $social-icons-font-size: 22px;
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
   // Social icons
   .social-icons {}
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   // Social icons
   .social-icons {}
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   // Social icons
   .social-icons {}
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   // Social icons
   .social-icons {}
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   // Social icons
   .social-icons {}
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Social icons
   .social-icons {}
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   // Social icons
   .social-icons {}

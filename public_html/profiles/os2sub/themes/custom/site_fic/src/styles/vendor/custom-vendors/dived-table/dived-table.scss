@@ -48,49 +48,49 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
   // Div'ed table
   .dived-table {}
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   // Div'ed table
   .dived-table {}
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   // Div'ed table
   .dived-table {}
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   // Div'ed table
   .dived-table {}
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   // Div'ed table
   .dived-table {}
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Div'ed table
   .dived-table {}
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   // Div'ed table
   .dived-table {}

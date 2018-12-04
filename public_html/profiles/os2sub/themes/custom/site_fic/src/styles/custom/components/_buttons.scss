@@ -90,14 +90,14 @@
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
   .btn {
     white-space: normal;
   }
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
   .btn {
     padding-left: 50px;
     padding-right: 50px;

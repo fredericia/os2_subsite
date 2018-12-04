@@ -131,21 +131,21 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
   // Card
   .card {}
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   // Card
   .card {}
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   // Card
   .card {}
@@ -162,28 +162,28 @@
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   // Card
   .card {}
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   // Card
   .card {}
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Card
   .card {}
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   // Card
   .card {}

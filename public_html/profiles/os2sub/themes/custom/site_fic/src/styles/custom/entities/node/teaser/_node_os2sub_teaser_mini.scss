@@ -367,22 +367,22 @@ $image-border: 10px;
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@media #{$breakpoint-mobile-and-up} {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {}
+@media #{$breakpoint-mobile-only} {}
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {}
+@media #{$breakpoint-tablet-and-up} {}
 
 // Tablet - only
-@include media-breakpoint-only(sm) {}
+@media #{$breakpoint-tablet-only} {}
 
 // Desktop - and up
-@include media-breakpoint-up(md) {}
+@media #{$breakpoint-desktop-and-up} {}
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   .node--os2web_kulturnaut_knactivity--os2sub_teaser_mini,
   .node--os2web_base_news--os2sub_teaser_mini {
@@ -398,7 +398,7 @@ $image-border: 10px;
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {}
+@media #{$breakpoint-large-desktop-and-up} {}
 
 // Print
 @media print {}

@@ -383,10 +383,10 @@ $lg-pager-spacing: 30px;
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@media #{$breakpoint-mobile-and-up} {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   .not-front {
 
@@ -503,7 +503,7 @@ $lg-pager-spacing: 30px;
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   .widget_pager_bottom,
   .cycle-pager {
@@ -536,7 +536,7 @@ $lg-pager-spacing: 30px;
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   .term-fic-header .slide-bottom .blue-block .text,
   .term-fic-header .slide-bottom .contact.modal-link {
@@ -596,7 +596,7 @@ $lg-pager-spacing: 30px;
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   .widget_pager_bottom,
   .cycle-pager {
@@ -629,7 +629,7 @@ $lg-pager-spacing: 30px;
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
   .term-fic-header .slide-bottom .blue-block .text,
   .term-fic-header .slide-bottom .contact.modal-link  {
     font-size: 1.7em; }
@@ -693,7 +693,7 @@ $lg-pager-spacing: 30px;
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   .widget_pager_bottom,
   .cycle-pager {

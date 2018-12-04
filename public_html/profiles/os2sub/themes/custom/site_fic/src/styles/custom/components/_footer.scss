@@ -132,13 +132,13 @@ ul.social-icon-list {
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
 
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   // Footer
   .footer {
@@ -150,7 +150,7 @@ ul.social-icon-list {
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
   // Footer
   .footer {
     .footer5 {
@@ -172,7 +172,7 @@ ul.social-icon-list {
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   // Footer
   .footer {
@@ -180,7 +180,7 @@ ul.social-icon-list {
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   // Footer
 
@@ -188,7 +188,7 @@ ul.social-icon-list {
 
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Footer
   .footer {
@@ -196,7 +196,7 @@ ul.social-icon-list {
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   // Footer
   .footer {

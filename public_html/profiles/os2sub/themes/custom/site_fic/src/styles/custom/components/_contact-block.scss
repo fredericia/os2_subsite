@@ -35,7 +35,7 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
   // Contact block
   .kontaktblok {
@@ -43,7 +43,7 @@
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   // Contact block
   .kontaktblok {
@@ -51,7 +51,7 @@
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   // Contact block
   .kontaktblok {
@@ -59,7 +59,7 @@
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   // Contact block
   .kontaktblok {
@@ -67,7 +67,7 @@
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   // Contact block
   .kontaktblok {
@@ -75,7 +75,7 @@
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Contact block
   .kontaktblok {
@@ -83,7 +83,7 @@
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
 
   // Contact block
   .kontaktblok {

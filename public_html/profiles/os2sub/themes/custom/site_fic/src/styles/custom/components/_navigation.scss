@@ -214,28 +214,28 @@ $navigation-bottom-border-color: $color-white;
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
 
   // Navigation
   .navigation-wrapper {}
 }
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   // Navigation
   .navigation-wrapper {}
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   // Navigation
   .navigation-wrapper {}
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
 
   .topnav-wrapper {
     .nav > li > a {
@@ -285,7 +285,7 @@ $navigation-bottom-border-color: $color-white;
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
 
   .layout__content {
 
@@ -296,14 +296,14 @@ $navigation-bottom-border-color: $color-white;
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
 
   // Navigation
   .navigation-wrapper {}
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
   .headerwrapper-inner {
     .navbar-collapse {
       margin-right: 60px;

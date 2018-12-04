@@ -33,7 +33,7 @@
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {
+@media #{$breakpoint-mobile-and-up} {
   .pane-os2sub-social-share-os2sub-social-share {
     .pane-title {
       display: none;
@@ -60,7 +60,7 @@
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
   .pane-os2sub-social-share-os2sub-social-share {
     .pane-title {
       display: block;

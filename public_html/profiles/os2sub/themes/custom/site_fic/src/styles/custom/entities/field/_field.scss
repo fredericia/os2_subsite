@@ -73,6 +73,6 @@
 // --------------------------------------------------
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
 }

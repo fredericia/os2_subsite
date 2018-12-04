@@ -211,10 +211,10 @@ section.block-locale{
 // --------------------------------------------------
 
 // Mobile - and up
-@include media-breakpoint-up(xs) {}
+@media #{$breakpoint-mobile-and-up} {}
 
 // Mobile - only
-@include media-breakpoint-only(xs) {
+@media #{$breakpoint-mobile-only} {
 
   .not-front {
 
@@ -240,7 +240,7 @@ section.block-locale{
 }
 
 // Tablet - and up
-@include media-breakpoint-up(sm) {
+@media #{$breakpoint-tablet-and-up} {
 
   .not-front .page-header-wrapper {
     background-image: none;
@@ -277,7 +277,7 @@ section.block-locale{
 }
 
 // Tablet - only
-@include media-breakpoint-only(sm) {
+@media #{$breakpoint-tablet-only} {
   .navbar-nav > li > a {
     padding-top: 0;
     padding-bottom: 0;
@@ -311,7 +311,7 @@ section.block-locale{
 }
 
 // Desktop - and up
-@include media-breakpoint-up(md) {
+@media #{$breakpoint-desktop-and-up} {
   //trick to mane menu clickable on the front page because of background slideshow
   .sticky {
     background-position: 0;
@@ -334,7 +334,7 @@ section.block-locale{
 }
 
 // Desktop - only
-@include media-breakpoint-only(md) {
+@media #{$breakpoint-desktop-only} {
   .navbar-nav > li > a {
     padding-top: 0;
     padding-bottom: 0;
@@ -352,7 +352,7 @@ section.block-locale{
 }
 
 // Large desktop - and up
-@include media-breakpoint-up(lg) {
+@media #{$breakpoint-large-desktop-and-up} {
   .sticky .row{
     width: 1200px;
   }
