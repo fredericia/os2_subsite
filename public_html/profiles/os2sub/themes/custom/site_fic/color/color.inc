@@ -3,7 +3,7 @@
 $info = array();
 
 // Define the CSS file(s) that we want the Color module to use as a base.
-$info['css'] = array('dist/css/stylesheet.css');
+$info['css'] = array('dist/stylesheets/stylesheet.css');
 
 // Define the possible replaceable items and their labels.
 $info['fields'] = array(

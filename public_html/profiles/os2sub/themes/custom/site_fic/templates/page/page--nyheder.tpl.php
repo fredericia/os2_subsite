@@ -7,8 +7,14 @@
       </a>
   <?php endif; ?>
 
-  <?php if ( !empty($page['navigation']) ): ?>
+  <?php if (!empty($page['navigation'])): ?>
+    <?php $page['navigation']['book_link'] = $page['book_link']; ?>
+
     <?php print render($page['navigation']); ?>
+  <?php else: ?>
+    <div class="region region-navigation">
+      <?php print render($page['book_link']); ?>
+    </div>
   <?php endif; ?>
 
   <!-- Begin - navigation -->
