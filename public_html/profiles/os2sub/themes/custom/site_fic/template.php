@@ -87,7 +87,7 @@ function site_fic_preprocess_page(&$variables) {
   }
 
   if ($book_button_url = _site_fic_get_book_url()) {
-    $variables['page']['navigation']['book_link'] = array(
+    $variables['page']['book_link'] = array(
       '#type' => 'container',
       '#attributes' => array('class' => array('book-link')),
       array(
