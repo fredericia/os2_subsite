@@ -1,0 +1,388 @@
+diff --git a/ParagraphsItemEntity.inc b/ParagraphsItemEntity.inc
+index ef6fd51..6867794 100644
+--- a/ParagraphsItemEntity.inc
++++ b/ParagraphsItemEntity.inc
+@@ -56,7 +56,7 @@ class ParagraphsItemEntity extends Entity {
+    *
+    * @var string
+    */
+-  protected $langcode = LANGUAGE_NONE;
++  public $langcode = LANGUAGE_NONE;
+ 
+   /**
+    * Entity ID.
+@@ -514,6 +514,12 @@ class ParagraphsItemEntity extends Entity {
+       $langcode = LANGUAGE_NONE;
+     }
+ 
++    if (module_exists('entity_translation') && entity_translation_enabled('paragraphs_item', $this->bundle)) {
++      // Force the language code to be the current language in order to display
++      // the correct language version
++      $langcode = $GLOBALS['language_content']->language;
++    }
++
+     // Iterate over fields in the collection to add URIs for image fields.
+     $field_instances = field_info_instances($this->entityType, $this->bundle);
+     foreach ($field_instances as $field_name => $field) {
+diff --git a/README.txt b/README.txt
+index 67eab04..06739bb 100644
+--- a/README.txt
++++ b/README.txt
+@@ -13,3 +13,9 @@ This module module might be considered a clone of field_collection (on which it
+ * Displays per paragraph bundle
+ 
+ Bundles are exportable with features.
++
++Using paragraphs with entity translation
++-----------------------------------------------
++
++ * Paragraph items must be selected as a translatable entity type at
++    Admin -> Config -> Regional -> Entity Translation.
+diff --git a/includes/translation.handler.paragraphs_item.inc b/includes/translation.handler.paragraphs_item.inc
+new file mode 100644
+index 0000000..5d6bb9b
+--- /dev/null
++++ b/includes/translation.handler.paragraphs_item.inc
+@@ -0,0 +1,64 @@
++<?php
++
++/**
++ * @file
++ * Paragraphs item translation handler for the entity translation module.
++ */
++
++
++/**
++ * Paragraphs item translation handler.
++ *
++ * Overrides default behaviours for Paragraphs item properties.
++ */
++class EntityTranslationParagraphsItemHandler extends EntityTranslationDefaultHandler {
++
++  public $hostEntity = NULL;
++  public $hostEntityHandler = NULL;
++
++  public function __construct($entity_type, $entity_info, $entity) {
++    if (method_exists($entity, 'hostEntity')) {
++      $this->hostEntity = $entity->hostEntity();
++      $host_entity_type = $entity->hostEntityType();
++      if (empty($host_entity_type)) {
++        $host_entity_type = 'paragraphs_item';
++      }
++
++      // A nested paragraphs field.
++      if ($host_entity_type == 'paragraphs_item') {
++        // Look for the parent host entity.
++        while (method_exists($this->hostEntity, 'hostEntity')) {
++          $this->hostEntity->hostEntity();
++          $host_entity_type = $this->hostEntity->hostEntityType();
++          $this->hostEntity = $this->hostEntity->hostEntity();
++        }
++      }
++
++      $this->hostEntityHandler = entity_translation_get_handler($host_entity_type, $this->hostEntity);
++    }
++    parent::__construct('paragraphs_item', $entity_info, $entity);
++  }
++
++  public function getLanguage() {
++    return $this->hostEntityHandler ? $this->hostEntityHandler->getLanguage() : parent::getLanguage();
++  }
++
++  public function getFormLanguage() {
++    return $this->hostEntityHandler ? $this->hostEntityHandler->getFormLanguage() : parent::getFormLanguage();
++  }
++
++  public function getSourceLanguage() {
++    return $this->hostEntityHandler ? $this->hostEntityHandler->getSourceLanguage() : parent::getSourceLanguage();
++  }
++
++  public function getTranslations() {
++    return $this->hostEntityHandler ? $this->hostEntityHandler->getTranslations() : parent::getTranslations();
++  }
++
++  /**
++   * @see EntityTranslationDefaultHandler::entityFormLanguageWidgetSubmit()
++   */
++  function entityFormLanguageWidgetSubmit($form, &$form_state) {
++    $this->updateFormLanguage($form_state);
++  }
++}
+diff --git a/paragraphs.field_widget.inc b/paragraphs.field_widget.inc
+index 2aa1331..ae76ce7 100644
+--- a/paragraphs.field_widget.inc
++++ b/paragraphs.field_widget.inc
+@@ -356,6 +356,12 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
+   $field_name = $element['#field_name'];
+   $language = $element['#language'];
+ 
++  // Set host entity data since field_attach_form() override the $element values
++  // with the values for the paragraph item.
++  $element['#host_entity_type'] = $element['#entity_type'];
++  $element['#host_entity'] = $element['#entity'];
++  $element['#host_bundle'] = $element['#bundle'];
++
+   $bundle = FALSE;
+   $id_prefix = implode('-', array_merge($field_parents, array($field_name)));
+ 
+@@ -406,7 +412,7 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
+ 
+     /* @var $paragraph_item ParagraphsItemEntity */
+     $paragraph_item = $field_state['entity'][$delta];
+-    $paragraph_item->setHostEntity($field_state['instance']['entity_type'], $element['#entity'], $langcode, FALSE);
++    $paragraph_item->setHostEntity($element['#host_entity_type'], $element['#host_entity'], $langcode, FALSE);
+   }
+   else {
+     if (isset($items[$delta])) {
+@@ -425,7 +431,7 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
+ 
+     if (!empty($paragraph_item)) {
+       /* @var $paragraph_item ParagraphsItemEntity */
+-      $paragraph_item->setHostEntity($element['#entity_type'], $element['#entity'], $langcode, FALSE);
++      $paragraph_item->setHostEntity($element['#host_entity_type'], $element['#host_entity'], $langcode, FALSE);
+ 
+       if ($force_open) {
+         $paragraph_item->being_edited = TRUE;
+@@ -457,6 +463,23 @@ function paragraphs_field_widget_form_build(&$form, &$form_state, $field, $insta
+         '#weight' => 9999,
+       );
+ 
++      if (module_exists('entity_translation') && entity_translation_enabled('paragraphs_item', $paragraph_item->bundle)) {
++        // Flag the field to be processed in paragraphs_form_alter to.
++        // avoid adding incorrect translation hints.
++        $address = array_slice($element['#parents'], 0, -2);
++        if (empty($form['#paragraphs_translation_fields']) || !in_array($address, $form['#paragraphs_translation_fields'])) {
++          $form['#paragraphs_translation_fields'][] = $address;
++        }
++      }
++
++      // Set the form language to the current language for translation.
++      if (module_exists('entity_translation') && entity_translation_enabled('paragraphs_item', $paragraph_item->bundle)) {
++        $language = entity_language($element['#host_entity_type'], $element['#host_entity']);
++      }
++      else {
++        $language = $GLOBALS['language']->language;
++      }
++
+       field_attach_form('paragraphs_item', $paragraph_item, $element, $form_state, $language);
+       if ($being_edited_paragraph) {
+         if (!$is_new_paragraph && !entity_access('update', 'paragraphs_item', $paragraph_item)) {
+@@ -698,6 +721,17 @@ function paragraphs_field_widget_embed_validate($element, &$form_state, $complet
+   if (isset($field_state['entity'][$element['#delta']])) {
+     $paragraph_item = $field_state['entity'][$element['#delta']];
+ 
++    // TODO fix this
++    // Issue: with entity translation enabled, the paragraphs_deleteconfirm_js()
++    // callback fails with an exception due to the missing paragraphs entity property
++    // in the forms array. In the preceeding paragraphs_remove_js() callback
++    // however, the property is present.
++    if ($element['#entity_type'] != 'paragraphs_item') {
++      $element['#entity_type'] = 'paragraphs_item';
++      $element['#entity'] = $paragraph_item;
++    }
++
++
+     // Now validate elements if the entity is not empty.
+     if (((!isset($paragraph_item->removed) || !$paragraph_item->removed) && (!isset($paragraph_item->confirmed_removed) || !$paragraph_item->confirmed_removed))) {
+ 
+diff --git a/paragraphs.info b/paragraphs.info
+index 545c762..0fbf884 100644
+--- a/paragraphs.info
++++ b/paragraphs.info
+@@ -13,6 +13,7 @@ test_dependencies[] = strongarm
+ 
+ files[] = ParagraphsItemEntity.inc
+ files[] = ParagraphsItemMetadataController.inc
++files[] = includes/translation.handler.paragraphs_item.inc
+ files[] = migrate/destinations/MigrateDestinationParagraphsItem.inc
+ files[] = migrate/fields/ParagraphsMigrateParagraphsFieldHandler.inc
+ files[] = views/paragraphs_handler_relationship.inc
+diff --git a/paragraphs.module b/paragraphs.module
+index 4c1ce96..68c630c 100644
+--- a/paragraphs.module
++++ b/paragraphs.module
+@@ -106,6 +106,7 @@ function paragraphs_entity_info() {
+       'revision' => 'revision_id',
+       'bundle' => 'bundle',
+       'field_name' => 'field_name',
++      'language' => 'langcode',
+     ),
+     'module' => 'paragraphs',
+     'view modes' => array(
+@@ -123,6 +124,14 @@ function paragraphs_entity_info() {
+     ),
+     'access callback' => 'paragraphs_item_access',
+     'metadata controller class' => 'ParagraphsItemMetadataController',
++    'translation' => array(
++      'entity_translation' => array(
++        'class' => 'EntityTranslationParagraphsItemHandler',
++        'default settings' => array(
++          'default_language' => LANGUAGE_NONE,
++        ),
++      ),
++    ),
+   );
+ 
+   $bundles = paragraphs_bundle_load();
+@@ -415,6 +424,18 @@ function paragraphs_menu() {
+     'file' => 'paragraphs.ajax.inc',
+   );
+ 
++  if (module_exists('entity_translation')) {
++    // Required callbacks for entity_translation
++    $items['paragraphs_item/%paragraphs_item'] = $items['paragraphs_item/%paragraphs_item/edit'] = array(
++      'title' => 'Dummy callback',
++      'page callback' => 'paragraphs_item_entity_translation_menu_cb',
++      'page arguments' => array(),
++      'access callback' => TRUE,
++      'access arguments' => array(),
++      'type' => MENU_CALLBACK,
++    );
++  }
++
+   return $items;
+ }
+ 
+@@ -860,6 +881,40 @@ function paragraphs_field_delete_revision($entity_type, $entity, $field, $instan
+     }
+   }
+ }
++/*
++ * Implements hook_entity_translation_delete().
++ */
++function paragraphs_entity_translation_delete($entity_type, $entity, $langcode) {
++  if ($entity_type != 'paragraphs_item') {
++    return;
++  }
++
++  $para_fields = field_info_instances($entity_type, $entity->bundle);
++  foreach ($para_fields as $para_field) {
++    foreach (array('field_data_', 'field_revision_') as $prefix) {
++      $res = db_delete($prefix . $para_field['field_name'])
++        ->condition('entity_type', 'paragraphs_item')
++        ->condition('bundle', $entity->bundle)
++        ->condition('entity_id', $entity->item_id)
++        ->condition('language', $langcode)
++        ->execute();
++    }
++  }
++}
++
++/**
++ * Implements hook_entity_translation_source_field_state_alter().
++ */
++function paragraphs_entity_translation_source_field_state_alter(&$field_state) {
++  if (isset($field_state['entity'])) {
++    module_load_include('inc', 'entity', 'includes/entity.ui');
++    foreach ($field_state['entity'] as $delta => $entity) {
++      if ($entity instanceof ParagraphsItemEntity) {
++        $field_state['entity'][$delta] = entity_ui_clone_entity('paragraphs_item', $entity);
++      }
++    }
++  }
++}
+ 
+ /**
+  * Get an array of paragraph item IDs stored in the given field items.
+@@ -1310,60 +1365,6 @@ function paragraphs_views_api() {
+ }
+ 
+ /**
+- * Implements hook_module_implements_alter().
+- */
+-function paragraphs_module_implements_alter(&$implementations, $hook) {
+-  switch ($hook) {
+-    case 'field_attach_form':
+-      // We put the implementation of field_attach_form implementation of
+-      // paragraphs at the end, so it has a chance to disable the implementation
+-      // of entity_translation that provides the form changes that will break
+-      // paragraphs.
+-      $group = $implementations['paragraphs'];
+-      unset($implementations['paragraphs']);
+-      $implementations['paragraphs'] = $group;
+-      break;
+-  }
+-}
+-
+-/**
+- * Implements hook_field_attach_form().
+- */
+-function paragraphs_field_attach_form($entity_type, $entity, &$form, &$form_state, $langcode) {
+-
+-  // We make sure paragraphs don't use the entity translation defaults, as those
+-  // are not implemented properly yet in paragraphs. So we better show an empty
+-  // initial field for a translation of an existing entity, than making
+-  // paragraphs break completely.
+-  // A proper implementation of entity_translation has still to be discussed.
+-  // @see https://drupal.org/node/2152931
+-  list( , , $bundle) = entity_extract_ids($entity_type, $entity);
+-
+-  foreach (field_info_instances($entity_type, $bundle) as $instance) {
+-
+-    $field_name = $instance['field_name'];
+-    $field_info = field_info_field($field_name);
+-
+-    if ($field_info['type'] == 'paragraphs') {
+-      if (isset($form[$field_name])) {
+-        $element = &$form[$field_name];
+-
+-        // Remove the entity_translation preparion for the element. This way we
+-        // avoid that there will be form elements that do not have a
+-        // corresponding form state for the field.
+-        if (!empty($element['#process'])) {
+-          $key = array_search('entity_translation_prepare_element', $element['#process']);
+-
+-          if ($key !== FALSE)  {
+-            unset($element['#process'][$key]);
+-          }
+-        }
+-      }
+-    }
+-  }
+-}
+-
+-/**
+  * Implements hook_field_prepare_translation().
+  *
+  * @see field_attach_prepare_translation()
+@@ -1398,6 +1399,40 @@ function paragraphs_features_api() {
+ }
+ 
+ /**
++ * Dummy menu callback for entity translation paths
++ */
++function paragraphs_item_entity_translation_menu_cb() {
++  return "";
++}
++
++/**
++ * Implements hook_form_alter().
++ *
++ * Checks for a value set by the embedded widget so fields are not displayed
++ * with the 'all languages' hint incorrectly.
++ */
++function paragraphs_form_alter(&$form, &$form_state) {
++  if (!empty($form['#paragraphs_translation_fields'])) {
++    foreach ($form['#paragraphs_translation_fields'] as $address) {
++      drupal_array_set_nested_value($form, array_merge($address, array('#multilingual')), TRUE);
++    }
++  }
++}
++
++/**
++ * Implements hook_entity_presave().
++ */
++function paragraphs_entity_presave($entity, $type) {
++  if ($type == 'paragraphs_item' && module_exists('entity_translation')) {
++    $et_handler = entity_translation_get_handler($type, $entity);
++    if (!empty($et_handler) && is_object($et_handler->hostEntityHandler) && $et_handler->hostEntityHandler->getLanguage() != LANGUAGE_NONE) {
++      $et_handler->setOriginalLanguage($et_handler->hostEntityHandler->getLanguage());
++      $et_handler->initOriginalTranslation();
++    }
++  }
++}
++
++/**
+  * Implements hook_bundle_copy_info to provide a bundle copy
+  * export and import tab.
+  */

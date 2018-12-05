@@ -1,0 +1,198 @@
+<?php
+
+/**
+ * @file
+ * Holds test for paragraphs.
+ */
+
+/**
+ * Defines tests for paragraphs.
+ */
+class ParagraphsEntityTranslationWebTestCase extends DrupalWebTestCase {
+
+  protected $privilegedUser;
+
+  protected $adminUser;
+
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Paragraphs entity translation test',
+      'description' => 'Ensure that entity translation integration works properly.',
+      'group' => 'Paragraphs',
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setUp() {
+    $modules = array(
+      'paragraphs_test',
+      'content_page',
+      'features'
+    );
+    parent::setUp($modules);
+
+    // Make sure the base configuration is set up.
+    features_revert_module('paragraphs_test');
+    features_revert_module('content_page');
+
+    entity_info_cache_clear();
+    menu_rebuild();
+
+
+    // Create with a user rolegiven by the feature.
+    $this->privilegedUser = $this->drupalCreateUserWithRole('ptest creator');
+    $this->adminUser = $this->drupalCreateUserWithRole('administrator');
+    cache_clear_all();
+  }
+
+  /**
+   * Tests creating and updating a node with panelizer enabled paragraphs.
+   */
+  public function testBasicTranslationWorkflow() {
+    $this->drupalLogin($this->privilegedUser);
+    $this->drupalGet('node/add/content-page');
+    // Add a new paragraph before saving node.
+    $this->drupalPost(NULL, array(), t('Add new Paragraph'));
+
+    $post = array(
+      'field_content_add_more_type' => 'layout'
+    );
+
+    //Add Layout paragraph.
+    $this->drupalPost(NULL, $post, t('Add another Paragraph'));
+    //Add Text paragraph nested in Layout.
+    $this->drupalPost(NULL, array(), t('Add new Paragraph'));
+
+    $title = $this->randomString(20);
+    $p1_text_title = $this->randomString(10);
+    $p1_text_content = $this->randomString(40);
+    $p2_layout_title = $this->randomString(10);
+    $p3_text_title = $this->randomString(10);
+    $p3_text_content = $this->randomString(40);
+
+    $create = array(
+      'title' => $title,
+      'field_content[und][0][field_text_title][und][0][value]' => $p1_text_title,
+      'field_content[und][0][field_text][und][0][value]' => $p1_text_content,
+      'field_content[und][1][field_title][und][0][value]' => $p2_layout_title,
+      'field_content[und][1][field_layout_content][und][0][field_text_title][und][0][value]' => $p3_text_title,
+      'field_content[und][1][field_layout_content][und][0][field_text][und][0][value]' => $p3_text_content,
+    );
+    // Create Content Page in language neutral.
+    $this->drupalPost(NULL, $create, t('Save'));
+
+    $title_message = 'Content page title was rendered';
+    $text_title_message = 'Text paragraph title was rendered';
+    $text_content_message = 'Text paragraph content was rendered';
+    $layout_title_message = 'Layout paragraph title was rendered';
+    $layout_text_title_message = 'Text paragraph title inside Layout paragraph was rendered';
+    $layout_text_content_message = 'Text paragraph content inside Layout paragraph was rendered';
+
+    $this->assertText(check_plain($title), $title_message);
+    $this->assertText(check_plain($p1_text_title), $text_title_message);
+    $this->assertText(check_plain($p1_text_content), $text_content_message);
+    $this->assertText(check_plain($p2_layout_title), $layout_title_message);
+    $this->assertText(check_plain($p3_text_title), $layout_text_title_message);
+    $this->assertText(check_plain($p3_text_content), $layout_text_content_message);
+
+    $url = $this->getUrl();
+    //Extract node id.
+    $parsed = parse_url($url);
+    $exploded = explode('/', $parsed['path']);
+    $nid = end($exploded);
+    // Switch language to English.
+    $this->drupalGet("node/$nid/edit");
+
+    $edit = array(
+      'language' => 'en',
+      'title' => $title,
+    );
+
+    $this->drupalPost(NULL, $edit, t('Save'));
+
+    $this->assertText(check_plain($title), $title_message);
+    $this->assertText(check_plain($p1_text_title), $text_title_message);
+    $this->assertText(check_plain($p1_text_content), $text_content_message);
+    $this->assertText(check_plain($p2_layout_title), $layout_title_message);
+    $this->assertText(check_plain($p3_text_title), $layout_text_title_message);
+    $this->assertText(check_plain($p3_text_content), $layout_text_content_message);
+
+    // Add Polish translation.
+    $this->drupalGet("node/$nid/edit/add/en/pl");
+
+    $pl_p1_text_title = $p1_text_title . ' PL';
+    $pl_p1_text_content = $p1_text_content . ' PL';
+    $pl_p2_layout_title = $p2_layout_title . ' PL';
+    $pl_p3_text_title = $p3_text_title . ' PL';
+    $pl_p3_text_content = $p3_text_content . ' PL';
+
+    $pl_edit = array(
+      'field_content[und][0][field_text_title][pl][0][value]' => $pl_p1_text_title,
+      'field_content[und][0][field_text][pl][0][value]' => $pl_p1_text_content,
+      'field_content[und][1][field_title][pl][0][value]' => $pl_p2_layout_title,
+      'field_content[und][1][field_layout_content][und][0][field_text_title][pl][0][value]' => $pl_p3_text_title,
+      'field_content[und][1][field_layout_content][und][0][field_text][pl][0][value]' => $pl_p3_text_content,
+    );
+
+    $this->drupalPost(NULL, $pl_edit, t('Save'));
+
+    $this->drupalGet("pl/node/$nid");
+
+    $this->assertText(check_plain($title), $title_message);
+    $this->assertText(check_plain($pl_p1_text_title), $text_title_message);
+    $this->assertText(check_plain($pl_p1_text_content), $text_content_message);
+    $this->assertText(check_plain($pl_p2_layout_title), $layout_title_message);
+    $this->assertText(check_plain($pl_p3_text_title), $layout_text_title_message);
+    $this->assertText(check_plain($pl_p3_text_content), $layout_text_content_message);
+
+    //Check that English content is unchanged.
+    $this->drupalGet("node/$nid");
+    $this->assertText(check_plain($title), $title_message);
+    $this->assertText(check_plain($p1_text_title), $text_title_message);
+    $this->assertText(check_plain($p1_text_content), $text_content_message);
+    $this->assertText(check_plain($p2_layout_title), $layout_title_message);
+    $this->assertText(check_plain($p3_text_title), $layout_text_title_message);
+    $this->assertText(check_plain($p3_text_content), $layout_text_content_message);
+  }
+
+  /**
+   * Helper to create a user with a given role.
+   *
+   * @param $role_name
+   * @return bool|\stdClass
+   * @throws \Exception
+   *
+   * @see DrupalWebTestCase::drupalCreateUser()
+   */
+  protected function drupalCreateUserWithRole($role_name) {
+
+    $role = user_role_load_by_name($role_name);
+    if (!$role) {
+      return FALSE;
+    }
+
+    // Create a user assigned to that role.
+    $edit = array();
+    $edit['name']   = $this->randomName();
+    $edit['mail']   = $edit['name'] . '@example.com';
+    $edit['pass']   = user_password();
+    $edit['status'] = 1;
+    $edit['roles'] = array($role->rid => $role->rid);
+
+    $account = user_save(drupal_anonymous_user(), $edit);
+
+    $this->assertTrue(!empty($account->uid), t('User created with name %name and pass %pass', array('%name' => $edit['name'], '%pass' => $edit['pass'])), t('User login'));
+    if (empty($account->uid)) {
+      return FALSE;
+    }
+
+    // Add the raw password so that we can log in as this user.
+    $account->pass_raw = $edit['pass'];
+
+    return $account;
+  }
+
+}
