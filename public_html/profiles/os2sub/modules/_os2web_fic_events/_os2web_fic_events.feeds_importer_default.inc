@@ -26,6 +26,7 @@ function _os2web_fic_events_feeds_importer_default() {
         'request_timeout' => NULL,
         'auto_scheme' => 'http',
         'accept_invalid_cert' => FALSE,
+        'cache_http_result' => TRUE,
       ),
     ),
     'parser' => array(
@@ -147,14 +148,12 @@ function _os2web_fic_events_feeds_importer_default() {
           3 => array(
             'source' => 'xpathparser:3',
             'target' => 'field_os2web_kulturnaut_date:start',
-            'timezone' => 'UTC',
-            'language' => 'und',
+            'timezone' => 'Europe/Copenhagen',
           ),
           4 => array(
             'source' => 'xpathparser:28',
             'target' => 'field_os2web_kulturnaut_date:end',
-            'unique' => FALSE,
-            'language' => 'und',
+            'timezone' => 'Europe/Copenhagen',
           ),
           5 => array(
             'source' => 'xpathparser:4',
