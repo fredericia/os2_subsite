@@ -14,13 +14,11 @@ index 0000000..f2e0c95
 +td.paragraph-bundle-content-collapsible > .paragraph-bundle-title,
 +td.paragraph-bundle-content-collapsible > .ajax-new-content > .paragraph-bundle-title {
 +  cursor: pointer;
-+  background: url(images/expanded.png) 5px 65% no-repeat; /* LTR */
 +  padding-left: 15px; /* LTR */
 +}
 +
 +td.paragraph-bundle-content-collapsible.collapsed > .paragraph-bundle-title,
 +td.paragraph-bundle-content-collapsible.collapsed > .ajax-new-content > .paragraph-bundle-title {
-+  background-image: url(images/collapsed.png); /* LTR */
 +  background-position: 5px 50%; /* LTR */
 +}
 +
