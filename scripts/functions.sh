@@ -189,6 +189,8 @@ create_dirs() {
   mkdir -p "$TMPDIR"
   mkdir -p "$LOGDIR"
   mkdir -p "$SESSIONDIR"
+  /bin/chown -R www-data "$TMPDIR"
+  /bin/chmod -R g+rwX "$TMPDIR"
 }
 
 create_vhost() {
