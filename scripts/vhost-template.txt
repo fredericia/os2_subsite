@@ -27,4 +27,5 @@
 
     php_value session.save_path /var/www/subsites.fredericia.dk/sessions/[domain]
     php_admin_value upload_tmp_dir /var/www/subsites.fredericia.dk/tmp/[domain]
+    php_admin_value sys_temp_dir /var/www/subsites.fredericia.dk/tmp/[domain]
 </VirtualHost>

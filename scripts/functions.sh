@@ -215,7 +215,7 @@ install_drupal() {
   /usr/bin/drush -q -y -r "$MULTISITE" --uri="$SITENAME" vset error_level 1
   /usr/bin/drush -q -y -r "$MULTISITE" --uri="$SITENAME" vset preprocess_css 1
   /usr/bin/drush -q -y -r "$MULTISITE" --uri="$SITENAME" vset preprocess_js 1
-  /usr/bin/drush -q -y -r "$MULTISITE" --uri="$SITENAME" vset cache 1
+  /usr/bin/drush -q -y --exact -r "$MULTISITE" --uri="$SITENAME" vset cache 1
   /usr/bin/drush -q -y -r "$MULTISITE" --uri="$SITENAME" vset page_cache_maximum_age 10800
   # translation updates - takes a long time
   #/usr/bin/drush -q -y -r "$MULTISITE" --uri="$SITENAME" l10n-update-refresh
