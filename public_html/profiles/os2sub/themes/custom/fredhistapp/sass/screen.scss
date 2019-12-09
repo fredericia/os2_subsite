@@ -1,0 +1,590 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/utilities/general/clearfix";
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Raleway:500,600,700);
+
+/* VARIABLER */
+$yellow: #ffd457;
+$dark-yellow: #cf9c0a;
+$main-width: 995px;
+$light-black: #3d3d3d;
+$dark-grey: #545454;
+$light-grey: #8F8F8F;
+
+/* MIXIN */
+@mixin device($media) {
+	@if $media == phone-portrait {
+		@media screen and (max-width: 500px) { @content;}
+	}
+	@else if $media == phone {
+		@media screen and (max-width: 740px) { @content;}
+	}
+	@else if $media == tablet-portrait {
+		@media screen and (max-width: 900px) { @content; }
+	}
+	@else if $media == tablet {
+		@media screen and (max-width: 1024px) { @content; }
+	}
+	@else if $media == screen {
+		@media screen and (min-width: 1024px) { @content; }
+	}
+}
+
+@mixin opacity-easing {
+  transition: opacity .45s ease-in-out;
+  -moz-transition: opacity .45s ease-in-out;
+  -webkit-transition: opacity .45s ease-in-out;
+}
+
+@mixin bg-easing {
+  transition: background .45s ease-in-out;
+  -moz-transition: background .45s ease-in-out;
+  -webkit-transition: background .45s ease-in-out;
+}
+
+@mixin main-width {
+	width: $main-width;
+	position: relative;
+	margin: 0 auto;
+	@media screen and (max-width:1010px) {
+		width: 100%;
+	}
+}
+
+@mixin easing {
+	-webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+/* DEFAULT */
+* {
+  @include box-sizing(border-box);
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #ececec;
+  font-family: 'Raleway', sans-serif;
+  -webkit-text-size-adjust: none;
+  padding-top: 46px;
+}
+
+html, body, .wrapper, #content, .mini {
+  height: 100%;
+}
+
+h1, .page-title.app-custom .field-item {
+  font-size: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
+h2, .prose h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-weight: 600;
+}
+
+table, td {
+  border: none;
+}
+
+.prose a {
+  color: $dark-yellow;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.prose p {
+  font-family: 'Georgia', sans-serif;
+  margin: 0 0 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+section, header {
+  padding: 0px;
+  margin: 0px;
+}
+
+// App frontpage
+.node-type-app-frontpage {
+  font-size: 34px;
+  font-weight: 600;
+  text-transform: uppercase;
+  @include device(phone) {
+    font-size: 14px;
+  }
+  a {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+  }
+  .pane-content {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    .title {
+      position: relative;
+      z-index: 99;
+      width: 98%;
+      overflow: hidden;
+    }
+  }
+  .image {
+    .tile-image {
+      height: 100%;
+      width: 100%;
+      @include opacity-easing;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      opacity: 0.3;
+      background: center;
+      -webkit-background-size: scale;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
+  .tile {
+    position: relative;
+    display: table;
+    padding: 2px;
+    overflow: hidden;
+  }
+  .tile-1 {
+    @include bg-easing;
+    background: #000;
+    width: 32.5%;
+    float: left;
+    height: 19.4%;
+    font-weight: normal;
+    color: #fff;
+    &:hover {
+      background: #383838;
+    }
+  }
+  .tile-2 {
+    width: 67.5%;
+    height: 19.4%;
+    float: left;
+    background: #000;
+    color: $dark-yellow;
+    &:hover .tile-image {
+      opacity: 0.1 !important;
+    }
+  }
+  .tile-3 {
+    float: left;
+    height: 40%;
+    width: 67.5%;
+    color: $light-black;
+    &:hover .tile-image {
+      opacity: 0.1 !important;
+    }
+  }
+  .tile-4 {
+    @include opacity-easing;
+    float: right;
+    width: 32.5%;
+    height: 19.4%;
+    background: $yellow;
+    color: $dark-yellow;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .tile-5 {
+    float: right;
+    width: 32.5%;
+    height: 40%;
+    color: $dark-yellow;
+    background: #000;
+    .tile-image {
+      opacity: 0.5;
+    }
+    &:hover .tile-image {
+      opacity: 0.2;
+    }
+  }
+  .tile-6 {
+    float: left;
+    width: 32.5%;
+    height: 19.4%;
+    &:hover .tile-image {
+      opacity: 0.1;
+    }
+  }
+  .tile-7 {
+    @include bg-easing;
+    float: left;
+    width: 35%;
+    height: 19.4%;
+    background: #565656;
+    color: #fff;
+    &:hover {
+      background: #000;
+    }
+  }
+  .tile-8 {
+    @include bg-easing;
+    float: left;
+    width: 32.5%;
+    background: #fff;
+    color: $dark-yellow;
+    height: 21.2%;
+    &:hover {
+      background: #ececec;
+    }
+  }
+  .tile-9 {
+    float: left;
+    height: 21.2%;
+    width: 67.5%;
+    &:hover .tile-image {
+      opacity: 0.1;
+    }
+  }
+}
+
+// App list
+.node-type-app-list {
+  h1 {
+    padding: 0 10px 10px;
+  }
+  .bottom {
+    height: 10px;
+  }
+}
+.app-references {
+  background: #fff;
+  margin: 10px;
+  margin-bottom: 0px;
+  article {
+    position: relative;
+    clear: both;
+    overflow: auto;
+    .thumbnail {
+      position: absolute;
+      left: 0px;
+      top:0px;
+    }
+    .content {
+      @include easing;
+      div {
+        height: 75px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      color: $light-grey;
+      font-size: 20px;
+      font-weight: 700;
+      height: 115px;
+      padding: 20px;
+      padding-left: 130px;
+    }
+    .tile-image {
+      height: 115px;
+      width: 115px;
+    }
+    .arrow {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      width: 26px;
+      height: 31px;
+      background: url(../images/yellow_menu_arrow.png) no-repeat right bottom;
+      .svg & {
+        background: url(../images/yellow_menu_arrow.svg) no-repeat right bottom;
+      }
+    }
+    .path a {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      height: 100%;
+      width: 100%;
+    }
+    &:hover .content {
+      color: #000;
+    }
+  }
+}
+
+.app-references.page {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mini-center {
+  margin-bottom: 7px;
+  @include device(phone) {
+    h1 {
+      font-size: 28px;
+    }
+    .body-center-image {
+      .views-field-field-center-img-text {
+        padding: 10px 30px !important;
+        padding-left: 40px !important;
+        .svg & {
+        background-position: 15px 12px !important;
+        }
+        .no-svg & {
+          background-position: 15px 12px !important;
+        }
+      }
+    }
+  }
+  .body-center-image {
+    font-family: 'Georgia', sans-serif;
+    .views-field-field-topimage {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .views-field-field-center-img-text {
+      padding: 20px 90px;
+      color: $light-grey;
+      .svg & {
+        background: url(../images/dark_arrow.svg) no-repeat;
+        background-position: 35px 15px;
+      }
+      .no-svg & {
+        background: url(../images/dark_arrow.png) no-repeat;
+        background-position: 35px 15px;
+      }
+    }
+  }
+}
+
+.mini-center-secondary {
+  padding: 0px 10px !important;
+  color: $light-black;
+  @include main-width;
+  @include device(tablet) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  @include device(tablet-portrait) {
+  padding-left: 50px;
+  padding-right: 50px;
+  }
+  @include device(phone) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #content {
+    background: #fff;
+    width: 67%;
+    overflow: hidden;
+    padding-bottom: 40px;
+    @include device(tablet) {
+      width: 100%;
+      clear: both;
+    }
+    .page-title {
+      padding: 0px 30px;
+      padding-top: 30px;
+    }
+    .body {
+      padding: 10px 30px;
+    }
+  }
+  .download-app {
+    margin-top: 20px;
+    display: inline-block;
+    @include border-radius(4px);
+    padding: 10px 15px;
+    background-color: rgb(255,255,255); // Old browsers
+    @include filter-gradient(#ffffff, #f2f2f2, vertical); // IE6-8
+    @include background-image(linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 84%,rgba(242,242,242,1) 99%));
+    border: 1px solid #F2F2F2;
+    @include box-shadow(#999 0px 0px 3px);
+  }
+}
+
+body.node-type-app-list {
+  padding-top: 71px;
+}
+
+.event-list {
+  padding: 10px 30px 0;
+  overflow: auto;
+  .views-row {
+    border-bottom: 2px solid #ECECEC;
+    overflow: auto;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    position: relative;
+    .image {
+      top:10px;
+    }
+  }
+  .views-row-last {
+    border-bottom: 0px;
+  }
+  .views-row:hover .to-event {
+    text-decoration: underline;
+  }
+  .views-row:hover .image img {
+    opacity: 0.8;
+  }
+  h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    a {
+      color: $light-black;
+    }
+  }
+  .image {
+    float: left;
+    position: absolute;
+    left: 0px;
+    top:0px;
+    img {
+      width: 110px;
+      height: auto;
+      border: 2px solid #ECECEC;
+      padding: 2px;
+      @include opacity-easing;
+      @include device(phone) {
+        width: 100%;
+      }
+    }
+  }
+  .content {
+    float: left;
+    margin-top: 4px;
+    margin-left: 15px;
+    padding-left: 115px;
+  }
+  .to-event {
+    color: $dark-yellow;
+    background: url(../images/grey_arrow.png) no-repeat left center;
+    padding-left: 20px;
+    margin-left: -3px;
+  }
+  .views-field-field-date-event {
+    font-family: "Georgia",sans-serif;
+    font-weight: bold;
+    color: $light-grey;
+  }
+  .views-field-body a {
+    font-family: "Georgia",sans-serif;
+    color: #3D3D3D;
+    display: block;
+    padding: 2px 0px;
+  }
+  div.pager {
+    border-top: 2px solid #ECECEC;
+    padding-top: 15px;
+    ul {
+      list-style: none;
+    }
+    li {
+      padding: 0px 5px;
+      float: left;
+      a {
+        color: $dark-yellow;
+      }
+    }
+  }
+  @include device(phone) {
+    .image {
+      float: none;
+      position: static;
+    }
+    .content {
+      float: none;
+      position: static;
+      padding-left: 0px;
+    }
+  }
+}
+
+footer {
+  overflow: auto;
+  clear: both;
+  @include main-width;
+  @include device(tablet) {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  @include device(tablet-portrait) {
+  padding-left: 50px;
+  padding-right: 50px;
+  }
+  @include device(phone) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .bottom-text {
+    clear: both;
+    margin-top: 65px;
+    float: left;
+    @include device(phone) {
+      padding: 0px 20px;
+      margin-top: 0px;
+    }
+    h2 {
+      text-transform: uppercase;
+      color: #3d3d3d;
+      font-size: 16px;
+      font-weight: normal;
+      margin-bottom: 25px;
+    }
+    p {
+      color: #7d7d7d;
+      font-size: 14px;
+    }
+    table {
+    * {
+      display: block;
+    }
+      td {
+        vertical-align: top;
+        float: left;
+        width: 33%;
+        @include device(tablet) {
+          width: 50%;
+          padding-right: 20px;
+          padding-bottom: 60px;
+        }
+        @include device(phone) {
+          width: 100%;
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+}

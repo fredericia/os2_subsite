@@ -1,0 +1,56 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+body {
+  background: none;
+  height: auto;
+}
+
+.mini-bottom .main-menu, .mini-bottom .dropdown-menu, .edit_links, .mini-center .topimage-container {
+  display: none !important;
+}
+
+.mini-top .inner .top-icons, .mini-top .inner .search-form, .mini-center-secondary #left, .mini-bottom {
+  display: none !important;
+}
+
+.mini-center-secondary #content {
+  width: 100% !important;
+}
+
+.mini-top .inner {
+  min-height: 90px !important;
+}
+
+.mini-center-secondary #content .page-title, .mini-center-secondary #content .body, .event-date, .event-place, .event-price {
+  padding: 0px !important;
+}
+
+.mini-center-secondary #content .page-title {
+  padding-top: 30px;
+}
+
+.mini-top .inner .site-logo {
+  padding-top: 5px;
+}
+
+.mini-top .inner, .mini-top, .svg .mini-top .inner {
+  background: none;
+}
+
+.svg .mini-center-secondary #content .body-center-image .views-field-field-center-img-text, .mini-center-secondary #content .body-center-image .views-field-field-center-img-text {
+  background: none;
+}
+
+.mini-center-secondary #content .body-center-image img {
+  width: 500px !important;
+  height: auto;
+}
+
+.mini-center-secondary {
+  border-top: 2px solid #ececec !important;
+}
+
+.mini-center-secondary #content .body-center-image .views-field-field-center-img-text {
+  padding: 20px 0px;
+}

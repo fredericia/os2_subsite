@@ -1,0 +1,23 @@
+name        = fredhistapp
+description = fredhistapp
+screenshot  = screenshot.png
+
+core        = 7.x
+engine      = phptemplate
+base theme  = adapt
+
+; Regions =====================================================================
+
+regions[content] = Content
+regions[help] = Help
+regions[page_top] = Page top
+regions[page_bottom] = Page bottom
+regions[highlighted] = Highlighted
+
+; Stylesheets =================================================================
+
+stylesheets[all][] = css/screen.css
+
+
+; Scripts =====================================================================
+scripts[] = js/main.js

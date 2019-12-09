@@ -1,0 +1,21 @@
+header, .mini-center, .mini-center-secondary {
+  margin-bottom: 2%;
+}
+
+.mini-center-secondary #left {
+  width: 33%;
+  float: left;
+  clear: none;
+  padding-right: 2%;
+}
+
+.mini-center-secondary #content {
+  width: 65%;
+  float: left;
+  clear: none;
+}
+
+footer {
+  clear: both;
+  padding-top: 2%
+}
