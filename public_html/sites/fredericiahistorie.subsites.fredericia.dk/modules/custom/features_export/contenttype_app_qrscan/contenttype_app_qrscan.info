@@ -1,0 +1,17 @@
+name = contenttype_app_qrscan
+description = contenttype_app_qrscan
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = filefield_paths
+dependencies[] = image
+features[features_api][] = api:2
+features[field_instance][] = node-app_qr_scan-body
+features[field_instance][] = node-app_qr_scan-field_reference_summary
+features[field_instance][] = node-app_qr_scan-field_reference_thumbnail
+features[field_instance][] = node-app_qr_scan-field_reference_title
+features[node][] = app_qr_scan
+features_exclude[field_base][body] = body
+features_exclude[field_base][field_reference_title] = field_reference_title
+features_exclude[field_base][field_reference_thumbnail] = field_reference_thumbnail
+features_exclude[field_base][field_reference_summary] = field_reference_summary

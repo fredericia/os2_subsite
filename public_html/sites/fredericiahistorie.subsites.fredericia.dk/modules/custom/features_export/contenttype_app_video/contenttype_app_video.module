@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the contenttype_app_video feature.
+ */
+
+include_once 'contenttype_app_video.features.inc';

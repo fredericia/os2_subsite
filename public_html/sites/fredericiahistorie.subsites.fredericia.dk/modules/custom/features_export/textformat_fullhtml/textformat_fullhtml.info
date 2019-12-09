@@ -1,0 +1,8 @@
+name = textformat_fullhtml
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = wysiwyg
+features[features_api][] = api:2
+features[filter][] = full_html
+features[wysiwyg][] = full_html

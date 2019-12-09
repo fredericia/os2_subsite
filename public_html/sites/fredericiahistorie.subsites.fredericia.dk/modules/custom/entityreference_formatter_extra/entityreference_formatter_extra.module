@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function entityreference_formatter_extra_field_formatter_info() {
+  return array(
+    'entityreference_pathalias' => array(
+      'label' => t('Pathalias'),
+      'description' => t('Display the path alias of the referenced entities.'),
+      'field types' => array('entityreference'),
+    ),
+  );
+}
+
+
+function entityreference_formatter_extra_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, &$items, $displays) {
+
+  entityreference_field_formatter_prepare_view($entity_type, $entities, $field, $instances, $langcode, $items, $displays);
+}
+
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function entityreference_formatter_extra_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $result = array();
+
+  switch ($display['type']) {
+    case 'entityreference_pathalias':
+      foreach ($items as $delta => $item) {
+        $uri = entity_uri($field['settings']['target_type'], $item['entity']);
+        $result[$delta] = array('#markup' =>  '/' . drupal_get_path_alias($uri['path']));
+      }
+      break;
+  }
+
+  return $result;
+}

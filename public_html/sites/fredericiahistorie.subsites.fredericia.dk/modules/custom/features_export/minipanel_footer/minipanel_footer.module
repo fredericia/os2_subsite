@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the minipanel_footer feature.
+ */
+
+include_once 'minipanel_footer.features.inc';

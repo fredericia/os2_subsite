@@ -1,0 +1,9 @@
+name = minipanel_header
+description = minipanel_header
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = panels_mini
+features[ctools][] = panels_mini:panels_default:1
+features[features_api][] = api:2
+features[panels_mini][] = header

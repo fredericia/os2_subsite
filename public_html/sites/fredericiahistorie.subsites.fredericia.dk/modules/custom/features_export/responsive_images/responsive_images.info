@@ -1,0 +1,10 @@
+name = responsive_images
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = ctools
+dependencies[] = resp_img
+features[ctools][] = resp_img:default_resp_img_suffixs:1
+features[features_api][] = api:1
+features[resp_img_suffix][] = phone
+features[resp_img_suffix][] = standard

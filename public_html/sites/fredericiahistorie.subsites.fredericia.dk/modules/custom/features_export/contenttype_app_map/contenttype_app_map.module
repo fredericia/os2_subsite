@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the contenttype_app_map feature.
+ */
+
+include_once 'contenttype_app_map.features.inc';

@@ -1,0 +1,3 @@
+name = fhist_hotspot_preview 
+description = Provide previw of hotspots location on image
+core = 7.x

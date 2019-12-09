@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the panel_login feature.
+ */
+
+include_once 'panel_login.features.inc';

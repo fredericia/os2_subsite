@@ -1,0 +1,272 @@
+<?php
+
+/**
+ * @file
+ * Configuration for mobile application.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function adapt_app_conf_help($path, $arg) {
+  switch ($path) {
+    case 'admin/config/system/adapt_app_conf':
+      $output = '<p>' . t('Configuration for mobile application.') . '</p>';
+      return $output;
+    case 'admin/help#adapt_app_conf':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>Configuration for mobile application.</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function adapt_app_conf_menu() {
+  $items = array();
+
+  $items['admin/config/system/adapt_app_conf'] = array(
+    'title' => 'Mobile app configuration',
+    'description' => 'Configuration for mobile application.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('adapt_app_conf_admin_settings'),
+    'access arguments' => array('administer mobile zip files'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  $items['pack.php'] = array(
+    'title' => 'Return version number',
+    'page callback' => 'adapt_app_conf_get_pack_version',
+    'access arguments' => array('access content'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+
+  return $items;
+}
+
+function adapt_app_conf_permission() {
+  return array(
+    'administer mobile zip files' => array(
+      'title' => t('Administer zip files for mobile site'),
+      'description' => t('Users can administer zip files for mobile site'),
+    ),
+  );
+}
+
+function adapt_app_conf_get_pack_version() {
+  $result = db_query('SELECT max(version) FROM packversion');
+  print ($result->fetchField());
+  die;
+}
+
+function adapt_app_conf_batch($form, &$form_state) {
+  $result = db_query('SELECT max(version) FROM packversion');
+  $version = $result->fetchField();
+  if($form_state['values']['increase_version_number'] == 1) {
+    $version++;
+  }
+  variable_set('image_allow_insecure_derivatives', TRUE);
+  global $base_url;
+  // Delete old folder.
+  file_unmanaged_delete_recursive("public://app/app/");
+
+  $node_types = node_type_get_types();
+  $result = array();
+  foreach ($node_types as $key => $node_type) {
+    $include_in_app = variable_get('adapt_app_conf_' . $node_type->type . '_include_in_app');
+    if ($include_in_app)
+      $result[] = $node_type->type;
+  }  
+  $content_types = $result;
+  $query = "SELECT node.nid,ua.alias,node.type,include.field_include_in_app_value AS inclusive FROM node
+     JOIN url_alias ua ON ua.source = CONCAT('node/',node.nid)
+     LEFT JOIN field_data_field_include_in_app AS include ON node.nid=include.entity_id
+     WHERE node.status = 1
+     AND node.type in (:content_types)";
+
+  $records = db_query($query, array(':content_types' => $content_types))->fetchAll();
+  $dir = 'public://app/app/content/';
+  $batch = array(
+    'title' => t('Exporting'),
+    'operations' => array(
+      array('crawl', array($dir, $base_url, $records)),
+      array('get_resources', array($dir, $base_url)),
+      array('create_paths', array($dir, $base_url)),
+      array('fetch_resources', array($dir, $base_url)),   
+      array('update_info_file', array($version)),
+      array('make_zip_file', array($version)),
+    ),
+    'finished' => 'adapt_app_conf_finished_callback',
+    //'file' => DRUPAL_ROOT . 'pack.php',
+    'file' => drupal_get_path('module', 'adapt_app_conf') . '/includes/app_batch.inc',
+  );
+  batch_set($batch);
+  // Only needed if not inside a form _submit handler.
+  // Setting redirect in batch_process.
+  batch_process('admin/config/system/adapt_app_conf');
+}
+
+
+/**
+ * Form builder. Admin settings.
+ */
+function adapt_app_conf_admin_settings() {
+  $form = array();
+  $node_types = node_type_get_types();
+
+  $form['increase_version_number'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Update content database version number'),
+  );
+
+  $form['generate_new_zip'] = array(
+    '#type' => 'submit',
+    '#value' => t('Generate new app zip file'),
+    '#attributes' => array('onclick' => 'if(!confirm("Generate new app.zip file. Previous file will be lost?")){return false;}'),
+    '#submit' => array('adapt_app_conf_batch'),
+  );
+
+  $form['adapt_app_conf_backups'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Zip files backup management',
+  );
+
+  $form['adapt_app_conf_backups']['create_zip_backup'] = array(
+    '#type' => 'submit',
+    '#value' => t('Create zip file backup'),
+    '#submit' => array('adapt_app_conf_create_zip_backup'),
+  );
+
+  $handler = opendir("public://");
+  while ($file = readdir($handler)) {
+    if ($file != "." && $file != "..") {
+      if (preg_match("/^app_backup_/", $file)) {
+        $results[$file] = $file;
+      }
+    }
+  }
+
+  if (!empty($results)) {
+    foreach($results as $result) {
+      $form['adapt_app_conf_backups']['list_of_backup_files'] = array(
+        '#type' => 'radios',
+        '#title' => t('List of backup files'),
+        '#options' => $results,
+        '#description' => t('Restoring backup it removes current app.zip file and copies selected backup zip file as main app.zip file')
+      );
+    }
+    $form['adapt_app_conf_backups']['restore_backup'] = array(
+      '#type' => 'submit',
+      '#value' => t('Restore selected backup file'),
+      '#attributes' => array('onclick' => 'if(!confirm("Restore selected backup?")){return false;}'),
+      '#submit' => array('adapt_app_conf_restore_backup'),
+    );
+
+    $form['adapt_app_conf_backups']['delete_backup'] = array(
+      '#type' => 'submit',
+      '#value' => t('Delete selected backup file'),
+      '#attributes' => array('onclick' => 'if(!confirm("Delete selected backup?")){return false;}'),
+      '#submit' => array('adapt_app_conf_delete_backup'),
+    );
+  }
+
+  $form['adapt_app_conf_general'] = array(
+    '#type' => 'fieldset',
+    '#title' => 'Global mobile application settings',
+  );
+
+  $form['adapt_app_conf_general']['adapt_app_conf_frontpage_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Mobile application frontpage URL'),
+    '#default_value' => variable_get('adapt_app_conf_frontpage_url'),
+  );
+
+  $form['adapt_app_conf_general']['adapt_app_conf_home_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Mobile application home URL'),
+    '#default_value' => variable_get('adapt_app_conf_home_url'),
+  );
+
+  $form['adapt_app_conf_general']['adapt_app_conf_mapfile'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Mobile application zip-file with map-tiles'),
+    '#default_value' => variable_get('adapt_app_conf_mapfile'),
+  );
+
+  foreach ($node_types as $key => $value) {
+    adapt_app_conf_get_admin_settings_array($form, (array) $value);
+  }
+
+
+  return system_settings_form($form);
+}
+
+/**
+ * Array builder. Admin settings.
+ */
+function adapt_app_conf_get_admin_settings_array(&$form, $node_type) {
+  $node_type_type = $node_type['type'];
+  $node_type_name = $node_type['name'];
+
+  $form['adapt_app_conf'][$node_type_type] = array(
+    '#type' => 'fieldset',
+    '#title' => t($node_type_name),
+    '#description' => '<p>' . t("Checked settings apply to $node_type_name nodes.") . '</p>',
+  );
+
+  $adapt_app_conf_node_type = ($node_type_type == 'node') ? '' : '_' . $node_type_type;
+
+  $form['adapt_app_conf'][$node_type_type]['adapt_app_conf' . $adapt_app_conf_node_type . '_include_in_app'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Include in mobile application'),
+    '#default_value' => variable_get('adapt_app_conf' . $adapt_app_conf_node_type . '_include_in_app'),
+  );
+
+}
+
+function adapt_app_conf_include_all_pages() {
+  $query = new EntityFieldQuery();
+
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'page')
+    ->propertyCondition('status', NODE_PUBLISHED);
+
+  $result = $query->execute();
+
+  if (isset($result['node'])) {
+    $nids = array_keys($result['node']);
+    foreach ($nids as $nid) {
+      $node = node_load($nid);
+      $wrapper = entity_metadata_wrapper('node', $node);
+      $wrapper->field_include_in_app->set(TRUE);
+      $wrapper->save();
+    }
+  }
+}
+
+function adapt_app_conf_create_zip_backup($form, &$form_state) {
+  if (copy("public://app.zip", "public://app_tmp.zip")) {
+    $name = "app_backup_".date('Y-m-d_H-i-s').".zip";
+    rename("public://app_tmp.zip", "public://".$name);
+    drupal_set_message(t('File app.zip was successfully copied to '.$name));
+  }
+}
+
+function adapt_app_conf_restore_backup($form, &$form_state) {
+  if (isset($form_state['values']['list_of_backup_files'])) {
+    if (copy("public://".$form_state['values']['list_of_backup_files'], "public://app_tmp.zip")) {
+      unlink('public://app.zip');
+      rename("public://app_tmp.zip", "public://app.zip");
+      drupal_set_message(t('Backup was successfully restored'));
+    }
+  }
+
+}
+
+function adapt_app_conf_delete_backup($form, &$form_state) {
+  if (isset($form_state['values']['list_of_backup_files'])) {
+    unlink('public://'.$form_state['values']['list_of_backup_files']);
+    drupal_set_message(t('Backup was successfully deleted'));
+  }
+}

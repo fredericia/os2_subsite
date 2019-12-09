@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the views_body_center_image feature.
+ */
+
+include_once 'views_body_center_image.features.inc';

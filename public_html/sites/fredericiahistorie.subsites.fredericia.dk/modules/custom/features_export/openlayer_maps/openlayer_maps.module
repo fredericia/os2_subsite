@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the openlayer_maps feature.
+ */
+
+include_once 'openlayer_maps.features.inc';

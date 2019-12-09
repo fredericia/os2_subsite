@@ -1,0 +1,16 @@
+name = contenttype_app_calendar
+core = 7.x
+package = Features
+dependencies[] = features
+dependencies[] = filefield_paths
+dependencies[] = image
+dependencies[] = text
+features[features_api][] = api:2
+features[field_instance][] = node-app_calendar-field_reference_summary
+features[field_instance][] = node-app_calendar-field_reference_thumbnail
+features[field_instance][] = node-app_calendar-field_reference_title
+features[node][] = app_calendar
+features_exclude[field_base][field_reference_title] = field_reference_title
+features_exclude[field_base][field_reference_thumbnail] = field_reference_thumbnail
+features_exclude[field_base][field_reference_summary] = field_reference_summary
+project path = profiles/fredhist/modules/custom/features_export

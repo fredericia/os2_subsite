@@ -1,0 +1,7 @@
+name = user_superuser
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = features
+features[features_api][] = api:1
+features[user_role][] = superuser

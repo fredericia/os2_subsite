@@ -1,0 +1,6 @@
+name = textformat_audio
+core = 7.x
+package = Features
+dependencies[] = features
+features[features_api][] = api:1
+features[filter][] = tinymce_audio

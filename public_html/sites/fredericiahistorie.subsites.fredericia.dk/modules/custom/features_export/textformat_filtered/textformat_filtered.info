@@ -1,0 +1,8 @@
+name = textformat_filtered
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = features
+dependencies[] = filter
+features[features_api][] = api:1
+features[filter][] = filtered_html

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the views_references_app feature.
+ */
+
+include_once 'views_references_app.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the view_event feature.
+ */
+
+include_once 'view_event.features.inc';

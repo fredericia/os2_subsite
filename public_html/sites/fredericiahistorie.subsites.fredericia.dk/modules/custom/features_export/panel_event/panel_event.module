@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the panel_event feature.
+ */
+
+include_once 'panel_event.features.inc';

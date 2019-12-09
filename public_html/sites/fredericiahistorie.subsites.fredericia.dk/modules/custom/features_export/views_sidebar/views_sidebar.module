@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the views_sidebar feature.
+ */
+
+include_once 'views_sidebar.features.inc';

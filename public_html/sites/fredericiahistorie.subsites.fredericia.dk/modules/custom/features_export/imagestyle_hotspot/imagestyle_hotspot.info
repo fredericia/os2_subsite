@@ -1,0 +1,7 @@
+name = imagestyle_hotspot
+core = 7.x
+package = Features
+dependencies[] = image
+features[features_api][] = api:2
+features[image][] = hotspot
+project path = profiles/fredhist/modules/custom/features_export/

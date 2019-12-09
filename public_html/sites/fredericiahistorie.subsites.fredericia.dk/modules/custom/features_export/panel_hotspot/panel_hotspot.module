@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the panel_hotspot feature.
+ */
+
+include_once 'panel_hotspot.features.inc';

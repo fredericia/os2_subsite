@@ -1,0 +1,97 @@
+<?php
+ require 'location.inc';
+ require 'map.inc';
+ require 'gallery.inc';
+ require 'qr.inc';
+ require 'video.inc';
+ require 'hotspot.inc';
+ require 'game.inc';
+ require 'audio_guide.inc';
+ require 'calendar.inc';
+
+/**
+ * Implements hook_ctools_plugin_directory
+ */
+function fhist_json_ctools_plugin_directory($module, $plugin) {
+  // we'll be nice and limit scandir() calls
+  if ($module == 'ctools') {
+    return "plugins/$plugin";
+  }
+}
+
+function fhist_json_preprocess(&$variables, $hook) {
+  if(isset($_SERVER['HTTP_ACCEPT'])
+    && fhist_json_accept_json($_SERVER['HTTP_ACCEPT'])
+    && !in_array('edit', explode('/', $_GET['q']))
+    && !in_array('delete', explode('/', $_GET['q']))
+    && !in_array('translate', explode('/', $_GET['q']))) {
+    if ($node = menu_get_object()) {
+      $type = $node->type;
+      $function = 'fhist_json_process_' . $type;
+      if (function_exists($function)) {
+        $function($node);
+        die;
+      }
+    }
+  }
+}
+
+function fhis_json_rewrite_nid($nid) {
+  return 'content/'
+    . drupal_lookup_path('alias','node/' . $nid)
+    . '/index.html';
+}
+
+function fhist_json_rewrite_uri( $uri, $content_prefix = FALSE, $image_style = FALSE ) {
+  if ($image_style)
+    $image_style = 'styles/' . $image_style . '/public/';
+
+  return ($content_prefix ? 'content' : '' ) . '/sites/default/files/' . $image_style . file_uri_target($uri);
+}
+
+function fhist_json_output( $data ) {
+  if (fhist_json_accept_json($_SERVER['HTTP_ACCEPT'])) {
+    drupal_json_output($data);
+  } else {
+    fhist_json_html_show_array($data);
+  }
+}
+
+/**
+* Parse the accept header and return an array containing
+* all the informations about the Accepted types
+*/
+function fhist_json_accept_json($data) {
+  $items = explode(',', $data);
+  foreach ($items as $item) {
+    $elems = explode(';', $item);
+    $acceptElement = array();
+    list($type, $subtype) = explode('/', current($elems));
+    if (trim($type) == 'application' && trim($subtype) == 'json')
+      return true;
+  }
+  return false;
+}
+
+function fhist_json_do_offset($level){
+    $offset = "";             // offset for subarry
+    for ($i=1; $i<$level;$i++){
+    $offset = $offset . "<td></td>";
+    }
+    return $offset;
+}
+
+function fhist_json_html_show_array($array) {
+  echo '<p>Denne side leverer data til IOS/Android applikationerne.</p>';
+  echo 'Hvis du gerne vil se JSON-data skal du installere Header Hacker (chrome) og sætte "Accept" headeren til "text/html, application/json"</p>';
+  echo '<p>Du kan redigere siden her : <a href="/node/' . arg(1) . '/edit">Edit</a></p>';
+  echo '<p>Du komme til listen med indhold her : <a href="/admin/content">Content</a></p>';
+  echo '<style>table.appdata td { vertical-align:top; }</style>';
+  echo '<pre>';
+  echo json_encode($array, JSON_PRETTY_PRINT);
+  echo "</pre>\n";
+}
+
+
+
+

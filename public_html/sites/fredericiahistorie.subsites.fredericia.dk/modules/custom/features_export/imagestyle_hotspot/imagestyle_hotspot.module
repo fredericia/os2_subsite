@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the imagestyle_hotspot feature.
+ */
+
+include_once 'imagestyle_hotspot.features.inc';

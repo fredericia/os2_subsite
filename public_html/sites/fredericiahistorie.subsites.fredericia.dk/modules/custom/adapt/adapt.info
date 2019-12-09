@@ -1,0 +1,5 @@
+; $Id: $
+name = Adapt
+description = Allround tools and functions for adapt drupal sites.
+core = 7.x
+package = Adapt

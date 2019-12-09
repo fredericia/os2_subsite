@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the contenttype_app_gallery feature.
+ */
+
+include_once 'contenttype_app_gallery.features.inc';

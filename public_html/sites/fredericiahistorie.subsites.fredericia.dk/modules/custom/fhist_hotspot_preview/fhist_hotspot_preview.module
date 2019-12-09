@@ -1,0 +1,97 @@
+<?php
+
+function fhist_hotspot_preview_form_alter(&$form, &$form_state, $form_id) {
+  //get the node
+  $node = isset($form_state['node']) ? $form_state['node'] : NULL;
+  //find the right form type  
+  if($form_id=='app_hotspot_node_form') {
+    //Make sure we are editing an existing hotspot node by checking the presence of an image URI
+    if (isset($form['field_app_hotspot_image']['und'][0]['#entity']->field_app_hotspot_image['und'][0]['uri'])){
+      //Get the URI of the image
+      $img_data['uri'] = $form['field_app_hotspot_image']['und'][0]['#entity']->field_app_hotspot_image['und'][0]['uri'];
+      //Get the width of the image
+      $img_data['width'] = $form['field_app_hotspot_image']['und'][0]['#entity']->field_app_hotspot_image['und'][0]['width'];
+      //Get the height of the image
+      $img_data['height'] = $form['field_app_hotspot_image']['und'][0]['#entity']->field_app_hotspot_image['und'][0]['height'];
+      //If the user is previewing ...
+      if (
+        !empty($form_state["values"]["op"]) 
+        && $form_state["values"]["op"] == 'Preview'
+      ){
+        //...get points coordonates from form_state
+        foreach ($form_state['values']["field_app_hotspot_elements"]['und'] as $value) {
+          if (isset($value['field_app_hotspot_xpoint']['und'])){
+            $img_meta_preview[] = array(
+            'x'=>(int)$value['field_app_hotspot_xpoint']['und'][0]['value'],
+            'y'=>(int)$value['field_app_hotspot_ypoint']['und'][0]['value'],
+            );
+          }
+        }
+        //Render the image before the hotspot elements in the form
+        $form["field_app_hotspot_elements"]['#prefix'] = fhist_hotspot_preview_render_image($form, $img_data, $img_meta_preview);
+      }
+      //If the user is editing (!= previewing)
+      else{
+      //Get the x and y coords and the corresponding text using entity wrapper
+      $wrapper = entity_metadata_wrapper('node', $node);
+      $img_meta = array();
+      foreach ($wrapper->field_app_hotspot_elements->getIterator() as $delta => $term_wrapper) {
+        //Put everything in an array
+        $img_meta[] = array(
+          'x'=>(int)$term_wrapper->field_app_hotspot_xpoint->value(),
+          'y'=> (int)$term_wrapper->field_app_hotspot_ypoint->value(),
+          'text'=> $term_wrapper->field_app_hotspot_text->value(),
+          );
+      }
+      //Render the image before the hotspot elements in the form
+      $form["field_app_hotspot_elements"]['#prefix'] = fhist_hotspot_preview_render_image($form, $img_data, $img_meta);
+      }
+    }
+  }
+}
+
+function fhist_hotspot_preview_render_image(&$form, $data, $meta){
+  //parameters for the grid image
+  $img_settings = array(
+    'path' => drupal_get_path('module', 'fhist_hotspot_preview') . '/grid100x100.png',
+    'attributes' => array(
+      'style' => 'opacity: 0.7;',
+    ),
+  );
+
+  //Merging the grid settings and the image data
+  $img_settings += $data;
+
+  //counter is used as text for the markers 
+  $counter = 1;
+  //Main image div declaration and styling
+  $html = '<div id="hotspot_img" style="';
+  $html .= 'width: ' . $data['width'] . 'px;';
+  $html .= 'height: ' . $data['height'] . 'px;';
+  $html .= 'position: relative;';
+  $html .= 'background-image: url(' . file_create_url($data['uri']) .');';
+  $html .= '">';
+  //Display grid image
+  $html .= theme('image', $img_settings);
+  //add a marker for each hotspot
+  
+  foreach ($meta as $value) {
+    $html .= '<div class="hotspot_marker" style="';
+    $html .= 'border-top:3px solid red;';
+    $html .= 'border-left:3px solid red;';
+    $html .= 'width: 20px;';
+    $html .= 'text-align: center;';
+    $html .= 'font-weight: bold;';
+    $html .= 'position: absolute;';
+    $html .= 'left:' . $value['x'] . '%;';
+    $html .= 'top:' . $value['y'] . '%;';
+    $html .= 'color: red;';
+    $html .= '">';
+    $html .= "$counter";
+    $html .= '</div>';
+    $counter ++;
+  }
+  $html .= '</div>';
+
+  return $html;
+}

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the views_app_frontpage_subpages feature.
+ */
+
+include_once 'views_app_frontpage_subpages.features.inc';

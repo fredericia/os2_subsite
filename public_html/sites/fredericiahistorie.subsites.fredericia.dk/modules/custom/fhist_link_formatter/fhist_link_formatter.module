@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function fhist_link_formatter_field_formatter_info() {
+  return array(
+    'link_with_target' => array(
+      'label' => t('Link with target'),
+      'description' => t('Link with target.'),
+      'field types' => array('link_field'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function fhist_link_formatter_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $result = array();
+  
+  switch ($display['type']) {
+    case 'link_with_target': 
+      foreach ($items as $delta => $item) {
+        $result[$delta] = array('#markup' =>  $item['url'] . '" target="_blank' );
+      }
+      break;  
+  }
+
+  return $result;
+}

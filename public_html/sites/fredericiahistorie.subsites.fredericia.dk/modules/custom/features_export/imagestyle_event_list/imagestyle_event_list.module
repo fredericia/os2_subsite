@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the imagestyle_event_list feature.
+ */
+
+include_once 'imagestyle_event_list.features.inc';

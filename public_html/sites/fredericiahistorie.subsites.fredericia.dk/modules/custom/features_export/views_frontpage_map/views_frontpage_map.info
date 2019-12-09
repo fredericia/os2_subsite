@@ -1,0 +1,10 @@
+name = views_frontpage_map
+core = 7.x
+package = Features
+php = 5.2.4
+dependencies[] = openlayers_views
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = frontpage_map
+features_exclude[dependencies][ctools] = ctools

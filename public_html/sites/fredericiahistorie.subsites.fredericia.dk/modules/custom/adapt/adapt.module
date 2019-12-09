@@ -1,0 +1,86 @@
+<?php
+/**
+ * @file
+ * Allround tools and functions for adapt drupal sites.
+ *
+ * @author Mikkel Jakobsen <mikkel@adapt.dk>
+ */
+
+/**
+ * Debug vars in a log file.
+ * 
+ * @param string $user
+ *   Which user is debugging? Used for creating log filename by now.
+ * @param mixed $debug
+ *   Data being debugged.
+ * @param string $mode
+ *   Debugging mode. Default is var_dump.
+ * @param str $dir
+ *   Where is the log file saved.
+ * @param string $file_suffix
+ *   The ending of the log filename.
+ */
+function adapt_debug($user, $debug, $mode = 'var_dump', $dir='/tmp', $file_suffix="debug.txt"){
+  switch ($mode) {
+    case 'print_r':
+      $log = print_r($debug, TRUE);
+      break;
+    case 'var_dump':
+      ob_start();
+      var_dump($debug);
+      $log = ob_get_clean();
+      $log = html_entity_decode($log);
+      break;
+    case 'db_queryd':
+      ob_start();
+      call_user_func_array('db_queryd', $debug);
+      $log = ob_get_clean();
+      $log = strip_tags($log);
+      $log = html_entity_decode($log);
+      break;
+  }
+  file_put_contents(adapt_debug_construct_filename($dir, $user, $file_suffix), $log, FILE_APPEND);
+}
+
+/**
+ * Clear debug log file.
+ * 
+ * @param string $user
+ *   Which user is debugging? Used for creating log filename by now.
+ * @param string $dir
+ *   Where is the log file saved.
+ * @param string $file_suffix
+ *   The ending of the log filename.
+ */
+function adapt_debug_clear($user, $dir='/tmp', $file_suffix="debug.txt"){
+  file_put_contents(adapt_debug_construct_filename($dir, $user, $file_suffix), '');
+}
+
+/**
+ * Construct full path to log file.
+ * 
+ * @param string $dir
+ *   Where is the log file saved.
+ * @param string $user
+ *   Which user is debugging? Used for creating log filename by now.
+ * @param string $file_suffix
+ *   The ending of the log filename.
+ * @return string
+ *   Complete path to log file (according to apache). 
+ */
+function adapt_debug_construct_filename($dir, $user, $file_suffix){
+  return "$dir/$user-$file_suffix";
+}
+
+/**
+ * Only call adapt_debug once.
+ * 
+ * @staticvar boolean $has_been_called
+ * @return void
+ */
+function adapt_debug_once(){
+  static $has_been_called;
+  if(!empty($has_been_called)) return;
+  call_user_func_array('adapt_debug', func_get_args());
+  $has_been_called = TRUE;
+}

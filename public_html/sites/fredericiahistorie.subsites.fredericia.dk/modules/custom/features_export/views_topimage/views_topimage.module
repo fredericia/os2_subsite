@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the views_topimage feature.
+ */
+
+include_once 'views_topimage.features.inc';
