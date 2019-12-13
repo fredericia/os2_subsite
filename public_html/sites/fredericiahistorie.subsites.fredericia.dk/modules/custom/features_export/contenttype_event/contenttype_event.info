@@ -69,4 +69,4 @@ features_exclude[field_base][field_references] = field_references
 features_exclude[field_base][field_second_body] = field_second_body
 features_exclude[field_base][field_active_body] = field_active_body
 features_exclude[field_base][field_body_app] = field_body_app
-project path = profiles/fredhist/modules/custom/features_export/
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export/

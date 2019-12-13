@@ -85,4 +85,4 @@ features_exclude[field_base][field_sidebar] = field_sidebar
 features_exclude[field_base][field_featured_links] = field_featured_links
 features_exclude[field_base][field_link_background_image] = field_link_background_image
 features_exclude[field_base][field_locations] = field_locations
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

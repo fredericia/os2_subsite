@@ -21,4 +21,4 @@ features[variable][] = openlayers_source_internal_variant
 features[variable][] = openlayers_source_type
 features[variable][] = openlayers_ui_preview_map
 features[variable][] = openlayers_ui_version_check
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

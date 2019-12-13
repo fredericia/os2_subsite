@@ -17,7 +17,7 @@ function openlayer_maps_openlayers_styles() {
   $openlayers_styles->title = 'Orange marker';
   $openlayers_styles->description = '';
   $openlayers_styles->data = array(
-    'externalGraphic' => '/profiles/fredhist/themes/custom/fredhist/images/marker.png',
+    'externalGraphic' => '/sites/fredericiahistorie.subsites.fredericia.dk/themes/custom/fredhist/images/marker.png',
     'pointRadius' => 6,
     'fillColor' => '#EE9900',
     'strokeColor' => '#EE9900',

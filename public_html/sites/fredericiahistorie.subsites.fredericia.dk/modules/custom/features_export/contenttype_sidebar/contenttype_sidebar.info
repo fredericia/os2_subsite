@@ -23,4 +23,4 @@ features[field_instance][] = node-sidebar-field_sidebar_image
 features[field_instance][] = node-sidebar-field_sidebar_link_type
 features[field_instance][] = node-sidebar-field_sidebar_text
 features[node][] = sidebar
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

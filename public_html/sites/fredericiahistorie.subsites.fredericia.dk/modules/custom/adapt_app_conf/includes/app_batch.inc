@@ -7,7 +7,7 @@ function adapt_app_conf_get_content($base_url, &$context) {
 }
 
 function crawl($dir, $baseurl, $records, &$context) {
-  include_once(DRUPAL_ROOT . '/profiles/fredhist/includes/simple_html_dom.php');
+  include_once(DRUPAL_ROOT . '/sites/fredericiahistorie.subsites.fredericia.dk/includes/simple_html_dom.php');
 
   if (empty($context['sandbox'])) {
     $context['sandbox']['progress'] = 0;
@@ -186,7 +186,7 @@ function parse_html(&$html, &$resources, $prefix, $baseurl) {
       if (!preg_match('/^http.+/', $e->href))
         $e->href = $prefix . trim($e->href, '/') . '/index.html';
     }
-    
+
     /* Stylesheets */
     if (!empty($html->find('head', 0))) {
       foreach ($html->find('head', 0)->find('link') as $e) {
@@ -205,7 +205,7 @@ function parse_html(&$html, &$resources, $prefix, $baseurl) {
       }
     }
   }
-  
+
 }
 
 function make_zip_file($version) {

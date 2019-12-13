@@ -43,4 +43,4 @@ features[field_group][] = group_top_img_page|node|page|form
 features[node][] = page
 features_exclude[dependencies][ctools] = ctools
 mtime = 1425385995
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

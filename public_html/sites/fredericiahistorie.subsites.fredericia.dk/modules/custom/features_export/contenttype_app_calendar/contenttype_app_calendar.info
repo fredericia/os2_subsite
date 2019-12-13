@@ -13,4 +13,4 @@ features[node][] = app_calendar
 features_exclude[field_base][field_reference_title] = field_reference_title
 features_exclude[field_base][field_reference_thumbnail] = field_reference_thumbnail
 features_exclude[field_base][field_reference_summary] = field_reference_summary
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

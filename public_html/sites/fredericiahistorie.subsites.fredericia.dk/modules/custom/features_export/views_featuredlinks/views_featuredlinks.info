@@ -9,4 +9,4 @@ features[features_api][] = api:1
 features[views_view][] = featured_links
 features_exclude[dependencies][ctools] = ctools
 mtime = 1369745465
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

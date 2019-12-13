@@ -43,4 +43,4 @@ features[variable][] = file_public_path
 features[variable][] = file_temporary_path
 features[variable][] = page_cache_maximum_age
 features[variable][] = resp_img_purgeexpire
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

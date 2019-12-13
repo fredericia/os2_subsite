@@ -25,4 +25,4 @@ features[field_base][] = field_references
 features[field_base][] = field_second_body
 features[field_base][] = field_sidebar
 features[field_base][] = field_topimage
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

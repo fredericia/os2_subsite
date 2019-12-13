@@ -18,4 +18,4 @@ features[field_instance][] = node-global-field_text
 features[field_instance][] = node-global-field_topimage
 features[node][] = global
 features_exclude[field_base][field_topimage] = field_topimage
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

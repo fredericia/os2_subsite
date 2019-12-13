@@ -48,4 +48,4 @@ features_exclude[field_base][field_body_center_img] = field_body_center_img
 features_exclude[field_base][field_page_body_second] = field_page_body_second
 features_exclude[field_base][field_audiofile] = field_audiofile
 features_exclude[field_base][field_center_img_text] = field_center_img_text
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

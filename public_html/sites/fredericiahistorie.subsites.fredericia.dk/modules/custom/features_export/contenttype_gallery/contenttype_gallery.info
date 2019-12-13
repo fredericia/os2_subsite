@@ -16,4 +16,4 @@ features[field_instance][] = node-gallery-field_gallery_images
 features[field_instance][] = node-gallery-field_link_background_image
 features[node][] = gallery
 features_exclude[field_base][field_link_background_image] = field_link_background_image
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export

@@ -1,6 +1,6 @@
 <?php if ( !empty($node) && $node->type == 'gallery')  { ?>
   <?php
-  drupal_add_js(drupal_get_path('theme', 'mytheme') .'profiles/fredhist/themes/custom/fredhist/js/gallery.js');
+  drupal_add_js(drupal_get_path('theme', 'mytheme') .'sites/fredericiahistorie.subsites.fredericia.dk/themes/custom/fredhist/js/gallery.js');
   ?>
 <?php } ?>
 

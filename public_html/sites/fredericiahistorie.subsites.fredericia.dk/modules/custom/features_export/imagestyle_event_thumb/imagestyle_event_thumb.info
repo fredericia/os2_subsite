@@ -4,4 +4,4 @@ package = Features
 dependencies[] = image
 features[features_api][] = api:2
 features[image][] = event_thumb
-project path = profiles/fredhist/modules/custom/features_export
+project path = sites/fredericiahistorie.subsites.fredericia.dk/modules/custom/features_export
