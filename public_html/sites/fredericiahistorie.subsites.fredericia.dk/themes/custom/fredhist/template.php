@@ -37,5 +37,21 @@ function fredhist_preprocess_page(&$variables) {
     drupal_add_js(drupal_get_path('theme', 'fredhist') . '/js/hotspot.js');
     $variables['scripts'] = drupal_get_js();
   }
+}
 
+
+/**
+ * Implements theme_preprocess_html().
+ */
+function fredhist_preprocess_html(&$variables) {
+
+  // Add out fonts from Google Fonts API.
+  drupal_add_html_head(array(
+    '#tag'        => 'link',
+    '#attributes' => array(
+      'href' => 'https://fonts.googleapis.com/css?family=Raleway:500,600,700',
+      'rel'  => 'stylesheet',
+      'type' => 'text/css',
+    ),
+  ), 'google_font_fki');
 }
