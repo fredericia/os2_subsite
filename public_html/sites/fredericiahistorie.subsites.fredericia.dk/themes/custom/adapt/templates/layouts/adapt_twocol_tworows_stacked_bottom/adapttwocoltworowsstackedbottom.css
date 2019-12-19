@@ -1,0 +1,33 @@
+header {
+  margin-bottom: 2%;
+}
+#content-primary {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+}
+#content-secondary {
+  float: left;
+  width: 49%;
+}
+#content-tertiary {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  padding-top: 2%;
+}
+#content-quaternary {
+  float: left;
+  width: 49%;
+  padding-top: 2%;
+}
+#content-quinary {
+  padding-top: 2%;
+}
+footer {
+  padding-top: 2%;
+  clear: both;
+}
+.clear-section{
+	clear: both;
+}

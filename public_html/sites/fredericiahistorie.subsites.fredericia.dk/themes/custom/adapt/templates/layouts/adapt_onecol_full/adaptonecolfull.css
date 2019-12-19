@@ -1,0 +1,11 @@
+header{
+	margin-bottom: 2%;
+}
+section{
+	width:50%;
+	margin:0px auto;
+	margin-bottom: 2%;
+}
+header, footer{
+	width: 100%;
+}

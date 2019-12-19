@@ -1,0 +1,21 @@
+header {
+  margin-bottom: 2%;
+}
+#content-primary {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+#content-secondary {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+#content-quinary {
+  float: left;
+  width: 30%;
+}
+footer {
+  padding-top: 2%;
+  clear: both;
+}

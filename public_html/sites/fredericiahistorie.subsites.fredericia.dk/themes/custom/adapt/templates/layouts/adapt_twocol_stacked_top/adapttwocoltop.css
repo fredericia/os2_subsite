@@ -1,0 +1,23 @@
+header {
+  margin-bottom: 2%;
+}
+#content-primary {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+}
+#content-secondary {
+  float: left;
+  width: 49%;
+}
+#content-top {
+  padding-bottom: 2%;
+  clear: both;
+}
+footer {
+  padding-top: 2%;
+  clear: both;
+}
+.clear-section{
+	clear: both;
+}
