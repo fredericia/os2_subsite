@@ -49,7 +49,7 @@
 
     // Sidr
     $('.slinky-menu')
-        .find('ul, li, a')
+        .find('ul, a')
         .removeClass();
 
     $('.sidr__toggle').sidr({
