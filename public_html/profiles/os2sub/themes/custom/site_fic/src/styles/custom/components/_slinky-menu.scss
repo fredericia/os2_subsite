@@ -23,13 +23,12 @@
 .slinky-menu {
   color: #fff;
 
-  ul {
+  .menu-name--main-menu {
 
-    > li.menu-name--main-menu {
+    + .menu-name--user-menu {
+      margin-top: -1px;
 
-      &:last-child {
-        border-bottom-color: #fff;
-      }
+      border-top: 1px solid #fff;
     }
   }
 
