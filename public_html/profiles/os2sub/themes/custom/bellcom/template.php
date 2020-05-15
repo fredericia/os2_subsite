@@ -374,7 +374,7 @@ function bellcom_menu_link__slinky_custom(array $variables) {
 
   $output = l($element['#title'], $element['#href'], $element['#localized_options']);
 
-  return '<li>' . $output . $sub_menu . "</li>\n";
+  return '<li class="menu-name--' . $element['#original_link']['menu_name'] . '">' . $output . $sub_menu . "</li>\n";
 }
 
 /**

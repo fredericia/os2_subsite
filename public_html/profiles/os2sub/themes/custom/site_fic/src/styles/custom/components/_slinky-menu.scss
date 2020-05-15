@@ -55,6 +55,13 @@
   .separator {
     display: none;
   }
+
+  > li.menu-name--main-menu {
+
+    &:last-child {
+      border-bottom: 1px solid #fff;
+    }
+  }
 }
 
 // --------------------------------------------------
