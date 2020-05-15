@@ -23,6 +23,16 @@
 .slinky-menu {
   color: #fff;
 
+  ul {
+
+    > li.menu-name--main-menu {
+
+      &:last-child {
+        border-bottom-color: #fff;
+      }
+    }
+  }
+
   a {
     text-transform: uppercase;
   }
@@ -54,13 +64,6 @@
   .nolink,
   .separator {
     display: none;
-  }
-
-  > ul > li.menu-name--main-menu {
-
-    &:last-child {
-      border-bottom: 1px solid #fff;
-    }
   }
 }
 
