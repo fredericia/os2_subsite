@@ -44,7 +44,7 @@ create_dirs
 create_vhost
 add_to_hosts "$SITENAME"
 install_drupal
-set_permissions
 add_to_crontab
 add_subsiteadmin
+set_permissions
 #mail_status "$SITENAME" "mmh@bellcom.dk"
