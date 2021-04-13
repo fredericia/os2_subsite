@@ -52,6 +52,10 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DA" type="text/javascript"></script>
+  <script>
+    javascript:CookieConsent.renew();Example:<button onClick="javascript:CookieConsent.renew();">Renew Consent</button>
+  </script>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
