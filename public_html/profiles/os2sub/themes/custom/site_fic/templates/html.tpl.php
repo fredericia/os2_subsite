@@ -27,6 +27,10 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="format-detection" content="telephone=no">
+  <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="DA" type="text/javascript"></script>
+ <script>
+   javascript:CookieConsent.renew();Example:<button onClick="javascript:CookieConsent.renew();">Renew Consent</button>
+  </script>
 
   <?php print $head; ?>
 
@@ -36,6 +40,7 @@
 
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
+
 
 <!-- Begin - skip link -->
 <div id="skip-link" class="show-on-focus">
